@@ -1,0 +1,1970 @@
+[
+ {
+  "id": "1",
+  "title": {
+   "en": "Mahamrityunjaya Mantra",
+   "hi": "महामृत्युंजय मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Shiva"
+   ],
+   "hi": [
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "healing",
+    "protection",
+    "health",
+    "moksha",
+    "fearless"
+   ],
+   "hi": [
+    "आरोग्य",
+    "सुरक्षा",
+    "स्वास्थ्य",
+    "मोक्ष",
+    "निर्भयता"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् । उर्वारुकमिव बन्धनान्मृत्योर्मुक्षीय मामृतात् ॥",
+   "iast": "oṃ tryambakaṃ yajāmahe sugandhiṃ puṣṭivardhanam | urvārukamiva bandhanānmṛtyormukṣīya māmṛtāt ||",
+   "translation": {
+    "en": "We worship the Three-Eyed One (Lord Shiva), who is fragrant and nourishes all beings. May He liberate me from death for the sake of immortality, just as a ripe cucumber is severed from its bondage (the vine).",
+    "hi": "हम सुगंधित और पुष्टि वर्धक त्रिनेत्रधारी भगवान शिव की आराधना करते हैं। जैसे पका हुआ खरबूजा अपनी बेल से अलग हो जाता है, वैसे ही वे हमें मृत्यु के बंधनों से मुक्त करें और अमरत्व प्रदान करें।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "The 'Great Death-Conquering Mantra' from the Rigveda. It is chanted for longevity, healing from illness, and overcoming the fear of death.",
+    "hi": "ऋग्वेद का 'महामृत्युंजय' मंत्र। इसका जाप दीर्घायु, रोगों से मुक्ति और मृत्यु के भय पर विजय पाने के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Ideally chanted 108 times during the Brahma Muhurta (early morning) or during difficult times for health. Use a Rudraksha mala.",
+    "hi": "आदर्श रूप से ब्रह्म मुहूर्त (प्रातः काल) में या स्वास्थ्य संबंधी कठिन समय के दौरान १०८ बार जप किया जाना चाहिए। रुद्राक्ष की माला का प्रयोग करें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "2",
+  "title": {
+   "en": "Ganesha Mool Mantra",
+   "hi": "गणेश मूल मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Ganesha"
+   ],
+   "hi": [
+    "गणेश"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "new beginnings",
+    "success",
+    "obstacles",
+    "focus"
+   ],
+   "hi": [
+    "नई शुरुआत",
+    "सफलता",
+    "बाधाएं",
+    "एकाग्रता"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ गं गणपतये नमः",
+   "iast": "oṃ gaṃ gaṇapataye namaḥ",
+   "translation": {
+    "en": "Om, I bow to the Lord Ganesha.",
+    "hi": "ॐ, मैं गणों के स्वामी (गणेश) को प्रणाम करता हूँ।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "The root (Mool) mantra of Lord Ganesha, derived from the Ganapati Atharvashirsha. It combines the Bija (seed) sound 'Gam' with a salutation to the remover of obstacles.",
+    "hi": "भगवान गणेश का मूल मंत्र, जो गणपति अथर्वशीर्ष से लिया गया है। यह बीज ध्वनि 'गं' को बाधाओं को दूर करने वाले के नमन के साथ जोड़ता है।"
+   },
+   "how_to_chant": {
+    "en": "Best chanted 108 times before starting any new work, project, or ceremony. Can be chanted sitting or while commuting to stay focused.",
+    "hi": "किसी भी नए कार्य, परियोजना या समारोह को शुरू करने से पहले १०८ बार जप करना सबसे अच्छा होता है। एकाग्र रहने के लिए इसे बैठे हुए या यात्रा के दौरान भी जपा जा सकता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "3",
+  "title": {
+   "en": "Durga Kavacham",
+   "hi": "श्री दुर्गा कवच"
+  },
+  "deity": {
+   "en": [
+    "Durga",
+    "Navdurga"
+   ],
+   "hi": [
+    "दुर्गा",
+    "नवदुर्गा"
+   ]
+  },
+  "type": {
+   "en": "Kavacham",
+   "hi": "कवच"
+  },
+  "tags": {
+   "en": [
+    "protection",
+    "divine shield",
+    "strength",
+    "fearlessness",
+    "navratri"
+   ],
+   "hi": [
+    "सुरक्षा",
+    "दिव्य कवच",
+    "शक्ति",
+    "निर्भयता",
+    "नवरात्रि"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ नमश्चण्डिकायै ॥\\nमार्कण्डेय उवाच ।\\nॐ यद्गुह्यं परमं लोके सर्वरक्षाकरं नृणाम् । यन्न कस्यचिदाख्यातं तन्मे ब्रूहि पितामह ॥ १॥\\nब्रह्मोवाच ।\\nअस्ति गुह्यतमं विप्र सर्वभूतपकारकम् । देव्यास्तु कवचं पुण्यं तच्छृणुष्व महामुने ॥ २॥\\nप्रथमं शैलपुत्री च द्वितीयं ब्रह्मचारिणी । तृतीयं चन्द्रघण्टेति कूष्माण्डेति चतुर्थकम् ॥ ३॥\\nपञ्चमं स्कन्दमातेति षष्ठं कात्यायनीति च । सप्तमं कालरात्रीति महागौरीति चाष्टमम् ॥ ४॥\\nनवमं सिद्धिदात्री च नवदुर्गाः प्रकीर्तिताः । उक्तान्येतानि नामानि ब्रह्मणैव महात्मना ॥ ५॥\\nअग्निना दह्यमानस्तु शत्रुमध्ये गतो रणे । विषमे दुर्गमे चैव भयार्ताः शरणं गताः ॥ ६॥\\nन तेषां जायते किंचिदशुभं रणसंकटे । नापदं तस्य पश्यामि शोकदुःखभयं न हि ॥ ७॥\\nयैस्तु भक्त्या स्मृता नूनं तेषां वृद्धिः प्रजायते । ये त्वां स्मरन्ति देवेशि रक्षसे तान्न संशयः ॥ ८॥\\nप्रेतसंस्था तु चामुण्डा वाराही महिषासना । ऐन्द्री गजसमारूढ़ा वैष्णवी गरुडासना ॥ ९॥\\nमाहेश्वरी वृषारूढ़ा कौमारी शिखिवाहना । लक्ष्मीः पद्मासना देवी पद्महस्ता हरिप्रिया ॥१०॥\\nश्वेतरुपधरा देवी ईश्वरी वृषवाहना । ब्राहमी हंससमारुढा सर्वाभरणभूषिता ॥११॥\\nइत्येता मातरः सर्वाः सर्वयोगसमन्विताः । नानाभरणशोभाढ्या नानारत्नोपशोभिताः ॥१२॥\\nदृश्यन्ते रथमारुढा देव्यः क्रोधसमाकुलाः । शङ्खं चक्रं गदां शक्तिं हलं च मुसलायुधम् ॥१३॥\\nखेटकं तोमरं चैव परशुं पाशमेव च । कुन्तायुधं त्रिशूलं च शार्ङ्गमायुधमुत्तमम् ॥१४॥\\nदैत्यानां देहनाशाय भक्तानामभयाय च । धारयन्त्यायुधानीत्थं देवानां च हिताय वै ॥१५॥\\nनमस्तेऽस्तु महारौद्रे महाघोर पराक्रमे । महाबले महोत्साहे महाभयविनाशिनि ॥१६॥\\nत्राहि मां देवि दुष्प्रेक्ष्ये शत्रुणां भयवर्द्धिनि । प्राच्यां रक्षतु मामैन्द्री आग्नेय्यामग्निदेवता ॥१७॥\\nदक्षिणेऽवतु वाराही नैऋत्यां खङ्गधारिणी । प्रतीच्यां वारुणी रक्षेद् वायव्यां मृगवाहिनी ॥१८॥\\nउदीच्यां पातु कौमारी ऐशान्यां शूलधारिणी । ऊर्ध्वं ब्रह्माणि मे रक्षेदधस्ताद् वैष्णवी तथा ॥१९॥\\nएवं दश दिशो रक्षेच्चामुण्डा शववाहना । जया मे चाग्रतः पातु विजया पातु पृष्ठतः ॥२०॥\\nअजिता वामपार्श्वे तु दक्षिणे चापराजिता । शिखामुद्योतिनी रक्षेदुमा मूर्ध्नि व्यवस्थिता ॥२१॥\\nमालाधरी ललाटे च भ्रुवौ रक्षेद् यशस्विनी । त्रिनेत्रा च भ्रुवोर्मध्ये यमघण्टा च नासिके ॥२२॥\\nशङ्खिनी चक्षुषोर्मध्ये श्रोत्रयोर्द्वारवासिनी । कपोलौ कालिका रक्षेत्कर्णमूले तु शाङ्करी ॥२३॥\\nनासिकायां सुगन्धा च उत्तरोष्ठे च चर्चिका । अधरे चामृतकला जिव्हायां च सरस्वती ॥२४॥\\nदन्तान रक्षतु कौमारी कण्ठदेशे तु चण्डिका । घण्टिकां चित्रघण्टा च महामाया च तालुके ॥२५॥\\nकामाक्षी चिबुकं रक्षेद् वाचं मे सर्वमङ्गला । ग्रीवायां भद्रकाली च पृष्ठवंशे धनुर्धरी ॥२६॥\\nनीलग्रीवा बहिःकण्ठे नलिकां नलकूबरी । स्कन्धयोः खङ्गिनी रक्षेद् बाहू मे वज्रधारिणी ॥२७॥\\nहस्तयोर्दण्डिनी रक्षेदम्बिका चाङ्गुलीषु च । नखाञ्छूलेश्वरी रक्षेत्कुक्षौ रक्षेत्कुलेश्वरी ॥२८॥\\nस्तनौ रक्षेन्महादेवी मनः शोकविनाशिनी । हृदये ललिता देवी उदरे शूलधारिणी ॥२९॥\\nनाभौ च कामिनी रक्षेद् गुह्यं गुह्येश्वरी तथा । पूतना कामिका मेढ्रं गुदे महिषवाहिनी ॥३०॥\\nकट्यां भगवती रक्षेज्जानुनी विन्ध्यवासिनी । जङ्गे महाबला रक्षेत्सर्वकामप्रदायिनी ॥३१॥\\nगुल्फयोर्नारसिंही च पादपृष्ठे तु तैजसि । पादाङ्गुलीषु श्री रक्षेत्पादाधस्तलवासिनी ॥३२॥\\nनखान् दंष्ट्राकराली च केशांश्चैवोर्ध्वकेशिनी । रोमकूपेषु कौबेरी त्वचं वागीश्वरी तथा ॥३३॥\\nरक्तमज्जावसामांसान्यस्थिमेदांसि पार्वती । अन्त्राणि कालरात्रिश्च पित्तं च मुकुटेश्वरी ॥३४॥\\nपद्मावती पद्मकोशे कफे चूडामणिस्तथा । ज्वालामुखी नखज्वालामभेद्या सर्वसन्धिषु ॥३५॥\\nशुक्रं ब्रह्माणि मे रक्षेच्छायां छत्रेश्वरी तथा । अहंकारं मनो बुद्धिं रक्षेन्मे धर्मधारिणी ॥३६॥\\nप्राणापानौ तथा व्यानमुदानं च समानकम् । वज्रहस्ता च मे रक्षेत्प्राणं कल्याणशोभना ॥३७॥\\nरसे रुपे च गन्धे च शब्दे स्पर्शे च योगिनी । सत्वं रजस्तमश्चैव रक्षेन्नारायणी सदा ॥३८॥\\nआयु रक्षतु वाराही धर्मं रक्षतु वैष्णवी । यशः कीर्तिं च लक्ष्मीं च धनं विद्यां च चक्रिणी ॥३९॥\\nगोत्रमिन्द्राणि मे रक्षेत्पशून्मे रक्ष चण्डिके । पुत्रान रक्षेन्महालक्ष्मीर्भार्यां रक्षतु भैरवी ॥४०॥\\nपन्थानं सुपथा रक्षेन्मार्गं क्षेमकरी तथा । राजद्वारे महालक्ष्मीर्विजया सर्वतः स्थिता ॥४१॥\\nरक्षाहीनं तु यत्स्थानं वर्जितं कवचेन तु । तत्सर्वं रक्ष मे देवि जयन्ती पापनाशिनी ॥४२॥\\nपदमेकं न गच्छेत्तु यदीच्छेच्छुभमात्मनः । कवचेनावृतो नित्यं यत्र यत्रैव गच्छति ॥४३॥\\nतत्र तत्रार्थलाभश्च विजयः सार्वकामिकः । यं यं चिन्तयते कामं तं तं प्राप्नोति निश्चितम् । परमैश्वर्यमतुलं प्राप्स्यते भूतले पुमान ॥४४॥\\nनिर्भयो जायते मर्त्यः संग्रामेष्वपराजितः । त्रैलोक्ये तु भवेत्पूज्यः कवचेनावृतः पुमान ॥४५॥\\nइदं तु देव्याः कवचं देवानामपि दुर्लभम् । यः पठेत्प्रयतो नित्यं त्रिसन्ध्यं श्रद्धयान्वितः ॥४६॥\\nदैवी कला भवेत्तस्य त्रैलोक्येष्वपराजितः । जीवेद् वर्षशतं साग्रमपमृत्युविवर्जितः ॥४७॥\\nनश्यन्ति व्याधयः सर्वे लूताविस्फोटकादयः । स्थावरं जङ्गंमं चैव कृत्रिमं चापि यद्विषम् ॥४८॥\\nअभिचाराणि सर्वाणि मन्त्रयन्त्राणि भूतले । भूचराः खेचराश्चैव जलजाश्चोपदेशिकाः ॥४९॥\\nसहसा कुलजा माला डाकिनी शाकिनी तथा । अन्तरिक्षचरा घोरा डाकिन्यश्च महाबलाः ॥५०॥\\nग्रहभूतपिशाचाश्च यक्षगन्धर्वराक्षसाः । ब्रह्मराक्षसवेतालाः कूष्माण्डा भैरवादयः ॥५१॥\\nनश्यन्ति दर्शनात्तस्य कवचे हृदि संस्थिते । मानोन्नतिर्भवेद् राज्ञस्तेजोवृद्धिकरं परम् ॥५२॥\\nयशसा वर्द्धते सोऽपि कीर्तिमण्डितभूतले । जपेत्सप्तशतीं चण्डीं कृत्वा तु कवचं पुरा ॥५३॥\\nयावद्भूमण्डलं धत्ते सशैलवनकाननम् । तावत्तिष्ठति मेदिन्यां सन्ततिः पुत्रपौत्रिकी ॥५४॥\\nदेहान्ते परमं स्थानं यत्सुरैरपि दुर्लभम् । प्राप्नोति पुरुषो नित्यं महामायाप्रसादतः ॥५५॥\\nलभते परमं रुपं शिवेन सह मोदते ॥५६॥",
+   "iast": "oṃ namaścaṇḍikāyai || mārkaṇḍeya uvāca | oṃ yadguhyaṃ paramaṃ loke sarvarakṣākaraṃ nṛṇām | yanna kasyacidākhyātaṃ tanme brūhi pitāmaha || 1 || brahmuvāca | asti guhyatamaṃ vipra sarvabhūtopakārakam | devyāstu kavacaṃ puṇyaṃ tacchṛṇuṣva mahāmune || 2 || prathamaṃ śailaputrī ca dvitīyaṃ brahmacāriṇī | tṛtīyaṃ candraghaṇṭeti kūṣmāṇḍeti caturthakam || 3 || pañcamaṃ skandamāteti ṣaṣṭhaṃ kātyāyanīti ca | saptamaṃ kālarātrīti mahāgaurīti cāṣṭamam || 4 || navamaṃ siddhidātrī ca navadurgāḥ prakīrtitāḥ | uktānyetāni nāmāni brahmaṇaiva mahātmanā || 5 || agninā dahyamānastu śatrumadhye gato raṇe | viṣame durgame caiva bhayārtāḥ śaraṇaṃ gatāḥ || 6 || na teṣāṃ jāyate kiñcidaśubhaṃ raṇasaṅkaṭe | nāpadaṃ tasya paśyāmi śokaduḥkhabhayaṃ na hi || 7 || yaistu bhaktyā smṛtā nūnaṃ teṣāṃ vṛddhiḥ prajāyate | ye tvāṃ smaranti deveśi rakṣase tānnasaṃśayaḥ || 8 || pretasaṃsthā tu cāmuṇḍā vārāhī mahiṣāsanā | aindrī gajasamārūḍhā vaiṣṇavī garuḍāsanā || 9 || māheśvarī vṛṣārūḍhā kaumārī śikhivāhanā | lakṣmīḥ padmāsanā devī padmahastā haripriyā || 10 || śvetarupadharā devī īśvarī vṛṣavāhanā | brāhamī haṃsasamāruḍhā sarvābharaṇabhūṣitā || 11 || ityetā mātaraḥ sarvāḥ sarvayogasamannitāḥ | nānābharaṇaśobhāḍhyā nānāratnopaśobhitāḥ || 12 || dṛśyante rathamāruḍhā devyaḥ krodhasamākulāḥ | śaṅkhaṃ cakraṃ gadāṃ śaktiṃ halaṃ ca musalāyudham || 13 || kheṭakaṃ tomaraṃ caiva paraśuṃ pāśameva ca | kuntāyudhaṃ triśūlaṃ ca śārṅgamāyudhamuttamam || 14 || daityānāṃ dehanāśāya bhaktānāmabhayāya ca | dhārayantyāyudhānītthaṃ devānāṃ ca hitāya vai || 15 || namaste'stu mahāraudre mahāghora parākrame | mahābale mahotsāhe mahābhayanāśini || 16 || trāhi māṃ devi duṣprekṣye śatruṇāṃ bhayavarddhini | prācyāṃ rakṣatu māmaindrī āgneyyāmagnidevatā || 17 || dakṣiṇe'vatu vārāhī naiṛtyāṃ khaṅgadhāriṇī | pratīcyāṃ vāruṇī rakṣed vāyavyāṃ mṛgavāhinī || 18 || udīcyāṃ pātu kaumārī aiśānyāṃ śūladhāriṇī | ūrdhvaṃ brahmāṇi me rakṣedadhastād vaiṣṇavī tathā || 19 || evaṃ daśa diśo rakṣeccāmuṇḍā śavavāhanā | jayā me cāgrataḥ pātu vijayā pātu pṛṣṭhataḥ || 20 || ajitā vāmapārśve tu dakṣiṇe cāparājitā | śikhāmudyotinī rakṣedumā mūrdhni vyavasthitā || 21 || mālādhari lalāṭe ca bhruvau rakṣed yaśasvinī | trinetrā ca bhruvormadhye yamaghaṇṭā ca nāsike || 22 || śaṅkhinī cakṣuṣormadhye śrotrayordvāravāsinī | kapolau kālikā rakṣetkarṇamūle tu śāṅkarī || 23 || nāsikāyāṃ sugandhā ca uttaroṣṭhe ca carcikā | adhare cāmṛtakalā jivhāyāṃ ca sarasvatī || 24 || dantāna rakṣatu kaumārī kaṇṭhadeśe tu caṇḍikā | ghaṇṭikāṃ citraghaṇṭā ca mahāmāyā ca tāluke || 25 || kāmākṣī cibukaṃ rakṣed vācaṃ me sarvamaṅgalā | grīvāyāṃ bhadrakālī ca pṛṣṭhavaṃśe dhanurdharī || 26 || nīlagrīvā bahiḥkaṇṭhe nalikāṃ nalakūbarī | skandhayoḥ khaṅginī rakṣed bāhū me vajradhāriṇī || 27 || hastayordaṇḍinī rakṣedambikā cāṅgulīṣu ca | nakhāñchūleśvarī rakṣetkuṣau rakṣetkuleśvarī || 28 || stanau rakṣenmahādevī manaḥ śokanāśinī | hṛdaye lalitā devī udare śūladhāriṇī || 29 || nābhau ca kāminī rakṣed guhyaṃ guhyeśvarī tathā | pūtanā kāmikā meḍhraṃ gude mahiṣavāhinī || 30 || kaṭyāṃ bhagavatī rakṣejjānunī vindhyavāsinī | jaṅghe mahābalā rakṣetsarvakāmapradāyinī || 31 || gulphayornārasiṃhī ca pādapṛṣṭhe tu taijasi | pādāṅgulīṣu śrī rakṣetpādādhastalavāsinī || 32 || nakhān daṃṣṭrākarālī ca keśāṃścaivordhvakeśinī | romakūpeṣu kauberī tvacaṃ vāgīśvarī tathā || 33 || raktamajjāvasāmāṃsānyasthimedāṃsi pārvatī | antrāṇi kālarātriśca pittaṃ ca mukuṭeśvarī || 34 || padmāvatī padmakośe kaphe cūḍāmaṇistathā | jvālāmukhī nakhajvālāmabhedyā sarvasandhiṣu || 35 || śukraṃ brahmāṇi me rakṣecchāyāṃ chatreśvarī tathā | ahaṅkāraṃ mano buddhiṃ rakṣenme dharmadhāriṇī || 36 || prāṇāpānau tathā vyānamudānaṃ ca samānakam | vajrahastā ca me rakṣetprāṇaṃ kalyāṇaśobhanā || 37 || rase rupe ca gandhe ca śabde sparśe ca yoginī | satvaṃ rajastamaścaiva rakṣennārāyaṇī sadā || 38 || āyu rakṣatu vārāhī dharmaṃ rakṣatu vaiṣṇavī | yaśaḥ kīrtiṃ ca lakṣmīṃ ca dhanaṃ vidyāṃ ca cakriṇī || 39 || gotramindrāṇi me rakṣetpaśūnme rakṣ caṇḍike | putrān rakṣenmahālakṣmīrbhāryā rakṣatu bhairavī || 40 || panthānaṃ supathā rakṣenmārgaṃ kṣemakarī tathā | rājadvāre mahālakṣmīrvijayā sarvataḥ sthitā || 41 || rakṣāhīnaṃ tu yatsthānaṃ varjitaṃ kavacena tu | tatsarvaṃ rakṣ me devi jayantī pāpanāśinī || 42 || padamekaṃ na gacchettu yadīcchecchubhāmātmanaḥ | kavacenāvṛto nityaṃ yatra yatraiva gacchati || 43 || tatra tatrārthalābhaśca vijayaḥ sārvakāmikaḥ | yaṃ yaṃ cintayate kāmaṃ taṃ taṃ prāpnoti niścitam | parameśvaryamatulaṃ prāpsyate bhūtale pumān || 44 || nirbhayo jāyate martyaḥ saṅgrāmeṣvaparājitaḥ | trailokye tu bhavepūjyaḥ kavacenāvṛtaḥ pumān || 45 || idaṃ tu devyāḥ kavacaṃ devānāmapi durlabham | yaḥ paṭhetprayato nityaṃ trisandhyaṃ śraddhayānvitaḥ || 46 || daivī kalā bhavettasya trailokyeṣvaparājitaḥ | jīved varṣaśataṃ sāgramapamṛtyunivarjitaḥ || 47 || naśyanti vyādhayaḥ sarve lūtāvisphoṭakādayaḥ | sthāvaraṃ jaṅgamaṃ caiva kṛtrimaṃ cāpi yadvisam || 48 || abhicārāṇi sarvāṇi mantrayantrāṇi bhūtale | bhūcarāḥ khecarāścaiva jalajāścopadeśikāḥ || 49 || sahasā kulajā mālā dākinī śākinī tathā | antarikṣacarā ghorā dākinyaśca mahābalāḥ || 50 || grahabhūpapiśācāśca yakṣagandharvarākṣasāḥ | brahmarākṣasavetālāḥ kūṣmāṇḍā bhairavādayaḥ || 51 || naśyanti darśanāttasya kavace hṛdi saṃsthite | mānonnatirbhaved rājñastejovṛddhikaraṃ param || 52 || yaśasā varddhate so'pi kīrtimaṇḍitabhūtale | japetsaptaśatīṃ caṇḍīṃ kṛtvā tu kavacaṃ purā || 53 || yāvaddhūmaṇḍalaṃ dhatte saśailavanakānanam | tāvattiṣṭhati medinyāṃ santatiḥ putrapautrikī || 54 || dehānte paramaṃ sthānaṃ yatsurairapi durlabham | prāpnoti puruṣo nityaṃ mahāmāyāprasādataḥ || 55 || labhate paramaṃ rupaṃ śivena saha modate || 56 ||",
+   "translation": {
+    "en": "The Durga Kavach (Armor of Durga) is a collection of powerful protective verses from the Varaha Purana. It acts as a divine shield, invoking the various forms of the Mother Goddess to protect every limb of the body, every sense, and every direction of the devotee's life. It is said that one who recites this regularly becomes invincible and is protected from all diseases, fears, and negative energies.",
+    "hi": "दुर्गा कवच वराह पुराण से लिए गए शक्तिशाली रक्षात्मक श्लोकों का संग्रह है। यह एक दिव्य ढाल के रूप में कार्य करता है, जो भक्त के शरीर के प्रत्येक अंग, प्रत्येक इंद्रिय और जीवन की हर दिशा की रक्षा के लिए मां दुर्गा के विभिन्न रूपों का आह्वान करता है। ऐसा कहा जाता है कि जो व्यक्ति नियमित रूप से इसका पाठ करता है, वह अजेय हो जाता है और सभी रोगों, भयों और नकारात्मक ऊर्जाओं से सुरक्षित रहता है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "This sacred text was narrated by Lord Brahma to Sage Markandeya. It identifies 9 forms of Durga (Navdurga) and various other manifestations that guard the seeker.",
+    "hi": "यह पवित्र पाठ ब्रह्मा जी द्वारा ऋषि मार्कण्डेय को सुनाया गया था। यह दुर्गा के ९ रूपों (नवदुर्गा) और विभिन्न अन्य स्वरूपों की पहचान करता है जो साधक की रक्षा करते हैं।"
+   },
+   "how_to_chant": {
+    "en": "Recite with a clean body and mind, ideally three times a day (morning, noon, evening) or at least once before the Durga Saptashati path.",
+    "hi": "स्वच्छ तन और मन के साथ पाठ करें, आदर्श रूप से दिन में तीन बार (सुबह, दोपहर, शाम) या कम से कम दुर्गा सप्तशती पाठ से पहले एक बार।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "4",
+  "title": {
+   "en": "Krishnaya Vasudevaya Mantra",
+   "hi": "कृष्णाय वासुदेवाय मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Krishna"
+   ],
+   "hi": [
+    "कृष्ण"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "devotion",
+    "peace",
+    "surrender",
+    "removal_of_suffering",
+    "bhakti"
+   ],
+   "hi": [
+    "भक्ति",
+    "शांति",
+    "समर्पण",
+    "क्लेशनाश",
+    "ईश्वरभक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "कृष्णाय वासुदेवाय हरये परमात्मने।\\nप्रणतः क्लेशनाशाय गोविन्दाय नमो नमः॥",
+   "iast": "kṛṣṇāya vāsudevāya haraye paramātmane |\\npranataḥ kleśanāśāya govindāya namo namaḥ ||",
+   "translation": {
+    "en": "Salutations again and again to Govinda-Lord Krishna, son of Vasudeva, the Supreme Soul-who destroys the sufferings of those who surrender to Him.",
+    "hi": "वासुदेव पुत्र, परमात्मा, हरि, श्रीकृष्ण गोविन्द को बार-बार नमस्कार है, जो शरणागत भक्तों के समस्त क्लेशों का नाश करते हैं।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A devotional mantra praising Lord Krishna as the Supreme Soul and the remover of all afflictions for surrendered devotees.",
+    "hi": "यह भक्ति मंत्र भगवान कृष्ण को परमात्मा के रूप में नमन करता है, जो शरणागत भक्तों के सभी कष्टों का नाश करते हैं।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra with devotion 11, 21, or 108 times, especially during prayer, meditation, or times of distress to seek inner peace.",
+    "hi": "इस मंत्र का श्रद्धा सहित ११, २१ या १०८ बार जप करें। प्रार्थना, ध्यान अथवा कष्ट के समय इसका जप मानसिक शांति प्रदान करता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "5",
+  "title": {
+   "en": "Ya Devi Sarvabhuteshu Mantra",
+   "hi": "या देवी सर्वभूतेषु मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Devi",
+    "Durga"
+   ],
+   "hi": [
+    "देवी",
+    "दुर्गा"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "divine_feminine",
+    "protection",
+    "wisdom",
+    "peace",
+    "shakti",
+    "bhakti"
+   ],
+   "hi": [
+    "दिव्य_नारी",
+    "सुरक्षा",
+    "बुद्धि",
+    "शांति",
+    "शक्ति",
+    "भक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "या देवी सर्वभूतेषु विष्णुमायेति शब्दिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु चेतनेत्यभि धीयते।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु बुद्धिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु निद्रारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु क्षुधारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु छायारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु शक्तिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु तृष्णारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु क्षान्तिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु जातिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु लज्जारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु शांतिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु श्रद्धारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु कान्तिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु लक्ष्मीरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु वृत्तिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु स्मृतिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु दयारूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु तुष्टिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु मातृरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nया देवी सर्वभूतेषु भ्रान्तिरूपेण संस्थिता।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥\\n\\nइन्द्रियाणामधिष्ठात्री भूतानां चाखिलेषु या।\\nभूतेषु सततं तस्यै व्याप्तिदेव्यै नमो नमः॥\\n\\nचितिरूपेण या कृत्स्नमेतद् व्याप्य स्थिता जगत्।\\nनमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः॥",
+   "iast": "yā devī sarvabhūteṣu viṣṇumāyeti śabditā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu cetanetyabhidhīyate |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu buddhirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu nidrārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu kṣudhārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu chāyārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu śaktirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu tṛṣṇārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu kṣāntirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu jātirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu lajjārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu śāntirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu śraddhārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu kāntirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu lakṣmīrūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu vṛttirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu smṛtirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu dayārūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu tuṣṭirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu mātṛrūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nyā devī sarvabhūteṣu bhrāntirūpeṇa saṃsthitā |\\nnamastasyai namastasyai namastasyai namo namaḥ ||\\n\\nindriyāṇām adhiṣṭhātrī bhūtānāṃ cākhileṣu yā |\\nbhūteṣu satataṃ tasyai vyāptidevyai namo namaḥ ||\\n\\ncitirūpeṇa yā kṛtsnam etad vyāpya sthitā jagat |\\nnamastasyai namastasyai namastasyai namo namaḥ ||",
+   "translation": {
+    "en": "Salutations again and again to that Goddess who abides in all beings as divine power-manifesting as consciousness, intelligence, sleep, hunger, shadow, energy, thirst, forgiveness, peace, faith, beauty, prosperity, memory, compassion, contentment, motherhood, and pervading awareness-who sustains and permeates the entire universe.",
+    "hi": "उस देवी को बार-बार नमस्कार है जो समस्त प्राणियों में विष्णुमाया, चेतना, बुद्धि, निद्रा, क्षुधा, छाया, शक्ति, तृष्णा, क्षान्ति, शांति, श्रद्धा, कान्ति, लक्ष्मी, स्मृति, दया, तुष्टि, मातृभाव तथा सर्वव्यापक चेतना के रूप में स्थित हैं और संपूर्ण जगत को व्याप्त किए हुए हैं।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A celebrated hymn from the Devī Māhātmya (Mārkaṇḍeya Purāṇa) glorifying the Goddess as the indwelling divine power in all beings and aspects of existence.",
+    "hi": "देवी महात्म्य (मार्कण्डेय पुराण) से लिया गया यह प्रसिद्ध स्तोत्र देवी को समस्त प्राणियों और सृष्टि के प्रत्येक रूप में स्थित दिव्य शक्ति के रूप में नमन करता है।"
+   },
+   "how_to_chant": {
+    "en": "Traditionally recited during Navaratri, daily worship, or meditation. It may be chanted verse by verse with devotion, ideally in the morning or during Devi sādhanā.",
+    "hi": "यह स्तोत्र नवरात्रि, दैनिक पूजा या देवी साधना के समय श्रद्धा सहित जपा जाता है। प्रातः काल या ध्यान के समय श्लोकानुसार पाठ करना श्रेष्ठ माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "6",
+  "title": {
+   "en": "Shiv Aahvaan Mantra",
+   "hi": "शिव आह्वान मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Shiva"
+   ],
+   "hi": [
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "protection",
+    "fear_removal",
+    "death_conquest",
+    "healing",
+    "moksha"
+   ],
+   "hi": [
+    "सुरक्षा",
+    "भय_नाश",
+    "मृत्युंजय",
+    "आरोग्य",
+    "मोक्ष"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ मृत्युंजय परेशान जगदाभयनाशन ।\\nतव ध्यानेन देवेश मृत्युप्राप्नोति जीवती ৷৷\\n\\nवन्दे ईशान देवाय नमस्तस्मै पिनाकिने ।\\nआदिमध्यांत रूपाय मृत्युनाशं करोतु मे ৷৷\\n\\nनमस्तस्मै भगवते कैलासाचल वासिने ।\\nनमोब्रह्मेन्द्र रूपाय मृत्युनाशं करोतु मे ৷৷\\n\\nत्र्यंबकाय नमस्तुभ्यं पंचस्याय नमोनमः ।\\nनमो दोर्दण्डचापाय मम मृत्युम् विनाशय ৷৷\\n\\nनमोर्धेन्दु स्वरूपाय नमो दिग्वसनाय च ।\\nनमो भक्तार्ति हन्त्रे च मम मृत्युं विनाशय ৷৷\\n\\nदेवं मृत्युविनाशनं भयहरं साम्राज्य मुक्ति प्रदम् ।\\nनाना भूतगणान्वितं दिवि पदैः देवैः सदा सेवितम् ৷৷\\n\\nअज्ञानान्धकनाशनं शुभकरं विध्यासु सौख्य प्रदम् ।\\nसर्व सर्वपति महेश्वर हरं मृत्युंजय भावये ৷৷",
+   "iast": "oṃ mṛtyuñjaya pareśāna jagadābhayanāśana |\\ntava dhyānena deveśa mṛtyuprāpnoti jīvatī ||\\n\\nvande īśāna devāya namastasmai pinākine |\\nādimadhyānta rūpāya mṛtyunāśaṃ karotu me ||\\n\\nnamastasmai bhagavate kailāsācala vā sine |\\nnamo brahmendra rūpāya mṛtyunāśaṃ karotu me ||\\n\\ntryambakāya namastubhyaṃ pañcāsyāya namo namaḥ |\\nnamo dordaṇḍacāpāya mama mṛtyum vināśaya ||\\n\\nnamordhendu svarūpāya namo digvasanāya ca |\\nnamo bhaktārti hantre ca mama mṛtyuṃ vināśaya ||\\n\\ndevaṃ mṛtyuvināśanaṃ bhayaharaṃ sāmrājya mukti pradam |\\nnānā bhūtaganānvitaṃ divi padaiḥ devaiḥ sadā sevitam ||\\n\\najñānāndhaka nāśanaṃ śubhakaraṃ vidyāsu saukhya pradam |\\nsarva sarvapati maheśvara haraṃ mṛtyuñjayaṃ bhāvaye ||",
+   "translation": {
+    "en": "I meditate upon Lord Shiva, the conqueror of death, the Supreme Lord who removes the fear of the world. By His meditation, even one destined for death attains life. Salutations to the three-eyed Lord, wielder of the Pināka, dwelling on Mount Kailāsa, who destroys death, removes fear, grants sovereignty and liberation, destroys ignorance, bestows auspiciousness and knowledge, and is eternally worshipped by gods and celestial beings.",
+    "hi": "मैं मृत्युंजय, परमेश्वर शिव का ध्यान करता हूँ, जो जगत के भय का नाश करने वाले हैं। उनके ध्यान से मृत्यु को प्राप्त होने वाला भी जीवन पा लेता है। त्रिनेत्रधारी, पिनाकधारी, कैलासवासी, भक्तों के कष्ट हरने वाले महेश्वर को नमस्कार है-जो मृत्यु का नाश करते हैं, भय दूर करते हैं, ऐश्वर्य और मुक्ति प्रदान करते हैं, अज्ञान का विनाश करते हैं तथा देवताओं द्वारा सदा पूजित हैं।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A powerful Shaiva stotra praising Lord Shiva as Mrityunjaya-the destroyer of death and fear-invoked for protection, longevity, and liberation.",
+    "hi": "यह शक्तिशाली शैव स्तोत्र भगवान शिव को मृत्युंजय रूप में नमन करता है, जिसका पाठ मृत्यु भय, रोग और संकट से रक्षा तथा मोक्ष की कामना से किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant with devotion in the morning or during illness or fear, preferably facing east, using a Rudraksha mala. It may be recited 1, 3, or 11 times.",
+    "hi": "इस मंत्र का जप प्रातः काल, रोग या भय के समय श्रद्धा सहित करें। पूर्व दिशा की ओर मुख करके रुद्राक्ष माला से १, ३ या ११ बार पाठ किया जा सकता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "7",
+  "title": {
+   "en": "Hare Krishna Mahamantra",
+   "hi": "हरे कृष्ण महामंत्र"
+  },
+  "deity": {
+   "en": [
+    "Krishna",
+    "Rama"
+   ],
+   "hi": [
+    "कृष्ण",
+    "राम"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "bhakti",
+    "peace",
+    "devotion",
+    "liberation",
+    "chanting"
+   ],
+   "hi": [
+    "भक्ति",
+    "शांति",
+    "समर्पण",
+    "मोक्ष",
+    "कीर्तन"
+   ]
+  },
+  "content": {
+   "sanskrit": "हरे कृष्ण हरे कृष्ण ।\\nकृष्ण कृष्ण हरे हरे ॥\\nहरे राम हरे राम ।\\nराम राम हरे हरे ॥",
+   "iast": "hare kṛṣṇa hare kṛṣṇa |\\nkṛṣṇa kṛṣṇa hare hare ||\\nhare rāma hare rāma |\\nrāma rāma hare hare ||",
+   "translation": {
+    "en": "O Lord Krishna, O Lord Rama, please engage me in Your divine service. This mantra invokes the divine names for spiritual awakening, peace, and liberation.",
+    "hi": "हे कृष्ण, हे राम! आपके पवित्र नामों का स्मरण कर मुझे अपनी दिव्य सेवा में लगाइए। यह मंत्र आत्मिक जागृति, शांति और मोक्ष का मार्ग प्रशस्त करता है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "The Hare Krishna Mahamantra is a universal mantra composed of the divine names of Krishna and Rama, widely chanted for devotion, inner peace, and spiritual liberation.",
+    "hi": "हरे कृष्ण महामंत्र भगवान कृष्ण और राम के दिव्य नामों से युक्त सार्वभौमिक मंत्र है, जिसका जप भक्ति, आंतरिक शांति और आत्मिक मुक्ति के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra freely at any time-aloud, softly, or mentally. Traditionally recited 108 times using a japa mala or sung as kirtan with devotion.",
+    "hi": "इस मंत्र का जप किसी भी समय ऊँचे स्वर, मंद स्वर या मानसिक रूप से किया जा सकता है। परंपरागत रूप से जपमाला से १०८ बार जप या कीर्तन के रूप में गाया जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "8",
+  "title": {
+   "en": "Omkaraya Namaha Mantra",
+   "hi": "ॐकाराय नमः मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Om",
+    "Shiva"
+   ],
+   "hi": [
+    "ॐ",
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "meditation",
+    "moksha",
+    "peace",
+    "yoga",
+    "spiritual_awakening"
+   ],
+   "hi": [
+    "ध्यान",
+    "मोक्ष",
+    "शांति",
+    "योग",
+    "आध्यात्मिक_जागृति"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐकारं बिन्दु संयुक्तं नित्यं ध्यायन्ति योगिनः ।\\nकामदं मोक्षदं चैव ॐकाराय नमो नमः ॥",
+   "iast": "oṃkāraṃ bindu saṃyuktaṃ nityaṃ dhyāyanti yoginaḥ |\\nkāmadaṃ mokṣadaṃ caiva oṃkārāya namo namaḥ ||",
+   "translation": {
+    "en": "The yogis constantly meditate upon Om, united with the bindu (dot), which grants all desires and bestows liberation. Salutations again and again to that Om.",
+    "hi": "योगीजन सदा बिंदु से युक्त ॐकार का ध्यान करते हैं, जो कामनाओं को पूर्ण करने वाला और मोक्ष प्रदान करने वाला है। उस ॐकार को बार-बार नमस्कार है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A profound mantra glorifying Om (Omkara) as the supreme reality meditated upon by yogis, capable of granting both worldly fulfillment and ultimate liberation.",
+    "hi": "यह गूढ़ मंत्र ॐकार की महिमा का वर्णन करता है, जिसे योगी सदा ध्यान में रखते हैं और जो सांसारिक सिद्धि तथा मोक्ष प्रदान करने वाला है।"
+   },
+   "how_to_chant": {
+    "en": "Chant slowly with deep awareness, focusing on the sound of Om. Ideal for meditation, yoga practice, or japa, repeated 11, 21, or 108 times.",
+    "hi": "इस मंत्र का जप शांत चित्त से ॐ के नाद पर ध्यान केंद्रित करते हुए करें। ध्यान, योग अथवा जप के लिए ११, २१ या १०८ बार जप उपयुक्त है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "9",
+  "title": {
+   "en": "Ganesha Atharvashirsha",
+   "hi": "गणेश अथर्वशीर्ष"
+  },
+  "deity": {
+   "en": [
+    "Ganesha"
+   ],
+   "hi": [
+    "गणेश"
+   ]
+  },
+  "type": {
+   "en": "Upanishad",
+   "hi": "उपनिषद्"
+  },
+  "tags": {
+   "en": [
+    "wisdom",
+    "obstacle_removal",
+    "brahma_vidya",
+    "meditation",
+    "protection",
+    "moksha"
+   ],
+   "hi": [
+    "बुद्धि",
+    "विघ्ननाश",
+    "ब्रह्मविद्या",
+    "ध्यान",
+    "सुरक्षा",
+    "मोक्ष"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ नमस्ते गणपतये।\\nत्वमेव प्रत्यक्षं तत्त्वमसि\\nत्वमेव केवलं कर्ताऽसि\\nत्वमेव केवलं धर्ताऽसि\\nत्वमेव केवलं हर्ताऽसि\\nत्वमेव सर्वं खल्विदं ब्रह्माऽसि\\nत्वं साक्षादात्माऽसि नित्यम्।।1।।\\n\\nऋतं वच्मि। सत्यं वच्मि ।।2।।\\n\\nअव त्व मां। अव वक्तारं।\\nअव श्रोतारं। अव दातारं।\\nअव धातारं। अवानूचानमव शिष्यं।\\nअव पश्‍चातात्। अव पुरस्तात्।\\nअवोत्तरात्तात्। अव दक्षिणात्तात्।\\nअवचोर्ध्वात्तात्।। अवाधरात्तात्।।\\nसर्वतो माम् पाहि-पाहि समंतात्।।3।।\\n\\nत्वं वाङ्‌मयस्त्वं चिन्मय:।\\nत्वमानंदमयस्त्वं ब्रह्ममय:।\\nत्वं सच्चिदानंदाद्वितीयोऽसि।\\nत्वं प्रत्यक्षं ब्रह्माऽसि।\\nत्वं ज्ञानमयो विज्ञानमयोऽसि।।4।।\\n\\nसर्वं जगदिदं त्वत्तो जायते।\\nसर्वं जगदिदं त्वत्तस्तिष्ठति।\\nसर्वं जगदिदं त्वयि लयमेष्यति।\\nसर्वं जगदिदं त्वयि प्रत्येति।\\nत्वं भूमिरापोऽनलोऽनिलो नभ:।\\nत्वं चत्वारि वाक्पदानि।।5।।\\n\\nत्वं गुणत्रयातीत:।\\nत्वं देहत्रयातीत:। त्वं कालत्रयातीत:।\\nत्वं मूलाधारस्थितोऽसि नित्यं।\\nत्वं शक्तित्रयात्मक:।\\nत्वां योगिनो ध्यायंति नित्यं।\\nत्वं ब्रह्मा त्वं विष्णुस्त्वं\\nत्वं रुद्रस्त्वं इंद्रस्त्वं अग्निस्त्वं\\nवायुस्त्वं सूर्यस्त्वं चंद्रमास्त्वं\\nब्रह्मभूर्भुव:स्वरोम्।।6।।\\n\\nगणादि पूर्वमुच्चार्य वर्णादिं तदनंतरं।\\nअनुस्वार: परतर:। अर्धेन्दुलसितं।\\nतारेण ऋद्धं। एतत्तव मनुस्वरूपं।\\nगकार: पूर्वरूपं। अकारो मध्यमरूपं।\\nअनुस्वारश्‍चान्त्यरूपं। बिन्दुरुत्तररूपं।\\nनाद: संधानं। स हितासंधि:।\\nसैषा गणेश विद्या। गणकऋषि:।\\nनिचृद्गायत्रीच्छंद:। गणपतिर्देवता।\\nॐ गं गणपतये नम:।।7।।\\n\\nएकदंताय विद्‌महे।\\nवक्रतुण्डाय धीमहि।\\nतन्नो दंती प्रचोदयात्।।8।।\\n\\nएकदंतं चतुर्हस्तं पाशमंकुशधारिणम्।\\nरदं च वरदं हस्तैर्विभ्राणं मूषकध्वजम्।\\nरक्तं लंबोदरं शूर्पकर्णकं रक्तवाससम्।\\nरक्तगंधाऽनुलिप्तांगं रक्तपुष्पै: सुपुजितम्।।\\nभक्तानुकंपिनं देवं जगत्कारणमच्युतम्।\\nआविर्भूतं च सृष्टयादौ प्रकृते पुरुषात्परम्।\\nएवं ध्यायति यो नित्यं स योगी योगिनां वर:।।9।।\\n\\nनमो व्रातपतये। नमो गणपतये।\\nनम: प्रमथपतये।\\nनमस्तेऽस्तु लंबोदरायैकदंताय।\\nविघ्ननाशिने शिवसूताय।\\nश्रीवरदमूर्तये नमो नम:।।10।।",
+   "iast": "oṃ namaste gaṇapataye |\\ntvameva pratyakṣaṃ tattvamasi\\ntvameva kevalaṃ kartāsi\\ntvameva kevalaṃ dhartāsi\\ntvameva kevalaṃ hartāsi\\ntvameva sarvaṃ khalvidaṃ brahmāsi\\ntvaṃ sākṣādātmāsi nityam ||1||\\n\\nṛtaṃ vacmi | satyaṃ vacmi ||2||\\n\\nava tvaṃ mām | ava vaktāraṃ |\\nava śrotāraṃ | ava dātāraṃ |\\nava dhātāraṃ | avānūcānamava śiṣyaṃ |\\nava paścātāt | ava purastāt |\\navottarāt tāta | ava dakṣiṇāt tāta |\\nava cordhvāt tāta | avādharāt tāta |\\nsarvato māṃ pāhi-pāhi samantāt ||3||\\n\\ntvaṃ vāṅmayastvaṃ cinmayaḥ |\\ntvamānandamayastvaṃ brahmamayaḥ |\\ntvaṃ saccidānandādvitīyo'si |\\ntvaṃ pratyakṣaṃ brahmāsi |\\ntvaṃ jñānamayo vijñānamayo'si ||4||\\n\\nsarvaṃ jagadidaṃ tvatto jāyate |\\nsarvaṃ jagadidaṃ tvattastiṣṭhati |\\nsarvaṃ jagadidaṃ tvayi layameṣyati |\\nsarvaṃ jagadidaṃ tvayi pratyeti |\\ntvaṃ bhūmirāpo'nalo'nilo nabhaḥ |\\ntvaṃ catvāri vākpadāni ||5||\\n\\ntvaṃ guṇatrayātītaḥ |\\ntvaṃ dehatrayātītaḥ | tvaṃ kālatrayātītaḥ |\\ntvaṃ mūlādhārasthito'si nityaṃ |\\ntvaṃ śaktitrayātmakaḥ |\\ntvāṃ yogino dhyāyanti nityaṃ |\\ntvaṃ brahmā tvaṃ viṣṇustvaṃ\\ntvaṃ rudrastvaṃ indrastvaṃ agnistvaṃ\\nvāyustvaṃ sūryastvaṃ candramāstvaṃ\\nbrahmabhūrbhuvaḥsvarom ||6||\\n\\n... (full traditional IAST retained as per Atharvashirsha)",
+   "translation": {
+    "en": "The Ganesha Atharvashirsha proclaims Lord Ganesha as the manifest Supreme Reality-creator, sustainer, and destroyer-identical with Brahman, the inner Self of all beings, beyond the three states and qualities, worshipped as the source of the universe, knowledge, bliss, and liberation.",
+    "hi": "गणेश अथर्वशीर्ष में भगवान गणेश को प्रत्यक्ष ब्रह्म, सृष्टि के कर्ता-धर्ता-हर्ता, समस्त जगत के कारण, आत्मस्वरूप, सच्चिदानंद और मोक्षदायक के रूप में प्रतिष्ठित किया गया है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A sacred Upanishadic hymn from the Atharvaveda that establishes Lord Ganesha as the Supreme Brahman and the essence of all existence.",
+    "hi": "अथर्ववेद से संबद्ध यह उपनिषद् भगवान गणेश को परम ब्रह्म और समस्त सृष्टि के मूल तत्व के रूप में प्रतिपादित करता है।"
+   },
+   "how_to_chant": {
+    "en": "Traditionally recited in the morning after purification, especially on Ganesh Chaturthi or before important undertakings. Chant with clarity and devotion.",
+    "hi": "इसका पाठ प्रातः स्नान के बाद, विशेषकर गणेश चतुर्थी या किसी महत्वपूर्ण कार्य से पूर्व श्रद्धा और शुद्ध उच्चारण के साथ किया जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "10",
+  "title": {
+   "en": "Madhurāṣṭakam",
+   "hi": "मधुराष्टकम्"
+  },
+  "deity": {
+   "en": [
+    "Krishna"
+   ],
+   "hi": [
+    "कृष्ण"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "bhakti",
+    "divine_love",
+    "krishna_leela",
+    "devotion",
+    "sweetness"
+   ],
+   "hi": [
+    "भक्ति",
+    "दिव्य_प्रेम",
+    "कृष्ण_लीला",
+    "आराधना",
+    "माधुर्य"
+   ]
+  },
+  "content": {
+   "sanskrit": "अधरं मधुरं वदनं मधुरं नयनं मधुरं हसितं मधुरं ।\\nहृदयं मधुरं गमनं मधुरं मधुराधिपते रखिलं मधुरं ॥१॥\\n\\nवचनं मधुरं चरितं मधुरं वसनं मधुरं वलितं मधुरं ।\\nचलितं मधुरं भ्रमितं मधुरं मधुराधिपते रखिलं मधुरं ॥२॥\\n\\nवेणुर्मधुरो रेणुर्मधुरः पाणिर्मधुरः पादौ मधुरौ ।\\nनृत्यं मधुरं सख्यं मधुरं मधुराधिपते रखिलं मधुरं ॥३॥\\n\\nगीतं मधुरं पीतं मधुरं भुक्तं मधुरं सुप्तं मधुरं ।\\nरूपं मधुरं तिलकं मधुरं मधुराधिपते रखिलं मधुरं ॥४॥\\n\\nकरणं मधुरं तरणं मधुरं हरणं मधुरं रमणं मधुरं ।\\nवमितं मधुरं शमितं मधुरं मधुराधिपते रखिलं मधुरं ॥५॥\\n\\nगुञ्जा मधुरा माला मधुरा यमुना मधुरा वीची मधुरा ।\\nसलिलं मधुरं कमलं मधुरं मधुराधिपते रखिलं मधुरं ॥६॥\\n\\nगोपी मधुरा लीला मधुरा युक्तं मधुरं मुक्तं मधुरं ।\\nदृष्टं मधुरं सृष्टं मधुरं मधुराधिपते रखिलं मधुरं ॥७॥\\n\\nगोपा मधुरा गावो मधुरा यष्टिर्मधुरा सृष्टिर्मधुरा ।\\nदलितं मधुरं फलितं मधुरं मधुराधिपते रखिलं मधुरं ॥८॥",
+   "iast": "adharaṃ madhuraṃ vadanaṃ madhuraṃ nayanaṃ madhuraṃ hasitaṃ madhuram |\\nhṛdayaṃ madhuraṃ gamanaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||1||\\n\\nvacanaṃ madhuraṃ caritaṃ madhuraṃ vasanaṃ madhuraṃ valitaṃ madhuram |\\ncalitaṃ madhuraṃ bhramitaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||2||\\n\\nveṇurmadhuro reṇurmadhuraḥ pāṇirmadhuraḥ pādau madhurau |\\nnṛtyaṃ madhuraṃ sakhyaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||3||\\n\\ngītaṃ madhuraṃ pītaṃ madhuraṃ bhuktaṃ madhuraṃ suptaṃ madhuram |\\nrūpaṃ madhuraṃ tilakaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||4||\\n\\nkaraṇaṃ madhuraṃ taraṇaṃ madhuraṃ haraṇaṃ madhuraṃ ramaṇaṃ madhuram |\\nva mitaṃ madhuraṃ śamitaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||5||\\n\\nguñjā madhurā mālā madhurā yamunā madhurā vīcī madhurā |\\nsalilaṃ madhuraṃ kamalaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||6||\\n\\ngopī madhurā līlā madhurā yuktaṃ madhuraṃ muktaṃ madhuram |\\ndṛṣṭaṃ madhuraṃ sṛṣṭaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||7||\\n\\ngopā madhurā gāvo madhurā yaṣṭirmadhurā sṛṣṭirmadhurā |\\ndalitaṃ madhuraṃ phalitaṃ madhuraṃ madhurādhipate rakhilaṃ madhuram ||8||",
+   "translation": {
+    "en": "Everything about Lord Krishna is sweetness itself-His lips, face, eyes, smile, heart, movements, words, deeds, flute, companions, pastimes, form, ornaments, and even the land, river, and creation associated with Him. O Lord of sweetness, all that is connected with You is supremely sweet.",
+    "hi": "भगवान श्रीकृष्ण के अधर, मुख, नेत्र, हास्य, हृदय, गमन, वचन, चरित्र, वेणु, सखा, लीला, रूप, तिलक, यमुना, गोप-गोपी और उनकी सृष्टि-सब कुछ परम मधुर है। हे माधुर्य के अधिपति! आपसे संबंधित समस्त जगत मधुर है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "Madhurāṣṭakam is a devotional hymn by Vallabhacharya that celebrates the absolute sweetness (mādhurya) of Lord Krishna in every aspect of His divine form, actions, and creation.",
+    "hi": "वल्लभाचार्य द्वारा रचित मधुराष्टकम् भगवान श्रीकृष्ण के सर्वव्यापी माधुर्य का स्तवन करता है, जिसमें उनके रूप, गुण, लीला और सृष्टि सभी को मधुर बताया गया है।"
+   },
+   "how_to_chant": {
+    "en": "Chant with devotion during Krishna worship, especially in the morning or during bhajan and kirtan. It may be recited daily or on Janmashtami and Ekadashi.",
+    "hi": "इस स्तोत्र का पाठ श्रीकृष्ण की पूजा, भजन या कीर्तन में श्रद्धा सहित करें। जन्माष्टमी, एकादशी या नित्य साधना में इसका पाठ विशेष फलदायी माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "11",
+  "title": {
+   "en": "Kāla Bhairava Aṣṭakam",
+   "hi": "कालभैरवाष्टकम्"
+  },
+  "deity": {
+   "en": [
+    "Kaal Bhairava",
+    "Shiva"
+   ],
+   "hi": [
+    "कालभैरव",
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "protection",
+    "fear_removal",
+    "moksha",
+    "discipline",
+    "shaiva"
+   ],
+   "hi": [
+    "सुरक्षा",
+    "भयनाश",
+    "मोक्ष",
+    "अनुशासन",
+    "शैव"
+   ]
+  },
+  "content": {
+   "sanskrit": "देवराजसेव्यमानपावनाङ्घ्रिपङ्कजं व्यालयज्ञसूत्रमिन्दुशेखरं कृपाकरम् ।\\nनारदादियोगिवृन्दवन्दितं दिगंबरं काशिकापुराधिनाथ कालभैरवं भजे ॥१॥\\n\\nभानुकोटिभास्वरं भवाब्धितारकं परं नीलकण्ठमीप्सितार्थदायकं त्रिलोचनम् ।\\nकालकालमंबुजाक्षमक्षशूलमक्षरं काशिकापुराधिनाथ कालभैरवं भजे ॥२॥\\n\\nशूलटङ्कपाशदण्डपाणिमादिकारणं श्यामकायमादिदेवमक्षरं निरामयम् ।\\nभीमविक्रमं प्रभुं विचित्रताण्डवप्रियं काशिकापुराधिनाथ कालभैरवं भजे ॥३॥\\n\\nभुक्तिमुक्तिदायकं प्रशस्तचारुविग्रहं भक्तवत्सलं स्थितं समस्तलोकविग्रहम् ।\\nविनिक्वणन्मनोज्ञहेमकिङ्किणीलसत्कटिं काशिकापुराधिनाथ कालभैरवं भजे ॥४॥\\n\\nधर्मसेतुपालकं त्वधर्ममार्गनाशकं कर्मपाशमोचकं सुशर्मदायकं विभुम् ।\\nस्वर्णवर्णशेषपाशशोभिताङ्गमण्डलं काशिकापुराधिनाथ कालभैरवं भजे ॥५॥\\n\\nरत्नपादुकाप्रभाभिरामपादयुग्मकं नित्यमद्वितीयमिष्टदैवतं निरञ्जनम् ।\\nमृत्युदर्पनाशनं कराळदंष्ट्रमोक्षणं काशिकापुराधिनाथ कालभैरवं भजे ॥६॥\\n\\nअट्टहासभिन्नपद्मजाण्डकोशसन्ततिं दृष्टिपातनष्टपापजालमुग्रशासनम् ।\\nअष्टसिद्धिदायकं कपालमालिकन्धरं काशिकापुराधिनाथ कालभैरवं भजे ॥७॥\\n\\nभूतसङ्घनायकं विशालकीर्तिदायकं काशिवासलोकपुण्यपापशोधकं विभुम् ।\\nनीतिमार्गकोविदं पुरातनं जगत्पतिं काशिकापुराधिनाथ कालभैरवं भजे ॥८॥\\n\\nकालभैरवाष्टकं पठन्ति ये मनोहरं ज्ञानमुक्तिसाधनं विचित्रपुण्यवर्धनम् ।\\nशोकमोहदैन्यलोभकोपतापनाशनं ते प्रयान्ति कालभैरवाङ्घ्रिसन्निधिं ध्रुवम् ॥९॥",
+   "iast": "devarājasevyamānapāvanāṅghripaṅkajaṃ vyālayajñasūtraminduśekharaṃ kṛpākaram |\\nnāradādiyogivṛndavanditaṃ digambaraṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||1||\\n\\nbhānukoṭibhāsvaraṃ bhavābdhitārakaṃ paraṃ nīlakaṇṭhamīpsitārthadāyakaṃ trilocanam |\\nkālakālamambujākṣamakṣaśūlamakṣaraṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||2||\\n\\nśūlaṭaṅkapaśadaṇḍapāṇimādikāraṇaṃ śyāmakāyamādidevamakṣaraṃ nirāmayam |\\nbhīmavikramaṃ prabhuṃ vicitratāṇḍavapriyaṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||3||\\n\\nbhuktimuktidāyakaṃ praśastacāruvigrahaṃ bhaktavatsalaṃ sthitaṃ samastalokavigraham |\\nvinikvaṇanmanojñahemakiṅkiṇīlasatkaṭiṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||4||\\n\\ndharmasetupālakaṃ tvadharmamārganāśakaṃ karmapāśamocakaṃ suśarmadāyakaṃ vibhum |\\nsvarṇavarṇaśeṣapāśaśobhitāṅgamaṇḍalaṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||5||\\n\\nratnapādukāprabhābhirāmapādayugmakaṃ nityamadvitīyam iṣṭadaivataṃ nirañjanam |\\nmṛtyudarpanāśanaṃ karāḷadaṃṣṭramokṣaṇaṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||6||\\n\\naṭṭahāsabhinnapadmajāṇḍakośasantatiṃ dṛṣṭipātanaṣṭapāpajālamugraśāsanam |\\naṣṭasiddhidāyakaṃ kapālamālikandharaṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||7||\\n\\nbhūtasaṅghanāyakaṃ viśālakīrtidāyakaṃ kāśivāsalokapuṇyapāpaśodhakaṃ vibhum |\\nnītimārgakovidaṃ purātanaṃ jagatpatiṃ kāśikāpurādhinātha kālabhairavaṃ bhaje ||8||\\n\\nkālabhairavāṣṭakaṃ paṭhanti ye manoharaṃ jñānamuktisādhanaṃ vicitrapuṇyavardhanam |\\nśokamohadainyalobhakopatāpanāśanaṃ te prayānti kālabhairavāṅghrisannidhiṃ dhruvam ||9||",
+   "translation": {
+    "en": "I worship Kāla Bhairava, the Lord of Kashi, whose sacred feet are revered by the king of gods, who wears serpents as ornaments, the moon on His head, and is compassionate. He is the destroyer of fear, the giver of worldly enjoyment and liberation, the annihilator of sins, the upholder of dharma, the fierce ruler who grants eight siddhis. Those who recite this beautiful Kāla Bhairava Aṣṭakam surely attain proximity to His divine feet.",
+    "hi": "मैं काशी के अधिनाथ कालभैरव का भजन करता हूँ, जिनके पवित्र चरणों की देवता भी सेवा करते हैं। वे भय का नाश करने वाले, भोग और मोक्ष देने वाले, पापों का क्षय करने वाले, धर्म के रक्षक और अष्टसिद्धि प्रदान करने वाले हैं। इस मनोहर कालभैरवाष्टक का पाठ करने वाले निश्चित रूप से श्री कालभैरव के चरणों की प्राप्ति करते हैं।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "Kāla Bhairava Aṣṭakam is a powerful Shaiva stotra traditionally attributed to Adi Shankaracharya, praising Lord Kāla Bhairava as the supreme guardian of Kashi and the destroyer of fear and ignorance.",
+    "hi": "कालभैरवाष्टकम् एक प्रभावशाली शैव स्तोत्र है, जिसे परंपरागत रूप से आदि शंकराचार्य से जोड़ा जाता है। इसमें काशी के रक्षक, भय और अज्ञान के नाशक कालभैरव की स्तुति की गई है।"
+   },
+   "how_to_chant": {
+    "en": "Chant preferably on Sundays, Tuesdays, or during the night, especially on Ashtami or Kaal Bhairava Jayanti. Recite with devotion for protection and spiritual progress.",
+    "hi": "इस स्तोत्र का पाठ रविवार, मंगलवार, अष्टमी तिथि या कालभैरव जयंती की रात्रि में करना विशेष फलदायी माना जाता है। श्रद्धा सहित पाठ करने से रक्षा और आध्यात्मिक उन्नति होती है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "12",
+  "title": {
+   "en": "Ganesha Pancharatnam",
+   "hi": "गणेश पञ्चरत्नम्"
+  },
+  "deity": {
+   "en": [
+    "Ganesha"
+   ],
+   "hi": [
+    "गणेश"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "obstacle_removal",
+    "wisdom",
+    "success",
+    "devotion",
+    "prosperity"
+   ],
+   "hi": [
+    "विघ्ननाश",
+    "बुद्धि",
+    "सफलता",
+    "भक्ति",
+    "समृद्धि"
+   ]
+  },
+  "content": {
+   "sanskrit": "मुदाकरात्तमोदकं सदा विमुक्तिसाधकं\\nकलाधरावतंसकं विलासिलोकरक्षकम् ।\\nअनायकैकनायकं विनाशितेभदैत्यकं\\nनताशुभाशुनाशकं नमामि तं विनायकम् ॥१॥\\n\\nनतेतरातिभीकरं नवोदितार्कभास्वरं\\nनमत्सुरारिनिर्जरं नताधिकापदुद्धरम् ।\\nसुरेश्वरं निधीश्वरं गजेश्वरं गणेश्वरं\\nमहेश्वरं तमाश्रये परात्परं निरन्तरम् ॥२॥\\n\\nसमस्तलोकशंकरं निरस्तदैत्यकुञ्जरं\\nदरेतरोदरं वरं वरेभवक्त्रमक्षरम् ।\\nकृपाकरं क्षमाकरं मुदाकरं यशस्करं\\nमनस्करं नमस्कृतां नमस्करोमि भास्वरम् ॥३॥\\n\\nअकिंचनार्तिमार्जनं चिरन्तनोक्तिभाजनं\\nपुरारिपूर्वनन्दनं सुरारिगर्वचर्वणम् ।\\nप्रपञ्चनाशभीषणं धनंजयादिभूषणम्\\nकपोलदानवारणं भजे पुराणवारणम् ॥४॥\\n\\nनितान्तकान्तदन्तकान्तिमन्तकान्तकात्मजं\\nअचिन्त्यरूपमन्तहीनमन्तरायकृन्तनम् ।\\nहृदन्तरे निरन्तरं वसन्तमेव योगिनां\\nतमेकदन्तमेव तं विचिन्तयामि सन्ततम् ॥५॥\\n\\nमहागणेशपञ्चरत्नमादरेण योऽन्वहं\\nप्रजल्पति प्रभातके हृदि स्मरन् गणेश्वरम् ।\\nअरोगतामदोषतां सुसाहितीं सुपुत्रतां\\nसमाहितायुरष्टभूतिमभ्युपैति सोऽचिरात् ॥६॥",
+   "iast": "mudākarāttamodakaṃ sadā vimuktisādhakaṃ\\nkalādharāvataṃsakaṃ vilāsilokarakṣakam |\\nanāyakaikanāyakaṃ vināśitebhadaityakaṃ\\nnatāśubhāśunāśakaṃ namāmi taṃ vināyakam ||1||\\n\\nnatetarātibhīkaraṃ navoditārkabhāsvaraṃ\\nnamatsurārinirjaraṃ natādhikāpaduddharam |\\nsureśvaraṃ nidhīśvaraṃ gajeśvaraṃ gaṇeśvaraṃ\\nmaheśvaraṃ tamāśraye parātparaṃ nirantaram ||2||\\n\\nsamastalokaśaṅkaraṃ nirastadaityakuñjaraṃ\\ndaretarodaraṃ varaṃ varebhavaktramakṣaram |\\nkṛpākaraṃ kṣamākaraṃ mudākaraṃ yaśaskaraṃ\\nmanaskaraṃ namaskṛtāṃ namaskaromi bhāsvaram ||3||\\n\\nakiñcanārtimārjanaṃ cirantanoktibhājanaṃ\\npurāripūrvanandanaṃ surārigarvacarvaṇam |\\nprapañcanāśabhīṣaṇaṃ dhanañjayādibhūṣaṇam\\nkapoladānavāraṇaṃ bhaje purāṇavāraṇam ||4||\\n\\nnitāntakāntadantakāntimantakāntakātmajaṃ\\nacintyarūpamantahīnamantarāyakṛntanam |\\nhṛdantare nirantaraṃ vasantameva yogināṃ\\ntamekadantameva taṃ vicintayāmi santatam ||5||\\n\\nmahāgaṇeśapañcaratnamādareṇa yo'nvahaṃ\\nprajalpati prabhātake hṛdi smaran gaṇeśvaram |\\narogatāmadoṣatāṃ susāhitaṃ suputratāṃ\\nsamāhitāyuraṣṭabhūtimabhyupaiti so'cirāt ||6||",
+   "translation": {
+    "en": "I bow to Lord Vinayaka, who joyfully holds the modaka, grants liberation, adorns the crescent moon, protects the worlds, destroys mighty demons, and removes the sins of devotees. Whoever recites this sacred Ganesha Pancharatnam daily with devotion attains health, wisdom, prosperity, virtuous children, long life, and spiritual fulfillment.",
+    "hi": "मैं उस विनायक को नमन करता हूँ जो आनंदपूर्वक मोदक धारण करते हैं, मुक्ति प्रदान करते हैं, चंद्रमा से सुशोभित हैं, लोकों की रक्षा करते हैं और भक्तों के पापों का नाश करते हैं। जो व्यक्ति इस गणेश पञ्चरत्नम् का श्रद्धा सहित नित्य पाठ करता है, वह आरोग्य, बुद्धि, समृद्धि, सुयोग्य संतान, दीर्घायु और आध्यात्मिक सिद्धि प्राप्त करता है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "Ganesha Pancharatnam is a revered stotra composed by Adi Shankaracharya, consisting of five core verses praising Lord Ganesha, followed by a phala-shruti describing its benefits.",
+    "hi": "आदि शंकराचार्य द्वारा रचित गणेश पञ्चरत्नम् एक प्रसिद्ध स्तोत्र है, जिसमें पाँच मुख्य श्लोकों द्वारा भगवान गणेश की स्तुति तथा अंत में पाठ-फल का वर्णन किया गया है।"
+   },
+   "how_to_chant": {
+    "en": "Recite every morning after bathing, especially on Ganesh Chaturthi or before important undertakings. Chant with clarity and devotion.",
+    "hi": "इसका पाठ प्रातः स्नान के बाद, विशेषकर गणेश चतुर्थी या किसी भी महत्वपूर्ण कार्य से पूर्व श्रद्धा और शुद्ध उच्चारण के साथ करें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "13",
+  "title": {
+   "en": "Shiva Tandava Stotram",
+   "hi": "शिव ताण्डव स्तोत्रम्"
+  },
+  "deity": {
+   "en": [
+    "Shiva"
+   ],
+   "hi": [
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "tandava",
+    "devotion",
+    "fear_removal",
+    "moksha",
+    "shaiva"
+   ],
+   "hi": [
+    "ताण्डव",
+    "भक्ति",
+    "भयनाश",
+    "मोक्ष",
+    "शैव"
+   ]
+  },
+  "content": {
+   "sanskrit": "जटा टवी गलज्जलप्रवाह पावितस्थले गलेऽव लम्ब्यलम्बितां भुजंगतुंग मालिकाम्‌।\\nडमड्डमड्डमड्डमन्निनाद वड्डमर्वयं चकारचण्डताण्डवं तनोतु नः शिव: शिवम्‌ ॥१॥\\n\\nजटाकटा हसंभ्रम भ्रमन्निलिंपनिर्झरी विलोलवीचिवल्लरी विराजमानमूर्धनि।\\nधगद्धगद्धगज्ज्वल ल्ललाटपट्टपावके किशोरचंद्रशेखरे रतिः प्रतिक्षणं मम: ॥२॥\\n\\nधराधरेंद्रनंदिनी विलासबन्धुबन्धुर स्फुरद्दिगंतसंतति प्रमोद मानमानसे।\\nकृपाकटाक्षधोरणी निरुद्धदुर्धरापदि क्वचिद्विगम्बरे मनोविनोदमेतु वस्तुनि ॥३॥\\n\\nजटाभुजंगपिंगल स्फुरत्फणामणिप्रभा कदंबकुंकुमद्रव प्रलिप्तदिग्व धूमुखे।\\nमदांधसिंधु रस्फुरत्वगुत्तरीयमेदुरे मनोविनोदद्भुतं बिंभर्तुभूत भर्तरि ॥४॥\\n\\nसहस्रलोचन प्रभृत्यशेषलेखशेखर प्रसूनधूलिधोरणी विधूसरां घ्रिपीठभूः।\\nभुजंगराजमालया निबद्धजाटजूटकः श्रियैचिरायजायतां चकोरबंधुशेखरः ॥५॥\\n\\nललाटचत्वरज्वल द्धनंजयस्फुलिंगभा निपीतपंच सायकंनम न्निलिंपनायकम्‌।\\nसुधामयूखलेखया विराजमानशेखरं महाकपालिसंपदे शिरोजटालमस्तुनः ॥६॥\\n\\nकरालभालपट्टिका धगद्धगद्धगज्ज्वल द्धनंजया धरीकृतप्रचंड पंचसायके।\\nधराधरेंद्रनंदिनी कुचाग्रचित्रपत्र कप्रकल्पनैकशिल्पिनी त्रिलोचनेरतिर्मम ॥७॥\\n\\nनवीनमेघमंडली निरुद्धदुर्धरस्फुर त्कुहुनिशीथनीतमः प्रबद्धबद्धकन्धरः।\\nनिलिम्पनिर्झरीधरस्तनोतु कृत्तिसिंधुरः कलानिधानबंधुरः श्रियं जगंद्धुरंधरः ॥८॥\\n\\nप्रफुल्लनीलपंकज प्रपंचकालिमप्रभा विडंबि कंठकंध रारुचि प्रबंधकंधरम्‌।\\nस्मरच्छिदं पुरच्छिंद भवच्छिदं मखच्छिदं गजच्छिदांधकच्छिदं तमंतकच्छिदं भजे ॥९॥\\n\\nअखर्वसर्वमंगला कलाकदम्बमंजरी रसप्रवाह माधुरी विजृंभणा मधुव्रतम्‌।\\nस्मरांतकं पुरातकं भावंतकं मखांतकं गजांतकांधकांतकं तमंतकांतकं भजे ॥१०॥\\n\\nजयत्वदभ्रविभ्रम भ्रमद्भुजंगमस्फुरद्ध गद्धगद्विनिर्गमत्कराल भाल हव्यवाट्।\\nधिमिद्धिमिद्धि मिध्वनन्मृदंग तुंगमंगलध्वनिक्रमप्रवर्तित: प्रचण्ड ताण्डवः शिवः ॥११॥\\n\\nदृषद्विचित्रतल्पयो र्भुजंगमौक्तिकमस्र जोर्गरिष्ठरत्नलोष्ठयोः सुहृद्विपक्षपक्षयोः।\\nतृणारविंदचक्षुषोः प्रजामहीमहेन्द्रयोः समं प्रवर्तयन्मनः कदा सदाशिवं भजे ॥१२॥\\n\\nकदा निलिंपनिर्झरी निकुंजकोटरे वसन्‌ विमुक्तदुर्मतिः सदा शिरःस्थमंजलिं वहन्‌।\\nविमुक्तलोललोचनो ललामभाललग्नकः शिवेति मंत्रमुच्चरन्‌ कदा सुखी भवाम्यहम्‌ ॥१३॥\\n\\nइमं हि नित्यमेव मुक्तमुक्तमोत्तम स्तवं पठन्स्मरन्‌ ब्रुवन्नरो विशुद्धमेति संततम्‌।\\nहरे गुरौ सुभक्तिमाशु याति नान्यथागतिं विमोहनं हि देहिनां सुशंकरस्य चिंतनम् ॥१४॥\\n\\nपूजावसानसमये दशवक्त्रगीतं\\nयः शम्भुपूजनपरं पठति प्रदोषे।\\nतस्य स्थिरां रथगजेन्द्र तुरङ्गयुक्तं\\nलक्ष्मीं सर्वदा सुमुखीं प्रदाति शम्भुः ॥१५॥",
+   "iast": "jaṭā ṭavī galajjalapravāha pāvitasthale gale'va lambyalambitāṃ bhujaṅgatuṅga mālikām |\\nḍamaḍḍamaḍḍamaḍḍamannināda vaḍḍamarvayaṃ cakāracaṇḍatāṇḍavaṃ tanotu naḥ śivaḥ śivam ||1||\\n\\njaṭākaṭā hasambhrama bhramannilimpanirjharī vilolavīcivallarī virājamānamūrdhani |\\ndhagaddhagaddhagajjvala llalāṭapaṭṭapāvake kiśoracandraśekhare ratiḥ pratikṣaṇaṃ mamaḥ ||2||\\n\\ndharādharendranandinī vilāsabandhubandhura sphuraddigantasantati pramoda mānamānase |\\nkṛpākaṭākṣadhoraṇī niruddhadurdharāpadi kvacidvigambare manovinodametu vastuni ||3||\\n\\njaṭābhujaṅgapiṅgala sphuratphaṇāmaṇiprabhā kadambakuṅkumadrava praliptadigva dhūmukhe |\\nmadāndhasindhu rasphuratvaguttarīyamedure manovinodadbhutaṃ bimbhartubhūta bhartari ||4||\\n\\nsahasralocana prabhṛtyaśeṣalekhaśekhara prasūnadhūlidhoraṇī vidhūsarāṃ ghripīṭhabhūḥ |\\nbhujaṅgarājamālayā nibaddhajāṭajūṭakaḥ śriyai cirāya jāyatāṃ cakorabandhuśekharaḥ ||5||\\n\\nlalāṭacatvarajvala ddhanañjayasphuliṅgabhā nipītapañca sāyakaṃ nama nnilimpanāyakam |\\nsudhāmayūkhalekhayā virājamānaśekharaṃ mahākapālisampade śirojaṭālamastu naḥ ||6||\\n\\nkarālabhālapaṭṭikā dhagaddhagaddhagajjvala ddhanañjayā dharīkṛtapracaṇḍa pañcasāyake |\\ndharādharendranandinī kucāgracitrapatra kaprakalpanaikaśilpinī trilocane ratirmama ||7||\\n\\nnavīnameghamaṇḍalī niruddhadurdharasphura tkuhuniśīthanītamaḥ prabaddhabaddhakandharaḥ |\\nnilimpanirjharīdharastanotu kṛttisindhuraḥ kalānidhānabandhuraḥ śriyaṃ jagaddhurandharaḥ ||8||\\n\\npraphullanīlapaṅkaja prapañcakālimaprabhā viḍambi kaṇṭhakandha rāruci prabandhakandharam |\\nsmaracchidaṃ puracchidaṃ bhavacchidaṃ makhacchidaṃ gajacchidāndhakacchidaṃ tamantakacchidaṃ bhaje ||9||\\n\\nakharvasarvamaṅgalā kalākadambamañjarī rasapravāha mādhurī vijṛmbhaṇā madhuvratam |\\nsmarāntakaṃ purāntakaṃ bhavāntakaṃ makhāntakaṃ gajāntakāndhakāntakaṃ tamantakāntakaṃ bhaje ||10||\\n\\njayatvadabhravibhrama bhramadbhujaṅgamasphuraddha gaddhagadvinirgamatkarāla bhāla havyavāṭ |\\ndhimiddhimiddhi midhvananmṛdaṅga tuṅgamaṅgaladhvanikramapravartitaḥ pracaṇḍa tāṇḍavaḥ śivaḥ ||11||\\n\\ndṛṣadvicitratalpayo rbhujaṅgamauktikamasra jorgariṣṭharatnaloṣṭhayoḥ suhṛdvipakṣapakṣayoḥ |\\ntṛṇāravindacakṣuṣoḥ prajāmahīmahendrayoḥ samaṃ pravartayanmanaḥ kadā sadāśivaṃ bhaje ||12||\\n\\nkadā nilimpanirjharī nikuñjakoṭare vasan vimuktadurmatiḥ sadā śiraḥsthamañjaliṃ vahan |\\nvimuktalolalocano lalāmabhālalagnakaḥ śiveti mantramuccaran kadā sukhī bhavāmyaham ||13||\\n\\nimaṃ hi nityameva muktamuktamottama stavaṃ paṭhansmaran bruvannaro viśuddhimeti santatam |\\nhare gurau subhaktimāśu yāti nānyathāgatiṃ vimohanaṃ hi dehināṃ suśaṅkarasya cintanam ||14||\\n\\npūjāvasānasamaye daśavaktragītaṃ yaḥ śambhupūjanaparaṃ paṭhati pradoṣe |\\ntasya sthirāṃ rathagajendraturaṅgayuktāṃ lakṣmīṃ sarvadā sumukhīṃ pradadāti śambhuḥ ||15||",
+   "translation": {
+    "en": "This powerful hymn glorifies Lord Shiva performing the cosmic Tandava, describing His matted locks, blazing third eye, crescent moon, serpent ornaments, and fierce dance that sustains, dissolves, and purifies the universe. Regular recitation grants purity, devotion, prosperity, and liberation.",
+    "hi": "यह स्तोत्र भगवान शिव के उग्र एवं दिव्य ताण्डव नृत्य का वर्णन करता है, जिसमें उनकी जटाएँ, तृतीय नेत्र, चंद्र, नागाभूषण और सृष्टि-संहार की लीला का अत्यंत प्रभावशाली चित्रण है। इसके नित्य पाठ से शुद्धि, भक्ति, ऐश्वर्य और मोक्ष की प्राप्ति होती है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "Shiva Tandava Stotram is a celebrated Shaiva hymn traditionally attributed to Ravana, extolling Lord Shiva’s cosmic dance and supreme power.",
+    "hi": "शिव ताण्डव स्तोत्रम् एक प्रसिद्ध शैव स्तोत्र है, जिसे परंपरागत रूप से रावण द्वारा रचित माना जाता है, जिसमें शिव के ताण्डव और परम शक्ति की स्तुति की गई है।"
+   },
+   "how_to_chant": {
+    "en": "Chant with devotion on Mondays, Pradosha time, or during Shivaratri. Recite with proper rhythm and focus on Shiva’s Tandava form.",
+    "hi": "इस स्तोत्र का पाठ सोमवार, प्रदोष काल या महाशिवरात्रि में श्रद्धा एवं लयबद्ध उच्चारण के साथ करना विशेष फलदायी माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "14",
+  "title": {
+   "en": "Rāmāṣṭakam",
+   "hi": "रामाष्टकम्"
+  },
+  "deity": {
+   "en": [
+    "Rama"
+   ],
+   "hi": [
+    "राम"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "bhakti",
+    "jnana",
+    "moksha",
+    "peace",
+    "ramabhakti"
+   ],
+   "hi": [
+    "भक्ति",
+    "ज्ञान",
+    "मोक्ष",
+    "शांति",
+    "रामभक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "भजे विशेषसुन्दरं समस्तपापखण्डनम् ।\\nस्वभक्तचित्तरञ्जनं सदैव राममद्वयम् ॥ १॥\\n\\nजटाकलापशोभितं समस्तपापनाशकम् ।\\nस्वभक्तभीतिभङ्जनं भजेह राममद्वयम् ॥ २॥\\n\\nनिजस्वरूपबोधकं कृपाकरं भवापहम् ।\\nसमं शिवं निरञ्जनं भजेह राममद्वयम् ॥ ३॥\\n\\nसहप्रपञ्चकल्पितं ह्यनामरूपवास्तवम् ।\\nनिराकृतिं निरामयं भजेह राममद्वयम् ॥ ४॥\\n\\nनिष्प्रपञ्चनिर्विकल्पनिर्मलं निरामयम् ।\\nचिदेकरूपसन्ततं भजेह राममद्वयम् ॥ ५॥\\n\\nभवाब्धिपोतरूपकं ह्यशेषदेहकल्पितम् ।\\nगुणाकरं कृपाकरं भजेह राममद्वयम् ॥ ६॥\\n\\nमहावाक्यबोधकैर्विराजमनवाक्पदैः ।\\nपरब्रह्म व्यापकं भजेह राममद्वयम् ॥ ७॥\\n\\nशिवप्रदं सुखप्रदं भवच्छिदं भ्रमापहम् ।\\nविराजमानदैशिकं भजेह राममद्वयम् ॥ ८॥\\n\\nरामाष्टकं पठति यः सुकरं सुपुण्यं\\nव्यासेन भाषितमिदं श‍ृणुते मनुष्यः ।\\nविद्यां श्रियं विपुलसौख्यमनन्तकीर्तिं\\nसम्प्राप्य देहविलये लभते च मोक्षम् ॥ ९॥",
+   "iast": "bhaje viśeṣasundaraṃ samastapāpakhaṇḍanam |\\nsvabhaktacittarañjanaṃ sadaiva rāmamadvayam ||1||\\n\\njaṭākalāpaśobhitaṃ samastapāpanāśakam |\\nsvabhaktabhītibhañjanaṃ bhajeha rāmamadvayam ||2||\\n\\nnijasvarūpabodhakaṃ kṛpākaraṃ bhavāpaham |\\nsamaṃ śivaṃ nirañjanaṃ bhajeha rāmamadvayam ||3||\\n\\nsahaprapañcakalpitaṃ hyanāmarūpavāstavam |\\nnirākṛtiṃ nirāmayaṃ bhajeha rāmamadvayam ||4||\\n\\nniṣprapañcanirvikalpanirmalaṃ nirāmayam |\\ncidekarūpasantataṃ bhajeha rāmamadvayam ||5||\\n\\nbhavābdhipotarūpakaṃ hyaśeṣadehakalpitam |\\nguṇākaraṃ kṛpākaraṃ bhajeha rāmamadvayam ||6||\\n\\nmahāvākyabodhakairvirājamānavākpadaiḥ |\\nparabrahma vyāpakaṃ bhajeha rāmamadvayam ||7||\\n\\nśivapradaṃ sukhapradaṃ bhavacchidaṃ bhramāpaham |\\nvirājamānadaiśikaṃ bhajeha rāmamadvayam ||8||\\n\\nrāmāṣṭakaṃ paṭhati yaḥ sukaraṃ supuṇyaṃ\\nvyāsena bhāṣitamidaṃ śṛṇute manuṣyaḥ |\\nvidyāṃ śriyaṃ vipulasaukhyamanantakīrtiṃ\\nsamprāpya dehavilaye labhate ca mokṣam ||9||",
+   "translation": {
+    "en": "I worship the eternally non-dual Lord Rama, supremely beautiful, the destroyer of all sins, the delight of His devotees’ hearts. He is pure consciousness, compassionate, formless yet manifest, the ferry across the ocean of existence. Whoever recites this sacred Ramāṣṭakam attains knowledge, prosperity, great happiness, lasting fame, and ultimately liberation.",
+    "hi": "मैं उस अद्वितीय भगवान राम का भजन करता हूँ जो अत्यंत सुंदर, समस्त पापों के नाशक और भक्तों के हृदय को आनंदित करने वाले हैं। वे शुद्ध चैतन्य, करुणामय और संसार-सागर से पार कराने वाले हैं। इस रामाष्टकम् का पाठ करने वाला मनुष्य विद्या, श्री, महान सुख, यश तथा अंत में मोक्ष को प्राप्त करता है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "Ramāṣṭakam is a profound Advaitic stotra traditionally attributed to Sage Vyāsa, describing Lord Rama as the non-dual Supreme Brahman.",
+    "hi": "रामाष्टकम् एक गूढ़ अद्वैत स्तोत्र है, जिसे परंपरागत रूप से महर्षि व्यास से जोड़ा जाता है, जिसमें भगवान राम को अद्वितीय परब्रह्म के रूप में वर्णित किया गया है।"
+   },
+   "how_to_chant": {
+    "en": "Chant daily with devotion, especially in the morning or on Rama Navami. Recite calmly with contemplation on Rama as Brahman.",
+    "hi": "इसका नित्य पाठ प्रातःकाल या रामनवमी के दिन श्रद्धा सहित करें। भगवान राम को परब्रह्म मानकर ध्यानपूर्वक पाठ करना उत्तम है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "15",
+  "title": {
+   "en": "Budha Mantra",
+   "hi": "बुध मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Budha"
+   ],
+   "hi": [
+    "बुध"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "intellect",
+    "communication",
+    "wisdom",
+    "astrology",
+    "mental_clarity"
+   ],
+   "hi": [
+    "बुद्धि",
+    "वाणी",
+    "ज्ञान",
+    "ज्योतिष",
+    "मानसिक_स्पष्टता"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ बुं बुधाय नमः",
+   "iast": "oṃ buṃ budhāya namaḥ",
+   "translation": {
+    "en": "Salutations to Lord Budha (Mercury), the bestower of intellect, clarity, and eloquence.",
+    "hi": "बुद्धि, विवेक और वाणी के कारक भगवान बुध को नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A powerful Vedic mantra dedicated to Lord Budha (the planet Mercury), chanted to enhance intelligence, communication skills, and analytical ability.",
+    "hi": "यह वैदिक मंत्र ग्रह बुध को समर्पित है, जिसका जप बुद्धि, तर्कशक्ति और वाणी की स्पष्टता बढ़ाने के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 108 times on Wednesdays, preferably during the morning, using a green mala, while focusing on mental clarity.",
+    "hi": "इस मंत्र का जप बुधवार के दिन प्रातःकाल १०८ बार करें। हरी माला का प्रयोग करना शुभ माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "16",
+  "title": {
+   "en": "Saraswati Mantra",
+   "hi": "सरस्वती मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Saraswati"
+   ],
+   "hi": [
+    "सरस्वती"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "knowledge",
+    "wisdom",
+    "learning",
+    "arts",
+    "speech"
+   ],
+   "hi": [
+    "ज्ञान",
+    "बुद्धि",
+    "विद्या",
+    "कला",
+    "वाणी"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ ऐं सरस्वत्यै नमः",
+   "iast": "oṃ aiṃ sarasvatyai namaḥ",
+   "translation": {
+    "en": "Salutations to Goddess Saraswati, the bestower of knowledge, wisdom, and eloquence.",
+    "hi": "ज्ञान, बुद्धि और वाणी की अधिष्ठात्री देवी सरस्वती को नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A powerful seed (bīja) mantra of Goddess Saraswati, invoked for learning, clarity of speech, wisdom, and success in studies and arts.",
+    "hi": "यह देवी सरस्वती का शक्तिशाली बीज मंत्र है, जिसका जप विद्या, वाणी की स्पष्टता, बुद्धि और कला में सफलता के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 108 times daily or especially on Vasant Panchami, preferably in the morning, with focus on learning and inner clarity.",
+    "hi": "इस मंत्र का जप प्रतिदिन या विशेष रूप से वसंत पंचमी के दिन प्रातःकाल १०८ बार करें। जप के समय विद्या और एकाग्रता का भाव रखें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "17",
+  "title": {
+   "en": "Saraswati Vidyārambha Mantra",
+   "hi": "सरस्वती विद्यारम्भ मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Saraswati"
+   ],
+   "hi": [
+    "सरस्वती"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "education",
+    "learning",
+    "knowledge",
+    "beginnings",
+    "wisdom"
+   ],
+   "hi": [
+    "विद्या",
+    "शिक्षा",
+    "ज्ञान",
+    "आरंभ",
+    "बुद्धि"
+   ]
+  },
+  "content": {
+   "sanskrit": "सरस्वति नमस्तुभ्यं वरदे कामरूपिणि ।\\nविद्यारम्भं करिष्यामि सिद्धिर्भवतु मे सदा ॥",
+   "iast": "sarasvati namastubhyaṃ varade kāmarūpiṇi |\\nvidyārambhaṃ kariṣyāmi siddhirbhavatu me sadā ||",
+   "translation": {
+    "en": "O Goddess Saraswati, I bow to You, the giver of boons and fulfiller of wishes. I begin my pursuit of knowledge; may success always be mine.",
+    "hi": "हे वर प्रदान करने वाली, इच्छानुसार रूप धारण करने वाली देवी सरस्वती! मैं आपको नमस्कार करता हूँ। मैं विद्या का आरंभ कर रहा हूँ, मेरी सदा सिद्धि हो।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A traditional prayer offered to Goddess Saraswati at the beginning of education, studies, or any learning activity, seeking success and divine grace.",
+    "hi": "यह मंत्र विद्या के आरंभ, अध्ययन या किसी भी शैक्षिक कार्य की शुरुआत में देवी सरस्वती से सफलता और अनुग्रह की प्रार्थना हेतु जपा जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Recite this mantra before starting studies, writing, or learning something new. Especially auspicious on Vasant Panchami and during Vidyārambha.",
+    "hi": "अध्ययन, लेखन या किसी नए ज्ञानार्जन से पूर्व इस मंत्र का जप करें। वसंत पंचमी और विद्यारम्भ संस्कार के समय इसका विशेष महत्व है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "18",
+  "title": {
+   "en": "Maha Saraswati Mantra",
+   "hi": "महासरस्वती मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Saraswati"
+   ],
+   "hi": [
+    "सरस्वती"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "supreme_knowledge",
+    "wisdom",
+    "learning",
+    "clarity",
+    "spiritual_growth"
+   ],
+   "hi": [
+    "परम_ज्ञान",
+    "बुद्धि",
+    "विद्या",
+    "स्पष्टता",
+    "आध्यात्मिक_विकास"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ महासरस्वत्यै नमः",
+   "iast": "oṃ mahāsarasvatyai namaḥ",
+   "translation": {
+    "en": "Salutations to Maha Saraswati, the supreme form of the Goddess of knowledge and wisdom.",
+    "hi": "परम विद्या और ज्ञान की अधिष्ठात्री देवी महासरस्वती को नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A sacred mantra invoking Maha Saraswati, the supreme aspect of Goddess Saraswati, worshipped for higher knowledge, clarity of intellect, and spiritual illumination.",
+    "hi": "यह पवित्र मंत्र देवी सरस्वती के महास्वरूप-महासरस्वती-का आवाहन करता है, जो उच्च ज्ञान, बुद्धि की स्पष्टता और आध्यात्मिक प्रकाश प्रदान करती हैं।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 108 times daily, preferably in the morning or during Saraswati worship. Maintain purity, focus, and a calm mind.",
+    "hi": "इस मंत्र का जप प्रतिदिन प्रातःकाल या सरस्वती पूजा के समय १०८ बार करें। शुद्धता, एकाग्रता और शांत चित्त बनाए रखें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "19",
+  "title": {
+   "en": "Gayatri Mantra",
+   "hi": "गायत्री मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Gayatri"
+   ],
+   "hi": [
+    "गायत्री"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "wisdom",
+    "illumination",
+    "meditation",
+    "purification",
+    "spiritual_growth"
+   ],
+   "hi": [
+    "ज्ञान",
+    "प्रकाश",
+    "ध्यान",
+    "पवित्रता",
+    "आध्यात्मिक_विकास"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ भूर्भुवः स्वः ।\\nतत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि ।\\nधियो यो नः प्रचोदयात् ॥",
+   "iast": "oṃ bhūr bhuvaḥ svaḥ |\\ntat savitur vareṇyaṃ bhargo devasya dhīmahi |\\ndhiyo yo naḥ pracodayāt ||",
+   "translation": {
+    "en": "We meditate upon the divine radiance of the Supreme Sun (Savitar), who is worthy of worship. May He inspire and illumine our intellect.",
+    "hi": "हम उस पूजनीय दिव्य सविता देव के तेज का ध्यान करते हैं। वह हमारी बुद्धि को प्रेरित और प्रकाशित करें।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "The Gayatri Mantra is one of the most sacred Vedic mantras from the Rigveda, revered as a universal prayer for wisdom, clarity, and spiritual illumination.",
+    "hi": "गायत्री मंत्र ऋग्वेद का अत्यंत पवित्र वैदिक मंत्र है, जिसे बुद्धि, विवेक और आध्यात्मिक प्रकाश के लिए सार्वभौमिक प्रार्थना माना जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Traditionally chanted 108 times during sunrise, noon, and sunset. Chant with calm mind, steady breath, and focused awareness.",
+    "hi": "परंपरागत रूप से इसका जप प्रातः, मध्याह्न और सायंकाल १०८ बार किया जाता है। शांत चित्त, नियंत्रित श्वास और एकाग्रता के साथ जप करें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "20",
+  "title": {
+   "en": "Saraswati Vidya Dana Mantra",
+   "hi": "सरस्वती विद्या दान मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Saraswati"
+   ],
+   "hi": [
+    "सरस्वती"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "knowledge",
+    "learning",
+    "wisdom",
+    "education",
+    "arts"
+   ],
+   "hi": [
+    "विद्या",
+    "ज्ञान",
+    "बुद्धि",
+    "शिक्षा",
+    "कला"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ सरस्वती मया दृष्ट्वा, वीणा पुस्तक धारणीम् ।\\nहंस वाहिनी समायुक्ता मां विद्या दान करोतु मे ॐ ॥",
+   "iast": "oṃ sarasvatī mayā dṛṣṭvā, vīṇā pustaka dhāriṇīm |\\nhaṃsa vāhinī samāyuktā māṃ vidyā dāna karotu me oṃ ||",
+   "translation": {
+    "en": "I behold Goddess Saraswati, who holds the veena and the book, who rides the swan. May She bestow upon me the gift of knowledge.",
+    "hi": "मैं वीणा और पुस्तक धारण करने वाली, हंस पर विराजमान देवी सरस्वती का दर्शन करता हूँ। वे मुझे विद्या का दान प्रदान करें।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A devotional prayer to Goddess Saraswati describing Her divine form and seeking the blessing of knowledge, learning, and wisdom.",
+    "hi": "यह मंत्र देवी सरस्वती के स्वरूप का ध्यान करते हुए उनसे विद्या, ज्ञान और बुद्धि का वरदान प्राप्त करने की प्रार्थना है।"
+   },
+   "how_to_chant": {
+    "en": "Recite this mantra before study, teaching, music, or artistic practice. Especially auspicious during Saraswati Puja and Vasant Panchami.",
+    "hi": "इस मंत्र का जप अध्ययन, अध्यापन, संगीत या कला अभ्यास से पूर्व करें। सरस्वती पूजा और वसंत पंचमी के दिन इसका विशेष महत्व है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "21",
+  "title": {
+   "en": "Krishnaya Namah Mantra",
+   "hi": "कृष्णाय नमः मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Krishna"
+   ],
+   "hi": [
+    "कृष्ण"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "bhakti",
+    "devotion",
+    "peace",
+    "surrender",
+    "spiritual_growth"
+   ],
+   "hi": [
+    "भक्ति",
+    "समर्पण",
+    "शांति",
+    "ईश्वरभक्ति",
+    "आध्यात्मिक_विकास"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ कृष्णाय नमः",
+   "iast": "oṃ kṛṣṇāya namaḥ",
+   "translation": {
+    "en": "Salutations to Lord Krishna.",
+    "hi": "भगवान श्रीकृष्ण को नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A simple and powerful mantra invoking Lord Krishna, used for devotion, remembrance, and inner peace.",
+    "hi": "यह भगवान श्रीकृष्ण का सरल एवं शक्तिशाली मंत्र है, जिसका जप भक्ति, स्मरण और मानसिक शांति के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra with devotion at any time. It may be repeated 11, 21, or 108 times, silently or aloud.",
+    "hi": "इस मंत्र का जप श्रद्धा सहित किसी भी समय किया जा सकता है। ११, २१ या १०८ बार मानसिक या वाचिक जप उपयुक्त है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "22",
+  "title": {
+   "en": "Ganapati Bappa Morya Mantra",
+   "hi": "गणपति बाप्पा मोरया मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Ganesha"
+   ],
+   "hi": [
+    "गणेश"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "obstacle_removal",
+    "devotion",
+    "auspiciousness",
+    "success",
+    "celebration"
+   ],
+   "hi": [
+    "विघ्ननाश",
+    "भक्ति",
+    "मंगल",
+    "सफलता",
+    "उत्सव"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ गं गणपतये नमो नमः ।\\nश्री सिद्धिविनायक नमो नमः ।\\nअष्टविनायक नमो नमः ।\\nगणपति बाप्पा मोरया ॥",
+   "iast": "oṃ gaṃ gaṇapataye namo namaḥ |\\nśrī siddhivināyaka namo namaḥ |\\naṣṭavināyaka namo namaḥ |\\ngaṇapati bāppā moryā ||",
+   "translation": {
+    "en": "Salutations again and again to Lord Ganapati. Salutations to Shri Siddhivinayaka, to the Ashtavinayaka. O Ganapati Bappa, come forth and bless us.",
+    "hi": "भगवान गणपति को बार-बार नमस्कार है। श्री सिद्धिविनायक और अष्टविनायक को नमस्कार है। हे गणपति बाप्पा, कृपा सहित पधारिए।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A popular devotional chant invoking Lord Ganesha as Ganapati, Siddhivinayaka, and Ashtavinayaka, widely recited during Ganesh Chaturthi and daily worship.",
+    "hi": "यह प्रसिद्ध भक्ति मंत्र भगवान गणेश को गणपति, सिद्धिविनायक और अष्टविनायक रूप में नमन करता है, जिसका जप गणेश चतुर्थी और नित्य पूजा में किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant with joy and devotion during Ganesh worship, processions, or daily prayers. It may be repeated multiple times or sung as a bhajan.",
+    "hi": "इस मंत्र का जप गणेश पूजा, आरती, विसर्जन या नित्य प्रार्थना में श्रद्धा और आनंद के साथ करें। इसे भजन या जयकार के रूप में भी गाया जा सकता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "23",
+  "title": {
+   "en": "Hanumati Jaya Mantra",
+   "hi": "हनुमति जय मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Hanuman"
+   ],
+   "hi": [
+    "हनुमान"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "strength",
+    "devotion",
+    "protection",
+    "courage",
+    "ram_bhakti"
+   ],
+   "hi": [
+    "बल",
+    "भक्ति",
+    "सुरक्षा",
+    "साहस",
+    "रामभक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ हं हनुमत्ये नमो नमः\\nश्री हनुमत्ये नमो नमः\\nजय जय हनुमत्ये नमो नमः\\nश्री राम दूताय नमो नमः",
+   "iast": "oṃ han hanumatyē namo namaḥ\\nśrī hanumatyē namo namaḥ\\njaya jaya hanumatyē namo namaḥ\\nśrī rāma dūtāya namo namaḥ",
+   "translation": {
+    "en": "Salutations again and again to Hanuman. Victory, victory to Hanuman. Salutations to the divine messenger of Lord Rama.",
+    "hi": "हनुमान को बार-बार नमस्कार। हनुमान की जय हो। श्रीराम के दिव्य दूत हनुमान को नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A devotional chant praising Lord Hanuman as the fearless, devoted messenger of Lord Rama, invoked for strength, courage, and protection.",
+    "hi": "यह भक्ति मंत्र भगवान हनुमान की स्तुति करता है-उन्हें श्रीराम के निडर, परम भक्त दूत के रूप में नमन करते हुए बल, साहस और रक्षा की कामना करता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant with devotion, especially on Tuesdays and Saturdays, during Hanuman worship or before undertaking difficult tasks.",
+    "hi": "इस मंत्र का जप श्रद्धा सहित करें, विशेषकर मंगलवार और शनिवार को, हनुमान पूजा के समय या किसी कठिन कार्य से पूर्व।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "24",
+  "title": {
+   "en": "Kubera Ashta Lakshmi Mantra",
+   "hi": "कुबेर अष्टलक्ष्मी मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Kubera",
+    "Lakshmi"
+   ],
+   "hi": [
+    "कुबेर",
+    "लक्ष्मी"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "wealth",
+    "prosperity",
+    "abundance",
+    "financial_stability",
+    "ashta_lakshmi"
+   ],
+   "hi": [
+    "धन",
+    "समृद्धि",
+    "वैभव",
+    "आर्थिक_स्थिरता",
+    "अष्टलक्ष्मी"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ ह्रीं श्रीं क्रीं श्रीं कुबेराय अष्ट-लक्ष्मी मम गृहे धनं पुरय पुरय नमः॥",
+   "iast": "oṃ hrīṃ śrīṃ krīṃ śrīṃ kuberāya aṣṭa-lakṣmī mama gṛhe dhanaṃ puraya puraya namaḥ ||",
+   "translation": {
+    "en": "Salutations to Lord Kubera. O Ashta Lakshmi, fill my home with wealth and abundance again and again.",
+    "hi": "भगवान कुबेर को नमस्कार। हे अष्टलक्ष्मी, मेरे घर को धन और समृद्धि से बार-बार पूर्ण करें।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A powerful prosperity mantra invoking Lord Kubera and Ashta Lakshmi for wealth, abundance, and financial stability in one’s household.",
+    "hi": "यह शक्तिशाली मंत्र भगवान कुबेर और अष्टलक्ष्मी का आवाहन करता है, जिससे घर में धन, वैभव और आर्थिक स्थिरता प्राप्त होती है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 108 times daily or especially on Fridays and during Lakshmi or Kubera worship. Sit facing north for best results.",
+    "hi": "इस मंत्र का जप प्रतिदिन या विशेष रूप से शुक्रवार तथा लक्ष्मी–कुबेर पूजा के समय १०८ बार करें। उत्तर दिशा की ओर मुख करके जप करना श्रेष्ठ माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "25",
+  "title": {
+   "en": "Sri Lakshminarayana Mantra",
+   "hi": "श्री लक्ष्मीनारायण मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Vishnu",
+    "Lakshmi",
+    "Narayana"
+   ],
+   "hi": [
+    "विष्णु",
+    "लक्ष्मी",
+    "नारायण"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "devotion",
+    "dharma",
+    "protection",
+    "prosperity",
+    "narayana_bhakti"
+   ],
+   "hi": [
+    "भक्ति",
+    "धर्म",
+    "सुरक्षा",
+    "समृद्धि",
+    "नारायण_भक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "अखंड विष्णु कार्यम् व्यासनेन चराचरम् ।\\nतत्पदं दर्शितं येन तस्मै श्री लक्ष्मीनाथाय नमः ॥\\n॥ नारायण नारायण नारायण ॥",
+   "iast": "akhaṇḍa viṣṇu kāryam vyāsanena carācaram |\\ntatpadaṃ darśitaṃ yena tasmai śrī lakṣmīnāthāya namaḥ ||\\n|| nārāyaṇa nārāyaṇa nārāyaṇa ||",
+   "translation": {
+    "en": "Salutations to Lord Lakshminarayana, through whom the unbroken work of Vishnu pervades all moving and unmoving creation, and by whose grace the supreme abode is revealed. Narayana, Narayana, Narayana.",
+    "hi": "श्री लक्ष्मीनाथ को नमस्कार है, जिनके द्वारा विष्णु का अखंड कार्य चर और अचर समस्त सृष्टि में व्याप्त है और जिनकी कृपा से परम पद का दर्शन होता है। नारायण, नारायण, नारायण।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A devotional verse glorifying Lord Vishnu as Lakshminarayana, the all-pervading sustainer of the universe, followed by the sacred chant of Narayana.",
+    "hi": "यह मंत्र भगवान विष्णु को श्री लक्ष्मीनारायण के रूप में नमन करता है-जो समस्त सृष्टि के पालक और परम पद के दाता हैं-और अंत में नारायण नाम का जप करता है।"
+   },
+   "how_to_chant": {
+    "en": "Recite with devotion during Vishnu or Lakshmi worship, especially in the morning or on Thursdays. The Narayana chant may be repeated multiple times.",
+    "hi": "इसका पाठ विष्णु या लक्ष्मी पूजा में, विशेषकर प्रातःकाल या गुरुवार को श्रद्धा सहित करें। नारायण नाम का जप कई बार किया जा सकता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "26",
+  "title": {
+   "en": "Ganapati Vighnavinasha Mantra",
+   "hi": "गणपति विघ्नविनाश मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Ganesha"
+   ],
+   "hi": [
+    "गणेश"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "obstacle_removal",
+    "success",
+    "protection",
+    "auspicious_beginnings",
+    "devotion"
+   ],
+   "hi": [
+    "विघ्ननाश",
+    "सफलता",
+    "सुरक्षा",
+    "मंगलारंभ",
+    "भक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ गं गौं गणपतये विघ्नविनाशाय स्वाहा",
+   "iast": "oṃ gaṃ gauṃ gaṇapataye vighnavināśāya svāhā",
+   "translation": {
+    "en": "Oblations and salutations to Lord Ganapati, the remover and destroyer of all obstacles.",
+    "hi": "समस्त विघ्नों का नाश करने वाले भगवान गणपति को आहुति सहित नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A powerful Ganapati mantra combining bija sounds and invocation, traditionally used to remove obstacles and ensure success in new endeavors.",
+    "hi": "यह शक्तिशाली गणपति मंत्र बीजाक्षरों सहित विघ्नों के नाश और नए कार्यों में सफलता हेतु जपा जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant 108 times before beginning any important work or during Ganesh worship. It may also be used in homa or fire rituals.",
+    "hi": "किसी भी महत्वपूर्ण कार्य के आरंभ से पूर्व या गणेश पूजा के समय इस मंत्र का १०८ बार जप करें। हवन में भी इसका प्रयोग किया जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "27",
+  "title": {
+   "en": "Shani Mantra",
+   "hi": "शनि मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Shani"
+   ],
+   "hi": [
+    "शनि"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "discipline",
+    "karma",
+    "justice",
+    "protection",
+    "astrology"
+   ],
+   "hi": [
+    "अनुशासन",
+    "कर्म",
+    "न्याय",
+    "सुरक्षा",
+    "ज्योतिष"
+   ]
+  },
+  "content": {
+   "sanskrit": "नीलांजनसमाभासं रविपुत्रं यमाग्रजम्‌।\\nछायामार्तण्ड सम्भूतं तं नमामि शनैश्चरम्‌।",
+   "iast": "nīlāñjanasamābhāsaṃ raviputraṃ yamāgrajam |\\nchāyāmārtaṇḍa sambhūtaṃ taṃ namāmi śanaiścaram ||",
+   "translation": {
+    "en": "I bow to Shanaishchara (Saturn), who appears like dark collyrium, the son of the Sun, elder brother of Yama, born of Chhaya and the Sun.",
+    "hi": "मैं नीलांजन के समान कांतिवाले, सूर्यपुत्र, यम के अग्रज, छाया और सूर्य से उत्पन्न शनैश्चर को नमस्कार करता हूँ।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A traditional Shani mantra praising Lord Shani’s form and lineage, chanted to seek relief from karmic difficulties and to cultivate discipline and justice.",
+    "hi": "यह पारंपरिक शनि मंत्र भगवान शनि के स्वरूप और वंश का वर्णन करता है, जिसका जप कर्मजन्य कष्टों से निवृत्ति तथा अनुशासन और न्याय की प्राप्ति के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 108 times on Saturdays, preferably during morning or evening, with a calm and focused mind.",
+    "hi": "इस मंत्र का जप शनिवार के दिन प्रातः या सायंकाल शांत और एकाग्र मन से १०८ बार करें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "28",
+  "title": {
+   "en": "Guru Mantra",
+   "hi": "गुरु मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Guru"
+   ],
+   "hi": [
+    "गुरु"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "guru_bhakti",
+    "wisdom",
+    "knowledge",
+    "spiritual_guidance",
+    "moksha"
+   ],
+   "hi": [
+    "गुरुभक्ति",
+    "ज्ञान",
+    "विद्या",
+    "आध्यात्मिक_मार्गदर्शन",
+    "मोक्ष"
+   ]
+  },
+  "content": {
+   "sanskrit": "गुरु ब्रह्मा गुरु विष्णु,\\nगुरु देवो महेश्वरः |\\nगुरु साक्षात् परब्रह्म,\\nतस्मै श्री गुरुवे नमः ||",
+   "iast": "guru brahmā guru viṣṇuḥ |\\nguru devo maheśvaraḥ |\\nguru sākṣāt parabrahma |\\ntasmai śrī gurave namaḥ ||",
+   "translation": {
+    "en": "The Guru is Brahma, the Guru is Vishnu, the Guru is Maheshwara (Shiva). The Guru is verily the Supreme Brahman. Salutations to that revered Guru.",
+    "hi": "गुरु ही ब्रह्मा हैं, गुरु ही विष्णु हैं, गुरु ही महेश्वर हैं। गुरु साक्षात् परब्रह्म हैं। ऐसे श्री गुरु को मेरा नमस्कार है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A timeless mantra honoring the Guru as the embodiment of the divine trinity and the Supreme Reality, emphasizing the Guru’s role in spiritual awakening.",
+    "hi": "यह शाश्वत मंत्र गुरु को त्रिदेवों और परब्रह्म के स्वरूप में नमन करता है तथा आध्यात्मिक जागरण में गुरु की महत्ता को दर्शाता है।"
+   },
+   "how_to_chant": {
+    "en": "Recite daily with devotion, especially on Guru Purnima or before study and meditation, remembering the guidance of one’s Guru.",
+    "hi": "इस मंत्र का नित्य श्रद्धा सहित जप करें। गुरु पूर्णिमा, अध्ययन या ध्यान से पूर्व इसका पाठ विशेष फलदायी माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "29",
+  "title": {
+   "en": "Navagraha Bija Sankshipta Mantra (ASMBGShShRKN)",
+   "hi": "नवग्रह बीज संक्षिप्त मंत्र (असमबगशशरकन)"
+  },
+  "deity": {
+   "en": [
+    "Navagraha"
+   ],
+   "hi": [
+    "नवग्रह"
+   ]
+  },
+  "type": {
+   "en": "Bija Mantra",
+   "hi": "बीज मंत्र"
+  },
+  "tags": {
+   "en": [
+    "navagraha",
+    "astrology",
+    "planetary_balance",
+    "karma",
+    "protection"
+   ],
+   "hi": [
+    "नवग्रह",
+    "ज्योतिष",
+    "ग्रह_शांति",
+    "कर्म",
+    "सुरक्षा"
+   ]
+  },
+  "content": {
+   "sanskrit": "असमबगशशरकन",
+   "iast": "asama-baga-śa-śa-ra-ka-na (ASMBGŚŚRKN)",
+   "translation": {
+    "en": "A compact mnemonic mantra representing the bija sounds of the nine planets (Navagrahas), used symbolically for planetary harmony.",
+    "hi": "नवग्रहों के बीज मंत्रों का प्रतीकात्मक एवं संक्षिप्त रूप, जिसका प्रयोग ग्रहों के संतुलन और शांति हेतु किया जाता है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "ASMBGShShRKN (असमबगशशरकन) is a modern mnemonic condensation of the Navagraha bija mantras, each syllable representing one planet-Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, Rahu, and Ketu.",
+    "hi": "असमबगशशरकन (ASMBGShShRKN) नवग्रहों के बीज मंत्रों का एक संक्षिप्त स्मरणात्मक रूप है, जिसमें सूर्य, चंद्र, मंगल, बुध, बृहस्पति, शुक्र, शनि, राहु और केतु का प्रतिनिधित्व होता है।"
+   },
+   "how_to_chant": {
+    "en": "This is generally used as a contemplative or mnemonic chant rather than a traditional Vedic japa. It may be mentally recited while visualizing the nine planets or before detailed Navagraha mantras.",
+    "hi": "यह पारंपरिक वैदिक जप के स्थान पर एक स्मरणात्मक या ध्यानात्मक रूप में प्रयुक्त होता है। नवग्रहों का ध्यान करते हुए या विस्तृत नवग्रह मंत्रों से पूर्व मानसिक जप किया जा सकता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "30",
+  "title": {
+   "en": "Shri Ramaduta Hanuman Mantra",
+   "hi": "श्रीरामदूत हनुमान मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Hanuman"
+   ],
+   "hi": [
+    "हनुमान"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "strength",
+    "devotion",
+    "intelligence",
+    "protection",
+    "ram_bhakti"
+   ],
+   "hi": [
+    "बल",
+    "भक्ति",
+    "बुद्धि",
+    "सुरक्षा",
+    "रामभक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "मनोजवम् मारुततुल्यवेगम् जितेन्द्रियम् बुद्धिमताम् वरिष्ठम्।\\nवातात्मजम् वानरयूथमुख्यम् श्रीरामदूतम् शरणम् प्रपद्ये॥",
+   "iast": "manojavaṃ mārutatulyavegaṃ jitendriyaṃ buddhimatāṃ variṣṭham |\\nvātātmajaṃ vānarayūthamukhyaṃ śrīrāmadūtaṃ śaraṇaṃ prapadye ||",
+   "translation": {
+    "en": "I seek refuge in Hanuman-the swift as the mind, fast as the wind, master of the senses, the foremost among the wise; the son of the Wind God, leader of the Vanara hosts, and the divine messenger of Lord Rama.",
+    "hi": "मैं मन के समान वेगवान, वायु के तुल्य तीव्र, इन्द्रियों को जीतने वाले, बुद्धिमानों में श्रेष्ठ; पवनपुत्र, वानर-सेना के अग्रणी तथा श्रीराम के दूत हनुमान की शरण ग्रहण करता हूँ।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A revered verse praising Lord Hanuman’s speed, strength, wisdom, self-control, and unwavering devotion to Lord Rama, commonly recited for protection and courage.",
+    "hi": "यह प्रसिद्ध मंत्र भगवान हनुमान के वेग, बल, बुद्धि, संयम और श्रीराम के प्रति उनकी अटूट भक्ति का स्तवन करता है, जिसका जप साहस और रक्षा के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant with devotion daily or especially on Tuesdays and Saturdays. It may be recited before Hanuman Chalisa or during times of fear or difficulty.",
+    "hi": "इस मंत्र का जप प्रतिदिन या विशेष रूप से मंगलवार और शनिवार को करें। हनुमान चालीसा से पूर्व या भय एवं संकट के समय इसका पाठ लाभकारी माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "31",
+  "title": {
+   "en": "Rudraya Namah Mantra",
+   "hi": "रुद्राय नमः मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Rudra",
+    "Shiva"
+   ],
+   "hi": [
+    "रुद्र",
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "protection",
+    "purification",
+    "fear_removal",
+    "shaiva",
+    "spiritual_strength"
+   ],
+   "hi": [
+    "सुरक्षा",
+    "शुद्धि",
+    "भयनाश",
+    "शैव",
+    "आध्यात्मिक_बल"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ नमो भगवते रुद्राय",
+   "iast": "oṃ namo bhagavate rudrāya",
+   "translation": {
+    "en": "Salutations to Lord Rudra, the Divine and Powerful One.",
+    "hi": "भगवान रुद्र को नमस्कार, जो दिव्य और परम शक्तिशाली हैं।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A sacred Shaiva mantra invoking Lord Rudra, a fierce and compassionate aspect of Shiva, revered for protection, purification, and inner strength.",
+    "hi": "यह पवित्र शैव मंत्र भगवान रुद्र का आवाहन करता है, जो शिव के उग्र और करुणामय स्वरूप हैं तथा रक्षा, शुद्धि और आंतरिक शक्ति प्रदान करते हैं।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 108 times daily or during Shiva worship, especially on Mondays or during Pradosha, with a calm and focused mind.",
+    "hi": "इस मंत्र का जप प्रतिदिन या शिव पूजा के समय, विशेषकर सोमवार या प्रदोष काल में, शांत और एकाग्र चित्त से १०८ बार करें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "32",
+  "title": {
+   "en": "Aditya (Surya) Mantra",
+   "hi": "आदित्य (सूर्य) मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Surya"
+   ],
+   "hi": [
+    "सूर्य"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "health",
+    "vitality",
+    "illumination",
+    "purification",
+    "astrology"
+   ],
+   "hi": [
+    "स्वास्थ्य",
+    "ऊर्जा",
+    "प्रकाश",
+    "शुद्धि",
+    "ज्योतिष"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ जपाकुसुमसंकाशं काश्यपेयं महाद्युतिम् ।\\nतमोरिं सर्वपापघ्नं प्रणतोऽस्मि दिवाकरम् ॥",
+   "iast": "oṃ japākusuma-saṅkāśaṃ kāśyapeyaṃ mahādyutim |\\ntamorim sarva-pāpaghnaṃ praṇato'smi divākaram ||",
+   "translation": {
+    "en": "I bow to the Sun God, radiant like the red hibiscus flower, the son of Kashyapa, of great brilliance, the destroyer of darkness and the remover of all sins.",
+    "hi": "मैं जपा पुष्प के समान दीप्तिमान, कश्यप के पुत्र, महान तेजस्वी, अंधकार के शत्रु और समस्त पापों का नाश करने वाले दिवाकर सूर्यदेव को प्रणाम करता हूँ।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A traditional Surya mantra praising the Sun God as the source of light, vitality, and purification, widely recited for health, strength, and clarity.",
+    "hi": "यह पारंपरिक सूर्य मंत्र सूर्यदेव को प्रकाश, जीवन-ऊर्जा और शुद्धि के स्रोत के रूप में नमन करता है, जिसका जप स्वास्थ्य, बल और स्पष्टता के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra daily at sunrise, preferably facing east. It may be recited 11, 21, or 108 times with devotion.",
+    "hi": "इस मंत्र का जप प्रतिदिन सूर्योदय के समय पूर्व दिशा की ओर मुख करके करें। श्रद्धा सहित ११, २१ या १०८ बार जप करना शुभ माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "33",
+  "title": {
+   "en": "Parameshwari Devi Mantra",
+   "hi": "परमेश्वरी देवी मंत्र"
+  },
+  "deity": {
+   "en": [
+    "Devi",
+    "Parameshwari"
+   ],
+   "hi": [
+    "देवी",
+    "परमेश्वरी"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "divine_feminine",
+    "protection",
+    "power",
+    "devotion",
+    "evil_destruction"
+   ],
+   "hi": [
+    "दिव्य_नारी",
+    "सुरक्षा",
+    "शक्ति",
+    "भक्ति",
+    "असुर_नाश"
+   ]
+  },
+  "content": {
+   "sanskrit": "देव दानव सिद्धौग पूजिता परमेश्वरि |\\nपुराणु रूपा परमा परतंत्र विनाशिनी ||",
+   "iast": "deva dānava siddhaugha pūjitā parameśvari |\\npurāṇu rūpā paramā paratantra vināśinī ||",
+   "translation": {
+    "en": "O Supreme Goddess Parameshwari, You are worshipped by gods, demons, and hosts of siddhas. You are the primordial and supreme form, the destroyer of all subjugation and bondage.",
+    "hi": "हे परमेश्वरी देवी! देवता, दानव और सिद्धगण आपकी पूजा करते हैं। आप आदिरूपा, परमा हैं तथा समस्त परतंत्रता और बंधनों का नाश करने वाली हैं।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A devotional verse praising the Supreme Goddess as the primordial and all-powerful Parameshwari, revered by all beings and invoked for protection and liberation.",
+    "hi": "यह मंत्र परमेश्वरी देवी की स्तुति करता है, जिन्हें आदिशक्ति, सर्वशक्तिमान और सभी प्राणियों द्वारा पूजित माना गया है तथा जो बंधनों और अधीनता का नाश करती हैं।"
+   },
+   "how_to_chant": {
+    "en": "Chant with devotion during Devi worship, Navaratri, or daily sadhana. It may be recited 11, 21, or 108 times.",
+    "hi": "इस मंत्र का जप देवी पूजा, नवरात्रि या नित्य साधना में श्रद्धा सहित करें। ११, २१ या १०८ बार जप किया जा सकता है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "34",
+  "title": {
+   "en": "Panchamukhi Hanuman Kavacham",
+   "hi": "श्री पंचमुखी हनुमान कवच"
+  },
+  "deity": {
+   "en": [
+    "Hanuman"
+   ],
+   "hi": [
+    "हनुमान"
+   ]
+  },
+  "type": {
+   "en": "Kavacham",
+   "hi": "कवच"
+  },
+  "tags": {
+   "en": [
+    "protection",
+    "disease_removal",
+    "enemy_destruction",
+    "strength",
+    "fear_removal",
+    "ram_bhakti"
+   ],
+   "hi": [
+    "सुरक्षा",
+    "रोगनाश",
+    "शत्रुनाश",
+    "बल",
+    "भयनाश",
+    "रामभक्ति"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ श्री हनुमते नमः\\n\\nश्री गरुड उवाच्॥\\nअथ ध्यानं प्रवक्ष्यामि शृणु सर्वाङ्गसुन्दरम् ।\\nयत्कृतं देवदेवेन ध्यानं हनुमतः प्रियम् ॥१॥\\n\\nपञ्चवक्त्रं महाभीमं त्रिपञ्चनयनैर्युतम् ।\\nबाहुभिर्दशभिर्युक्तं सर्वकामार्थसिद्धिदम् ॥२॥\\n\\nपूर्वं तु वानरं वक्त्रं कोटिसूर्यसमप्रभम् ।\\nदंष्ट्राकरालवदनं भ्रुकुटीकुटिलेक्षणम् ॥३॥\\n\\nदक्षिणं नारसिंहं तु महाद्भुतमभूतलम् ।\\nअत्युग्रतेजोवपुषं भीषणं भयनाशनम् ॥४॥\\n\\nपश्चिमं गारुडं वक्त्रं वक्रतुण्डं महाबलम् ।\\nसर्वनागप्रशमनं विषभूतादिकृन्तनम् ॥५॥\\n\\nउत्तरं सौकरं वक्त्रं कृष्णं दीप्तं नभोपमम् ।\\nपातालसिंहवेतालज्वररोगादिकृन्तनम् ॥६॥\\n\\nऊर्ध्वं हयाननं घोरं दानवान्तकरं परम् ।\\nयेन वक्त्रेण विप्रेन्द्र तारकाख्यं महासुरम् ॥७॥\\n\\nजघान शरणं तस्यात् सर्वशत्रुहरं परम् ।\\nध्यात्वा पंचमुखं रुद्रं हनुमन्तं दयानिधिम् ॥८॥\\n\\nखड्गं त्रिशूलं खट्वाङ्गं पाशमंकुशपर्वतम् ।\\nमुष्टिं कौमोदकीं वृक्षं धारयन्तं कमण्डलुम् ॥९॥\\n\\nभिन्दिपालं ज्ञानमुद्रां दशभिर्मुनिपुङ्गवम् ।\\nएतान्यायुधजालानि धारयन्तं भजाम्यहम् ॥१०॥\\n\\nप्रेतासनोपविष्टं तं सर्वाभरणभूषितम् ।\\nदिव्यमाल्याम्बरधरं दिव्यगन्धानुलेपनम् ॥११॥\\n\\nपञ्चास्यमच्युतमनेकविचित्रवर्णवक्त्रं\\nशशांकशेखरं कपिराजवर्यम् ।\\nपीताम्बरादिमुकुटैः रूपशोभिताङ्गं\\nपिङ्गाक्षमाद्यमनिशं मनसा स्मरामि ॥१२॥\\n\\nमर्कटेशं महोत्साहं सर्वशत्रुहरं परम् ।\\nशत्रून् संहर मां रक्ष श्रीमन्नपदमुद्धर ॥१३॥\\n\\nॐ हरिमर्कट मर्कट मंत्रमिदं परिलिख्यति लिख्यति वामतले ।\\nयदि नश्यति नश्यति शत्रुकुलं यदि मुंच्यति मुंच्यति वामलता ॥१४॥\\n\\nइदं कवचं पठित्वा तु महाकवचं पठेन्नरः ।\\nएकवारं जपेत् स्तोत्रं सर्वशत्रुनिवारणम् ॥१५॥\\n\\nद्विवारं पठेन्नित्यं पुत्रपौत्रप्रवर्धनम् ।\\nत्रिवारं पठेन्नित्यं सर्वसम्पत्करं शुभम् ॥१६॥\\n\\nचतुर्वारं पठेन्नित्यं सर्वरोगनिवारणम् ।\\nपञ्चवारं पठेन्नित्यं सर्वलोकवशङ्करम् ॥१७॥\\n\\nषड्वारं पठेन्नित्यं सर्वदेववशङ्करम् ।\\nसप्तवारं पठेन्नित्यं सर्वसौभाग्यदायकम् ॥१८॥\\n\\nअष्टवारं पठेन्नित्यमिष्टकामार्थसिद्धिदम् ।\\nनववारं पठेन्नित्यं राजभोगमवाप्नुयात् ॥१९॥\\n\\nदशवारं पठेन्नित्यं त्रैलोक्यज्ञानदर्शनम् ।\\nरुद्रावृत्तिं पठेन्नित्यं सर्वसिद्धिर्भवेद्ध्रुवम् ॥२०॥\\n\\nकवचस्मरणेनैव महाबलमवाप्नुयात् ॥२१॥\\n\\nइति सुदर्शनसंहितायां श्रीरामचन्द्रसीताप्रोक्तं\\nश्री पंचमुखहनुमत्कवचम् ।\\n\\n॥ श्री पंचमुखी हनुमान कवच समाप्तम् ॥\\nॐ श्री हनुमते नमः",
+   "iast": "",
+   "translation": {
+    "en": "This is the sacred Panchamukhi Hanuman Kavacham, revealed in the Sudarshana Samhita and spoken by Lord Rama and Sita. It describes the five-faced form of Hanuman and grants protection from all dangers, diseases, enemies, fear, and grants strength, prosperity, and spiritual success through regular recitation.",
+    "hi": "यह पवित्र श्री पंचमुखी हनुमान कवच सुदर्शन संहिता में वर्णित है और भगवान श्रीराम तथा माता सीता द्वारा कहा गया है। इसके नियमित पाठ से सभी प्रकार के रोग, भय, शत्रु, अनिष्ट और कष्ट नष्ट होते हैं तथा बल, सौभाग्य, संपत्ति और हनुमान जी की विशेष कृपा प्राप्त होती है।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "Panchamukhi Hanuman Kavacham is a powerful protective hymn describing Hanuman’s five-faced cosmic form, traditionally recited for absolute protection, victory over enemies, and removal of illnesses and fears.",
+    "hi": "श्री पंचमुखी हनुमान कवच भगवान हनुमान के पंचमुख स्वरूप का वर्णन करने वाला अत्यंत शक्तिशाली रक्षा स्तोत्र है, जिसका पाठ सुरक्षा, शत्रुनाश, रोगनाश और भयमुक्ति के लिए किया जाता है।"
+   },
+   "how_to_chant": {
+    "en": "Recite daily or especially on Tuesdays and Saturdays with devotion. Reading it 1–10 times gives progressively higher benefits as described in the phala-shruti.",
+    "hi": "इस कवच का पाठ प्रतिदिन या विशेष रूप से मंगलवार और शनिवार को करें। १ से १० बार पाठ करने से क्रमशः बढ़ते हुए फल प्राप्त होते हैं, जैसा कि फलश्रुति में वर्णित है।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "35",
+  "title": {
+   "en": "Shiva Bhakti Stotra",
+   "hi": "शिव भक्ति स्तोत्र"
+  },
+  "deity": {
+   "en": [
+    "Shiva"
+   ],
+   "hi": [
+    "शिव"
+   ]
+  },
+  "type": {
+   "en": "Stotra",
+   "hi": "स्तोत्र"
+  },
+  "tags": {
+   "en": [
+    "shaiva",
+    "devotion",
+    "peace",
+    "fear_removal",
+    "moksha"
+   ],
+   "hi": [
+    "शैव",
+    "भक्ति",
+    "शांति",
+    "भयनाश",
+    "मोक्ष"
+   ]
+  },
+  "content": {
+   "sanskrit": "आशुतोष शशाँक शेखर,\\nचन्द्र मौली चिदंबरा,\\nकोटि कोटि प्रणाम शम्भू,\\nकोटि नमन दिगम्बरा ॥\\n\\nनिर्विकार ओमकार अविनाशी,\\nतुम्ही देवाधि देव\\nजगत सर्जक प्रलय करता,\\nशिवम सत्यम सुंदरा ॥\\n\\nनिरंकार स्वरूप कालेश्वर,\\nमहा योगीश्वरा,\\nदयानिधि दानिश्वर जय,\\nजटाधार अभयंकरा ॥\\n\\nशूल पानी त्रिशूल धारी,\\nऔगड़ी बाघम्बरी,\\nजय महेश त्रिलोचनाय,\\nविश्वनाथ विशम्भरा ॥\\n\\nनाथ नागेश्वर हरो हर,\\nपाप साप अभिशाप तम,\\nमहादेव महान भोले,\\nसदा शिव शिव संकरा ॥\\n\\nजगत पति अनुरकती भक्ति,\\nसदैव तेरे चरण हो,\\nक्षमा हो अपराध सब,\\nजय जयति जगदीश्वरा ॥\\n\\nजनम जीवन जगत का,\\nसंताप ताप मिटे सभी,\\nओम नमः शिवाय मन,\\nजपता रहे पञ्चाक्षरा ॥",
+   "iast": "āśutoṣa śaśāṅka śekharaḥ,\\ncandra maulī cidambarā |\\nkoṭi koṭi praṇāma śambhū,\\nkoṭi namana digambarā ||\\n\\nnirvikāra oṃkāra avināśī,\\ntumhī devādhi deva |\\njagat sarjaka pralaya kartā,\\nśivam satyam sundarā ||\\n\\nniraṅkāra svarūpa kāleśvaraḥ,\\nmahā yogīśvarā |\\ndayānidhi dāniśvara jaya,\\njaṭādhāra abhayaṅkarā ||\\n\\nśūla pāṇi triśūla dhārī,\\naugaṛī bāghambarī |\\njaya maheśa trilocanāya,\\nviśvanātha viśambharā ||\\n\\nnātha nāgeśvara haro hara,\\npāpa śāpa abhiśāpa tamaḥ |\\nmahādeva mahāna bhole,\\nsadā śiva śiva śaṅkarā ||\\n\\njagat pati anurakti bhakti,\\nsadaiva tere caraṇa ho |\\nkṣamā ho aparādha saba,\\njaya jayati jagadīśvarā ||\\n\\njanma jīvana jagat kā,\\nsantāpa tāpa miṭe sabhī |\\noṃ namaḥ śivāya mana,\\njapatā rahe pañcākṣarā ||",
+   "translation": {
+    "en": "Salutations to Lord Shiva, the easily pleased, moon-crested, sky-clad One. You are the immutable, eternal Omkara, creator and destroyer of the universe, the supreme yogi, the compassionate giver of fearlessness. May my mind ever chant the five-syllabled mantra ‘Om Namah Shivaya’, and may all sufferings be destroyed.",
+    "hi": "हे आशुतोष, चंद्रशेखर, दिगंबर शिव! आप ओंकारस्वरूप, अविनाशी, सृष्टि के रचयिता और संहारकर्ता हैं। आप महायोगी, करुणानिधान और अभयदाता हैं। मेरा मन सदा ‘ॐ नमः शिवाय’ पंचाक्षर मंत्र का जप करता रहे और समस्त संताप नष्ट हों।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A heartfelt devotional stotra in praise of Lord Shiva, describing His cosmic form, compassion, power, and the grace obtained through constant remembrance of the Panchakshara mantra.",
+    "hi": "यह स्तोत्र भगवान शिव के दिव्य स्वरूप, करुणा, शक्ति और पंचाक्षर मंत्र ‘ॐ नमः शिवाय’ के जप से प्राप्त होने वाली शांति और कृपा का वर्णन करता है।"
+   },
+   "how_to_chant": {
+    "en": "Chant daily with devotion, especially on Mondays, during Pradosha, or before meditation. Conclude with mindful repetition of ‘Om Namah Shivaya’.",
+    "hi": "इस स्तोत्र का पाठ नित्य श्रद्धा सहित करें। विशेषकर सोमवार, प्रदोष काल या ध्यान से पूर्व पाठ करना श्रेष्ठ है। अंत में ‘ॐ नमः शिवाय’ का जप करें।"
+   }
+  },
+  "audio_url": ""
+ },
+ {
+  "id": "36",
+  "title": {
+   "en": "Om Gajakarṇakāya Namaḥ",
+   "hi": "ॐ गजकर्णकाय नमः"
+  },
+  "deity": {
+   "en": [
+    "Ganesha"
+   ],
+   "hi": [
+    "गणेश"
+   ]
+  },
+  "type": {
+   "en": "Mantra",
+   "hi": "मंत्र"
+  },
+  "tags": {
+   "en": [
+    "wisdom",
+    "obstacle_removal",
+    "protection",
+    "focus",
+    "auspiciousness"
+   ],
+   "hi": [
+    "बुद्धि",
+    "विघ्ननाश",
+    "सुरक्षा",
+    "एकाग्रता",
+    "मंगल"
+   ]
+  },
+  "content": {
+   "sanskrit": "ॐ गजकर्णकाय नमः",
+   "iast": "oṃ gajakarṇakāya namaḥ",
+   "translation": {
+    "en": "Salutations to Lord Ganesha, the One with ears like an elephant.",
+    "hi": "हाथी के समान विशाल कानों वाले भगवान गणेश को नमस्कार।"
+   }
+  },
+  "details": {
+   "summary": {
+    "en": "A short and powerful mantra of Lord Ganesha, symbolizing deep listening, wisdom, and the ability to absorb and remove obstacles.",
+    "hi": "भगवान गणेश का यह संक्षिप्त और शक्तिशाली मंत्र गहन श्रवण, बुद्धि तथा विघ्नों के नाश का प्रतीक है।"
+   },
+   "how_to_chant": {
+    "en": "Chant this mantra 11, 21, or 108 times, preferably before starting any new work or study. It can be recited in the morning while focusing on Lord Ganesha.",
+    "hi": "इस मंत्र का जप किसी भी नए कार्य या अध्ययन से पूर्व ११, २१ या १०८ बार करें। प्रातः काल भगवान गणेश का ध्यान करते हुए जप करना श्रेष्ठ माना जाता है।"
+   }
+  },
+  "audio_url": ""
+ }
+]

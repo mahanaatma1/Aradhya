@@ -1,0 +1,633 @@
+<title>DivyaVaani — Visual Identity</title>
+<style>
+  :root {
+    /* grounds */
+    --paper: #FDF8F5;
+    --paper-2: #F7ECDC;
+    --paper-3: #FBEFDD;
+    --card: #FFFDF9;
+    --ink: #3a2214;
+    --ink-soft: #6f4c37;
+    --ink-faint: #9a7c67;
+    /* brand */
+    --terra: #A73015;
+    --terra-dark: #6E1F10;
+    --gold: #B48B3E;
+    --gold-bright: #C0A062;
+    --purple: #5A2EA8;
+    --rose: #9C2950;
+    --green: #25533F;
+    /* lines / stitch */
+    --line: rgba(92,59,40,.16);
+    --line-strong: rgba(92,59,40,.28);
+    --stitch-on-paper: rgba(167,48,21,.42);
+    --stitch-on-color: rgba(255,250,240,.62);
+    --shadow-card: 0 10px 26px -14px rgba(92,45,20,.45);
+    --shadow-float: 0 26px 44px -20px rgba(60,25,10,.5);
+    --r-lg: 24px;
+    --r-md: 18px;
+    --r-sm: 14px;
+    --maxw: 1120px;
+    --font-display: "Palatino Linotype","Book Antiqua","Iowan Old Style",Palatino,Georgia,"Times New Roman",serif;
+    --font-body: "Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    --font-deva: "Nirmala UI","Noto Sans Devanagari","Devanagari Sangam MN","Mangal","Kohinoor Devanagari",serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1a110c;
+      --paper-2: #23170f;
+      --paper-3: #271a11;
+      --card: #241811;
+      --ink: #f2e6d9;
+      --ink-soft: #cdb29c;
+      --ink-faint: #9c8371;
+      --terra: #e35a34;
+      --terra-dark: #b23a1a;
+      --gold: #d4af37;
+      --gold-bright: #e6c766;
+      --purple: #9b7be0;
+      --rose: #e07a98;
+      --green: #5fae8a;
+      --line: rgba(242,230,217,.14);
+      --line-strong: rgba(242,230,217,.24);
+      --stitch-on-paper: rgba(227,90,52,.5);
+      --stitch-on-color: rgba(255,250,240,.68);
+      --shadow-card: 0 12px 30px -16px rgba(0,0,0,.7);
+      --shadow-float: 0 30px 50px -22px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="light"] {
+    --paper: #FDF8F5; --paper-2: #F7ECDC; --paper-3: #FBEFDD; --card: #FFFDF9;
+    --ink: #3a2214; --ink-soft: #6f4c37; --ink-faint: #9a7c67;
+    --terra: #A73015; --terra-dark: #6E1F10; --gold: #B48B3E; --gold-bright: #C0A062;
+    --purple: #5A2EA8; --rose: #9C2950; --green: #25533F;
+    --line: rgba(92,59,40,.16); --line-strong: rgba(92,59,40,.28);
+    --stitch-on-paper: rgba(167,48,21,.42); --stitch-on-color: rgba(255,250,240,.62);
+    --shadow-card: 0 10px 26px -14px rgba(92,45,20,.45);
+    --shadow-float: 0 26px 44px -20px rgba(60,25,10,.5);
+  }
+  :root[data-theme="dark"] {
+    --paper: #1a110c; --paper-2: #23170f; --paper-3: #271a11; --card: #241811;
+    --ink: #f2e6d9; --ink-soft: #cdb29c; --ink-faint: #9c8371;
+    --terra: #e35a34; --terra-dark: #b23a1a; --gold: #d4af37; --gold-bright: #e6c766;
+    --purple: #9b7be0; --rose: #e07a98; --green: #5fae8a;
+    --line: rgba(242,230,217,.14); --line-strong: rgba(242,230,217,.24);
+    --stitch-on-paper: rgba(227,90,52,.5); --stitch-on-color: rgba(255,250,240,.68);
+    --shadow-card: 0 12px 30px -16px rgba(0,0,0,.7);
+    --shadow-float: 0 30px 50px -22px rgba(0,0,0,.8);
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .page {
+    background:
+      radial-gradient(1200px 620px at 82% -8%, var(--paper-2), transparent 60%),
+      radial-gradient(900px 520px at 8% 8%, var(--paper-3), transparent 55%),
+      var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  h1,h2,h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; margin: 0; }
+  .eyebrow {
+    font-size: .72rem; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--terra); font-weight: 700;
+  }
+  :root[data-theme="dark"] .eyebrow, @media (prefers-color-scheme: dark) { }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 40;
+    backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--paper) 78%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brandmini { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 600; font-size: 1.12rem; }
+  .brandmini .dot { color: var(--terra); }
+  .toggle {
+    font: inherit; font-size: .82rem; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border-radius: 999px;
+    background: transparent; color: var(--ink-soft);
+    border: 1.5px solid var(--line-strong);
+  }
+  .toggle:hover { color: var(--terra); border-color: var(--terra); }
+  .toggle:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 2px; }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; padding: 74px 0 40px; }
+  #mandala { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; opacity: .5; pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 128px 1fr; gap: 30px; align-items: center; }
+  .app-icon {
+    width: 128px; height: 128px; border-radius: 30px;
+    background:
+      radial-gradient(120% 120% at 30% 20%, #fbe6cf, transparent 60%),
+      linear-gradient(160deg, #f3e2c8, #e9d3ae);
+    box-shadow: var(--shadow-float), inset 0 0 0 1px rgba(120,80,40,.15);
+    position: relative; display: grid; place-items: center;
+  }
+  .app-icon::after { content:""; position:absolute; inset:9px; border-radius:22px; border:2px dashed rgba(120,80,40,.28); }
+  .app-icon .mono { font-family: var(--font-display); font-weight: 700; font-size: 62px; color: var(--terra); position: relative; line-height: 1; letter-spacing: -.04em; }
+  .app-icon .mono span { color: var(--terra-dark); }
+  .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.02; letter-spacing: -.01em; margin: 12px 0 8px; }
+  .hero h1 em { font-style: normal; color: var(--terra); }
+  .lede { font-size: 1.16rem; color: var(--ink-soft); max-width: 46ch; margin: 0 0 18px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    font-size: .78rem; padding: 6px 12px; border-radius: 999px;
+    background: color-mix(in srgb, var(--terra) 9%, transparent);
+    color: var(--terra); border: 1px solid color-mix(in srgb, var(--terra) 26%, transparent);
+    font-weight: 600;
+  }
+
+  /* ---------- section scaffold ---------- */
+  section.block { padding: 46px 0; border-top: 1px solid var(--line); }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 26px; flex-wrap: wrap; }
+  .sec-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+  .sec-head p { margin: 6px 0 0; color: var(--ink-soft); max-width: 52ch; }
+
+  /* ---------- stitched card util ---------- */
+  .stitch { position: relative; }
+  .stitch::after {
+    content: ""; position: absolute; inset: 7px; border-radius: calc(var(--r-md) - 7px);
+    border: 1.5px dashed var(--stitch-on-paper); pointer-events: none;
+  }
+
+  /* ---------- palette ---------- */
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: 14px; }
+  .swatch {
+    border-radius: var(--r-sm); overflow: hidden; background: var(--card);
+    border: 1px solid var(--line); box-shadow: var(--shadow-card);
+  }
+  .swatch .chip { height: 74px; }
+  .swatch .lab { padding: 10px 12px; }
+  .swatch .lab b { display: block; font-size: .86rem; font-weight: 600; }
+  .swatch .lab code { font-size: .74rem; color: var(--ink-faint); font-family: ui-monospace,"SFMono-Regular",Menlo,monospace; letter-spacing: .02em; }
+
+  /* ---------- typography specimen ---------- */
+  .type-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
+    box-shadow: var(--shadow-card); padding: 30px; display: grid; gap: 22px;
+  }
+  .specimen .big { font-family: var(--font-display); font-size: clamp(2rem,5vw,3.2rem); line-height: 1.05; letter-spacing: -.01em; }
+  .specimen .deva { font-family: var(--font-deva); font-size: 1.7rem; color: var(--terra); line-height: 1.5; }
+  .scale-row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; border-top: 1px dashed var(--line-strong); padding-top: 16px; }
+  .scale-row .k { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); width: 92px; flex: none; }
+
+  /* ---------- component gallery ---------- */
+  .grid-2 { display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--shadow-card); padding: 24px; }
+  .panel h3 { font-size: 1.05rem; margin-bottom: 14px; }
+
+  .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .cat {
+    position: relative; border-radius: var(--r-md); padding: 16px 14px; min-height: 104px;
+    display: flex; flex-direction: column; justify-content: space-between; color: #fff8ef;
+    box-shadow: var(--shadow-card); overflow: hidden; isolation: isolate;
+  }
+  .cat::after { content:""; position:absolute; inset:7px; border-radius: calc(var(--r-md) - 7px); border:1.5px dashed var(--stitch-on-color); pointer-events:none; }
+  .cat .ic { width: 26px; height: 26px; opacity: .95; }
+  .cat .nm { font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; line-height: 1.1; }
+  .cat .hi { font-family: var(--font-deva); font-size: .82rem; opacity: .82; margin-top: 1px; }
+  .g-terra { background: linear-gradient(150deg,#A73015,#6E1F10); }
+  .g-gold  { background: linear-gradient(150deg,#D4AF37,#A54325); }
+  .g-rose  { background: linear-gradient(150deg,#C7567F,#7C1F44); }
+  .g-green { background: linear-gradient(150deg,#3E8E6E,#204b39); }
+  .g-purp  { background: linear-gradient(150deg,#8B6AC7,#4a2493); }
+  .g-saff  { background: linear-gradient(150deg,#E0762A,#a7430f); }
+  .g-indigo{ background: linear-gradient(150deg,#5C6BC0,#2f3b8e); }
+  .g-plum  { background: linear-gradient(150deg,#A85A8C,#5c2549); }
+  .g-bronze{ background: linear-gradient(150deg,#9C7A3C,#5C3B28); }
+
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px; }
+  .btn {
+    font: inherit; font-weight: 600; cursor: pointer; border: none;
+    padding: 12px 22px; border-radius: 999px; font-size: .92rem;
+  }
+  .btn-primary { background: linear-gradient(150deg,var(--terra),var(--terra-dark)); color: #fff4e9; box-shadow: 0 8px 18px -8px rgba(167,48,21,.7); }
+  .btn-primary:hover { filter: brightness(1.06); }
+  .btn-ghost { background: transparent; color: var(--terra); border: 1.5px solid color-mix(in srgb,var(--terra) 40%, transparent); }
+  .btn-ghost:hover { border-color: var(--terra); background: color-mix(in srgb,var(--terra) 8%, transparent); }
+  .btn:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 2px; }
+  .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .uichip {
+    font-size: .8rem; padding: 7px 14px; border-radius: 999px; cursor: default;
+    background: var(--paper-2); color: var(--ink-soft); border: 1px solid var(--line-strong);
+  }
+  .uichip.active { background: color-mix(in srgb,var(--terra) 14%, transparent); color: var(--terra); border-color: var(--terra); font-weight: 600; }
+
+  .quote-demo { position: relative; background: linear-gradient(150deg, var(--paper-3), var(--card)); border: 1px solid var(--line); border-radius: var(--r-md); padding: 22px; }
+  .quote-demo .qd { font-family: var(--font-deva); color: var(--terra); font-size: 1.15rem; margin-bottom: 6px; }
+  .quote-demo .qt { font-family: var(--font-display); font-size: 1.12rem; line-height: 1.45; }
+  .quote-demo .qs { margin-top: 10px; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+
+  /* ---------- phones ---------- */
+  .phones { display: flex; gap: 34px; flex-wrap: wrap; justify-content: center; }
+  .phone {
+    width: 300px; flex: none; border-radius: 44px; padding: 12px;
+    background: linear-gradient(160deg,#2a1c14,#14100c);
+    box-shadow: var(--shadow-float), inset 0 0 0 2px rgba(255,255,255,.05);
+  }
+  .screen {
+    border-radius: 33px; overflow: hidden; height: 620px; position: relative;
+    background:
+      radial-gradient(340px 220px at 88% -4%, var(--paper-2), transparent 62%),
+      var(--paper);
+    display: flex; flex-direction: column;
+  }
+  .statusbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px 4px; font-size: .72rem; color: var(--ink-soft); font-weight: 600; }
+  .statusbar .dots { display: flex; gap: 4px; }
+  .statusbar .dots i { width: 5px; height: 5px; border-radius: 50%; background: var(--ink-faint); display: inline-block; }
+  .appbar { display: flex; align-items: center; justify-content: space-between; padding: 6px 18px 12px; }
+  .appbar .wm { font-family: var(--font-display); font-weight: 700; font-size: 1.32rem; letter-spacing: -.01em; }
+  .appbar .wm em { font-style: normal; color: var(--terra); }
+  .streak { display: inline-flex; align-items: center; gap: 5px; font-weight: 700; font-size: .82rem; color: var(--terra); background: color-mix(in srgb,var(--terra) 12%, transparent); padding: 5px 11px; border-radius: 999px; border: 1px solid color-mix(in srgb,var(--terra) 26%, transparent); }
+  .scroll { overflow-y: auto; padding: 4px 16px 22px; display: flex; flex-direction: column; gap: 14px; }
+  .scroll::-webkit-scrollbar { width: 0; }
+
+  .qcard { position: relative; background: linear-gradient(155deg,#A73015,#6E1F10); color: #fdeede; border-radius: var(--r-md); padding: 18px 16px 16px; box-shadow: var(--shadow-card); }
+  .qcard::after { content:""; position:absolute; inset:7px; border-radius: calc(var(--r-md) - 7px); border:1.5px dashed var(--stitch-on-color); }
+  .qcard .lbl { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; opacity: .82; font-weight: 700; }
+  .qcard .san { font-family: var(--font-deva); font-size: 1.02rem; margin: 8px 0 6px; line-height: 1.5; }
+  .qcard .eng { font-family: var(--font-display); font-size: .95rem; line-height: 1.4; }
+  .qcard .src { margin-top: 10px; font-size: .72rem; opacity: .85; font-weight: 600; }
+
+  .mini-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+  .mtile { position: relative; border-radius: var(--r-sm); padding: 12px 10px; min-height: 86px; display: flex; flex-direction: column; justify-content: space-between; color: #fff8ef; box-shadow: var(--shadow-card); }
+  .mtile::after { content:""; position:absolute; inset:6px; border-radius: calc(var(--r-sm) - 6px); border:1.25px dashed var(--stitch-on-color); }
+  .mtile .ic { width: 22px; height: 22px; }
+  .mtile .nm { font-family: var(--font-display); font-weight: 600; font-size: .82rem; line-height: 1.05; }
+  .mtile .hi { font-family: var(--font-deva); font-size: .68rem; opacity: .82; }
+  .sec-label { font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; margin: 4px 2px -2px; }
+
+  /* reader screen */
+  .rd-bar { display: flex; align-items: center; gap: 12px; padding: 6px 16px 10px; }
+  .rd-bar .bk { width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-strong); display: grid; place-items: center; color: var(--ink-soft); flex: none; }
+  .rd-bar .tt { font-family: var(--font-display); font-weight: 600; font-size: 1rem; }
+  .rd-bar .tt small { display: block; font-family: var(--font-body); font-weight: 500; font-size: .72rem; color: var(--ink-faint); letter-spacing: .04em; }
+  .rd-toggle { margin-left: auto; display: flex; background: var(--paper-2); border-radius: 999px; padding: 3px; border: 1px solid var(--line); flex: none; }
+  .rd-toggle span { font-size: .72rem; font-weight: 700; padding: 4px 11px; border-radius: 999px; color: var(--ink-faint); }
+  .rd-toggle span.on { background: var(--terra); color: #fff3e8; }
+  .shloka { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md); padding: 18px; box-shadow: var(--shadow-card); position: relative; }
+  .shloka .num { position: absolute; top: 14px; right: 16px; font-family: var(--font-display); color: var(--gold); font-size: .9rem; font-weight: 700; }
+  .shloka .dv { font-family: var(--font-deva); color: var(--terra); font-size: 1.14rem; line-height: 1.7; }
+  .shloka .tl { font-style: italic; color: var(--ink-soft); font-size: .86rem; margin: 12px 0; line-height: 1.5; }
+  .shloka .en { font-family: var(--font-display); font-size: .98rem; line-height: 1.5; }
+  .shloka .tools { display: flex; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--line-strong); color: var(--ink-faint); }
+  .shloka .tools .t { display: inline-flex; align-items: center; gap: 6px; font-size: .76rem; font-weight: 600; }
+
+  .audio { display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 8px 8px 8px; box-shadow: var(--shadow-card); }
+  .audio .play { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(150deg,var(--terra),var(--terra-dark)); display: grid; place-items: center; color: #fff3e8; flex: none; }
+  .audio .wv { flex: 1; height: 24px; display: flex; align-items: center; gap: 3px; }
+  .audio .wv i { flex: 1; background: color-mix(in srgb,var(--terra) 42%, transparent); border-radius: 2px; }
+  .audio .tm { font-size: .72rem; color: var(--ink-faint); font-variant-numeric: tabular-nums; flex: none; }
+
+  .foot { padding: 40px 0 64px; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: .9rem; }
+  .foot .note { background: color-mix(in srgb,var(--gold-bright) 12%, transparent); border: 1px solid color-mix(in srgb,var(--gold) 40%, transparent); border-radius: var(--r-md); padding: 16px 18px; max-width: 70ch; }
+  .foot code { font-family: ui-monospace,Menlo,monospace; font-size: .82em; color: var(--terra); }
+
+  @media (max-width: 720px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .cat-grid { grid-template-columns: repeat(2,1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="page">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brandmini">Divya<span class="dot">Vaani</span></div>
+      <button class="toggle" id="themeBtn" aria-label="Toggle colour theme">
+        <span id="themeIcon">☾</span> <span id="themeTxt">Dark</span>
+      </button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <canvas id="mandala" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="app-icon" aria-hidden="true">
+        <div class="mono">d<span>V</span></div>
+      </div>
+      <div>
+        <p class="eyebrow">Visual identity · reference build</p>
+        <h1>Divya<em>Vaani</em></h1>
+        <p class="lede">A daily spiritual companion — scriptures, aartis, the Pauranik Prasna quiz, and on-device astrology, wrapped in a warm, hand-drawn devotional aesthetic.</p>
+        <div class="meta-row">
+          <span class="tag">Flutter</span>
+          <span class="tag">Android + iOS</span>
+          <span class="tag">Offline-first</span>
+          <span class="tag">Bilingual EN · हिन्दी</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="block">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">01 · Palette</p>
+          <h2>Colour of warm paper &amp; earth</h2>
+          <p>Grounds in cream and kraft, ink in deep browns, with terracotta and gold carrying the brand. Jewel accents colour-code each content world.</p>
+        </div>
+      </div>
+      <div class="swatch-grid" id="swatches"></div>
+    </section>
+
+    <section class="block">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">02 · Typography</p>
+          <h2>A book-serif voice</h2>
+          <p>A warm serif for display and verse, a humanist sans for interface, and a Devanagari face for Sanskrit &amp; Hindi set side by side.</p>
+        </div>
+      </div>
+      <div class="type-card specimen">
+        <div>
+          <p class="eyebrow" style="margin-bottom:8px">Display · verse</p>
+          <div class="big">You have the right to act,<br>never to the fruits.</div>
+          <div class="deva">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</div>
+        </div>
+        <div class="scale-row"><span class="k">Body</span><span style="max-width:60ch">Begin each day with divine wisdom. Read sacred scripture at your own pace, save the verses that move you, and keep a quiet daily practice with streaks and japa.</span></div>
+        <div class="scale-row"><span class="k">Label</span><span class="eyebrow">Panchang · आज का पंचांग</span></div>
+        <div class="scale-row"><span class="k">Numerals</span><span style="font-variant-numeric:tabular-nums;font-size:1.1rem">Tithi 07 · Nakshatra 12 · 06:41 → 18:52</span></div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">03 · Components</p>
+          <h2>The stitched-journal kit</h2>
+          <p>A dashed “stitched” outline — lifted from the logo — is the identity’s throughline: it edges every card and tile.</p>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="panel">
+          <h3>Colour-coded categories</h3>
+          <div class="cat-grid" id="catGrid"></div>
+        </div>
+        <div style="display:grid;gap:22px">
+          <div class="panel">
+            <h3>Controls</h3>
+            <div class="btn-row">
+              <button class="btn btn-primary">Start reading</button>
+              <button class="btn btn-ghost">Bookmark</button>
+            </div>
+            <div class="chip-row">
+              <span class="uichip active">All</span>
+              <span class="uichip">Courage</span>
+              <span class="uichip">Devotion</span>
+              <span class="uichip">Peace</span>
+              <span class="uichip">Wisdom</span>
+            </div>
+          </div>
+          <div class="panel stitch">
+            <h3>Daily quote card</h3>
+            <div class="quote-demo">
+              <div class="qd">योगः कर्मसु कौशलम्।</div>
+              <div class="qt">Yoga is skill in action.</div>
+              <div class="qs">Bhagavad Gita · 2.50</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">04 · The app, recreated</p>
+          <h2>Two screens, real content</h2>
+          <p>The home hub and a scripture reader — built from the token system above, exactly as they’d render in Flutter.</p>
+        </div>
+      </div>
+      <div class="phones">
+
+        <div class="phone">
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+            <div class="appbar">
+              <div class="wm">Divya<em>Vaani</em></div>
+              <span class="streak">🔥 7</span>
+            </div>
+            <div class="scroll">
+              <div class="qcard">
+                <div class="lbl">Verse of the day</div>
+                <div class="san">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</div>
+                <div class="eng">You have a right to your actions, but never to the fruits of your actions.</div>
+                <div class="src">— Bhagavad Gita 2.47</div>
+              </div>
+              <div class="sec-label">Explore</div>
+              <div class="mini-grid" id="homeGrid"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="phone">
+          <div class="screen">
+            <div class="statusbar"><span>9:41</span><span class="dots"><i></i><i></i><i></i></span></div>
+            <div class="rd-bar">
+              <div class="bk">‹</div>
+              <div class="tt">Bhagavad Gita<small>Adhyaya 2 · Sankhya Yoga</small></div>
+              <div class="rd-toggle"><span>EN</span><span class="on">हिं</span></div>
+            </div>
+            <div class="scroll">
+              <div class="shloka">
+                <div class="num">2.47</div>
+                <div class="dv">कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।<br>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥</div>
+                <div class="tl">karmaṇy-evādhikāras te mā phaleṣu kadācana…</div>
+                <div class="en">Let your concern be with action alone, never with the fruits of action. Do not let the fruits be your motive, nor cling to inaction.</div>
+                <div class="tools">
+                  <span class="t">☆ Bookmark</span>
+                  <span class="t">Aa Text size</span>
+                  <span class="t">↪ Share</span>
+                </div>
+              </div>
+              <div class="audio">
+                <div class="play">▶</div>
+                <div class="wv" id="wave" aria-hidden="true"></div>
+                <div class="tm">1:24</div>
+              </div>
+              <div class="shloka">
+                <div class="num">2.48</div>
+                <div class="dv">योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।</div>
+                <div class="en">Steadfast in yoga, perform your duty, O Dhananjaya, abandoning attachment.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="note">
+        <strong>Honest notes for the build.</strong> Fonts here are cross-platform stand-ins — production ships
+        <code>Eczar</code> (display), <code>Ramaraja</code> (accents), <code>Inter</code> (UI) and
+        <code>Noto Sans Devanagari</code>, bundled for offline use. All illustrations will be our own branded
+        artwork in this hand-drawn style, not Ishvarvaani’s assets. Palette, stitched motif, and screen layouts
+        map 1:1 to the Flutter <code>ThemeData</code> + <code>CategoryColors</code> extension described in PLAN.md.
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+  // ----- theme toggle -----
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('themeBtn');
+    var icon = document.getElementById('themeIcon');
+    var txt = document.getElementById('themeTxt');
+    function current() {
+      var t = root.getAttribute('data-theme');
+      if (t) return t;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function paint() {
+      var dark = current() === 'dark';
+      icon.textContent = dark ? '☀' : '☾';
+      txt.textContent = dark ? 'Light' : 'Dark';
+    }
+    btn.addEventListener('click', function () {
+      root.setAttribute('data-theme', current() === 'dark' ? 'light' : 'dark');
+      paint();
+    });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', paint);
+    paint();
+  })();
+
+  // ----- palette swatches -----
+  (function () {
+    var groups = [
+      ['Paper', '#FDF8F5'], ['Kraft', '#F7ECDC'], ['Ink brown', '#3a2214'],
+      ['Terracotta', '#A73015'], ['Terra dark', '#6E1F10'], ['Gold', '#C0A062'],
+      ['Bright gold', '#D4AF37'], ['Dharma purple', '#5A2EA8'], ['Deity rose', '#9C2950'],
+      ['Sacred green', '#25533F']
+    ];
+    var host = document.getElementById('swatches');
+    groups.forEach(function (g) {
+      var el = document.createElement('div');
+      el.className = 'swatch';
+      el.innerHTML = '<div class="chip" style="background:' + g[1] + '"></div>' +
+        '<div class="lab"><b>' + g[0] + '</b><code>' + g[1].toUpperCase() + '</code></div>';
+      host.appendChild(el);
+    });
+  })();
+
+  // ----- icons -----
+  var IC = {
+    book: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20"/>',
+    lamp: '<path d="M4 14c0-2 3-3 8-3s8 1 8 3-3 4-8 4-8-2-8-4z"/><path d="M12 11V7"/><path d="M12 7c0-1.6 1-3 1-3s-2 .4-2 2"/>',
+    om: '', // uses text ॐ
+    quiz: '<path d="M9 9a3 3 0 1 1 4 2.8c-.9.4-1 1-1 2.2"/><circle cx="12" cy="18" r=".6" fill="currentColor" stroke="none"/>',
+    star: '<path d="M12 3l2.3 4.7 5.2.8-3.8 3.7.9 5.2L12 15.8 7.4 17.4l.9-5.2L4.5 8.5l5.2-.8z"/>',
+    cal: '<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9h16M8 3v4M16 3v4"/>',
+    scroll: '<path d="M7 4h10v12a3 3 0 0 0 3 3H8a3 3 0 0 1-3-3V6"/><path d="M17 19a3 3 0 0 0 3-3"/>',
+    user: '<circle cx="12" cy="8" r="3.4"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/>',
+    temple: '<path d="M12 3l4 4H8z"/><path d="M6 11h12v9H6z"/><path d="M11 20v-4h2v4"/><path d="M6 11l-2 3h16l-2-3"/>'
+  };
+  function svg(inner) {
+    return '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">' + inner + '</svg>';
+  }
+  function mark(key) { return key === 'om' ? '<div class="ic" style="font-family:var(--font-deva);font-size:22px;line-height:1">ॐ</div>' : svg(IC[key]); }
+
+  var cats = [
+    ['Scriptures', 'ग्रंथ', 'g-terra', 'book'],
+    ['Aartis', 'आरती', 'g-gold', 'lamp'],
+    ['Mantras', 'मंत्र', 'g-rose', 'om'],
+    ['Quiz', 'प्रश्न', 'g-green', 'quiz'],
+    ['Astrology', 'ज्योतिष', 'g-purp', 'star'],
+    ['Panchang', 'पंचांग', 'g-saff', 'cal'],
+    ['Katha', 'कथा', 'g-indigo', 'scroll'],
+    ['Personality', 'व्यक्तित्व', 'g-plum', 'user'],
+    ['Temples', 'मंदिर', 'g-bronze', 'temple']
+  ];
+
+  // ----- gallery category grid -----
+  (function () {
+    var host = document.getElementById('catGrid');
+    cats.forEach(function (c) {
+      var el = document.createElement('div');
+      el.className = 'cat ' + c[2];
+      el.innerHTML = mark(c[3]) + '<div><div class="nm">' + c[0] + '</div><div class="hi">' + c[1] + '</div></div>';
+      host.appendChild(el);
+    });
+  })();
+
+  // ----- home mini grid -----
+  (function () {
+    var host = document.getElementById('homeGrid');
+    cats.forEach(function (c) {
+      var el = document.createElement('div');
+      el.className = 'mtile ' + c[2];
+      el.innerHTML = mark(c[3]) + '<div><div class="nm">' + c[0] + '</div><div class="hi">' + c[1] + '</div></div>';
+      host.appendChild(el);
+    });
+  })();
+
+  // ----- audio waveform bars -----
+  (function () {
+    var host = document.getElementById('wave');
+    var h = [8,14,20,12,22,16,10,18,24,14,8,16,20,12,18,10,22,14];
+    h.forEach(function (v) { var i = document.createElement('i'); i.style.height = v + 'px'; host.appendChild(i); });
+  })();
+
+  // ----- hero mandala (canvas, static / very slow) -----
+  (function () {
+    var cv = document.getElementById('mandala');
+    if (!cv) return;
+    var ctx = cv.getContext('2d');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var W, H, DPR;
+    function size() {
+      DPR = Math.min(window.devicePixelRatio || 1, 2);
+      W = cv.clientWidth; H = cv.clientHeight;
+      cv.width = W * DPR; cv.height = H * DPR;
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+    function accent() {
+      return getComputedStyle(document.documentElement).getPropertyValue('--terra').trim() || '#A73015';
+    }
+    function draw(rot) {
+      ctx.clearRect(0, 0, W, H);
+      var cx = W * 0.86, cy = H * 0.30, R = Math.min(W, H) * 0.62;
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(rot);
+      ctx.strokeStyle = accent();
+      ctx.globalAlpha = 0.16;
+      ctx.lineWidth = 1;
+      var rings = [0.28, 0.44, 0.62, 0.82, 1.0];
+      rings.forEach(function (rr, ri) {
+        var petals = 12 + ri * 6;
+        var rad = R * rr;
+        for (var i = 0; i < petals; i++) {
+          var a = (i / petals) * Math.PI * 2;
+          var x = Math.cos(a) * rad, y = Math.sin(a) * rad;
+          ctx.beginPath();
+          ctx.ellipse(x, y, R * 0.10, R * 0.032, a, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+        ctx.beginPath(); ctx.arc(0, 0, rad, 0, Math.PI * 2); ctx.stroke();
+      });
+      ctx.restore();
+    }
+    var t = 0;
+    function loop() { t += 0.0007; draw(t); requestAnimationFrame(loop); }
+    function init() { size(); draw(0); if (!reduce) loop(); }
+    window.addEventListener('resize', function () { size(); if (reduce) draw(t); });
+    init();
+  })();
+</script>

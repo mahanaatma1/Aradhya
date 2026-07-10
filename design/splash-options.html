@@ -1,0 +1,224 @@
+<title>Aradhya — Splash Bloom Options</title>
+<style>
+  :root {
+    --bg:#FDF8F5; --surface:#FFFDF9; --ink:#3A2214; --soft:#6F4C37; --faint:#9A7C67;
+    --line:rgba(58,34,20,.12); --terra:#A73015; --gold:#B48B3E;
+    /* the splash itself is always warm cream */
+    --paper:#FDF8F5; --tile:#FBEFDD;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#1A110C; --surface:#241811; --ink:#F2E6D9; --soft:#CDB29C; --faint:#9C8371;
+      --line:rgba(242,230,217,.14); --terra:#E35A34; --gold:#C7A24E; }
+  }
+  :root[data-theme="light"]{ --bg:#FDF8F5; --surface:#FFFDF9; --ink:#3A2214; --soft:#6F4C37; --faint:#9A7C67; --line:rgba(58,34,20,.12); --terra:#A73015; --gold:#B48B3E; }
+  :root[data-theme="dark"]{ --bg:#1A110C; --surface:#241811; --ink:#F2E6D9; --soft:#CDB29C; --faint:#9C8371; --line:rgba(242,230,217,.14); --terra:#E35A34; --gold:#C7A24E; }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5; }
+  .wrap{ max-width:1000px; margin:0 auto; padding:48px 22px 72px; }
+
+  header.hero{ text-align:center; margin-bottom:30px; }
+  .kicker{ font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  h1{ font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:clamp(30px,5vw,44px); margin:.3em 0 .15em; }
+  .hero p{ color:var(--soft); max-width:56ch; margin:.2em auto 0; font-size:16px; }
+
+  .stage{ display:grid; grid-template-columns:1fr; gap:26px; align-items:start; }
+  @media(min-width:820px){ .stage{ grid-template-columns:360px 1fr; } }
+
+  /* Phone splash preview */
+  .phone{ background:var(--paper); border-radius:34px; border:1px solid var(--line);
+    box-shadow:0 30px 60px rgba(110,31,16,.18); padding:0; overflow:hidden;
+    aspect-ratio:9/17; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:22px; }
+  .phone canvas{ width:150px; height:150px; }
+  .wordmark{ font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:34px; letter-spacing:.5px; }
+  .wordmark .head{ color:#3A2214; } .wordmark .tail{ color:#A73015; }
+  .tagline{ font-family:Georgia,serif; font-style:italic; color:#6F4C37; font-size:14px; margin-top:-14px; }
+  .reveal{ opacity:0; transform:translateY(14px); text-align:center; }
+
+  .controls{ display:flex; gap:12px; align-items:center; margin-top:16px; flex-wrap:wrap; }
+  button.play{ background:var(--terra); color:#FFF4E9; border:none; border-radius:999px;
+    padding:11px 20px; font-weight:700; font-size:14px; cursor:pointer; }
+  button.play:focus-visible{ outline:3px solid var(--gold); outline-offset:2px; }
+  .speed{ display:flex; align-items:center; gap:8px; color:var(--soft); font-size:13px; }
+  input[type=range]{ accent-color:var(--terra); }
+
+  /* Option cards */
+  .options{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:520px){ .options{ grid-template-columns:1fr; } }
+  .opt{ text-align:left; background:var(--surface); border:1.5px solid var(--line);
+    border-radius:18px; padding:16px 16px 14px; cursor:pointer; transition:border-color .15s, transform .15s; }
+  .opt:hover{ transform:translateY(-2px); }
+  .opt.sel{ border-color:var(--terra); box-shadow:0 0 0 3px rgba(167,48,21,.12); }
+  .opt h3{ margin:0 0 4px; font-family:Georgia,serif; font-size:18px; }
+  .opt p{ margin:0; color:var(--soft); font-size:13px; }
+  .opt .tag{ display:inline-block; margin-top:8px; font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--gold); font-weight:700; }
+
+  footer{ text-align:center; margin-top:40px; color:var(--faint); font-size:13px; }
+  footer b{ color:var(--soft); }
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="kicker">Aradhya · splash animation</div>
+    <h1>Pick how the lotus blooms</h1>
+    <p>Each option plays live below. The mark starts as a closed bud and opens into the full lotus, then the wordmark rises in. Tap a style to preview it — adjust speed, or replay.</p>
+  </header>
+
+  <div class="stage">
+    <div>
+      <div class="phone">
+        <canvas id="c" width="300" height="300" aria-label="Lotus bloom preview"></canvas>
+        <div class="reveal" id="reveal">
+          <div class="wordmark"><span class="head">Ara</span><span class="tail">dhya</span></div>
+          <div class="tagline">Devotion, every day</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="play" id="replay">▶ Replay</button>
+        <label class="speed">Speed
+          <input type="range" id="speed" min="0.6" max="1.6" step="0.1" value="1">
+          <span id="speedv" style="font-variant-numeric:tabular-nums">1.0×</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="options" id="options"></div>
+  </div>
+
+  <footer>Tell me which one (and any tweak) — I’ll set it as the app’s splash. <b>My pick: Bloom + Pop</b> for a little life, or Staggered for elegance.</footer>
+</div>
+
+<script>
+const easeOutCubic = t => 1 - Math.pow(1-t, 3);
+const easeOutBack  = t => { const c1=1.70158, c3=c1+1; return 1 + c3*Math.pow(t-1,3) + c1*Math.pow(t-1,2); };
+const easeInOutSine= t => -(Math.cos(Math.PI*t)-1)/2;
+const clamp = (v,a,b)=>Math.max(a,Math.min(b,v));
+const lerp = (a,b,t)=>a+(b-a)*t;
+
+const STYLES = {
+  classic:{ name:'Classic Bloom', tag:'Smooth', desc:'Petals ease open evenly and settle. Calm and clean — the current default.', dur:1700, open:easeOutCubic, grow:easeOutCubic, scaleFrom:.9 },
+  pop:{ name:'Bloom + Pop', tag:'Playful', desc:'Petals overshoot slightly then settle — a gentle spring of life at the end.', dur:1550, open:easeOutBack, grow:easeOutCubic, scaleFrom:.9 },
+  stagger:{ name:'Staggered', tag:'Elegant', desc:'Gold outer petals open first, terracotta petals follow — an unfurling.', dur:1900, open:easeOutCubic, grow:easeOutCubic, scaleFrom:.92, stagger:true },
+  rise:{ name:'Rise & Bloom', tag:'Dramatic', desc:'Starts as a tiny bud and grows as it opens — more “sprouting” feel.', dur:1950, open:easeOutCubic, grow:easeOutCubic, scaleFrom:.42 },
+  gentle:{ name:'Gentle', tag:'Meditative', desc:'Slow, breath-paced open with soft easing. Serene.', dur:2600, open:easeInOutSine, grow:easeOutCubic, scaleFrom:.9 },
+};
+let current = 'pop';
+
+// ---- Lotus geometry (512 design grid) ----
+const GOLD_A=[-66,-33,0,33,66], TERRA_A=[-42,-14,14,42];
+function petalPath(ctx,l,w){
+  ctx.beginPath(); ctx.moveTo(0,0);
+  ctx.bezierCurveTo(-w,-l*0.55,-w*0.4,-l,0,-l);
+  ctx.bezierCurveTo(w*0.4,-l,w,-l*0.55,0,0);
+  ctx.closePath();
+}
+function drawLotus(ctx, size, goldFrac, terraFrac, st){
+  const s = size/512, cx=256*s, cy=300*s;
+  const gOpen=st.open(goldFrac), gGrow=st.grow(goldFrac);
+  const tOpen=st.open(terraFrac), tGrow=st.grow(terraFrac);
+  const lenF=(f,g)=>f*(0.58+0.42*g), widF=(f,g)=>f*(0.80+0.20*g);
+  function petal(deg,len,wid,open,grow,color){
+    ctx.save(); ctx.translate(cx,cy); ctx.rotate(deg*open*Math.PI/180);
+    petalPath(ctx, lenF(len,grow)*s, widF(wid,grow)*s);
+    ctx.fillStyle=color; ctx.fill(); ctx.restore();
+  }
+  // gold back petals
+  for(const a of GOLD_A) petal(a,194,82,gOpen,gGrow,'#CFA33C');
+  // terracotta front petals
+  for(const a of TERRA_A) petal(a,178,70,tOpen,tGrow,'#A73015');
+  // center core
+  petal(0,196,58,tOpen,tGrow,'#7E2411');
+  // gold base cradle
+  const baseT=clamp((terraFrac-0.5)/0.5,0,1);
+  if(baseT>0){
+    const bw=150*s*baseT;
+    ctx.save(); ctx.globalAlpha=baseT; ctx.beginPath();
+    ctx.moveTo(cx-bw,cy+6*s);
+    ctx.quadraticCurveTo(cx,cy+70*s,cx+bw,cy+6*s);
+    ctx.quadraticCurveTo(cx,cy+34*s,cx-bw,cy+6*s);
+    ctx.closePath(); ctx.fillStyle='#C7A24E'; ctx.fill(); ctx.restore();
+  }
+}
+function drawTile(ctx, W, progress, st){
+  const dpr=window.devicePixelRatio||1;
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,W,W);
+  const markScale = lerp(st.scaleFrom,1, easeOutCubic(progress));
+  ctx.save();
+  ctx.translate(W/2,W/2); ctx.scale(markScale,markScale); ctx.translate(-W/2,-W/2);
+  // cream tile with dashed stitched border
+  const pad=W*0.08, r=W*0.22;
+  roundRect(ctx,pad,pad,W-2*pad,W-2*pad,r); ctx.fillStyle='#FBEFDD'; ctx.fill();
+  const ip=W*0.16;
+  ctx.save(); ctx.setLineDash([W*0.05,W*0.037]); ctx.lineWidth=W*0.013;
+  ctx.strokeStyle='rgba(167,48,21,0.38)'; ctx.lineCap='round';
+  roundRect(ctx,ip,ip,W-2*ip,W-2*ip,r*0.55); ctx.stroke(); ctx.restore();
+  // lotus (fills the tile grid)
+  let gF=progress, tF=progress;
+  if(st.stagger){ gF=clamp(progress/0.66,0,1); tF=clamp((progress-0.34)/0.66,0,1); }
+  ctx.save(); ctx.translate(W*0.5-W*0.5, W*0.5-W*0.5); // keep origin
+  drawLotus(ctx, W, gF, tF, st);
+  ctx.restore();
+  ctx.restore();
+}
+function roundRect(ctx,x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+}
+
+// ---- Animation loop (continuous with a hold) ----
+const canvas=document.getElementById('c');
+const ctx=canvas.getContext('2d');
+const reveal=document.getElementById('reveal');
+const speedEl=document.getElementById('speed');
+const speedV=document.getElementById('speedv');
+let W=150; // css px
+function resize(){
+  const dpr=window.devicePixelRatio||1;
+  W=150; canvas.width=W*dpr; canvas.height=W*dpr;
+  canvas.style.width=W+'px'; canvas.style.height=W+'px';
+}
+resize();
+
+let start=performance.now();
+const HOLD=850;
+function frame(now){
+  const st=STYLES[current];
+  const speed=parseFloat(speedEl.value);
+  const dur=st.dur/speed;
+  let elapsed=now-start;
+  const cycle=dur+HOLD;
+  if(elapsed>cycle){ start=now; elapsed=0; }
+  const progress=clamp(elapsed/dur,0,1);
+  drawTile(ctx,W,progress,st);
+  const rv=clamp((progress-0.5)/0.4,0,1);
+  reveal.style.opacity=rv;
+  reveal.style.transform=`translateY(${14*(1-rv)}px)`;
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+function restart(){ start=performance.now()-0; }
+document.getElementById('replay').addEventListener('click',()=>{ start=performance.now(); });
+speedEl.addEventListener('input',()=>{ speedV.textContent=parseFloat(speedEl.value).toFixed(1)+'×'; start=performance.now(); });
+
+// ---- Option cards ----
+const optWrap=document.getElementById('options');
+Object.entries(STYLES).forEach(([key,st])=>{
+  const el=document.createElement('button');
+  el.className='opt'+(key===current?' sel':'');
+  el.innerHTML=`<h3>${st.name}</h3><p>${st.desc}</p><span class="tag">${st.tag}</span>`;
+  el.addEventListener('click',()=>{
+    current=key; start=performance.now();
+    document.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+    el.classList.add('sel');
+  });
+  optWrap.appendChild(el);
+});
+
+window.addEventListener('resize',resize);
+</script>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modify this file to customize your launch splash screen -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warm cream ground so there's no white flash before Flutter draws;
+         the animated lotus splash takes over as soon as Flutter starts. -->
+    <item android:drawable="@color/launch_background" />
+</layer-list>

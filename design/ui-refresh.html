@@ -1,0 +1,333 @@
+<title>Aradhya — UI Refresh Direction</title>
+<style>
+  /* ============ RECOMMENDED PALETTE (Temple Warmth v2) ============ */
+  :root{
+    --paper:#FBF6EF; --paper2:#F4EADD; --card:#FFFFFF; --card2:#FFFBF5;
+    --ink:#2C1A10; --soft:#7A5945; --faint:#A98D79; --line:rgba(44,26,16,.09);
+    --terra:#B23A18; --terra-d:#7A2410; --gold:#C08A2E; --gold-b:#E0B85A;
+    --sage:#4E7A5E; --plum:#6B3FA0;
+    --bg:#F3EADF; --page-ink:#2C1A10; --page-soft:#7A5945;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#181009; --page-ink:#F2E6D9; --page-soft:#B79A85; }
+  }
+  :root[data-theme="light"]{ --bg:#F3EADF; --page-ink:#2C1A10; --page-soft:#7A5945; }
+  :root[data-theme="dark"]{ --bg:#181009; --page-ink:#F2E6D9; --page-soft:#B79A85; }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--page-ink);
+    font-family:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5; }
+  .serif{ font-family:"Georgia","Times New Roman",serif; } /* stand-in for Eczar */
+  .wrap{ max-width:1120px; margin:0 auto; padding:52px 22px 90px; }
+
+  /* Hero */
+  .hero{ text-align:center; margin-bottom:20px; }
+  .kick{ font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  .hero h1{ font-family:Georgia,serif; font-weight:700; font-size:clamp(34px,6vw,56px); margin:.28em 0 .1em; letter-spacing:.4px; }
+  .hero h1 .t{ color:var(--terra); }
+  .hero p{ color:var(--page-soft); max-width:60ch; margin:.4em auto 0; font-size:17px; }
+
+  .section{ margin-top:64px; }
+  .section > .h{ display:flex; align-items:baseline; gap:12px; margin-bottom:22px; }
+  .section > .h .n{ font-family:Georgia,serif; font-size:13px; color:var(--gold); font-weight:700; letter-spacing:.1em; }
+  .section > .h h2{ font-family:Georgia,serif; font-size:clamp(24px,4vw,32px); margin:0; }
+  .section > .h .sub{ color:var(--page-soft); font-size:14px; margin-left:auto; max-width:40ch; text-align:right; }
+
+  /* ---------- Color directions ---------- */
+  .palettes{ display:grid; grid-template-columns:1fr; gap:18px; }
+  @media(min-width:800px){ .palettes{ grid-template-columns:1fr 1fr 1fr; } }
+  .pal{ border-radius:20px; overflow:hidden; border:1px solid var(--line); background:var(--card);
+    box-shadow:0 10px 26px rgba(90,40,20,.08); }
+  .pal .swatches{ display:flex; height:76px; }
+  .pal .swatches span{ flex:1; }
+  .pal .body{ padding:16px 18px 18px; }
+  .pal h3{ font-family:Georgia,serif; margin:0 0 3px; font-size:19px; }
+  .pal .rec{ font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#fff; background:var(--terra); padding:3px 8px; border-radius:999px; margin-left:8px; vertical-align:middle; }
+  .pal p{ color:var(--soft); font-size:13px; margin:6px 0 14px; }
+  .pal .demo{ border-radius:14px; padding:14px; display:flex; align-items:center; gap:10px; }
+  .pal .chip{ font-size:12px; font-weight:700; padding:6px 12px; border-radius:999px; }
+  .pal .btn{ font-size:12px; font-weight:700; padding:8px 14px; border-radius:999px; color:#fff; }
+  .hexrow{ display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+  .hexrow code{ font-size:10.5px; color:var(--soft); background:var(--paper2); padding:2px 6px; border-radius:6px; font-family:ui-monospace,monospace; }
+
+  /* ---------- Typography ---------- */
+  .typecard{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:26px 28px;
+    box-shadow:0 10px 26px rgba(90,40,20,.06); }
+  .typerow{ display:flex; justify-content:space-between; align-items:baseline; gap:20px; padding:16px 0; border-bottom:1px solid var(--line); }
+  .typerow:last-child{ border-bottom:none; }
+  .typerow .meta{ color:var(--faint); font-size:12px; letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; }
+  .t-display{ font-family:Georgia,serif; font-size:38px; font-weight:700; color:var(--ink); }
+  .t-title{ font-family:Georgia,serif; font-size:24px; font-weight:700; color:var(--ink); }
+  .t-body{ font-size:16px; color:var(--ink); max-width:52ch; }
+  .t-deva{ font-size:24px; color:var(--ink); }
+  .t-num{ font-family:Georgia,serif; font-size:30px; font-weight:700; color:var(--terra); font-variant-numeric:tabular-nums; }
+
+  /* ---------- Component kit ---------- */
+  .kit{ display:grid; grid-template-columns:1fr; gap:16px; }
+  @media(min-width:720px){ .kit{ grid-template-columns:1fr 1fr; } }
+  .panel{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:20px;
+    box-shadow:0 8px 22px rgba(90,40,20,.06); }
+  .panel .lab{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:14px; }
+  .btn{ border:none; cursor:default; font:inherit; font-weight:700; font-size:14px; border-radius:999px; padding:12px 20px; }
+  .btn.primary{ background:var(--terra); color:#FFF4E9; }
+  .btn.tonal{ background:rgba(178,58,24,.12); color:var(--terra); }
+  .btn.ghost{ background:transparent; color:var(--terra); border:1.5px solid var(--terra); }
+  .row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .chip{ font-size:13px; font-weight:600; padding:8px 14px; border-radius:12px; background:var(--paper2); color:var(--soft); }
+  .chip.on{ background:var(--terra); color:#FFF4E9; }
+  .chip.gold{ background:rgba(192,138,46,.16); color:var(--gold); }
+  .chip.sage{ background:rgba(78,122,94,.16); color:var(--sage); }
+  .listcard{ border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+  .listrow{ display:flex; align-items:center; gap:14px; padding:14px 16px; }
+  .listrow + .listrow{ border-top:1px solid var(--line); }
+  .listrow .ic{ width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:rgba(178,58,24,.12); color:var(--terra); }
+  .listrow .tt{ font-family:Georgia,serif; font-weight:700; }
+  .listrow .ss{ font-size:12.5px; color:var(--faint); }
+  .stat{ display:flex; gap:12px; }
+  .tile{ flex:1; border:1px solid var(--line); border-radius:16px; padding:14px; text-align:center; }
+  .tile .v{ font-family:Georgia,serif; font-weight:700; font-size:26px; color:var(--terra); }
+  .tile .k{ font-size:11px; color:var(--faint); text-transform:uppercase; letter-spacing:.06em; }
+  svg.i{ width:22px; height:22px; fill:currentColor; }
+
+  /* ---------- Phone screen mockups ---------- */
+  .screens{ display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:26px; }
+  .phone{ background:var(--paper); border-radius:30px; border:8px solid #2A1A12; overflow:hidden;
+    box-shadow:0 26px 54px rgba(60,25,12,.28); aspect-ratio:9/19; display:flex; flex-direction:column; position:relative; }
+  .phone .status{ height:26px; display:flex; align-items:center; justify-content:space-between; padding:0 16px; font-size:10px; color:var(--faint); }
+  .phone .content{ flex:1; overflow:hidden; padding:4px 14px 0; }
+  .phone .cap{ text-align:center; font-size:12px; color:var(--page-soft); margin-top:10px; font-weight:600; }
+  /* mini nav */
+  .mininav{ display:flex; margin:6px; padding:7px; background:var(--card); border-radius:18px;
+    box-shadow:0 6px 16px rgba(90,40,20,.12); gap:2px; }
+  .mininav .t{ flex:1; display:flex; align-items:center; justify-content:center; gap:0; padding:8px; border-radius:999px; color:var(--faint); }
+  .mininav .t.on{ background:var(--terra); color:#FFF4E9; padding:8px 12px; flex:0 0 auto; font-size:11px; font-weight:700; }
+  .mininav .t.on span{ margin-left:6px; }
+  .mininav .t svg{ width:20px; height:20px; fill:currentColor; }
+  .mininav .t span{ display:none; }
+  .mininav .t.on span{ display:inline; }
+
+  /* generic mini components inside phones */
+  .m-h{ display:flex; align-items:center; justify-content:space-between; padding:8px 2px 12px; }
+  .m-logo{ display:flex; align-items:center; gap:8px; }
+  .m-word{ font-family:Georgia,serif; font-weight:700; font-size:20px; }
+  .m-word .t{ color:var(--terra); }
+  .m-streak{ font-size:11px; font-weight:700; color:var(--terra); background:rgba(178,58,24,.12); padding:5px 10px; border-radius:999px; }
+  .m-quote{ background:linear-gradient(135deg,var(--terra),var(--terra-d)); color:#FDEEDE; border-radius:18px; padding:16px; }
+  .m-quote .lab{ font-size:9px; letter-spacing:.14em; text-transform:uppercase; opacity:.8; }
+  .m-quote .q{ font-family:Georgia,serif; font-size:15px; line-height:1.4; margin-top:6px; }
+  .m-card{ background:var(--card); border:1px solid var(--line); border-radius:16px; padding:12px; margin-top:10px; }
+  .m-grid{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; margin-top:10px; }
+  .m-tile{ border-radius:14px; padding:12px 6px; text-align:center; color:#fff; font-size:10px; font-weight:700; }
+  .m-row{ display:flex; align-items:center; gap:10px; padding:9px 0; }
+  .m-row .ic{ width:36px; height:36px; border-radius:10px; display:grid; place-items:center; color:#fff; flex:none; }
+  .m-row .tt{ font-family:Georgia,serif; font-weight:700; font-size:14px; }
+  .m-row .ss{ font-size:11px; color:var(--faint); }
+  .m-sec{ font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:700; margin:12px 0 4px; }
+  .lotus{ width:30px; height:30px; }
+
+  footer{ margin-top:64px; text-align:center; color:var(--faint); font-size:13.5px; }
+  footer b{ color:var(--page-soft); }
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="kick">Aradhya · full UI refresh — direction v1</div>
+    <h1 class="serif">A calmer, <span class="t">crafted</span> devotion app</h1>
+    <p>The whole system in one place — colour directions to pick from, the type system, the component kit, and every key screen redrawn. Review it, tell me the palette + nav you want, and I’ll rebuild the app to match.</p>
+  </header>
+
+  <!-- ============ COLOUR ============ -->
+  <section class="section">
+    <div class="h"><span class="n">01</span><h2 class="serif">Colour directions</h2>
+      <span class="sub">Pick one ground. Everything else adapts to it. All stay warm and sacred — they differ in mood.</span></div>
+    <div class="palettes">
+      <div class="pal">
+        <div class="swatches"><span style="background:#FBF6EF"></span><span style="background:#B23A18"></span><span style="background:#7A2410"></span><span style="background:#E0B85A"></span><span style="background:#4E7A5E"></span></div>
+        <div class="body">
+          <h3 class="serif">Temple Warmth<span class="rec">Recommended</span></h3>
+          <p>Refined version of today’s look — warmer ivory, richer terracotta, a sage accent for balance. Familiar, devotional, print-like.</p>
+          <div class="demo" style="background:#FBF6EF">
+            <span class="chip" style="background:rgba(178,58,24,.14);color:#B23A18">Aarti</span>
+            <span class="btn" style="background:#B23A18">Read</span>
+            <span class="chip" style="background:rgba(78,122,94,.16);color:#4E7A5E">Healing</span>
+          </div>
+          <div class="hexrow"><code>#FBF6EF</code><code>#B23A18</code><code>#7A2410</code><code>#C08A2E</code><code>#4E7A5E</code></div>
+        </div>
+      </div>
+      <div class="pal">
+        <div class="swatches"><span style="background:#F4EFE4"></span><span style="background:#B5502E"></span><span style="background:#8A3D22"></span><span style="background:#C9A24E"></span><span style="background:#3E7C74"></span></div>
+        <div class="body">
+          <h3 class="serif">Sandstone Calm</h3>
+          <p>Lighter, airier, more modern. Sand-ivory ground, muted rust, and a calm teal. Reads clean and premium, less saturated.</p>
+          <div class="demo" style="background:#F4EFE4">
+            <span class="chip" style="background:rgba(181,80,46,.14);color:#B5502E">Aarti</span>
+            <span class="btn" style="background:#B5502E">Read</span>
+            <span class="chip" style="background:rgba(62,124,116,.16);color:#3E7C74">Healing</span>
+          </div>
+          <div class="hexrow"><code>#F4EFE4</code><code>#B5502E</code><code>#8A3D22</code><code>#C9A24E</code><code>#3E7C74</code></div>
+        </div>
+      </div>
+      <div class="pal" style="background:#241B33;border-color:rgba(255,255,255,.08)">
+        <div class="swatches"><span style="background:#1A1526"></span><span style="background:#E8933B"></span><span style="background:#D9B45A"></span><span style="background:#7C5CC4"></span><span style="background:#F3ECDF"></span></div>
+        <div class="body">
+          <h3 class="serif" style="color:#F3ECDF">Sacred Twilight</h3>
+          <p style="color:#C9BBD6">A night-temple mood — deep indigo ground, saffron + gold glow, a violet accent. Dramatic and meditative (would make the app dark).</p>
+          <div class="demo" style="background:#1A1526">
+            <span class="chip" style="background:rgba(232,147,59,.2);color:#E8933B">Aarti</span>
+            <span class="btn" style="background:#E8933B;color:#241B33">Read</span>
+            <span class="chip" style="background:rgba(124,92,196,.24);color:#B79BF0">Healing</span>
+          </div>
+          <div class="hexrow"><code style="background:rgba(255,255,255,.08);color:#C9BBD6">#1A1526</code><code style="background:rgba(255,255,255,.08);color:#C9BBD6">#E8933B</code><code style="background:rgba(255,255,255,.08);color:#C9BBD6">#D9B45A</code><code style="background:rgba(255,255,255,.08);color:#C9BBD6">#7C5CC4</code></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TYPE ============ -->
+  <section class="section">
+    <div class="h"><span class="n">02</span><h2 class="serif">Typography</h2>
+      <span class="sub">One characterful serif for soul, one clean sans for UI, tabular numerals for counters.</span></div>
+    <div class="typecard">
+      <div class="typerow"><div class="t-display">Aarti Sangrah</div><div class="meta">Display · Fraunces / Eczar · 700</div></div>
+      <div class="typerow"><div class="t-title">Today’s Panchang</div><div class="meta">Title · serif · 700</div></div>
+      <div class="typerow"><div class="t-body">Clean, readable body text for verses, meanings and guidance — set around 16px with generous line-height for calm reading.</div><div class="meta">Body · Inter · 400</div></div>
+      <div class="typerow"><div class="t-deva">जय गणेश देवा · आराध्य</div><div class="meta">Devanagari · Noto Sans Devanagari</div></div>
+      <div class="typerow"><div class="t-num">1,240 · 108</div><div class="meta">Numerals · tabular</div></div>
+    </div>
+    <p style="color:var(--page-soft);font-size:14px;margin-top:14px">Recommendation: upgrade the display face to <b>Fraunces</b> (warm, high-character serif) for headings &amp; the wordmark, keep <b>Eczar</b> as the Devanagari-friendly fallback, <b>Inter</b> for UI, and <b>Noto Sans Devanagari</b> for Hindi. All bundled offline.</p>
+  </section>
+
+  <!-- ============ COMPONENTS ============ -->
+  <section class="section">
+    <div class="h"><span class="n">03</span><h2 class="serif">Component kit</h2>
+      <span class="sub">The building blocks, restyled — softer cards, warmer shadows, one accent used with intent.</span></div>
+    <div class="kit">
+      <div class="panel"><div class="lab">Buttons</div><div class="row"><button class="btn primary">Begin</button><button class="btn tonal">Bookmark</button><button class="btn ghost">Open in Maps</button></div></div>
+      <div class="panel"><div class="lab">Chips &amp; tags</div><div class="row"><span class="chip on">All</span><span class="chip">Char Dham</span><span class="chip gold">Jyotirlinga</span><span class="chip sage">Healing</span></div></div>
+      <div class="panel"><div class="lab">List rows</div>
+        <div class="listcard">
+          <div class="listrow"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M4 5c2.6 0 4.7.5 8 2 3.3-1.5 5.4-2 8-2v13c-2.6 0-4.7.5-8 2-3.3-1.5-5.4-2-8-2z"/></svg></div><div><div class="tt">Scriptures</div><div class="ss">Gita · Ramayana · Upanishads</div></div></div>
+          <div class="listrow"><div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M12 2l2.3 6L20 8l-4.7 4 1.7 6L12 20l-5 4 1.7-6L4 8l5.7 0z"/></svg></div><div><div class="tt">Aartis</div><div class="ss">By deity</div></div></div>
+        </div>
+      </div>
+      <div class="panel"><div class="lab">Stat tiles</div>
+        <div class="stat"><div class="tile"><div class="v">7</div><div class="k">Day streak</div></div><div class="tile"><div class="v">1,240</div><div class="k">Punya</div></div><div class="tile"><div class="v">108</div><div class="k">Japa</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREENS ============ -->
+  <section class="section">
+    <div class="h"><span class="n">04</span><h2 class="serif">Screens</h2>
+      <span class="sub">Every key surface, redrawn in Temple Warmth with the Floating-Pill nav.</span></div>
+    <div class="screens" id="screens"></div>
+  </section>
+
+  <footer>
+    This is the <b>direction</b>, not the final pixels. Tell me: which <b>palette</b>, which <b>nav</b>, keep or swap the <b>display font</b> — and any screen you want to push further. Then I rebuild the app screen-by-screen to match.
+  </footer>
+</div>
+
+<script>
+const IC = {
+  home:'<path d="M12 3.4 3.2 10.7V21H9.5v-6h5v6h6.3V10.7z"/>',
+  read:'<path d="M3.5 5.2c2.6 0 4.7.5 8.5 2.1 3.8-1.6 5.9-2.1 8.5-2.1v12.1c-2.6 0-4.7.5-8.5 2.1-3.8-1.6-5.9-2.1-8.5-2.1z"/>',
+  play:'<path d="M10.2 3.2a2 2 0 0 1 3.6 0l.3.8h3.9v3.9l.8.3a2 2 0 0 1 0 3.6l-.8.3v3.9h-3.9l-.3.8a2 2 0 0 1-3.6 0l-.3-.8H5.9V16l-.8-.3a2 2 0 0 1 0-3.6l.8-.3V7.9h3.9z"/>',
+  jyotish:'<path d="M12 2l2.3 6L20 8l-4.7 4 1.7 6L12 20l-5 4 1.7-6L4 8l5.7 0z"/>',
+  you:'<path d="M12 3.6a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4.5 20.4a7.5 7.5 0 0 1 15 0z"/>'
+};
+function lotus(){ return `<svg class="lotus" viewBox="0 0 512 512">
+  <g>${[[-66,194,82,'#CFA33C'],[-33,194,82,'#CFA33C'],[0,194,82,'#CFA33C'],[33,194,82,'#CFA33C'],[66,194,82,'#CFA33C'],
+       [-42,178,70,'#B23A18'],[-14,178,70,'#B23A18'],[14,178,70,'#B23A18'],[42,178,70,'#B23A18'],[0,196,58,'#7E2411']].map(([a,l,w,c])=>
+    `<path transform="rotate(${a} 256 300)" d="M256 300 C ${256-w} ${300-l*0.55} ${256-w*0.4} ${300-l} 256 ${300-l} C ${256+w*0.4} ${300-l} ${256+w} ${300-l*0.55} 256 300 Z" fill="${c}"/>`).join('')}
+    <path d="M106 306 Q256 370 406 306 Q256 334 106 306 Z" fill="#C7A24E"/></g></svg>`; }
+
+function nav(active){
+  const t=['home','read','play','jyotish','you'];
+  const lbl={home:'Home',read:'Read',play:'Play',jyotish:'Jyotish',you:'You'};
+  return `<div class="mininav">${t.map(k=>`<div class="t ${k===active?'on':''}"><svg viewBox="0 0 24 24">${IC[k]}</svg><span>${lbl[k]}</span></div>`).join('')}</div>`;
+}
+function phone(cap, active, inner){
+  return `<div><div class="phone"><div class="status"><span>9:41</span><span>▁▂▃ 100%</span></div>
+    <div class="content">${inner}</div>${nav(active)}</div><div class="cap">${cap}</div></div>`;
+}
+
+const home = `
+  <div class="m-h"><div class="m-logo">${lotus()}<div class="m-word">Ara<span class="t">dhya</span></div></div><div class="m-streak">🔥 7</div></div>
+  <div class="m-quote"><div class="lab">Verse of the day</div><div class="q">“You have the right to action alone, never to its fruits.”</div></div>
+  <div class="m-card" style="display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,#25533F,#14352A);color:#CFE6DA">
+    <div style="font-family:Georgia;font-weight:700;font-size:22px;color:#fff">14</div><div><div style="font-family:Georgia;font-weight:700;color:#fff">Today’s Panchang</div><div style="font-size:11px">Tithi · Nakshatra · Muhurat</div></div></div>
+  <div class="m-grid" style="grid-template-columns:1fr 1fr 1fr;margin-top:12px">
+    <div class="m-tile" style="background:#fff;color:#B23A18;border:1px solid var(--line)">🪔<br>Japa</div>
+    <div class="m-tile" style="background:#fff;color:#4E7A5E;border:1px solid var(--line)">🌬<br>Breathe</div>
+    <div class="m-tile" style="background:#fff;color:#6B3FA0;border:1px solid var(--line)">✓ 2/6<br>Habits</div></div>
+  <div class="m-sec">Explore</div>
+  <div class="m-grid">
+    <div class="m-tile" style="background:linear-gradient(135deg,#B23A18,#7A2410)">Scriptures</div>
+    <div class="m-tile" style="background:linear-gradient(135deg,#C9A24E,#A97E2C)">Aartis</div>
+    <div class="m-tile" style="background:linear-gradient(135deg,#6B3FA0,#402266)">Mantras</div></div>`;
+
+const read = `
+  <div class="m-h"><div class="m-word">Explore</div></div>
+  <div class="m-row"><div class="ic" style="background:#B23A18">${'📖'}</div><div><div class="tt">Scriptures</div><div class="ss">Gita · Ramayana · Upanishads</div></div></div>
+  <div class="m-row"><div class="ic" style="background:#C9A24E">🪔</div><div><div class="tt">Aartis</div><div class="ss">By deity</div></div></div>
+  <div class="m-row"><div class="ic" style="background:#6B3FA0">📿</div><div><div class="tt">Mantras</div><div class="ss">With meaning</div></div></div>
+  <div class="m-row"><div class="ic" style="background:#9C2950">🛕</div><div><div class="tt">Mandir</div><div class="ss">Virtual puja</div></div></div>
+  <div class="m-row"><div class="ic" style="background:#4E7A5E">📜</div><div><div class="tt">Puja Vidhi</div><div class="ss">Ritual guides</div></div></div>
+  <div class="m-row"><div class="ic" style="background:#B23A18">🏛</div><div><div class="tt">Temples</div><div class="ss">Yatra · 187</div></div></div>`;
+
+const reader = `
+  <div style="text-align:center;padding-top:6px"><div style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700">Aarti</div>
+    <div class="serif" style="font-size:22px;font-weight:700;margin-top:4px">Jai Ganesh Deva</div>
+    <div style="font-size:12px;color:var(--terra)">Ganesha</div></div>
+  <div style="background:linear-gradient(135deg,#B23A18,#7A2410);border-radius:18px;padding:18px;margin-top:14px;color:#FDEEDE;text-align:center;font-family:Georgia;line-height:1.9;font-size:14px">
+    जय गणेश, जय गणेश,<br>जय गणेश देवा।<br>माता जाकी पार्वती,<br>पिता महादेवा॥</div>
+  <div style="text-align:center;color:var(--faint);font-size:11px;margin-top:12px">A– &nbsp; हिं ⇄ EN &nbsp; A+ &nbsp; 🔖</div>`;
+
+const panchang = `
+  <div style="text-align:center;padding-top:4px"><span class="chip" style="background:#fff;border:1px solid var(--line);color:var(--soft)">📅 Wed, 09 Jul 2026</span></div>
+  <div style="background:linear-gradient(135deg,#B23A18,#7A2410);border-radius:18px;padding:14px;margin-top:12px;display:flex;justify-content:space-around;color:#FDEEDE;text-align:center">
+    <div><div style="font-size:9px;opacity:.8">MONTH</div><div class="serif" style="font-weight:700">Ashadha</div></div>
+    <div><div style="font-size:9px;opacity:.8">PAKSHA</div><div class="serif" style="font-weight:700">Shukla</div></div>
+    <div><div style="font-size:9px;opacity:.8">VARA</div><div class="serif" style="font-weight:700">Budhavara</div></div></div>
+  <div style="display:flex;gap:8px;margin-top:10px">
+    <div class="m-card" style="flex:1;margin:0"><div style="font-size:9px;color:var(--gold);font-weight:700">TITHI</div><div class="serif" style="font-weight:700">Ekadashi</div><div style="font-size:10px;color:var(--faint)">until 3:12 PM</div></div>
+    <div class="m-card" style="flex:1;margin:0"><div style="font-size:9px;color:var(--gold);font-weight:700">NAKSHATRA</div><div class="serif" style="font-weight:700">Hasta</div><div style="font-size:10px;color:var(--faint)">until 6:40 PM</div></div></div>
+  <div class="m-card" style="background:linear-gradient(135deg,rgba(192,138,46,.2),rgba(178,58,24,.1))"><div class="serif" style="font-weight:700">Devshayani Ekadashi</div></div>`;
+
+const temple = `
+  <div style="display:flex;justify-content:space-between"><div style="width:34px;height:34px;border-radius:11px;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.12);display:grid;place-items:center">‹</div><div style="width:34px;height:34px;border-radius:11px;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.12);display:grid;place-items:center;color:var(--gold)">⤴</div></div>
+  <div style="background:rgba(192,138,46,.2);border-radius:18px;padding:16px;margin-top:10px">
+    <div style="display:flex;gap:12px;align-items:center"><div style="width:44px;height:44px;border-radius:12px;background:#C9A24E;display:grid;place-items:center;font-size:22px">🛕</div>
+      <div><div class="serif" style="font-weight:700;font-size:17px">Dwarkadhish</div><div style="font-size:12px;color:#B23A18">Lord Krishna</div></div></div>
+    <div style="display:flex;gap:8px;margin-top:12px"><span class="btn" style="background:#B23A18;color:#fff;font-size:11px;padding:8px 14px">Open in Maps</span></div>
+    <div style="display:flex;gap:6px;margin-top:10px"><span class="chip sage" style="font-size:11px;padding:5px 10px">Char Dham</span><span class="chip gold" style="font-size:11px;padding:5px 10px">Moksha Puri</span></div></div>
+  <div class="stat" style="margin-top:10px"><div class="tile" style="padding:9px"><div class="v" style="font-size:16px">1559 CE</div><div class="k">Est.</div></div><div class="tile" style="padding:9px"><div class="v" style="font-size:16px">Free</div><div class="k">Entry</div></div><div class="tile" style="padding:9px"><div class="v" style="font-size:16px">Oct–Mar</div><div class="k">Best</div></div></div>
+  <div class="m-sec">About</div><div style="font-size:11.5px;color:var(--soft);line-height:1.5">One of the Char Dham, built on the legendary city of Lord Krishna…</div>`;
+
+const kundli = `
+  <div style="text-align:center;padding-top:4px"><div class="serif" style="font-weight:700;font-size:18px">Your Kundli</div><div style="font-size:11px;color:var(--faint)">Lahiri Ayanamsa</div></div>
+  <div style="margin:12px auto;width:150px;height:150px;position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.06)">
+    <svg viewBox="0 0 150 150" style="position:absolute;inset:0"><g stroke="#C08A2E" stroke-width="1" fill="none"><rect x="6" y="6" width="138" height="138"/><path d="M6 6 L144 144 M144 6 L6 144 M75 6 L6 75 75 144 144 75Z"/></g></svg>
+    <div style="position:absolute;inset:0;display:grid;place-items:center;color:#B23A18;font-family:Georgia;font-weight:700">D1</div></div>
+  <div style="display:flex;gap:8px"><div class="m-card" style="flex:1;margin:0;text-align:center"><div style="font-size:9px;color:var(--gold);font-weight:700">LAGNA</div><div class="serif" style="font-weight:700">Simha</div></div>
+    <div class="m-card" style="flex:1;margin:0;text-align:center"><div style="font-size:9px;color:var(--gold);font-weight:700">MOON</div><div class="serif" style="font-weight:700">Vrishabha</div></div></div>
+  <div class="m-sec">Vimshottari Dasha</div>
+  <div class="m-row" style="padding:6px 0"><div class="ic" style="width:30px;height:30px;background:#6B3FA0">☉</div><div><div class="tt" style="font-size:13px">Shukra Maha Dasha</div><div class="ss">2019 – 2039</div></div></div>`;
+
+const profile = `
+  <div style="text-align:center;padding-top:10px">${lotus()}
+    <div class="serif" style="font-weight:700;font-size:20px;margin-top:6px">Aradhya</div>
+    <div style="font-size:12px;color:var(--faint);font-style:italic">Devotion, every day</div></div>
+  <div class="stat" style="margin-top:14px"><div class="tile"><div class="v">7</div><div class="k">Streak</div></div><div class="tile"><div class="v">1,240</div><div class="k">Punya</div></div></div>
+  <div class="m-row" style="margin-top:12px"><div class="ic" style="background:#B23A18">🔖</div><div><div class="tt">Bookmarks</div><div class="ss">12 saved</div></div></div>
+  <div class="m-sec">Language</div>
+  <div class="m-card" style="display:flex;gap:8px;margin-top:4px"><span class="chip on" style="font-size:12px">English</span><span class="chip" style="font-size:12px">हिन्दी</span></div>`;
+
+const S = [
+  ['Home','home',home],['Read hub','read',read],['Aarti reader','read',reader],
+  ['Panchang','jyotish',panchang],['Temple detail','you',temple],['Kundli','jyotish',kundli],['Profile','you',profile]
+];
+document.getElementById('screens').innerHTML = S.map(([cap,act,inner])=>phone(cap,act,inner)).join('');
+</script>

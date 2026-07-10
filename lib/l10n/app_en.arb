@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "appName": "Aradhya",
+  "verseOfTheDay": "Verse of the day",
+  "explore": "Explore",
+  "streakDays": "{count} day streak",
+  "@streakDays": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "catScriptures": "Scriptures",
+  "catAartis": "Aartis",
+  "catMantras": "Mantras",
+  "catQuiz": "Quiz",
+  "catAstrology": "Astrology",
+  "catPanchang": "Panchang",
+  "catKatha": "Katha",
+  "catPersonality": "Personality",
+  "catTemples": "Temples",
+  "comingSoon": "Coming soon",
+  "settings": "Settings",
+  "language": "Language"
+}

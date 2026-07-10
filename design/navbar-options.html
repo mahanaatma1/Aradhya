@@ -1,0 +1,191 @@
+<title>Aradhya — Modern Nav Bar Options</title>
+<style>
+  :root{
+    --bg:#F3EADF; --ink:#2C1A10; --soft:#7A5945; --faint:#A98D79; --line:rgba(44,26,16,.10);
+    --terra:#B23A18; --terra-d:#7A2410; --gold:#C08A2E;
+    --paper:#FBF6EF; --surface:#FFFFFF; --nsoft:#A98D79;
+  }
+  @media (prefers-color-scheme: dark){ :root{ --bg:#181009; --ink:#F2E6D9; --soft:#B79A85; --faint:#8f7460; } }
+  :root[data-theme="light"]{ --bg:#F3EADF; --ink:#2C1A10; --soft:#7A5945; --faint:#A98D79; }
+  :root[data-theme="dark"]{ --bg:#181009; --ink:#F2E6D9; --soft:#B79A85; --faint:#8f7460; }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5; }
+  .wrap{ max-width:1040px; margin:0 auto; padding:46px 22px 90px; }
+  .hero{ text-align:center; margin-bottom:30px; }
+  .kick{ font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  h1{ font-family:Georgia,serif; font-weight:700; font-size:clamp(28px,5vw,44px); margin:.3em 0 .12em; }
+  .hero p{ color:var(--soft); max-width:58ch; margin:.3em auto 0; font-size:16px; }
+
+  .grid{ display:grid; grid-template-columns:1fr; gap:24px; }
+  @media(min-width:720px){ .grid{ grid-template-columns:1fr 1fr; } }
+
+  .concept{ background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:20px 20px 22px;
+    transition:box-shadow .2s, border-color .2s; }
+  .concept.sel{ border-color:var(--terra); box-shadow:0 0 0 3px rgba(178,58,24,.14); }
+  .concept .top{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:2px; }
+  .concept h2{ font-family:Georgia,serif; font-size:20px; margin:0; }
+  .concept .tag{ font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); font-weight:700; }
+  .concept p{ color:var(--soft); font-size:13px; margin:4px 0 16px; }
+  .pick{ margin-top:18px; width:100%; background:transparent; border:1.5px solid var(--terra); color:var(--terra);
+    font-weight:700; font-size:13.5px; border-radius:999px; padding:10px; cursor:pointer; transition:.15s; }
+  .concept.sel .pick{ background:var(--terra); color:#FFF4E9; }
+
+  /* phone bottom */
+  .screen{ background:var(--paper); border-radius:20px 20px 28px 28px; border:1px solid var(--line);
+    overflow:visible; box-shadow:0 16px 36px rgba(90,40,20,.12); position:relative; }
+  .canvas{ height:88px; display:flex; align-items:center; justify-content:center; color:var(--faint); font-size:12px;
+    border-radius:20px 20px 0 0;
+    background:radial-gradient(120% 90% at 50% -30%, rgba(192,138,46,.12), transparent 55%), var(--paper); }
+
+  /* base nav */
+  .nav{ position:relative; display:flex; align-items:center; justify-content:space-around;
+    background:var(--surface); border-top:1px solid var(--line); border-radius:0 0 26px 26px; height:64px; }
+  .tab{ position:relative; z-index:2; flex:1; height:100%; background:none; border:none; cursor:pointer;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
+    color:var(--nsoft); font:inherit; font-size:11px; font-weight:700; -webkit-tap-highlight-color:transparent; }
+  .tab svg{ width:24px; height:24px; fill:currentColor; transition:transform .45s cubic-bezier(.34,1.7,.5,1); }
+  .tab .lbl{ opacity:0; transform:translateY(4px); transition:opacity .3s, transform .3s; height:12px; }
+  .tab:focus-visible{ outline:2px solid var(--gold); outline-offset:-4px; border-radius:14px; }
+
+  /* ===== A · Gliding Pill ===== */
+  .nav.pill .ind{ position:absolute; z-index:1; top:50%; height:44px; border-radius:999px;
+    background:var(--terra); transition:transform .5s cubic-bezier(.34,1.56,.64,1), width .35s ease;
+    transform:translate(0,-50%); box-shadow:0 6px 16px rgba(178,58,24,.34); }
+  .nav.pill .tab.on{ color:#FFF4E9; }
+  .nav.pill .tab.on .lbl{ opacity:1; transform:none; }
+  .nav.pill .tab.on svg{ transform:translateY(-1px) scale(1.05); }
+
+  /* ===== B · Curved Float (raised circle glides) ===== */
+  .nav.curve{ overflow:visible; }
+  .nav.curve .circle{ position:absolute; z-index:3; top:-24px; width:56px; height:56px; border-radius:50%;
+    background:var(--terra); display:grid; place-items:center; color:#FFF4E9; box-shadow:0 10px 22px rgba(178,58,24,.4);
+    transition:transform .55s cubic-bezier(.34,1.56,.64,1); }
+  .nav.curve .circle svg{ width:26px; height:26px; fill:currentColor; }
+  .nav.curve .circle::after{ content:""; position:absolute; inset:-6px; border-radius:50%;
+    border:5px solid var(--paper); z-index:-1; }
+  .nav.curve .tab.on{ color:transparent; }
+  .nav.curve .tab.on .lbl{ opacity:0; }
+  .nav.curve .tab .lbl{ display:none; }
+
+  /* ===== C · Squish Blob ===== */
+  .nav.blob .ind{ position:absolute; z-index:1; bottom:9px; width:40px; height:6px; border-radius:999px;
+    background:var(--terra); transition:transform .5s cubic-bezier(.34,1.56,.64,1);
+    transform:translateX(0); }
+  .nav.blob .tab.on{ color:var(--terra); }
+  .nav.blob .tab.on svg{ transform:translateY(-3px) scale(1.14); }
+  .nav.blob .tab.on .lbl{ opacity:1; transform:none; color:var(--terra); }
+
+  /* ===== D · Lift & Glow ===== */
+  .nav.lift .tab .ico{ display:grid; place-items:center; width:46px; height:46px; border-radius:50%;
+    transition:background .3s, transform .5s cubic-bezier(.34,1.56,.64,1), box-shadow .3s; }
+  .nav.lift .tab.on{ color:var(--terra); }
+  .nav.lift .tab.on .ico{ background:rgba(178,58,24,.14); transform:translateY(-12px); box-shadow:0 8px 18px rgba(178,58,24,.22); }
+  .nav.lift .tab.on .lbl{ opacity:1; transform:translateY(-8px); }
+  .nav.lift .ind{ position:absolute; z-index:1; bottom:10px; width:6px; height:6px; border-radius:50%;
+    background:var(--gold); transition:transform .5s cubic-bezier(.34,1.56,.64,1); }
+
+  footer{ text-align:center; margin-top:40px; color:var(--faint); font-size:13.5px; }
+  footer b{ color:var(--soft); }
+</style>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="kick">Aradhya · bottom nav — modern &amp; animated</div>
+    <h1>Tap the tabs — feel the motion</h1>
+    <p>Four modern nav bars with real spring animation. The indicator glides, the active tab reacts. Tap around each one, then pick the feel you want.</p>
+  </header>
+
+  <div class="grid" id="grid"></div>
+
+  <footer>Pick the one that feels right (and any tweak — bouncier, calmer, labels on/off). I’ll build it in Flutter with the same spring. <b>My pick: Curved Float</b> — most modern &amp; delightful; Gliding Pill is the refined runner-up.</footer>
+</div>
+
+<script>
+const IC = {
+  home:'<path d="M12 3.4 3.2 10.7V21H9.5v-6h5v6h6.3V10.7z"/>',
+  read:'<path d="M3.5 5.2c2.6 0 4.7.5 8.5 2.1 3.8-1.6 5.9-2.1 8.5-2.1v12.1c-2.6 0-4.7.5-8.5 2.1-3.8-1.6-5.9-2.1-8.5-2.1z"/>',
+  play:'<path d="M10.2 3.2a2 2 0 0 1 3.6 0l.3.8h3.9v3.9l.8.3a2 2 0 0 1 0 3.6l-.8.3v3.9h-3.9l-.3.8a2 2 0 0 1-3.6 0l-.3-.8H5.9V16l-.8-.3a2 2 0 0 1 0-3.6l.8-.3V7.9h3.9z"/>',
+  jyotish:'<path d="M12 2l2.3 6L20 8l-4.7 4 1.7 6L12 20l-5 4 1.7-6L4 8l5.7 0z"/>',
+  you:'<path d="M12 3.6a4 4 0 1 1 0 8 4 4 0 0 1 0-8zM4.5 20.4a7.5 7.5 0 0 1 15 0z"/>'
+};
+const TABS = [['home','Home'],['read','Read'],['play','Play'],['jyotish','Jyotish'],['you','You']];
+const CONCEPTS = [
+  ['pill','Gliding Pill','Refined','A terracotta pill springs across to the active tab; its label reveals inline. Clean, modern, confident.'],
+  ['curve','Curved Float','Delightful','The active icon rides in a raised floating circle that glides between tabs with a soft bounce. The loved, playful pattern.'],
+  ['blob','Squish Blob','Fun','Icons pop up on select and a little blob slides underneath with a spring. Energetic without being loud.'],
+  ['lift','Lift & Glow','Elegant','The active icon lifts into a soft glow and a gold dot tracks along below. Calm but alive.'],
+];
+
+const grid = document.getElementById('grid');
+
+function buildNav(variant){
+  const nav = document.createElement('div'); nav.className = 'nav '+variant;
+  // indicator / circle
+  let ind;
+  if(variant==='pill'||variant==='blob'||variant==='lift'){ ind=document.createElement('div'); ind.className='ind'; nav.appendChild(ind); }
+  let circle;
+  if(variant==='curve'){ circle=document.createElement('div'); circle.className='circle'; circle.innerHTML=`<svg viewBox="0 0 24 24">${IC.home}</svg>`; nav.appendChild(circle); }
+
+  TABS.forEach(([key,label],i)=>{
+    const b=document.createElement('button'); b.className='tab'+(i===0?' on':''); b.dataset.key=key;
+    b.innerHTML = (variant==='lift')
+      ? `<span class="ico"><svg viewBox="0 0 24 24">${IC[key]}</svg></span><span class="lbl">${label}</span>`
+      : `<svg viewBox="0 0 24 24">${IC[key]}</svg><span class="lbl">${label}</span>`;
+    b.addEventListener('click',()=>select(nav,variant,ind,circle,b));
+    nav.appendChild(b);
+  });
+  return {nav,ind,circle};
+}
+
+function select(nav,variant,ind,circle,tab){
+  nav.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  tab.classList.add('on');
+  requestAnimationFrame(()=>position(nav,variant,ind,circle,tab));
+}
+
+function position(nav,variant,ind,circle,tab){
+  const nr=nav.getBoundingClientRect(), tr=tab.getBoundingClientRect();
+  const cx = tr.left - nr.left + tr.width/2;
+  if(variant==='pill'){
+    // pill hugs icon+label width
+    const w = tab.classList.contains('on') ? Math.min(tr.width-8, 96) : 44;
+    ind.style.width = Math.max(64,w)+'px';
+    ind.style.transform = `translate(${cx}px,-50%) translateX(-50%)`;
+  } else if(variant==='curve'){
+    circle.style.transform = `translateX(${cx-28}px)`;
+    circle.innerHTML = `<svg viewBox="0 0 24 24">${IC[tab.dataset.key]}</svg>`;
+  } else if(variant==='blob'){
+    ind.style.transform = `translateX(${cx-20}px)`;
+  } else if(variant==='lift'){
+    ind.style.transform = `translateX(${cx-3}px)`;
+  }
+}
+
+CONCEPTS.forEach(([variant,name,tag,desc])=>{
+  const card=document.createElement('div'); card.className='concept'+(variant==='curve'?' sel':'');
+  card.innerHTML=`<div class="top"><h2>${name}</h2><span class="tag">${tag}</span></div><p>${desc}</p>
+    <div class="screen"><div class="canvas">${name}</div></div>
+    <button class="pick">${variant==='curve'?'Selected':'Choose this'}</button>`;
+  const screen=card.querySelector('.screen');
+  const {nav,ind,circle}=buildNav(variant);
+  screen.appendChild(nav);
+  card.querySelector('.pick').addEventListener('click',()=>{
+    document.querySelectorAll('.concept').forEach(c=>{c.classList.remove('sel');c.querySelector('.pick').textContent='Choose this';});
+    card.classList.add('sel'); card.querySelector('.pick').textContent='Selected';
+  });
+  grid.appendChild(card);
+  // initial placement
+  requestAnimationFrame(()=>{ const on=nav.querySelector('.tab.on'); position(nav,variant,ind,circle,on); });
+});
+
+window.addEventListener('resize',()=>{
+  document.querySelectorAll('.nav').forEach(nav=>{
+    const variant=[...nav.classList].find(c=>['pill','curve','blob','lift'].includes(c));
+    const ind=nav.querySelector('.ind'), circle=nav.querySelector('.circle'), on=nav.querySelector('.tab.on');
+    if(on) position(nav,variant,ind,circle,on);
+  });
+});
+</script>

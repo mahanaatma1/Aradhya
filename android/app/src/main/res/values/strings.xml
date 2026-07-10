@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="panchang_widget_desc">Today\'s Panchang — tithi, nakshatra, yoga &amp; karana</string>
+    <string name="verse_widget_desc">Verse of the day from DivyaVaani</string>
+</resources>

@@ -1,0 +1,1185 @@
+# Aradhya — All Bilingual Strings (EN ↔ हिं)
+
+_Auto-extracted from every `lib/**/*.dart`: `NamePair`, inline `hi ? … : …`, paired `X`/`XHi` lists, and `switch`-based readings. Sanskrit/mantra terms shown as-is._
+
+
+**Total pairs: 989  ·  files: 38**
+
+## lib/features/astrology/astrology_data.dart  (21)
+
+| English | हिंदी |
+|---|---|
+| Aries | मेष |
+| Taurus | वृषभ |
+| Gemini | मिथुन |
+| Cancer | कर्क |
+| Leo | सिंह |
+| Virgo | कन्या |
+| Libra | तुला |
+| Scorpio | वृश्चिक |
+| Sagittarius | धनु |
+| Capricorn | मकर |
+| Aquarius | कुम्भ |
+| Pisces | मीन |
+| Sun | सूर्य |
+| Moon | चंद्र |
+| Mars | मंगल |
+| Mercury | बुध |
+| Jupiter | गुरु |
+| Venus | शुक्र |
+| Saturn | शनि |
+| Rahu | राहु |
+| Ketu | केतु |
+
+## lib/features/astrology/birth_form_screen.dart  (11)
+
+| English | हिंदी |
+|---|---|
+| Name | नाम |
+| Full name | पूरा नाम |
+| Date of birth | जन्म तिथि |
+| Time of birth | जन्म समय |
+| Use 24-hour time, e.g. 04:52 or 18:30. | 24-घंटे के प्रारूप में समय दर्ज करें, जैसे 04:52 या 18:30। |
+| Place of birth | जन्म स्थान |
+| Select city… | शहर चुनें… |
+| Generate Kundli | कुंडली बनाएं |
+| Calculations use Lahiri ayanamsa (Vedic / sidereal). | गणना लाहिड़ी अयनांश (वैदिक / निरयण) पर आधारित है। |
+| Search city… | शहर खोजें… |
+| Type at least 2 letters | कम से कम 2 अक्षर लिखें |
+
+## lib/features/astrology/date_input.dart  (2)
+
+| English | हिंदी |
+|---|---|
+| Not a real date | यह वैध तिथि नहीं है |
+| Not a real time | यह वैध समय नहीं है |
+
+## lib/features/astrology/interpretations.dart  (191)
+
+| English | हिंदी |
+|---|---|
+| Ruchaka Yoga | रुचक योग |
+| Bhadra Yoga | भद्र योग |
+| Hamsa Yoga | हंस योग |
+| Malavya Yoga | मालव्य योग |
+| Shasha Yoga | शश योग |
+| Gaja Kesari Yoga | गजकेसरी योग |
+| Budha-Aditya Yoga | बुध-आदित्य योग |
+| Chandra-Mangal Yoga | चंद्र-मंगल योग |
+| Raja Yoga | राज योग |
+| Dhana Yoga | धन योग |
+| Neecha Bhanga Raja Yoga | नीचभंग राज योग |
+| Vipreet Raja Yoga | विपरीत राज योग |
+| Yoga | योग |
+| Recite the Hanuman Chalisa on Tuesdays — Hanuman is the deity of Mars and calms its heat. Offer red flowers and light a mustard-oil lamp before Hanuman every week, and donate red lentils or red cloth on Tuesdays. Most importantly, give Mars a good direction — through exercise, sport or seva — instead of bottling it up. | मंगलवार को हनुमान चालीसा पढ़ें — हनुमान जी मंगल के देवता हैं और उसकी गर्मी को संतुलन में रखते हैं। हर हफ़्ते हनुमान जी को लाल फूल चढ़ाएँ और सरसों के तेल का दीया जलाएँ, और मंगलवार को लाल मसूर या लाल कपड़ा दान करें। सबसे बढ़कर, मंगल को दबाने के बजाय व्यायाम, खेल या सेवा के ज़रिए उसे एक अच्छी दिशा दें। |
+| Worship Lord Shiva and chant the Maha Mrityunjaya mantra. Make offerings to the Nagas on Nag Panchami, and perform a Kaal Sarp shanti at a sacred site if you wish. Above all, keep going with patience — this pattern rewards those who stick with it. | भगवान शिव की उपासना करें और महामृत्युंजय मंत्र का जप करें। नाग पंचमी पर नागों को अर्पण करें, और चाहें तो किसी तीर्थ-स्थल पर काल सर्प शांति करवाएँ। सबसे बढ़कर, धैर्य के साथ चलते रहें — यह पैटर्न डटे रहने वालों को इनाम देता है। |
+| Worship Hanuman and Shani Dev; recite the Hanuman Chalisa and a Shani mantra on Saturdays. Serve the elderly, the poor and working people, offer mustard oil to Shani, and keep an honest, disciplined routine. Avoid shortcuts — steady effort is the real remedy. | हनुमान जी और शनि देव की उपासना करें; शनिवार को हनुमान चालीसा और शनि मंत्र पढ़ें। बुज़ुर्गों, ग़रीबों और मेहनतकश लोगों की सेवा करें, शनि को सरसों का तेल चढ़ाएँ, और एक ईमानदार, अनुशासित दिनचर्या रखें। शॉर्टकट से बचें — लगातार की गई मेहनत ही सच्चा उपाय है। |
+| Strengthen the Moon: worship Lord Shiva, offer water and white flowers on Mondays, and keep good, nourishing company. A calm routine, meditation, and time near water steady the mind. | चंद्र को मज़बूत करें: भगवान शिव की उपासना करें, सोमवार को जल और सफ़ेद फूल चढ़ाएँ, और अच्छी, पोषण देने वाली संगति रखें। एक शांत दिनचर्या, ध्यान और पानी के पास बिताया समय मन को स्थिर करते हैं। |
+| Strengthen Jupiter: worship Lord Vishnu or your guru, wear yellow, and chant the Guru mantra on Thursdays. Study scripture and keep the company of wise, ethical people. | गुरु को मज़बूत करें: भगवान विष्णु या अपने गुरु की उपासना करें, पीला कपड़ा पहनें, और गुरुवार को गुरु मंत्र का जप करें। शास्त्रों को पढ़ें और समझदार, नेक लोगों की संगति रखें। |
+| Honour the Moon and Jupiter through devotion and charity on Mondays and Thursdays. Build steadiness and long-term thinking, and don't get discouraged by the natural ups and downs. | सोमवार और गुरुवार को भक्ति और दान से चंद्र तथा गुरु का सम्मान करें। ठहराव और लंबी सोच अपने अंदर बढ़ाएँ, और स्वाभाविक उतार-चढ़ाव से निराश न हों। |
+| Honour your ancestors: perform Shraddha and Tarpan, offer food to the needy, to crows and to cows, and give in their name during Pitru Paksha. Prayers to the ancestors and to Lord Vishnu bring peace. | अपने पूर्वजों का सम्मान करें: श्राद्ध और तर्पण करें, ज़रूरतमंदों, कौओं और गायों को भोजन दें, और पितृ पक्ष में उनके नाम पर दान करें। पूर्वजों और भगवान विष्णु की प्रार्थना शांति लाती है। |
+| You take life head-on. There's a restless, go-first energy in you that makes you a natural starter — you're the one who kicks things off. Courage comes easily to you; patience is the thing you're here to learn. | आप ज़िंदगी का सामना सीधे और बेझिझक करते हैं। एक आगे बढ़ने वाली, बेचैन ऊर्जा आपको वो इंसान बना देती है जो हर काम शुरू करता है — पहल आप ही करते हैं। हिम्मत आपमें अपने-आप है; बस सब्र रखना — यही आपको सीखना है। |
+| You're steady and down-to-earth. You build things slowly and then hold on firmly. Comfort, loyalty and real, solid things matter to you; change feels easier once it feels safe. | आप शांत और ज़मीन से जुड़े हैं, धीरे-धीरे चीज़ें बनाते हैं और फिर मज़बूती से टिके रहते हैं। आराम, वफ़ादारी और ठोस, असली चीज़ें आपके लिए मायने रखती हैं; बदलाव तभी आसान लगता है जब वह सुरक्षित महसूस हो। |
+| You're curious and quick, and you come alive through words, ideas and connecting with people. Variety keeps you going; you find real depth when you let one thing finish before jumping to the next. | आप जिज्ञासु और फुर्तीले हैं, और शब्दों, विचारों तथा लोगों से जुड़कर जी उठते हैं। तरह-तरह की चीज़ें आपको ऊर्जा देती हैं; गहराई तब आती है जब आप एक काम को पूरा होने देते हैं, फिर दूसरे पर जाते हैं। |
+| You lead with your heart and your memories. Home, your roots and the people you look after shape everything you do; your quiet strength is how much you care. | आप अपने दिल और अपनी यादों के सहारे आगे बढ़ते हैं। घर, अपनी जड़ें और वे लोग जिनका आप ख़याल रखते हैं — यही सब कुछ को आकार देते हैं; आपकी सबसे बड़ी ताकत है आपका ख़याल रखना और प्यार करना। |
+| You're warm, proud and full of expression — you're here to shine and to give. Being appreciated matters to you; staying generous keeps your ego in the right place. | आप गर्मजोश, स्वाभिमानी और खुलकर जताने वाले हैं — आप चमकने और देने के लिए बने हैं। सराहा जाना आपके लिए मायने रखता है; दरियादिली आपके अहं को उसकी सही जगह पर रखती है। |
+| You're careful and helpful, and you polish up what others leave half-done. Helping people and doing good work is how you show love; going a little easier on yourself is the thing to work on. | आप बारीकी से देखने वाले और मददगार हैं, और जिसे दूसरे अधूरा छोड़ देते हैं उसे आप संवार देते हैं। दूसरों की मदद करना और अच्छा काम करना ही आपके प्यार जताने का तरीका है; अपने आप को कम कोसना — यही आपको सीखना है। |
+| You look for balance, beauty and fairness in everything. Your relationships act like a mirror for you; learning to make decisions is the muscle you need to build. | आप हर चीज़ में संतुलन, सुंदरता और इंसाफ़ ढूँढ़ते हैं। आपके रिश्ते आपके लिए एक आईने की तरह हैं; फ़ैसले लेने की ताकत — यही आपको अपने अंदर बढ़ानी है। |
+| You're intense and private. You feel everything deeply, and you grow by going right through it. Power, trust and truth are your big themes in life. | आप गहरे और अपने में सिमटे रहने वाले हैं। हर चीज़ को दिल से गहराई तक महसूस करते हैं, और उसी से गुज़रकर बदलते और बढ़ते हैं। ताकत, भरोसा और सच्चाई — यही आपकी ज़िंदगी के बड़े विषय हैं। |
+| At heart you're a seeker, always reaching for meaning, freedom and far-off horizons. Faith keeps you moving; a bit of focus turns that faith into real wisdom. | मन से आप एक खोजी हैं, हमेशा मतलब, आज़ादी और दूर के क्षितिज की ओर बढ़ते रहते हैं। आपका विश्वास आपको आगे ले जाता है; थोड़ी एकाग्रता उस विश्वास को असली समझदारी में बदल देती है। |
+| You're disciplined and you last the distance, climbing step by step through responsibility and time. Your ambition is real — keeping some warmth is what makes the top worth reaching. | आप अनुशासित हैं और लंबी दौड़ के इंसान हैं, जिम्मेदारी और समय के बल पर एक-एक कदम ऊपर चढ़ते हैं। आपकी महत्वाकांक्षा सच्ची है — थोड़ी गर्मजोशी बनाए रखना ही शिखर को पाने लायक बनाता है। |
+| You're independent and you look to the future, thinking in big systems and ideals. You belong to everyone, not just a few; getting close one-on-one is where you stretch yourself. | आप स्वतंत्र हैं और भविष्य की ओर देखते हैं, बड़ी व्यवस्थाओं और आदर्शों के हिसाब से सोचते हैं। आप चंद लोगों के नहीं, सबके हैं; किसी एक के साथ गहरी नज़दीकी — वहीं आपको अपने आप को फैलाना है। |
+| You're sensitive and open, and the line between you and the world around you often melts away. Compassion and imagination are your gifts; staying grounded is the practice for you. | आप संवेदनशील और खुले दिल के हैं, और अपने तथा दुनिया के बीच की लकीर अक्सर मिट जाती है। करुणा और कल्पना आपके तोहफ़े हैं; ज़मीन पर टिके रहना — यही आपके लिए अभ्यास है। |
+| Deep down you need action and honesty. Your feelings come on fast and pass just as fast. | दिल से आपको काम और सच्चाई चाहिए; भावनाएँ तेज़ी से आती हैं और तेज़ी से चली भी जाती हैं। |
+| You long for stability and comfort — a calm, loyal heart that settles in deeply once it commits to someone. | आप ठहराव और सुकून चाहते हैं — एक शांत, वफ़ादार दिल जो किसी से जुड़ने के बाद गहराई से बस जाता है। |
+| Your mind and your mood move together; you work through your feelings by talking them out and understanding them. | आपका मन और आपका मूड साथ-साथ चलते हैं; आप अपनी भावनाओं को बातचीत और समझ के ज़रिए सुलझाते हैं। |
+| You're deeply caring and you take everything in. Home and a sense of belonging are where your heart truly rests. | आप गहराई से ख़याल रखने वाले हैं और हर चीज़ को अपने अंदर उतार लेते हैं; घर और अपनापन वहीं हैं जहाँ आपका दिल सुकून पाता है। |
+| You have a warm, proud heart — you feel safest when you're seen, appreciated and openly loved. | आपका दिल गर्मजोश और स्वाभिमानी है — आप तब सबसे महफ़ूज़ महसूस करते हैं जब आपको देखा, सराहा और खुलकर प्यार किया जाए। |
+| You calm yourself down by keeping order and being useful; you examine your feelings first before you trust them. | आप हर चीज़ को व्यवस्थित रखकर और काम आकर अपने आप को शांत करते हैं; भावनाओं पर भरोसा करने से पहले आप उन्हें परखते हैं। |
+| Peace and harmony steady you, and conflict throws you off; you feel your best in fair, gentle company. | शांति और तालमेल आपको स्थिर रखते हैं और झगड़ा आपको विचलित कर देता है; आप न्यायप्रिय, कोमल संगति में सबसे अच्छा महसूस करते हैं। |
+| You feel things with rare depth and intensity — guarded on the outside, but completely all-in underneath. | आप हर चीज़ को अनोखी गहराई और तीव्रता से महसूस करते हैं — ऊपर से संभले हुए, पर अंदर से पूरी तरह डूबे हुए। |
+| You have a hopeful, freedom-loving heart; you need space, meaning, and something to believe in. | आपका दिल उम्मीद से भरा और आज़ादी पसंद है; आपको खुली जगह, मतलब और भरोसा करने के लिए कोई चीज़ चाहिए। |
+| You're self-contained and responsible with your emotions; you show love through being reliable more than through words. | आप अपनी भावनाओं में आत्मनिर्भर और जिम्मेदार हैं; आप शब्दों से ज़्यादा भरोसेमंद बनकर प्यार जताते हैं। |
+| You feel through ideas and friendship — a cool surface over a warm, caring heart that wants to help everyone. | आप विचारों और दोस्ती के ज़रिए महसूस करते हैं — एक शांत ऊपरी सतह के नीचे एक स्नेही दिल जो सबका भला चाहता है। |
+| You have a tender heart that soaks everything up, feeling other people's moods as if they were your own; quiet time alone and art bring you back to yourself. | आपका दिल कोमल है और सब कुछ सोख लेता है, दूसरों के मूड को अपना बना लेता है; अकेले में बिताया शांत समय और कला आपको फिर से ताज़ा कर देते हैं। |
+| At your very core you're a trailblazer — bold, self-starting, and happiest when you're carving out your own path. | आपके एकदम भीतर एक राह बनाने वाला बसा है — निडर, ख़ुद से शुरू करने वाला, और अपना रास्ता ख़ुद बनाने में सबसे खुश। |
+| Deep down you're steady and down-to-earth; you shine by building things that last. | दिल से आप शांत और ज़मीन से जुड़े हैं; आप ऐसी चीज़ें बनाकर चमकते हैं जो टिकाऊ हों। |
+| You have a quick, all-rounder spirit — you come alive through ideas, words and plenty of variety. | आपमें एक फुर्तीली, हर काम में माहिर रूह है — आप विचारों, शब्दों और तरह-तरह की चीज़ों से जी उठते हैं। |
+| Who you are is rooted in caring and belonging; you lead with your heart and your memories. | आप जो हैं वह देखभाल और अपनेपन में बसा है; आप अपने दिल और अपनी यादों से आगे बढ़ते हैं। |
+| You have a natural glow and dignity about you; you're here to express yourself, create, and be seen. | आपमें एक कुदरती चमक और वक़ार है; आप ख़ुद को जताने, कुछ रचने और देखे जाने के लिए बने हैं। |
+| You define yourself through your skill and your service to others; getting the details just right is your signature. | आप अपने हुनर और दूसरों की सेवा से अपनी पहचान बनाते हैं; बारीकियों को ठीक-ठीक कर देना ही आपकी पहचान है। |
+| You grow into yourself through your relationships and a sense of fairness; you shine by creating harmony. | आप अपने रिश्तों और इंसाफ़ के भाव से ख़ुद में निखरते हैं; आप तालमेल बनाकर चमकते हैं। |
+| You have an intense, private core with huge willpower; you're built for depth and for change. | आपमें बहुत बड़ी इच्छाशक्ति वाला एक गहरा, अपने में सिमटा भीतरी रूप है; आप गहराई और बदलाव के लिए बने हैं। |
+| You have a seeker's soul — meaning, freedom and truth are the fuel that drives who you are. | आपमें एक खोजी की रूह है — मतलब, आज़ादी और सच्चाई ही आपकी पहचान का ईंधन हैं। |
+| Deep down you're about purpose and mastery; you earn your light through taking responsibility. | दिल से आप मक़सद और महारत के बारे में हैं; आप जिम्मेदारी उठाकर अपनी चमक अर्जित करते हैं। |
+| You define yourself by your ideals and by what makes you different — you're here to serve everyone, not just yourself. | आप अपने आदर्शों और अपने अनोखेपन से ख़ुद को पहचानते हैं — आप सिर्फ़ अपने लिए नहीं, सबकी सेवा के लिए बने हैं। |
+| You have a gentle, imaginative core; your purpose flows through compassion and the things you can't quite see. | आपमें एक कोमल, कल्पनाशील भीतरी रूप है; आपका मक़सद करुणा और उन चीज़ों के ज़रिए बहता है जो नज़र नहीं आतीं। |
+| Career | करियर |
+| Relationships | संबंध |
+| Health | स्वास्थ्य |
+| Wealth | धन |
+| With this in Aries, you chase your soul's deepest wish head-on, with courage and a rush to go first — you're here to learn to make your own path. | मेष में होने पर आप अपनी आत्मा की सबसे गहरी चाह को सीधे, हिम्मत और पहले करने की जल्दी के साथ पूरा करते हैं — आपको अपना रास्ता ख़ुद बनाना सीखना है। |
+| In Taurus, it looks for stability, beauty and solid, real things; your soul grows up by staying steady and valuing what truly lasts. | वृषभ में यह ठहराव, सुंदरता और ठोस, असली चीज़ों को ढूँढ़ती है; आपकी आत्मा टिके रहकर और सच्चे टिकाऊ को महत्व देकर बड़ी होती है। |
+| In Gemini, it moves through curiosity, words and being an all-rounder; your soul grows by choosing depth over endless variety. | मिथुन में यह जिज्ञासा, शब्दों और हर काम में माहिर होने से चलती है; आपकी आत्मा अनगिनत तरह-तरह की चीज़ों के बजाय गहराई चुनकर बढ़ती है। |
+| In Cancer, it flows through feeling, memory and care; your soul ripens by looking after others without drowning in emotion. | कर्क में यह भावना, यादों और देखभाल से बहती है; आपकी आत्मा भावना में डूबे बिना दूसरों का ख़याल रखकर परिपक्व होती है। |
+| In Leo, it shines through creativity, dignity and the wish to be seen; your soul learns a generosity that rises above pride. | सिंह में यह सृजनशीलता, वक़ार और देखे जाने की चाह से चमकती है; आपकी आत्मा वह दरियादिली सीखती है जो अभिमान से ऊपर उठ जाती है। |
+| In Virgo, it works through service, precision and making things better; your soul softens as you swap self-criticism for humility. | कन्या में यह सेवा, बारीकी और चीज़ों को बेहतर बनाने से काम करती है; आपकी आत्मा आत्म-आलोचना को विनम्रता से बदलकर कोमल होती है। |
+| In Libra, it looks for balance, relationships and fairness; your soul matures through harmony and clear, kind decisions. | तुला में यह संतुलन, रिश्ते और इंसाफ़ ढूँढ़ती है; आपकी आत्मा तालमेल और साफ़, दयालु फ़ैसलों से परिपक्व होती है। |
+| In Scorpio, it burns through intensity, secrecy and deep change; your soul is remade as you honestly face your own depths. | वृश्चिक में यह तीव्रता, गोपनीयता और गहरे बदलाव से धधकती है; आपकी आत्मा अपनी गहराइयों का ईमानदारी से सामना करके नए सिरे से गढ़ी जाती है। |
+| In Sagittarius, it reaches for meaning, freedom and truth; your soul grows by turning restless searching into real wisdom. | धनु में यह मतलब, आज़ादी और सच्चाई की ओर बढ़ती है; आपकी आत्मा बेचैन खोज को असली समझदारी में बदलकर बढ़ती है। |
+| In Capricorn, it climbs through responsibility, patience and mastery; your soul is set free by carrying duty without going hard. | मकर में यह जिम्मेदारी, धैर्य और महारत से ऊपर चढ़ती है; आपकी आत्मा दिल कठोर किए बिना कर्तव्य निभाकर मुक्त होती है। |
+| In Aquarius, it serves ideals, the wider community and the unconventional; your soul stretches by balancing detachment with real closeness. | कुम्भ में यह आदर्शों, बड़े समाज और लीक से हटकर चीज़ों की सेवा करती है; आपकी आत्मा वैराग्य को सच्ची नज़दीकी से संतुलित करके फैलती है। |
+| In Pisces, it dissolves through compassion, imagination and surrender; your soul wakes up as you keep its boundless feeling grounded. | मीन में यह करुणा, कल्पना और समर्पण से घुल जाती है; आपकी आत्मा अपनी असीम भावना को ज़मीन पर टिकाकर जाग उठती है। |
+| In Aries, your partner is bold, direct and independent — quick to act and full of initiative. | मेष में आपका जीवनसाथी निडर, सीधा और स्वतंत्र होता है — फटाफट काम करने वाला और पहल से भरपूर। |
+| In Taurus, your partner is steady, sensual and loyal, and values comfort, patience and the good things in life. | वृषभ में आपका जीवनसाथी शांत, इंद्रियप्रिय और वफ़ादार होता है, जो सुकून, धैर्य और ज़िंदगी की अच्छी चीज़ों को महत्व देता है। |
+| In Gemini, your partner is talkative, clever and young at heart, keeping the bond lively and mentally interesting. | मिथुन में आपका जीवनसाथी बातूनी, चतुर और दिल से जवान होता है, जो रिश्ते को जीवंत और दिमाग़ी तौर पर दिलचस्प बनाए रखता है। |
+| In Cancer, your partner is caring, emotional and family-centred, giving you warmth and a strong sense of home. | कर्क में आपका जीवनसाथी स्नेही, भावुक और परिवार पर केंद्रित होता है, जो आपको गर्माहट और घर का मज़बूत एहसास देता है। |
+| In Leo, your partner is warm, proud and expressive — generous, a bit dramatic, and likes to be admired. | सिंह में आपका जीवनसाथी गर्मजोश, स्वाभिमानी और खुलकर जताने वाला होता है — दरियादिल, थोड़ा नाटकीय, और सराहे जाने की चाह रखने वाला। |
+| In Virgo, your partner is practical, helpful and sharp-eyed, showing love through care and attention to little details. | कन्या में आपका जीवनसाथी व्यावहारिक, मददगार और पैनी नज़र वाला होता है, जो देखभाल और छोटी-छोटी बारीकियों पर ध्यान देकर प्यार जताता है। |
+| In Libra, your partner is charming, fair-minded and focused on the relationship, drawn to harmony, beauty and true partnership. | तुला में आपका जीवनसाथी आकर्षक, इंसाफ़पसंद और रिश्ते पर केंद्रित होता है, जो तालमेल, सुंदरता और सच्ची साझेदारी की ओर खिंचता है। |
+| In Scorpio, your partner is intense, private and deeply loyal, with powerful feelings and rock-solid commitment. | वृश्चिक में आपका जीवनसाथी तीव्र, अपने में सिमटा और गहराई से वफ़ादार होता है, जिसमें प्रबल भावनाएँ और अटूट प्रतिबद्धता होती है। |
+| In Sagittarius, your partner is free-spirited, honest and hopeful, loving travel, meaning and plenty of open space. | धनु में आपका जीवनसाथी स्वच्छंद, ईमानदार और उम्मीद से भरा होता है, जिसे यात्रा, मतलब और खुली जगह प्रिय है। |
+| In Capricorn, your partner is mature, ambitious and dependable — grounded, serious and built to last. | मकर में आपका जीवनसाथी परिपक्व, महत्वाकांक्षी और भरोसेमंद होता है — ज़मीन से जुड़ा, गंभीर और टिकाऊ। |
+| In Aquarius, your partner is independent, original and friendly, valuing freedom, ideals and a good mind. | कुम्भ में आपका जीवनसाथी स्वतंत्र, मौलिक और मिलनसार होता है, जो आज़ादी, आदर्शों और अच्छी सोच को महत्व देता है। |
+| In Pisces, your partner is gentle, compassionate and imaginative — tender-hearted and drawn to the spiritual side of life. | मीन में आपका जीवनसाथी कोमल, करुणामय और कल्पनाशील होता है — सरल दिल का और ज़िंदगी के आध्यात्मिक पहलू की ओर झुका हुआ। |
+| Brings courage, leadership and physical strength. Bold doers who do well in defence, sport, or any field that needs a fighter's spirit. | हिम्मत, लीडरशिप और शारीरिक ताकत देता है। निडर, कर्मठ लोग जो रक्षा, खेल या योद्धा जैसा जज़्बा माँगने वाले हर क्षेत्र में सफल होते हैं। |
+| Brings a sharp mind, a way with words and a strong business sense. Quick thinkers who succeed in writing, teaching, trade and analysis. | तेज़ दिमाग़, शब्दों पर पकड़ और मज़बूत व्यापार-समझ देता है। तेज़ सोचने वाले जो लेखन, पढ़ाने, व्यापार और विश्लेषण में सफल होते हैं। |
+| Brings wisdom, good character and respect. People become teachers, advisors or spiritual figures — others come to them for guidance. | समझदारी, अच्छा चरित्र और सम्मान देता है। लोग शिक्षक, सलाहकार या आध्यात्मिक व्यक्ति बनते हैं — दूसरे उनसे मार्गदर्शन के लिए आते हैं। |
+| Brings beauty, charm, comfort and refined taste. Draws in luxury, artistic talent and graceful relationships, often with a striking presence. | सुंदरता, आकर्षण, सुकून और परिष्कृत रुचि देता है। ऐशो-आराम, कलात्मक हुनर और मधुर रिश्ते खींचता है, अक्सर एक प्रभावशाली मौजूदगी के साथ। |
+| Brings discipline, authority and slowly-built success. People rise through patience and hard work into respected positions. | अनुशासन, अधिकार और धीरे-धीरे बनी सफलता देता है। लोग धैर्य और मेहनत से सम्मानित पदों तक उठते हैं। |
+| Brings fame, prosperity and intelligence. Recognition in your field, with wisdom and influence that grow as you get older. | यश, समृद्धि और बुद्धि देता है। अपने क्षेत्र में मान्यता, और उम्र के साथ बढ़ती समझदारी तथा प्रभाव। |
+| Brings a sharp mind, clear thinking and strong communication. People shine in academics, government and roles that need mental skill. | तेज़ दिमाग़, साफ़ सोच और मज़बूत बातचीत देता है। लोग पढ़ाई, सरकार और दिमाग़ी हुनर माँगने वाली भूमिकाओं में चमकते हैं। |
+| Brings drive, an entrepreneurial spark and the ability to earn through your own efforts, often building a business. | उद्यम, व्यावसायिक ऊर्जा और अपनी मेहनत से कमाने की क्षमता देता है, अक्सर अपना व्यवसाय खड़ा करते हुए। |
+| A general "royal yoga" formed when the lords of lucky houses join forces — bringing power, prestige or unusual success. | शुभ भावों के स्वामी मिलकर बनाते हैं — ताकत, रुतबा या असाधारण सफलता लाता एक आम राजसी योग। |
+| A "wealth yoga" formed by links between the houses of money — steady build-up of wealth over a lifetime. | धन के भावों के आपसी जुड़ाव से बना धन-योग — पूरी ज़िंदगी में स्थिर रूप से जुड़ती दौलत। |
+| A "cancellation" yoga where a weak planet is restored to full power. A hard start turns dramatically into strength. | एक भंग योग जहाँ कमज़ोर ग्रह फिर से मज़बूत हो जाता है। कठिन शुरुआत नाटकीय ढंग से ताकत में बदल जाती है। |
+| An "unexpected" royal yoga where difficulties turn into triumph — your hardest experiences become your biggest wins. | एक अप्रत्याशित राजसी योग जहाँ मुश्किलें जीत में बदल जाती हैं — सबसे कठिन अनुभव सबसे बड़ी जीत बन जाते हैं। |
+| Mangal Dosha (Manglik) | मंगल दोष (मांगलिक) |
+| Mars in certain houses creates friction in marriage; how strong it is varies, and many traditional rules can cancel it out. | कुछ भावों में मंगल विवाह में टकराव पैदा करता है; यह कितना प्रबल है यह बदलता रहता है, और कई पारंपरिक नियम इसे रद्द कर सकते हैं। |
+| Kaal Sarp Dosha | काल सर्प दोष |
+| All the planets sit between Rahu and Ketu. Life feels intense and fated in bursts; the effects often ease after age 30. | सारे ग्रह राहु और केतु के बीच। ज़िंदगी झटकों में तीव्र और किस्मत से चलने वाली लगती है; असर अक्सर 30 साल के बाद घटता है। |
+| Shani Sade Sati | शनि साढ़े साती |
+| A roughly 7½-year cycle as Saturn passes through the signs around the Moon. Testing, but deeply life-changing. | लगभग साढ़े 7 साल का चक्र जब शनि चंद्र के आसपास की राशियों से गोचर करता है। कठिन, पर गहराई से ज़िंदगी बदल देने वाला। |
+| Pitra Dosha | पितृ दोष |
+| Linked to unsettled ancestral karma; may bring obstacles in family, marriage or with children. Remedies involve prayers and offerings. | अनसुलझे पितृ-कर्म से जुड़ा; परिवार, विवाह या संतान में रुकावटें ला सकता है। उपाय में प्रार्थना और अर्पण शामिल हैं। |
+| Guru Chandal Dosha | गुरु चांडाल दोष |
+| Jupiter with Rahu or Ketu can shake up your faith and judgement, but also makes an original, rule-breaking thinker. | गुरु का राहु या केतु के साथ होना विश्वास और परख को हिला सकता है, पर एक मौलिक, नियम तोड़ने वाला विचारक भी बनाता है। |
+| Kemadruma Dosha | केमद्रुम दोष |
+| The Moon sits alone with no support; the mind can feel isolated but grows deeply self-reliant. | चंद्र बिना सहारे अकेला बैठा है; मन अकेला लग सकता है पर गहराई से आत्मनिर्भर बनता है। |
+| Shakata Dosha | शकट दोष |
+| The Moon and Jupiter in difficult angles; fortunes rise and fall in waves rather than climbing steadily. | चंद्र और गुरु कठिन कोणों में; किस्मत स्थिर चढ़ाई के बजाय लहरों में उठती-गिरती है। |
+| Nadi Dosha | नाड़ी दोष |
+| Mainly a marriage-matching factor — when bride and groom share the same nadi, tradition advises a remedy or some caution. | मुख्यतः विवाह-मिलान का कारक — जब वर और वधू की नाड़ी एक जैसी हो, तो परंपरा उपाय या सावधानी की सलाह देती है। |
+| A time to be seen and to lead; ambition and pride both surge — sudden openings appear, but so does the pull to bite off more than you can chew. | देखे जाने और लीडरशिप करने का समय; महत्वाकांक्षा और अभिमान दोनों उमड़ते हैं — अचानक मौके खुलते हैं, पर हद से ज़्यादा कर बैठने का खिंचाव भी। |
+| Emotions, home and the people around you come alive; comfort and connection matter, yet moods can pull you off course. | भावनाएँ, घर और आसपास के लोग जी उठते हैं; सुकून और जुड़ाव मायने रखते हैं, फिर भी मनोदशाएँ आपको राह से भटका सकती हैं। |
+| Energy and courage run high — a time to push forward and build. Watch out for haste, a short temper and burning out. | ऊर्जा और हिम्मत चरम पर — आगे बढ़ने और बनाने का समय। हड़बड़ी, गुस्से और थककर चूर होने से सावधान रहें। |
+| The mind speeds up and doors open through words and deals; just keep the many threads from scattering into noise. | मन तेज़ होता है और शब्दों तथा सौदों से दरवाज़े खुलते हैं; बस अनेक कामों को शोर में बिखरने न दें। |
+| Growth, luck and grace open up your world; teachers and opportunity show up — but watch for getting complacent or overdoing it. | तरक़्क़ी, किस्मत और कृपा आपकी दुनिया को फैला देते हैं; गुरु और मौके आते हैं — पर आत्मसंतोष और अति से बचें। |
+| Love, beauty and pleasure blossom; relationships and comforts sweeten life — balance enjoyment with real commitment. | प्रेम, सुंदरता और आनंद खिलते हैं; रिश्ते और सुख ज़िंदगी में मिठास घोलते हैं — आनंद को सच्ची प्रतिबद्धता से संतुलित करें। |
+| A long, serious stretch of work and testing; slow but lasting rewards — patience beats shortcuts here. | काम और परीक्षा का एक लंबा, गंभीर दौर; धीमे पर टिकाऊ फल — यहाँ धैर्य शॉर्टकट को मात देता है। |
+| Ambition and offbeat paths pull hard; foreign, new or sudden roads open — stay honest even as the hunger grows. | महत्वाकांक्षा और लीक से हटकर चीज़ों का ज़ोरदार खिंचाव; विदेशी, नए या अचानक रास्ते खुलते हैं — भूख के बीच भी ईमानदार बने रहें। |
+| A turning inward; the material world loosens its grip and spiritual insight deepens — let go rather than hold on tight. | एक भीतर की ओर मुड़ता मोड़; भौतिक चीज़ों की पकड़ ढीली होती है और आध्यात्मिक समझ गहरी होती है — पकड़ने के बजाय छोड़ें। |
+| Build legitimate authority through consistent work. Honour your elders and superiors. Show up where you genuinely matter. | निरंतर कर्म से वैध अधिकार अर्जित करें। अपने बड़ों और वरिष्ठों का सम्मान करें। वहाँ उपस्थित रहें जहाँ आप वास्तव में मायने रखते हैं। |
+| Nurture your mind and close relationships. Keep a peaceful home base. Trust your intuition and protect your health. | अपने मन और निकट संबंधों का पोषण करें। एक शांतिपूर्ण घर बनाए रखें। अपने अंतर्ज्ञान पर भरोसा करें और अपने स्वास्थ्य की रक्षा करें। |
+| Channel energy into disciplined action and exercise. Take initiative on bold goals. Defend what is right — calmly. | ऊर्जा को अनुशासित कर्म और व्यायाम में लगाएँ। साहसी लक्ष्यों पर पहल करें। जो सही है उसकी — शांति से — रक्षा करें। |
+| Learn, network and communicate. Put ideas into writing and deals into order. Stay curious and organised. | सीखें, संपर्क बनाएँ और संवाद करें। विचारों को लेखन में और सौदों को व्यवस्था में उतारें। जिज्ञासु और सुव्यवस्थित रहें। |
+| Seek teachers, study and give generously. Say yes to genuine opportunity. Act on your values and faith. | गुरुओं और अध्ययन को खोजें और उदारता से दान दें। सच्चे अवसर को हाँ कहें। अपने मूल्यों और श्रद्धा पर कार्य करें। |
+| Invest in relationships, beauty and art. Enjoy life's pleasures in balance. Cultivate harmony and refinement. | संबंधों, सौंदर्य और कला में निवेश करें। जीवन के सुखों का संतुलित आनंद लें। सामंजस्य और परिष्कार विकसित करें। |
+| Commit to steady, honest work. Take responsibility and be patient. Serve others and simplify your life. | स्थिर, ईमानदार कर्म के प्रति प्रतिबद्ध रहें। जिम्मेदारी लें और धैर्य रखें। दूसरों की सेवा करें और अपने जीवन को सरल बनाएँ। |
+| Pursue bold, unconventional goals with integrity. Embrace new fields and foreign links. Stay grounded and ethical. | साहसी, अपरंपरागत लक्ष्यों को सत्यनिष्ठा से पाएँ। नए क्षेत्रों और विदेशी संपर्कों को अपनाएँ। धरातल पर और नैतिक बने रहें। |
+| Turn inward through meditation and study. Release what no longer serves. Seek meaning over things. | ध्यान और अध्ययन के माध्यम से अंतर्मुखी हों। जो अब उपयोगी नहीं उसे छोड़ें। वस्तुओं से अधिक अर्थ को खोजें। |
+| Avoid ego clashes, face-saving in public, isolating yourself from advisors, and decisions made from wounded pride. | अहंकार के टकराव, सार्वजनिक रूप से इज़्ज़त बचाने, सलाहकारों से दूरी बनाने और आहत अभिमान से लिए गए निर्णयों से बचें। |
+| Avoid emotional over-reaction, clinging and neglecting rest. Don't let passing moods drive major decisions. | भावनात्मक अति-प्रतिक्रिया, चिपकाव और विश्राम की उपेक्षा से बचें। क्षणिक मनोदशाओं को बड़े निर्णय न चलाने दें। |
+| Avoid haste, anger, reckless risk and needless conflict. Don't burn bridges — or your own health. | हड़बड़ी, क्रोध, लापरवाह जोखिम और व्यर्थ टकराव से बचें। न रिश्ते जलाएँ — न अपना स्वास्थ्य। |
+| Avoid scattering your focus, over-talking and cutting corners. Don't trust cleverness over honesty. | ध्यान बिखेरने, अधिक बोलने और शॉर्टकट अपनाने से बचें। ईमानदारी से ऊपर चतुराई पर भरोसा न करें। |
+| Avoid over-optimism, excess and self-righteousness. Don't over-promise or overextend. | अत्यधिक आशावाद, अति और आत्म-धार्मिकता से बचें। न अधिक वादे करें, न सीमा से आगे बढ़ें। |
+| Avoid overindulgence, vanity and escapism. Don't mistake comfort or attraction for commitment. | अति-भोग, दिखावे और पलायन से बचें। सुख या आकर्षण को प्रतिबद्धता न समझ बैठें। |
+| Avoid shortcuts, despair and rigidity. Don't resent the delays — they are teaching patience. | शॉर्टकट, निराशा और कठोरता से बचें। देरी से नाराज़ न हों — वे धैर्य सिखा रही हैं। |
+| Avoid greed, deception and obsession. Don't chase shortcuts or trade away your ethics for ambition. | लालच, छल और जुनून से बचें। शॉर्टकट के पीछे न भागें और महत्वाकांक्षा के लिए अपनी नैतिकता का सौदा न करें। |
+| Avoid confusion, escapism and neglecting the practical. Don't detach so far that duties slip. | भ्रम, पलायन और व्यावहारिकता की उपेक्षा से बचें। इतना विरक्त न हों कि कर्तव्य छूट जाएँ। |
+| A time of being seen, gaining power and moving up — leadership roles, promotions and public recognition come more easily. Work tied to government, well-established institutions or your own name suits you best. Let your results speak louder than your ego, and steer clear of clashes with those above you. | देखे जाने, ताकत पाने और आगे बढ़ने का समय — लीडरशिप की भूमिकाएँ, तरक़्क़ी और लोगों में सम्मान आसानी से आते हैं। सरकार, जमे-जमाए संस्थानों या अपने ख़ुद के नाम से जुड़ा काम आपके लिए सबसे बढ़िया है। अपने अहं से ज़्यादा अपने नतीजों को बोलने दें, और अपने से ऊपर वालों से टकराव से बचें। |
+| Your confidence rises and you naturally take charge, but partners can feel overshadowed if you dominate the room. Your bond with father figures and people in authority comes into focus. Listen as much as you shine, and share the spotlight. | आपका आत्मविश्वास बढ़ता है और आप अपने आप कमान संभाल लेते हैं, पर अगर आप हावी हो जाएँ तो साथी दबे हुए महसूस कर सकते हैं। पिता जैसे और अधिकार वाले लोगों से आपका रिश्ता सामने आता है। जितना चमकें उतना सुनें भी, और मंच साझा करें। |
+| Your energy is usually strong, but the Sun rules the heart, the eyes and your overall vitality — so keep an eye on blood pressure, your eyes, and exhaustion from stress. When it's well-placed you feel sturdy; if it's weak, take care ahead of time and don't run on pride alone. | आपकी ऊर्जा आम तौर पर मज़बूत रहती है, फिर भी सूर्य दिल, आँखों और आपकी कुल ताकत का कारक है — इसलिए रक्तचाप, आँखों और तनाव से आने वाली थकान पर ध्यान दें। अच्छी स्थिति में आप ताक़तवर महसूस करते हैं; कमज़ोर हो तो पहले से देखभाल करें और सिर्फ़ अभिमान के बल पर न चलें। |
+| Your income tends to come through authority-linked roles, government or institutions, along with a pull to spend on things that show status. Your wealth grows fastest when you put money into lasting assets rather than into image. | आपकी आय अक्सर अधिकार से जुड़ी भूमिकाओं, सरकार या संस्थानों के ज़रिए आती है, और रुतबा दिखाने वाली चीज़ों पर खर्च करने का खिंचाव रहता है। धन तब सबसे तेज़ी से बढ़ता है जब आप दिखावे के बजाय टिकाऊ संपत्तियों में पैसा लगाते हैं। |
+| Work that faces the public, involves caring for people, or keeps changing suits you — people, the public, food, hospitality or the home. Your fortunes rise and fall in cycles, so ride the tides instead of fighting them. Your reputation and the public mood matter more than usual. | लोगों के सामने आने वाला, देखभाल वाला या बदलता रहने वाला काम आपके लिए अच्छा है — लोग, जनता, भोजन, आतिथ्य या घर से जुड़ा। आपकी किस्मत चक्रों में उठती-गिरती है, इसलिए धारा से लड़ने के बजाय ज्वार के साथ बहें। आपकी साख और लोगों का मिज़ाज आम से ज़्यादा मायने रखते हैं। |
+| Emotional closeness, family and your mother come to the centre, and tenderness deepens your bonds. Moods can swing the relationship back and forth, so a sense of security and gentle reassurance keep it steady. Home is where the heart heals. | भावनात्मक नज़दीकी, परिवार और आपकी माँ केंद्र में आ जाते हैं, और कोमलता आपके रिश्तों को गहरा करती है। मनोदशाएँ रिश्ते को इधर-उधर झुला सकती हैं, इसलिए सुरक्षा का भाव और कोमल तसल्ली उसे स्थिर रखते हैं। घर वहीं है जहाँ दिल भरता है। |
+| Your mind, sleep, digestion and body fluids need care, and emotional stress shows up in your body quickly. Protect your rest and your inner balance, and good health follows. | आपके मन, नींद, पाचन और शरीर के तरल पदार्थों को देखभाल चाहिए, और भावनात्मक तनाव जल्दी ही शरीर में दिखने लगता है। अपने आराम और भीतरी संतुलन की रक्षा करें, अच्छी सेहत साथ चलेगी। |
+| Your earnings are driven by comfort and can be a bit up and down. Your savings grow when you feel emotionally secure and shrink when anxiety pushes you into impulse spending — a calm mind is your best money asset. | आपकी कमाई सुकून से चलती है और थोड़ी ऊपर-नीचे होती रहती है। बचत तब बढ़ती है जब आप भावनात्मक रूप से महफ़ूज़ महसूस करते हैं और तब घटती है जब चिंता आपसे बिना सोचे खर्च करा देती है — शांत मन ही आपकी सबसे अच्छी आर्थिक पूँजी है। |
+| Competitive, technical, physical or command-style fields reward your drive — engineering, the forces, sport, surgery or real estate. It's a strong time to take the initiative and lead from the front, but avoid rash moves and clashes at work. | मुक़ाबले वाले, तकनीकी, शारीरिक या कमान वाले क्षेत्र आपके जोश को इनाम देते हैं — इंजीनियरिंग, सेना, खेल, सर्जरी या रियल एस्टेट। यह पहल करने और आगे से लीडरशिप करने का मज़बूत समय है, पर उतावले कदमों और काम की जगह के झगड़ों से बचें। |
+| Passion runs hot — attraction is strong, and so is the chance of friction and impatience. Channel the fire into protecting and staying loyal rather than into arguments, give each other room, and pick your battles. | जुनून तेज़ रहता है — आकर्षण भी प्रबल है, और उतनी ही टकराव तथा बेसब्री की गुंजाइश भी। इस आग को बहस के बजाय एक-दूसरे को बचाने और वफ़ादारी में लगाएँ, एक-दूसरे को जगह दें, और अपनी लड़ाइयाँ सोच-समझकर चुनें। |
+| Mars rules blood, muscles and heat — so watch for injuries, inflammation, fevers and accidents. Burn off the extra energy cleanly through exercise, or it turns into irritability and strain. | मंगल ख़ून, माँसपेशियों और गर्मी का स्वामी है — इसलिए चोट, सूजन, बुख़ार और दुर्घटनाओं पर ध्यान दें। फ़ालतू ऊर्जा को व्यायाम से साफ़-सुथरे तरीके से जला दें, वरना यह चिड़चिड़ाहट और तनाव में बदल जाती है। |
+| Bold, decisive moves can pay off, and your earnings often come through effort, competition or property. But impulsive risks and anger-driven choices drain your wealth just as fast — act boldly, not rashly. | साहसी, पक्के फ़ैसले फल दे सकते हैं, और कमाई अक्सर मेहनत, मुक़ाबले या संपत्ति से आती है। पर बिना सोचे लिए जोखिम और गुस्से में लिए फ़ैसले धन को उतनी ही तेज़ी से बहा देते हैं — साहसी बनें, उतावले नहीं। |
+| Communication, trade, technology, analysis and writing flourish, and being a good all-rounder opens many doors. Networking, deals and skill-based work multiply your chances — just keep your many projects organised so your momentum isn't lost to scatter. | बातचीत, व्यापार, तकनीक, विश्लेषण और लेखन फलते-फूलते हैं, और हर काम में माहिर होना कई दरवाज़े खोलता है। जान-पहचान, सौदे और हुनर वाला काम आपके मौके बढ़ाते हैं — बस अपने कई कामों को व्यवस्थित रखें ताकि रफ़्तार बिखराव में न खो जाए। |
+| Friendship, wit and good conversation are the glue of your bonds; you connect through shared ideas and humour. Keep your words kind and honest, since what you say can build people up or bruise them. | दोस्ती, हँसी-मज़ाक और अच्छी बातचीत आपके रिश्तों का गोंद हैं; आप साझा विचारों और विनोद से जुड़ते हैं। अपने शब्दों को दयालु और सच्चा रखें, क्योंकि आपकी बात किसी को बना भी सकती है और चोट भी पहुँचा सकती है। |
+| Your nerves, skin, lungs and speech are sensitive, and an overactive mind brings restlessness or anxiety. Quiet the mental chatter through breathing, a steady routine and rest. | आपके स्नायु, त्वचा, फेफड़े और वाणी संवेदनशील रहते हैं, और बहुत ज़्यादा दौड़ता मन बेचैनी या चिंता लाता है। श्वास, एक स्थिर दिनचर्या और आराम से मन के शोर को शांत करें। |
+| Wealth comes through many small streams — skills, side-work, trade and networking rather than one big source. Being clever helps, but don't let it slide into cutting corners. | धन कई छोटी धाराओं से आता है — हुनर, अतिरिक्त काम, व्यापार और जान-पहचान, न कि किसी एक बड़े स्रोत से। चतुराई मददगार है, पर उसे शॉर्टकट में न फिसलने दें। |
+| Teaching, advising, law, finance, medicine and growth-focused roles expand, often with recognition and mentorship. Your reputation and standing open doors — say yes to genuine opportunity, but don't stretch yourself too far on optimism alone. | पढ़ाना, सलाह देना, विधि, वित्त, चिकित्सा और तरक़्क़ी वाली भूमिकाएँ फैलती हैं, अक्सर सम्मान और मार्गदर्शन के साथ। आपकी साख और रुतबा दरवाज़े खोलते हैं — सच्चे मौके को हाँ कहें, पर सिर्फ़ उम्मीद के भरोसे ख़ुद को बहुत ज़्यादा न खींचें। |
+| Generosity, shared values and mutual respect deepen your bonds, and relationships feel more meaningful. Elders, teachers and family blessings support you, and your patience makes you a steadying presence for everyone. | दरियादिली, साझा मूल्य और आपसी सम्मान आपके रिश्तों को गहरा करते हैं, और रिश्ते ज़्यादा सार्थक लगते हैं। बड़े-बुज़ुर्ग, गुरु और परिवार का आशीर्वाद आपका साथ देते हैं, और आपका धैर्य आपको सबके लिए एक स्थिर सहारा बना देता है। |
+| Jupiter rules the liver, weight and metabolism — so watch for overindulging, putting on weight, and too much sugar. Keeping to moderation protects the naturally good health of this period. | गुरु जिगर, वज़न और पाचन-क्रिया का स्वामी है — इसलिए ज़्यादा खाने, वज़न बढ़ने और शक्कर पर ध्यान दें। संयम रखना इस दौर की कुदरती अच्छी सेहत को बनाए रखता है। |
+| One of the best periods for wealth — your income grows on its own, and savings and investments tend to grow too. Give and invest wisely, and abundance tends to come back to you. | धन के लिए सबसे अच्छे दौरों में से एक — आपकी आय अपने आप बढ़ती है, और बचत तथा निवेश भी बढ़ते हैं। समझदारी से दें और निवेश करें, तो समृद्धि लौटकर आती है। |
+| Art, design, beauty, luxury, hospitality and relationship-based work thrive, and your charm opens doors. Creative and people-facing roles are especially favoured, and your taste and diplomacy are real assets. | कला, डिज़ाइन, सुंदरता, ऐशो-आराम, आतिथ्य और रिश्तों वाला काम फलता-फूलता है, और आपका आकर्षण दरवाज़े खोलता है। रचनात्मक और लोगों के सामने वाली भूमिकाएँ ख़ास तौर पर अच्छी हैं, और आपकी रुचि तथा कूटनीति आपकी असली पूँजी हैं। |
+| Romance, harmony and pleasure blossom — love flows more easily and existing bonds sweeten, with marriage and partnership in the spotlight. Enjoy the closeness, but keep your devotion deeper than just attraction. | प्रेम, तालमेल और आनंद खिलते हैं — प्यार ज़्यादा आसानी से बहता है और मौजूदा रिश्तों में मिठास घुलती है, विवाह और साझेदारी सुर्ख़ियों में रहते हैं। इस नज़दीकी का आनंद लें, पर अपने समर्पण को सिर्फ़ आकर्षण से गहरा रखें। |
+| Venus rules the reproductive system, the kidneys and the pull toward indulgence — so watch rich food, sugar and excess. Balance keeps you well and glowing. | शुक्र प्रजनन तंत्र, गुर्दों और भोग की ओर खिंचाव का स्वामी है — इसलिए गरिष्ठ भोजन, शक्कर और अति पर ध्यान दें। संतुलन आपको स्वस्थ और चमकदार बनाए रखता है। |
+| Comfort, beauty and luxury flow in, often through art, relationships or pleasant work. The temptation is to overspend on treats — enjoy yourself, but keep a cushion aside. | सुकून, सुंदरता और ऐशो-आराम भीतर आते हैं, अक्सर कला, रिश्तों या सुखद काम के ज़रिए। प्रलोभन है शौक़ पर ज़्यादा खर्च करने का — आनंद लें, पर एक बचत बचाकर रखें। |
+| Long, structured, service-oriented work suits you — you climb slowly but surely through discipline and endurance. Systems, hard work and administration reward you, and steady persistence beats raw brilliance in this chapter. | लंबा, व्यवस्थित, सेवा वाला काम आपके लिए अच्छा है — आप अनुशासन और सहनशक्ति से धीरे पर पक्के तौर पर ऊपर चढ़ते हैं। व्यवस्था, मेहनत और प्रशासन आपको इनाम देते हैं, और इस अध्याय में लगातार लगे रहना कच्ची प्रतिभा को मात दे देता है। |
+| Commitment matters more than romance now, and your bonds get tested by time, distance or duty. Loyalty, patience and simply showing up build lasting trust — whatever survives Saturn's testing is built to last. | अभी रोमांस से ज़्यादा प्रतिबद्धता मायने रखती है, और आपके रिश्ते समय, दूरी या कर्तव्य से परखे जाते हैं। वफ़ादारी, धैर्य और बस साथ बने रहना स्थायी भरोसा बनाते हैं — जो शनि की परीक्षा से बच जाता है वही टिकने के लिए बना है। |
+| Saturn rules the bones, joints, teeth and long-running patterns — so expect slow-building issues that need steady care rather than quick fixes. Rest, routine and not overworking protect you. | शनि हड्डियों, जोड़ों, दाँतों और लंबे समय से चली आ रही तकलीफ़ों का स्वामी है — इसलिए ऐसी धीरे-धीरे बढ़ने वाली समस्याओं की उम्मीद रखें जिन्हें जल्दी के उपाय के बजाय स्थिर देखभाल चाहिए। आराम, दिनचर्या और ज़रूरत से ज़्यादा काम न करना आपकी रक्षा करते हैं। |
+| Wealth is slow, hard-earned and lasting — no windfalls, but steady security through discipline and saving. Avoid speculation; build patiently and it holds. | धन धीमा, मेहनत से कमाया और टिकाऊ है — कोई अचानक लाभ नहीं, पर अनुशासन और बचत से स्थिर सुरक्षा। सट्टेबाज़ी से बचें; धैर्य से बनाएँ और यह टिका रहता है। |
+| Offbeat, foreign, technology-based or fast-rising fields open up, and sudden advancement is possible. Bold, boundary-pushing moves can leap you forward — keep your dealings clean, since shortcuts carry hidden costs. | लीक से हटकर, विदेशी, तकनीक वाले या तेज़ी से उभरते क्षेत्र खुलते हैं, और अचानक तरक़्क़ी मुमकिन है। साहसी, हदें लाँघने वाले कदम आपको आगे छलांग दिला सकते हैं — अपने लेन-देन साफ़ रखें, क्योंकि शॉर्टकट की एक छिपी क़ीमत होती है। |
+| Attractions can be intense, unusual or unexpected, even across cultures or norms. Keep things clear and honest, since illusion and obsession are the shadow side — keep the intensity grounded in reality. | आकर्षण तीव्र, अनोखे या अचानक हो सकते हैं, यहाँ तक कि अलग संस्कृतियों या रिवाज़ों के परे भी। चीज़ों को साफ़ और ईमानदार रखें, क्योंकि भ्रम और जुनून इसका छायापक्ष हैं — इस तीव्रता को हक़ीक़त में टिकाकर रखें। |
+| Rahu brings anxiety, unusual or hard-to-diagnose complaints and nervous strain. Grounding habits — a routine, time in nature, breathing — steady your system more than medicine alone. | राहु चिंता, अनोखी या मुश्किल से पकड़ में आने वाली शिकायतें और स्नायविक तनाव लाता है। ज़मीन से जोड़ने वाली आदतें — दिनचर्या, प्रकृति में समय, श्वास — सिर्फ़ दवा से ज़्यादा आपके तंत्र को स्थिर करती हैं। |
+| Sudden gains and just as sudden losses mark this period, and your fortunes can swing sharply. Ambition can multiply your wealth or gamble it away — discipline and honesty are your safeguard. | अचानक लाभ और उतनी ही अचानक हानि इस दौर की पहचान हैं, और आपकी किस्मत तेज़ी से झूल सकती है। महत्वाकांक्षा आपके धन को कई गुना कर सकती है या जुए में गँवा सकती है — अनुशासन और ईमानदारी ही आपकी सुरक्षा हैं। |
+| Research, spirituality, healing, investigation or behind-the-scenes work suits this inward time. Recognition matters less and depth matters more — you may quietly step back from the visible race. | शोध, आध्यात्म, उपचार, खोजबीन या पर्दे के पीछे का काम इस भीतरी समय के लिए अच्छा है। सम्मान कम और गहराई ज़्यादा मायने रखती है — आप चुपचाप इस दिखावटी दौड़ से पीछे हट सकते हैं। |
+| Detachment can create distance, and worldly bonds feel less gripping. Being present and putting in effort are the practice — stay engaged rather than drifting away, and spiritual company nourishes you most. | विरक्ति दूरी पैदा कर सकती है, और सांसारिक रिश्ते कम जकड़ने वाले लगते हैं। मौजूद रहना और मेहनत करना ही अभ्यास है — बहने के बजाय जुड़े रहें, और आध्यात्मिक संगति आपको सबसे ज़्यादा पोषण देती है। |
+| Ketu brings subtle, mysterious or wrongly-diagnosed ailments and affects the nervous system. Deep rest, simplicity and spiritual practice restore you. | केतु सूक्ष्म, रहस्यमय या ग़लत पहचानी गई बीमारियाँ लाता है और स्नायुतंत्र को प्रभावित करता है। गहरा आराम, सादगी और आध्यात्मिक अभ्यास आपको फिर से तरोताज़ा कर देते हैं। |
+| Money feels like a side matter and can be unpredictable, coming and going without much attachment. Simplicity serves you well; clinging brings unease rather than security. | धन एक साइड की बात लगती है और अप्रत्याशित हो सकती है, बिना ज़्यादा मोह के आती-जाती है। सादगी आपके काम आती है; पकड़कर रखना सुरक्षा के बजाय बेचैनी लाता है। |
+| Your soul's main journey is about your own self, authority, and the courage to be seen. Your deepest wish is to realise your own light — to lead, to matter, to stand up for your truth. The lesson is to hold that power without pride, turning ego into genuine self-respect. In terms of karma, it touches your bond with your father and your sense of your own worth; the spiritual path here is knowing your own Self behind the personality (atma-jnana). | आपकी आत्मा की मुख्य यात्रा आपके अपने आप, अधिकार और देखे जाने के साहस से जुड़ी है। सबसे गहरी चाह है अपने भीतर की रोशनी को साकार करना — लीडरशिप करना, महत्व रखना, अपने सच पर टिके रहना। सीख यह है कि उस ताकत को अभिमान के बिना संभालें, अहं को सच्चे आत्म-सम्मान में बदलें। कर्म के लिहाज़ से यह पिता से आपके रिश्ते और आपके अपने मोल के भाव को छूती है; यहाँ आध्यात्मिक रास्ता है अपने व्यक्तित्व के पीछे के असली आत्म को जानना (आत्म-ज्ञान)। |
+| Your soul is looking for emotional wholeness, belonging, and the ability to nurture. There's a deep pull toward your mother, your home and caring for others, and an equally deep need to feel safe. The lesson is emotional maturity — to feel things fully without being ruled by your moods, and to care for others without losing yourself. The path is bhakti and surrender to the divine feminine, where feeling turns into devotion. | आपकी आत्मा भावनात्मक पूर्णता, अपनापन और दूसरों का ख़याल रखने की क्षमता ढूँढ़ती है। माँ, घर और दूसरों की देखभाल की ओर एक गहरा खिंचाव है, और उतनी ही गहरी ज़रूरत है महफ़ूज़ महसूस करने की। सीख है भावनात्मक परिपक्वता — हर चीज़ को पूरी तरह महसूस करना पर मूड के काबू में आए बिना, और ख़ुद को खोए बिना दूसरों का ख़याल रखना। रास्ता है भक्ति और दिव्य नारीशक्ति के आगे समर्पण, जहाँ भावना भक्ति बन जाती है। |
+| Your soul's path runs through courage, disciplined energy, and standing up for what is right. The wish is to assert yourself, to act, to protect and to win. The lesson is mastering your anger and impatience — putting your force into righteous, well-thought-out action rather than knee-jerk reaction. In terms of karma it involves conflict, competition and inner strength; the path is tapasya, the fearless discipline that turns raw power into real character. | आपकी आत्मा का रास्ता हिम्मत, काबू में रखी ऊर्जा और सही की रक्षा से होकर गुज़रता है। चाह है अपने को जमाना, काम करना, रक्षा करना और जीतना। सीख है गुस्से और बेसब्री पर काबू पाना — अपनी ताकत को झट से की गई प्रतिक्रिया के बजाय धर्म वाले, सोचे-समझे काम में मोड़ना। कर्म के लिहाज़ से इसमें टकराव, मुक़ाबला और भीतरी बल शामिल हैं; रास्ता है तपस्या, वह निडर अनुशासन जो कच्ची शक्ति को असली चरित्र में बदल देता है। |
+| Your soul learns through knowledge, communication and a fine eye for detail. The wish is to understand, to connect ideas, and to put the truth into clear words. The lesson is to move from being clever to being truly wise, and to steady a mind that loves to wander. In terms of karma it touches speech, learning and being adaptable; the path is study, mantra, and the quiet clarity that sees things exactly as they are. | आपकी आत्मा ज्ञान, बातचीत और बारीक परख के ज़रिए सीखती है। चाह है समझना, विचारों को जोड़ना और सच को साफ़ शब्दों में कहना। सीख है सिर्फ़ चतुर होने से आगे बढ़कर सच में समझदार बनना, और उस मन को स्थिर करना जो भटकना पसंद करता है। कर्म के लिहाज़ से यह वाणी, पढ़ाई और हालात के हिसाब से ढलने को छूती है; रास्ता है अध्ययन, मंत्र और वह शांत स्पष्टता जो चीज़ों को ठीक वैसा देखती है जैसी वे हैं। |
+| Your soul is looking for wisdom, meaning and dharma — the bigger why behind life. The wish is to grow, to teach, to bless and to lift others up. The lesson is to actually live your principles rather than just preach them, and to avoid the overdoing and self-righteousness that comfort can bring. The path is the grace of a guru and the study of scripture, where knowledge ripens into real wisdom. | आपकी आत्मा समझदारी, मतलब और धर्म ढूँढ़ती है — ज़िंदगी के पीछे का बड़ा "क्यों"। चाह है बढ़ना, सिखाना, आशीर्वाद देना और दूसरों को ऊपर उठाना। सीख है अपने सिद्धांतों का सिर्फ़ उपदेश देने के बजाय उन्हें सचमुच जीना, और आराम से आने वाली अति तथा ख़ुद को सही मानने की आदत से बचना। रास्ता है गुरु की कृपा और शास्त्रों का अध्ययन, जहाँ ज्ञान पककर असली समझदारी बन जाता है। |
+| Your soul's journey is through love, relationship, beauty and devotion. Your deepest wish is union — harmony, refinement, and the sweetness of a real connection. The lesson is to love without needing to possess, and to find the sacred inside pleasure and relationships rather than being tied down by them. In terms of karma it involves partnership, desire and art; the path is bhakti, where love itself becomes the doorway to liberation. | आपकी आत्मा की यात्रा प्रेम, रिश्ते, सुंदरता और भक्ति से होकर गुज़रती है। सबसे गहरी चाह है मिलन — तालमेल, परिष्कार और जुड़ाव की मिठास। सीख है बिना अधिकार जताए प्रेम करना, और भोग तथा रिश्तों में बँधने के बजाय उनके भीतर की पवित्रता को ढूँढ़ना। कर्म के लिहाज़ से इसमें साझेदारी, इच्छा और कला शामिल हैं; रास्ता है भक्ति, जहाँ प्रेम ख़ुद मुक्ति का दरवाज़ा बन जाता है। |
+| Your soul's work is discipline, endurance, service and letting go. The wish is to build something lasting and to become free of depending on anyone or anything. The lesson is patience and acceptance — carrying responsibility and the delays of time without letting your heart go hard. In terms of karma, this is the very marker of karma itself; the path is renunciation and service — letting go of the fruits of your actions and finding freedom in doing your duty. | आपकी आत्मा का काम है अनुशासन, सहनशक्ति, सेवा और छोड़ना सीखना। चाह है कुछ स्थायी बनाना और किसी भी इंसान या चीज़ पर निर्भरता से मुक्त होना। सीख है धैर्य और स्वीकार करना — जिम्मेदारी और समय की देरियों को दिल कठोर किए बिना उठाना। कर्म के लिहाज़ से यह ख़ुद कर्म का ही कारक है; रास्ता है त्याग और सेवा — अपने कर्मों के फल को छोड़ देना और कर्तव्य निभाने में ही आज़ादी पाना। |
+| Your ruling planet is the Sun — you're a born leader: independent, ambitious and one of a kind. | आपका स्वामी ग्रह है सूर्य — आप जन्मजात नेता हैं: स्वतंत्र, महत्वाकांक्षी और अपने ढंग के अकेले। |
+| Your ruling planet is the Moon — you're sensitive, easy to work with, intuitive and gentle. | आपका स्वामी ग्रह है चंद्र — आप संवेदनशील, मिलकर काम करने वाले, अंतर्ज्ञानी और कोमल हैं। |
+| Your ruling planet is Jupiter — you're wise, hopeful, good at expressing yourself, and disciplined. | आपका स्वामी ग्रह है गुरु — आप समझदार, उम्मीद से भरे, अपनी बात कहने में माहिर और अनुशासित हैं। |
+| Your ruling planet is Rahu — you're unconventional, practical, hard-working and a reformer at heart. | आपका स्वामी ग्रह है राहु — आप लीक से हटकर, व्यावहारिक, मेहनती और दिल से सुधारवादी हैं। |
+| Your ruling planet is Mercury — you're quick, a good all-rounder, a natural communicator, and adaptable. | आपका स्वामी ग्रह है बुध — आप तेज़, हर काम में माहिर, बातचीत में कुशल और हालात के हिसाब से ढलने वाले हैं। |
+| Your ruling planet is Venus — you're loving, artistic, harmonious and fond of life's pleasures. | आपका स्वामी ग्रह है शुक्र — आप प्रेमपूर्ण, कलाप्रिय, तालमेल वाले और ज़िंदगी के सुखों के शौक़ीन हैं। |
+| Your ruling planet is Ketu — you're mystical, reflective, spiritual and independent. | आपका स्वामी ग्रह है केतु — आप रहस्यमय, आत्ममंथन करने वाले, आध्यात्मिक और स्वतंत्र हैं। |
+| Your ruling planet is Saturn — you're disciplined and you last the distance; your rewards come slowly but surely. | आपका स्वामी ग्रह है शनि — आप अनुशासित हैं और लंबी दौड़ के इंसान हैं; आपके फल धीरे पर पक्के तौर पर आते हैं। |
+| Your ruling planet is Mars — you're energetic, courageous, determined and protective. | आपका स्वामी ग्रह है मंगल — आप ऊर्जावान, साहसी, दृढ़ और रक्षा करने वाले हैं। |
+
+## lib/features/astrology/kundli_screen.dart  (81)
+
+| English | हिंदी |
+|---|---|
+| Kundli | कुंडली |
+| Enter birth details | जन्म विवरण दर्ज करें |
+| Edit | संपादित करें |
+| Chart | कुंडली |
+| Soul Profile | आत्म परिचय |
+| Dasha | दशा |
+| Yogas & Doshas | योग व दोष |
+| Life Areas | जीवन क्षेत्र |
+| North Indian | उत्तर भारतीय |
+| South Indian | दक्षिण भारतीय |
+| Rashi · D1 | राशि · D1 |
+| Navamsa · D9 | नवांश · D9 |
+| Lagna | लग्न |
+| Moon Sign | चंद्र राशि |
+| Nakshatra | नक्षत्र |
+| Pada | पाद |
+| Ayanamsa | अयनांश |
+| Lahiri | लाहिड़ी |
+| Swiss Ephemeris | स्विस एफेमेरिस |
+| Built-in approximation | अंतर्निहित अनुमान |
+| Planetary Positions | ग्रह स्थिति |
+| House | भाव |
+| ISHTA DEVATA | इष्ट देवता |
+| Atmakaraka | आत्मकारक |
+| Karakamsa Lagna (D9) | कारकांश लग्न (D9) |
+| 12th from Karakamsa | कारकांश से 12वां |
+| Ishta planet (lord) | इष्ट ग्रह (स्वामी) |
+| Your Atmakaraka is ${_p(s.atmakaraka)}, the planet at the highest degree in your chart. Its navamsa sign sets the Karakamsa Lagna; the 12th sign from there reveals the soul's chosen deity. | आपका आत्मकारक ${_p(s.atmakaraka)} है — कुंडली में सर्वोच्च अंश वाला ग्रह। इसकी नवांश राशि कारकांश लग्न निर्धारित करती है; वहां से 12वीं राशि आत्मा के चुने हुए इष्ट देव को दर्शाती है। |
+| Atmakaraka · ${_p(s.atmakaraka)} in ${signNames[ak.rashi](hi)} | आत्मकारक · ${signNames[ak.rashi](hi)} में ${_p(s.atmakaraka)} |
+| The Soul's Significator | आत्मा का कारक |
+| DARAKARAKA | दाराकारक |
+| Spouse karaka — the planet at the lowest degree, revealing the partner archetype. | जीवनसाथी कारक — सबसे कम अंश वाला ग्रह, जो जीवनसाथी के स्वरूप को दर्शाता है। |
+| Darakaraka | दाराकारक |
+| Position | स्थिति |
+| Lucky Stone | भाग्यशाली रत्न |
+| Lucky Colour | भाग्यशाली रंग |
+| Lucky Day | भाग्यशाली दिन |
+| Lucky Metal | भाग्यशाली धातु |
+| Mulank | मूलांक |
+| Destiny Number | भाग्यांक |
+| Name Number | नामांक |
+| Good Years | शुभ वर्ष |
+| Good Planets | शुभ ग्रह |
+| Friendly Signs | मित्र राशियाँ |
+| Good Lagna | शुभ लग्न |
+| Lucky Mantra (Navagraha) | भाग्य मंत्र (नवग्रह) |
+| Lagna · ${signNames[chart.lagnaRashi](hi)} rising | लग्न · ${signNames[chart.lagnaRashi](hi)} उदित |
+| Your Core Self | आपका मूल स्वरूप |
+| Sun | सूर्य |
+| Your Vital Essence | आपकी जीवनी शक्ति |
+| Moon | चंद्र |
+| Your Inner World | आपका अंतर्जगत |
+| yr | वर्ष |
+| mo | माह |
+| Current Vimshottari Dasha | वर्तमान विंशोत्तरी दशा |
+| Maha Dasha | महादशा |
+| Antar Dasha | अंतर्दशा |
+| Pratyantar Dasha | प्रत्यंतर दशा |
+| What this ${pName(lord)} period asks of you | यह ${pName(lord)} काल आपसे क्या चाहता है |
+| Career | करियर |
+| Relationships | संबंध |
+| Health | स्वास्थ्य |
+| Money | धन |
+| What to do | क्या करें |
+| What to avoid | किससे बचें |
+| Antar Dashas in ${pName(lord)} Maha | ${pName(lord)} महादशा में अंतर्दशाएँ |
+| Full 120-Year Dasha Cycle | संपूर्ण 120-वर्षीय दशा चक्र |
+| Your Chart | आपकी कुंडली |
+| Learn More | और जानें |
+| Auspicious Yogas (${yogas.length}) | शुभ योग (${yogas.length}) |
+| No major yogas detected in this chart. | इस कुंडली में कोई प्रमुख योग नहीं मिला। |
+| RAJA | राज |
+| Doshas (${doshas.length}) | दोष (${doshas.length}) |
+| No significant doshas detected. | कोई महत्वपूर्ण दोष नहीं मिला। |
+| Softening factors in your chart: | आपकी कुंडली में शमन कारक: |
+| REMEDY | उपाय |
+| Vedic astrology recognises many yogas and doshas. Below are the major ones — whether they appear in your chart or not, this is what each one means. | वैदिक ज्योतिष में अनेक योग और दोष माने जाते हैं। नीचे प्रमुख योग-दोष दिए गए हैं — चाहे वे आपकी कुंडली में हों या न हों, यहाँ प्रत्येक का अर्थ बताया गया है। |
+| Major Yogas | प्रमुख योग |
+| Major Doshas | प्रमुख दोष |
+| Your Life, House by House | आपका जीवन, भाव दर भाव |
+| Each area is read from the sign on its house (bhava), the placement | प्रत्येक क्षेत्र उसके भाव पर स्थित राशि, उस भाव के स्वामी की स्थिति और उसमें बैठे ग्रहों के आधार पर पढ़ा जाता है। |
+
+## lib/features/astrology/milan_interpretations.dart  (159)
+
+| English | हिंदी |
+|---|---|
+| This is a bond the stars lean toward. Look after it with the same honesty that brought you here, and it will carry you far. | यह वह रिश्ता है जिसकी ओर तारे झुके हुए हैं। जिस सच्चाई ने आपको यहाँ तक पहुँचाया, उसी से इसे सँभालें, और यह आपको बहुत दूर तक ले जाएगा। |
+| There is something real here, but it asks for grown-up effort. The score is not your future — it is just a map of where the easy and hard stretches lie. Couples who know their hard stretches ahead of time often do better than couples who assumed it would all be easy. | यहाँ कुछ सच्चा है, पर इसके लिए समझदारी से मेहनत करनी होगी। यह अंक आपका भविष्य नहीं है — यह बस एक नक्शा है कि आसान और मुश्किल दौर कहाँ-कहाँ हैं। जो जोड़े अपने मुश्किल दौर को पहले से जान लेते हैं, वे अक्सर उन जोड़ों से बेहतर निभाते हैं जिन्होंने मान लिया था कि सब आसान ही रहेगा। |
+| By the classical count the score urges caution. That's information, not a verdict. If your hearts are set, walk in with your eyes open, put in the work, and seek wise advice. | शास्त्रों के हिसाब से अंक सावधान करता है। यह सिर्फ़ जानकारी है, कोई आख़िरी फ़ैसला नहीं। अगर आपके मन तय हैं, तो आँखें खुली रखकर आगे बढ़ें, मेहनत करें और किसी समझदार से सलाह लें। |
+| This Ashtakoot Guna Milan gives guidance rooted in old classical tradition — it can't take the place of an experienced astrologer's advice. For big decisions like marriage, please talk to an expert. Trust your heart, honour your bond, and choose with love. | यह अष्टकूट गुण मिलान शास्त्रों की पुरानी परंपरा पर आधारित मार्गदर्शन देता है — यह किसी अनुभवी ज्योतिषी की सलाह की जगह नहीं ले सकता। शादी जैसे बड़े फ़ैसलों के लिए कृपया किसी जानकार से ज़रूर सलाह लें। अपने दिल पर भरोसा रखें, अपने रिश्ते का मान रखें, और प्यार से चुनाव करें। |
+| bold and always first — jumps in early and feels things fast | हिम्मती और सबसे आगे — पहले कदम उठाता है, भावनाएँ तेज़ी से महसूस करता है |
+| steady and warm — loves comfort and stays loyal | शांत और गर्मजोश — आराम पसंद और रिश्ते में वफ़ादार |
+| curious and quick — a mind that likes to keep busy and play | जिज्ञासु और फुर्तीला — एक ऐसा मन जो हमेशा कुछ नया करना चाहता है |
+| soft and caring — feels things deeply and truly | नरम और ख्याल रखने वाला — भावनाएँ गहरी और सच्ची |
+| warm and big-hearted — loves to shine and be seen | गर्मजोश और बड़े दिल वाला — चमकना और सराहा जाना पसंद |
+| careful and giving — shows love by doing things for you | ध्यान रखने वाला और देने वाला — काम करके प्यार जताता है |
+| gentle and fair — wants everyone to get along | सौम्य और इंसाफ़पसंद — सबसे ज़्यादा यही चाहता है कि सब मिल-जुलकर रहें |
+| deep and loyal — feelings that go all the way down | गहरा और वफ़ादार — भावनाएँ मन की तह तक जाती हैं |
+| free and hopeful — always looking for something more | आज़ाद और उम्मीद से भरा — हमेशा कुछ और खोजता रहता है |
+| grounded and steady — builds a love that lasts | ज़मीन से जुड़ा और टिकाऊ — ऐसा प्यार जो लंबा चलता है |
+| independent and kind — loves openly and gives everyone space | अपने पैरों पर खड़ा और दयालु — खुलकर प्यार करता है और सबको जगह देता है |
+| soft and dreamy — full of care for everyone | नरम और सपने देखने वाला — सबके लिए दिल में करुणा |
+| Ashwini Kumaras | अश्विनी कुमार |
+| Yama | यम |
+| Agni | अग्नि |
+| Brahma | ब्रह्मा |
+| Soma (Chandra) | सोम (चंद्र) |
+| Rudra | रुद्र |
+| Aditi | अदिति |
+| Brihaspati | बृहस्पति |
+| Nagas (Serpents) | नाग |
+| Pitrs (Ancestors) | पितर |
+| Bhaga | भग |
+| Aryaman | अर्यमा |
+| Savitr (Sun) | सवितृ (सूर्य) |
+| Vishvakarma | विश्वकर्मा |
+| Vayu | वायु |
+| Indra-Agni | इंद्र-अग्नि |
+| Mitra | मित्र |
+| Indra | इंद्र |
+| Nirriti | निर्ऋति |
+| Apas (Waters) | आप (जल) |
+| Vishvedevas | विश्वेदेव |
+| Vishnu | विष्णु |
+| Vasus | वसु |
+| Varuna | वरुण |
+| Aja Ekapada | अज एकपाद |
+| Ahir Budhnya | अहिर्बुध्न्य |
+| Pushan | पूषा |
+| Horse | अश्व |
+| Elephant | गज |
+| Sheep | मेष |
+| Serpent | सर्प |
+| Dog | श्वान |
+| Cat | मार्जार |
+| Rat | मूषक |
+| Cow | गौ |
+| Buffalo | महिष |
+| Tiger | व्याघ्र |
+| Deer | मृग |
+| Monkey | वानर |
+| Mongoose | नकुल |
+| Lion | सिंह |
+| lively, full of energy, and loves to be free | जोशीला, ऊर्जा से भरा और आज़ादी पसंद |
+| calm, strong, and stands its ground | शांत, मज़बूत और अपनी बात पर अटल |
+| gentle, easy to work with, and mild | सौम्य, साथ निभाने वाला और नरम |
+| deep, private, and quietly magnetic | गहरा, अपनी बात मन में रखने वाला और चुपचाप आकर्षक |
+| loyal, protective, and devoted | वफ़ादार, रक्षा करने वाला और समर्पित |
+| independent, sensitive, and clever | अपने पैरों पर खड़ा, संवेदनशील और होशियार |
+| quick, smart, and good at finding a way | फुर्तीला, समझदार और हर हाल में रास्ता निकालने वाला |
+| calm, caring, and always giving | शांत, ख्याल रखने वाला और हमेशा देने वाला |
+| tough, patient, and hardworking | सख्त-जान, सब्र वाला और मेहनती |
+| bold, ambitious, and likes to take charge | दबंग, आगे बढ़ने वाला और कमान संभालने वाला |
+| graceful, gentle, and refined | सुंदर, कोमल और सलीकेदार |
+| playful, restless, and full of ideas | खिलंदड़ा, बेचैन और नए-नए विचारों वाला |
+| alert, brave, and sharp | चौकन्ना, बहादुर और तेज़ |
+| proud, commanding, and likes to lead | स्वाभिमानी, रौबदार और आगे रहकर नेतृत्व करने वाला |
+| Shudra | शूद्र |
+| Vaishya | वैश्य |
+| Kshatriya | क्षत्रिय |
+| Brahmin | ब्राह्मण |
+| likes to help and stays grounded — quietly gets things done with steady hands | मदद करने वाला और ज़मीन से जुड़ा — शांति से हर काम संभाल लेता है |
+| practical and good at business — cares about worth, resources, and keeping things running | व्यावहारिक और कारोबार में तेज़ — मोल-भाव, साधन और व्यवस्था को अहमियत देने वाला |
+| protective and always ready to act — born to lead and to stand guard | रक्षा करने वाला और हमेशा तैयार — नेतृत्व करने और हिफ़ाज़त करने के लिए बना |
+| thoughtful and stands by principles — drawn to wisdom and the inner life | सोच-समझकर चलने वाला और उसूलों पर अडिग — ज्ञान और अंदर की दुनिया की ओर झुका हुआ |
+| Deva | देव |
+| Manushya | मनुष्य |
+| Rakshasa | राक्षस |
+| a gentle, divine nature — soft, refined, and idealistic, most at home with kindness and the inner life | दैवी स्वभाव — सौम्य, सलीकेदार और आदर्शों वाला, दया और अंदर की दुनिया में सुकून पाता है |
+| a human nature — balanced and easy with people, a mix of high ideals and down-to-earth needs | मानवीय स्वभाव — संतुलित और लोगों से घुलने-मिलने वाला, ऊँचे आदर्शों और रोज़मर्रा की ज़रूरतों का मेल |
+| a strong, fiery nature — firm-willed, full of passion, and not afraid of a fight | तीव्र स्वभाव — पक्के इरादों वाला, जज़्बे से भरा और टकराव से न डरने वाला |
+| Aadi (Vata) | आदि (वात) |
+| Madhya (Pitta) | मध्य (पित्त) |
+| Antya (Kapha) | अंत्य (कफ) |
+| airy, always on the move, and quick — restless energy and a lively mind | हवा जैसा, चंचल और तेज़ — बेचैन ऊर्जा और चुस्त मन |
+| fiery, focused, and always pushing for change | आग जैसा, एकाग्र और हर वक़्त बदलाव चाहने वाला |
+| earthy, steady, and loves comfort | ज़मीन जैसा स्थिर, सब्र वाला और आराम पसंद |
+| Your inner natures are a bit different; respecting how each of you is wired will help a lot. | आप दोनों का अंदरूनी स्वभाव थोड़ा अलग है; एक-दूसरे के मिज़ाज का आदर करेंगे तो बात बहुत आसान हो जाएगी। |
+| Your inner natures line up well — no tug-of-war deep down. | आप दोनों का अंदरूनी स्वभाव अच्छे से मिलता है — मन के भीतर कोई खींचतान नहीं। |
+| One of you tends to lead more — a little care keeps the say equal between you. | आप में से एक थोड़ा ज़्यादा आगे रहता है — थोड़ा ध्यान रखेंगे तो दोनों की बराबर चलेगी। |
+| One of you may pull a bit harder; staying aware keeps things balanced. | आप में से एक थोड़ा ज़्यादा हावी हो सकता है; ध्यान बनाए रखेंगे तो संतुलन बना रहेगा। |
+| An easy give-and-take, with one of you gently taking the lead now and then. | आपस में सहज लेन-देन, जहाँ कभी-कभी एक जना प्यार से आगे रहता है। |
+| You naturally draw toward each other — the pull between you is easy and mutual. | आप दोनों अपने-आप एक-दूसरे की ओर खिंचते हैं — यह खिंचाव सहज है और दोनों तरफ़ से है। |
+| Your birth stars don't always help the flow — a little patience through the rough patches goes a long way. | आपके जन्म नक्षत्र हमेशा साथ नहीं देते — मुश्किल दौर में थोड़ा सब्र बहुत काम आता है। |
+| Your birth stars give mixed signals; the bond will have its ups and downs. | आपके जन्म नक्षत्र मिले-जुले संकेत देते हैं; रिश्ते में उतार-चढ़ाव आते रहेंगे। |
+| Your birth stars back each other up — luck seems to smile on this bond. | आपके जन्म नक्षत्र एक-दूसरे का साथ देते हैं — किस्मत इस रिश्ते पर मेहरबान लगती है। |
+| Your gut instincts pull different ways — patience and respect for each other's rhythm matter here. | आप दोनों की सहज पसंद अलग-अलग दिशा में जाती है — यहाँ सब्र और एक-दूसरे की लय का आदर ज़रूरी है। |
+| Your instincts get along okay — it works with a little care. | आपकी सहज पसंद ठीक-ठाक मिलती है — थोड़ी देखभाल से निभ जाती है। |
+| Your instincts fit beautifully — physical closeness comes easily and naturally. | आपकी सहज पसंद बहुत अच्छे से मिलती है — शारीरिक नज़दीकी सहज और अपने-आप आती है। |
+| Your minds run on different tracks; you may often read the same thing in different ways. | आप दोनों का मन अलग-अलग पटरी पर चलता है; एक ही बात को अक्सर आप अलग-अलग तरह से समझ सकते हैं। |
+| Your minds meet well enough, with the odd mix-up along the way. | आपके मन ठीक-ठाक मिलते हैं, बीच-बीच में कोई ग़लतफ़हमी के साथ। |
+| Your minds mostly agree — talking things through comes easily. | आपके मन अधिकतर एक-से चलते हैं — बात करके सुलझाना आसान रहता है। |
+| Your minds click like old friends — you get each other and back each other up. | आपके मन पुराने दोस्तों की तरह मिलते हैं — आप एक-दूसरे को समझते हैं और साथ देते हैं। |
+| Your temperaments pull sharply against each other — being clear and respecting the differences will matter. | आप दोनों का स्वभाव आपस में काफ़ी टकराता है — साफ़ बात करना और मतभेदों का आदर करना अहम रहेगा। |
+| Your temperaments are different — being clear and respecting the differences will matter. | आप दोनों का स्वभाव अलग है — साफ़ बात करना और मतभेदों का आदर करना अहम रहेगा। |
+| Your natures get along, with just a few small differences to smooth over. | आपके स्वभाव आपस में निभ जाते हैं, बस कुछ छोटे-मोटे फ़र्क़ सुलझाने होंगे। |
+| Your temperaments match up well — your natures meet easily. | आपके स्वभाव अच्छे से मेल खाते हैं — आपकी प्रकृति सहजता से मिल जाती है। |
+| Bhakoot Dosha is present — family harmony and shared money need some conscious care. | भकूट दोष मौजूद है — पारिवारिक सद्भाव और साझा पैसे पर थोड़ा सचेत ध्यान चाहिए। |
+| No Bhakoot Dosha — family life and shared resources should flow smoothly. | भकूट दोष नहीं — घर-परिवार का जीवन और साझा संसाधन सहजता से चलेंगे। |
+| Nadi Dosha is present — this is the heaviest check; health and children need attention and a remedy. | नाड़ी दोष मौजूद है — यह सबसे भारी परीक्षण है; स्वास्थ्य और संतान पर ध्यान और कोई उपाय ज़रूरी है। |
+| No Nadi Dosha — the single most important check passes cleanly. | नाड़ी दोष नहीं — सबसे अहम परीक्षण साफ़-साफ़ पास हो जाता है। |
+| You think on different tracks — the same words can mean different things to each of you. Patience and plain talk help. | आप दोनों अलग-अलग पटरी पर सोचते हैं — एक ही बात के अलग-अलग मतलब निकल सकते हैं। सब्र और साफ़ बातचीत मदद करती है। |
+| Mostly on the same page, with the odd mix-up that a little patience sorts out. | अधिकतर एक-सी सोच, बीच-बीच में कोई ग़लतफ़हमी जिसे थोड़ा सब्र सुलझा देता है। |
+| You think on the same track — words land the way you mean them. | आप एक ही पटरी पर सोचते हैं — बात ठीक वैसे ही समझी जाती है जैसे कही जाती है। |
+| Your natures and family habits pull in different directions; being honest and leaving room to disagree matters. | आपके स्वभाव और घर के तौर-तरीक़े अलग दिशा में खींचते हैं; सच्चाई और मतभेद की गुंजाइश रखना ज़रूरी है। |
+| Mostly in tune emotionally, with a few things — family ties, money habits — that need conscious sorting out. | दिल से अधिकतर तालमेल है, कुछ बातें — घर-परिवार के रिश्ते, पैसे की आदतें — जिन पर सोच-समझकर सुलझाना होगा। |
+| Your natures and family rhythms move together with ease. | आपके स्वभाव और परिवार की लय आसानी से साथ चलते हैं। |
+| Some friction at the gut level; building trust slowly and respecting each other's pace matter most. | गहरे मन में थोड़ा टकराव; धीरे-धीरे भरोसा बनाना और एक-दूसरे की रफ़्तार का आदर सबसे अहम है। |
+| A workable instinctive bond — your pace and likes differ, but care bridges the gap. | निभने वाला सहज बंधन — रफ़्तार और पसंद अलग हैं, पर ख्याल रखना इस फ़ासले को पाट देता है। |
+| Strong natural attraction and an easy, even give-and-take. | मज़बूत सहज आकर्षण और लेन-देन का आसान, बराबरी वाला संतुलन। |
+| You are built differently inside; shared values have to be built on purpose, not just assumed. | आप अंदर से अलग बने हैं; साझा मूल्यों को यूँ ही मान लेने के बजाय जान-बूझकर बनाना होगा। |
+| Broadly on the same page in values and make-up, with small differences to respect. | मूल्यों और बनावट में मोटे तौर पर तालमेल, कुछ छोटे फ़र्क़ों का आदर करते हुए। |
+| In tune at the deepest level — your values, wellbeing, and where life is headed move together. | सबसे गहरे स्तर पर तालमेल — आपके मूल्य, कल्याण और जीवन की दिशा एक साथ चलते हैं। |
+| Your inner natures line up | आपके अंदरूनी स्वभाव मिलते हैं |
+| You both come at life from a similar place inside — neither of you will quietly hold the other's priorities against them over the years. | आप दोनों जीवन को अंदर से एक-सी नज़र से देखते हैं — सालों तक कोई एक-दूसरे की प्राथमिकताओं से मन-ही-मन नाराज़ नहीं रहेगा। |
+| You naturally pull toward each other | एक-दूसरे की ओर सहज खिंचाव |
+| The influence between you is even — you move toward one another without one taking over. | आपके बीच का असर बराबर है — आप एक-दूसरे की ओर बढ़ते हैं, कोई हावी नहीं होता। |
+| Luck walks with you | किस्मत आपके साथ चलती है |
+| Your birth stars back each other up, cushioning the bond through life's turns. | आपके जन्म नक्षत्र एक-दूसरे को ताक़त देते हैं और ज़िंदगी के मोड़ों पर रिश्ते को सहारा देते हैं। |
+| Instincts in tune | स्वभाव में तालमेल |
+| Your physical and gut natures blend easily — closeness comes without having to push. | आपकी शारीरिक और सहज प्रकृति आसानी से घुल-मिल जाती है — नज़दीकियाँ बिना ज़ोर लगाए आती हैं। |
+| Minds that meet like friends | दोस्तों जैसे मिलते मन |
+| You get each other almost without trying — talking things through and supporting each other comes naturally. | आप एक-दूसरे को बिना कोशिश किए ही समझ लेते हैं — बातचीत और एक-दूसरे का सहारा सहज आता है। |
+| Temperaments that fit | मेल खाते स्वभाव |
+| Your basic natures sit well together — fewer clashes of mood and manner. | आपकी मूल प्रकृति अच्छी तरह साथ बैठती है — मिज़ाज और व्यवहार के टकराव कम रहते हैं। |
+| Family life flows easily | पारिवारिक जीवन आसानी से चलता है |
+| With no Bhakoot friction, sharing a home, money, and family life tends to settle into an easy rhythm instead of turning into a battleground. | भकूट का टकराव न होने से साझा गृहस्थी, पैसा और पारिवारिक रिश्ते लड़ाई के मैदान बनने के बजाय एक आसान लय में ढल जाते हैं। |
+| Health & family line on solid ground | सेहत और वंश की मज़बूत नींव |
+| No Nadi Dosha — the heaviest check passes cleanly. Your basic make-ups complement each other. | नाड़ी दोष नहीं — सबसे भारी परीक्षण साफ़-साफ़ पास होता है। आप दोनों की बनावट एक-दूसरे की पूरक है। |
+| You care about different things deep down | गहरे में आपकी अलग-अलग प्राथमिकताएँ |
+| At the core, you value life in different ways. Say out loud what each of you holds dear, so neither feels overlooked. | मन की गहराई में आप जीवन को अलग तरह से अहमियत देते हैं। जो हर एक को प्यारा है उसे खुलकर कह दें, ताकि किसी को अनदेखा न लगे। |
+| One of you may pull harder | आप में से एक ज़्यादा हावी हो सकता है |
+| The say between you tips to one side. Keep checking in: whose choice are we going with? Equal say keeps love free of quiet resentment. | आपके बीच बात एक ओर झुकी है। बार-बार पूछते रहें: हम किसकी पसंद पर चल रहे हैं? बराबर की चलेगी तो प्यार में मन-ही-मन नाराज़गी नहीं आएगी। |
+| Some rough patches ahead | आगे कुछ मुश्किल दौर |
+| The stars won't always soften this bond. Expect harder stretches, and face them as a team, not as rivals. | तारे इस रिश्ते को हमेशा नरम नहीं करते। मुश्किल दौर आने के लिए तैयार रहें, और उनका सामना प्रतिद्वंद्वी बनकर नहीं, एक टीम बनकर करें। |
+| Your instincts differ | आपकी सहज पसंद अलग है |
+| Your physical and gut rhythms don't match on their own. Slow down, ask, and respect each other's pace. | आपकी शारीरिक और सहज लय अपने-आप मेल नहीं खाती। धीरे चलें, पूछें, और एक-दूसरे की रफ़्तार का आदर करें। |
+| Your minds work differently | आपका मन अलग तरह से चलता है |
+| You can look at the same thing and read it two different ways. The fix isn't agreeing — it's asking "how are you seeing this?" before you react. | एक ही बात को आप दो अलग-अलग तरह से समझ सकते हैं। हल यह नहीं कि सहमत हो जाएँ — बल्कि प्रतिक्रिया देने से पहले पूछें, "तुम इसे कैसे देख रहे हो?" |
+| Very different temperaments | बहुत अलग स्वभाव |
+| One of you may be soft and idealistic while the other is intense and down-to-earth. Respect the difference; don't try to "fix" the other person. | आप में से एक नरम और आदर्शों वाला हो सकता है तो दूसरा तीव्र और ज़मीन से जुड़ा। इस फ़र्क़ का आदर करें; दूसरे को "सुधारने" की कोशिश न करें। |
+| Family & money need care | परिवार और पैसे पर ध्यान चाहिए |
+| Bhakoot friction can strain shared money and family life. Agree on the big things early, and come back to them often. | भकूट का टकराव साझा पैसे और पारिवारिक जीवन पर दबाव डाल सकता है। बड़ी बातों पर पहले ही सहमति बना लें, और समय-समय पर उन्हें दोहराते रहें। |
+| Go carefully on health | सेहत के मामले में सावधानी |
+| A same-Nadi match is the heaviest flag — tradition ties it to health and children. Talk to an astrologer and put your wellbeing first, together. | एक ही नाड़ी का मिलान सबसे भारी संकेत है — परंपरा में इसे सेहत और संतान से जोड़ा जाता है। किसी ज्योतिषी से सलाह लें और मिलकर अपने कल्याण को पहले रखें। |
+
+## lib/features/astrology/milan_result_screen.dart  (33)
+
+| English | हिंदी |
+|---|---|
+| ASHTAKOOT GUNA MILAN | अष्टकूट गुण मिलान |
+| 8 Koots | 8 कूट |
+| Hide Detailed Analysis | विस्तृत विश्लेषण छिपाएँ |
+| Show Detailed Analysis | विस्तृत विश्लेषण देखें |
+| of 36 | 36 में से |
+| Your Cosmic Profiles | आपकी ज्योतिषीय झलक |
+| A glance at each of you in the language of the stars. | तारों की भाषा में आप दोनों की एक झलक। |
+| Compatibility · Four Dimensions | अनुकूलता · चार आयाम |
+| The eight koots regrouped into the four areas a relationship is actually lived. | आठ कूट उन चार क्षेत्रों में पुनर्गठित, जिनमें रिश्ता सचमुच जिया जाता है। |
+| Where You Shine | आपकी शक्तियाँ |
+| The places the chart is generous to you — celebrate these. | वे बातें जहाँ कुंडली आप पर उदार है — इन्हें सराहें। |
+| Areas Asking for Awareness | ध्यान देने योग्य बातें |
+| Naming the honest stretches makes them easier to walk. | कठिनाइयों को नाम देना उन्हें पार करना आसान बनाता है। |
+| What This Looks Like in Daily Life | रोज़मर्रा जीवन में यह कैसा दिखेगा |
+| Moon Sign | चंद्र राशि |
+| Birth Star | जन्म नक्षत्र |
+| Pada | पाद |
+| Presiding deity | अधिष्ठाता देव |
+| Yoni · Animal Nature | योनि · पशु स्वभाव |
+| Varna · Temperament | वर्ण · स्वभाव |
+| Gana · Nature | गण · प्रकृति |
+| Nadi · Constitution | नाड़ी · प्रकृति |
+| The Stars' Closing Word | तारों का अंतिम संदेश |
+| Share with Friends | दोस्तों के साथ साझा करें |
+| Save to Gallery | गैलरी में सहेजें |
+| Try Another Pairing | दूसरी जोड़ी देखें |
+| ${r.a.name} ♥ ${r.b.name} — ${_fmt(r.total)}/36 guna on DivyaVaani | ${r.a.name} ♥ ${r.b.name} — DivyaVaani पर ${_fmt(r.total)}/36 गुण |
+| Could not share: $e | साझा नहीं किया जा सका: $e |
+| Saved to your gallery. | आपकी गैलरी में सहेजा गया। |
+| Saved to ${file.path} | यहाँ सहेजा गया: ${file.path} |
+| Could not save: ${e.type.message} | सहेजा नहीं जा सका: ${e.type.message} |
+| Could not save: $e | सहेजा नहीं जा सका: $e |
+| Generated with the DivyaVaani app | DivyaVaani ऐप से बनाया गया |
+
+## lib/features/astrology/milan_screen.dart  (12)
+
+| English | हिंदी |
+|---|---|
+| KUNDLI MILAN | कुंडली मिलान |
+| Compatibility Test | अनुकूलता परीक्षण |
+| Ashtakoot Guna Milan — the traditional 36-point Vedic test. | अष्टकूट गुण मिलान — पारंपरिक 36-गुण वैदिक परीक्षण। |
+| Use my Kundli for Side 1 | पक्ष 1 के लिए मेरी कुंडली लें |
+| Side 1 | पक्ष 1 |
+| Side 2 | पक्ष 2 |
+| Check Compatibility | अनुकूलता जांचें |
+| Accurate birth time is required for both people. | दोनों व्यक्तियों का सही जन्म समय आवश्यक है। |
+| From your Kundli | आपकी कुंडली से |
+| Full name | पूरा नाम |
+| Time in 24-hour format (e.g. 18:30). | समय 24-घंटे के प्रारूप में (जैसे 18:30)। |
+| Select city… | शहर चुनें… |
+
+## lib/features/bookmarks/bookmarks_screen.dart  (2)
+
+| English | हिंदी |
+|---|---|
+| Bookmarks | सहेजे गए |
+| Nothing saved yet. Tap 🔖 while reading to bookmark. | अभी तक कुछ सहेजा नहीं गया। पढ़ते समय 🔖 दबाएँ। |
+
+## lib/features/breathing/breathing_screen.dart  (4)
+
+| English | हिंदी |
+|---|---|
+| Breathing | प्राणायाम |
+| Ready? | तैयार? |
+| Stop | रोकें |
+| Begin | आरंभ करें |
+
+## lib/features/cosmos/cosmos_content.dart  (88)
+
+| English | हिंदी |
+|---|---|
+| Your Dasha | आपकी दशा |
+| Moon Transit | चंद्र गोचर |
+| Favourable & Tricky Hours | शुभ व अशुभ समय |
+| Transit Alert | गोचर सूचना |
+| Lucky Today | आज का शुभ |
+| Favourable | शुभ |
+| Avoid | अशुभ |
+| Colour | रंग |
+| Number | अंक |
+| Direction | दिशा |
+| Mantra | मंत्र |
+| Chant now | अभी जप करें |
+| The stars are with you today — go ahead and do it with confidence. | आज ग्रह आपके साथ हैं — भरोसे के साथ आगे बढ़ें। |
+| A mixed day — take it slow and pick the right moment. | आज दिन मिला-जुला है — धीरे चलें और सही मौका चुनें। |
+| A tough day — step carefully and stay away from big risks. | आज दिन थोड़ा कठिन है — संभलकर चलें और बड़े जोखिम से दूर रहें। |
+| Favourable | अनुकूल |
+| Mixed | मिश्रित |
+| Challenging | चुनौतीपूर्ण |
+| The Moon sits on your sign — your mind feels restless, so rest and take it easy. | चंद्र आपकी राशि पर है — मन थोड़ा बेचैन रहेगा, इसलिए आराम करें और सहज रहें। |
+| The Moon moves to your 2nd — family, food and money are on your mind today. | चंद्र आपके दूसरे भाव में है — आज परिवार, खान-पान और पैसे पर ध्यान रहेगा। |
+| The Moon moves to your 3rd — your courage and hard work pay off today. | चंद्र आपके तीसरे भाव में है — आज आपकी हिम्मत और मेहनत रंग लाएगी। |
+| The Moon moves to your 4th — home, comfort and your mother bring you warmth. | चंद्र आपके चौथे भाव में है — घर, सुख-चैन और माँ का प्यार आपको सुकून देंगे। |
+| The Moon moves to your 5th — creativity, love and children bring you joy. | चंद्र आपके पाँचवें भाव में है — रचनात्मकता, प्रेम और संतान का सुख मिलेगा। |
+| The Moon moves to your 6th — you get the better of rivals, but look after your health. | चंद्र आपके छठे भाव में है — विरोधियों पर भारी रहेंगे, पर सेहत का ध्यान रखें। |
+| The Moon moves to your 7th — partners, travel and people are all on your side. | चंद्र आपके सातवें भाव में है — जीवनसाथी, यात्रा और लोग सब आपके साथ रहेंगे। |
+| The Moon moves to your 8th — slow down, skip risks and give yourself time to think. | चंद्र आपके आठवें भाव में है — रफ्तार धीमी रखें, जोखिम टालें और सोच-विचार करें। |
+| The Moon moves to your 9th — luck, faith and learning are all with you. | चंद्र आपके नौवें भाव में है — भाग्य, आस्था और ज्ञान सब आपका साथ देंगे। |
+| The Moon moves to your 10th — a strong day for work and your good name. | चंद्र आपके दसवें भाव में है — काम और मान-सम्मान के लिए मजबूत दिन है। |
+| The Moon moves to your 11th — gains, friends and wishes coming true. | चंद्र आपके ग्यारहवें भाव में है — लाभ, दोस्त और मनचाही बातें पूरी होंगी। |
+| The Moon moves to your 12th — spending and quiet time; look within. | चंद्र आपके बारहवें भाव में है — खर्च और एकांत का समय; अपने भीतर झाँकें। |
+| General | सामान्य |
+| Love | प्रेम |
+| Career | करियर |
+| Health | स्वास्थ्य |
+| Money | धन |
+| Family | परिवार |
+| There is warmth in your relationships today — say how you feel, openly. | आज रिश्तों में गर्मजोशी है — जो दिल में है, खुलकर कह दें। |
+| Stay patient with the people you love; small misunderstandings will soon clear up. | अपनों के साथ थोड़ा सब्र रखें; छोटी-मोटी ग़लतफ़हमियाँ जल्दी दूर हो जाएँगी। |
+| Skip arguments in love today; give some space and just listen. | आज प्रेम में बहस से बचें; थोड़ी जगह दें और बस सुन लें। |
+| A strong day at work — your hard work gets noticed. | काम में मजबूत दिन — आज आपकी मेहनत पर सबकी नज़र जाएगी। |
+| Steady progress at work; take up one task at a time. | काम में लगातार तरक्की; एक बार में एक ही काम पर ध्यान दें। |
+| Work may get delayed; keep calm and avoid risky moves. | काम में देरी हो सकती है; शांत रहें और जोखिम भरे कदमों से बचें। |
+| Good energy and freshness today — a great day to stay active. | आज तन में अच्छी ऊर्जा और ताज़गी है — सक्रिय रहने के लिए बढ़िया दिन। |
+| Watch your daily routine; rest and light food will keep you well. | अपनी दिनचर्या का ध्यान रखें; आराम और हल्का खाना आपको ठीक रखेगा। |
+| Take it easy — avoid overdoing it and get plenty of rest. | आराम से चलें — खुद पर ज़्यादा ज़ोर न डालें और भरपूर आराम करें। |
+| Money is likely to come in; a good day to make decisions. | आज पैसा आने के योग हैं; फैसले लेने के लिए अच्छा दिन है। |
+| Spend carefully; put off big purchases for now. | सोच-समझकर खर्च करें; बड़ी खरीदारी अभी के लिए टाल दें। |
+| Protect your money; stay away from loans and risky bets today. | अपने पैसे को संभालें; आज कर्ज़ और जोखिम भरे दाँव से दूर रहें। |
+| Peace at home; spend some happy time with your family. | घर में शांति रहेगी; परिवार के साथ कुछ खुशी के पल बिताएँ। |
+| Give time to your family; small efforts will smooth everything over. | परिवार को समय दें; छोटे-छोटे प्रयास सब कुछ सुलझा देंगे। |
+| Staying patient with family will keep the peace today. | परिवार के साथ सब्र रखेंगे तो आज घर में तनाव नहीं होगा। |
+| A time for taking charge, standing tall and being seen. | आगे बढ़कर कमान संभालने, पहचान बनाने और चमकने का समय। |
+| A time for feelings, home and a sense of belonging. | भावनाओं, घर और अपनेपन का समय। |
+| A time for energy, courage and bold moves. | जोश, हिम्मत और साहसी कदमों का समय। |
+| A time for smart thinking, good talk and business. | तेज़ दिमाग, अच्छी बातचीत और कारोबार का समय। |
+| A time for growth, good sense and blessings. | तरक्की, समझदारी और आशीर्वाद का समय। |
+| A time for love, beauty and comfort. | प्यार, सुंदरता और सुख-चैन का समय। |
+| A time for discipline, patience and work that lasts. | अनुशासन, धैर्य और टिकाऊ मेहनत का समय। |
+| A time for big dreams, new things and sudden turns. | बड़े सपनों, नई चीज़ों और अचानक बदलावों का समय। |
+| A time for letting go and looking within. | मोह छोड़ने और अपने भीतर झाँकने का समय। |
+| Your Shani Sade Sati is just starting — new responsibilities and a slower pace begin now. | आपकी शनि साढ़े साती अभी शुरू हो रही है — अब नई जिम्मेदारियाँ आएँगी और रफ्तार धीमी रहेगी। |
+| Your Shani Sade Sati is at its peak — patience and honest hard work are what protect you. | आपकी शनि साढ़े साती अपने चरम पर है — धैर्य और सच्ची मेहनत ही आपकी ढाल है। |
+| Your Shani Sade Sati is winding down — the hardest part is now passing. | आपकी शनि साढ़े साती अब उतार पर है — सबसे कठिन दौर बीत रहा है। |
+| Read the Hanuman Chalisa on Saturdays, and help elders and working people. | शनिवार को हनुमान चालीसा पढ़ें, और बुज़ुर्गों व मेहनतकश लोगों की मदद करें। |
+| Saffron & Gold | केसरी व स्वर्ण |
+| White & Silver | श्वेत व रजत |
+| Red & Coral | लाल व मूँगा |
+| Green | हरा |
+| Yellow & Gold | पीला व स्वर्ण |
+| White & Pink | श्वेत व गुलाबी |
+| Blue & Black | नीला व काला |
+| Smoky Grey | धूम्र |
+| Brown & Grey | भूरा व धूसर |
+| East | पूर्व |
+| North-West | वायव्य |
+| South | दक्षिण |
+| North | उत्तर |
+| North-East | ईशान |
+| South-East | आग्नेय |
+| West | पश्चिम |
+| South-West | नैऋत्य |
+| Centre | केंद्र |
+| See your day through your own stars | अपने सितारों से अपना दिन देखें |
+| Add your birth details to unlock a reading made just for you — your dasha, moon transit, lucky signs and the day ahead. | सिर्फ़ आपके लिए बना राशिफल पाने के लिए अपनी जन्म जानकारी जोड़ें — आपकी दशा, चंद्र गोचर, शुभ संकेत और आने वाला दिन। |
+| Create your chart | अपनी कुंडली बनाएं |
+| Find out your next lucky day | जानें आपका अगला शुभ दिन कौन-सा है |
+| Unlock with Kamal | कमल से अनलॉक करें |
+| Not enough Kamal yet | पर्याप्त कमल नहीं |
+
+## lib/features/cosmos/cosmos_screen.dart  (3)
+
+| English | हिंदी |
+|---|---|
+| Rashifal | राशिफल |
+| Your personalized reading | आपका व्यक्तिगत राशिफल |
+| until $until | $until तक |
+
+## lib/features/devotional/lyrics_list_screen.dart  (3)
+
+| English | हिंदी |
+|---|---|
+| Chalisa | चालीसा |
+| All | सभी |
+| Search title or deity… | शीर्षक या देवता से खोजें… |
+
+## lib/features/devotional/mantra_reader_screen.dart  (4)
+
+| English | हिंदी |
+|---|---|
+| हिं | EN |
+| Meaning | अर्थ |
+| Significance | महत्व |
+| How to chant | कैसे जप करें |
+
+## lib/features/devotional/mantras_list_screen.dart  (2)
+
+| English | हिंदी |
+|---|---|
+| All | सभी |
+| Search title or deity… | शीर्षक या देवता से खोजें… |
+
+## lib/features/habits/habits_screen.dart  (3)
+
+| English | हिंदी |
+|---|---|
+| Daily Sadhana | दैनिक साधना |
+| See you again tomorrow. | कल फिर मिलते हैं। |
+| Small challenges, big change | छोटी चुनौतियाँ, बड़ा बदलाव |
+
+## lib/features/home/home_screen.dart  (52)
+
+| English | हिंदी |
+|---|---|
+| Engage & Learn | अभ्यास और ज्ञान |
+| Quiz | प्रश्नोत्तरी |
+| Japa | जप |
+| Breathing | प्राणायाम |
+| Riddles | पहेलियाँ |
+| Scriptures | ग्रंथ |
+| Bhagavad Gita | भगवद्गीता |
+| Ramayana | रामायण |
+| Upanishads | उपनिषद् |
+| Spiritual Enlightenment | आध्यात्मिक ज्ञान |
+| Mantras | मंत्र |
+| Sacred chants | पवित्र जाप |
+| Aartis | आरती |
+| Devotional songs | भक्ति गान |
+| Puja Vidhi | पूजा विधि |
+| Festivals • Vrat • Sanskaras • Step-by-step | त्योहार • व्रत • संस्कार • चरण-दर-चरण |
+| Habits | आदतें |
+| Small challenges, big change | छोटी चुनौतियाँ, बड़ा बदलाव |
+| Stories | कथाएँ |
+| Discover Your Soul Path | अपना आध्यात्मिक मार्ग जानें |
+| Personality test · 8 questions | व्यक्तित्व परीक्षण · 8 प्रश्न |
+| DID YOU KNOW? | क्या आप जानते हैं? |
+| Loading facts… | रोचक तथ्य लोड हो रहे… |
+| Shuffle | नया तथ्य |
+| Waxing | शुक्ल पक्ष |
+| Waning | कृष्ण पक्ष |
+| Tithi | तिथि |
+| Nakshatra | नक्षत्र |
+| Yoga | योग |
+| Karana | करण |
+| Rahu Kaal | राहु काल |
+| Sunrise | सूर्योदय |
+| Sunset | सूर्यास्त |
+| View Panchang | पंचांग देखें |
+| Full Calendar | पूर्ण कैलेंडर |
+| all day | पूरे दिन |
+| till | तक |
+| WIDGET | विजेट |
+| Add to home | होम पर जोड़ें |
+| Could not load content: $message | सामग्री लोड नहीं हो सकी: $message |
+| Jan | जन |
+| Feb | फ़र |
+| Mar | मार्च |
+| Apr | अप्रैल |
+| May | मई |
+| Jun | जून |
+| Jul | जुल |
+| Aug | अग |
+| Sep | सित |
+| Oct | अक्तू |
+| Nov | नव |
+| Dec | दिस |
+
+## lib/features/hubs/jyotish_hub_screen.dart  (18)
+
+| English | हिंदी |
+|---|---|
+| NEW | नया |
+| OPEN | खुला |
+| Birth Kundli | जन्म कुंडली |
+| Planets, houses, D1 & D9, dashas, yogas & doshas | ग्रह, भाव, D1 और D9, दशाएँ, योग और दोष |
+| Create Kundli | कुंडली बनाएं |
+| Open Kundli | कुंडली खोलें |
+| KUNDLI MILAN | कुंडली मिलान |
+| Compatibility Test | अनुकूलता परीक्षण |
+| Ashtakoot Guna Milan — 36-point match between two charts | अष्टकूट गुण मिलान — दो कुंडलियों के बीच 36 अंकों का मिलान |
+| Match Pair | मिलान करें |
+| All calculations use Lahiri ayanamsa (Vedic / sidereal). | सभी गणनाएँ लाहिरी अयनांश (वैदिक / निरयन) पर आधारित हैं। |
+| JYOTISH | ज्योतिष |
+| Your Cosmic Story | आपकी ज्योतिष गाथा |
+| Birth chart · Dasha · Yogas · Doshas · Compatibility | जन्म कुंडली · दशा · योग · दोष · अनुकूलता |
+| YOUR CHART | आपकी कुंडली |
+| Lagna | लग्न |
+| Moon | चंद्र |
+| Nakshatra | नक्षत्र |
+
+## lib/features/hubs/profile_screen.dart  (13)
+
+| English | हिंदी |
+|---|---|
+| Namaste, $name | नमस्ते, $name |
+| Day streak | दिन की श्रृंखला |
+| Punya | पुण्य |
+| Kamal | कमल |
+| Bookmarks | सहेजे गए |
+| $bookmarkCount saved | $bookmarkCount सहेजे गए |
+| How Punya & Kamal work | पुण्य और कमल कैसे काम करते हैं |
+| Punya — your merit | पुण्य — आपकी साधना का पुण्य |
+| Earned from every practice and never spent — your lifetime score. | हर अभ्यास से अर्जित होता है और कभी घटता नहीं। यह आपकी आजीवन साधना का अंक है। |
+| Kamal — your currency | कमल — आपकी मुद्रा |
+| Earned alongside Punya. Spend it in Rashifal to unlock deeper daily readings. | पुण्य के साथ अर्जित होता है। राशिफल में गहरी दैनिक भविष्यवाणी अनलॉक करने में व्यय करें। |
+| How to earn | कैसे कमाएँ |
+| Daily visit +5 · a japa mala +10 · a habit +2 · quiz / personality +5 | दैनिक भ्रमण +5 · एक माला जप +10 · आदत +2 · प्रश्नोत्तरी/व्यक्तित्व +5 |
+
+## lib/features/japa/japa_screen.dart  (19)
+
+| English | हिंदी |
+|---|---|
+| Japa | जप |
+| Reset round | माला रीसेट |
+| Log offline | ऑफ़लाइन जोड़ें |
+| Today | आज |
+| Total | कुल जप |
+| Current streak | वर्तमान श्रृंखला |
+| ${japa.currentStreak}d | ${japa.currentStreak} दिन |
+| Longest | सबसे लंबी |
+| ${japa.longestStreak}d | ${japa.longestStreak} दिन |
+| Your practice rhythm | साधना का ताल |
+| Tap the mala · one chant per bead | माला को स्पर्श करें · हर मनके पर एक जप |
+| Log offline japa | ऑफ़लाइन जप जोड़ें |
+| Add chants you completed away from the app. | ऐप के बाहर किए गए जप की संख्या जोड़ें। |
+| Count | संख्या |
+| Cancel | रद्द |
+| Add | जोड़ें |
+| Added $n chants | $n जप जोड़े गए |
+| of ${JapaController.mala} · ${japa.malas} malas | ${JapaController.mala} में से · ${japa.malas} माला |
+| Reward unlocked at $next malas | $next माला पर अगला पुरस्कार |
+
+## lib/features/onboarding/onboarding_screen.dart  (9)
+
+| English | हिंदी |
+|---|---|
+| Skip | छोड़ें |
+| Get Started | आरंभ करें |
+| Continue | आगे |
+| Choose your language | अपनी भाषा चुनें |
+| What should we call you? | हम आपको क्या कहें? |
+| So your practice feels like your own. | ताकि आपकी साधना आपकी अपनी लगे। |
+| Your name | आपका नाम |
+| Choose your Ishta Devata | अपने इष्ट देव चुनें |
+| For your personal worship. You can change this later. | आपकी व्यक्तिगत आराधना के लिए। बाद में बदल सकते हैं। |
+
+## lib/features/panchang/calendar_screen.dart  (1)
+
+| English | हिंदी |
+|---|---|
+| Hindu Panchang | हिंदू पंचांग |
+
+## lib/features/panchang/festivals.dart  (7)
+
+| English | हिंदी |
+|---|---|
+| Ekadashi | एकादशी |
+| Purnima | पूर्णिमा |
+| Amavasya | अमावस्या |
+| Vinayaka Chaturthi | विनायक चतुर्थी |
+| Sankashti Chaturthi | संकष्टी चतुर्थी |
+| Pradosh Vrat | प्रदोष व्रत |
+| Durga Ashtami | दुर्गा अष्टमी |
+
+## lib/features/panchang/panchang_names.dart  (131)
+
+| English | हिंदी |
+|---|---|
+| Pratipada | प्रतिपदा |
+| Dwitiya | द्वितीया |
+| Tritiya | तृतीया |
+| Chaturthi | चतुर्थी |
+| Panchami | पंचमी |
+| Shashthi | षष्ठी |
+| Saptami | सप्तमी |
+| Ashtami | अष्टमी |
+| Navami | नवमी |
+| Dashami | दशमी |
+| Ekadashi | एकादशी |
+| Dwadashi | द्वादशी |
+| Trayodashi | त्रयोदशी |
+| Chaturdashi | चतुर्दशी |
+| Purnima | पूर्णिमा |
+| Amavasya | अमावस्या |
+| Ashwini | अश्विनी |
+| Bharani | भरणी |
+| Krittika | कृत्तिका |
+| Rohini | रोहिणी |
+| Mrigashira | मृगशिरा |
+| Ardra | आर्द्रा |
+| Punarvasu | पुनर्वसु |
+| Pushya | पुष्य |
+| Ashlesha | आश्लेषा |
+| Magha | मघा |
+| Purva Phalguni | पूर्वा फाल्गुनी |
+| Uttara Phalguni | उत्तरा फाल्गुनी |
+| Hasta | हस्त |
+| Chitra | चित्रा |
+| Swati | स्वाति |
+| Vishakha | विशाखा |
+| Anuradha | अनुराधा |
+| Jyeshtha | ज्येष्ठा |
+| Mula | मूल |
+| Purva Ashadha | पूर्वाषाढ़ा |
+| Uttara Ashadha | उत्तराषाढ़ा |
+| Shravana | श्रवण |
+| Dhanishta | धनिष्ठा |
+| Shatabhisha | शतभिषा |
+| Purva Bhadrapada | पूर्वाभाद्रपद |
+| Uttara Bhadrapada | उत्तराभाद्रपद |
+| Revati | रेवती |
+| Vishkumbha | विष्कुम्भ |
+| Priti | प्रीति |
+| Ayushman | आयुष्मान |
+| Saubhagya | सौभाग्य |
+| Shobhana | शोभन |
+| Atiganda | अतिगण्ड |
+| Sukarma | सुकर्मा |
+| Dhriti | धृति |
+| Shula | शूल |
+| Ganda | गण्ड |
+| Vriddhi | वृद्धि |
+| Dhruva | ध्रुव |
+| Vyaghata | व्याघात |
+| Harshana | हर्षण |
+| Vajra | वज्र |
+| Siddhi | सिद्धि |
+| Vyatipata | व्यतीपात |
+| Variyana | वरीयान |
+| Parigha | परिघ |
+| Shiva | शिव |
+| Siddha | सिद्ध |
+| Sadhya | साध्य |
+| Shubha | शुभ |
+| Shukla | शुक्ल |
+| Brahma | ब्रह्म |
+| Indra | इन्द्र |
+| Vaidhriti | वैधृति |
+| Bava | बव |
+| Balava | बालव |
+| Kaulava | कौलव |
+| Taitila | तैतिल |
+| Gara | गर |
+| Vanija | वणिज |
+| Vishti | विष्टि |
+| Kimstughna | किंस्तुघ्न |
+| Shakuni | शकुनि |
+| Chatushpada | चतुष्पाद |
+| Naga | नाग |
+| Ravivara | रविवार |
+| Somavara | सोमवार |
+| Mangalavara | मंगलवार |
+| Budhavara | बुधवार |
+| Guruvara | गुरुवार |
+| Shukravara | शुक्रवार |
+| Shanivara | शनिवार |
+| Chaitra | चैत्र |
+| Vaishakha | वैशाख |
+| Jyeshtha | ज्येष्ठ |
+| Ashadha | आषाढ़ |
+| Shravana | श्रावण |
+| Bhadrapada | भाद्रपद |
+| Ashwina | आश्विन |
+| Kartika | कार्तिक |
+| Margashirsha | मार्गशीर्ष |
+| Pausha | पौष |
+| Magha | माघ |
+| Phalguna | फाल्गुन |
+| Shukla Paksha | शुक्ल पक्ष |
+| Krishna Paksha | कृष्ण पक्ष |
+| Papamochani | पापमोचनी |
+| Varuthini | वरुथिनी |
+| Apara | अपरा |
+| Yogini | योगिनी |
+| Kamika | कामिका |
+| Aja | अजा |
+| Indira | इन्दिरा |
+| Rama | रमा |
+| Utpanna | उत्पन्ना |
+| Saphala | सफला |
+| Shattila | षटतिला |
+| Vijaya | विजया |
+| Kamada | कामदा |
+| Mohini | मोहिनी |
+| Nirjala | निर्जला |
+| Devshayani | देवशयनी |
+| Shravana Putrada | श्रावण पुत्रदा |
+| Parivartini | परिवर्तिनी |
+| Papankusha | पापांकुशा |
+| Prabodhini | प्रबोधिनी |
+| Mokshada | मोक्षदा |
+| Pausha Putrada | पौष पुत्रदा |
+| Jaya | जया |
+| Amalaki | आमलकी |
+| Rahu Kaal | राहु काल |
+| Yamaganda | यमगण्ड |
+| Gulika Kaal | गुलिक काल |
+| Abhijit Muhurat | अभिजित मुहूर्त |
+| Brahma Muhurat | ब्रह्म मुहूर्त |
+
+## lib/features/panchang/panchang_screen.dart  (20)
+
+| English | हिंदी |
+|---|---|
+| Panchang | पंचांग |
+| Full Calendar | पूरा कैलेंडर |
+| Purnimanta | पूर्णिमांत |
+| Amanta | अमांत |
+| Ekadashi | एकादशी |
+| Month | मास |
+| Paksha | पक्ष |
+| Vara | वार |
+| Tithi | तिथि |
+| Nakshatra | नक्षत्र |
+| Yoga | योग |
+| Karana | करण |
+| Sunrise | सूर्योदय |
+| Sunset | सूर्यास्त |
+| Moonrise | चंद्रोदय |
+| Moonset | चंद्रास्त |
+| Auspicious Muhurat | शुभ मुहूर्त |
+| Inauspicious | अशुभ काल |
+| until | तक |
+| Rest of the day | शेष दिन |
+
+## lib/features/personality/personality_screen.dart  (8)
+
+| English | हिंदी |
+|---|---|
+| Soul Path | व्यक्तित्व |
+| Discover Your Soul Path | अपना आध्यात्मिक मार्ग जानें |
+| 8 quick questions reveal which of the four paths of yoga is yours. | 8 सरल प्रश्न — जानें कि योग के चार मार्गों में से कौन-सा आपका है। |
+| Begin | आरंभ करें |
+| YOUR PATH | आपका मार्ग |
+| Suggested practices | सुझाई गई साधना |
+| Your deity affinity: ${a.deity} | आपकी देव-आत्मीयता: ${a.deity} |
+| Retake the test | फिर से करें |
+
+## lib/features/puja/puja_detail_screen.dart  (3)
+
+| English | हिंदी |
+|---|---|
+| When to perform | कब करें |
+| Samagri (items) | सामग्री |
+| Vidhi (steps) | विधि |
+
+## lib/features/puja/puja_list_screen.dart  (2)
+
+| English | हिंदी |
+|---|---|
+| Puja Vidhi | पूजा विधि |
+| No guides | कोई विधि नहीं |
+
+## lib/features/quiz/quiz_hub_screen.dart  (3)
+
+| English | हिंदी |
+|---|---|
+| Knowledge Quiz | ज्ञान प्रश्नोत्तरी |
+| Riddles | पहेलियाँ |
+| Trivia | रोचक तथ्य |
+
+## lib/features/quiz/quiz_play_screen.dart  (8)
+
+| English | हिंदी |
+|---|---|
+| Your score | आपके अंक |
+| $score / $total correct | $total में से $score सही |
+| Done | पूर्ण |
+| Play again | फिर से खेलें |
+| Knowledge Quiz | ज्ञान प्रश्नोत्तरी |
+| Question ${index + 1} of $total · Score $score | प्रश्न ${index + 1} / $total · अंक $score |
+| Finish | समाप्त |
+| Next | अगला |
+
+## lib/features/quiz/riddles_screen.dart  (6)
+
+| English | हिंदी |
+|---|---|
+| Riddles | पहेलियाँ |
+| No riddles | कोई पहेली नहीं |
+| Who am I? | मैं कौन हूँ? |
+| Next clue (${clues.length - shown} left) | अगला संकेत (${clues.length - shown}) |
+| Next | अगली |
+| Reveal answer | उत्तर दिखाएँ |
+
+## lib/features/quiz/trivia_screen.dart  (1)
+
+| English | हिंदी |
+|---|---|
+| Trivia | रोचक तथ्य |
+
+## lib/features/stories/stories_screen.dart  (1)
+
+| English | हिंदी |
+|---|---|
+| All | सभी |
+
+## lib/features/stories/story_reader_screen.dart  (1)
+
+| English | हिंदी |
+|---|---|
+| हिं | EN |
+
+## lib/features/temples/temple_detail_screen.dart  (43)
+
+| English | हिंदी |
+|---|---|
+| Marked as visited ✓ | गए हुए के रूप में चिह्नित ✓ |
+| Mark as visited | गए हुए के रूप में चिह्नित करें |
+| About | परिचय |
+| About the temple | मंदिर के बारे में |
+| Key facts | मुख्य तथ्य |
+| Deity | देवता |
+| Also known as | अन्य नाम |
+| Founded / built | स्थापना |
+| Architecture | वास्तुकला |
+| Timings | समय |
+| Darshan | दर्शन |
+| Temple open | मंदिर खुला |
+| When to go | कब जाएँ |
+| Best season | सर्वोत्तम समय |
+| Best time of day | दिन का समय |
+| Weather | मौसम |
+| Links | लिंक |
+| Travel | यात्रा |
+| Getting there | पहुँचना |
+| Nearest railway | निकटतम रेलवे |
+| Nearest airport | निकटतम हवाई अड्डा |
+| Bus stand | बस स्टैंड |
+| Local transport | स्थानीय परिवहन |
+| Parking | पार्किंग |
+| Location | स्थान |
+| Address | पता |
+| Nearby | आस-पास |
+| Coordinates | निर्देशांक |
+| Festivals | उत्सव |
+| Entry / fees | प्रवेश शुल्क |
+| Dress code | वेशभूषा |
+| Photography | फ़ोटोग्राफ़ी |
+| Good to know | जानने योग्य |
+| Open in Maps | नक्शे में खोलें |
+| Established | स्थापना |
+| Entry | प्रवेश |
+| Free | नि:शुल्क |
+| Paid | सशुल्क |
+| Best time | सर्वोत्तम |
+| State | राज्य |
+| Aarti Schedule | आरती अनुसूची |
+| Official website | वेबसाइट |
+| Helpline | हेल्पलाइन |
+
+## lib/features/temples/temples_screen.dart  (14)
+
+| English | हिंदी |
+|---|---|
+| No temples | कोई मंदिर नहीं |
+| Nothing found | कुछ नहीं मिला |
+| Temple Directory | मंदिर निर्देशिका |
+| $count temples · across India | $count मंदिर · भारत भर में |
+| Search temples, deities, locations… | मंदिर, देवता, स्थान खोजें… |
+| Visited | गए हुए |
+| Established | स्थापना |
+| Entry | प्रवेश |
+| Free | नि:शुल्क |
+| Paid | सशुल्क |
+| Best time | सर्वोत्तम |
+| Map | नक्शा |
+| Visited | गए |
+| Mark Visited | चिह्नित करें |
+
+## lib/features/widgets/home_widgets.dart  (8)
+
+| English | हिंदी |
+|---|---|
+| PANCHANG | पंचांग |
+| RISE | उदय |
+| SET | अस्त |
+| TITHI | तिथि |
+| NAKSHATRA | नक्षत्र |
+| YOGA | योग |
+| KARANA | करण |
+| VERSE OF THE DAY | आज का श्लोक |
+
+## lib/shared/widgets/daily_quote_card.dart  (2)
+
+| English | हिंदी |
+|---|---|
+| Removed from bookmarks | सहेजे गए से हटाया |
+| Saved to bookmarks | सहेजा गया |

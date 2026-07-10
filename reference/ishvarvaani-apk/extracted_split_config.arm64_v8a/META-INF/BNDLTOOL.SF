@@ -1,0 +1,56 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA1-Digest-Manifest: 5bNakVWdFNbIDm6ouXzbRBvFWWo=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA1-Digest: AUFcWCBOWsqE9UumQQGmHo2CbmE=
+
+Name: lib/arm64-v8a/libappmodules.so
+SHA1-Digest: HmYojTRs+wPFWyBpX1vKyGHnst4=
+
+Name: lib/arm64-v8a/libc++_shared.so
+SHA1-Digest: C7YomLhlo946qSaie92ncc791Ec=
+
+Name: lib/arm64-v8a/libfbjni.so
+SHA1-Digest: i9xoA3YpxN2DOCZk57/KXjoQRnA=
+
+Name: lib/arm64-v8a/libhermestooling.so
+SHA1-Digest: 9Hut8AgDvI7Bl0eUS+H6s41Wd6w=
+
+Name: lib/arm64-v8a/libhermesvm.so
+SHA1-Digest: Rl3Hbqa/fyfZNm1KhZrZ555p4mk=
+
+Name: lib/arm64-v8a/libimagepipeline.so
+SHA1-Digest: oSKgBFxTd/PJl74v1HGclOTbMoA=
+
+Name: lib/arm64-v8a/libjsi.so
+SHA1-Digest: JSTAZkjklcHlX7xorSFhWFu+ycI=
+
+Name: lib/arm64-v8a/libnative-filters.so
+SHA1-Digest: R/qKcsDmbHcC8paP8Y1VN4xHDSs=
+
+Name: lib/arm64-v8a/libnative-imagetranscoder.so
+SHA1-Digest: srPgUs1EYRaDzp5vzYVV7EPzHyw=
+
+Name: lib/arm64-v8a/libop-sqlite.so
+SHA1-Digest: XoSR5O9lPl1Zr4+/9GgmEbDfukM=
+
+Name: lib/arm64-v8a/libreact_codegen_rnscreens.so
+SHA1-Digest: TBDAPEy0phNg1BPQqqPQ7C2wU7Y=
+
+Name: lib/arm64-v8a/libreact_codegen_rnsvg.so
+SHA1-Digest: YWsOffMpTcCskgMVK/HkAnTv9BQ=
+
+Name: lib/arm64-v8a/libreact_codegen_safeareacontext.so
+SHA1-Digest: PlXRTxKYbsk5mpu7MV0FPaqBo8w=
+
+Name: lib/arm64-v8a/libreactnative.so
+SHA1-Digest: wS5u3RSCzfR5KhXRLgC+Ye78GTE=
+
+Name: lib/arm64-v8a/librnscreens.so
+SHA1-Digest: aor0MR4gCng44Ms9goAJcGh/d7c=
+
+Name: stamp-cert-sha256
+SHA1-Digest: Bs40BvDZ1xrbgQrPTD2x5w/NfHQ=
+

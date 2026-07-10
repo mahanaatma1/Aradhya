@@ -1,0 +1,53 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: U8Vn6CM83/yxTAYb/ATgb/GAT9Q=
+
+Name: lib/arm64-v8a/libappmodules.so
+SHA1-Digest: UYrBY4NHntgdJkEey68sttlm2ps=
+
+Name: lib/arm64-v8a/libc++_shared.so
+SHA1-Digest: mOq8HfMIfNFxLcT30TyWfyGiEPw=
+
+Name: lib/arm64-v8a/libfbjni.so
+SHA1-Digest: 3hDzGuVJ7LFnggM3ryQNM1uuhSk=
+
+Name: lib/arm64-v8a/libhermestooling.so
+SHA1-Digest: PaYqbBe9sM71/kpkGapyD90Iu4U=
+
+Name: lib/arm64-v8a/libhermesvm.so
+SHA1-Digest: QROMeYq6zmoXoTcf4wCnaFBxWtg=
+
+Name: lib/arm64-v8a/libimagepipeline.so
+SHA1-Digest: LtlfqFTkjPFfgZe+mTUtJxWlMmw=
+
+Name: lib/arm64-v8a/libjsi.so
+SHA1-Digest: 0nGEmE/8kYPv9uGNRuU80ey4RUc=
+
+Name: lib/arm64-v8a/libnative-filters.so
+SHA1-Digest: Ob2fvlKeyLd/Lb9WyFFazB6717o=
+
+Name: lib/arm64-v8a/libnative-imagetranscoder.so
+SHA1-Digest: rSKsbS6I7fI7WOGrLI/Agc1ZveQ=
+
+Name: lib/arm64-v8a/libop-sqlite.so
+SHA1-Digest: mjs4wE1aDzbu/lKrl+++rQq+6CM=
+
+Name: lib/arm64-v8a/libreact_codegen_rnscreens.so
+SHA1-Digest: 7xGzPdelAFx4Z3KUUS21NkradMI=
+
+Name: lib/arm64-v8a/libreact_codegen_rnsvg.so
+SHA1-Digest: Rs102bVSLxcIg0s094IKdxVeWPI=
+
+Name: lib/arm64-v8a/libreact_codegen_safeareacontext.so
+SHA1-Digest: 8vRSyGVreiRhufug0XrjZONcKsc=
+
+Name: lib/arm64-v8a/libreactnative.so
+SHA1-Digest: EZiK7Y1buC3Lm/gkZzwOEGQIkgI=
+
+Name: lib/arm64-v8a/librnscreens.so
+SHA1-Digest: R2kiTmxIkk+urfM0HhM7Vm6qhgo=
+
+Name: stamp-cert-sha256
+SHA1-Digest: 5vTkm69vqAbusD/fho7oWwc7j+I=
+

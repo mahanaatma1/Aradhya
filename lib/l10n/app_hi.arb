@@ -1,0 +1,19 @@
+{
+  "@@locale": "hi",
+  "appName": "आराध्य",
+  "verseOfTheDay": "आज का श्लोक",
+  "explore": "अन्वेषण करें",
+  "streakDays": "{count} दिन की लय",
+  "catScriptures": "ग्रंथ",
+  "catAartis": "आरती",
+  "catMantras": "मंत्र",
+  "catQuiz": "प्रश्न",
+  "catAstrology": "ज्योतिष",
+  "catPanchang": "पंचांग",
+  "catKatha": "कथा",
+  "catPersonality": "व्यक्तित्व",
+  "catTemples": "मंदिर",
+  "comingSoon": "जल्द आ रहा है",
+  "settings": "सेटिंग्स",
+  "language": "भाषा"
+}
