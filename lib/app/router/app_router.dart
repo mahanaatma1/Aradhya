@@ -7,6 +7,15 @@ import '../../features/devotional/lyrics_reader_screen.dart';
 import '../../features/devotional/mantra_reader_screen.dart';
 import '../../features/devotional/mantras_list_screen.dart';
 import '../../features/home/home_screen.dart';
+import '../../features/gyan/entity_detail_screen.dart';
+import '../../features/gyan/family_tree_screen.dart';
+import '../../features/gyan/knowledge_graph_screen.dart';
+import '../../features/gyan/entity_list_screen.dart';
+import '../../features/gyan/gyan_hub_screen.dart';
+import '../../features/journal/journal_editor_screen.dart';
+import '../../features/journal/journal_screen.dart';
+import '../../features/journey/journey_detail_screen.dart';
+import '../../features/journey/journey_list_screen.dart';
 import '../../features/hubs/jyotish_hub_screen.dart';
 import '../../features/hubs/profile_screen.dart';
 import '../../features/astrology/ashtakoot.dart';
@@ -32,6 +41,8 @@ import '../../features/quiz/riddles_screen.dart';
 import '../../features/quiz/trivia_screen.dart';
 import '../../features/scriptures/scripture_books_screen.dart';
 import '../../features/scriptures/scriptures_list_screen.dart';
+import '../../features/search/result_loader.dart';
+import '../../features/search/search_screen.dart';
 import '../../features/scriptures/section_reader_screen.dart';
 import '../../features/splash/splash_screen.dart';
 import '../../features/stories/stories_screen.dart';
@@ -48,6 +59,11 @@ bool gOnboarded = false;
 
 int _intParam(GoRouterState state, String key) =>
     int.tryParse(state.pathParameters[key] ?? '') ?? 0;
+
+/// `?id=` for routes reachable both in-app (with `extra`) and from a search
+/// result or deep link (id only). Returns null when absent.
+int? _idQuery(GoRouterState state) =>
+    int.tryParse(state.uri.queryParameters['id'] ?? '');
 
 /// App router: a persistent 5-tab shell (Home · Rashifal · Astrology · Yatra · You)
 /// with all content opening as full-screen routes over the nav bar.
@@ -85,6 +101,95 @@ final appRouter = GoRouter(
       ],
     ),
 
+    // ---- Universal search ----
+    // Pushed over the shell, not a tab: five tabs already crowd the Hindi
+    // labels, and search is a verb rather than a destination. `?q=` lets home
+    // widgets and future deep links open it pre-filled.
+    GoRoute(
+      path: '/search',
+      builder: (context, state) =>
+          SearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
+    ),
+
+    // ---- Gyan hub ----
+    // Module screens are registered as they land; the hub itself ships first so
+    // the coming-soon tiles are visible and honest about what exists.
+    GoRoute(
+      path: '/gyan',
+      builder: (c, s) => const GyanHubScreen(),
+      routes: [
+        // One detail screen for every entity kind — deity, rishi, astra,
+        // symbol, place. Search results and related-rail cards land here.
+        GoRoute(
+          path: 'graph',
+          builder: (c, s) => KnowledgeGraphScreen(
+              focusId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
+        ),
+        // Lineage is a PROJECTION of relations, not its own dataset — the
+        // route takes an optional root and offers a picker without one.
+        GoRoute(
+          path: 'lineage',
+          builder: (c, s) => FamilyTreeScreen(
+              rootId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
+        ),
+        GoRoute(
+          path: 'entity/:entityId',
+          builder: (c, s) =>
+              EntityDetailScreen(entityId: _intParam(s, 'entityId')),
+        ),
+        // The encyclopedias: same data, same navigation, kind-specific layout.
+        GoRoute(
+          path: 'rishis',
+          builder: (c, s) => const EntityListScreen(
+              kind: 'rishi', titleEn: 'Rishis', titleHi: 'ऋषि'),
+        ),
+        GoRoute(
+          path: 'astras',
+          builder: (c, s) => const EntityListScreen(
+              kind: 'weapon', titleEn: 'Ancient Astras', titleHi: 'प्राचीन अस्त्र'),
+        ),
+        GoRoute(
+          path: 'symbols',
+          builder: (c, s) => const EntityListScreen(
+              kind: 'symbol', titleEn: 'Symbols', titleHi: 'प्रतीक'),
+        ),
+        GoRoute(
+          path: 'deities',
+          builder: (c, s) => const EntityListScreen(
+              kind: 'deity', titleEn: 'Deities', titleHi: 'देवता'),
+        ),
+      ],
+    ),
+
+    // ---- Karma Journal (personal — surfaced from You) ----
+    GoRoute(
+      path: '/journal',
+      builder: (c, s) => const JournalScreen(),
+      routes: [
+        GoRoute(path: 'new', builder: (c, s) => const JournalEditorScreen()),
+        GoRoute(
+          path: 'entry/:entryId',
+          builder: (c, s) =>
+              JournalEditorScreen(entryId: _intParam(s, 'entryId')),
+        ),
+      ],
+    ),
+
+    // ---- Knowledge Journeys ----
+    // Curated paths over content that already exists, so this ships before any
+    // new module does.
+    GoRoute(
+      path: '/journey',
+      builder: (c, s) => const JourneyListScreen(),
+      routes: [
+        GoRoute(
+          path: ':pathId',
+          builder: (c, s) =>
+              JourneyDetailScreen(pathId: _intParam(s, 'pathId')),
+        ),
+      ],
+    ),
+
     // ---- Content routes (pushed over the shell) ----
 
     // Scriptures
@@ -92,6 +197,20 @@ final appRouter = GoRouter(
       path: '/scriptures',
       builder: (context, state) => const ScripturesListScreen(),
       routes: [
+        // Book-only deep link: `/scriptures/book/<bookId>`.
+        //
+        // Declared BEFORE ':scriptureId' so the literal segment wins the match.
+        // Bookmarked shlokas store only a bookId — they were pushing this exact
+        // path while the router knew nothing about it, which landed the user on
+        // GoRouter's "no routes for location" error page. The reader only ever
+        // needed bookId, so this is a real route rather than a redirect.
+        GoRoute(
+          path: 'book/:bookId',
+          builder: (context, state) => SectionReaderScreen(
+            bookId: _intParam(state, 'bookId'),
+            initialIndex: state.extra is int ? state.extra as int : 0,
+          ),
+        ),
         GoRoute(
           path: ':scriptureId',
           builder: (context, state) =>
@@ -118,14 +237,40 @@ final appRouter = GoRouter(
         builder: (c, s) => const LyricsListScreen(kind: LyricsKind.chalisas)),
     GoRoute(path: '/mantras', builder: (c, s) => const MantrasListScreen()),
     GoRoute(
-        path: '/read-lyrics',
-        builder: (c, s) {
-          final (item, kind) = s.extra as (DevotionalItem, LyricsKind);
-          return LyricsReaderScreen(item: item, kind: kind);
-        }),
+      path: '/read-lyrics',
+      builder: (c, s) {
+        final extra = s.extra;
+        if (extra is (DevotionalItem, LyricsKind)) {
+          return LyricsReaderScreen(item: extra.$1, kind: extra.$2);
+        }
+        final id = _idQuery(s);
+        if (id == null) return const MissingItemScreen();
+        final kind = s.uri.queryParameters['kind'] == 'chalisas'
+            ? LyricsKind.chalisas
+            : LyricsKind.aartis;
+        return ResultLoader<DevotionalItem>(
+          table: kind == LyricsKind.chalisas ? 'chalisas' : 'aartis',
+          id: id,
+          fromRow: DevotionalItem.fromRow,
+          builder: (item) => LyricsReaderScreen(item: item, kind: kind),
+        );
+      },
+    ),
     GoRoute(
-        path: '/read-mantra',
-        builder: (c, s) => MantraReaderScreen(mantra: s.extra as Mantra)),
+      path: '/read-mantra',
+      builder: (c, s) {
+        final extra = s.extra;
+        if (extra is Mantra) return MantraReaderScreen(mantra: extra);
+        final id = _idQuery(s);
+        if (id == null) return const MissingItemScreen();
+        return ResultLoader<Mantra>(
+          table: 'mantras',
+          id: id,
+          fromRow: Mantra.fromRow,
+          builder: (m) => MantraReaderScreen(mantra: m),
+        );
+      },
+    ),
 
     // Stories — optional initial emotion filter passed via `extra`.
     GoRoute(
@@ -133,8 +278,23 @@ final appRouter = GoRouter(
         builder: (c, s) =>
             StoriesScreen(initialEmotion: s.extra as String?)),
     GoRoute(
-        path: '/read-story',
-        builder: (c, s) => StoryReaderScreen(story: s.extra as Story)),
+      path: '/read-story',
+      builder: (c, s) {
+        final extra = s.extra;
+        if (extra is Story) return StoryReaderScreen(story: extra);
+        final id = _idQuery(s);
+        if (id == null) return const MissingItemScreen();
+        final isKatha = s.uri.queryParameters['kind'] == 'katha';
+        return ResultLoader<Story>(
+          table: isKatha ? 'kathas' : 'stories',
+          // Katha ids are offset in the index so they cannot collide with
+          // story ids; undo that to reach the real row.
+          id: isKatha ? id - Story.kathaIdOffset : id,
+          fromRow: isKatha ? Story.fromKathaRow : Story.fromRow,
+          builder: (st) => StoryReaderScreen(story: st),
+        );
+      },
+    ),
 
     // Panchang
     GoRoute(path: '/panchang', builder: (c, s) => const PanchangScreen()),
@@ -179,13 +339,37 @@ final appRouter = GoRouter(
 
     // Yatra — temple detail (the directory lives in the Yatra tab)
     GoRoute(
-        path: '/temple',
-        builder: (c, s) => TempleDetailScreen(temple: s.extra as Temple)),
+      path: '/temple',
+      builder: (c, s) {
+        final extra = s.extra;
+        if (extra is Temple) return TempleDetailScreen(temple: extra);
+        final id = _idQuery(s);
+        if (id == null) return const MissingItemScreen();
+        return ResultLoader<Temple>(
+          table: 'temples',
+          id: id,
+          fromRow: Temple.fromRow,
+          builder: (t) => TempleDetailScreen(temple: t),
+        );
+      },
+    ),
 
     // Puja Vidhi
     GoRoute(path: '/puja', builder: (c, s) => const PujaListScreen()),
     GoRoute(
-        path: '/puja-detail',
-        builder: (c, s) => PujaDetailScreen(puja: s.extra as PujaVidhi)),
+      path: '/puja-detail',
+      builder: (c, s) {
+        final extra = s.extra;
+        if (extra is PujaVidhi) return PujaDetailScreen(puja: extra);
+        final id = _idQuery(s);
+        if (id == null) return const MissingItemScreen();
+        return ResultLoader<PujaVidhi>(
+          table: 'puja_vidhi',
+          id: id,
+          fromRow: PujaVidhi.fromRow,
+          builder: (p) => PujaDetailScreen(puja: p),
+        );
+      },
+    ),
   ],
 );

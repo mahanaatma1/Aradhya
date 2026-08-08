@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:dharma_scenario",
+  "title": "4.11 Dharma Decision Game — reflection, not moral authority",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "category": { "enum": ["family", "duty", "truth", "war", "wealth"] },
+    "difficulty": { "type": "integer", "minimum": 1, "maximum": 3 },
+    "context": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "reflection": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "based_on_node_slug": { "type": ["string", "null"] },
+    "disclaimer": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "choices": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "choice_key": { "enum": ["A", "B", "C", "D"] },
+          "label": { "$ref": "aradhya:_common#/$defs/bilingual" },
+          "consequence": { "$ref": "aradhya:_common#/$defs/bilingual" },
+          "guna": { "enum": ["sattva", "rajas", "tamas"] },
+          "order_no": { "type": "integer" }
+        },
+        "required": ["choice_key", "label", "consequence", "order_no"],
+        "additionalProperties": false
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "region": { "type": ["string", "null"] },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "title", "context", "reflection", "choices", "disclaimer", "sources", "verification"],
+  "additionalProperties": false
+}

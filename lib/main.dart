@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -6,6 +7,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app/brand.dart';
 import 'app/router/app_router.dart';
 import 'app/theme/app_theme.dart';
+import 'core/db/user_database.dart';
+import 'core/notifications/reminder_service.dart';
 import 'core/providers/app_providers.dart';
 import 'core/user/user_prefs.dart';
 import 'features/astrology/sweph_ephemeris.dart';
@@ -19,12 +22,35 @@ Future<void> main() async {
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   final prefs = await SharedPreferences.getInstance();
   gOnboarded = prefs.getBool(PrefKeys.onboarded) ?? false;
+
+  // Writable store for user-authored data (bookmarks, journal, sadhana
+  // history). Opening it also runs the one-time SharedPreferences import.
+  // A failure here must not block launch: every controller can still fall back
+  // to prefs, so the app degrades rather than refusing to start.
+  UserDatabase? userDb;
+  try {
+    userDb = await UserDatabase.open(prefs: prefs);
+  } catch (e) {
+    debugPrint('main: user database unavailable ($e)');
+  }
+
+  // Android drops scheduled alarms on reboot and on app update, so every
+  // enabled reminder is re-armed at startup. Without this, reminders quietly
+  // stop working after a phone restart.
+  if (userDb != null) {
+    final hindi = prefs.getString('locale') == 'hi';
+    unawaited(ReminderService.instance.rescheduleAll(userDb, hindi: hindi));
+  }
+
   // High-precision Swiss Ephemeris for the Kundli (falls back to the built-in
   // approximation if the native library can't load).
   await initSwephEphemeris();
   runApp(
     ProviderScope(
-      overrides: [sharedPrefsProvider.overrideWithValue(prefs)],
+      overrides: [
+        sharedPrefsProvider.overrideWithValue(prefs),
+        if (userDb != null) userDatabaseProvider.overrideWithValue(userDb),
+      ],
       child: const DivyaVaaniApp(),
     ),
   );

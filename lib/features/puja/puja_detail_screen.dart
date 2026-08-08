@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
+import '../related/related_rail.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/stitched_border.dart';
 import 'puja_models.dart';
@@ -165,7 +166,9 @@ class PujaDetailScreen extends ConsumerWidget {
                 ],
               ),
             ),
-        ],
+                  // The deity's temples, aarti, mantras and vrat kathas.
+          RelatedRail(table: 'puja_vidhi', id: puja.id),
+],
       ),
     );
   }

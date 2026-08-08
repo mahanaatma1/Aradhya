@@ -83,6 +83,20 @@ class Temple {
   final List<TempleAarti> aartiSchedule;
   final List<TempleFestival> festivals;
 
+  /// Reference URLs backing this temple's details, straight from `data.sources`.
+  ///
+  /// These were already shipping inside the JSON blob on all 187 rows — 10-12
+  /// URLs each, mixing official sources (`*.nic.in`, incredibleindia.gov.in,
+  /// state tourism) with travel sites — and were being parsed away and
+  /// discarded. Surfacing them is the only provenance the legacy content
+  /// already owns, so it costs nothing and makes 187 screens citable.
+  final List<String> sources;
+
+  /// The content pipeline's own confidence in this record: 'high' | 'medium' |
+  /// 'low'. Shown only when it is *not* high, so the UI stays quiet when the
+  /// data is solid and speaks up when it is not.
+  final String? confidence;
+
   const Temple({
     required this.id,
     required this.nameEn,
@@ -138,6 +152,8 @@ class Temple {
     this.helpline,
     this.aartiSchedule = const [],
     this.festivals = const [],
+    this.sources = const [],
+    this.confidence,
   });
 
   factory Temple.fromRow(Map<String, Object?> r) {
@@ -275,7 +291,29 @@ class Temple {
       helpline: link('helpline'),
       aartiSchedule: aartiList,
       festivals: festList,
+      sources: [
+        for (final s in (data['sources'] as List?) ?? const [])
+          if (s is String && s.trim().isNotEmpty) s.trim(),
+      ],
+      confidence: data['confidence'] as String?,
     );
+  }
+
+  /// Sources worth showing first: official and institutional domains before
+  /// travel blogs, so the citation list leads with its strongest entry.
+  List<String> get rankedSources {
+    const strong = ['.gov.in', '.nic.in', 'incredibleindia', 'tourism',
+                    'wikipedia.org'];
+    final ranked = [...sources];
+    ranked.sort((a, b) {
+      int rank(String u) {
+        final i = strong.indexWhere((d) => u.contains(d));
+        return i < 0 ? strong.length : i;
+      }
+
+      return rank(a).compareTo(rank(b));
+    });
+    return ranked;
   }
 
   String name(bool hi) => (hi && (nameHi?.isNotEmpty ?? false)) ? nameHi! : nameEn;

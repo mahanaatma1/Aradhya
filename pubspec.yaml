@@ -39,6 +39,8 @@ dependencies:
   flutter_tts: ^4.2.5
   # Keep the screen awake during a breathing session
   wakelock_plus: ^1.2.8
+  flutter_local_notifications: ^22.2.0
+  timezone: ^0.11.1
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +49,7 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^6.0.0
   flutter_launcher_icons: ^0.14.1
+  sqflite_common_ffi: ^2.4.0+3
 
 flutter_launcher_icons:
   image_path: "assets/icon/icon.png"
@@ -62,6 +65,9 @@ flutter:
 
   assets:
     - assets/db/content.sqlite
+    # New licence-clean content + search index + related edges.
+    # Built by `py -m content.tools.build`; ATTACHed as `gyan` at runtime.
+    - assets/db/gyan.sqlite
     - assets/images/
 
   fonts:

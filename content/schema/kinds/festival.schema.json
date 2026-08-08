@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:festival",
+  "title": "4.18 Festival Explorer — stores the RULE; panchang_engine resolves the date",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "category": { "enum": ["major", "vrat", "jayanti", "regional"] },
+    "lunar_month": { "type": ["string", "null"] },
+    "paksha": { "enum": ["shukla", "krishna", null] },
+    "tithi": { "type": ["integer", "null"], "minimum": 1, "maximum": 15 },
+    "solar_rule": { "type": ["string", "null"] },
+    "region": { "type": "string", "minLength": 2 },
+    "tradition": { "type": ["string", "null"] },
+    "deity_entity_slug": { "type": ["string", "null"] },
+    "story_node_slug": { "type": ["string", "null"] },
+    "short_description": { "$ref": "aradhya:_common#/$defs/shortDescription" },
+    "ritual_summary": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "fast_rules": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "title", "region", "short_description", "sources", "verification"],
+  "additionalProperties": false,
+  "anyOf": [
+    { "required": ["lunar_month", "tithi"] },
+    { "required": ["solar_rule"] }
+  ]
+}

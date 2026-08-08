@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:learning_path",
+  "title": "4.21 Knowledge Journeys — a curated playlist over content that already exists",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "level": { "enum": ["beginner", "core", "deeper"] },
+    "short_description": { "$ref": "aradhya:_common#/$defs/shortDescription" },
+    "est_minutes": { "type": ["integer", "null"] },
+    "cover_asset": { "type": ["string", "null"] },
+    "order_no": { "type": "integer" },
+    "steps": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "step_no": { "type": "integer" },
+          "title": { "$ref": "aradhya:_common#/$defs/bilingual" },
+          "blurb": { "$ref": "aradhya:_common#/$defs/bilingual" },
+          "src": { "enum": ["content", "gyan"] },
+          "ref_table": { "type": "string" },
+          "ref_id": { "type": "integer" },
+          "route": { "type": "string", "pattern": "^/" },
+          "est_minutes": { "type": ["integer", "null"] },
+          "optional": { "type": "boolean" }
+        },
+        "required": ["step_no", "title", "src", "ref_table", "ref_id", "route"],
+        "additionalProperties": false
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "title", "level", "short_description", "order_no", "steps", "sources", "verification"],
+  "additionalProperties": false
+}

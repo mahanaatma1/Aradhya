@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
+import '../gyan/gyan_home_section.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/streak.dart';
 import '../../shared/currency_icons.dart';
@@ -164,6 +165,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 onTap: () => context.push('/personality'),
               ),
             ),
+
+            // Explore Gyan — entry point to the 14 knowledge modules.
+            const GyanHomeSection(),
 
             // Scriptures — one per row, each opening its chapters directly.
             _SectionTitle(hi ? 'ग्रंथ' : 'Scriptures'),
@@ -345,6 +349,16 @@ class _Header extends ConsumerWidget {
           ),
           Row(
             children: [
+              // Universal search. Home is the natural "everything" surface, and
+              // this keeps search off the tab bar, which is already tight with
+              // Hindi labels.
+              IconButton(
+                icon: const Icon(Icons.search_rounded),
+                color: scheme.primary,
+                visualDensity: VisualDensity.compact,
+                tooltip: ref.watch(isHindiProvider) ? 'खोजें' : 'Search',
+                onPressed: () => context.push('/search'),
+              ),
               _Pill(
                 icon: Icons.local_fire_department_rounded,
                 text: '${streak.days}',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../l10n/tr.dart';
 import '../../shared/widgets/stitched_border.dart';
 
 /// The persistent 5-tab bottom navigation shell
@@ -13,12 +14,21 @@ class NavScaffold extends StatelessWidget {
   final StatefulNavigationShell navShell;
   const NavScaffold({super.key, required this.navShell});
 
+  // Labels were hardcoded English while the rest of the app was bilingual —
+  // the one place a Hindi reader always saw English. `Bilingual` carries both
+  // in a const table, since there is no BuildContext at construction time.
+  //
+  // Hindi labels are kept SHORT on purpose: the bar is 58 px across five tabs,
+  // and Devanagari is taller and wider than Latin at the same point size.
   static const _tabs = <_Tab>[
-    _Tab(Icons.home_rounded, Icons.home_outlined, 'Home'),
-    _Tab(Icons.nightlight_round, Icons.nightlight_outlined, 'Rashifal'),
-    _Tab(Icons.auto_awesome_rounded, Icons.auto_awesome_outlined, 'Astrology'),
-    _Tab(Icons.place_rounded, Icons.place_outlined, 'Yatra'),
-    _Tab(Icons.person_rounded, Icons.person_outline_rounded, 'You'),
+    _Tab(Icons.home_rounded, Icons.home_outlined, Bilingual('Home', 'होम')),
+    _Tab(Icons.nightlight_round, Icons.nightlight_outlined,
+        Bilingual('Rashifal', 'राशिफल')),
+    _Tab(Icons.auto_awesome_rounded, Icons.auto_awesome_outlined,
+        Bilingual('Astrology', 'ज्योतिष')),
+    _Tab(Icons.place_rounded, Icons.place_outlined, Bilingual('Yatra', 'यात्रा')),
+    _Tab(Icons.person_rounded, Icons.person_outline_rounded,
+        Bilingual('You', 'आप')),
   ];
 
   @override
@@ -110,7 +120,9 @@ class _NavItem extends StatelessWidget {
           ),
           const SizedBox(height: 3),
           Text(
-            tab.label,
+            tab.label(context.isHindi),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: TextStyle(
               fontSize: 10.5,
               fontWeight: selected ? FontWeight.w700 : FontWeight.w600,
@@ -126,6 +138,6 @@ class _NavItem extends StatelessWidget {
 class _Tab {
   final IconData filled;
   final IconData outline;
-  final String label;
+  final Bilingual label;
   const _Tab(this.filled, this.outline, this.label);
 }

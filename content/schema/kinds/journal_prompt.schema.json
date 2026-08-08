@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:journal_prompt",
+  "title": "4.17 Karma Journal — prompts are content; entries never leave the device",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "prompt": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "theme": { "type": "string" },
+    "scripture_ref": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "prompt", "theme", "sources", "verification"],
+  "additionalProperties": false
+}

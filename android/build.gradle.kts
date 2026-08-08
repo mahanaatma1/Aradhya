@@ -19,6 +19,15 @@ subprojects {
     project.evaluationDependsOn(":app")
 }
 
+// Force desugar_jdk_libs to a compatible version required by some plugins
+configurations.all {
+    resolutionStrategy.eachDependency {
+        if (requested.group == "com.android.tools" && requested.name == "desugar_jdk_libs") {
+            useVersion("2.1.4")
+        }
+    }
+}
+
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }

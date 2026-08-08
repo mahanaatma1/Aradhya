@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:relation",
+  "title": "A standalone typed edge (relations/*.jsonl). build.py materialises inverses.",
+  "type": "object",
+  "properties": {
+    "src_slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "rel_type": { "type": "string", "minLength": 2 },
+    "dst_slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "ordinal": { "type": ["integer", "null"] },
+    "tradition": { "type": ["string", "null"] },
+    "note": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "confidence": { "enum": ["high", "medium", "low", "disputed"] },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" }
+  },
+  "required": ["src_slug", "rel_type", "dst_slug", "confidence", "sources"],
+  "additionalProperties": false
+}

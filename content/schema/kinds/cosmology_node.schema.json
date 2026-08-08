@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:cosmology_node",
+  "title": "4.6 Srishty Universe + 4.14 Yuga Explorer",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "track": { "enum": ["creation", "loka", "time_cycle", "yuga"] },
+    "parent_slug": { "type": ["string", "null"] },
+    "order_no": { "type": "integer" },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "short_description": { "$ref": "aradhya:_common#/$defs/shortDescription" },
+    "long_description": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "duration_years": { "type": ["string", "null"],
+      "description": "TEXT: kalpa-scale values exceed int64." },
+    "attributes": { "type": ["object", "null"] },
+    "entity_slug": { "type": ["string", "null"] },
+    "tradition": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "region": { "type": ["string", "null"] },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "track", "order_no", "title", "short_description", "sources", "verification"],
+  "additionalProperties": false
+}

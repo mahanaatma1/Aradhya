@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/theme/app_theme.dart';
+import '../related/related_rail.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/bookmark_button.dart';
 import '../../core/user/bookmarks.dart';
@@ -85,6 +86,11 @@ class LyricsReaderScreen extends ConsumerWidget {
               fontSize: 18,
               height: 1.9,
             ),
+          ),
+          // Temples of this deity, their mantras, puja vidhi and kathas.
+          RelatedRail(
+            table: kind == LyricsKind.chalisas ? 'chalisas' : 'aartis',
+            id: item.id,
           ),
         ],
       ),

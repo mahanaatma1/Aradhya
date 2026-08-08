@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:narrative_node",
+  "title": "4.7 Ramayana Journey + 4.8 Mahabharata Timeline",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "epic": { "enum": ["ramayana", "mahabharata"] },
+    "recension": { "enum": ["valmiki", "ramcharitmanas", "kamba", "critical_ed"],
+      "description": "§4.7: recensions are never mixed into one sequence." },
+    "book_label": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "book_no": { "type": ["integer", "null"] },
+    "sequence_no": { "type": "integer",
+      "description": "§4.8: narrative order only. Never an absolute historical date." },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "short_description": { "$ref": "aradhya:_common#/$defs/shortDescription" },
+    "long_description": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "lesson": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "place_entity_slug": { "type": ["string", "null"] },
+    "cast": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "entity_slug": { "$ref": "aradhya:_common#/$defs/slug" },
+          "role": { "enum": ["protagonist", "antagonist", "witness"] }
+        },
+        "required": ["entity_slug"],
+        "additionalProperties": false
+      }
+    },
+    "scripture_ref": { "type": ["string", "null"] },
+    "image_asset": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "region": { "type": ["string", "null"] },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "epic", "recension", "sequence_no", "title", "short_description", "sources", "verification"],
+  "additionalProperties": false
+}

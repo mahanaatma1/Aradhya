@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:entity",
+  "title": "Entity — backs Knowledge Graph, Family Tree, Rishis, Astras, Symbols",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "kind": {
+      "enum": ["deity", "avatar", "rishi", "king", "asura", "human",
+               "place", "river", "mountain", "scripture", "festival",
+               "weapon", "symbol", "concept", "dynasty", "yuga", "loka", "vidya"]
+    },
+    "wikidata_qid": { "type": ["string", "null"], "pattern": "^Q[0-9]+$" },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "category": { "type": ["string", "null"] },
+    "short_description": { "$ref": "aradhya:_common#/$defs/shortDescription" },
+    "long_description": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "aliases": { "type": "array", "items": { "$ref": "aradhya:_common#/$defs/alias" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "region": { "type": ["string", "null"] },
+    "tradition": { "type": ["string", "null"] },
+    "importance": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "image_asset": { "type": ["string", "null"] },
+    "glyph": { "type": ["string", "null"] },
+    "props": { "type": ["object", "null"] },
+    "related_items": {
+      "type": "array",
+      "items": { "$ref": "aradhya:_common#/$defs/relatedItem" }
+    },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "kind", "title", "short_description", "sources", "verification"],
+  "additionalProperties": false,
+
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "weapon" } }, "required": ["kind"] },
+      "then": {
+        "properties": {
+          "props": {
+            "type": "object",
+            "properties": {
+              "weapon_type": { "enum": ["astra", "shastra", "ayudha", "divine_tool"] },
+              "invocation": { "type": ["string", "null"] },
+              "powers_en": { "type": "array", "items": { "type": "string" } },
+              "counter_en": { "type": ["string", "null"] },
+              "symbolic_meaning_en": { "type": ["string", "null"] },
+              "nature": {
+                "enum": ["mythic", "symbolic", "textual"],
+                "description": "§4.12 requires labelling mythic vs symbolic vs textual."
+              }
+            },
+            "required": ["weapon_type", "nature"],
+            "additionalProperties": true
+          }
+        },
+        "required": ["props"]
+      }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "symbol" } }, "required": ["kind"] },
+      "then": {
+        "properties": {
+          "props": {
+            "type": "object",
+            "properties": {
+              "visual_form_en": { "type": "string" },
+              "common_usage_en": { "type": ["string", "null"] },
+              "meaning_varies_by": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "§4.10: meanings vary by tradition — the UI renders each separately."
+              }
+            },
+            "required": ["visual_form_en"],
+            "additionalProperties": true
+          }
+        },
+        "required": ["props"]
+      }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "rishi" } }, "required": ["kind"] },
+      "then": {
+        "properties": {
+          "props": {
+            "type": "object",
+            "properties": {
+              "gotra": { "type": ["string", "null"] },
+              "veda": { "type": ["string", "null"] },
+              "ashram_place_slug": { "type": ["string", "null"] },
+              "hymns": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "deity" } }, "required": ["kind"] },
+      "then": {
+        "properties": {
+          "props": {
+            "type": "object",
+            "properties": {
+              "vahana_slug": { "type": ["string", "null"] },
+              "consort_slugs": { "type": "array", "items": { "type": "string" } },
+              "ayudha_slugs": { "type": "array", "items": { "type": "string" } }
+            },
+            "additionalProperties": true
+          }
+        }
+      }
+    }
+  ]
+}

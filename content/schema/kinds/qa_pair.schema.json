@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:qa_pair",
+  "title": "4.19 Ask the Scriptures — retrieval-first; the answer is always a real passage",
+  "type": "object",
+  "properties": {
+    "question": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "answer": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "explanation": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "passage_sa": { "type": ["string", "null"] },
+    "passage_translit": { "type": ["string", "null"] },
+    "scripture_ref": { "type": ["string", "null"] },
+    "confidence": { "enum": ["high", "medium", "low", "needs_review"] },
+    "related_question_slugs": { "type": "array", "items": { "type": "string" } },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["question", "answer", "confidence", "sources", "verification"],
+  "additionalProperties": false
+}

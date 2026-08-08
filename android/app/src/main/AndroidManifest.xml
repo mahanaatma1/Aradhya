@@ -1,4 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Local reminders (sadhana, journal, festivals). Nothing is pushed from
+         a server; these are scheduled on-device by flutter_local_notifications. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <!-- Re-arm scheduled reminders after a reboot; Android drops them otherwise. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- Saving result cards to the gallery on older Android (10 and below). -->

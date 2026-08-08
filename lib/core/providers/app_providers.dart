@@ -33,13 +33,38 @@ final ishtaDeityProvider = StateProvider<String>(
   (ref) => ref.read(sharedPrefsProvider).getString(PrefKeys.ishtaDeity) ?? '',
 );
 
-/// All verses from the `daily_quotes` table, in id order. Loaded once and
-/// cached; the day's verse and the "another verse" shuffle both index into it.
+/// Every verse available for the verse-of-the-day, loaded once and cached.
+///
+/// Two tables, deliberately combined:
+///
+///   * `daily_quotes` (3 rows) is the only one carrying `sanskrit` and
+///     `transliteration`, which the Home card renders in Devanagari.
+///   * `quotes` (1,000 rows) has the same EN/HI/source shape but no Sanskrit,
+///     and was previously never queried at all.
+///
+/// Reading only `daily_quotes` meant the verse of the day repeated on a
+/// **three-day cycle**. Swapping wholesale to `quotes` would have fixed the
+/// repetition but silently dropped the Sanskrit. Using both keeps the richer
+/// rows first and gives the rotation 1,003 verses to draw on.
 final allDailyQuotesProvider = FutureProvider<List<DailyQuote>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
-  final rows = await db.query('daily_quotes', orderBy: 'id');
-  return rows.map(DailyQuote.fromRow).toList();
+
+  final rich = await db.query('daily_quotes', orderBy: 'id');
+  final plain = await db.query('quotes', orderBy: 'id');
+
+  return [
+    ...rich.map(DailyQuote.fromRow),
+    // Offset the ids so the two tables cannot collide — bookmarks and the
+    // share card identify a verse by id.
+    ...plain.map((r) => DailyQuote.fromRow({
+          ...r,
+          'id': (r['id'] as int) + _quotesIdOffset,
+        })),
+  ];
 });
+
+/// Keeps `quotes` ids disjoint from `daily_quotes` ids in the merged list.
+const _quotesIdOffset = 1000000;
 
 /// The index of the today's verse within [allDailyQuotesProvider], derived
 /// from the day-of-year so it is stable across a day and needs no network.

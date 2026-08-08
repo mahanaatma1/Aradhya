@@ -43,3 +43,17 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Aradhya content pipeline
+content/raw/            # downloaded public-domain scans; reproducible via sha256 in registry.jsonl
+content/build/          # report.html + build logs
+assets/db/build/        # stale flutter asset build markers
+
+# Flutter run/build noise that was previously committed at the repo root
+flutter_*.log
+flutter_*.png
+# 38 MB duplicate of the bundled DB — regenerate, never commit
+assets/db/*.bak
+
+# Wikidata skeletons awaiting editorial work (see content/tools/extract.py)
+content/staging/

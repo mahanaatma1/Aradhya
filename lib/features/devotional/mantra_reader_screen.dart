@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
+import '../related/related_rail.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/bookmark_button.dart';
 import '../../core/user/bookmarks.dart';
@@ -135,7 +136,9 @@ class _MantraReaderScreenState extends ConsumerState<MantraReaderScreen> {
               accent: accent.color,
               hi: hi,
             ),
-        ],
+                  // Temples of this deity, plus its aarti, chalisa and kathas.
+          RelatedRail(table: 'mantras', id: mantra.id),
+],
       ),
     );
   }

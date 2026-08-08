@@ -1,8 +1,10 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../db/user_database.dart';
 import 'streak.dart';
 import 'user_prefs.dart';
 
@@ -63,12 +65,23 @@ class JapaController extends StateNotifier<JapaState> {
           history: {},
         )) {
     _load();
+    _hydrateFromDb();
   }
 
   final Ref _ref;
 
   /// One mala = 108 beads.
   static const mala = 108;
+
+  /// Beads counted since the prefs history blob was last written. The blob is
+  /// only a rollback safety net now, so it is flushed once per completed mala
+  /// instead of once per bead.
+  int _unflushed = 0;
+
+  /// Set the moment the user counts anything. Used to suppress a late-arriving
+  /// database hydrate that would otherwise clobber those counts. See
+  /// [_hydrateFromDb].
+  bool _countedSinceStart = false;
 
   void _load() {
     final p = _ref.read(sharedPrefsProvider);
@@ -82,6 +95,39 @@ class JapaController extends StateNotifier<JapaState> {
       longestStreak: _longestStreak(history),
       history: history,
     );
+  }
+
+  /// Replaces the seeded prefs history with the database's version, which is
+  /// authoritative once the migration has run. Silent no-op when the database
+  /// is unavailable (tests, or a failed open) — the prefs seed still works.
+  ///
+  /// Bails out if the user has already counted beads while the query was in
+  /// flight. Without that guard the result would overwrite `today`/`history`
+  /// with a snapshot taken *before* those taps, and the on-screen counter would
+  /// visibly jump backwards — the beads are safely in the database either way,
+  /// but showing a user their count going down is unacceptable in a japa app.
+  Future<void> _hydrateFromDb() async {
+    final db = _ref.read(userDatabaseProvider);
+    if (db == null) return;
+    try {
+      final rows = await db.raw.rawQuery(
+        "SELECT day_stamp, SUM(count) AS n FROM sadhana_sessions "
+        "WHERE practice = 'japa' GROUP BY day_stamp",
+      );
+      if (rows.isEmpty || !mounted || _countedSinceStart) return;
+      final history = <String, int>{
+        for (final r in rows)
+          r['day_stamp'] as String: (r['n'] as num?)?.toInt() ?? 0,
+      };
+      state = state.copyWith(
+        today: history[dayStamp()] ?? 0,
+        history: history,
+        currentStreak: _currentStreak(history),
+        longestStreak: _longestStreak(history),
+      );
+    } catch (e) {
+      debugPrint('JapaController: history hydrate failed ($e)');
+    }
   }
 
   Map<String, int> _readHistory(SharedPreferences p) {
@@ -103,6 +149,7 @@ class JapaController extends StateNotifier<JapaState> {
   /// history, rewards each mala, and recomputes streaks.
   Future<void> addCounts(int n) async {
     if (n <= 0) return;
+    _countedSinceStart = true;
     final p = _ref.read(sharedPrefsProvider);
     final today = dayStamp();
 
@@ -125,7 +172,34 @@ class JapaController extends StateNotifier<JapaState> {
     }
 
     await p.setInt(PrefKeys.japaLifetime, total);
-    await p.setString(PrefKeys.japaHistory, jsonEncode(history));
+
+    // Append-only row per tap. This is the whole point of moving off prefs:
+    // `shared_preferences` rewrites its entire XML file on every `apply()`, so
+    // storing the growing history blob there meant a full-file write per bead —
+    // 108 of them for a single mala.
+    final db = _ref.read(userDatabaseProvider);
+    if (db != null) {
+      try {
+        await db.raw.insert('sadhana_sessions', {
+          'day_stamp': today,
+          'practice': 'japa',
+          'count': n,
+          'duration_s': 0,
+          'created_at': DateTime.now().millisecondsSinceEpoch,
+        });
+      } catch (e) {
+        debugPrint('JapaController: session insert failed ($e)');
+      }
+    }
+
+    // The legacy blob stays in sync coarsely, so rolling back to a previous
+    // build keeps whole malas. Flushing per mala rather than per bead keeps the
+    // rollback safety net without reintroducing the write amplification.
+    _unflushed += n;
+    if (db == null || malasGained > 0 || _unflushed >= mala) {
+      await p.setString(PrefKeys.japaHistory, jsonEncode(history));
+      _unflushed = 0;
+    }
 
     state = state.copyWith(
       beads: beads,

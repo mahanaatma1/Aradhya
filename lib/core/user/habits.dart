@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../db/user_database.dart';
 import 'streak.dart';
 import 'user_prefs.dart';
 
@@ -49,9 +50,36 @@ class HabitsController extends StateNotifier<Set<String>> {
       await _ref.read(streakProvider.notifier).addPoints(2);
     }
     state = next;
+
+    final today = dayStamp();
+
+    // Durable history. The prefs scheme wrote one key per day *forever*, which
+    // is an unbounded key-space leak; here a day is just rows, and the Sadhana
+    // tracker can query across dates instead of enumerating preference keys.
+    final db = _ref.read(userDatabaseProvider);
+    if (db != null) {
+      try {
+        if (wasDone) {
+          await db.raw.delete('sadhana_sessions',
+              where: 'day_stamp = ? AND practice = ?',
+              whereArgs: [today, 'habit:$key']);
+        } else {
+          await db.raw.insert('sadhana_sessions', {
+            'day_stamp': today,
+            'practice': 'habit:$key',
+            'count': 1,
+            'duration_s': 0,
+            'created_at': DateTime.now().millisecondsSinceEpoch,
+          });
+        }
+      } catch (e) {
+        debugPrint('HabitsController: write failed ($e)');
+      }
+    }
+
+    // Today's key is still mirrored so a rollback keeps the current day intact.
     final p = _ref.read(sharedPrefsProvider);
-    await p.setString(
-        PrefKeys.habitsPrefix + dayStamp(), jsonEncode(next.toList()));
+    await p.setString(PrefKeys.habitsPrefix + today, jsonEncode(next.toList()));
   }
 }
 

@@ -67,9 +67,15 @@ class _TemplesScreenState extends ConsumerState<TemplesScreen> {
             final filtered = list.where((t) {
               final matchFilter = active.test == null || active.test!(t);
               final matchVisited = !_visitedOnly || visited.contains(t.id);
+              // Hindi fields are matched too: the filter used to check only
+              // the English name, deity, state and district, so a user reading
+              // the app in Hindi could see "केदारनाथ मंदिर" on screen and get
+              // no result typing it.
               final matchQuery = q.isEmpty ||
                   t.nameEn.toLowerCase().contains(q) ||
+                  (t.nameHi ?? '').toLowerCase().contains(q) ||
                   (t.deityEn ?? '').toLowerCase().contains(q) ||
+                  (t.deityHi ?? '').toLowerCase().contains(q) ||
                   (t.state ?? '').toLowerCase().contains(q) ||
                   (t.district ?? '').toLowerCase().contains(q);
               return matchFilter && matchVisited && matchQuery;

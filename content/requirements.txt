@@ -1,0 +1,9 @@
+# Aradhya content pipeline — build-time only, never shipped to the device.
+# Install:  py -m pip install -r content/requirements.txt
+
+jsonschema>=4.21          # per-kind JSONL validation (schema/kinds/*.schema.json)
+requests>=2.31            # fetch.py — pulling public-domain sources into raw/
+unidecode>=1.3            # diacritic folding for the search index
+indic-transliteration>=2.3 # Devanagari <-> IAST/ITRANS alias expansion
+rapidfuzz>=3.6            # near-duplicate detection in validate.py
+SPARQLWrapper>=2.0        # wikidata.py — CC0 entity + relation acquisition

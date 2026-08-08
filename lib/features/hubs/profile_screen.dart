@@ -88,6 +88,34 @@ class ProfileScreen extends ConsumerWidget {
           Card(
             clipBehavior: Clip.antiAlias,
             child: ListTile(
+              leading: Icon(Icons.edit_note_rounded, color: scheme.primary),
+              title: Text(hi ? 'कर्म डायरी' : 'Karma Journal'),
+              subtitle: Text(hi
+                  ? 'निजी चिंतन — केवल इसी उपकरण पर'
+                  : 'Private reflection — this device only'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push('/journal'),
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
+              leading: Icon(Icons.search_rounded, color: scheme.primary),
+              title: Text(hi ? 'सब कुछ खोजें' : 'Search everything'),
+              subtitle: Text(hi
+                  ? 'श्लोक, मंदिर, मंत्र, कथा'
+                  : 'Verses, temples, mantras, kathas'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push('/search'),
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
               leading: Icon(Icons.bookmark_rounded, color: scheme.primary),
               title: Text(hi ? 'सहेजे गए' : 'Bookmarks'),
               subtitle: Text(hi ? '$bookmarkCount सहेजे गए' : '$bookmarkCount saved'),

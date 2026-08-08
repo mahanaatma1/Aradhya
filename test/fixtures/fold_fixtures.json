@@ -1,0 +1,283 @@
+{
+  "_comment": "Golden contract between content/tools/common.py (Python, build time) and lib/features/search/search_fold.dart (Dart, runtime). Regenerate with: py content/tools/gen_fold_fixtures.py Any change here means the search index and the app disagree.",
+  "foldVariants": {
+    "": [],
+    "  ": [],
+    "123": [
+      "123"
+    ],
+    "Ayodhyā": [
+      "ayodhya"
+    ],
+    "Aṅgiras": [
+      "angiras"
+    ],
+    "Bhagavad Gītā": [
+      "bhagavadgita"
+    ],
+    "Brahmastra": [
+      "brahmastra"
+    ],
+    "Brahmāstra": [
+      "brahmastra"
+    ],
+    "Bṛhaspati": [
+      "brihaspati",
+      "brhaspati"
+    ],
+    "Durgā": [
+      "durga"
+    ],
+    "Ekādaśī": [
+      "ekadashi",
+      "ekadasi"
+    ],
+    "Ganesha": [
+      "ganesha"
+    ],
+    "Gaṇeśa": [
+      "ganesha",
+      "ganesa"
+    ],
+    "Hanuman": [
+      "hanuman"
+    ],
+    "Hanumān": [
+      "hanuman"
+    ],
+    "Jyotiṣa": [
+      "jyotisha",
+      "jyotisa"
+    ],
+    "Kedārnāth": [
+      "kedarnath"
+    ],
+    "Krishna": [
+      "krishna"
+    ],
+    "Kurukṣetra": [
+      "kurukshetra",
+      "kuruksetra"
+    ],
+    "Kṛṣṇa": [
+      "krishna",
+      "krsna"
+    ],
+    "Lakṣmī": [
+      "lakshmi",
+      "laksmi"
+    ],
+    "Mahābhārata": [
+      "mahabharata"
+    ],
+    "Mumbai": [
+      "mumbai"
+    ],
+    "Naimiṣāraṇya": [
+      "naimisharanya",
+      "naimisaranya"
+    ],
+    "Navi Mumbai": [
+      "navimumbai"
+    ],
+    "OM": [
+      "om"
+    ],
+    "Purāṇa": [
+      "purana"
+    ],
+    "Rama": [
+      "rama"
+    ],
+    "Rāma": [
+      "rama"
+    ],
+    "Rāmāyaṇa": [
+      "ramayana"
+    ],
+    "Sarasvatī": [
+      "sarasvati"
+    ],
+    "Shiva": [
+      "shiva"
+    ],
+    "Somnāth": [
+      "somnath"
+    ],
+    "Trishula": [
+      "trishula"
+    ],
+    "Triśūla": [
+      "trishula",
+      "trisula"
+    ],
+    "Upaniṣad": [
+      "upanishad",
+      "upanisad"
+    ],
+    "Vasiṣṭha": [
+      "vasishtha",
+      "vasistha"
+    ],
+    "Vishnu": [
+      "vishnu"
+    ],
+    "Viśvāmitra": [
+      "vishvamitra",
+      "visvamitra"
+    ],
+    "Viṣṇu": [
+      "vishnu",
+      "visnu"
+    ],
+    "a": [
+      "a"
+    ],
+    "dharma": [
+      "dharma"
+    ],
+    "karma": [
+      "karma"
+    ],
+    "krsna": [
+      "krsna"
+    ],
+    "mokṣa": [
+      "moksha",
+      "moksa"
+    ],
+    "yajña": [
+      "yajna"
+    ],
+    "Āyurveda": [
+      "ayurveda"
+    ],
+    "Śiva": [
+      "shiva",
+      "siva"
+    ],
+    "Śūlba": [
+      "shulba",
+      "sulba"
+    ],
+    "एकादशी": [
+      "एकादशी"
+    ],
+    "कृष्ण": [
+      "कृष्ण"
+    ],
+    "गणेश": [
+      "गणेश"
+    ],
+    "दुर्गा": [
+      "दुर्गा"
+    ],
+    "ब्रह्मास्त्र": [
+      "ब्रह्मास्त्र"
+    ],
+    "राम": [
+      "राम"
+    ],
+    "विष्णु": [
+      "विष्णु"
+    ],
+    "शिव": [
+      "शिव"
+    ],
+    "हनुमान": [
+      "हनुमान"
+    ],
+    "ॐ": [
+      "ॐ"
+    ],
+    "Ṛgveda": [
+      "rigveda",
+      "rgveda"
+    ]
+  },
+  "slugify": {
+    "123": "123",
+    "Ayodhyā": "ayodhya",
+    "Aṅgiras": "angiras",
+    "Bhagavad Gītā": "bhagavad-gita",
+    "Brahmastra": "brahmastra",
+    "Brahmāstra": "brahmastra",
+    "Bṛhaspati": "brihaspati",
+    "Durgā": "durga",
+    "Ekādaśī": "ekadashi",
+    "Ganesha": "ganesha",
+    "Gaṇeśa": "ganesha",
+    "Hanuman": "hanuman",
+    "Hanumān": "hanuman",
+    "Jyotiṣa": "jyotisha",
+    "Kedārnāth": "kedarnath",
+    "Krishna": "krishna",
+    "Kurukṣetra": "kurukshetra",
+    "Kṛṣṇa": "krishna",
+    "Lakṣmī": "lakshmi",
+    "Mahābhārata": "mahabharata",
+    "Mumbai": "mumbai",
+    "Naimiṣāraṇya": "naimisharanya",
+    "Navi Mumbai": "navi-mumbai",
+    "OM": "om",
+    "Purāṇa": "purana",
+    "Rama": "rama",
+    "Rāma": "rama",
+    "Rāmāyaṇa": "ramayana",
+    "Sarasvatī": "sarasvati",
+    "Shiva": "shiva",
+    "Somnāth": "somnath",
+    "Trishula": "trishula",
+    "Triśūla": "trishula",
+    "Upaniṣad": "upanishad",
+    "Vasiṣṭha": "vasishtha",
+    "Vishnu": "vishnu",
+    "Viśvāmitra": "vishvamitra",
+    "Viṣṇu": "vishnu",
+    "a": "a",
+    "dharma": "dharma",
+    "karma": "karma",
+    "krsna": "krsna",
+    "mokṣa": "moksha",
+    "yajña": "yajna",
+    "Āyurveda": "ayurveda",
+    "Śiva": "shiva",
+    "Śūlba": "shulba",
+    "एकादशी": "",
+    "कृष्ण": "",
+    "गणेश": "",
+    "दुर्गा": "",
+    "ब्रह्मास्त्र": "",
+    "राम": "",
+    "विष्णु": "",
+    "शिव": "",
+    "हनुमान": "",
+    "ॐ": "",
+    "Ṛgveda": "rigveda"
+  },
+  "tokenize": {
+    "Kṛṣṇa and Arjuna at Kurukṣetra": [
+      "krishna",
+      "krsna",
+      "and",
+      "arjuna",
+      "at",
+      "kurukshetra",
+      "kuruksetra"
+    ],
+    "The Song Celestial, tr. Sir Edwin Arnold": [
+      "the",
+      "song",
+      "celestial",
+      "tr",
+      "sir",
+      "edwin",
+      "arnold"
+    ],
+    "श्री हनुमान चालीसा": [
+      "श्री",
+      "हनुमान",
+      "चालीसा"
+    ]
+  }
+}

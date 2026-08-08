@@ -1,0 +1,17 @@
+# Family edges among Hindu deities.
+#
+# P22 father, P25 mother, P26 spouse, P40 child, P3373 sibling.
+# These are the spine of the Family Tree (4.2), which is a PROJECTION of the
+# relations table rather than a dataset of its own.
+#
+# NOTE: deliberately uses a DIRECT `wdt:P31` rather than the transitive
+# `wdt:P31/wdt:P279*`. The closure over Hindu-deity subclasses times the public
+# WDQS endpoint out (HTTP 504); the direct form returns the major figures,
+# which is where the lineage data actually lives.
+SELECT ?item ?itemLabel ?prop ?other ?otherLabel WHERE {
+  ?item wdt:P31 wd:Q979507 .
+  VALUES ?prop { wdt:P22 wdt:P25 wdt:P26 wdt:P40 wdt:P3373 }
+  ?item ?prop ?other .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 1000

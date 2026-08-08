@@ -27,6 +27,16 @@ class CategoryColors extends ThemeExtension<CategoryColors> {
   final CategoryStyle personality;
   final CategoryStyle temples;
 
+  // Gyan surfaces. Two modules deliberately reuse existing gradients instead of
+  // getting their own — Festivals rides `panchang` because it is the same
+  // calendar domain, and Dharma rides `personality` because it is the same
+  // reflective register. Inventing distinct colours there would imply a
+  // separation that does not exist.
+  final CategoryStyle gyan;
+  final CategoryStyle srishty;
+  final CategoryStyle epics;
+  final CategoryStyle sadhana;
+
   const CategoryColors({
     required this.scriptures,
     required this.aartis,
@@ -37,6 +47,10 @@ class CategoryColors extends ThemeExtension<CategoryColors> {
     required this.katha,
     required this.personality,
     required this.temples,
+    required this.gyan,
+    required this.srishty,
+    required this.epics,
+    required this.sadhana,
   });
 
   static const standard = CategoryColors(
@@ -49,6 +63,10 @@ class CategoryColors extends ThemeExtension<CategoryColors> {
     katha: CategoryStyle([Color(0xFF5C6BC0), Color(0xFF2F3B8E)]),
     personality: CategoryStyle([Color(0xFFA85A8C), Color(0xFF5C2549)]),
     temples: CategoryStyle([Color(0xFF9C7A3C), Color(0xFF5C3B28)]),
+    gyan: CategoryStyle([Color(0xFF3E7F8E), Color(0xFF1D4552)]),
+    srishty: CategoryStyle([Color(0xFF4A3A7A), Color(0xFF1E1440)]),
+    epics: CategoryStyle([Color(0xFF8A6A4F), Color(0xFF4A3220)]),
+    sadhana: CategoryStyle([Color(0xFF3F7A5E), Color(0xFF25533F)]),
   );
 
   @override

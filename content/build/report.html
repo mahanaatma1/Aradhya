@@ -1,0 +1,79 @@
+<!doctype html><meta charset='utf-8'>
+<title>Aradhya — content health</title>
+<style>
+      :root{--paper:#FDF8F5;--ink:#3A2214;--soft:#6F4C37;--terra:#A73015;
+            --gold:#B48B3E;--green:#25533F;--amber:#FF9F43;--line:#E7D9CC}
+      *{box-sizing:border-box}
+      body{margin:0;padding:28px;background:var(--paper);color:var(--ink);
+           font:15px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}
+      h1{font-size:26px;margin:0 0 4px}
+      h2{font-size:17px;margin:30px 0 10px;color:var(--soft)}
+      .sub{color:var(--soft);font-size:13px;margin-bottom:20px}
+      table{border-collapse:collapse;width:100%;background:#fff;
+            border:1px solid var(--line);border-radius:10px;overflow:hidden}
+      th,td{padding:8px 11px;text-align:left;border-bottom:1px solid var(--line);
+            font-size:13px}
+      th{background:#F7ECDC;font-weight:700}
+      tr:last-child td{border-bottom:none}
+      td.n{text-align:right;font-variant-numeric:tabular-nums}
+      .ok{color:var(--green);font-weight:700}
+      .warn{color:#9A5B00;font-weight:700}
+      .bad{color:var(--terra);font-weight:700}
+      .pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:11px;
+            font-weight:700}
+      .pill.err{background:#fbe3de;color:var(--terra)}
+      .pill.wrn{background:#fdf0dc;color:#9A5B00}
+      code{background:#F1E7DC;padding:1px 5px;border-radius:4px;font-size:12px}
+      .empty{color:var(--soft);font-style:italic;padding:10px 0}
+      .bar{height:7px;background:#EFE2D6;border-radius:99px;overflow:hidden;
+           min-width:90px}
+      .bar>i{display:block;height:100%;background:var(--green)}
+    </style>
+<h1>Aradhya — content health</h1>
+<div class='sub'>1.0.0+20260807.b565ba6 · profile <b>dev</b> · generated 2026-08-07 18:50 UTC</div>
+<h2>Validation</h2>
+<div class='ok'>No errors, no warnings.</div>
+<h2>Coverage by table</h2>
+<table><tr><th>Table</th><th class='n'>Rows</th><th class='n'>Verified</th><th>Progress</th><th class='n'>No Hindi</th><th class='n'>No citation</th><th class='n'>No image</th></tr>
+<tr><td><code>entities</code></td><td class='n'>165</td><td class='n'>165</td><td><div class='bar'><i style='width:100%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n bad'>165</td></tr>
+<tr><td><code>relations</code></td><td class='n'>74</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>entity_aliases</code></td><td class='n'>397</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>cosmology_nodes</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>narrative_nodes</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n ok'>0</td></tr>
+<tr><td><code>dharma_scenarios</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>vidya_topics</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>festivals</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>qa_pairs</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n'>&mdash;</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>journal_prompts</code></td><td class='n'>0</td><td class='n'>0</td><td><div class='bar'><i style='width:0%'></i></div></td><td class='n'>&mdash;</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>learning_paths</code></td><td class='n'>3</td><td class='n'>3</td><td><div class='bar'><i style='width:100%'></i></div></td><td class='n ok'>0</td><td class='n ok'>0</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>path_steps</code></td><td class='n'>13</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n ok'>0</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>search_docs</code></td><td class='n'>32762</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n warn'>4276</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>related_edges</code></td><td class='n'>3005</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n ok'>0</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>sources</code></td><td class='n'>16</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+<tr><td><code>item_sources</code></td><td class='n'>214</td><td class='n'>&mdash;</td><td>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td><td class='n'>&mdash;</td></tr>
+</table>
+<h2>Duplicate epithets <span style='font-weight:400;font-size:13px;color:#6F4C37'>(these mis-wire the related rail — Risk 8)</span></h2>
+<div class='ok'>None.</div>
+<h2>Entities with no related edges</h2>
+<div class='sub'>Usually means the aliases are wrong — almost every real figure links to something.</div>
+<div><code>atman</code> <code>bhagavad-gita</code> <code>bhakti</code> <code>bhishma</code> <code>brahman</code> <code>dharma</code> <code>draupadi</code> <code>duryodhana</code> <code>karma</code> <code>karna</code> <code>lakshmana</code> <code>mahabharata-text</code> <code>moksha</code> <code>nachiketa</code> <code>om</code> <code>ramayana-text</code> <code>ravana</code> <code>rigveda</code> <code>upanishads-text</code> <code>vyasa</code> <code>yudhishthira</code> <code>abhimanyu</code> <code>agastya</code> <code>ahimsa</code> <code>atri</code> <code>ayodhya</code> <code>bharadvaja</code> <code>bharata</code> <code>bhima</code> <code>bhrigu</code> <code>brihaspati</code> <code>dadhichi</code> <code>damaru</code> <code>dasharatha</code> <code>dhritarashtra</code> <code>dhruva</code> <code>drona</code> <code>durvasa</code> <code>dvaraka</code> <code>ekalavya</code></div>
+<h2>Search index</h2>
+<table><tr><th>Kind</th><th class='n'>Documents</th></tr>
+<tr><td>shloka</td><td class='n'>27890</td></tr>
+<tr><td>city</td><td class='n'>4276</td></tr>
+<tr><td>temple</td><td class='n'>187</td></tr>
+<tr><td>entity</td><td class='n'>165</td></tr>
+<tr><td>story</td><td class='n'>100</td></tr>
+<tr><td>katha</td><td class='n'>57</td></tr>
+<tr><td>mantra</td><td class='n'>36</td></tr>
+<tr><td>puja</td><td class='n'>23</td></tr>
+<tr><td>aarti</td><td class='n'>18</td></tr>
+<tr><td>chalisa</td><td class='n'>10</td></tr>
+</table>
+<h2>Related edges by rule</h2>
+<table><tr><th>Rule</th><th class='n'>Edges</th></tr>
+<tr><td>deity</td><td class='n'>2000</td></tr>
+<tr><td>emotion</td><td class='n'>755</td></tr>
+<tr><td>alias</td><td class='n'>205</td></tr>
+<tr><td>relation</td><td class='n'>45</td></tr>
+</table>

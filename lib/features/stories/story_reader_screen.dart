@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../app/brand.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
+import '../related/related_rail.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/bookmark_button.dart';
 import '../../core/user/bookmarks.dart';
@@ -132,7 +133,12 @@ class _StoryReaderScreenState extends ConsumerState<StoryReaderScreen> {
               height: 1.7,
             ),
           ),
-        ],
+                  // Stories sharing this emotion; for a katha, its deity's content.
+          RelatedRail(
+            table: story.isKatha ? 'kathas' : 'stories',
+            id: story.isKatha ? story.id - Story.kathaIdOffset : story.id,
+          ),
+],
       ),
     );
   }

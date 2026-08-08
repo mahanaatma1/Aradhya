@@ -1,28 +1,75 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:sqflite/sqflite.dart' show ConflictAlgorithm;
 
+import '../db/user_database.dart';
 import 'user_prefs.dart';
 
-/// A saved item pointing back to any content screen. [route] + [extraId] let
-/// the Bookmarks screen re-open the source; content is re-fetched by id.
+/// A saved item pointing back to any content screen. Content is never
+/// duplicated — only the id is stored, and the body is re-fetched on open.
 class Bookmark {
-  final String kind; // 'aarti' | 'chalisa' | 'mantra' | 'story' | 'temple'
+  /// Which database the id belongs to: `content` (legacy) or `gyan` (new).
+  final String src;
+
+  /// 'aarti' | 'chalisa' | 'mantra' | 'story' | 'temple' | 'shloka' | 'entity' …
+  final String kind;
   final int id;
   final String titleEn;
   final String? titleHi;
   final String? subtitle;
 
+  /// The deep link to reopen this item, resolved **when the bookmark is
+  /// created** rather than when it is tapped.
+  ///
+  /// This is the structural fix for the crash where the bookmarks screen pushed
+  /// `/scriptures/book/<id>` — a path that was never registered — and landed
+  /// the user on GoRouter's error page. Building the route at save time means a
+  /// mistake surfaces on the screen that owns the content and knows its ids.
+  ///
+  /// Empty string means "not navigable": rows imported from SharedPreferences
+  /// had no route, and losing the bookmark would be worse than showing it as
+  /// non-tappable.
+  final String route;
+
+  /// The user's private note. Never leaves the device.
+  final String? note;
+  final List<String> tags;
+  final DateTime? createdAt;
+
   const Bookmark({
     required this.kind,
     required this.id,
     required this.titleEn,
+    this.src = 'content',
     this.titleHi,
     this.subtitle,
+    this.route = '',
+    this.note,
+    this.tags = const [],
+    this.createdAt,
   });
 
-  String get uid => '$kind:$id';
+  String get uid => '$src:$kind:$id';
+  bool get isNavigable => route.isNotEmpty;
 
+  Bookmark copyWith({String? note, List<String>? tags, String? route}) =>
+      Bookmark(
+        src: src,
+        kind: kind,
+        id: id,
+        titleEn: titleEn,
+        titleHi: titleHi,
+        subtitle: subtitle,
+        route: route ?? this.route,
+        note: note ?? this.note,
+        tags: tags ?? this.tags,
+        createdAt: createdAt,
+      );
+
+  /// Legacy prefs shape. Deliberately unchanged so an older build can still
+  /// read the mirror written by [BookmarksController].
   Map<String, Object?> toJson() => {
         'kind': kind,
         'id': id,
@@ -38,32 +85,141 @@ class Bookmark {
         titleHi: j['titleHi'] as String?,
         subtitle: j['subtitle'] as String?,
       );
+
+  factory Bookmark.fromRow(Map<String, Object?> r) => Bookmark(
+        src: (r['src'] as String?) ?? 'content',
+        kind: r['kind'] as String,
+        id: r['ref_id'] as int,
+        titleEn: (r['title_en'] as String?) ?? '',
+        titleHi: r['title_hi'] as String?,
+        subtitle: r['subtitle'] as String?,
+        route: (r['route'] as String?) ?? '',
+        note: r['note'] as String?,
+        tags: _decodeTags(r['tags'] as String?),
+        createdAt: r['created_at'] == null
+            ? null
+            : DateTime.fromMillisecondsSinceEpoch(r['created_at'] as int),
+      );
+
+  static List<String> _decodeTags(String? raw) {
+    if (raw == null || raw.isEmpty) return const [];
+    try {
+      return (jsonDecode(raw) as List).cast<String>();
+    } catch (_) {
+      return const [];
+    }
+  }
 }
 
 class BookmarksController extends StateNotifier<List<Bookmark>> {
   BookmarksController(this._ref) : super(const []) {
+    // Synchronous seed so the Bookmarks screen paints without a spinner…
     final p = _ref.read(sharedPrefsProvider);
     final raw = p.getString(PrefKeys.bookmarks);
     if (raw != null) {
-      state = (jsonDecode(raw) as List)
-          .map((e) => Bookmark.fromJson(e as Map<String, Object?>))
-          .toList();
+      try {
+        state = (jsonDecode(raw) as List)
+            .map((e) => Bookmark.fromJson(e as Map<String, Object?>))
+            .toList();
+      } catch (_) {
+        state = const [];
+      }
     }
+    // …then replace it with the database, which carries notes, tags and routes.
+    _hydrateFromDb();
   }
 
   final Ref _ref;
 
+  /// Set on the first user edit, so a late-arriving hydrate cannot overwrite it
+  /// with a snapshot taken before that edit.
+  bool _touched = false;
+
   bool contains(String uid) => state.any((b) => b.uid == uid);
 
-  Future<void> toggle(Bookmark b) async {
-    final exists = contains(b.uid);
-    state = exists
-        ? state.where((x) => x.uid != b.uid).toList()
-        : [b, ...state];
-    await _persist();
+  /// Convenience for call sites that only know kind + id.
+  bool has(String kind, int id, {String src = 'content'}) =>
+      contains('$src:$kind:$id');
+
+  Future<void> _hydrateFromDb() async {
+    final db = _ref.read(userDatabaseProvider);
+    if (db == null) return;
+    try {
+      final rows = await db.raw.query('bookmarks', orderBy: 'created_at DESC');
+      if (!mounted || _touched) return;
+      state = rows.map(Bookmark.fromRow).toList();
+    } catch (e) {
+      debugPrint('BookmarksController: hydrate failed ($e)');
+    }
   }
 
-  Future<void> _persist() async {
+  Future<void> toggle(Bookmark b) async {
+    _touched = true;
+    final exists = contains(b.uid);
+    state =
+        exists ? state.where((x) => x.uid != b.uid).toList() : [b, ...state];
+
+    final db = _ref.read(userDatabaseProvider);
+    if (db != null) {
+      try {
+        if (exists) {
+          await db.raw.delete('bookmarks',
+              where: 'src = ? AND kind = ? AND ref_id = ?',
+              whereArgs: [b.src, b.kind, b.id]);
+        } else {
+          final now = DateTime.now().millisecondsSinceEpoch;
+          await db.raw.insert(
+            'bookmarks',
+            {
+              'src': b.src,
+              'kind': b.kind,
+              'ref_id': b.id,
+              'title_en': b.titleEn,
+              'title_hi': b.titleHi,
+              'subtitle': b.subtitle,
+              'route': b.route,
+              'note': b.note,
+              'tags': b.tags.isEmpty ? null : jsonEncode(b.tags),
+              'created_at': now,
+              'updated_at': now,
+            },
+            conflictAlgorithm: ConflictAlgorithm.replace,
+          );
+        }
+      } catch (e) {
+        debugPrint('BookmarksController: write failed ($e)');
+      }
+    }
+    await _persistLegacy();
+  }
+
+  /// Attach or replace the private note on an existing bookmark.
+  Future<void> setNote(String uid, String? note) async {
+    _touched = true;
+    final idx = state.indexWhere((b) => b.uid == uid);
+    if (idx < 0) return;
+    final b = state[idx];
+    state = [...state]..[idx] = b.copyWith(note: note);
+
+    final db = _ref.read(userDatabaseProvider);
+    if (db == null) return;
+    try {
+      await db.raw.update(
+        'bookmarks',
+        {'note': note, 'updated_at': DateTime.now().millisecondsSinceEpoch},
+        where: 'src = ? AND kind = ? AND ref_id = ?',
+        whereArgs: [b.src, b.kind, b.id],
+      );
+    } catch (e) {
+      debugPrint('BookmarksController: note write failed ($e)');
+    }
+  }
+
+  /// Keeps the pre-migration prefs key in step for one release, so installing
+  /// an older build still finds the user's bookmarks. Notes, tags and routes
+  /// are deliberately absent — the old format has no room for them, and
+  /// inventing one would break the old build's parser.
+  Future<void> _persistLegacy() async {
     final p = _ref.read(sharedPrefsProvider);
     await p.setString(
         PrefKeys.bookmarks, jsonEncode(state.map((b) => b.toJson()).toList()));

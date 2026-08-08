@@ -1,0 +1,14 @@
+# Hindu deities and avatars, with multilingual labels.
+#
+# CC0: Wikidata's data is public-domain dedicated, which is why it is the
+# acquisition path for the entity SKELETON. Descriptions are NOT taken from
+# here -- those are written by us from the public-domain translations, because
+# Wikipedia prose is CC BY-SA and its share-alike would infect our content.
+SELECT ?item ?itemLabel ?labelHi ?labelSa ?desc WHERE {
+  ?item wdt:P31/wdt:P279* wd:Q979507 .          # instance/subclass of Hindu deity
+  OPTIONAL { ?item rdfs:label ?labelHi FILTER(LANG(?labelHi) = "hi") }
+  OPTIONAL { ?item rdfs:label ?labelSa FILTER(LANG(?labelSa) = "sa") }
+  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc) = "en") }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 400

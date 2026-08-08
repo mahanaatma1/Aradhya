@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:source",
+  "title": "A row of content/sources/registry.jsonl — the single provenance authority",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "source_name": { "type": "string", "minLength": 3 },
+    "source_url": { "type": ["string", "null"] },
+    "source_type": { "enum": ["primary", "secondary", "reference", "ai_summary"] },
+    "source_language": { "type": ["string", "null"] },
+    "edition": { "type": ["string", "null"] },
+    "license_or_usage_note": { "type": "string", "minLength": 5 },
+    "retrieved_at": { "type": ["string", "null"] },
+    "checksum": { "type": ["string", "null"] }
+  },
+  "required": ["slug", "source_name", "source_type", "license_or_usage_note"],
+  "additionalProperties": false
+}

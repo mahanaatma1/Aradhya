@@ -1,0 +1,9 @@
+# Vedic sages.
+SELECT ?item ?itemLabel ?labelHi ?labelSa ?desc WHERE {
+  ?item wdt:P31/wdt:P279* wd:Q755990 .        # rishi
+  OPTIONAL { ?item rdfs:label ?labelHi FILTER(LANG(?labelHi) = "hi") }
+  OPTIONAL { ?item rdfs:label ?labelSa FILTER(LANG(?labelSa) = "sa") }
+  OPTIONAL { ?item schema:description ?desc FILTER(LANG(?desc) = "en") }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 200

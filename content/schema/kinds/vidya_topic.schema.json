@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:vidya_topic",
+  "title": "4.15 Vedic Science — caution is REQUIRED (the §4.15 medical-advice rule)",
+  "type": "object",
+  "properties": {
+    "slug": { "$ref": "aradhya:_common#/$defs/slug" },
+    "discipline": { "enum": ["ayurveda", "jyotisha", "shulba", "yoga", "vyakarana", "chandas"] },
+    "title": { "$ref": "aradhya:_common#/$defs/title" },
+    "short_description": { "$ref": "aradhya:_common#/$defs/shortDescription" },
+    "long_description": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "practical_use": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "caution": { "$ref": "aradhya:_common#/$defs/bilingual" },
+    "modern_status": {
+      "enum": ["corroborated", "partially_corroborated", "not_evaluated", "contested"]
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "region": { "type": ["string", "null"] },
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
+  },
+  "required": ["slug", "discipline", "title", "short_description", "caution", "modern_status", "sources", "verification"],
+  "additionalProperties": false
+}

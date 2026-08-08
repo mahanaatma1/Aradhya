@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aradhya:_common",
+  "title": "Shared building blocks for every Aradhya content JSONL line",
+  "$defs": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "isoDate": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "bilingual": {
+      "type": "object",
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "hi": { "type": ["string", "null"] }
+      },
+      "required": ["en"],
+      "additionalProperties": false
+    },
+    "title": {
+      "type": "object",
+      "properties": {
+        "en": { "type": "string", "minLength": 1 },
+        "hi": { "type": ["string", "null"] },
+        "sa": { "type": ["string", "null"] },
+        "iast": { "type": ["string", "null"] }
+      },
+      "required": ["en"],
+      "additionalProperties": false
+    },
+    "shortDescription": {
+      "type": "object",
+      "properties": {
+        "en": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "hi": { "type": ["string", "null"] }
+      },
+      "required": ["en"],
+      "additionalProperties": false
+    },
+    "alias": {
+      "type": "object",
+      "properties": {
+        "alias": { "type": "string", "minLength": 1 },
+        "script": { "enum": ["deva", "latn", "iast", "taml", "beng", "telu", "knda"] },
+        "lang": { "enum": ["sa", "hi", "en", "ta", "bn", "te", "kn", "mr", "gu"] },
+        "alias_kind": {
+          "enum": ["primary", "epithet", "transliteration", "spelling", "regional"]
+        }
+      },
+      "required": ["alias", "script", "lang", "alias_kind"],
+      "additionalProperties": false
+    },
+    "relatedItem": {
+      "type": "object",
+      "properties": {
+        "rel_type": { "type": "string", "minLength": 1 },
+        "dst_slug": { "$ref": "#/$defs/slug" },
+        "ordinal": { "type": ["integer", "null"] },
+        "tradition": { "type": ["string", "null"] },
+        "note": { "type": ["object", "null"] },
+        "confidence": { "enum": ["high", "medium", "low", "disputed"] }
+      },
+      "required": ["rel_type", "dst_slug", "confidence"],
+      "additionalProperties": false
+    },
+    "sourceRef": {
+      "type": "object",
+      "description": "A citation. source_slug MUST exist in content/sources/registry.jsonl.",
+      "properties": {
+        "source_slug": { "$ref": "#/$defs/slug" },
+        "source_chapter_or_section": { "type": ["string", "null"] },
+        "quote": { "type": ["string", "null"] },
+        "is_primary": { "type": "boolean" },
+        "last_verified_at": { "$ref": "#/$defs/isoDate" },
+        "verified_by": { "type": ["string", "null"] }
+      },
+      "required": ["source_slug", "last_verified_at"],
+      "additionalProperties": false
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/sourceRef" }
+    },
+    "verification": {
+      "type": "object",
+      "description": "Per-language. Hindi is verified for register, not just accuracy (§1.11).",
+      "properties": {
+        "status_en": { "enum": ["unverified", "verified", "disputed"] },
+        "status_hi": { "enum": ["unverified", "verified", "disputed"] },
+        "by": { "type": ["string", "null"] },
+        "at": { "type": ["string", "null"] },
+        "notes": { "type": ["string", "null"] }
+      },
+      "required": ["status_en", "status_hi"],
+      "additionalProperties": false
+    },
+    "provenanceBlock": {
+      "type": "object",
+      "properties": {
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "region": { "type": ["string", "null"] },
+        "sources": { "$ref": "#/$defs/sources" },
+        "verification": { "$ref": "#/$defs/verification" }
+      },
+      "required": ["sources", "verification"]
+    }
+  }
+}

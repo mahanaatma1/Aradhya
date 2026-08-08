@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/visited.dart';
+import '../../shared/widgets/source_chip.dart';
+import '../related/related_rail.dart';
 import 'temple_map.dart';
 import 'temple_models.dart';
 import 'temple_style.dart';
@@ -179,6 +181,13 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
                 ),
               ),
             ),
+            // Precomputed links to this temple's aarti, chalisa, mantras, puja
+            // vidhi and vrat kathas. Renders nothing when the temple has no
+            // edges, so it is safe on every screen.
+            SliverToBoxAdapter(
+              child: RelatedRail(table: 'temples', id: t.id),
+            ),
+            const SliverToBoxAdapter(child: SizedBox(height: 24)),
           ],
         ),
       ),
@@ -212,6 +221,27 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
               if (t.architecture(hi) != null)
                 (hi ? 'वास्तुकला' : 'Architecture', t.architecture(hi)!),
             ]),
+            // These citations were already shipping inside `temples.data` on
+            // all 187 rows and were being parsed away. Official domains
+            // (.gov.in, .nic.in, tourism boards) are ranked first.
+            if (t.sources.isNotEmpty) ...[
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: SourceChip(
+                  hindi: hi,
+                  sourceName: hi ? 'संदर्भ' : 'References',
+                  sourceRef: '${t.sources.length}',
+                  sourceUrl: t.rankedSources.first,
+                  otherUrls: t.rankedSources.skip(1).toList(),
+                  licenseNote: t.confidence == null
+                      ? null
+                      : (hi
+                          ? 'डेटा विश्वसनीयता: ${t.confidence}'
+                          : 'Data confidence: ${t.confidence}'),
+                ),
+              ),
+            ],
           ],
         ),
       ));

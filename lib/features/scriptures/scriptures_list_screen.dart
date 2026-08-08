@@ -18,7 +18,18 @@ class ScripturesListScreen extends ConsumerWidget {
     final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: Text(t.catScriptures)),
+      appBar: AppBar(
+        title: Text(t.catScriptures),
+        actions: [
+          // 27,890 verses are unbrowsable by scrolling; search is the only
+          // realistic way in.
+          IconButton(
+            icon: const Icon(Icons.search_rounded),
+            tooltip: 'Search',
+            onPressed: () => context.push('/search'),
+          ),
+        ],
+      ),
       body: AsyncView(
         value: scriptures,
         emptyMessage: t.comingSoon,
