@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/brand.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
+import '../../core/user/interest_signals.dart';
 import '../../core/user/bookmarks.dart';
 import '../../core/user/streak.dart';
 import '../../l10n/app_localizations.dart';
@@ -21,6 +22,7 @@ class ProfileScreen extends ConsumerWidget {
     final t = L10n.of(context);
     final hi = ref.watch(isHindiProvider);
     final locale = ref.watch(localeProvider);
+    final mode = ref.watch(themeModeProvider);
     final streak = ref.watch(streakProvider);
     final bookmarkCount = ref.watch(bookmarksProvider).length;
     final name = ref.watch(userNameProvider);
@@ -173,6 +175,58 @@ class ProfileScreen extends ConsumerWidget {
                       const Locale('hi'),
                 ),
               ],
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          _SectionLabel(hi ? 'रूप' : 'Appearance'),
+          Card(
+            child: Column(
+              children: [
+                _SelectTile(
+                  label: hi ? 'उजाला' : 'Light',
+                  selected: mode == ThemeMode.light,
+                  onTap: () => ref
+                      .read(themeModeProvider.notifier)
+                      .set(ThemeMode.light),
+                ),
+                _SelectTile(
+                  label: hi ? 'अँधेरा' : 'Dark',
+                  selected: mode == ThemeMode.dark,
+                  onTap: () =>
+                      ref.read(themeModeProvider.notifier).set(ThemeMode.dark),
+                ),
+                _SelectTile(
+                  label: hi ? 'फ़ोन के अनुसार' : 'Follow system',
+                  selected: mode == ThemeMode.system,
+                  onTap: () => ref
+                      .read(themeModeProvider.notifier)
+                      .set(ThemeMode.system),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          _SectionLabel(hi ? 'निजता' : 'Privacy'),
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
+              leading: Icon(Icons.restart_alt_rounded, color: scheme.primary),
+              title: Text(hi ? 'रुचि प्रोफ़ाइल हटाएँ' : 'Reset personalization'),
+              subtitle: Text(hi
+                  ? 'जो आप खोलते हैं उससे केवल क्रम बदलता है — कुछ छिपाया नहीं जाता, और यह इसी उपकरण पर रहता है'
+                  : 'What you open changes only the order things appear in — nothing is hidden, and it stays on this device'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () async {
+                await ref.read(interestSignalsProvider.notifier).reset();
+                if (!context.mounted) return;
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(hi
+                      ? 'रुचि प्रोफ़ाइल हटा दी गई।'
+                      : 'Personalization reset.'),
+                ));
+              },
             ),
           ),
           const SizedBox(height: 16),

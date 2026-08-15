@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../db/content_database.dart';
 import '../models/daily_quote.dart';
@@ -21,7 +22,33 @@ final isHindiProvider = Provider<bool>(
 );
 
 /// The user's chosen theme mode (system by default).
-final themeModeProvider = StateProvider<ThemeMode>((ref) => ThemeMode.system);
+/// Light, dark, or follow the system.
+///
+/// Defaults to light rather than system. The warm cream palette is the app's
+/// identity, and a first launch that lands in dark because the phone happens
+/// to be in dark mode shows a version of the app most users have not chosen.
+/// Following the system is available, it is just not assumed.
+class ThemeModeController extends StateNotifier<ThemeMode> {
+  ThemeModeController(this._prefs) : super(_read(_prefs));
+
+  final SharedPreferences _prefs;
+  static const _key = 'theme_mode';
+
+  static ThemeMode _read(SharedPreferences p) => switch (p.getString(_key)) {
+        'dark' => ThemeMode.dark,
+        'system' => ThemeMode.system,
+        _ => ThemeMode.light,
+      };
+
+  Future<void> set(ThemeMode mode) async {
+    state = mode;
+    await _prefs.setString(_key, mode.name);
+  }
+}
+
+final themeModeProvider =
+    StateNotifierProvider<ThemeModeController, ThemeMode>(
+        (ref) => ThemeModeController(ref.watch(sharedPrefsProvider)));
 
 /// The user's name, captured during onboarding (empty if skipped).
 final userNameProvider = StateProvider<String>(

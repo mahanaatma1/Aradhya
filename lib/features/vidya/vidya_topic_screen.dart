@@ -127,6 +127,13 @@ class _CautionPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // The panel is a translucent wash over the page surface, so its ink has to
+    // follow the theme. A fixed dark brown reads well on cream and vanishes
+    // into the dark ramp — the one panel that must never be hard to read.
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    final ink = dark ? const Color(0xFFF0DCC2) : const Color(0xFF4A3A22);
+    final head = dark ? const Color(0xFFFFC078) : const Color(0xFFB3701C);
+
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
@@ -139,21 +146,19 @@ class _CautionPanel extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.warning_amber_rounded,
-                  size: 17, color: Color(0xFFB3701C)),
+              Icon(Icons.warning_amber_rounded, size: 17, color: head),
               const SizedBox(width: 7),
               Text(hindi ? 'सावधानी' : 'Caution',
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontSize: 12,
                       letterSpacing: 0.8,
                       fontWeight: FontWeight.w800,
-                      color: Color(0xFFB3701C))),
+                      color: head)),
             ],
           ),
           const SizedBox(height: 7),
           Text(text,
-              style: const TextStyle(
-                  fontSize: 13.5, height: 1.5, color: Color(0xFF4A3A22))),
+              style: TextStyle(fontSize: 13.5, height: 1.5, color: ink)),
         ],
       ),
     );

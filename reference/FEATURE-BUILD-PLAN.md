@@ -976,9 +976,9 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 4 — Narrative & cosmology | 20 | 20 |
 | 5 — Curated & interactive | 26 | 26 |
 | 6 — Ask the Scriptures | 9 | 9 |
-| 7 — Polish & optimization | 0 | 16 |
+| 7 — Polish & optimization | 5 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **170** | **194** |
+| **Total** | **175** | **194** |
 
 ---
 
@@ -1260,16 +1260,20 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 
 ## Phase 7 — Polish & optimization (4.20)
 
-- [ ] **P7-01** **G13** — wire `themeModeProvider`, drop the hardcoded `ThemeMode.light`
-- [ ] **P7-02** **G13** — theme selector in the You tab; verify the dark ramp on every new screen
+- [x] **P7-01** **G13** — wire `themeModeProvider`, drop the hardcoded `ThemeMode.light`
+- [x] **P7-02** **G13** — theme selector in the You tab; verify the dark ramp on every new screen
 - [ ] **P7-03** Hindi typography sweep — every new screen checked for Devanagari overflow (tree nodes, graph edge chips, timeline bands, status chips)
 - [ ] **P7-04** Hindi register review — devotional tone, not just literal accuracy, across all `_hi` content
 - [ ] **P7-05** **G9** — add `just_audio`; source real recordings; populate `mantras.audio_url`
 - [ ] **P7-06** **G9** — player UI with TTS fallback
-- [ ] **P7-07** **4.22** — `interest_signals` table, increments, nightly 0.98 decay
-- [ ] **P7-08** **4.22** — apply to discovery-rail ordering, related-edge tie-breaks, prompt theme, quiz weighting **only**
-- [ ] **P7-09** **4.22** — "Why am I seeing this?" line + Reset personalization in You
-- [ ] **P7-10** Verify the app is fully usable with `interest_signals` empty
+- [x] **P7-07** **4.22** — `interest_signals` table, increments, nightly 0.98 decay
+- [~] **P7-08** **4.22** — the mechanism, the decay, the reset and the guarantees are
+  done and tested; `rank()` is not yet called from the discovery rails. Bookmarking
+  is wired as the one real signal source. **Deliberately left partial**: ordering is
+  the half that can make the app worse, and it should land with the rail spot-check
+  in P7-15 rather than ahead of it
+- [x] **P7-09** **4.22** — "Why am I seeing this?" line + Reset personalization in You
+- [x] **P7-10** Verify the app is fully usable with `interest_signals` empty
 - [ ] **P7-11** Performance pass — cold start, scroll jank on the graph/tree/timeline canvases
 - [ ] **P7-12** Asset gzip + inflate-on-copy (footprint, Risk 5)
 - [ ] **P7-13** Widget tests for the new screens (currently only astrology/panchang are covered)

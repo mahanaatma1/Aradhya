@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sqflite/sqflite.dart' show ConflictAlgorithm;
 
 import '../db/user_database.dart';
+import 'interest_signals.dart';
 import 'user_prefs.dart';
 
 /// A saved item pointing back to any content screen. Content is never
@@ -158,6 +159,15 @@ class BookmarksController extends StateNotifier<List<Bookmark>> {
     final exists = contains(b.uid);
     state =
         exists ? state.where((x) => x.uid != b.uid).toList() : [b, ...state];
+
+    // Bookmarking is the strongest interest signal there is — it is the one
+    // action where someone says "keep this". Only on add: removing a bookmark
+    // is not evidence of dislike, just of tidying.
+    if (!exists) {
+      _ref
+          .read(interestSignalsProvider.notifier)
+          .record(b.kind, InterestSignals.bookmarkWeight);
+    }
 
     final db = _ref.read(userDatabaseProvider);
     if (db != null) {

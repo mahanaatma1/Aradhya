@@ -141,10 +141,12 @@ class DivyaVaaniApp extends ConsumerWidget {
     return MaterialApp.router(
       title: Brand.name,
       debugShowCheckedModeBanner: false,
-      // The app is always light — the "sacred handcrafted journal" look depends
-      // on the warm cream palette, so we never follow the system dark theme.
+      // The cream palette is the app's identity, so light is the default and
+      // the system is not followed unless the user asks for it. The dark ramp
+      // is a deliberate warm espresso, not an inverted paper.
       theme: AppTheme.light(),
-      themeMode: ThemeMode.light,
+      darkTheme: AppTheme.dark(),
+      themeMode: ref.watch(themeModeProvider),
       locale: locale,
       supportedLocales: L10n.supportedLocales,
       localizationsDelegates: L10n.localizationsDelegates,
