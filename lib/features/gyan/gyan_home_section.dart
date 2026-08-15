@@ -61,7 +61,7 @@ class GyanHomeSection extends ConsumerWidget {
                 ),
               ),
               TextButton(
-                onPressed: () => context.push('/gyan'),
+                onPressed: () => context.go('/gyan'),
                 child: Text(hi ? 'सभी देखें' : 'See all',
                     style: const TextStyle(fontSize: 13)),
               ),
@@ -84,7 +84,7 @@ class GyanHomeSection extends ConsumerWidget {
                   borderRadius: BorderRadius.circular(18),
                   onTap: m.shipped
                       ? () => context.push(m.route)
-                      : () => context.push('/gyan'),
+                      : () => context.go('/gyan'),
                   child: Container(
                     padding: const EdgeInsets.all(13),
                     decoration: BoxDecoration(

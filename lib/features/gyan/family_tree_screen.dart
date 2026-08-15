@@ -220,24 +220,38 @@ class _Tree extends ConsumerWidget {
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
         child: Column(
           children: [
+            // Generations run top to bottom and are joined with real brackets,
+            // so three children read as three descents from one couple rather
+            // than as a list that happens to sit lower on the screen.
             if (parents.isNotEmpty) ...[
               _BandLabel(hindi ? 'माता-पिता' : 'PARENTS'),
               _Band(relations: parents, hindi: hindi, onReroot: onReroot),
-              const _Connector(),
+              _Bracket(count: parents.length, pointsDown: false),
             ],
-            _RootCard(entity: root, hindi: hindi),
-            if (partners.isNotEmpty) ...[
+            _CoupleRow(
+              root: _RootCard(entity: root, hindi: hindi),
+              partners: partners,
+              hindi: hindi,
+              onReroot: onReroot,
+            ),
+            if (partners.length > 1) ...[
               const SizedBox(height: 8),
-              _BandLabel(hindi ? 'सहचर' : 'CONSORT'),
-              _Band(relations: partners, hindi: hindi, onReroot: onReroot),
+              _BandLabel(hindi ? 'अन्य सहचर' : 'OTHER CONSORTS'),
+              _Band(
+                  relations: partners.skip(1).toList(),
+                  hindi: hindi,
+                  onReroot: onReroot),
             ],
             if (children.isNotEmpty) ...[
-              const _Connector(),
+              _Bracket(count: children.length),
               _BandLabel(hindi ? 'संतान' : 'CHILDREN'),
               _Band(relations: children, hindi: hindi, onReroot: onReroot),
             ],
             if (siblings.isNotEmpty) ...[
-              const SizedBox(height: 14),
+              const SizedBox(height: 18),
+              // Siblings sit beside the generation, not below it, so they are
+              // separated by a rule rather than joined by a descent bracket.
+              const _SiblingRule(),
               _BandLabel(hindi ? 'भाई-बहन' : 'SIBLINGS'),
               _Band(relations: siblings, hindi: hindi, onReroot: onReroot),
             ],
@@ -295,15 +309,151 @@ class _BandLabel extends StatelessWidget {
       );
 }
 
-class _Connector extends StatelessWidget {
-  const _Connector();
+/// A genealogical bracket: one stem, a horizontal rail, and a drop to each
+/// card beneath.
+///
+/// The tree used to join its bands with a single straight line, which said
+/// nothing about who descends from whom -- three children looked exactly like
+/// one. A rail with drops is the notation family trees actually use, and it
+/// costs one painter.
+class _Bracket extends StatelessWidget {
+  /// How many cards the rail has to reach. Drops land at the centre of each
+  /// equal-width cell, which is where a Wrap of equal cards puts them.
+  final int count;
+
+  /// Rail above the cards (children) or below them (parents).
+  final bool pointsDown;
+
+  const _Bracket({required this.count, this.pointsDown = true});
 
   @override
-  Widget build(BuildContext context) => Container(
-        width: 2,
-        height: 22,
-        margin: const EdgeInsets.symmetric(vertical: 2),
-        color: AppColors.gold.withValues(alpha: 0.5),
+  Widget build(BuildContext context) => SizedBox(
+        height: 26,
+        width: double.infinity,
+        child: CustomPaint(
+          painter: _BracketPainter(count: count, pointsDown: pointsDown),
+        ),
+      );
+}
+
+class _BracketPainter extends CustomPainter {
+  final int count;
+  final bool pointsDown;
+  const _BracketPainter({required this.count, required this.pointsDown});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = AppColors.gold.withValues(alpha: 0.55)
+      ..strokeWidth = 1.6
+      ..strokeCap = StrokeCap.round;
+
+    final midY = size.height / 2;
+    final stemTop = pointsDown ? 0.0 : size.height;
+    canvas.drawLine(Offset(size.width / 2, stemTop),
+        Offset(size.width / 2, midY), paint);
+
+    if (count <= 1) {
+      canvas.drawLine(Offset(size.width / 2, midY),
+          Offset(size.width / 2, pointsDown ? size.height : 0), paint);
+      return;
+    }
+
+    // Rail spans only as far as the outermost drops, so it never runs past
+    // the cards it is joining.
+    final firstX = size.width * (0.5 / count);
+    final lastX = size.width * ((count - 0.5) / count);
+    canvas.drawLine(Offset(firstX, midY), Offset(lastX, midY), paint);
+
+    for (var i = 0; i < count; i++) {
+      final x = size.width * ((i + 0.5) / count);
+      canvas.drawLine(
+          Offset(x, midY), Offset(x, pointsDown ? size.height : 0), paint);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _BracketPainter old) =>
+      old.count != count || old.pointsDown != pointsDown;
+}
+
+/// Root and consort side by side, joined by the double line a marriage is
+/// drawn with.
+class _CoupleRow extends StatelessWidget {
+  final Widget root;
+  final List<EntityRelation> partners;
+  final bool hindi;
+  final ValueChanged<int> onReroot;
+
+  const _CoupleRow({
+    required this.root,
+    required this.partners,
+    required this.hindi,
+    required this.onReroot,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    if (partners.isEmpty) return root;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Flexible(child: root),
+        const _MarriageLine(),
+        Flexible(
+          child: _PersonCard(
+              relation: partners.first, hindi: hindi, onReroot: onReroot),
+        ),
+      ],
+    );
+  }
+}
+
+class _MarriageLine extends StatelessWidget {
+  const _MarriageLine();
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+        width: 26,
+        height: 14,
+        child: CustomPaint(painter: _MarriagePainter()),
+      );
+}
+
+class _MarriagePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final p = Paint()
+      ..color = AppColors.gold.withValues(alpha: 0.65)
+      ..strokeWidth = 1.5;
+    canvas.drawLine(Offset(0, size.height * 0.35),
+        Offset(size.width, size.height * 0.35), p);
+    canvas.drawLine(Offset(0, size.height * 0.65),
+        Offset(size.width, size.height * 0.65), p);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter old) => false;
+}
+
+/// Siblings share a generation with the root, so they are introduced by a
+/// rule rather than a descent bracket -- drawing them below on a bracket would
+/// claim they are the root's children.
+class _SiblingRule extends StatelessWidget {
+  const _SiblingRule();
+
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.only(bottom: 10),
+        child: Row(
+          children: [
+            Expanded(
+                child: Container(
+                    height: 1,
+                    color: AppColors.gold.withValues(alpha: 0.28))),
+          ],
+        ),
       );
 }
 

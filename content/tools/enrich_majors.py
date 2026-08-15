@@ -193,6 +193,29 @@ ENRICH = {
   "uses him to show a man authoring the exact outcome he is trying to escape.",
   "कंस को बताया जाता है कि कौन-सा बालक उसका वध करेगा, और वह समूचा शासन उसे रोकने में लगा देता है। पुराण उसे ऐसे पुरुष के रूप में दिखाता है जो स्वयं उसी परिणाम को रचता है जिससे भाग रहा था।"),
 
+ "rama": (R, "Book II: Canto XLV.: The Tamasa.",
+  "Rama leaves Ayodhya on the day he was to be crowned, because his father "
+  "gave a promise years earlier that someone finally called in. The citizens "
+  "follow him out of the city and camp beside him on the Tamasa; he waits "
+  "until they sleep and slips away so they cannot ruin themselves for his "
+  "sake. The Ramayana defines him by what he gives up rather than what he wins.",
+  "राम उसी दिन अयोध्या छोड़ते हैं जिस दिन उनका राज्याभिषेक था। नगरवासी उनके पीछे चल पड़ते हैं और तमसा के तट पर ठहरते हैं; वे उनके सो जाने की प्रतीक्षा करके चुपचाप निकल जाते हैं, ताकि वे उनके लिए अपना सब न खो दें।"),
+
+ "indra": (W, "The Vishnu Purana: Book I: Chapter IX",
+  "Indra is king of the gods and the figure the Puranas are least reverent "
+  "about. In the churning of the ocean it is his carelessness that loses the "
+  "gods their fortune in the first place, and he has to help haul it back. He "
+  "is powerful, senior, and repeatedly the one who needed rescuing.",
+  "इंद्र देवराज हैं और पुराण उनके प्रति सबसे कम आदरभाव रखते हैं। समुद्र-मंथन की कथा में उन्हीं की असावधानी से देवताओं की श्री जाती है, और उसे लौटाने में उन्हें सहयोग करना पड़ता है।"),
+
+ "ashwatthama": (G, "The Mahabharata, Book 7: Drona Parva: Section CXCV",
+  "Ashwatthama is Drona's son, and his name is the weapon used against his own "
+  "father: an elephant so named is killed, the news is carried to Drona as a "
+  "half-truth, and the old man lays down his arms believing his son is dead. "
+  "What Ashwatthama does afterwards -- the night raid on a sleeping camp -- is "
+  "the darkest passage in the epic, and it starts here.",
+  "अश्वत्थामा द्रोण के पुत्र हैं, और उनका नाम ही उनके पिता के विरुद्ध अस्त्र बनता है: उसी नाम का हाथी मारा जाता है, समाचार अर्धसत्य बनकर पहुँचता है, और द्रोण शस्त्र रख देते हैं।"),
+
  "duryodhana": (G, "The Mahabharata, Book 1: Adi Parva: Section CXXIX",
   "Duryodhana is not written as a monster. He is written as a man who was "
   "born second in importance and could never accept it, who kept his friends "

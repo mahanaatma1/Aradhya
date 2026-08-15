@@ -248,33 +248,58 @@ class _GraphCanvas extends StatelessWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        final size = Size(constraints.maxWidth, constraints.maxHeight);
-        final centre = Offset(size.width / 2, size.height / 2);
-        final radius = math.min(size.width, size.height) * 0.34;
+        // A node chip is a real rectangle, so the ring has to be big enough to
+        // seat every chip along its circumference. The old layout used a fixed
+        // radius and packed each family into a narrow arc, which guaranteed
+        // overlap the moment a family had more than two members -- and the
+        // lineage families always do.
+        const chipW = 132.0;      // chip width plus the gap it needs
+        const chipH = 54.0;
+        final n = shown.length;
 
-        // Group by family so members of the same family fan out around their
-        // family's anchor angle instead of overlapping.
-        final grouped = <String, List<EntityRelation>>{};
-        for (final r in shown) {
-          grouped.putIfAbsent(r.family, () => []).add(r);
-        }
+        // Two rings once one ring cannot seat them all: alternating radii on a
+        // single ring only staggers the collision, it does not remove it.
+        final twoRings = n > 7;
+        final perRing = twoRings ? (n / 2).ceil() : n;
+        final minR = (perRing * chipW) / (2 * math.pi);
+        final innerR = math.max(minR, 120.0);
+        final outerR = innerR + chipH + 46;
+
+        // The canvas is deliberately larger than the viewport: the graph is
+        // inside an InteractiveViewer, so it is meant to be panned, and sizing
+        // it to the screen is what pushed outer nodes off the edge.
+        final extent = (outerR + chipW) * 2;
+        final side = math.max(
+            extent, math.max(constraints.maxWidth, constraints.maxHeight));
+        final size = Size(side, side);
+        final centre = Offset(side / 2, side / 2);
+
+        // Sort by family so related edges still sit together on the ring,
+        // then distribute EVENLY. Even spacing is what actually guarantees the
+        // angular gap; grouping is presentation on top of it.
+        final ordered = [...shown]
+          ..sort((a, b) {
+            final fa = _familyAngle[a.family] ?? 0;
+            final fb = _familyAngle[b.family] ?? 0;
+            final d = fa.compareTo(fb);
+            return d != 0 ? d : a.family.compareTo(b.family);
+          });
 
         final positions = <EntityRelation, Offset>{};
-        grouped.forEach((family, members) {
-          final base = _familyAngle[family] ?? 0;
-          final spread = math.min(members.length * 0.42, 1.5);
-          for (var i = 0; i < members.length; i++) {
-            final t = members.length == 1
-                ? 0.0
-                : (i / (members.length - 1) - 0.5) * spread;
-            final angle = base + t;
-            // Alternate radius slightly so labels of adjacent nodes do not
-            // collide on the same ring.
-            final r = radius * (i.isEven ? 1.0 : 1.22);
-            positions[members[i]] =
-                centre + Offset(math.cos(angle) * r, math.sin(angle) * r);
-          }
-        });
+        for (var i = 0; i < ordered.length; i++) {
+          final ring = twoRings && i.isOdd;
+          final idxInRing = twoRings ? i ~/ 2 : i;
+          final countInRing = twoRings
+              ? (ring ? n ~/ 2 : (n / 2).ceil())
+              : n;
+          final step = countInRing == 0 ? 0.0 : (2 * math.pi) / countInRing;
+          // Offset the outer ring by half a step so the two rings interleave
+          // rather than sitting radially in line with each other.
+          final angle = -math.pi / 2 + idxInRing * step + (ring ? step / 2 : 0);
+          final r = ring ? outerR : innerR;
+          positions[ordered[i]] =
+              centre + Offset(math.cos(angle) * r, math.sin(angle) * r);
+        }
 
         return InteractiveViewer(
           minScale: 0.6,
