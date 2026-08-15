@@ -83,6 +83,8 @@ TARGETS = {
         ("rama/ry360.htm", "Book V, Canto XVIII"),
         ("rama/ry400.htm", "Book VI, Canto I"),
         ("rama/ry341.htm", "Canto titled Hanuman"),
+        ("rama/ry055.htm", "Vishvamitra and Vasishtha"),
+        ("rama/ry060.htm", "Trisanku"),
     ],
 }
 
@@ -95,6 +97,17 @@ def strip_html(raw: str) -> str:
 
 
 def main() -> int:
+    # Carry forward labels that were already verified against the page itself.
+    # The manifest used to be rebuilt from scratch every run, which silently
+    # discarded them and made each run re-derive all 43 -- enough requests in a
+    # burst that the archive started resetting the connection.
+    prior = {}
+    mf = RAW / 'manifest.json'
+    if mf.exists():
+        for m in json.loads(mf.read_text(encoding='utf-8')):
+            if m.get('label_verified'):
+                prior[m['path']] = m['label']
+
     manifest = []
     for source, pages in TARGETS.items():
         outdir = RAW / source
@@ -109,15 +122,26 @@ def main() -> int:
                 try:
                     req = urllib.request.Request(url, headers={'User-Agent': UA})
                     with urllib.request.urlopen(req, timeout=45) as r:
-                        body = strip_html(r.read().decode('utf-8', 'replace'))
+                        raw = r.read().decode('utf-8', 'replace')
+                    # The page names itself. Every label guessed from a URL in
+                    # the first pass of this work was wrong -- all 34 of them --
+                    # so the title is taken here and never inferred.
+                    t = re.search(r'<title>(.*?)</title>', raw, re.I | re.S)
+                    if t:
+                        prior.setdefault(path, html.unescape(
+                            re.sub(r'\s+', ' ', t.group(1))).split('|')[0].strip())
+                    body = strip_html(raw)
                 except Exception as e:                    # noqa: BLE001
                     print(f"  FAIL {path}: {type(e).__name__}")
                     continue
                 dest.write_text(body, encoding='utf-8')
                 time.sleep(1.5)          # be a polite guest on a free archive
             sha = hashlib.sha256(body.encode('utf-8')).hexdigest()
+            verified = path in prior
             manifest.append({"source_slug": source, "path": path,
-                             "label": label, "file": str(dest.relative_to(RAW)),
+                             "label": prior.get(path, label),
+                             "label_verified": verified,
+                             "file": str(dest.relative_to(RAW)),
                              "chars": len(body), "sha256": sha})
             print(f"  {source:<22} {label:<32} {len(body):>7} chars")
 
