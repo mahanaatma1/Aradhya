@@ -37,6 +37,8 @@ TARGETS = {
         ("vp/vp044.htm", "Book I, Chapter IX"),
         ("vp/vp049.htm", "Book I, Chapter XIV"),
         ("vp/vp062.htm", "Book II, Chapter I"),
+        ("vp/vp063.htm", "the seven Patalas"),
+        ("vp/vp065.htm", "the seven upper spheres"),
         ("vp/vp082.htm", "Book III, Chapter I"),
         ("vp/vp101.htm", "Book IV, Chapter I"),
         ("vp/vp102.htm", "Book IV, Chapter II"),
