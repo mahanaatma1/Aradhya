@@ -163,6 +163,36 @@ ENRICH = {
   "once used for himself.",
   "रामायण हनुमान को ऐसे पात्र के रूप में लाती है जो अपना बल भूल चुका है। लंका की छलांग से पूर्व अन्य वानरों को उन्हें उनकी ही शक्ति का स्मरण कराना पड़ता है। यही समूचे चरित्र का रूप है — अपार सामर्थ्य, जो केवल दूसरे के लिए प्रकट होता है।"),
 
+ "krishna": (W, "The Vishnu Purana: Book V: Chapter X",
+  "In the Vishnu Purana Krishna talks the cowherds out of their sacrifice to "
+  "Indra and tells them to honour the cattle and the mountain that actually "
+  "feed them. When the rains come as punishment he lifts the hill itself and "
+  "holds it up for seven days. It is the whole character in one episode: an "
+  "argument against ritual for its own sake, backed by someone willing to "
+  "carry the consequence personally.",
+  "विष्णु पुराण में कृष्ण गोपों को इंद्र-यज्ञ से रोककर उस गोधन और पर्वत की पूजा का कहते हैं जो वास्तव में उन्हें पालते हैं। दंडस्वरूप वर्षा आने पर वे सात दिन गोवर्धन उठाए रखते हैं।"),
+
+ "devaki": (W, "The Vishnu Purana: Book V: Chapter III",
+  "Devaki is imprisoned by her own brother because of a prophecy about her "
+  "children, and six of them are killed before Krishna is born. The Vishnu "
+  "Purana gives the night of that birth to her -- the guards asleep, the child "
+  "carried out to Gokula, another infant carried back in his place.",
+  "देवकी अपने ही भाई द्वारा कारागार में डाली जाती हैं, एक भविष्यवाणी के कारण। उनके छह पुत्र मारे जाते हैं। विष्णु पुराण उस जन्म-रात्रि को उन्हीं की कथा बनाता है।"),
+
+ "vasudeva": (W, "The Vishnu Purana: Book V: Chapter III",
+  "Vasudeva carries his newborn son out of a prison whose doors have opened by "
+  "themselves, across a river in flood, and hands him to a cowherd family in "
+  "Gokula before carrying their daughter back to the cell. He is the quietest "
+  "figure in the story and does the one thing on which all of it depends.",
+  "वसुदेव अपने नवजात पुत्र को स्वयं खुले कारागार से बाहर लाते हैं, बाढ़ में बहती नदी पार करते हैं, और गोकुल में सौंपकर उस घर की कन्या को लौटा लाते हैं।"),
+
+ "kamsa": (W, "The Vishnu Purana: Book V: Chapter III",
+  "Kamsa is told which child will kill him and spends his reign trying to "
+  "prevent it -- imprisoning his sister, killing her infants, and finally "
+  "attacking the substituted daughter, who slips from his hands. The Purana "
+  "uses him to show a man authoring the exact outcome he is trying to escape.",
+  "कंस को बताया जाता है कि कौन-सा बालक उसका वध करेगा, और वह समूचा शासन उसे रोकने में लगा देता है। पुराण उसे ऐसे पुरुष के रूप में दिखाता है जो स्वयं उसी परिणाम को रचता है जिससे भाग रहा था।"),
+
  "duryodhana": (G, "The Mahabharata, Book 1: Adi Parva: Section CXXIX",
   "Duryodhana is not written as a monster. He is written as a man who was "
   "born second in importance and could never accept it, who kept his friends "
