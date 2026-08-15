@@ -17,8 +17,14 @@
 /gyan/entity/:entityId
 /gyan/graph
 /gyan/lineage
+/gyan/mahabharata
+/gyan/mahabharata/kurukshetra
+/gyan/ramayana
 /gyan/rishis
+/gyan/scene/:sceneId
+/gyan/srishty
 /gyan/symbols
+/gyan/yuga
 /habits
 /japa
 /journal
@@ -28,6 +34,7 @@
 /journey/:pathId
 /jyotish
 /katha
+/mandir
 /mantras
 /onboarding
 /panchang
@@ -41,6 +48,7 @@
 /read-mantra
 /read-story
 /riddles
+/sadhana
 /scriptures
 /scriptures/:scriptureId
 /scriptures/:scriptureId/book/:bookId

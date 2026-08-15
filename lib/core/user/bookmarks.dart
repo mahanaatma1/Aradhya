@@ -199,19 +199,51 @@ class BookmarksController extends StateNotifier<List<Bookmark>> {
     final idx = state.indexWhere((b) => b.uid == uid);
     if (idx < 0) return;
     final b = state[idx];
-    state = [...state]..[idx] = b.copyWith(note: note);
+    final trimmed = note?.trim();
+    final next = trimmed == null || trimmed.isEmpty ? null : trimmed;
+    state = [...state]..[idx] = b.copyWith(note: next);
 
     final db = _ref.read(userDatabaseProvider);
     if (db == null) return;
     try {
       await db.raw.update(
         'bookmarks',
-        {'note': note, 'updated_at': DateTime.now().millisecondsSinceEpoch},
+        {'note': next, 'updated_at': DateTime.now().millisecondsSinceEpoch},
         where: 'src = ? AND kind = ? AND ref_id = ?',
         whereArgs: [b.src, b.kind, b.id],
       );
     } catch (e) {
       debugPrint('BookmarksController: note write failed ($e)');
+    }
+  }
+
+  /// Replace the tag list on an existing bookmark.
+  Future<void> setTags(String uid, List<String> tags) async {
+    _touched = true;
+    final idx = state.indexWhere((b) => b.uid == uid);
+    if (idx < 0) return;
+    final b = state[idx];
+    final cleaned = tags
+        .map((t) => t.trim())
+        .where((t) => t.isNotEmpty)
+        .toSet()
+        .toList();
+    state = [...state]..[idx] = b.copyWith(tags: cleaned);
+
+    final db = _ref.read(userDatabaseProvider);
+    if (db == null) return;
+    try {
+      await db.raw.update(
+        'bookmarks',
+        {
+          'tags': cleaned.isEmpty ? null : jsonEncode(cleaned),
+          'updated_at': DateTime.now().millisecondsSinceEpoch,
+        },
+        where: 'src = ? AND kind = ? AND ref_id = ?',
+        whereArgs: [b.src, b.kind, b.id],
+      );
+    } catch (e) {
+      debugPrint('BookmarksController: tags write failed ($e)');
     }
   }
 

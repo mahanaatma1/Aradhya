@@ -55,7 +55,7 @@
       "title_en": "Srishty Universe",
       "backing_table": "cosmology_nodes",
       "spec": "4.6",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "yuga",
@@ -63,7 +63,7 @@
       "title_en": "Yuga Explorer",
       "backing_table": "cosmology_nodes",
       "spec": "4.14",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "ramayana",
@@ -71,7 +71,7 @@
       "title_en": "Ramayana Journey",
       "backing_table": "narrative_nodes",
       "spec": "4.7",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "mahabharata",
@@ -79,7 +79,7 @@
       "title_en": "Mahabharata Timeline",
       "backing_table": "narrative_nodes",
       "spec": "4.8",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "vidya",

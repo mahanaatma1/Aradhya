@@ -970,13 +970,13 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 0 — Substrate & unblockers | **40 ✅** | 40 |
 | 1 — Search · related · hub | **29 ✅** | 29 |
 | 2 — Entity substrate | **22 ✅** | 22 |
-| 3 — Personal & writable | 8 | 24 |
-| 4 — Narrative & cosmology | 0 | 20 |
+| 3 — Personal & writable | **11 ✅** | 24 |
+| 4 — Narrative & cosmology | 20 | 20 |
 | 5 — Curated & interactive | 0 | 26 |
 | 6 — Ask the Scriptures | 0 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **99** | **194** |
+| **Total** | **135** | **194** |
 
 ---
 
@@ -1120,53 +1120,53 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 - [x] **P3-08** `/journal`, `/journal/new`, `/journal/entry/:entryId` routes
 
 ### Bookmarks & Notes (4.5)
-- [ ] **P3-09** Inline note editing on bookmark cards
-- [ ] **P3-10** Tags, kind filter chips, sort by recent/title
-- [ ] **P3-11** Search across notes using the shared fold
+- [x] **P3-09** Inline note editing on bookmark cards
+- [x] **P3-10** Tags, kind filter chips, sort by recent/title
+- [x] **P3-11** Search across notes using the shared fold
 
 ### Reading Progress (4.4)
-- [ ] **P3-12** Lazy `sections_total` backfill on book open
-- [ ] **P3-13** "Continue reading" card on `/scriptures` + per-chapter rings
-- [ ] **P3-14** Progress bar under the reader app bar; write `last_read_at` per section change
-- [ ] **P3-15** "Your reading" section in the You tab
+- [x] **P3-12** Lazy `sections_total` backfill on book open
+- [x] **P3-13** "Continue reading" card on `/scriptures` + per-chapter rings
+- [x] **P3-14** Progress bar under the reader app bar; write `last_read_at` per section change
+- [x] **P3-15** "Your reading" section in the You tab
 
 ### Sadhana Tracker (4.16)
-- [ ] **P3-16** `SadhanaHubScreen` — today ring, practice rows with sparklines + streaks
-- [ ] **P3-17** Generalise the japa heatmap to all practices
-- [ ] **P3-18** Goals + per-practice reminder times
-- [ ] **P3-19** Milestones rail; keep `/japa`, `/breathing`, `/habits` registered for deep links and widgets
+- [x] **P3-16** `SadhanaHubScreen` — today ring, practice rows with sparklines + streaks
+- [x] **P3-17** Generalise the japa heatmap to all practices
+- [x] **P3-18** Goals + per-practice reminder times
+- [x] **P3-19** Milestones rail; keep `/japa`, `/breathing`, `/habits` registered for deep links and widgets
 
 ### Mandir (G1)
-- [ ] **P3-20** `MandirScreen` — `ishta_deity` idol on shrine gradient
-- [ ] **P3-21** Offering bar (diya · flower · bhog · incense) with onto-idol animation
-- [ ] **P3-22** Kamal cost outside free windows (4–12 AM, 6–9 PM); free inside
-- [ ] **P3-23** Offering streak ring; write `sadhana_sessions(practice='mandir')`; retire the dead `offering_*` prefs keys
-- [ ] **P3-24** **G12** — persist reader font scale
+- [x] **P3-20** `MandirScreen` — `ishta_deity` idol on shrine gradient
+- [x] **P3-21** Offering bar (diya · flower · bhog · incense) with onto-idol animation
+- [x] **P3-22** Kamal cost outside free windows (4–12 AM, 6–9 PM); free inside
+- [x] **P3-23** Offering streak ring; write `sadhana_sessions(practice='mandir')`; retire the dead `offering_*` prefs keys
+- [x] **P3-24** **G12** — persist reader font scale
 
 ---
 
 ## Phase 4 — Narrative & cosmology
 
-- [ ] **P4-01** `narrative_nodes` + `narrative_cast` content pipeline
-- [ ] **P4-02** Ramayana content — 7 kandas, ~100 scenes, `recension='valmiki'`, cited to Dutt/Griffith
-- [ ] **P4-03** Mahabharata content — 18 parvas, ~120 events, cited to Ganguli
-- [ ] **P4-04** Link scenes to `place_entity_id`, `narrative_cast`, `scripture_section_id`
-- [ ] **P4-05** `NarrativeScreen(epic:'ramayana')` — vertical dashed-path painter, alternating scene cards
-- [ ] **P4-06** Kanda banner dividers; read/unread gold nodes; "Continue" pill
-- [ ] **P4-07** `NarrativeNodeScreen` — prose, Lesson panel, cast row, place chip, `SourceChip`, "Read the verse"
-- [ ] **P4-08** Prev/next scene navigation
-- [ ] **P4-09** `NarrativeScreen(epic:'mahabharata')` — horizontal timeline, parva rail, arc bands
-- [ ] **P4-10** Pinch-to-compress timeline density
-- [ ] **P4-11** "Kurukshetra: 18 days" sub-view
-- [ ] **P4-12** `cosmology_nodes` content — creation stages, 14 lokas, time cycles (Wilson's Vishnu Purana)
-- [ ] **P4-13** `SrishtyUniverseScreen` — parallax starfield painter (~120 seeded dots, 3 depths)
-- [ ] **P4-14** Loka stack as glass cards; "you are here" marker on Bhūloka
-- [ ] **P4-15** Inline expand → `long_description`, `attributes`, `SourceChip`
-- [ ] **P4-16** Track segmented control (Creation · Lokas · Time) + creation timeline variant
-- [ ] **P4-17** Yuga content — 4 yugas + manvantara/kalpa wrappers
-- [ ] **P4-18** `YugaExplorerScreen` — proportional arc wheel painter, dharma-ratio bar, present-age marker
-- [ ] **P4-19** "Zoom out" nesting yuga → mahayuga → manvantara → kalpa + standing disclaimer
-- [ ] **P4-20** *(optional)* Nav promotion — merge `/cosmos` into `/jyotish`, make `/gyan` a tab. **Own commit, trivially revertible**
+- [x] **P4-01** `narrative_nodes` + `narrative_cast` content pipeline
+- [x] **P4-02** Ramayana content — 7 kandas, ~100 scenes, `recension='valmiki'`, cited to Dutt/Griffith
+- [x] **P4-03** Mahabharata content — 18 parvas, ~120 events, cited to Ganguli
+- [x] **P4-04** Link scenes to `place_entity_id`, `narrative_cast`, `scripture_section_id`
+- [x] **P4-05** `NarrativeScreen(epic:'ramayana')` — vertical dashed-path painter, alternating scene cards
+- [x] **P4-06** Kanda banner dividers; read/unread gold nodes; "Continue" pill
+- [x] **P4-07** `NarrativeNodeScreen` — prose, Lesson panel, cast row, place chip, `SourceChip`, "Read the verse"
+- [x] **P4-08** Prev/next scene navigation
+- [x] **P4-09** `NarrativeScreen(epic:'mahabharata')` — horizontal timeline, parva rail, arc bands
+- [x] **P4-10** Pinch-to-compress timeline density
+- [x] **P4-11** "Kurukshetra: 18 days" sub-view
+- [x] **P4-12** `cosmology_nodes` content — creation stages, 14 lokas, time cycles (Wilson's Vishnu Purana)
+- [x] **P4-13** `SrishtyUniverseScreen` — parallax starfield painter (~120 seeded dots, 3 depths)
+- [x] **P4-14** Loka stack as glass cards; "you are here" marker on Bhūloka
+- [x] **P4-15** Inline expand → `long_description`, `attributes`, `SourceChip`
+- [x] **P4-16** Track segmented control (Creation · Lokas · Time) + creation timeline variant
+- [x] **P4-17** Yuga content — 4 yugas + manvantara/kalpa wrappers
+- [x] **P4-18** `YugaExplorerScreen` — proportional arc wheel painter, dharma-ratio bar, present-age marker
+- [x] **P4-19** "Zoom out" nesting yuga → mahayuga → manvantara → kalpa + standing disclaimer
+- [x] **P4-20** *(optional)* Nav promotion — merge `/cosmos` into `/jyotish`, make `/gyan` a tab. **Own commit, trivially revertible**
 
 ---
 

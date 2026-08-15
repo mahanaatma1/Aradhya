@@ -66,6 +66,20 @@ class JyotishHubScreen extends ConsumerWidget {
             buttonLabel: hi ? 'मिलान करें' : 'Match Pair',
             onTap: () => context.push('/astrology/milan'),
           ),
+          // Rashifal lost its tab when Gyan took that slot; it belongs here
+          // anyway — daily prediction is jyotish, not a separate domain.
+          _BigCard(
+            badge: hi ? 'आज' : 'TODAY',
+            icon: Icons.nightlight_round,
+            title: hi ? 'राशिफल' : 'Rashifal',
+            subtitle: hi
+                ? 'आपकी राशि का दैनिक, साप्ताहिक और मासिक फल'
+                : 'Daily, weekly and monthly prediction for your rashi',
+            gradient: const [Color(0xFF6A5AE0), Color(0xFF2E2270)],
+            circle: const Color(0xFF9C8FF0),
+            buttonLabel: hi ? 'राशिफल देखें' : 'Read Rashifal',
+            onTap: () => context.push('/cosmos'),
+          ),
           const SizedBox(height: 10),
           Center(
             child: Text(

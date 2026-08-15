@@ -44,9 +44,11 @@ class PrefKeys {
   static const japaMalas = 'japa_malas';
   static const japaHistory = 'japa_history_json'; // {dayStamp: count}
   static const habitsPrefix = 'habits_'; // + dayStamp
-  static const offeringTotalDays = 'offering_total_days';
-  static const offeringStreak = 'offering_streak';
-  static const offeringLast = 'offering_last';
+  // The `offering_*` keys that used to live here were declared for a Mandir
+  // that was never built, and were never read or written. The shrine now
+  // records offerings as `sadhana_sessions(practice: 'mandir')` rows, which
+  // gives them a date, a streak and a place on the Sadhana hub — none of which
+  // three scalar prefs could have provided.
   static const bookmarks = 'bookmarks_json';
   static const templesVisited = 'temples_visited';
   static const onboarded = 'onboarded';
@@ -59,4 +61,5 @@ class PrefKeys {
   static const breathStreak = 'breathing_streak'; // consecutive-day count
   static const scripturePosPrefix = 'scripture_pos_'; // + bookId → verse index
   static const scriptureLast = 'scripture_last'; // JSON {scriptureId,bookId,index}
+  static const readerFontScale = 'reader_font_scale'; // shared by all readers
 }

@@ -155,6 +155,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.blur_circular_rounded,
     backingTable: 'cosmology_nodes',
     spec: '4.6',
+    shipped: true,
   ),
   GyanModule(
     id: 'yuga',
@@ -166,6 +167,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.hourglass_bottom_rounded,
     backingTable: 'cosmology_nodes',
     spec: '4.14',
+    shipped: true,
   ),
   GyanModule(
     id: 'ramayana',
@@ -177,6 +179,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.park_rounded,
     backingTable: 'narrative_nodes',
     spec: '4.7',
+    shipped: true,
   ),
   GyanModule(
     id: 'mahabharata',
@@ -188,6 +191,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.timeline_rounded,
     backingTable: 'narrative_nodes',
     spec: '4.8',
+    shipped: true,
   ),
   GyanModule(
     id: 'vidya',

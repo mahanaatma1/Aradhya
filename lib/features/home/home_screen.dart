@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../gyan/gyan_home_section.dart';
+import '../mandir/mandir_models.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/streak.dart';
 import '../../shared/currency_icons.dart';
@@ -111,6 +112,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             const Padding(
               padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
               child: _RashifalCard(),
+            ),
+
+            // Mandir — the day's shrine, before the learning tiles.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+              child: _MandirCard(hi: hi),
             ),
 
             // Engage & Learn — Quiz · Japa · Breathing · Riddles.
@@ -1437,7 +1444,7 @@ class _RashifalCard extends ConsumerWidget {
               borderRadius: BorderRadius.circular(12),
               child: InkWell(
                 borderRadius: BorderRadius.circular(12),
-                onTap: () => context.go('/cosmos'),
+                onTap: () => context.push('/cosmos'),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                       horizontal: 16, vertical: 10),
@@ -1598,6 +1605,76 @@ class _ErrorNote extends StatelessWidget {
       child: Text(hi
           ? 'सामग्री लोड नहीं हो सकी:\n$message'
           : 'Could not load content:\n$message'),
+    );
+  }
+}
+
+/// Home entry to the shrine. Says whether the offering window is open, because
+/// that is the only thing about the Mandir that changes hour to hour.
+class _MandirCard extends StatelessWidget {
+  final bool hi;
+  const _MandirCard({required this.hi});
+
+  @override
+  Widget build(BuildContext context) {
+    final free = MandirWindows.isFree();
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: () => context.push('/mandir'),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF6E1F10), Color(0xFF3A1608)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.16),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: const Icon(Icons.temple_hindu_rounded,
+                  color: Color(0xFFE6C34A), size: 24),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(hi ? 'मंदिर' : 'Mandir',
+                      style: const TextStyle(
+                          fontFamily: AppFonts.display,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 19,
+                          color: Color(0xFFFCEFE2))),
+                  const SizedBox(height: 3),
+                  Text(
+                    free
+                        ? (hi
+                            ? 'अर्पण का समय खुला है'
+                            : 'The offering window is open')
+                        : (hi ? 'दर्शन करें' : 'Visit the shrine'),
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      color: free
+                          ? const Color(0xFF8FD6A8)
+                          : const Color(0xFFFCEFE2).withValues(alpha: 0.8),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: Color(0xFFE6C34A)),
+          ],
+        ),
+      ),
     );
   }
 }

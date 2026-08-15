@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,6 +10,7 @@ import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/user/bookmarks.dart';
 import '../../core/user/tts_voice.dart';
+import '../../core/user/reading_progress.dart';
 import '../../core/user/user_prefs.dart';
 import '../../l10n/app_localizations.dart';
 import '../../shared/share_card.dart';
@@ -68,19 +68,14 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
     if (mounted) setState(() {});
   }
 
-  /// Persist the reading position: per-book verse index + the global "last read".
-  void _saveProgress(int i, int? scriptureId) {
-    final prefs = ref.read(sharedPrefsProvider);
-    prefs.setInt('${PrefKeys.scripturePosPrefix}${widget.bookId}', i);
-    if (scriptureId != null) {
-      prefs.setString(
-          PrefKeys.scriptureLast,
-          jsonEncode({
-            'scriptureId': scriptureId,
-            'bookId': widget.bookId,
-            'index': i,
-          }));
-    }
+  /// Persist reading position to SQLite (+ legacy prefs for one release).
+  Future<void> _saveProgress(int i, int? scriptureId, int sectionsTotal) async {
+    await ref.read(readingProgressProvider.notifier).recordSection(
+          bookId: widget.bookId,
+          scriptureId: scriptureId,
+          sectionIndex: i,
+          sectionsTotal: sectionsTotal,
+        );
   }
 
   Future<ScriptureSection?> _resolveSection(int index) async {
@@ -184,6 +179,20 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
                 fontFamily: AppFonts.display,
                 fontWeight: FontWeight.w700,
                 fontSize: 19)),
+        bottom: countAsync.asData?.value != null && countAsync.asData!.value > 0
+            ? PreferredSize(
+                preferredSize: const Size.fromHeight(4),
+                child: LinearProgressIndicator(
+                  value: (_index + 1) / countAsync.asData!.value,
+                  minHeight: 4,
+                  backgroundColor: Theme.of(context)
+                      .colorScheme
+                      .outline
+                      .withValues(alpha: 0.12),
+                  color: AppColors.terracotta,
+                ),
+              )
+            : null,
       ),
       body: countAsync.when(
         loading: () => const SkeletonReader(),
@@ -202,10 +211,15 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
           final section =
               (current != null && pos < current.length) ? current[pos] : null;
 
-          // Record this as the "last read" spot once the book is known.
+          // Backfill section totals and record the starting position once.
           if (!_savedInitial && book != null) {
             _savedInitial = true;
-            _saveProgress(_index, book.scriptureId);
+            ref.read(readingProgressProvider.notifier).ensureBookOpen(
+                  bookId: widget.bookId,
+                  scriptureId: book.scriptureId,
+                  sectionsTotal: count,
+                );
+            _saveProgress(_index, book.scriptureId, count);
           }
 
           return Column(
@@ -252,7 +266,7 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
                       _autoPlay = false; // a manual swipe stops continuous play
                     }
                     setState(() => _index = i);
-                    _saveProgress(i, book?.scriptureId);
+                    _saveProgress(i, book?.scriptureId, count);
                   },
                   itemBuilder: (ctx, i) =>
                       _VersePage(bookId: widget.bookId, index: i, hindi: hi),
@@ -393,6 +407,7 @@ class _ActionRow extends ConsumerWidget {
       titleEn: book?.titleEn ?? 'Verse',
       titleHi: book?.titleHi,
       subtitle: trimmed.isEmpty ? label : '$label · $trimmed',
+      route: '/scriptures/book/$bookId',
     );
   }
 
@@ -730,7 +745,7 @@ class _FontSizeButton extends ConsumerWidget {
     return PopupMenuButton<double>(
       icon: const Icon(Icons.format_size_rounded),
       tooltip: hi ? 'अक्षर आकार' : 'Text size',
-      onSelected: (v) => ref.read(readerFontScaleProvider.notifier).state = v,
+      onSelected: (v) => ref.read(readerFontScaleProvider.notifier).set(v),
       itemBuilder: (context) => [
         PopupMenuItem(value: 0.9, child: Text(hi ? 'छोटा' : 'Small')),
         PopupMenuItem(value: 1.0, child: Text(hi ? 'सामान्य' : 'Default')),

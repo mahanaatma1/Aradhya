@@ -99,6 +99,7 @@ class _StoryReaderScreenState extends ConsumerState<StoryReaderScreen> {
               titleEn: story.titleEn,
               titleHi: story.titleHi,
               subtitle: story.emotions.isEmpty ? null : story.emotions.first,
+              route: '/read-story?id=${story.id}',
             ),
           ),
         ],
@@ -202,7 +203,7 @@ class _FontSizeButton extends ConsumerWidget {
     return PopupMenuButton<double>(
       icon: const Icon(Icons.format_size_rounded),
       tooltip: hi ? 'अक्षर आकार' : 'Text size',
-      onSelected: (v) => ref.read(readerFontScaleProvider.notifier).state = v,
+      onSelected: (v) => ref.read(readerFontScaleProvider.notifier).set(v),
       itemBuilder: (context) => [
         PopupMenuItem(value: 0.9, child: Text(hi ? 'छोटा' : 'Small')),
         PopupMenuItem(value: 1.0, child: Text(hi ? 'सामान्य' : 'Default')),

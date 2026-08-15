@@ -10,6 +10,7 @@ import '../../core/user/streak.dart';
 import '../../l10n/app_localizations.dart';
 import '../../shared/currency_icons.dart';
 import '../../shared/widgets/app_logo.dart';
+import '../scriptures/your_reading_section.dart';
 
 /// "You" tab — progress, saved items, language, theme and about.
 class ProfileScreen extends ConsumerWidget {
@@ -84,6 +85,22 @@ class ProfileScreen extends ConsumerWidget {
           const SizedBox(height: 12),
           _CurrencyGuide(hi: hi),
           const SizedBox(height: 16),
+
+          const YourReadingSection(),
+
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
+              leading: Icon(Icons.self_improvement_rounded, color: scheme.primary),
+              title: Text(hi ? 'साधना' : 'Sadhana'),
+              subtitle: Text(hi
+                  ? 'जप, प्राणायाम, पाठ, आदतें — एक जगह'
+                  : 'Japa, pranayama, reading, habits — in one place'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push('/sadhana'),
+            ),
+          ),
+          const SizedBox(height: 12),
 
           Card(
             clipBehavior: Clip.antiAlias,

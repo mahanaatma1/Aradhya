@@ -12,6 +12,13 @@ import '../../features/gyan/family_tree_screen.dart';
 import '../../features/gyan/knowledge_graph_screen.dart';
 import '../../features/gyan/entity_list_screen.dart';
 import '../../features/gyan/gyan_hub_screen.dart';
+import '../../features/cosmology/srishty_screen.dart';
+import '../../features/cosmology/yuga_screen.dart';
+import '../../features/mandir/mandir_screen.dart';
+import '../../features/narrative/kurukshetra_screen.dart';
+import '../../features/narrative/mahabharata_timeline_screen.dart';
+import '../../features/narrative/ramayana_journey_screen.dart';
+import '../../features/narrative/scene_screen.dart';
 import '../../features/journal/journal_editor_screen.dart';
 import '../../features/journal/journal_screen.dart';
 import '../../features/journey/journey_detail_screen.dart';
@@ -36,6 +43,7 @@ import '../../features/puja/puja_detail_screen.dart';
 import '../../features/puja/puja_list_screen.dart';
 import '../../features/puja/puja_models.dart';
 import '../../features/quiz/quiz_hub_screen.dart';
+import '../../features/sadhana/sadhana_hub_screen.dart';
 import '../../features/quiz/quiz_play_screen.dart';
 import '../../features/quiz/riddles_screen.dart';
 import '../../features/quiz/trivia_screen.dart';
@@ -65,7 +73,77 @@ int _intParam(GoRouterState state, String key) =>
 int? _idQuery(GoRouterState state) =>
     int.tryParse(state.uri.queryParameters['id'] ?? '');
 
-/// App router: a persistent 5-tab shell (Home · Rashifal · Astrology · Yatra · You)
+/// Gyan's module routes.
+///
+/// Hoisted out of the router literal so the Gyan branch of the shell stays
+/// readable. Paths are relative to `/gyan`, exactly as before the promotion —
+/// no deep link changes.
+final List<RouteBase> _gyanRoutes = <RouteBase>[
+      // One detail screen for every entity kind — deity, rishi, astra,
+      // symbol, place. Search results and related-rail cards land here.
+      GoRoute(
+        path: 'graph',
+        builder: (c, s) => KnowledgeGraphScreen(
+            focusId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
+      ),
+      // Lineage is a PROJECTION of relations, not its own dataset — the
+      // route takes an optional root and offers a picker without one.
+      GoRoute(
+        path: 'lineage',
+        builder: (c, s) => FamilyTreeScreen(
+            rootId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
+      ),
+      GoRoute(path: 'srishty', builder: (c, s) => const SrishtyScreen()),
+      GoRoute(path: 'yuga', builder: (c, s) => const YugaScreen()),
+
+      // Two presentations of one table; both open the same scene screen.
+      GoRoute(
+        path: 'ramayana',
+        builder: (c, s) => const RamayanaJourneyScreen(),
+      ),
+      GoRoute(
+        path: 'mahabharata',
+        builder: (c, s) => const MahabharataTimelineScreen(),
+        routes: [
+          GoRoute(
+            path: 'kurukshetra',
+            builder: (c, s) => const KurukshetraScreen(),
+          ),
+        ],
+      ),
+      GoRoute(
+        path: 'scene/:sceneId',
+        builder: (c, s) => SceneScreen(sceneId: _intParam(s, 'sceneId')),
+      ),
+      GoRoute(
+        path: 'entity/:entityId',
+        builder: (c, s) =>
+            EntityDetailScreen(entityId: _intParam(s, 'entityId')),
+      ),
+      // The encyclopedias: same data, same navigation, kind-specific layout.
+      GoRoute(
+        path: 'rishis',
+        builder: (c, s) => const EntityListScreen(
+            kind: 'rishi', titleEn: 'Rishis', titleHi: 'ऋषि'),
+      ),
+      GoRoute(
+        path: 'astras',
+        builder: (c, s) => const EntityListScreen(
+            kind: 'weapon', titleEn: 'Ancient Astras', titleHi: 'प्राचीन अस्त्र'),
+      ),
+      GoRoute(
+        path: 'symbols',
+        builder: (c, s) => const EntityListScreen(
+            kind: 'symbol', titleEn: 'Symbols', titleHi: 'प्रतीक'),
+      ),
+      GoRoute(
+        path: 'deities',
+        builder: (c, s) => const EntityListScreen(
+            kind: 'deity', titleEn: 'Deities', titleHi: 'देवता'),
+      ),
+];
+
+/// App router: a persistent 5-tab shell (Home · Gyan · Astrology · Yatra · You)
 /// with all content opening as full-screen routes over the nav bar.
 final appRouter = GoRouter(
   initialLocation: '/splash',
@@ -86,8 +164,13 @@ final appRouter = GoRouter(
         StatefulShellBranch(routes: [
           GoRoute(path: '/', builder: (c, s) => const HomeScreen()),
         ]),
+        // Gyan is a shell branch; its module screens stay nested below.
         StatefulShellBranch(routes: [
-          GoRoute(path: '/cosmos', builder: (c, s) => const CosmosScreen()),
+          GoRoute(
+            path: '/gyan',
+            builder: (c, s) => const GyanHubScreen(),
+            routes: _gyanRoutes,
+          ),
         ]),
         StatefulShellBranch(routes: [
           GoRoute(path: '/jyotish', builder: (c, s) => const JyotishHubScreen()),
@@ -111,55 +194,10 @@ final appRouter = GoRouter(
           SearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
     ),
 
-    // ---- Gyan hub ----
-    // Module screens are registered as they land; the hub itself ships first so
-    // the coming-soon tiles are visible and honest about what exists.
-    GoRoute(
-      path: '/gyan',
-      builder: (c, s) => const GyanHubScreen(),
-      routes: [
-        // One detail screen for every entity kind — deity, rishi, astra,
-        // symbol, place. Search results and related-rail cards land here.
-        GoRoute(
-          path: 'graph',
-          builder: (c, s) => KnowledgeGraphScreen(
-              focusId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
-        ),
-        // Lineage is a PROJECTION of relations, not its own dataset — the
-        // route takes an optional root and offers a picker without one.
-        GoRoute(
-          path: 'lineage',
-          builder: (c, s) => FamilyTreeScreen(
-              rootId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
-        ),
-        GoRoute(
-          path: 'entity/:entityId',
-          builder: (c, s) =>
-              EntityDetailScreen(entityId: _intParam(s, 'entityId')),
-        ),
-        // The encyclopedias: same data, same navigation, kind-specific layout.
-        GoRoute(
-          path: 'rishis',
-          builder: (c, s) => const EntityListScreen(
-              kind: 'rishi', titleEn: 'Rishis', titleHi: 'ऋषि'),
-        ),
-        GoRoute(
-          path: 'astras',
-          builder: (c, s) => const EntityListScreen(
-              kind: 'weapon', titleEn: 'Ancient Astras', titleHi: 'प्राचीन अस्त्र'),
-        ),
-        GoRoute(
-          path: 'symbols',
-          builder: (c, s) => const EntityListScreen(
-              kind: 'symbol', titleEn: 'Symbols', titleHi: 'प्रतीक'),
-        ),
-        GoRoute(
-          path: 'deities',
-          builder: (c, s) => const EntityListScreen(
-              kind: 'deity', titleEn: 'Deities', titleHi: 'देवता'),
-        ),
-      ],
-    ),
+    // Rashifal keeps its route for deep links and the Android home widget,
+    // even though it no longer has a tab of its own.
+    GoRoute(path: '/cosmos', builder: (c, s) => const CosmosScreen()),
+
 
     // ---- Karma Journal (personal — surfaced from You) ----
     GoRoute(
@@ -329,7 +367,11 @@ final appRouter = GoRouter(
     // Personality — spiritual archetype test
     GoRoute(path: '/personality', builder: (c, s) => const PersonalityScreen()),
 
-    // Daily practice
+    // Daily practice — the hub summarises these; each keeps its own route so
+    // deep links and the Android home widgets continue to work.
+    GoRoute(path: '/sadhana', builder: (c, s) => const SadhanaHubScreen()),
+    // The home shrine — where Kamal finally has a sink beyond Rashifal.
+    GoRoute(path: '/mandir', builder: (c, s) => const MandirScreen()),
     GoRoute(path: '/japa', builder: (c, s) => const JapaScreen()),
     GoRoute(path: '/breathing', builder: (c, s) => const BreathingScreen()),
     GoRoute(path: '/habits', builder: (c, s) => const HabitsScreen()),

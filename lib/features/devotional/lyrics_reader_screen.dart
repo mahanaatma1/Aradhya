@@ -36,6 +36,8 @@ class LyricsReaderScreen extends ConsumerWidget {
               titleEn: item.titleEn,
               titleHi: item.titleHi,
               subtitle: item.deity,
+              route:
+                  '/read-lyrics?id=${item.id}&kind=${kind == LyricsKind.chalisas ? 'chalisas' : 'aartis'}',
             ),
           ),
         ],

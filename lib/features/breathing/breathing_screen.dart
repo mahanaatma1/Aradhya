@@ -8,6 +8,7 @@ import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
+import '../../core/db/user_database.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/streak.dart';
 import '../../core/user/tts_voice.dart';
@@ -143,6 +144,30 @@ class _BreathingScreenState extends ConsumerState<BreathingScreen>
     }
   }
 
+  /// Records the completed session in the shared practice history.
+  ///
+  /// Without this the Sadhana hub would show breathing as never done, because
+  /// the old prefs scheme only ever stored a streak counter and a last-date —
+  /// there was no per-session record to aggregate.
+  Future<void> _recordSession() async {
+    final db = ref.read(userDatabaseProvider);
+    if (db == null) return;
+    try {
+      await db.raw.insert('sadhana_sessions', {
+        'day_stamp': dayStamp(),
+        'practice': 'breathing',
+        'count': 1,
+        // Derived from the pattern rather than wall-clock: pausing to answer
+        // the door should not inflate how long you practised.
+        'duration_s': _rounds *
+            _pattern.phases.fold<int>(0, (a, ph) => a + ph.seconds),
+        'created_at': DateTime.now().millisecondsSinceEpoch,
+      });
+    } catch (e) {
+      debugPrint('Breathing: session record failed ($e)');
+    }
+  }
+
   void _bumpStreak() {
     final p = ref.read(sharedPrefsProvider);
     final last = p.getString(PrefKeys.breathLast) ?? '';
@@ -259,6 +284,7 @@ class _BreathingScreenState extends ConsumerState<BreathingScreen>
     final reward = (_target / 2).round().clamp(2, 6);
     ref.read(streakProvider.notifier).earn(reward);
     _bumpStreak();
+    _recordSession();
     setState(() {
       _done = true;
       _reward = reward;

@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/theme/app_theme.dart';
 import '../../l10n/app_localizations.dart';
 import '../../shared/widgets/async_view.dart';
+import 'reading_progress_widgets.dart';
 import 'scripture_providers.dart';
 
 class ScripturesListScreen extends ConsumerWidget {
@@ -36,10 +37,11 @@ class ScripturesListScreen extends ConsumerWidget {
         isEmpty: (list) => list.isEmpty,
         builder: (list) => ListView.separated(
           padding: const EdgeInsets.all(16),
-          itemCount: list.length,
+          itemCount: list.length + 1,
           separatorBuilder: (_, _) => const SizedBox(height: 12),
           itemBuilder: (context, i) {
-            final s = list[i];
+            if (i == 0) return const ContinueReadingCard();
+            final s = list[i - 1];
             return Card(
               clipBehavior: Clip.antiAlias,
               child: ListTile(

@@ -70,6 +70,7 @@ class _MantraReaderScreenState extends ConsumerState<MantraReaderScreen> {
               titleEn: mantra.titleEn,
               titleHi: mantra.titleHi,
               subtitle: mantra.deity,
+              route: '/read-mantra?id=${mantra.id}',
             ),
           ),
         ],

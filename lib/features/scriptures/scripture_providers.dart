@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../core/providers/app_providers.dart';
+import '../../core/user/user_prefs.dart';
 import 'scripture_models.dart';
 import 'scripture_repository.dart';
 
@@ -54,5 +56,30 @@ final scriptureBookProvider =
   return repo.book(bookId);
 });
 
-/// Reader font-size preference (persist later; in-memory for now).
-final readerFontScaleProvider = StateProvider<double>((ref) => 1.0);
+/// Reader font size, shared by the scripture and story readers.
+///
+/// Persisted: this is an accessibility setting, and someone who enlarges the
+/// text because they cannot comfortably read the default should not have to do
+/// it again on every launch.
+class ReaderFontScale extends StateNotifier<double> {
+  ReaderFontScale(this._prefs)
+      : super(_prefs.getDouble(PrefKeys.readerFontScale) ?? 1.0);
+
+  final SharedPreferences _prefs;
+
+  /// Bounded so the reader stays usable — an unbounded scale can push a verse
+  /// off-screen with no way back to the menu.
+  static const min = 0.85;
+  static const max = 1.6;
+
+  Future<void> set(double value) async {
+    final v = value.clamp(min, max);
+    if (v == state) return;
+    state = v;
+    await _prefs.setDouble(PrefKeys.readerFontScale, v);
+  }
+}
+
+final readerFontScaleProvider =
+    StateNotifierProvider<ReaderFontScale, double>(
+        (ref) => ReaderFontScale(ref.read(sharedPrefsProvider)));

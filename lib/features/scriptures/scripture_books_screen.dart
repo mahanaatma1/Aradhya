@@ -5,9 +5,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/theme/app_theme.dart';
+import '../../core/user/reading_progress.dart';
 import '../../core/user/user_prefs.dart';
 import '../../l10n/app_localizations.dart';
 import '../../shared/widgets/async_view.dart';
+import 'reading_progress_widgets.dart';
 import 'scripture_models.dart';
 import 'scripture_providers.dart';
 
@@ -25,6 +27,7 @@ class ScriptureBooksScreen extends ConsumerWidget {
     final scriptures = ref.watch(scripturesProvider);
     final scheme = Theme.of(context).colorScheme;
     final prefs = ref.watch(sharedPrefsProvider);
+    final progressMap = ref.watch(readingProgressProvider);
 
     final title = scriptures.maybeWhen(
       data: (list) {
@@ -46,7 +49,16 @@ class ScriptureBooksScreen extends ConsumerWidget {
     }
     int? lastBookId;
     int lastIndex = 0;
-    if (last != null && last['scriptureId'] == scriptureId) {
+    final recent = progressMap.values
+        .where((p) => p.scriptureId == scriptureId)
+        .fold<BookReadingProgress?>(null, (best, p) {
+      if (best == null || p.lastReadAt.isAfter(best.lastReadAt)) return p;
+      return best;
+    });
+    if (recent != null) {
+      lastBookId = recent.bookId;
+      lastIndex = recent.lastSectionIdx;
+    } else if (last != null && last['scriptureId'] == scriptureId) {
       lastBookId = last['bookId'] as int?;
       lastIndex = last['index'] as int? ?? 0;
     }
@@ -113,11 +125,10 @@ class ScriptureBooksScreen extends ConsumerWidget {
                           style: TextStyle(
                               color: scheme.onSurface.withValues(alpha: 0.6)))
                       : null,
-                  trailing: const Icon(Icons.chevron_right_rounded),
-                  // Resume at the last verse read in this chapter.
+                  trailing: BookProgressRing(progress: progressMap[b.id]),
                   onTap: () {
-                    final pos = prefs
-                        .getInt('${PrefKeys.scripturePosPrefix}${b.id}');
+                    final pos = progressMap[b.id]?.lastSectionIdx ??
+                        prefs.getInt('${PrefKeys.scripturePosPrefix}${b.id}');
                     context.push('/scriptures/$scriptureId/book/${b.id}',
                         extra: pos ?? 0);
                   },
