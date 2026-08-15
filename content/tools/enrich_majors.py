@@ -216,6 +216,24 @@ ENRICH = {
   "the darkest passage in the epic, and it starts here.",
   "अश्वत्थामा द्रोण के पुत्र हैं, और उनका नाम ही उनके पिता के विरुद्ध अस्त्र बनता है: उसी नाम का हाथी मारा जाता है, समाचार अर्धसत्य बनकर पहुँचता है, और द्रोण शस्त्र रख देते हैं।"),
 
+ "vishvamitra": (R, "BOOK I: Canto LX.: Tris'anku's Ascension.",
+  "Vishvamitra was born a king and refused to stay one. Denied Vasishtha's "
+  "wish-granting cow, he discovered that no amount of armed force could take "
+  "what austerity had earned, and spent lifetimes of penance becoming a "
+  "brahmarshi himself. When Trisanku asked to enter heaven in his own body and "
+  "the gods threw him out, Vishvamitra began building him a second heaven "
+  "rather than accept the refusal. He is the sage the tradition admires most "
+  "and trusts least.",
+  "विश्वामित्र राजा के रूप में जन्मे और राजा रहने से इनकार किया। वसिष्ठ की कामधेनु न मिलने पर उन्होंने जाना कि सेना वह नहीं छीन सकती जो तप से अर्जित है, और स्वयं ब्रह्मर्षि बनने में युग लगा दिए। त्रिशंकु को स्वर्ग से लौटाया गया तो उन्होंने दूसरा स्वर्ग रचना आरंभ कर दिया।"),
+
+ "vasishtha": (R, "BOOK I: Canto LV.: The Hermitage Burnt.",
+  "Vasishtha is the household priest of the Ikshvaku kings and the still point "
+  "the Ramayana measures other sages against. When Vishvamitra brings an army "
+  "against his hermitage, Vasishtha's single staff turns back every weapon "
+  "sent at it -- and the episode is remembered not for the victory but for "
+  "what it demonstrates: that the power in question was never military.",
+  "वसिष्ठ इक्ष्वाकु वंश के कुलगुरु हैं और वह स्थिर बिंदु जिससे रामायण अन्य ऋषियों को मापती है। विश्वामित्र सेना लेकर आश्रम पर आते हैं, और वसिष्ठ का केवल दंड हर अस्त्र लौटा देता है।"),
+
  "duryodhana": (G, "The Mahabharata, Book 1: Adi Parva: Section CXXIX",
   "Duryodhana is not written as a monster. He is written as a man who was "
   "born second in importance and could never accept it, who kept his friends "
