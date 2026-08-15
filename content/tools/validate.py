@@ -280,10 +280,22 @@ def check_sources(rows: list[Row], rep: Report, known: set[str],
                             file=r.rel, line=r.line, module=r.module)
 
         if not has_strong:
-            rep.add("error", "missing-primary-source",
-                    "no source of type 'primary' or 'secondary' -- reference-only "
-                    "citations cannot be the base truth for sacred content (§2)",
-                    file=r.rel, line=r.line, module=r.module)
+            # The rule guards VERIFIED content: nothing we assert as checked may
+            # rest on a reference work alone (§2). An unverified skeleton is a
+            # different thing -- a CC0 Wikidata import that cites Wikidata is
+            # being honest about exactly what it is, and it is waiting for
+            # substance from a public-domain text. --strict refuses unverified
+            # rows outright, so a release build still cannot contain one.
+            claims_verified = (r.obj.get("verification") or {}).get(
+                "status_en") == "verified"
+            rep.add(
+                "error" if claims_verified else "warning",
+                "missing-primary-source",
+                "no source of type 'primary' or 'secondary' -- reference-only "
+                "citations cannot be the base truth for sacred content (§2)"
+                + ("" if claims_verified
+                   else "; allowed here only because the entry is unverified"),
+                file=r.rel, line=r.line, module=r.module)
 
 
 def check_links(rows: list[Row], rep: Report) -> None:
