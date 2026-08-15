@@ -6,7 +6,6 @@
   "file": "wilson-vishnu-purana\\vp_vp036.txt",
   "chars": 38902,
   "sha256": "994b9a18fce16bb4a52adf3d85fa75f293a35a3421cdaccc8605a775efc2fbd7",
-  "label_guessed": "Book I, Chapter I",
   "label_verified": true
  },
  {
@@ -16,7 +15,6 @@
   "file": "wilson-vishnu-purana\\vp_vp037.txt",
   "chars": 15076,
   "sha256": "39054456334cef92dee80ae00cd26da0623172bd307f958fe9762064a9a81ca1",
-  "label_guessed": "Book I, Chapter II",
   "label_verified": true
  },
  {
@@ -26,7 +24,6 @@
   "file": "wilson-vishnu-purana\\vp_vp044.txt",
   "chars": 27880,
   "sha256": "748e22d2fe64d84b6ce15f57e7fc8baa956b29625a9eb1b38fcf53730cc94243",
-  "label_guessed": "Book I, Chapter IX",
   "label_verified": true
  },
  {
@@ -36,7 +33,6 @@
   "file": "wilson-vishnu-purana\\vp_vp049.txt",
   "chars": 9943,
   "sha256": "f67824bc0373225b92ec8e51ee46f3a7638a98430049d41bca0b3606d13ca60b",
-  "label_guessed": "Book I, Chapter XIV",
   "label_verified": true
  },
  {
@@ -46,7 +42,6 @@
   "file": "wilson-vishnu-purana\\vp_vp062.txt",
   "chars": 15942,
   "sha256": "4c178ad23566de0132a1712c104cbbc18bccdbf522f58bdf849f20a072f548c1",
-  "label_guessed": "Book II, Chapter I",
   "label_verified": true
  },
  {
@@ -56,7 +51,6 @@
   "file": "wilson-vishnu-purana\\vp_vp082.txt",
   "chars": 9399,
   "sha256": "ce4f7caa56ad7d87fb71139ea41db6203a9830ea0020df891c1fde9d7aaa142e",
-  "label_guessed": "Book III, Chapter I",
   "label_verified": true
  },
  {
@@ -66,7 +60,6 @@
   "file": "wilson-vishnu-purana\\vp_vp101.txt",
   "chars": 12322,
   "sha256": "981b365fa7a2778a56055a69c3475f85639a447a4aeafdd614dcdfc418fdb5a3",
-  "label_guessed": "Book IV, Chapter I",
   "label_verified": true
  },
  {
@@ -76,7 +69,6 @@
   "file": "wilson-vishnu-purana\\vp_vp102.txt",
   "chars": 4847,
   "sha256": "3ae5705670e5c03c2da2b3e73ad7f42da5b7f0917735609a87305f9f422bebcf",
-  "label_guessed": "Book IV, Chapter II",
   "label_verified": true
  },
  {
@@ -86,7 +78,6 @@
   "file": "wilson-vishnu-purana\\vp_vp108.txt",
   "chars": 9483,
   "sha256": "91965431af25d62cd0a453a7c8185fa0d4d085c3207135a8f8ac930c54e1b9a0",
-  "label_guessed": "Book IV, Chapter VIII",
   "label_verified": true
  },
  {
@@ -96,7 +87,6 @@
   "file": "wilson-vishnu-purana\\vp_vp120.txt",
   "chars": 4720,
   "sha256": "e71efec01f7d7b2e2662c5c960a805e8846546aa3de148cd9983496e252195ab",
-  "label_guessed": "Book IV, Chapter XX",
   "label_verified": true
  },
  {
@@ -106,7 +96,6 @@
   "file": "wilson-vishnu-purana\\vp_vp127.txt",
   "chars": 10022,
   "sha256": "634fe3ed54da23433c7b72dafbef20dc16ff01c69f12af56d36c41632a282dce",
-  "label_guessed": "Book V, Chapter I",
   "label_verified": true
  },
  {
@@ -116,7 +105,6 @@
   "file": "wilson-vishnu-purana\\vp_vp131.txt",
   "chars": 2290,
   "sha256": "c6b84f5f32eac45eec1ad7c4a819e11ee4add0e1c3cc3b69526e6bf983405a10",
-  "label_guessed": "Book V, Chapter V",
   "label_verified": true
  },
  {
@@ -126,7 +114,6 @@
   "file": "ganguli-mahabharata\\m01_m01063.txt",
   "chars": 8045,
   "sha256": "84ab6d56240f99c808ac9f67af8e3759acbc4a4619c79aeff8cf3f134d0a488e",
-  "label_guessed": "Adi Parva, Section LXIII",
   "label_verified": true
  },
  {
@@ -136,7 +123,6 @@
   "file": "ganguli-mahabharata\\m01_m01067.txt",
   "chars": 11436,
   "sha256": "23a86c7260fb2e93185e40176308a0a94c5b415c510770b5d5145e041d22515c",
-  "label_guessed": "Adi Parva, Section LXVII",
   "label_verified": true
  },
  {
@@ -146,7 +132,6 @@
   "file": "ganguli-mahabharata\\m01_m01095.txt",
   "chars": 9330,
   "sha256": "e720ee714c2283cb7d35c4d8630bd4d7c4c201cfe0d13d29eab0e238e32e43f0",
-  "label_guessed": "Adi Parva, Section XCV",
   "label_verified": true
  },
  {
@@ -156,7 +141,6 @@
   "file": "ganguli-mahabharata\\m01_m01100.txt",
   "chars": 6511,
   "sha256": "8ec5ebf02ac05db5d3b1eef66318054299909cb339a8376115f638853416b73d",
-  "label_guessed": "Adi Parva, Section C",
   "label_verified": true
  },
  {
@@ -166,7 +150,6 @@
   "file": "ganguli-mahabharata\\m01_m01123.txt",
   "chars": 7255,
   "sha256": "9c6c302b55805d60ac86a81f6429293bfac1432144808f647cb16632b7a3ad83",
-  "label_guessed": "Adi Parva, Section CXXIII",
   "label_verified": true
  },
  {
@@ -176,7 +159,6 @@
   "file": "ganguli-mahabharata\\m01_m01130.txt",
   "chars": 5759,
   "sha256": "b654c86725877e35cfdde37a3f3f15a08cf17d60a6ca57a53b4acb4803e0fc4d",
-  "label_guessed": "Adi Parva, Section CXXX",
   "label_verified": true
  },
  {
@@ -186,7 +168,6 @@
   "file": "ganguli-mahabharata\\m01_m01135.txt",
   "chars": 12442,
   "sha256": "ff93b96c0369ed197aff1f904e0eaeaac9fa5f6a416260e1cdebfb60549651b8",
-  "label_guessed": "Adi Parva, Section CXXXV",
   "label_verified": true
  },
  {
@@ -196,7 +177,6 @@
   "file": "ganguli-mahabharata\\m01_m01187.txt",
   "chars": 3417,
   "sha256": "e00dceac3a0cc22ced44ef61b74a177d9c44a155ac0b981d19b58c4cff9b4a99",
-  "label_guessed": "Adi Parva, Section CLXXXVII",
   "label_verified": true
  },
  {
@@ -206,7 +186,6 @@
   "file": "ganguli-mahabharata\\m01_m01101.txt",
   "chars": 16437,
   "sha256": "4a9c6e8b5a7aacca1bbd03d69f837e2069adf9c57d32a122c61e652ec8213b09",
-  "label_guessed": "Ganga, Satyavati and the vow",
   "label_verified": true
  },
  {
@@ -216,7 +195,6 @@
   "file": "ganguli-mahabharata\\m01_m01104.txt",
   "chars": 4227,
   "sha256": "c8b75adaeb6963b0675a9be432c8855e362a4695c7d5a83292069c445d4ca642",
-  "label_guessed": "Satyavati and Bhishma",
   "label_verified": true
  },
  {
@@ -226,7 +204,15 @@
   "file": "ganguli-mahabharata\\m01_m01113.txt",
   "chars": 2179,
   "sha256": "813d314890e247b5be7e7d8148cb352582cb55d80afa46b792252b37debe94c3",
-  "label_guessed": "Kunti",
+  "label_verified": true
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m08/m08090.htm",
+  "label": "The Mahabharata, Book 8: Karna Parva: Section 90",
+  "file": "ganguli-mahabharata\\m08_m08090.txt",
+  "chars": 24956,
+  "sha256": "5b1439c7e0e84422660c1ce12a0538f85ce4f6af21d7a4ea9a9e6bce9916cfb2",
   "label_verified": true
  },
  {
@@ -236,7 +222,6 @@
   "file": "ganguli-mahabharata\\m02_m02051.txt",
   "chars": 7654,
   "sha256": "1d8c48577a0fb4fc6343cb28928b6fb0c57e87971da210f1aba87be259f21463",
-  "label_guessed": "Sabha Parva, Section LI",
   "label_verified": true
  },
  {
@@ -246,7 +231,6 @@
   "file": "ganguli-mahabharata\\m02_m02067.txt",
   "chars": 15056,
   "sha256": "b61d12b4c7845db7cdd1d6ebecf4448c3dcd66774b45947c9f5e0bcc42860402",
-  "label_guessed": "Sabha Parva, Section LXVII",
   "label_verified": true
  },
  {
@@ -256,7 +240,6 @@
   "file": "ganguli-mahabharata\\m06_m06025.txt",
   "chars": 9068,
   "sha256": "3d6cfddbe96c86458ade49f6a31d4acdd1e19830e252e00c1f0bea77eb7dd42d",
-  "label_guessed": "Bhishma Parva, Section XXV",
   "label_verified": true
  },
  {
@@ -266,7 +249,6 @@
   "file": "ganguli-mahabharata\\m07_m07191.txt",
   "chars": 2617,
   "sha256": "c0884f9dc81dcf795d21395024fc3e5a7e72ccec72afbdb511c03e7857fdef74",
-  "label_guessed": "Drona Parva, Section CXCI",
   "label_verified": true
  },
  {
@@ -276,7 +258,6 @@
   "file": "griffith-ramayana\\rama_ry008.txt",
   "chars": 6072,
   "sha256": "21400ea16c4a957e5702fce1bfefd922cf8d54f3162fecc36173871ac91cfdd5",
-  "label_guessed": "Book I, Canto I",
   "label_verified": true
  },
  {
@@ -286,7 +267,6 @@
   "file": "griffith-ramayana\\rama_ry026.txt",
   "chars": 4377,
   "sha256": "eae25684add215466f0bbe8c692c22e28bb3d772fbc2cd8f6883f26e6f129785",
-  "label_guessed": "Book I, Canto XIX",
   "label_verified": true
  },
  {
@@ -296,7 +276,6 @@
   "file": "griffith-ramayana\\rama_ry075.txt",
   "chars": 4802,
   "sha256": "91e26743316f2cc8808ea10e9361e268e49a1cba3fa9ed35a5415d81b8acce38",
-  "label_guessed": "Book II, Canto XX",
   "label_verified": true
  },
  {
@@ -306,7 +285,6 @@
   "file": "griffith-ramayana\\rama_ry123.txt",
   "chars": 5169,
   "sha256": "c9aded9c43507f16a9b7a852a06a313b7076f4589b54da1d9d0eb86a7d1947b6",
-  "label_guessed": "Book III, Canto XVII",
   "label_verified": true
  },
  {
@@ -316,7 +294,6 @@
   "file": "griffith-ramayana\\rama_ry158.txt",
   "chars": 3424,
   "sha256": "f8b4d1e4239326e70fbb37b52fc29b8e929970c43e17b5a138e6591f18748acd",
-  "label_guessed": "Book IV, Canto III",
   "label_verified": true
  },
  {
@@ -326,7 +303,6 @@
   "file": "griffith-ramayana\\rama_ry196.txt",
   "chars": 7348,
   "sha256": "4e45e54002b650e6667b93090330d822fa35a00a1af903a64054354f3217b04f",
-  "label_guessed": "Book V, Canto I",
   "label_verified": true
  },
  {
@@ -336,7 +312,6 @@
   "file": "griffith-ramayana\\rama_ry250.txt",
   "chars": 6898,
   "sha256": "b5060813b97adbd14bfbcba8fd293534f41982131ee2df16adfcc9b3ade412fb",
-  "label_guessed": "Book III, Canto LII",
   "label_verified": true
  },
  {
@@ -346,7 +321,6 @@
   "file": "griffith-ramayana\\rama_ry300.txt",
   "chars": 6204,
   "sha256": "4592ce23a60d36e3078da09b3e7e557306cecf9cdba614b93723744ca0025f83",
-  "label_guessed": "Book IV, Canto XXVI",
   "label_verified": true
  },
  {
@@ -356,7 +330,6 @@
   "file": "griffith-ramayana\\rama_ry360.txt",
   "chars": 2718,
   "sha256": "d411b60e35be03d6c43d463d31e4dd6f8b9bf2f1c56bdf975a47bc7ab17a8a2a",
-  "label_guessed": "Book V, Canto XVIII",
   "label_verified": true
  },
  {
@@ -366,7 +339,15 @@
   "file": "griffith-ramayana\\rama_ry400.txt",
   "chars": 1066,
   "sha256": "8ba401e0f7c90f8c649083e6c4bdba86dd7812639d3f69af137b841b406efb6a",
-  "label_guessed": "Book VI, Canto I",
+  "label_verified": true
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry341.htm",
+  "label": "BOOK IV: Canto LXVI.: Hanum&aacute;n.",
+  "file": "griffith-ramayana\\rama_ry341.txt",
+  "chars": 4860,
+  "sha256": "468684b044e7788b4a1391bc501d4affd9ba4c060c5fc0316cab78578909d72f",
   "label_verified": true
  }
 ]

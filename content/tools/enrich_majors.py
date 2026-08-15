@@ -146,6 +146,23 @@ ENRICH = {
   "follows from a decision she made before she understood what it was.",
   "कुंती को बाल्यावस्था में एक मंत्र मिलता है और वे कौतूहलवश उसे आजमाती हैं। जो पुत्र होता है उसे वे नदी में बहा देती हैं। यह रहस्य वे युद्ध के अंत तक छिपाए रखती हैं।"),
 
+ "karna": (G, "The Mahabharata, Book 8: Karna Parva: Section 90",
+  "Karna is the eldest Pandava and never gets to be one. Set adrift as an "
+  "infant, raised by a charioteer, refused a contest for his birth and given "
+  "a kingdom by the man everyone else calls the villain, he stays loyal to "
+  "that debt to the end. On his last day his chariot wheel sinks into the "
+  "earth and the weapon-mantras he was taught desert him, exactly as he was "
+  "warned they would.",
+  "कर्ण ज्येष्ठ पांडव हैं और कभी पांडव कहलाए नहीं। शिशु रूप में नदी में बहाए गए, सूत-कुल में पले, जन्म के कारण स्पर्धा से वंचित रहे, और जिसने उन्हें राज्य दिया उसी के साथ अंत तक रहे। अंतिम दिन उनका रथ-चक्र धरती में धँस जाता है और मंत्र विस्मृत हो जाते हैं।"),
+
+ "hanuman": (R, "BOOK IV: Canto LXVI.: Hanuman.",
+  "The Ramayana introduces Hanuman as someone who has forgotten what he can "
+  "do. The other Vanaras have to remind him of his own strength before he will "
+  "attempt the leap to Lanka. That is the shape of the whole character: enormous "
+  "capability that only appears when it is needed by someone else, and never "
+  "once used for himself.",
+  "रामायण हनुमान को ऐसे पात्र के रूप में लाती है जो अपना बल भूल चुका है। लंका की छलांग से पूर्व अन्य वानरों को उन्हें उनकी ही शक्ति का स्मरण कराना पड़ता है। यही समूचे चरित्र का रूप है — अपार सामर्थ्य, जो केवल दूसरे के लिए प्रकट होता है।"),
+
  "duryodhana": (G, "The Mahabharata, Book 1: Adi Parva: Section CXXIX",
   "Duryodhana is not written as a monster. He is written as a man who was "
   "born second in importance and could never accept it, who kept his friends "

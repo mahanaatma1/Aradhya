@@ -60,6 +60,7 @@ TARGETS = {
         ("m01/m01101.htm", "Ganga, Satyavati and the vow"),
         ("m01/m01104.htm", "Satyavati and Bhishma"),
         ("m01/m01113.htm", "Kunti"),
+        ("m08/m08090.htm", "Karna Parva -- the fall of Karna"),
         ("m02/m02051.htm", "Sabha Parva, Section LI"),
         ("m02/m02067.htm", "Sabha Parva, Section LXVII"),
         ("m06/m06025.htm", "Bhishma Parva, Section XXV"),
@@ -79,6 +80,7 @@ TARGETS = {
         ("rama/ry300.htm", "Book IV, Canto XXVI"),
         ("rama/ry360.htm", "Book V, Canto XVIII"),
         ("rama/ry400.htm", "Book VI, Canto I"),
+        ("rama/ry341.htm", "Canto titled Hanuman"),
     ],
 }
 
