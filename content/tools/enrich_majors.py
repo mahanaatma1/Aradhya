@@ -115,6 +115,37 @@ ENRICH = {
   "same as being heard.",
   "\u0935\u093f\u0926\u0941\u0930 \u0939\u0938\u094d\u0924\u093f\u0928\u093e\u092a\u0941\u0930 \u0915\u0947 \u0938\u092c\u0938\u0947 \u0935\u093f\u0935\u0947\u0915\u0940 \u092a\u0941\u0930\u0941\u0937 \u0939\u0948\u0902, \u0914\u0930 \u091c\u0928\u094d\u092e \u0939\u0940 \u0909\u0928\u094d\u0939\u0947\u0902 \u0938\u093f\u0902\u0939\u093e\u0938\u0928 \u0938\u0947 \u0926\u0942\u0930 \u0930\u0916\u0924\u093e \u0939\u0948\u0964 \u0935\u0947 \u0939\u0930 \u0935\u093f\u092a\u0924\u094d\u0924\u093f \u0938\u0947 \u092a\u0939\u0932\u0947 \u091a\u0947\u0924\u093e\u0935\u0928\u0940 \u0926\u0947\u0924\u0947 \u0939\u0948\u0902 \u0914\u0930 \u0939\u0930 \u092c\u093e\u0930 \u0905\u0928\u0938\u0941\u0928\u0947 \u0930\u0939 \u091c\u093e\u0924\u0947 \u0939\u0948\u0902\u0964"),
 
+ "ganga": (G, "The Mahabharata, Book 1: Adi Parva: Section C",
+  "Ganga marries Shantanu on one condition: he must never question what she "
+  "does. She then drowns each of their children as it is born, and he keeps "
+  "silent until the eighth, when he speaks and loses her. The son she spares "
+  "grows up to be Bhishma. The Mahabharata opens its longest tragedy with a "
+  "promise kept too long and then broken too late.",
+  "गंगा शांतनु से एक शर्त पर विवाह करती हैं: वे उनके किसी कार्य पर प्रश्न न करें। आठवें पुत्र पर राजा बोल पड़ते हैं और गंगा चली जाती हैं। वही बचा पुत्र आगे भीष्म बनता है।"),
+
+ "satyavati": (G, "The Mahabharata, Book 1: Adi Parva: Section CIII",
+  "A fisherman's daughter who will not marry a king unless her sons inherit "
+  "his throne. She is not written as scheming: she is written as someone with "
+  "one piece of leverage in her whole life who uses it. The vow Bhishma takes "
+  "to make that marriage possible is the vow the rest of the epic is spent "
+  "paying for.",
+  "एक धीवर-कन्या जो राजा से विवाह तभी करेंगी जब उसका सिंहासन उनके पुत्रों को मिले। उन्हें कुटिल नहीं लिखा गया — बल्कि ऐसा पात्र जिसके पास जीवन में एक ही अवसर था।"),
+
+ "bhishma": (G, "The Mahabharata, Book 1: Adi Parva: Section CIII",
+  "Bhishma gives up the throne and marriage both, so that his father may wed "
+  "Satyavati. The vow is kept perfectly and for far too long: decades later it "
+  "still binds him to serve whoever sits in Hastinapura, including Duryodhana, "
+  "and against the nephews he raised. He goes to war for a side he says openly "
+  "is in the wrong.",
+  "भीष्म पिता के विवाह हेतु सिंहासन और गृहस्थी दोनों त्याग देते हैं। यह प्रतिज्ञा पूर्णतः निभाई जाती है — और बहुत लंबे समय तक। दशकों बाद वही उन्हें उस पक्ष से लड़ने पर बाध्य करती है जिसे वे स्वयं अनुचित कहते हैं।"),
+
+ "kunti": (G, "The Mahabharata, Book 1: Adi Parva: Section CXII",
+  "Kunti is given a mantra as a girl and tests it out of curiosity, and a son "
+  "is born whom she sets adrift on a river. She raises five more and keeps that "
+  "first one secret until the war is nearly over. Everything hard in her life "
+  "follows from a decision she made before she understood what it was.",
+  "कुंती को बाल्यावस्था में एक मंत्र मिलता है और वे कौतूहलवश उसे आजमाती हैं। जो पुत्र होता है उसे वे नदी में बहा देती हैं। यह रहस्य वे युद्ध के अंत तक छिपाए रखती हैं।"),
+
  "duryodhana": (G, "The Mahabharata, Book 1: Adi Parva: Section CXXIX",
   "Duryodhana is not written as a monster. He is written as a man who was "
   "born second in importance and could never accept it, who kept his friends "
@@ -150,6 +181,20 @@ for name in files:
         out.append(json.dumps(o, ensure_ascii=False, sort_keys=True))
     path.write_text("\n".join(out) + "\n", encoding='utf-8')
 
-print(f"enriched {patched} entities")
+print(f"enriched {patched} entities this run")
 if missing:
-    print("NOT FOUND (no entity with that slug):", sorted(missing))
+    # Distinguish "already has prose" from "no such entity". The first is a
+    # no-op on a re-run; only the second is a problem worth printing.
+    seen = set()
+    for name in files:
+        fp = ROOT / 'content' / 'data' / 'entities' / name
+        if fp.exists():
+            for line in fp.read_text(encoding='utf-8').splitlines():
+                if line.strip():
+                    seen.add(json.loads(line)['slug'])
+    already = sorted(s for s in missing if s in seen)
+    absent = sorted(s for s in missing if s not in seen)
+    if already:
+        print(f"already enriched, skipped: {len(already)}")
+    if absent:
+        print("NO SUCH ENTITY:", absent)

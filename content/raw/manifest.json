@@ -201,6 +201,36 @@
  },
  {
   "source_slug": "ganguli-mahabharata",
+  "path": "m01/m01101.htm",
+  "label": "The Mahabharata, Book 1: Adi Parva: Section C",
+  "file": "ganguli-mahabharata\\m01_m01101.txt",
+  "chars": 16437,
+  "sha256": "4a9c6e8b5a7aacca1bbd03d69f837e2069adf9c57d32a122c61e652ec8213b09",
+  "label_guessed": "Ganga, Satyavati and the vow",
+  "label_verified": true
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m01/m01104.htm",
+  "label": "The Mahabharata, Book 1: Adi Parva: Section CIII",
+  "file": "ganguli-mahabharata\\m01_m01104.txt",
+  "chars": 4227,
+  "sha256": "c8b75adaeb6963b0675a9be432c8855e362a4695c7d5a83292069c445d4ca642",
+  "label_guessed": "Satyavati and Bhishma",
+  "label_verified": true
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m01/m01113.htm",
+  "label": "The Mahabharata, Book 1: Adi Parva: Section CXII",
+  "file": "ganguli-mahabharata\\m01_m01113.txt",
+  "chars": 2179,
+  "sha256": "813d314890e247b5be7e7d8148cb352582cb55d80afa46b792252b37debe94c3",
+  "label_guessed": "Kunti",
+  "label_verified": true
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
   "path": "m02/m02051.htm",
   "label": "The Mahabharata, Book 2: Sabha Parva: Section LI",
   "file": "ganguli-mahabharata\\m02_m02051.txt",
@@ -272,7 +302,7 @@
  {
   "source_slug": "griffith-ramayana",
   "path": "rama/ry123.htm",
-  "label": "Book II: Canto XLV.: The Tamasa.",
+  "label": "Book II: Canto XLV.: The Tamas&aacute;.",
   "file": "griffith-ramayana\\rama_ry123.txt",
   "chars": 5169,
   "sha256": "c9aded9c43507f16a9b7a852a06a313b7076f4589b54da1d9d0eb86a7d1947b6",
@@ -292,7 +322,7 @@
  {
   "source_slug": "griffith-ramayana",
   "path": "rama/ry196.htm",
-  "label": "Book II: Canto CXVIII.: Anasuya's Gifts.",
+  "label": "Book II: Canto CXVIII.: Anas&uacute;y&aacute;'s Gifts.",
   "file": "griffith-ramayana\\rama_ry196.txt",
   "chars": 7348,
   "sha256": "4e45e54002b650e6667b93090330d822fa35a00a1af903a64054354f3217b04f",
@@ -302,7 +332,7 @@
  {
   "source_slug": "griffith-ramayana",
   "path": "rama/ry250.htm",
-  "label": "BOOK III: Canto LII.: Ravan's Flight.",
+  "label": "BOOK III: Canto LII.: R&aacute;van's Flight.",
   "file": "griffith-ramayana\\rama_ry250.txt",
   "chars": 6898,
   "sha256": "b5060813b97adbd14bfbcba8fd293534f41982131ee2df16adfcc9b3ade412fb",
@@ -322,7 +352,7 @@
  {
   "source_slug": "griffith-ramayana",
   "path": "rama/ry360.htm",
-  "label": "BOOK V: Canto XVIII.: Ravan.",
+  "label": "BOOK V: Canto XVIII.: R&aacute;van.",
   "file": "griffith-ramayana\\rama_ry360.txt",
   "chars": 2718,
   "sha256": "d411b60e35be03d6c43d463d31e4dd6f8b9bf2f1c56bdf975a47bc7ab17a8a2a",
@@ -332,7 +362,7 @@
  {
   "source_slug": "griffith-ramayana",
   "path": "rama/ry400.htm",
-  "label": "BOOK VI: Canto I.: Rama's Speech.",
+  "label": "BOOK VI: Canto I.: R&aacute;ma's Speech.",
   "file": "griffith-ramayana\\rama_ry400.txt",
   "chars": 1066,
   "sha256": "8ba401e0f7c90f8c649083e6c4bdba86dd7812639d3f69af137b841b406efb6a",

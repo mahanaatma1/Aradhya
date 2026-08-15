@@ -55,6 +55,11 @@ TARGETS = {
         ("m01/m01130.htm", "Adi Parva, Section CXXX"),
         ("m01/m01135.htm", "Adi Parva, Section CXXXV"),
         ("m01/m01187.htm", "Adi Parva, Section CLXXXVII"),
+        # Located by probing for the figures themselves, then labelled from
+        # the page. Guessed labels were wrong 34 times out of 34.
+        ("m01/m01101.htm", "Ganga, Satyavati and the vow"),
+        ("m01/m01104.htm", "Satyavati and Bhishma"),
+        ("m01/m01113.htm", "Kunti"),
         ("m02/m02051.htm", "Sabha Parva, Section LI"),
         ("m02/m02067.htm", "Sabha Parva, Section LXVII"),
         ("m06/m06025.htm", "Bhishma Parva, Section XXV"),
