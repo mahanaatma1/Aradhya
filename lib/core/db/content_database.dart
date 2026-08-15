@@ -1,6 +1,7 @@
 import 'dart:io';
+import 'dart:typed_data';
 
-import 'package:flutter/foundation.dart' show debugPrint;
+import 'package:flutter/foundation.dart' show FlutterError, debugPrint;
 import 'package:flutter/services.dart' show rootBundle, ByteData;
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
@@ -49,7 +50,7 @@ class ContentDatabase {
   /// Version of the bundled `gyan.sqlite`. Rewritten automatically by
   /// `content/tools/build.py`; do not edit by hand, and keep the trailing
   /// marker comment intact — the build script matches on it.
-  static const gyanAssetVersion = '1.0.0+20260815.8b96f80'; // BUILD_STAMP:gyan
+  static const gyanAssetVersion = '1.0.0+20260815.940eb61'; // BUILD_STAMP:gyan
 
   static Future<ContentDatabase> open() async {
     final dir = await getApplicationDocumentsDirectory();
@@ -97,10 +98,22 @@ class ContentDatabase {
     final cached = await marker.exists() ? await marker.readAsString() : '';
 
     if (!await file.exists() || cached != version) {
-      final ByteData data = await rootBundle.load(asset);
-      final bytes =
-          data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+      // Prefer a gzipped asset when one is bundled. SQLite files compress
+      // about 4:1, which takes 55 MB of database out of the download without
+      // changing anything on disk after the copy. Falls back to the plain
+      // asset so a build that has not been compressed still works.
+      Uint8List bytes;
+      try {
+        final gz = await rootBundle.load('$asset.gz');
+        bytes = Uint8List.fromList(gzip.decode(
+            gz.buffer.asUint8List(gz.offsetInBytes, gz.lengthInBytes)));
+      } on FlutterError {
+        final ByteData data = await rootBundle.load(asset);
+        bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+      }
       await file.writeAsBytes(bytes, flush: true);
+      // Written last: a crash between the two leaves the marker stale and the
+      // copy simply runs again, rather than trusting a half-written file.
       await marker.writeAsString(version);
     }
     return dest;

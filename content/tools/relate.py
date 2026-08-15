@@ -36,6 +36,16 @@ from content.tools.common import LEGACY_DB, fold  # noqa: E402
 MAX_EDGES_PER_SOURCE = 12
 MIN_WEIGHT = 0.3
 
+# Per-KIND cap within one rail.
+#
+# Without it the cap is spent by whichever kind simply has the most rows.
+# Shiva's rail came out as twelve temples and nothing else -- no chalisa, no
+# mantra, no Maha Shivratri -- because temples outnumber everything and every
+# deity-name edge carries the same weight, so ordering within that weight was
+# arbitrary. The rail is supposed to show that the app connects, and a wall of
+# one kind shows the opposite on the most important entity we have.
+MAX_EDGES_PER_KIND = 4
+
 # Deity-name matching is the backbone of legacy linking, and Sanskrit epithets
 # collide badly: "Devi", "Mata", "Bhagwan", "Ishwar" and friends are shared by
 # dozens of figures. Matching on them would wire Durga's aarti onto a minor
@@ -190,6 +200,39 @@ class Relator:
 
     # -- gyan entities -> everything --------------------------------------
 
+    def link_festivals(self) -> None:
+        """Entity to the festivals kept for it, both ways.
+
+        Uses festivals.deity_entity_id, which is an explicit curated link --
+        no name matching, so no epithet risk. §1.10 specified this rule and it
+        was never implemented, which is why Hanuman had his temples and his
+        chalisa on the rail but not Hanuman Jayanti.
+        """
+        rows = list(self.db.execute(
+            """select f.id, f.title_en, f.title_hi, f.category,
+                      e.id, e.title_en, e.title_hi, e.kind
+               from festivals f join entities e on e.id = f.deity_entity_id"""))
+        # Every deity link is equally true, so a flat weight leaves tie order
+        # to chance -- which put a monthly vrat on Shiva's rail and left Maha
+        # Shivratri off it. Category breaks the tie: the festival someone would
+        # name first should be the one that survives the cap.
+        by_category = {"major": 0.86, "jayanti": 0.83,
+                       "vrat": 0.78, "regional": 0.76}
+        for fid, ften, fthi, fcat, eid, eten, ethi, ekind in rows:
+            w = by_category.get(fcat or "", 0.80)
+            self.add(
+                ("gyan", "entities", eid), ("gyan", "festivals", fid),
+                dst_kind="festival", reason="festival_deity", weight=w,
+                title_en=ften or "", title_hi=fthi,
+                subtitle_en=fcat or "festival", subtitle_hi=fcat or "festival",
+                route=f"/festivals/{fid}")
+            self.add(
+                ("gyan", "festivals", fid), ("gyan", "entities", eid),
+                dst_kind="entity", reason="festival_deity", weight=w,
+                title_en=eten or "", title_hi=ethi,
+                subtitle_en=ekind, subtitle_hi=ekind,
+                route=f"/gyan/entity/{eid}")
+
     def link_entities(self, legacy: sqlite3.Connection) -> None:
         """Entities to their own relations, and to legacy content by alias.
 
@@ -289,13 +332,17 @@ class Relator:
             ordered = sorted(best.values(), key=lambda c: -c[3])
 
             kept = 0
+            per_kind: dict[str, int] = {}
             for (dst_key, dst_kind, reason, weight, ten, thi, sen, shi,
                  route) in ordered:
                 if kept >= MAX_EDGES_PER_SOURCE:
                     break
+                if per_kind.get(dst_kind, 0) >= MAX_EDGES_PER_KIND:
+                    continue
                 if not route_ok(route):
                     skipped_route += 1
                     continue
+                per_kind[dst_kind] = per_kind.get(dst_kind, 0) + 1
                 rows.append((src_key[0], src_key[1], src_key[2],
                              dst_key[0], dst_key[1], dst_key[2],
                              dst_kind, reason, weight, ten, thi, sen, shi,
@@ -337,6 +384,7 @@ def build_into(db: sqlite3.Connection) -> dict:
             r.link_legacy_by_deity(legacy)
             r.link_stories_by_emotion(legacy)
             r.link_entities(legacy)
+            r.link_festivals()
         finally:
             legacy.close()
 

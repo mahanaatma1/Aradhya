@@ -581,6 +581,21 @@ def resolve_section_refs(refs: set[str]) -> dict[str, int]:
     return out
 
 
+def write_gzip(db_path) -> None:
+    """Write the gzipped twin of the built database.
+
+    pubspec bundles only the .gz, so this is not an optimisation step that can
+    be skipped -- a build that does not run it ships a stale database to the
+    app. Emitted here, next to the file it compresses, so the two cannot drift.
+    """
+    import gzip
+    raw = db_path.read_bytes()
+    out = db_path.with_suffix(db_path.suffix + ".gz")
+    out.write_bytes(gzip.compress(raw, 9))
+    print(f"  gzip {out.name}  ({len(raw)/1e6:.1f} MB -> "
+          f"{out.stat().st_size/1e6:.1f} MB)")
+
+
 def write_meta(db: sqlite3.Connection, version: str, strict: bool,
                counts: dict[str, int]) -> None:
     indexed = None
@@ -766,6 +781,11 @@ def main(argv: list[str] | None = None) -> int:
         db.close()
 
     stamped = stamp_dart(version)
+    write_gzip(GYAN_DB)
+    # The legacy fixture is not built here, but it IS shipped gzipped, and a
+    # stale .gz would ship yesterday's content with today's index.
+    if LEGACY_DB.exists():
+        write_gzip(LEGACY_DB)
 
     size_mb = GYAN_DB.stat().st_size / (1024 * 1024)
     print(f"\nbuilt {GYAN_DB.relative_to(REPO_ROOT)}  "

@@ -64,10 +64,15 @@ flutter:
   generate: true
 
   assets:
-    - assets/db/content.sqlite
+    # Databases ship GZIPPED and are inflated during the one-time copy into
+    # the documents directory. SQLite compresses about 4:1, which takes ~40 MB
+    # out of the download; on-disk size after the copy is unchanged. The plain
+    # files are NOT bundled — listing both would double the payload.
+    # ContentDatabase falls back to a plain asset if no .gz is present.
+    - assets/db/content.sqlite.gz
     # New licence-clean content + search index + related edges.
     # Built by `py -m content.tools.build`; ATTACHed as `gyan` at runtime.
-    - assets/db/gyan.sqlite
+    - assets/db/gyan.sqlite.gz
     - assets/images/
 
   fonts:

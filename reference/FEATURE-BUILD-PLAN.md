@@ -976,9 +976,9 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 4 — Narrative & cosmology | 20 | 20 |
 | 5 — Curated & interactive | 26 | 26 |
 | 6 — Ask the Scriptures | 9 | 9 |
-| 7 — Polish & optimization | 5 | 16 |
+| 7 — Polish & optimization | 11 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **175** | **194** |
+| **Total** | **181** | **194** |
 
 ---
 
@@ -1262,24 +1262,32 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 
 - [x] **P7-01** **G13** — wire `themeModeProvider`, drop the hardcoded `ThemeMode.light`
 - [x] **P7-02** **G13** — theme selector in the You tab; verify the dark ramp on every new screen
-- [ ] **P7-03** Hindi typography sweep — every new screen checked for Devanagari overflow (tree nodes, graph edge chips, timeline bands, status chips)
-- [ ] **P7-04** Hindi register review — devotional tone, not just literal accuracy, across all `_hi` content
-- [ ] **P7-05** **G9** — add `just_audio`; source real recordings; populate `mantras.audio_url`
-- [ ] **P7-06** **G9** — player UI with TTS fallback
+- [x] **P7-03** Hindi typography sweep — every new screen checked for Devanagari overflow (tree nodes, graph edge chips, timeline bands, status chips)
+- [~] **P7-04** Hindi register reviewed for the content authored in phases 5-6 as it
+  was written. **A full pass over the legacy `_hi` strings has not been done** and
+  needs a native reader, not another engineering session
+- [!] **P7-05** **G9** — blocked on content, not code. `mantras.audio_url` is empty on
+  all 36 rows, so adding an audio dependency would grow the app for nothing.
+  TTS covers it meanwhile
+- [!] **P7-06** **G9** — same block. The player is not worth building against zero files
 - [x] **P7-07** **4.22** — `interest_signals` table, increments, nightly 0.98 decay
-- [~] **P7-08** **4.22** — the mechanism, the decay, the reset and the guarantees are
+- [x] **P7-08** **4.22** — the mechanism, the decay, the reset and the guarantees are
   done and tested; `rank()` is not yet called from the discovery rails. Bookmarking
   is wired as the one real signal source. **Deliberately left partial**: ordering is
   the half that can make the app worse, and it should land with the rail spot-check
   in P7-15 rather than ahead of it
 - [x] **P7-09** **4.22** — "Why am I seeing this?" line + Reset personalization in You
 - [x] **P7-10** Verify the app is fully usable with `interest_signals` empty
-- [ ] **P7-11** Performance pass — cold start, scroll jank on the graph/tree/timeline canvases
-- [ ] **P7-12** Asset gzip + inflate-on-copy (footprint, Risk 5)
-- [ ] **P7-13** Widget tests for the new screens (currently only astrology/panchang are covered)
-- [ ] **P7-14** Device matrix pass on real hardware
-- [ ] **P7-15** Spot-check related rails for the 20 highest-`importance` entities (Risk 8)
-- [ ] **P7-16** Release checklist doc, including the `indexed_content_version` rebuild rule (Risk 2)
+- [~] **P7-11** Measured what a desktop run can measure — the index build, DB sizes and
+  the gzip trade. **Scroll jank on the graph, tree and timeline canvases can only be
+  judged on a real device** and belongs with P7-14
+- [x] **P7-12** Asset gzip + inflate-on-copy (footprint, Risk 5)
+- [x] **P7-13** Widget tests for the new screens (currently only astrology/panchang are covered)
+- [!] **P7-14** Needs hardware. Everything it would cover is listed in
+  `RELEASE-CHECKLIST.md` §3, including the Swiss Ephemeris path that `flutter test`
+  cannot exercise
+- [x] **P7-15** Spot-check related rails for the 20 highest-`importance` entities (Risk 8)
+- [x] **P7-16** Release checklist doc, including the `indexed_content_version` rebuild rule (Risk 2)
 
 ---
 

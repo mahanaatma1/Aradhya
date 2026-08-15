@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/theme/app_theme.dart';
 import '../../app/theme/category_colors.dart';
 import '../../core/providers/app_providers.dart';
+import '../../core/user/interest_signals.dart';
 import '../search/search_models.dart';
 import 'related_models.dart';
 
@@ -64,8 +65,19 @@ class RelatedRail extends ConsumerWidget {
     for (final it in items) {
       groups.putIfAbsent(it.dstKind, () => []).add(it);
     }
+    // Which GROUP leads is the one place interest is allowed to act here.
+    //
+    // Strictly a tie-break, and only between kinds whose strongest edge is
+    // effectively as strong. Nothing is added, removed or hidden — someone who
+    // bookmarks temples sees temples first, and still sees every other kind
+    // immediately beside them. With an empty profile this is a no-op.
+    final interest = ref.watch(interestSignalsProvider.notifier);
     final orderedKinds = groups.keys.toList()
-      ..sort((a, b) => groups[b]!.first.weight.compareTo(groups[a]!.first.weight));
+      ..sort((a, b) {
+        final wa = groups[a]!.first.weight, wb = groups[b]!.first.weight;
+        if ((wa - wb).abs() > 0.05) return wb.compareTo(wa);
+        return interest.scoreFor(b).compareTo(interest.scoreFor(a));
+      });
 
     return Padding(
       padding: padding,
