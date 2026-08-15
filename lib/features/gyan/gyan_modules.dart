@@ -239,6 +239,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.help_center_rounded,
     backingTable: 'qa_pairs',
     spec: '4.19',
+    shipped: true,
   ),
 ];
 

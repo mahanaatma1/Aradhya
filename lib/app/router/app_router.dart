@@ -11,6 +11,7 @@ import '../../features/gyan/entity_detail_screen.dart';
 import '../../features/gyan/family_tree_screen.dart';
 import '../../features/gyan/knowledge_graph_screen.dart';
 import '../../features/gyan/entity_list_screen.dart';
+import '../../features/ask/ask_screen.dart';
 import '../../features/dharma/dharma_hub_screen.dart';
 import '../../features/dharma/dharma_scenario_screen.dart';
 import '../../features/festivals/festival_detail_screen.dart';
@@ -70,6 +71,18 @@ import '../shell/nav_scaffold.dart';
 /// Whether the user has completed onboarding. Set from prefs in `main()` before
 /// the app builds, and again when onboarding finishes.
 bool gOnboarded = false;
+
+/// Which verse of the book to open at.
+///
+/// `extra` carries it for in-app pushes, but `extra` does not survive a deep
+/// link, so the search index emits `?v=<index>` instead. The router read only
+/// `extra`, which meant every one of the 27,890 indexed verses opened its
+/// chapter at verse one — the result was always the right book and the wrong
+/// line. Both forms are accepted now, with `extra` winning when both are set.
+int _verseIndex(GoRouterState state) {
+  if (state.extra is int) return state.extra as int;
+  return int.tryParse(state.uri.queryParameters['v'] ?? '') ?? 0;
+}
 
 int _intParam(GoRouterState state, String key) =>
     int.tryParse(state.pathParameters[key] ?? '') ?? 0;
@@ -211,6 +224,9 @@ final appRouter = GoRouter(
           SearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
     ),
 
+    // ---- Ask the Scriptures ----
+    GoRoute(path: '/ask', builder: (c, s) => const AskScreen()),
+
     // ---- Dharma Decision Game ----
     // Sits beside /quiz but is not one: nothing here is scored, and no choice
     // is marked right or wrong.
@@ -293,7 +309,7 @@ final appRouter = GoRouter(
           path: 'book/:bookId',
           builder: (context, state) => SectionReaderScreen(
             bookId: _intParam(state, 'bookId'),
-            initialIndex: state.extra is int ? state.extra as int : 0,
+            initialIndex: _verseIndex(state),
           ),
         ),
         GoRoute(
@@ -305,7 +321,7 @@ final appRouter = GoRouter(
               path: 'book/:bookId',
               builder: (context, state) => SectionReaderScreen(
                 bookId: _intParam(state, 'bookId'),
-                initialIndex: state.extra is int ? state.extra as int : 0,
+                initialIndex: _verseIndex(state),
               ),
             ),
           ],

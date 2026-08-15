@@ -2,6 +2,7 @@
 # One route pattern per line; :params match a single segment.
 /
 /aartis
+/ask
 /astrology
 /astrology/kundli
 /astrology/milan

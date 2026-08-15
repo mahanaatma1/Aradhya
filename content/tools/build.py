@@ -39,7 +39,7 @@ from content.tools import validate  # noqa: E402
 from content.tools.common import (  # noqa: E402
     ASSETS_DB_DIR, CONTENT_DIR, DATA_DIR, GYAN_DB, LEGACY_DB, REPO_ROOT,
     SCHEMA_DIR, SOURCES_DIR, bi, expand_devanagari_aliases, fold, fold_variants,
-    read_jsonl,
+    read_jsonl, tokenize,
 )
 
 SEMVER = "1.0.0"
@@ -99,6 +99,9 @@ class Builder:
         self.narrative_ids: dict[str, int] = {}
         self.cosmology_ids: dict[str, int] = {}
         self.path_ids: dict[str, int] = {}
+        # 'bhagavad-gita:2.47' -> scripture_sections.id, resolved
+        # against the read-only legacy DB. Unresolvable refs are absent.
+        self.section_ids: dict[str, int] = {}
         self.counts: dict[str, int] = {}
         self.skipped_unverified = 0
 
@@ -444,18 +447,30 @@ class Builder:
             self._stamp("festivals", cur.lastrowid, o)
 
     def insert_qa(self) -> None:
-        for o in self.rows("ask"):
+        pairs = list(self.rows("ask"))
+        self.section_ids = resolve_section_refs(
+            {o["scripture_ref"] for o in pairs if o.get("scripture_ref")})
+        unresolved = sum(
+            1 for o in pairs
+            if o.get("scripture_ref") and o["scripture_ref"] not in self.section_ids)
+        if unresolved:
+            print(f"  ask: {unresolved} scripture_ref(s) did not resolve to a "
+                  f"unique verse -- those answers ship without a context link")
+        for o in pairs:
             q, a = o.get("question") or {}, o.get("answer") or {}
             ex = o.get("explanation") or {}
             cur = self.db.execute(
                 """insert into qa_pairs
                    (question_en, question_hi, question_fold, answer_en, answer_hi,
                     explanation_en, explanation_hi, passage_sa, passage_translit,
-                    confidence, related_qa_ids, tags, verification_status)
-                   values (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-                (q.get("en"), q.get("hi"), fold(q.get("en", "")), a.get("en"),
+                    scripture_section_id, confidence, related_qa_ids, tags,
+                    verification_status)
+                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (q.get("en"), q.get("hi"), _qa_fold(q), a.get("en"),
                  a.get("hi"), ex.get("en"), ex.get("hi"), o.get("passage_sa"),
-                 o.get("passage_translit"), o["confidence"],
+                 o.get("passage_translit"),
+                 self.section_ids.get(o.get("scripture_ref") or ""),
+                 o["confidence"],
                  _jstr(o.get("related_question_slugs")), _jstr(o.get("tags")),
                  _status(o)))
             self._stamp("qa_pairs", cur.lastrowid, o)
@@ -509,6 +524,62 @@ class Builder:
 # ---------------------------------------------------------------------------
 # meta / SOURCES.md / dart stamp
 # ---------------------------------------------------------------------------
+
+def _qa_fold(q: dict) -> str:
+    """Space-separated folded TOKENS of the question, in both languages.
+
+    Two things this must get right, and the obvious implementation gets both
+    wrong. Folding only the English question leaves every Hindi question
+    permanently unmatchable while the table still looks fully populated -- a
+    bilingual feature that is silently half dead. And fold() alone is the wrong
+    tool: it strips whitespace, so a folded sentence collapses to one long
+    run ('whatdoesthegitasayaboutfear') that no word-level match can touch.
+
+    tokenize() is what the search index already uses, so a question folds here
+    exactly as the same words fold there.
+    """
+    out: list[str] = []
+    for lang in ("en", "hi"):
+        for t in tokenize(q.get(lang) or ""):
+            if t not in out:
+                out.append(t)
+    return " ".join(out)
+
+
+def resolve_section_refs(refs: set[str]) -> dict[str, int]:
+    """Map 'bhagavad-gita:2.47' to a scripture_sections id.
+
+    Verse numbers are NOT unique on their own -- '2.47' matches ten rows across
+    three scriptures, and twice within the Ramayana alone. A ref is therefore
+    scoped by scripture slug, and anything that does not resolve to exactly one
+    row is left unresolved rather than guessed at. A wrong "read in context"
+    link is worse than none: it silently sends the reader to a different verse
+    and tells them it is the source.
+    """
+    out: dict[str, int] = {}
+    if not refs or not LEGACY_DB.exists():
+        return out
+    try:
+        legacy = sqlite3.connect(f"file:{LEGACY_DB}?mode=ro", uri=True)
+    except sqlite3.Error:
+        return out
+    try:
+        for ref in refs:
+            if ":" not in ref:
+                continue
+            slug, number = ref.split(":", 1)
+            rows = legacy.execute(
+                """select s.id from scripture_sections s
+                   join scripture_books b on b.id = s.book_id
+                   join scriptures sc on sc.id = b.scripture_id
+                   where sc.slug = ? and s.number = ?""",
+                (slug.strip(), number.strip())).fetchall()
+            if len(rows) == 1:
+                out[ref] = rows[0][0]
+    finally:
+        legacy.close()
+    return out
+
 
 def write_meta(db: sqlite3.Connection, version: str, strict: bool,
                counts: dict[str, int]) -> None:

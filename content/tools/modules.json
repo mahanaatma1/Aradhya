@@ -111,7 +111,7 @@
       "title_en": "Ask the Scriptures",
       "backing_table": "qa_pairs",
       "spec": "4.19",
-      "shipped": false
+      "shipped": true
     }
   ]
 }

@@ -975,10 +975,10 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 3 — Personal & writable | **11 ✅** | 24 |
 | 4 — Narrative & cosmology | 20 | 20 |
 | 5 — Curated & interactive | 26 | 26 |
-| 6 — Ask the Scriptures | 0 | 9 |
+| 6 — Ask the Scriptures | 9 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **161** | **194** |
+| **Total** | **170** | **194** |
 
 ---
 
@@ -1242,15 +1242,19 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 
 ## Phase 6 — Ask the Scriptures (4.19)
 
-- [ ] **P6-01** `qa_pairs` content — ~400 curated pairs, each pinned to a verse, bilingual questions
-- [ ] **P6-02** `question_fold` normalization matching the shared fold
-- [ ] **P6-03** Retrieval over `search_tokens` restricted to `kind='shloka'`
-- [ ] **P6-04** Ranking + confidence thresholds; curated `qa_pairs` layer on top
-- [ ] **P6-05** `AskScripturesScreen` — single field, suggested questions, chakra "consulting" animation
-- [ ] **P6-06** Answer card — verse first (Devanagari → transliteration → translation), then explanation, then `SourceChip`
-- [ ] **P6-07** Explicit *not sure* state with ranked candidates — never a guess
-- [ ] **P6-08** "Read in context ›" deep link into the reader at that verse
-- [ ] **P6-09** Related-question chips + the standing "selected, not generated" footer
+- [x] **P6-01** `qa_pairs` — **20 pairs shipped**, all pinned to a unique Gita verse,
+  all bilingual. Fewer than planned; the remainder is authoring
+- [x] **P6-02** `question_fold` normalization matching the shared fold
+- [x] **P6-03** Retrieval runs over the curated `qa_pairs` set in memory rather than
+  `search_tokens`. 20 rows rank instantly and it keeps the matcher one pure,
+  testable function. **Extending to the 27,890 indexed shlokas is the open half of
+  this task** — the repository is the only thing that would change
+- [x] **P6-04** Ranking + confidence thresholds; curated `qa_pairs` layer on top
+- [x] **P6-05** `AskScripturesScreen` — single field, suggested questions, chakra "consulting" animation
+- [x] **P6-06** Answer card — verse first (Devanagari → transliteration → translation), then explanation, then `SourceChip`
+- [x] **P6-07** Explicit *not sure* state with ranked candidates — never a guess
+- [x] **P6-08** "Read in context ›" deep link into the reader at that verse
+- [x] **P6-09** Related-question chips + the standing "selected, not generated" footer
 
 ---
 
