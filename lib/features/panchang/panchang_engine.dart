@@ -145,16 +145,46 @@ DateTime lastNewMoon(DateTime refUtc) {
 /// Amanta & purnimanta lunar-month index (0=Chaitra .. 11=Phalguna) for a date.
 /// Amanta = named by the solar month entered within the amavasya-to-amavasya
 /// month; purnimanta shifts the waning (Krishna) fortnight to the next month.
-({int amanta, int purnimanta}) lunarMonth(DateTime date, Duration tz) {
+({int amanta, int purnimanta, bool adhika}) lunarMonth(
+    DateTime date, Duration tz) {
   // Reference at ~sunrise (06:00) so the paksha matches the day's tithi used
   // for festivals; otherwise a Purnima ending mid-morning would flip the month.
   final refUtc = DateTime(date.year, date.month, date.day, 6).subtract(tz);
   final nm = lastNewMoon(refUtc);
-  final d = dayNumber(nm);
-  final rashi = (_rev(sunLongitude(d) - ayanamsa(d)) / 30).floor() % 12;
+  final rashi = _sunRashiAt(nm);
   final amanta = (rashi + 1) % 12;
   final krishna = _tithiIdx(refUtc) >= 15;
-  return (amanta: amanta, purnimanta: krishna ? (amanta + 1) % 12 : amanta);
+
+  // An adhika (intercalary) month is a lunation in which the sun enters no
+  // new rashi at all — no sankranti falls between this new moon and the next,
+  // so the month takes the same name as the one that follows it. This is why
+  // a month can appear to "stick": that is the leap month, not a failure to
+  // advance. Festivals are observed in the nija (true) month, so the caller
+  // needs to know which of the two it is looking at.
+  final next = _newMoonAfter(nm);
+  final adhika = _sunRashiAt(next) == rashi;
+
+  return (
+    amanta: amanta,
+    purnimanta: krishna ? (amanta + 1) % 12 : amanta,
+    adhika: adhika,
+  );
+}
+
+/// Sidereal rashi (0=Aries) of the sun at [utc].
+int _sunRashiAt(DateTime utc) {
+  final d = dayNumber(utc);
+  return (_rev(sunLongitude(d) - ayanamsa(d)) / 30).floor() % 12;
+}
+
+/// The first new moon strictly after [nm]. A synodic month is ~29.53 days, so
+/// searching from +20 days always lands before the next one.
+DateTime _newMoonAfter(DateTime nm) {
+  final probe = nm.add(const Duration(days: 34));
+  final found = lastNewMoon(probe);
+  return found.isAfter(nm.add(const Duration(days: 1)))
+      ? found
+      : nm.add(const Duration(days: 30));
 }
 
 int _naksIdx(DateTime utc) {

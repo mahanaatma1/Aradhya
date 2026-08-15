@@ -133,17 +133,29 @@ final Map<int, FestivalHit> _named = {
 /// month-named Ekadashi / Purnima / Amavasya, else a generic monthly vrat.
 /// [aMonth] = amanta month (names Ekadashis); [pMonth] = purnimanta month
 /// (keys the named table + Purnima/Amavasya month names).
-FestivalHit? festivalFor(int tithiIdx, int pMonth, int aMonth) {
+FestivalHit? festivalFor(int tithiIdx, int pMonth, int aMonth,
+    {bool adhika = false}) {
+  // In an adhika (leap) month the dated festivals are not observed — they
+  // belong to the nija month that follows. Only the fortnightly vrats and the
+  // month's own Ekadashi/Purnima/Amavasya occur, and the Ekadashis take their
+  // own names rather than the nija month's.
+  if (adhika) return _adhikaFestivalFor(tithiIdx);
+
   final named = _named[pMonth * 30 + tithiIdx];
   if (named != null) return named;
   switch (tithiIdx) {
     case 10: // Shukla Ekadashi
+      // Shukla paksha is unambiguous — both conventions agree on the month.
       final e = ekadashiShukla[aMonth];
       return FestivalHit(
           NamePair('${e.en} Ekadashi', '${e.hi} एकादशी'), true,
           desc: _ekadashiDesc);
     case 25: // Krishna Ekadashi
-      final e = ekadashiKrishna[aMonth];
+      // Named by the PURNIMANTA month, not the amanta one. The traditional
+      // names pair each month's two Ekadashis — Ashadha gets Yogini (krishna)
+      // and Devshayani (shukla) — and that pairing only holds under
+      // purnimanta, where krishna paksha precedes shukla within a month.
+      final e = ekadashiKrishna[pMonth];
       return FestivalHit(
           NamePair('${e.en} Ekadashi', '${e.hi} एकादशी'), true,
           desc: _ekadashiDesc);
@@ -158,6 +170,38 @@ FestivalHit? festivalFor(int tithiIdx, int pMonth, int aMonth) {
       final m = monthNames[pMonth];
       return FestivalHit(
           NamePair('${m.en} Amavasya', '${m.hi} अमावस्या'), true,
+          desc: _amavasyaDesc);
+  }
+  return festivalForTithi(tithiIdx);
+}
+
+/// Festivals within an adhika (intercalary) month.
+///
+/// Its two Ekadashis have their own names — Padmini in the waxing fortnight,
+/// Parama in the waning — and they are the reason a leap month is also called
+/// Purushottama Maasa. The Purnima and Amavasya carry the Adhika prefix so the
+/// month is never confused with the nija one bearing the same name.
+FestivalHit? _adhikaFestivalFor(int tithiIdx) {
+  switch (tithiIdx) {
+    case 10:
+      return const FestivalHit(
+          NamePair('Padmini Ekadashi', 'पद्मिनी एकादशी'), true,
+          desc: NamePair(
+              'The Ekadashi of the waxing fortnight of the adhika month.',
+              'अधिक मास के शुक्ल पक्ष की एकादशी।'));
+    case 25:
+      return const FestivalHit(
+          NamePair('Parama Ekadashi', 'परमा एकादशी'), true,
+          desc: NamePair(
+              'The Ekadashi of the waning fortnight of the adhika month.',
+              'अधिक मास के कृष्ण पक्ष की एकादशी।'));
+    case 14:
+      return const FestivalHit(
+          NamePair('Adhika Purnima', 'अधिक पूर्णिमा'), true,
+          desc: _purnimaDesc);
+    case 29:
+      return const FestivalHit(
+          NamePair('Adhika Amavasya', 'अधिक अमावस्या'), true,
           desc: _amavasyaDesc);
   }
   return festivalForTithi(tithiIdx);
@@ -181,22 +225,30 @@ Map<int, FestivalHit> monthFestivals(int year, int month, Duration tz) {
   final tithi = <int, int>{};
   final pmonth = <int, int>{};
   final amonth = <int, int>{};
+  final adhika = <int, bool>{};
   for (var d = 1; d <= days; d++) {
     final date = DateTime(year, month, d);
     tithi[d] = dayTithiIndex(date, tz);
     final lm = lunarMonth(date, tz);
     pmonth[d] = lm.purnimanta;
     amonth[d] = lm.amanta;
+    adhika[d] = lm.adhika;
   }
   final out = <int, FestivalHit>{};
   for (var d = 1; d <= days; d++) {
-    final f = festivalFor(tithi[d]!, pmonth[d]!, amonth[d]!);
+    // A vriddhi tithi spans two sunrises and so appears on two consecutive
+    // days. The vrat is observed once: skip the second day, unless the first
+    // fell in the previous calendar month and is therefore not ours to skip.
+    if (d > 1 && tithi[d] == tithi[d - 1]) continue;
+    final f = festivalFor(tithi[d]!, pmonth[d]!, amonth[d]!,
+        adhika: adhika[d]!);
     if (f != null) out[d] = f;
   }
   for (var d = 1; d < days; d++) {
     final a = tithi[d]!, b = tithi[d + 1]!;
     if ((a + 2) % 30 == b) {
-      final f = festivalFor((a + 1) % 30, pmonth[d]!, amonth[d]!);
+      final f = festivalFor((a + 1) % 30, pmonth[d]!, amonth[d]!,
+          adhika: adhika[d]!);
       if (f != null) out.putIfAbsent(d, () => f);
     }
   }

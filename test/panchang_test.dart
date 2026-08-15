@@ -47,10 +47,17 @@ void main() {
     };
     // ignore: avoid_print
     print('July 2026 festivals: $hits');
-    // App reference: Yogini Ekadashi 10, Amavasya 14, Devshayani Ekadashi 25.
-    expect(hits[10], 'Ekadashi');
-    expect(hits[14], 'Amavasya');
-    expect(hits[25], 'Ekadashi');
+    // Assert the FULL name. The earlier bare 'Ekadashi' expectation was never
+    // satisfiable and hid G16: krishna-paksha Ekadashis were named from the
+    // amanta month against a purnimanta-indexed table.
+    //
+    // 2026 carries an adhika (leap) Ashadha — the Jun 15 to Jul 14 lunation
+    // contains no sankranti — so these festivals fall in the nija month in
+    // July, not June. Do not "correct" them to June dates; that reading is
+    // what an intercalary month is supposed to look like.
+    expect(hits[10], 'Yogini Ekadashi');
+    expect(hits[14], 'Ashadha Amavasya');
+    expect(hits[25], 'Devshayani Ekadashi');
   });
 
   test('Named festivals land on the right dates (purnimanta)', () {
@@ -65,5 +72,30 @@ void main() {
     // Diwali = Kartika Amavasya, somewhere in Nov 2026.
     final nov = monthFestivals(2026, 11, tz);
     expect(nov.values.any((f) => f.name.en == 'Diwali'), isTrue);
+  });
+
+  test('the adhika month of 2026 is named and dated as its own', () {
+    const tz = Duration(hours: 5, minutes: 30);
+    String? on(int y, int m, int d) => monthFestivals(y, m, tz)[d]?.name.en;
+
+    // 2026 carries an intercalary Jyeshtha: the sun enters no new rashi
+    // between the May 16 and Jun 15 new moons, so that lunation is adhika.
+    // Its Ekadashis take their own names instead of the nija month's.
+    expect(on(2026, 5, 26), 'Padmini Ekadashi');
+    expect(on(2026, 6, 11), 'Parama Ekadashi');
+    expect(on(2026, 5, 31), 'Adhika Purnima');
+
+    // The nija month follows, and each of its festivals occurs exactly once.
+    expect(on(2026, 6, 25), 'Nirjala Ekadashi');
+    expect(on(2026, 6, 29), 'Jyeshtha Purnima');
+    expect(on(2026, 7, 10), 'Yogini Ekadashi');
+  });
+
+  test('a vriddhi tithi does not fire its festival twice', () {
+    const tz = Duration(hours: 5, minutes: 30);
+    // Tithi 10 spans both the May 26 and May 27 sunrises. The vrat is one day.
+    final may = monthFestivals(2026, 5, tz);
+    expect(may[26], isNotNull);
+    expect(may[27], isNull);
   });
 }
