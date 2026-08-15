@@ -103,7 +103,7 @@
       "title_en": "Festivals",
       "backing_table": "festivals",
       "spec": "4.18",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "ask",

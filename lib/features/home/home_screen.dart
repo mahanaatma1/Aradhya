@@ -18,7 +18,6 @@ import '../cosmos/cosmos_content.dart' show cGocharThemes, cVerdictLabels;
 import '../cosmos/cosmos_providers.dart';
 import '../cosmos/daily_cosmos.dart';
 import '../cosmos/rashi_glyphs.dart';
-import '../panchang/calendar_screen.dart' show showFestivalDetail;
 import '../panchang/festivals.dart';
 import '../panchang/panchang_providers.dart';
 import '../quiz/quiz_providers.dart';
@@ -1498,7 +1497,9 @@ class _FestivalBanner extends ConsumerWidget {
       padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: () => showFestivalDetail(context, ref, next.date, next.hit, hi),
+        // Opens the Explorer rather than a one-off sheet: the same festival
+        // leads that list, and from there the whole year is reachable.
+        onTap: () => context.push('/festivals'),
         child: Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(

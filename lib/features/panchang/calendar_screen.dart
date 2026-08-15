@@ -140,6 +140,11 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
         title: Text(hi ? 'हिंदू पंचांग' : 'Hindu Panchang'),
         actions: [
           IconButton(
+            tooltip: hi ? 'सभी पर्व' : 'All festivals',
+            icon: const Icon(Icons.celebration_outlined),
+            onPressed: () => context.push('/festivals'),
+          ),
+          IconButton(
             tooltip: hi ? 'तिथि पर जाएँ' : 'Go to date',
             icon: const Icon(Icons.event_rounded),
             onPressed: () => _goToDate(hi),

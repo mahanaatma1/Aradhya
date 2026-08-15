@@ -225,6 +225,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.celebration_rounded,
     backingTable: 'festivals',
     spec: '4.18',
+    shipped: true,
   ),
   GyanModule(
     id: 'ask',

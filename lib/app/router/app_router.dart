@@ -11,6 +11,8 @@ import '../../features/gyan/entity_detail_screen.dart';
 import '../../features/gyan/family_tree_screen.dart';
 import '../../features/gyan/knowledge_graph_screen.dart';
 import '../../features/gyan/entity_list_screen.dart';
+import '../../features/festivals/festival_detail_screen.dart';
+import '../../features/festivals/festivals_screen.dart';
 import '../../features/gyan/gyan_hub_screen.dart';
 import '../../features/cosmology/srishty_screen.dart';
 import '../../features/cosmology/yuga_screen.dart';
@@ -192,6 +194,21 @@ final appRouter = GoRouter(
       path: '/search',
       builder: (context, state) =>
           SearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
+    ),
+
+    // ---- Festival Explorer ----
+    // Dates are computed from the stored rule by panchang_engine, never
+    // fetched, so the list is correct for any year and any location.
+    GoRoute(
+      path: '/festivals',
+      builder: (c, s) => const FestivalsScreen(),
+      routes: [
+        GoRoute(
+          path: ':festivalId',
+          builder: (c, s) =>
+              FestivalDetailScreen(festivalId: _intParam(s, 'festivalId')),
+        ),
+      ],
     ),
 
     // Rashifal keeps its route for deep links and the Android home widget,

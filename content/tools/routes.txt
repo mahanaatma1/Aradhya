@@ -11,6 +11,8 @@
 /calendar
 /chalisa
 /cosmos
+/festivals
+/festivals/:festivalId
 /gyan
 /gyan/astras
 /gyan/deities

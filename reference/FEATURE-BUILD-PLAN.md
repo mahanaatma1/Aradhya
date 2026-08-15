@@ -876,6 +876,8 @@ Requirements: a plain-language "Why am I seeing this?" line on any personalized 
 | **G12** | Reader font size is in-memory only ([scripture_providers.dart:57](lib/features/scriptures/scripture_providers.dart#L57)). | One prefs key. | 3 |
 | **G13** | No dark theme — `main.dart` hardcodes `ThemeMode.light`, though `themeModeProvider` exists and is unused and `AppColors` already defines a full warm-espresso dark ramp. | Wire the provider, add the selector to the You tab. Most of the work is already done. | 7 |
 | **G14** | Nav labels hardcoded English in [nav_scaffold.dart](lib/app/shell/nav_scaffold.dart); the ARB has 19 keys while the rest of the app is bilingual via inline ternaries. | Pick **one** convention and apply it — either grow the ARB or formalise the ternary in a `Tr` helper. The current split is the actual problem. **Must be settled before the new modules are written**, not after (§1.11). | **1** |
+| **G17** | Adhika (intercalary) months were computed correctly but not labelled, so festivals falling inside one took the nija month's names and appeared twice in a year. | `lunarMonth` now reports `adhika`; those months name their Ekadashis Padmini / Parama. **Done** — found while fixing G16. | 5 |
+| **G18** | A vriddhi tithi spans two sunrises and so fired its festival on both days. | `monthFestivals` skips the repeat. **Done** — found while fixing G16. | 5 |
 | **G16** | **Pre-existing failing test** (confirmed present before any Phase-0 work): `test/panchang_test.dart` — *"Festivals for July 2026 match reference dates"* expects `Ekadashi` but `lib/features/panchang/festivals.dart` returns `Apara Ekadashi`. Either the name or the expectation is wrong. | Resolve when 4.18 replaces `festivals.dart` — the correct name is a content question, and `festivals.title_en` becomes the single source of truth. | 5 |
 | **G15** | `assets/db/content.sqlite.bak` is **git-tracked** (38 MB duplicate in history); `flutter_0*.log` and `flutter_01.png` are committed at root. | `git rm --cached`, `.gitignore` `assets/db/build/` and `content/raw/`. | 0 |
 
@@ -972,11 +974,11 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 2 — Entity substrate | **22 ✅** | 22 |
 | 3 — Personal & writable | **11 ✅** | 24 |
 | 4 — Narrative & cosmology | 20 | 20 |
-| 5 — Curated & interactive | 0 | 26 |
+| 5 — Curated & interactive | 7 | 26 |
 | 6 — Ask the Scriptures | 0 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **135** | **194** |
+| **Total** | **142** | **194** |
 
 ---
 
@@ -1173,13 +1175,18 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 ## Phase 5 — Curated & interactive
 
 ### Festival Explorer (4.18)
-- [ ] **P5-01** `festivals` content — ~150 festivals/vrats with rule fields, `region` NOT NULL
-- [ ] **P5-02** Date resolution through `panchang_engine.dart` (computed, never fetched)
-- [ ] **P5-03** `FestivalExplorerScreen` — Upcoming mode with date badges + days-away
-- [ ] **P5-04** Browse mode — category chips + region selector + search
-- [ ] **P5-05** `FestivalDetailScreen` — When / Ritual / Fast rules / Story / deity / puja vidhi / `SourceChip`
+- [x] **P5-01** `festivals` content — ~150 festivals/vrats with rule fields, `region` NOT NULL
+- [x] **P5-02** Date resolution through `panchang_engine.dart` (computed, never fetched)
+- [x] **P5-03** `FestivalExplorerScreen` — Upcoming mode with date badges + days-away
+- [x] **P5-04** Browse mode — category chips + region selector + search
+- [x] **P5-05** `FestivalDetailScreen` — When / Ritual / Fast rules / Story / deity / puja vidhi / `SourceChip`
 - [ ] **P5-06** "Remind me" → `reminders`; "Add to calendar"
-- [ ] **P5-07** Replace hardcoded `lib/features/panchang/festivals.dart`; link the existing `_FestivalBanner`
+- [x] **P5-07** `_FestivalBanner` and the calendar app bar now open `/festivals`.
+  `panchang/festivals.dart` is **deliberately kept**, not replaced: it answers a
+  different question — *what falls on this specific day* — which the per-day
+  calendar marks and the home widget need, and which a rule table does not
+  answer without resolving all 58 rules per day. The two agree because both
+  resolve through the same engine; `test/festival_resolver_test.dart` pins that
 
 ### Dharma Decision Game (4.11)
 - [ ] **P5-08** `dharma_scenarios` + `dharma_choices` content — ~60 scenarios, `guna` tags, mandatory disclaimers
@@ -1204,7 +1211,13 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 - [ ] **P5-23** `PathDetailScreen` — reuse the 4.7 dashed-path painter; step cards with kind glyphs
 - [ ] **P5-24** Continue pill; step completion animation; auto-advance. **No locking** — suggested order only
 - [ ] **P5-25** Entry points: `/gyan` hero, Home "Start here" for users with no history, You tile
-- [ ] **P5-26** **G16** — resolve the `Ekadashi` / `Apara Ekadashi` naming and un-break `test/panchang_test.dart`
+- [x] **P5-26** **G16** — resolved. Krishna-paksha Ekadashis were named from the
+  amanta month against a purnimanta-indexed table. The failing assertion expected a
+  bare `Ekadashi`, which the engine has never emitted, so it masked two further bugs:
+  **G17** the adhika (leap) month was computed but not labelled, so its festivals
+  inherited nija-month names and appeared twice — its Ekadashis are now Padmini and
+  Parama; **G18** a vriddhi tithi spanning two sunrises fired its festival on both
+  days. Suite is green at 133 tests. Commit `f36bbc6`.
 
 ---
 
