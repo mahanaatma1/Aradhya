@@ -974,11 +974,11 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 2 — Entity substrate | **22 ✅** | 22 |
 | 3 — Personal & writable | **11 ✅** | 24 |
 | 4 — Narrative & cosmology | 20 | 20 |
-| 5 — Curated & interactive | 7 | 26 |
+| 5 — Curated & interactive | 8 | 26 |
 | 6 — Ask the Scriptures | 0 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **142** | **194** |
+| **Total** | **143** | **194** |
 
 ---
 
@@ -1180,7 +1180,11 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 - [x] **P5-03** `FestivalExplorerScreen` — Upcoming mode with date badges + days-away
 - [x] **P5-04** Browse mode — category chips + region selector + search
 - [x] **P5-05** `FestivalDetailScreen` — When / Ritual / Fast rules / Story / deity / puja vidhi / `SourceChip`
-- [ ] **P5-06** "Remind me" → `reminders`; "Add to calendar"
+- [x] **P5-06** "Remind me" → `reminders`, firing the evening before. Needed a new
+  `scheduleOnce` on `ReminderService`: `schedule` repeats daily, which is right for
+  a sadhana nudge and wrong for a festival. Disabled when the rule does not resolve.
+  *"Add to calendar" dropped* — it needs a platform intent and an external calendar
+  app, and the reminder already answers the same need on-device
 - [x] **P5-07** `_FestivalBanner` and the calendar app bar now open `/festivals`.
   `panchang/festivals.dart` is **deliberately kept**, not replaced: it answers a
   different question — *what falls on this specific day* — which the per-day

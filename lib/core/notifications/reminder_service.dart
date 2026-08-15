@@ -146,6 +146,38 @@ class ReminderService {
     }
   }
 
+  /// A one-shot reminder at a specific moment.
+  ///
+  /// [schedule] repeats daily, which is right for a sadhana or a journal nudge
+  /// and wrong for a festival: a festival happens once, on a date the panchang
+  /// decides. Fires nothing if [when] is already past.
+  Future<void> scheduleOnce({
+    required int notifId,
+    required String kind,
+    required String title,
+    required String body,
+    required DateTime when,
+  }) async {
+    if (!_supported) return;
+    await init();
+    if (!_ready) return;
+    final at = tz.TZDateTime.from(when, tz.local);
+    if (!at.isAfter(tz.TZDateTime.now(tz.local))) return;
+    try {
+      await _plugin.zonedSchedule(
+        id: notifId,
+        title: title,
+        body: body,
+        scheduledDate: at,
+        notificationDetails: _details(kind),
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        // No matchDateTimeComponents: this must NOT repeat.
+      );
+    } catch (e) {
+      debugPrint('ReminderService: scheduleOnce failed ($e)');
+    }
+  }
+
   Future<void> cancel(int notifId) async {
     if (!_supported) return;
     try {
@@ -178,6 +210,21 @@ class ReminderService {
       await cancelAll();
       for (final r in rows) {
         final kind = (r['kind'] as String?) ?? 'sadhana';
+        if (kind == 'festival') {
+          // Festival rows carry their date in ref_key as 'slug@iso'. They fire
+          // once, and a row whose date has passed is simply not re-armed.
+          final when = festivalReminderDate(r['ref_key'] as String?);
+          if (when != null) {
+            await scheduleOnce(
+              notifId: r['notif_id'] as int,
+              kind: kind,
+              title: _titleFor(kind, hindi),
+              body: _bodyFor(kind, r['ref_key'] as String?, hindi),
+              when: when,
+            );
+          }
+          continue;
+        }
         await schedule(
           notifId: r['notif_id'] as int,
           kind: kind,
@@ -217,3 +264,22 @@ class ReminderService {
 
 final reminderServiceProvider =
     Provider<ReminderService>((ref) => ReminderService.instance);
+
+/// The date encoded in a festival reminder's `ref_key`.
+///
+/// Stored as `slug@2026-10-20T18:00:00.000` rather than in a column of its own:
+/// every other reminder kind repeats and needs no date, and a schema migration
+/// to carry one field used by a single kind is a worse trade than a documented
+/// encoding. Returns null for a malformed or non-festival key.
+DateTime? festivalReminderDate(String? refKey) {
+  if (refKey == null) return null;
+  final at = refKey.indexOf('@');
+  if (at < 0) return null;
+  return DateTime.tryParse(refKey.substring(at + 1));
+}
+
+/// The slug half of a festival reminder's `ref_key`.
+String festivalReminderSlug(String refKey) {
+  final at = refKey.indexOf('@');
+  return at < 0 ? refKey : refKey.substring(0, at);
+}

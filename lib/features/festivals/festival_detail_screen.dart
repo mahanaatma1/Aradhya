@@ -9,6 +9,7 @@ import '../../shared/widgets/source_chip.dart';
 import '../related/related_rail.dart';
 import 'festival_models.dart';
 import 'festival_providers.dart';
+import 'festival_reminder.dart';
 import 'festivals_screen.dart' show ruleLabel;
 
 const _accent = Color(0xFFE0762A);
@@ -75,6 +76,7 @@ class FestivalDetailScreen extends ConsumerWidget {
                         body: f.fast(hi)!,
                         icon: Icons.no_food_rounded,
                       ),
+                    _RemindMe(festival: f, hindi: hi),
                     if (f.deityEntityId != null)
                       _DeityLink(entityId: f.deityEntityId!, hindi: hi),
                     const SizedBox(height: 14),
@@ -207,6 +209,57 @@ class _WhenCard extends ConsumerWidget {
 }
 
 /// States plainly that a festival is not kept everywhere, and where it is.
+/// Sets a one-off reminder for the evening before the next occurrence.
+///
+/// Disabled when the rule does not resolve — there is no date to remind about,
+/// and offering the button anyway would promise something we cannot deliver.
+class _RemindMe extends ConsumerWidget {
+  final Festival festival;
+  final bool hindi;
+  const _RemindMe({required this.festival, required this.hindi});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final dates = ref.watch(festivalDatesProvider(festival.id)).valueOrNull;
+    final set = ref.watch(festivalRemindersProvider).contains(festival.id);
+    final next = (dates == null || dates.isEmpty) ? null : dates.first;
+    final usable = next != null && next.isAfter(DateTime.now());
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 18),
+      child: FilledButton.tonalIcon(
+        onPressed: !usable
+            ? null
+            : () async {
+                final on = await ref
+                    .read(festivalRemindersProvider.notifier)
+                    .toggle(festival, next, hindi: hindi);
+                if (!context.mounted) return;
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(on
+                      ? (hindi
+                          ? 'एक दिन पहले शाम को याद दिलाया जाएगा।'
+                          : 'You will be reminded the evening before.')
+                      : (hindi ? 'अनुस्मारक हटाया गया।' : 'Reminder removed.')),
+                ));
+              },
+        icon: Icon(
+            set ? Icons.notifications_active_rounded : Icons.notifications_none_rounded,
+            size: 17),
+        label: Text(set
+            ? (hindi ? 'अनुस्मारक लगा है' : 'Reminder set')
+            : (hindi ? 'याद दिलाएँ' : 'Remind me')),
+        style: FilledButton.styleFrom(
+          backgroundColor: _accent.withValues(alpha: set ? 0.28 : 0.14),
+          foregroundColor: _accentDeep,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12)),
+        ),
+      ),
+    );
+  }
+}
+
 class _RegionNote extends StatelessWidget {
   final Festival festival;
   final bool hindi;
