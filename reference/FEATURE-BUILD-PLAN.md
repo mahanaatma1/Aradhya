@@ -974,11 +974,11 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 2 — Entity substrate | **22 ✅** | 22 |
 | 3 — Personal & writable | **11 ✅** | 24 |
 | 4 — Narrative & cosmology | 20 | 20 |
-| 5 — Curated & interactive | 14 | 26 |
+| 5 — Curated & interactive | 18 | 26 |
 | 6 — Ask the Scriptures | 0 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **149** | **194** |
+| **Total** | **153** | **194** |
 
 ---
 
@@ -1208,10 +1208,14 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 - [x] **P5-13** Entry tiles on the Quiz hub and `/gyan`
 
 ### Vedic Science (4.15)
-- [ ] **P5-14** `vidya_topics` content — ~80 topics, every one with `caution_*` and `modern_status`
-- [ ] **P5-15** `VedicScienceScreen` — discipline tabs, `modern_status` chips
-- [ ] **P5-16** `VidyaTopicScreen` — fixed section order ending in the caution panel
-- [ ] **P5-17** Debug-mode widget assertion: no vidya card renders without its caution panel
+- [x] **P5-14** `vidya_topics` — **17 topics shipped** across all six disciplines,
+  every one carrying `caution_*` and an honest `modern_status`. Includes rows the
+  module would be dishonest without: tridosha is marked `contested`, and the
+  Ashtadhyayi entry says plainly that "it is a computer language" is a modern
+  claim the text makes no room for
+- [x] **P5-15** `VedicScienceScreen` — discipline tabs, `modern_status` chips
+- [x] **P5-16** `VidyaTopicScreen` — fixed section order ending in the caution panel
+- [x] **P5-17** Debug-mode widget assertion: no vidya card renders without its caution panel
 
 ### Knowledge Journeys (4.21)
 - [ ] **P5-18** `learning_paths` + `path_steps` schema and loader

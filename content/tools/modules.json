@@ -87,7 +87,7 @@
       "title_en": "Vedic Science",
       "backing_table": "vidya_topics",
       "spec": "4.15",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "dharma",

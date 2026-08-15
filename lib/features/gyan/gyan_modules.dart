@@ -203,6 +203,7 @@ const List<GyanModule> gyanModules = <GyanModule>[
     icon: Icons.science_rounded,
     backingTable: 'vidya_topics',
     spec: '4.15',
+    shipped: true,
   ),
   GyanModule(
     id: 'dharma',

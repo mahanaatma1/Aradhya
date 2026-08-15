@@ -16,6 +16,8 @@ import '../../features/dharma/dharma_scenario_screen.dart';
 import '../../features/festivals/festival_detail_screen.dart';
 import '../../features/festivals/festivals_screen.dart';
 import '../../features/gyan/gyan_hub_screen.dart';
+import '../../features/vidya/vidya_screen.dart';
+import '../../features/vidya/vidya_topic_screen.dart';
 import '../../features/cosmology/srishty_screen.dart';
 import '../../features/cosmology/yuga_screen.dart';
 import '../../features/mandir/mandir_screen.dart';
@@ -96,6 +98,17 @@ final List<RouteBase> _gyanRoutes = <RouteBase>[
         path: 'lineage',
         builder: (c, s) => FamilyTreeScreen(
             rootId: int.tryParse(s.uri.queryParameters['id'] ?? '')),
+      ),
+      GoRoute(
+        path: 'vidya',
+        builder: (c, s) => const VidyaScreen(),
+        routes: [
+          GoRoute(
+            path: ':topicId',
+            builder: (c, s) =>
+                VidyaTopicScreen(topicId: _intParam(s, 'topicId')),
+          ),
+        ],
       ),
       GoRoute(path: 'srishty', builder: (c, s) => const SrishtyScreen()),
       GoRoute(path: 'yuga', builder: (c, s) => const YugaScreen()),

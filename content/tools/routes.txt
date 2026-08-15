@@ -28,6 +28,8 @@
 /gyan/scene/:sceneId
 /gyan/srishty
 /gyan/symbols
+/gyan/vidya
+/gyan/vidya/:topicId
 /gyan/yuga
 /habits
 /japa
