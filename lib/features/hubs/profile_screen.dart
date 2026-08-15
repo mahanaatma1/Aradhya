@@ -105,6 +105,20 @@ class ProfileScreen extends ConsumerWidget {
           Card(
             clipBehavior: Clip.antiAlias,
             child: ListTile(
+              leading: Icon(Icons.route_rounded, color: scheme.primary),
+              title: Text(hi ? 'ज्ञान यात्राएँ' : 'Knowledge Journeys'),
+              subtitle: Text(hi
+                  ? 'निर्देशित पथ — सुझाया क्रम, कोई ताला नहीं'
+                  : 'Guided paths — a suggested order, nothing locked'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push('/journey'),
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
               leading: Icon(Icons.edit_note_rounded, color: scheme.primary),
               title: Text(hi ? 'कर्म डायरी' : 'Karma Journal'),
               subtitle: Text(hi

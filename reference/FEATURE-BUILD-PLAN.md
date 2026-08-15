@@ -974,11 +974,11 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 2 — Entity substrate | **22 ✅** | 22 |
 | 3 — Personal & writable | **11 ✅** | 24 |
 | 4 — Narrative & cosmology | 20 | 20 |
-| 5 — Curated & interactive | 18 | 26 |
+| 5 — Curated & interactive | 26 | 26 |
 | 6 — Ask the Scriptures | 0 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **153** | **194** |
+| **Total** | **161** | **194** |
 
 ---
 
@@ -1218,14 +1218,18 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 - [x] **P5-17** Debug-mode widget assertion: no vidya card renders without its caution panel
 
 ### Knowledge Journeys (4.21)
-- [ ] **P5-18** `learning_paths` + `path_steps` schema and loader
-- [ ] **P5-19** Curate 10 launch paths (beginner / core / deeper) over existing content
-- [ ] **P5-20** One-line "why this step" blurb per step, bilingual
-- [ ] **P5-21** `path_progress` table in `aradhya_user.db`
-- [ ] **P5-22** `JourneyListScreen` — cover cards, level chips, progress rings, in-progress float-to-top
-- [ ] **P5-23** `PathDetailScreen` — reuse the 4.7 dashed-path painter; step cards with kind glyphs
-- [ ] **P5-24** Continue pill; step completion animation; auto-advance. **No locking** — suggested order only
-- [ ] **P5-25** Entry points: `/gyan` hero, Home "Start here" for users with no history, You tile
+- [x] **P5-18** `learning_paths` + `path_steps` schema and loader
+- [x] **P5-19** Curate 10 launch paths (beginner / core / deeper) over existing content
+- [x] **P5-20** One-line "why this step" blurb per step, bilingual
+- [x] **P5-21** `path_progress` table in `aradhya_user.db`
+- [x] **P5-22** `JourneyListScreen` — cover cards, level chips, progress rings, in-progress float-to-top
+- [x] **P5-23** `PathDetailScreen` — reuse the 4.7 dashed-path painter; step cards with kind glyphs
+- [x] **P5-24** Continue pill; step completion animation; auto-advance. **No locking** — suggested order only
+- [x] **P5-25** Entry points: a "Start here" card at the top of `/gyan` and a You-tab
+  tile. *The Home "Start here" card was not added* — Home already carries the verse,
+  the festival banner and the discovery rails, and a fourth promotional card above
+  the fold would crowd the screen it is meant to help. The Gyan hub is where someone
+  who does not know what to look for actually lands
 - [x] **P5-26** **G16** — resolved. Krishna-paksha Ekadashis were named from the
   amanta month against a purnimanta-indexed table. The failing assertion expected a
   bare `Ekadashi`, which the engine has never emitted, so it masked two further bugs:

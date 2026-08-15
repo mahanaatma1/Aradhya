@@ -43,6 +43,11 @@ class GyanHubScreen extends ConsumerWidget {
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 28),
         children: [
           _Hero(hi: hi),
+          const SizedBox(height: 14),
+          // Fourteen modules is a lot to be handed at once. The journeys
+          // answer the question a newcomer actually has, which is not
+          // "what is here" but "where do I start".
+          _StartHereCard(hi: hi),
           const SizedBox(height: 18),
           if (shipped.isNotEmpty) ...[
             _Label(hi ? 'खुला' : 'AVAILABLE'),
@@ -75,6 +80,56 @@ class _Label extends StatelessWidget {
           color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
         ),
       );
+}
+
+/// The way in for someone who does not yet know what to look for.
+class _StartHereCard extends StatelessWidget {
+  final bool hi;
+  const _StartHereCard({required this.hi});
+
+  @override
+  Widget build(BuildContext context) {
+    const teal = Color(0xFF3E7F8E);
+    return InkWell(
+      borderRadius: BorderRadius.circular(18),
+      onTap: () => context.push('/journey'),
+      child: Container(
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+          color: teal.withValues(alpha: 0.09),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: teal.withValues(alpha: 0.32)),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.route_rounded, size: 22, color: teal),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(hi ? 'यहाँ से शुरू करें' : 'Start here',
+                      style: const TextStyle(
+                          fontFamily: AppFonts.display,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFF1D4552))),
+                  const SizedBox(height: 2),
+                  Text(
+                    hi
+                        ? 'दस निर्देशित यात्राएँ — जो पहले से यहाँ है, उसी में से चुनी हुई'
+                        : 'Ten guided journeys, curated from what is already here',
+                    style: const TextStyle(fontSize: 12.5, height: 1.35),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, size: 20, color: teal),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 class _Hero extends StatelessWidget {

@@ -49,7 +49,7 @@ class ContentDatabase {
   /// Version of the bundled `gyan.sqlite`. Rewritten automatically by
   /// `content/tools/build.py`; do not edit by hand, and keep the trailing
   /// marker comment intact — the build script matches on it.
-  static const gyanAssetVersion = '1.0.0+20260815.b98d6b1'; // BUILD_STAMP:gyan
+  static const gyanAssetVersion = '1.0.0+20260815.b273625'; // BUILD_STAMP:gyan
 
   static Future<ContentDatabase> open() async {
     final dir = await getApplicationDocumentsDirectory();
