@@ -57,6 +57,19 @@ class QuizHubScreen extends ConsumerWidget {
                   : '${c['trivia']} facts to explore',
               onTap: () => context.push('/quiz/trivia'),
             ),
+            const SizedBox(height: 12),
+            // Sits here because this is where people come to be asked
+            // questions — but nothing in it is scored, which the subtitle
+            // says outright so the card is not mistaken for another quiz.
+            _ModeCard(
+              gradient: cats.personality.linear,
+              icon: Icons.balance_rounded,
+              title: hi ? 'धर्म संकट' : 'Dharma Dilemmas',
+              subtitle: hi
+                  ? 'ग्रंथों के प्रश्न — कोई उत्तर सही या गलत नहीं'
+                  : 'Questions from the texts — no right answers',
+              onTap: () => context.push('/dharma'),
+            ),
           ],
         ),
       ),

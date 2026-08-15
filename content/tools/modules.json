@@ -95,7 +95,7 @@
       "title_en": "Dharma Decisions",
       "backing_table": "dharma_scenarios",
       "spec": "4.11",
-      "shipped": false
+      "shipped": true
     },
     {
       "id": "festivals",

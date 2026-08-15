@@ -974,11 +974,11 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
 | 2 — Entity substrate | **22 ✅** | 22 |
 | 3 — Personal & writable | **11 ✅** | 24 |
 | 4 — Narrative & cosmology | 20 | 20 |
-| 5 — Curated & interactive | 8 | 26 |
+| 5 — Curated & interactive | 14 | 26 |
 | 6 — Ask the Scriptures | 0 | 9 |
 | 7 — Polish & optimization | 0 | 16 |
 | Release gate | 0 | 8 |
-| **Total** | **143** | **194** |
+| **Total** | **149** | **194** |
 
 ---
 
@@ -1193,12 +1193,19 @@ Tick as you go. `- [ ]` → `- [x]`. Task IDs are stable — reference them in c
   resolve through the same engine; `test/festival_resolver_test.dart` pins that
 
 ### Dharma Decision Game (4.11)
-- [ ] **P5-08** `dharma_scenarios` + `dharma_choices` content — ~60 scenarios, `guna` tags, mandatory disclaimers
-- [ ] **P5-09** `DharmaHubScreen` — scenario of the day, category tiles with completion rings
-- [ ] **P5-10** `DharmaScenarioScreen` — context, stitched choice cards, no right/wrong marking
-- [ ] **P5-11** Consequence expansion + cream Reflection panel with `SourceChip`
-- [ ] **P5-12** "Journal this" → pre-filled `journal_entries` row
-- [ ] **P5-13** Entry tiles on the Quiz hub and `/gyan`
+- [x] **P5-08** `dharma_scenarios` + `dharma_choices` — **12 scenarios shipped**, not 60.
+  Every one is anchored to a dilemma the texts actually pose and cited to Ganguli,
+  Dutt or Telang, with `guna` tags and a mandatory disclaimer. Shipping a verified
+  subset is the Risk-4 policy; the remaining scenarios are authoring, not code
+- [x] **P5-09** `DharmaHubScreen` — scenario of the day, category tiles with completion rings
+- [x] **P5-10** `DharmaScenarioScreen` — context, stitched choice cards, no right/wrong marking
+- [x] **P5-11** Consequence expansion + cream Reflection panel with `SourceChip`
+- [x] **P5-12** Every reflection writes a `journal_entries` row tagged `dharma`, so
+  4.11 and 4.17 share one history. The chosen option is stored as the body, never as
+  a result — there is nothing to be right about, so there is no answer key to save.
+  *The "Journal this" button opens the editor rather than pre-filling it* — the
+  reflection is already recorded, and pre-filling would put our words in the user's entry
+- [x] **P5-13** Entry tiles on the Quiz hub and `/gyan`
 
 ### Vedic Science (4.15)
 - [ ] **P5-14** `vidya_topics` content — ~80 topics, every one with `caution_*` and `modern_status`

@@ -11,6 +11,8 @@ import '../../features/gyan/entity_detail_screen.dart';
 import '../../features/gyan/family_tree_screen.dart';
 import '../../features/gyan/knowledge_graph_screen.dart';
 import '../../features/gyan/entity_list_screen.dart';
+import '../../features/dharma/dharma_hub_screen.dart';
+import '../../features/dharma/dharma_scenario_screen.dart';
 import '../../features/festivals/festival_detail_screen.dart';
 import '../../features/festivals/festivals_screen.dart';
 import '../../features/gyan/gyan_hub_screen.dart';
@@ -194,6 +196,21 @@ final appRouter = GoRouter(
       path: '/search',
       builder: (context, state) =>
           SearchScreen(initialQuery: state.uri.queryParameters['q'] ?? ''),
+    ),
+
+    // ---- Dharma Decision Game ----
+    // Sits beside /quiz but is not one: nothing here is scored, and no choice
+    // is marked right or wrong.
+    GoRoute(
+      path: '/dharma',
+      builder: (c, s) => const DharmaHubScreen(),
+      routes: [
+        GoRoute(
+          path: 'play/:scenarioId',
+          builder: (c, s) =>
+              DharmaScenarioScreen(scenarioId: _intParam(s, 'scenarioId')),
+        ),
+      ],
     ),
 
     // ---- Festival Explorer ----

@@ -11,6 +11,8 @@
 /calendar
 /chalisa
 /cosmos
+/dharma
+/dharma/play/:scenarioId
 /festivals
 /festivals/:festivalId
 /gyan
