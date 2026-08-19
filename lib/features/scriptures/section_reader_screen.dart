@@ -14,6 +14,7 @@ import '../../core/user/reading_progress.dart';
 import '../../core/user/user_prefs.dart';
 import '../../l10n/app_localizations.dart';
 import '../../shared/share_card.dart';
+import '../related/related_rail.dart';
 import '../../shared/widgets/app_logo.dart';
 import '../../shared/widgets/skeleton.dart';
 import '../../shared/widgets/stitched_border.dart';
@@ -646,6 +647,20 @@ class _ShlokaBody extends ConsumerWidget {
             ),
           ),
         ],
+
+        // RD-03. The reader sits on the richest content in the app and was the
+        // only detail surface with no way out of it -- a verse knew nothing
+        // about the figures in it, the story around it, or the mantra drawn
+        // from it, while 2,958 related edges already existed. Bottom padding
+        // clears the floating pager pill.
+        Padding(
+          padding: const EdgeInsets.only(bottom: 56),
+          child: RelatedRail(
+            src: 'content',
+            table: 'scripture_sections',
+            id: section.id,
+          ),
+        ),
       ],
     );
   }

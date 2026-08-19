@@ -29,7 +29,7 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from content.tools.common import LEGACY_DB, fold  # noqa: E402
+from content.tools.common import LEGACY_DB, fold, tokenize  # noqa: E402
 
 # Per-source cap. Beyond a dozen the rail stops being a recommendation and
 # becomes a second search results page.
@@ -233,6 +233,81 @@ class Relator:
                 subtitle_en=ekind, subtitle_hi=ekind,
                 route=f"/gyan/entity/{eid}")
 
+    def link_verses(self, legacy: sqlite3.Connection) -> None:
+        """Verses to the figures named in them.
+
+        The reader is the richest surface in the app and had no way out of
+        itself: a verse knew nothing about the people in it. This is the rule
+        that gives it one.
+
+        It is also the noisiest rule in the file, so it is the most restricted:
+
+        * Only entities of importance <= 2. A minor figure sharing a common
+          name would otherwise attach itself to hundreds of verses.
+        * Only `primary` aliases, never spellings or epithets. Epithets are
+          exactly where Sanskrit names collide.
+        * Word-boundary matching. Substring matching counted "Rama" inside
+          "Parasurama" and "Chandramas" when this was first attempted by hand,
+          and would do the same here.
+        * At most 4 entities per verse, and a hard cap per entity, because a
+          name like Krishna appears in hundreds of Gita verses and a rail
+          showing 300 of them is a search results page, not a recommendation.
+
+        Weight 0.5: a name appearing in a translation is real evidence, and
+        weaker than a curated relation. The rail sorts by weight, so these sit
+        below explicit links rather than displacing them.
+        """
+        tables = {r[0] for r in legacy.execute(
+            "select name from sqlite_master where type='table'")}
+        if "scripture_sections" not in tables:
+            return
+
+        # Only the figures worth surfacing, and only their primary name.
+        majors: list[tuple[int, str, str, str | None]] = []
+        for eid, ten, thi in self.db.execute(
+                "select id, title_en, title_hi from entities "
+                "where importance <= 2"):
+            for (alias,) in self.db.execute(
+                    "select alias from entity_aliases where entity_id=? "
+                    "and alias_kind='primary' and lang='en'", (eid,)):
+                f = fold(alias)
+                if len(f) >= 4 and f not in AMBIGUOUS_DEITY_TOKENS:
+                    majors.append((eid, f, ten or "", thi))
+
+        if not majors:
+            return
+
+        per_entity: dict[int, int] = {}
+        MAX_PER_ENTITY = 25
+
+        rows = legacy.execute(
+            "select s.id, s.book_id, s.body_en, b.title_en "
+            "from scripture_sections s "
+            "join scripture_books b on b.id = s.book_id "
+            "where s.body_en is not null and length(s.body_en) > 40")
+
+        for sid, book_id, body, book_title in rows:
+            words = set(tokenize(body or ""))
+            if not words:
+                continue
+            hits = 0
+            for eid, f, ten, thi in majors:
+                if f not in words:
+                    continue
+                if per_entity.get(eid, 0) >= MAX_PER_ENTITY:
+                    continue
+                hits += 1
+                if hits > 4:
+                    break
+                per_entity[eid] = per_entity.get(eid, 0) + 1
+                self.add(
+                    ("content", "scripture_sections", sid),
+                    ("gyan", "entities", eid),
+                    dst_kind="entity", reason="named_in_verse", weight=0.50,
+                    title_en=ten, title_hi=thi,
+                    subtitle_en=book_title or "", subtitle_hi=book_title or "",
+                    route=f"/gyan/entity/{eid}")
+
     def link_entities(self, legacy: sqlite3.Connection) -> None:
         """Entities to their own relations, and to legacy content by alias.
 
@@ -385,6 +460,7 @@ def build_into(db: sqlite3.Connection) -> dict:
             r.link_stories_by_emotion(legacy)
             r.link_entities(legacy)
             r.link_festivals()
+            r.link_verses(legacy)
         finally:
             legacy.close()
 

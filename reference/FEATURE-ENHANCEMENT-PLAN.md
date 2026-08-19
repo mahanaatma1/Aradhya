@@ -1081,6 +1081,192 @@ this**: extraction needs the compressed asset and the inflated file at once.
 
 ---
 
+# Task checklist
+
+Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commits
+(`RD-03: related rail into the reader`). Status key: `[ ]` not started ·
+`[x]` done · `[~]` in progress · `[!]` blocked · `[-]` dropped, with a reason.
+
+| Area | Done | Total |
+|---|---|---|
+| Quick wins | 6 | 6 |
+| Reader & Search | 1 | 11 |
+| Knowledge system | 4 | 27 |
+| Narrative | 0 | 8 |
+| Practice & personal | 0 | 12 |
+| Calendar & astrology | 0 | 13 |
+| Discovery & play | 0 | 11 |
+| Temples | 0 | 9 |
+| Cross-cutting | 3 | 16 |
+| Release gate | 0 | 17 |
+| **Total** | **14** | **130** |
+
+## Quick wins — do these first
+
+- [x] **QW-01** Verse of the day: repoint at `quotes` (1,000 rows) instead of `daily_quotes` (3). The verse currently repeats every three days
+- [x] **QW-02** Every quote carries source + chapter/verse + attribution
+- [x] **QW-03** Surface the 57 orphaned kathas — shipped in the APK, unreachable
+- [x] **QW-04** Kathas get a category and are entity-linked
+- [x] **QW-05** `RelatedRail` on the katha detail screen
+- [x] **QW-06** Verify kathas appear in search results
+
+## Reader & Search
+
+- [ ] **RD-01** Tabs under the verse: Meaning · Explanation · Word meaning · Context
+- [ ] **RD-02** Word-meaning tab renders an honest empty state until data exists
+- [x] **RD-03** `RelatedRail` at the bottom of the section reader
+- [ ] **RD-04** Verse actions row: bookmark · note · listen (TTS) · share text
+- [ ] **RD-05** Per-chapter progress rings on the book list
+- [ ] **RD-06** Hindi at max system font scale without overflow
+- [ ] **RD-07** Reader tests + device check
+- [ ] **SR-01** Group results by kind with per-kind counts
+- [ ] **SR-02** Curated "Try" row driven by `importance`, not hardcoded
+- [ ] **SR-03** One-edit-distance fallback when a query returns nothing
+- [ ] **SR-04** Confirm no result taps through to the error page
+
+## Knowledge system
+
+- [ ] **KG-01** Widen the Wikidata pull: `P1080`, `P527`, `P361`, `P2789` + epic properties
+- [ ] **KG-02** 100% of P0 entities have a description
+- [ ] **KG-03** 100% of P0 entities have 3 or more verified relations
+- [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations
+- [ ] **KG-05** Written empty state for an entity with no edges — 285 of 511 today
+- [ ] **KG-06** Group more than 20 relations by family
+- [ ] **KG-07** Relation-family filter chips
+- [ ] **KG-08** Device check: pan and zoom performance on the canvas
+- [ ] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple · Dynasty
+- [ ] **FT-02** Recursive layout to depth 3
+- [ ] **FT-03** Collapse and expand past 4 children
+- [ ] **FT-04** `tradition` selector when edges disagree
+- [ ] **FT-05** Breadcrumb so a re-root walk is reversible
+- [x] **SY-01** Prose on all 30 cosmology nodes — was 14; Creation and Time had none
+- [x] **SY-02** Traditions-differ layer, rendered in its own panel
+- [x] **SY-03** Brahmanda diagram replaces the loka list
+- [x] **SY-04** Warm palette; starfield removed
+- [ ] **SY-05** Decide whether Creation and Time need their own diagram
+- [ ] **YG-01** Link each yuga to narrative nodes set in it
+- [ ] **RS-01** Widen the rishi roster — 20 today, 2 with prose
+- [ ] **RS-02** Prose for every P0 and P1 rishi
+- [ ] **RS-03** Gotra · veda · guru · disciples · hymns · ashram populated
+- [ ] **RS-04** Teaching-lineage mini-tree on the detail screen
+- [ ] **RS-05** Attributions labelled "according to the cited tradition"
+- [ ] **AS-01** Expand astras; `nature` shown near the top
+- [ ] **AS-02** Rename "Powers" to traditional effect unless the source says otherwise
+- [ ] **AS-03** Symbolism in its own panel, separate from the mythic account
+- [ ] **SB-01** Expand symbols — 12 today; mudras and yantras absent
+- [ ] **SB-02** Drawn motif where no Unicode glyph exists
+- [ ] **VD-01** Expand vidya topics **only where they pass the evidence bar** — 34 excellent beats 50 padded
+
+## Narrative
+
+- [ ] **RM-01** Ramayana 32 to 45–50 scenes; Uttara Kanda has one
+- [ ] **RM-02** Every scene linked to a `place` entity
+- [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka
+- [ ] **MB-01** Mahabharata 29 to 45–55 events; every parva represented
+- [ ] **MB-02** Optional parva rail beside the arc chips
+- [ ] **NR-01** Add `chronology_confidence` — narrative order is not historical order
+- [ ] **ST-01** Merge stories and kathas into one categorised list
+- [ ] **ST-02** Every story entity-linked
+
+## Practice & personal
+
+- [ ] **SD-01** Sadhana entry point on Home
+- [ ] **SD-02** Inline per-practice goal editing
+- [ ] **SD-03** Milestones rail
+- [ ] **SD-04** Frame as personal practice, not a productivity score
+- [ ] **KJ-01** Journal prompts to 150–200, each cited to a verse
+- [ ] **MN-01** Mandir: offering animates onto the idol
+- [ ] **MN-02** Mandir uses the user's `ishta_deity`
+- [ ] **MN-03** Confirm Kamal stays optional gamification, never a purchase
+- [ ] **PP-01** Pilgrimage Passport screen — `temple_visits` already records data
+- [ ] **PP-02** Per-temple stamp: date, note, rating
+- [ ] **PP-03** Collections: Char Dham · 12 Jyotirlinga · Shakti Peetha
+- [ ] **PP-04** Survives restart and upgrade
+
+## Calendar & astrology
+
+- [ ] **PN-01** Tap any panchang element to see what it is and how it is calculated
+- [ ] **PN-02** Link panchang elements to the Jyotisha vidya topics
+- [ ] **CW-01** Calendar wheel — circular year, festivals as marks
+- [ ] **FE-01** Festivals 58 to 100–150 **verified** rules
+- [ ] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date today
+- [ ] **FE-03** Festival to story-node link
+- [ ] **FE-04** Festival to puja vidhi link
+- [ ] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
+- [ ] **KM-02** Plain-language summary above the technical breakdown
+- [ ] **KM-03** Partial matches shown as partial, never folded into the total
+- [ ] **KM-04** A critical traditional flag is surfaced, not averaged away
+- [ ] **KM-05** Methodology and its limits stated on the result screen
+- [ ] **RF-01** Rashifal content pass plus "traditional interpretation, not prediction"
+
+## Discovery & play
+
+- [ ] **QZ-01** Explanation after every quiz answer
+- [ ] **QZ-02** Quiz difficulty and category filters
+- [ ] **QZ-03** `RelatedRail` on the quiz result
+- [ ] **QZ-04** Riddle answer links to its entity
+- [ ] **QZ-05** Trivia fact links to its entity
+- [ ] **QZ-06** `relate.py` rule: quiz, riddle and trivia to entity, capped at 2
+- [ ] **DH-01** Dharma scenarios 12 to 50–60
+- [ ] **AK-01** Ask pairs 20 to 300–500
+- [ ] **AK-02** Retrieval falls back to the 27,890 indexed shlokas
+- [ ] **AK-03** Confidence threshold tuned so weak matches still say *not sure*
+- [ ] **JN-01** Knowledge Journeys 10 to 18–20 paths
+
+## Temples
+
+- [ ] **TM-01** Detail page: hero, why visit, history, deity, architecture, festivals, traditions, map, nearby, sources
+- [ ] **TM-02** Nearby-temples query by coordinate
+- [ ] **TM-03** Festival link via `deity_entity_id`
+- [ ] **TM-04** OpenStreetMap attribution in About — ODbL requires it
+- [ ] **TA-01** **Find and verify a public-domain source for temple architecture** — none confirmed yet
+- [ ] **TA-02** Nagara · Dravida · Vesara
+- [ ] **TA-03** Parts: garbhagriha · mandapa · shikhara/vimana · gopuram · prakara
+- [ ] **TA-04** Diagrams as drawn paths, consistent with the motif system
+- [ ] **TA-05** Lives inside Temples, not as a separate module
+
+## Cross-cutting
+
+- [ ] **AR-01** Confirm the AI image tool's terms permit commercial distribution
+- [ ] **AR-02** Replace all 52 placeholder images
+- [ ] **AR-03** Manifest records tool · model · date · prompt · **prompt_version · human_reviewed**
+- [ ] **AR-04** Human review of every generated image before it ships
+- [ ] **AR-05** Keep drawn motifs for iconography; AI art for deities, temples and scenes
+- [ ] **TY-01** Devanagari line-height plus 15–20% on dense screens
+- [ ] **TY-02** Establish a type scale — sizes run 9.5 to 28 with no system
+- [ ] **TY-03** Confirm and record font licences in About
+- [!] **AU-01** Audio — **deferred by decision.** Mantra, aarti, Gita recitation and Sanskrit Pronunciation all blocked
+- [ ] **MA-01** **Sanskrit reader needed** before word-by-word mantra analysis
+- [ ] **CM-01** Add `claim_type` to every content table
+- [ ] **CM-02** Add `source_quality` and `confidence`
+- [ ] **CM-03** `curation/inbox|approved|rejected`; promote reads `approved/` only
+- [ ] **CM-04** Build snapshots in `content/builds/<date>_<sha>/` with rollback
+- [x] **CM-05** `content_diff.py` fails the build on any content loss
+- [x] **CM-06** `test/content_integrity_test.dart` floors
+- [x] **CM-07** `ARCHITECTURE-GUARDRAILS.md`
+
+## Release gate
+
+- [ ] **RG-01** `content.sqlite` replaced — Ishvarvaani fixture gone
+- [ ] **RG-02** `meta.data_source` no longer says "DEV FIXTURE"
+- [ ] **RG-03** Zero manifest rows with `replace_before_ship: true`
+- [ ] **RG-04** `reference/ishvarvaani-apk/` out of the shipped tree
+- [ ] **RG-05** `build.py --strict` passes — 335 unverified rows today
+- [ ] **RG-06** `SOURCES.md` attribution rendered in About
+- [ ] **RG-07** `indexed_content_version` matches after any content swap
+- [ ] **RG-08** Privacy policy states journal, progress and interests stay on device
+- [ ] **RG-09** **Run the app on a real device** — never yet done
+- [ ] **RG-10** Offline verification with radios off
+- [ ] **RG-11** Fresh install
+- [ ] **RG-12** Upgrade with user data preserved
+- [ ] **RG-13** Interrupted DB extraction recovers
+- [ ] **RG-14** Low storage message, not a crash
+- [ ] **RG-15** Screen sizes: small · normal · large · tablet
+- [ ] **RG-16** Accessibility: font scale · contrast · touch targets · TalkBack
+- [ ] **RG-17** AAB size measured against the budget
+
+---
+
 # Suggested order (advisory, not a phase plan)
 
 Work feature by feature. If you want a sequence, this is the value order:
