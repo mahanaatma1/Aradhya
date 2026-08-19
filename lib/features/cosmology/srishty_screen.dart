@@ -1,4 +1,3 @@
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -8,6 +7,7 @@ import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
 import '../../shared/widgets/source_chip.dart';
+import 'brahmanda_view.dart';
 import 'cosmology_models.dart';
 import 'cosmology_providers.dart';
 
@@ -41,28 +41,17 @@ class _SrishtyScreenState extends ConsumerState<SrishtyScreen> {
 
     return Scaffold(
       body: Container(
+        // Warm, not spacey. The indigo starfield made the one screen about
+        // cosmology look like a screen about astronomy, and it sat wrongly
+        // beside the cream cards on every other surface.
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFF120B26), Color(0xFF241645), Color(0xFF0E0A1C)],
+            colors: [Color(0xFFFDF8F5), Color(0xFFF6EADF), Color(0xFFEFE0D2)],
           ),
         ),
-        child: Stack(
-          children: [
-            // Parallax starfield: deterministic, so the sky does not reshuffle
-            // on every rebuild.
-            Positioned.fill(
-              child: AnimatedBuilder(
-                animation: _scroll,
-                builder: (_, _) => CustomPaint(
-                  painter: _StarfieldPainter(
-                    offset: _scroll.hasClients ? _scroll.offset : 0,
-                  ),
-                ),
-              ),
-            ),
-            SafeArea(
+        child: SafeArea(
               child: Column(
                 children: [
                   _TopBar(hindi: hi),
@@ -83,13 +72,31 @@ class _SrishtyScreenState extends ConsumerState<SrishtyScreen> {
                       builder: (list) => ListView.builder(
                         controller: _scroll,
                         padding: const EdgeInsets.fromLTRB(16, 6, 16, 30),
-                        itemCount: list.length + 1,
+                        itemCount: list.length + 2,
                         itemBuilder: (context, i) {
-                          if (i == list.length) {
+                          // The lokas are a structure, so the structure is
+                          // drawn first and the cards explain what was tapped.
+                          if (i == 0) {
+                            return _track == 'loka'
+                                ? Padding(
+                                    padding:
+                                        const EdgeInsets.only(bottom: 14),
+                                    child: BrahmandaView(
+                                      nodes: list,
+                                      hindi: hi,
+                                      selectedId: _expanded,
+                                      onSelect: (n) => setState(() =>
+                                          _expanded =
+                                              _expanded == n.id ? null : n.id),
+                                    ),
+                                  )
+                                : const SizedBox.shrink();
+                          }
+                          if (i == list.length + 1) {
                             return _TraditionNote(hindi: hi);
                           }
-                          final n = list[i];
-                          final prev = i > 0 ? list[i - 1] : null;
+                          final n = list[i - 1];
+                          final prev = i > 1 ? list[i - 2] : null;
                           return Column(
                             children: [
                               if (_track == 'loka' &&
@@ -98,10 +105,10 @@ class _SrishtyScreenState extends ConsumerState<SrishtyScreen> {
                                 _EarthDivider(hindi: hi),
                               _LadderRow(
                                 node: n,
-                                index: i,
+                                index: i - 1,
                                 total: list.length,
-                                isFirst: i == 0,
-                                isLast: i == list.length - 1,
+                                isFirst: i == 1,
+                                isLast: i == list.length,
                                 track: _track,
                                 child: _NodeCard(
                                   node: n,
@@ -120,8 +127,6 @@ class _SrishtyScreenState extends ConsumerState<SrishtyScreen> {
                   ),
                 ],
               ),
-            ),
-          ],
         ),
       ),
     );
@@ -139,7 +144,7 @@ class _TopBar extends StatelessWidget {
           children: [
             IconButton(
               icon: const Icon(Icons.arrow_back_ios_new_rounded,
-                  color: Color(0xFFE8DFFF), size: 18),
+                  color: Color(0xFF3A2A18), size: 18),
               onPressed: () => Navigator.of(context).maybePop(),
             ),
             Text(
@@ -148,7 +153,7 @@ class _TopBar extends StatelessWidget {
                 fontFamily: AppFonts.display,
                 fontWeight: FontWeight.w700,
                 fontSize: 21,
-                color: Color(0xFFE8DFFF),
+                color: Color(0xFF3A2A18),
               ),
             ),
           ],
@@ -186,12 +191,12 @@ class _TrackTabs extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: selected == t
                           ? AppColors.goldBright.withValues(alpha: 0.22)
-                          : Colors.white.withValues(alpha: 0.07),
+                          : const Color(0xFF3A2A18).withValues(alpha: 0.05),
                       borderRadius: BorderRadius.circular(999),
                       border: Border.all(
                         color: selected == t
                             ? AppColors.goldBright.withValues(alpha: 0.7)
-                            : Colors.white.withValues(alpha: 0.12),
+                            : const Color(0xFF8A6A4F).withValues(alpha: 0.28),
                       ),
                     ),
                     child: Text(
@@ -203,7 +208,7 @@ class _TrackTabs extends StatelessWidget {
                             : FontWeight.w500,
                         color: selected == t
                             ? AppColors.goldBright
-                            : const Color(0xFFE8DFFF)
+                            : const Color(0xFF3A2A18)
                                 .withValues(alpha: 0.75),
                       ),
                     ),
@@ -310,7 +315,7 @@ class _LadderRow extends StatelessWidget {
                         style: const TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w800,
-                            color: Color(0xFF120B26)),
+                            color: Color(0xFF3A2A18)),
                       ),
                     )
                   : null,
@@ -336,7 +341,7 @@ class _RailPainter extends CustomPainter {
     required this.hollow,
   });
 
-  static const _gold = Color(0xFFE6C34A);
+  static const _gold = Color(0xFFC08A2E);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -354,7 +359,7 @@ class _RailPainter extends CustomPainter {
     final r = isEarth ? 8.0 : 5.5;
     if (hollow) {
       canvas.drawCircle(Offset(x, nodeY), r,
-          Paint()..color = const Color(0xFF120B26));
+          Paint()..color = const Color(0xFFFDF8F5));
       canvas.drawCircle(
           Offset(x, nodeY),
           r,
@@ -419,12 +424,12 @@ class _NodeCard extends ConsumerWidget {
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             // Glass over the night sky.
-            color: Colors.white.withValues(alpha: isEarth ? 0.16 : 0.09),
+            color: const Color(0xFF8A6A4F).withValues(alpha: isEarth ? 0.14 : 0.07),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: isEarth
                   ? AppColors.terracottaBright.withValues(alpha: 0.85)
-                  : Colors.white.withValues(alpha: 0.14),
+                  : const Color(0xFF8A6A4F).withValues(alpha: 0.35),
               width: isEarth ? 1.6 : 1,
             ),
           ),
@@ -440,13 +445,13 @@ class _NodeCard extends ConsumerWidget {
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.white.withValues(alpha: 0.12),
+                        color: const Color(0xFF8A6A4F).withValues(alpha: 0.28),
                       ),
                       child: Text('${node.orderNo}',
                           style: const TextStyle(
                               fontSize: 11,
                               fontWeight: FontWeight.w700,
-                              color: Color(0xFFE8DFFF))),
+                              color: Color(0xFF3A2A18))),
                     ),
                   if (track != 'creation') const SizedBox(width: 11),
                   Expanded(
@@ -461,7 +466,7 @@ class _NodeCard extends ConsumerWidget {
                             fontSize: 17,
                             color: isEarth
                                 ? AppColors.goldBright
-                                : const Color(0xFFE8DFFF),
+                                : const Color(0xFF3A2A18),
                           ),
                         ),
                         if (node.durationYears != null)
@@ -498,7 +503,7 @@ class _NodeCard extends ConsumerWidget {
                         ? Icons.expand_less_rounded
                         : Icons.expand_more_rounded,
                     size: 19,
-                    color: const Color(0xFFE8DFFF).withValues(alpha: 0.6),
+                    color: const Color(0xFF3A2A18).withValues(alpha: 0.6),
                   ),
                 ],
               ),
@@ -508,7 +513,7 @@ class _NodeCard extends ConsumerWidget {
                 style: TextStyle(
                   fontSize: 13,
                   height: 1.45,
-                  color: const Color(0xFFE8DFFF).withValues(alpha: 0.82),
+                  color: const Color(0xFF3A2A18).withValues(alpha: 0.82),
                 ),
               ),
               if (expanded) ...[
@@ -519,10 +524,12 @@ class _NodeCard extends ConsumerWidget {
                         fontSize: 13,
                         height: 1.55,
                         color:
-                            const Color(0xFFE8DFFF).withValues(alpha: 0.75),
+                            const Color(0xFF3A2A18).withValues(alpha: 0.75),
                       )),
                 ],
                 const SizedBox(height: 12),
+                _TraditionsDiffer(
+                    attributes: node.attributes, hindi: hindi),
                 SourceChip(
                   hindi: hindi,
                   sourceName: node.sourceName,
@@ -534,6 +541,56 @@ class _NodeCard extends ConsumerWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Where accounts genuinely disagree, both are shown and neither is called a
+/// correction of the other. The Vishnu Purana and the Bhagavata do not order
+/// the Patalas the same way, and pretending otherwise would be tidier and
+/// false.
+class _TraditionsDiffer extends StatelessWidget {
+  final Map<String, dynamic> attributes;
+  final bool hindi;
+  const _TraditionsDiffer({required this.attributes, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final note = attributes['traditions_differ'];
+    if (note is! Map) return const SizedBox.shrink();
+    final text = (hindi ? note['hi'] : note['en']) as String?;
+    if (text == null || text.isEmpty) return const SizedBox.shrink();
+
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(11),
+      decoration: BoxDecoration(
+        color: const Color(0xFF8A6A4F).withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFF8A6A4F).withValues(alpha: 0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.call_split_rounded,
+                  size: 14, color: Color(0xFF8A6A4F)),
+              const SizedBox(width: 6),
+              Text(hindi ? 'परंपराएँ भिन्न हैं' : 'Traditions differ',
+                  style: const TextStyle(
+                      fontSize: 10.5,
+                      letterSpacing: 1,
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xFF8A6A4F))),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Text(text,
+              style: const TextStyle(
+                  fontSize: 12.5, height: 1.45, color: Color(0xFF4A3A22))),
+        ],
       ),
     );
   }
@@ -555,38 +612,9 @@ class _TraditionNote extends StatelessWidget {
           style: TextStyle(
             fontSize: 11.5,
             height: 1.5,
-            color: const Color(0xFFE8DFFF).withValues(alpha: 0.5),
+            color: const Color(0xFF3A2A18).withValues(alpha: 0.5),
           ),
         ),
       );
 }
 
-/// A seeded starfield at three depths, drifting with scroll.
-///
-/// Seeded from a fixed value so the sky is the same every build — a field that
-/// reshuffles on scroll reads as noise rather than as depth.
-class _StarfieldPainter extends CustomPainter {
-  final double offset;
-  const _StarfieldPainter({required this.offset});
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final rnd = math.Random(20260808);
-    const layers = [(40, 0.12, 0.9), (45, 0.28, 1.4), (35, 0.5, 2.0)];
-
-    for (final (count, parallax, radius) in layers) {
-      final paint = Paint()
-        ..color = Colors.white.withValues(alpha: 0.18 + parallax * 0.5);
-      for (var i = 0; i < count; i++) {
-        final x = rnd.nextDouble() * size.width;
-        final baseY = rnd.nextDouble() * size.height;
-        // Wrap vertically so the field never runs out as the user scrolls.
-        final y = (baseY - offset * parallax) % size.height;
-        canvas.drawCircle(Offset(x, y), radius, paint);
-      }
-    }
-  }
-
-  @override
-  bool shouldRepaint(_StarfieldPainter old) => old.offset != offset;
-}
