@@ -34,4 +34,21 @@ void main() {
     expect(MahabharataArcs.arcFor(101), isNull);
     expect(MahabharataArcs.arcFor(118), isNull);
   });
+
+  test('Ramayana kanda order is a single pass, never a repeat', () {
+    // Scenes added in a later batch were numbered after the existing ones, so
+    // the journey ran through all seven kandas and then started again at Bala
+    // Kanda. book_no must never decrease as sequence_no increases.
+    const bookForSequence = <int, int>{
+      1: 1, 9: 1, 10: 2, 15: 2, 16: 3, 19: 3, 20: 4, 22: 4,
+      23: 5, 26: 5, 27: 6, 31: 6, 32: 7,
+    };
+    var highest = 0;
+    for (final seq in bookForSequence.keys.toList()..sort()) {
+      final book = bookForSequence[seq]!;
+      expect(book, greaterThanOrEqualTo(highest),
+          reason: 'kanda goes backwards at sequence $seq');
+      highest = book;
+    }
+  });
 }
