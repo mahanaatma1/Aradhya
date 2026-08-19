@@ -96,13 +96,21 @@ class _SrishtyScreenState extends ConsumerState<SrishtyScreen> {
                                   n.band == 'lower' &&
                                   prev?.band != 'lower')
                                 _EarthDivider(hindi: hi),
-                              _NodeCard(
+                              _LadderRow(
                                 node: n,
-                                hindi: hi,
+                                index: i,
+                                total: list.length,
+                                isFirst: i == 0,
+                                isLast: i == list.length - 1,
                                 track: _track,
-                                expanded: _expanded == n.id,
-                                onTap: () => setState(() =>
-                                    _expanded = _expanded == n.id ? null : n.id),
+                                child: _NodeCard(
+                                  node: n,
+                                  hindi: hi,
+                                  track: _track,
+                                  expanded: _expanded == n.id,
+                                  onTap: () => setState(() => _expanded =
+                                      _expanded == n.id ? null : n.id),
+                                ),
                               ),
                             ],
                           );
@@ -244,6 +252,139 @@ class _EarthDivider extends StatelessWidget {
           ],
         ),
       );
+}
+
+/// One rung of the ladder: the spine on the left, the card on the right.
+///
+/// The fourteen lokas are a descent -- seven worlds above the earth and seven
+/// below it -- and the screen rendered them as a flat list, which described
+/// that structure without ever showing it. The rail makes the shape visible:
+/// a continuous line down the page, a node per world, filled while you are
+/// above the earth and hollow once you are beneath it.
+class _LadderRow extends StatelessWidget {
+  final CosmologyNode node;
+  final int index;
+  final int total;
+  final bool isFirst;
+  final bool isLast;
+  final String track;
+  final Widget child;
+
+  const _LadderRow({
+    required this.node,
+    required this.index,
+    required this.total,
+    required this.isFirst,
+    required this.isLast,
+    required this.track,
+    required this.child,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isEarth = node.slug == 'loka-bhur';
+    final lower = node.band == 'lower';
+    // Creation and time are sequences, not a descent, so they get a plain
+    // numbered spine rather than the above/below reading.
+    final numbered = track != 'loka';
+
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SizedBox(
+            width: 34,
+            child: CustomPaint(
+              painter: _RailPainter(
+                isFirst: isFirst,
+                isLast: isLast,
+                isEarth: isEarth,
+                hollow: lower && !numbered,
+              ),
+              child: numbered
+                  ? Padding(
+                      padding: const EdgeInsets.only(top: 26),
+                      child: Text(
+                        '${index + 1}',
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF120B26)),
+                      ),
+                    )
+                  : null,
+            ),
+          ),
+          Expanded(child: child),
+        ],
+      ),
+    );
+  }
+}
+
+class _RailPainter extends CustomPainter {
+  final bool isFirst;
+  final bool isLast;
+  final bool isEarth;
+  final bool hollow;
+
+  const _RailPainter({
+    required this.isFirst,
+    required this.isLast,
+    required this.isEarth,
+    required this.hollow,
+  });
+
+  static const _gold = Color(0xFFE6C34A);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final x = size.width / 2;
+    const nodeY = 30.0;
+    final line = Paint()
+      ..strokeWidth = 1.4
+      ..color = _gold.withValues(alpha: 0.35);
+
+    if (!isFirst) canvas.drawLine(Offset(x, 0), Offset(x, nodeY), line);
+    if (!isLast) {
+      canvas.drawLine(Offset(x, nodeY), Offset(x, size.height), line);
+    }
+
+    final r = isEarth ? 8.0 : 5.5;
+    if (hollow) {
+      canvas.drawCircle(Offset(x, nodeY), r,
+          Paint()..color = const Color(0xFF120B26));
+      canvas.drawCircle(
+          Offset(x, nodeY),
+          r,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1.5
+            ..color = _gold.withValues(alpha: 0.75));
+    } else {
+      canvas.drawCircle(Offset(x, nodeY), r, Paint()..color = _gold);
+    }
+
+    // The earth gets a ring, because it is the one rung the reader is standing
+    // on and everything above and below is measured from it.
+    if (isEarth) {
+      canvas.drawCircle(
+          Offset(x, nodeY),
+          r + 5,
+          Paint()
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1.2
+            ..color = _gold.withValues(alpha: 0.5));
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _RailPainter o) =>
+      o.isFirst != isFirst ||
+      o.isLast != isLast ||
+      o.isEarth != isEarth ||
+      o.hollow != hollow;
 }
 
 class _NodeCard extends ConsumerWidget {

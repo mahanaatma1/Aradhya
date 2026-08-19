@@ -215,7 +215,7 @@ class _FamilyFilter extends StatelessWidget {
 }
 
 /// The orbital layout: focus at the centre, neighbours arranged by family.
-class _GraphCanvas extends StatelessWidget {
+class _GraphCanvas extends StatefulWidget {
   final Entity focus;
   final List<EntityRelation> relations;
   final bool hindi;
@@ -227,6 +227,40 @@ class _GraphCanvas extends StatelessWidget {
     required this.hindi,
     required this.onTapNeighbour,
   });
+
+  @override
+  State<_GraphCanvas> createState() => _GraphCanvasState();
+}
+
+class _GraphCanvasState extends State<_GraphCanvas> {
+  final _controller = TransformationController();
+
+  /// The canvas is bigger than the screen, so without this the view opens at
+  /// its top-left corner -- which is empty space, with the focus node off
+  /// somewhere below and to the right. Centring is done once per focus.
+  Offset? _centredOn;
+
+  void _centre(Size viewport, Offset centre) {
+    if (_centredOn == centre) return;
+    _centredOn = centre;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      _controller.value = Matrix4.identity()
+        ..translateByDouble(viewport.width / 2 - centre.dx,
+            viewport.height / 2 - centre.dy, 0, 1);
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  Entity get focus => widget.focus;
+  List<EntityRelation> get relations => widget.relations;
+  bool get hindi => widget.hindi;
+  ValueChanged<int> get onTapNeighbour => widget.onTapNeighbour;
 
   /// Where each relation family sits around the focus, in radians.
   /// Lineage above, teaching left, epic right, places below — so the same kind
@@ -301,10 +335,19 @@ class _GraphCanvas extends StatelessWidget {
               centre + Offset(math.cos(angle) * r, math.sin(angle) * r);
         }
 
+        _centre(Size(constraints.maxWidth, constraints.maxHeight), centre);
+
         return InteractiveViewer(
-          minScale: 0.6,
+          transformationController: _controller,
+          // WITHOUT this the viewer forces the child back inside the viewport,
+          // so an oversized canvas is clipped instead of panned -- the graph
+          // appeared cut off and refused to drag. constrained: false lets the
+          // child keep its natural size and the viewer move over it.
+          constrained: false,
+          minScale: 0.4,
           maxScale: 2.6,
-          boundaryMargin: const EdgeInsets.all(120),
+          boundaryMargin: const EdgeInsets.all(400),
+          clipBehavior: Clip.none,
           child: SizedBox(
             width: size.width,
             height: size.height,

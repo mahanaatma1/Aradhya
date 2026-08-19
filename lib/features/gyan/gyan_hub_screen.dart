@@ -7,6 +7,7 @@ import '../../app/theme/app_theme.dart';
 import '../../app/theme/category_colors.dart';
 import '../../core/providers/app_providers.dart';
 import 'gyan_modules.dart';
+import 'gyan_motifs.dart';
 
 /// The home for all Gyan modules.
 ///
@@ -215,7 +216,7 @@ class _Grid extends StatelessWidget {
   }
 }
 
-class _Tile extends StatelessWidget {
+class _Tile extends StatefulWidget {
   final GyanModule module;
   final CategoryColors cats;
   final bool hi;
@@ -226,6 +227,18 @@ class _Tile extends StatelessWidget {
     required this.hi,
     required this.enabled,
   });
+
+  @override
+  State<_Tile> createState() => _TileState();
+}
+
+class _TileState extends State<_Tile> {
+  bool _down = false;
+
+  GyanModule get module => widget.module;
+  CategoryColors get cats => widget.cats;
+  bool get hi => widget.hi;
+  bool get enabled => widget.enabled;
 
   @override
   Widget build(BuildContext context) {
@@ -243,7 +256,18 @@ class _Tile extends StatelessWidget {
           ]);
     final fg = enabled ? const Color(0xFFFFF8EF) : scheme.onSurface;
 
-    return InkWell(
+    // A tile that does not move under the finger feels like a picture of a
+    // button. The press is small on purpose -- enough to acknowledge, not
+    // enough to bounce.
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _down = true),
+      onTapCancel: () => setState(() => _down = false),
+      onTapUp: (_) => setState(() => _down = false),
+      child: AnimatedScale(
+        scale: _down ? 0.965 : 1,
+        duration: const Duration(milliseconds: 110),
+        curve: Curves.easeOut,
+        child: InkWell(
       borderRadius: BorderRadius.circular(20),
       onTap: enabled
           ? () => context.push(module.route)
@@ -276,15 +300,13 @@ class _Tile extends StatelessWidget {
           children: [
             if (enabled)
               Positioned(
-                right: -26,
-                top: -26,
-                child: Container(
-                  width: 96,
-                  height: 96,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.10),
-                    shape: BoxShape.circle,
-                  ),
+                right: -22,
+                bottom: -18,
+                child: GyanMotif(
+                  moduleId: module.id,
+                  color: Colors.white.withValues(alpha: 0.16),
+                  size: 104,
+                  watermark: true,
                 ),
               ),
             Padding(
@@ -300,9 +322,13 @@ class _Tile extends StatelessWidget {
                           .withValues(alpha: enabled ? 0.22 : 0.08),
                       borderRadius: BorderRadius.circular(12),
                     ),
-                    child: Icon(module.icon,
+                    child: Center(
+                      child: GyanMotif(
+                        moduleId: module.id,
                         color: fg.withValues(alpha: enabled ? 1 : 0.55),
-                        size: 21),
+                        size: 23,
+                      ),
+                    ),
                   ),
                   const Spacer(),
                   Text(
@@ -332,6 +358,8 @@ class _Tile extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
         ),
       ),
     );
