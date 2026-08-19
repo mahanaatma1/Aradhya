@@ -11,6 +11,12 @@ set is the Bhagavad Gita section, where he is named but not the subject, so he
 is left alone rather than given a citation that would not survive a reader
 following it.
 
+Never name the translator in the prose. Griffith, Ganguli and Wilson are
+provenance, and every card already shows them in its source chip. Writing
+"Griffith opens on a king" credits a Victorian Englishman with Valmiki's
+choices, means nothing to a devotional reader, and reads worse still in Hindi.
+Name the text -- the Ramayana, the Virata Parva, the Vishnu Purana.
+
 The prose is ours. It is written FROM the public-domain translation, not
 copied out of it, and never from Wikipedia -- CC BY-SA share-alike would
 infect the whole corpus.

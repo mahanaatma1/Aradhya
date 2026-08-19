@@ -36,12 +36,12 @@ NEW = [
   "The Mahabharata, Book 1: Adi Parva: Section CXXXIX",
   [("karna", "protagonist"), ("duryodhana", "protagonist"),
    ("arjuna", "antagonist")],
-  "Ganguli lets the humiliation land without softening it. Adhiratha comes "
+  "The Mahabharata lets the humiliation land without softening it. Adhiratha comes "
   "forward trembling, leaning on a staff, and Karna -- who has just proved "
   "himself the equal of any man there -- bows his head to him in front of the "
   "whole assembly. Duryodhana makes him a king on the spot, and buys a loyalty "
   "that will outlast every argument anyone brings against it.",
-  "गांगुली इस अपमान को बिना कोमल किए दर्ज करते हैं। अधिरथ काँपते हुए, लाठी के "
+  "महाभारत इस अपमान को बिना कोमल किए दर्ज करता है। अधिरथ काँपते हुए, लाठी के "
   "सहारे आगे आते हैं, और कर्ण — जो अभी-अभी सबके समान सिद्ध हुए हैं — समूची सभा "
   "के सामने उनके चरणों में सिर झुका देते हैं। दुर्योधन उसी क्षण उन्हें राजा बना "
   "देते हैं, और ऐसी निष्ठा खरीद लेते हैं जिसे कोई तर्क नहीं तोड़ पाएगा।"),
@@ -124,11 +124,11 @@ NEW = [
   "The Mahabharata, Book 4: Virata Parva: Section XIV",
   [("draupadi", "protagonist"), ("yudhishthira", "protagonist"),
    ("bhima", "protagonist")],
-  "Ganguli notes that Draupadi, herself deserving to be waited upon, passed "
+  "The Virata Parva notes that Draupadi, herself deserving to be waited upon, passed "
   "her days in extreme misery attending on another woman. The Virata Parva is "
   "the quietest book in the epic and the most humiliating, and the war that "
   "follows is easier to understand for having read it.",
-  "गांगुली लिखते हैं कि द्रौपदी, जो स्वयं सेवा के योग्य थीं, दूसरी स्त्री की "
+  "विराट पर्व लिखता है कि द्रौपदी, जो स्वयं सेवा के योग्य थीं, दूसरी स्त्री की "
   "परिचर्या करते हुए अत्यंत कष्ट में दिन बिताती रहीं। विराट पर्व महाकाव्य का "
   "सबसे शांत और सबसे अपमानजनक भाग है — इसे पढ़ने के बाद आगे का युद्ध अधिक "
   "समझ आता है।"),
