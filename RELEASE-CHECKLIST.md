@@ -97,6 +97,27 @@ wrong:
 - [ ] The privacy policy says so
 - [ ] No network permission is required for any feature to work
 
+## 9. Install, upgrade and failure paths
+
+Every one of these needs hardware. None can be verified by `flutter test`.
+
+- [ ] **Offline** — Wi-Fi and data OFF: search, scriptures, panchang, kundli,
+      temples, gyan, journal, sadhana, mandir all work
+- [ ] **Fresh install** — uninstall, install, first launch, DB extraction, home
+- [ ] **Upgrade** — user data survives: journal, japa, habits, bookmarks,
+      reading progress, temple visits, interest signals
+- [ ] **Interrupted extraction** — kill the app mid-copy, reopen, recovers
+      cleanly (the version marker is written last so the copy re-runs)
+- [ ] **Low storage** — a clear "not enough storage" message, never a crash
+- [ ] **Screen sizes** — small, normal, large, tablet. Hindi overflows first
+- [ ] **Accessibility** — font scaling, contrast, touch targets, TalkBack basics
+- [ ] **AAB size** measured against the budget, not just the APK
+
+## 10. Content did not silently shrink
+
+- [ ] `py -m content.tools.content_diff` reports no losses
+- [ ] `flutter test test/content_integrity_test.dart` passes
+
 ---
 
 ## Release gate — the blockers that are not code

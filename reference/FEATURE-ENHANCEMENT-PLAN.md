@@ -12,17 +12,86 @@ This one is the reference for *what each feature needs next*.
 
 ## How to read a feature section
 
-Every feature below has the same seven fields, in the same order.
+Every feature below has the same fields, in the same order.
 
 | Field | Meaning |
 |---|---|
 | **State** | What actually exists today, with counts read from the shipped databases |
 | **Gap** | The specific thing wrong with it, not a wish |
-| **Target** | What "done" means, in numbers where numbers apply |
+| **Target** | What "done" means — **coverage, not raw totals** (see below) |
 | **Data** | Exactly where the content comes from, and under what licence |
 | **Build** | The code work |
+| **Done when** | Acceptance criteria. A feature is not finished until every box is ticked |
 | **Effort** | S = a session · M = several · L = a week-plus of focused work |
 | **Blocked?** | Only present when something outside the code stops it |
+
+### Targets are coverage, not counts
+
+**1,500 poor edges are worse than 500 excellent ones.** Numbers in this
+document are a sense of scale, never a quota to hit. Where a target could be
+gamed by padding, it is written as coverage of a tier instead:
+
+- **P0 entities** (`importance ≤ 2`): 100% have a description, 100% have ≥3
+  verified relations
+- **P1 entities** (`importance = 3`): ≥80% have ≥2 verified relations
+- **P2** (`importance ≥ 4`): skeleton is acceptable
+
+The same applies to festivals, vidya topics and scenarios. **If you have 34
+excellent vidya topics, ship 34.** Do not pad to reach a number in this file.
+
+### Every task is small
+
+Do not hand an agent "implement the Knowledge Graph". Break it:
+
+```
+Feature: Knowledge Graph
+  1 schema      2 importer    3 validation   4 repository
+  5 UI          6 tests       7 device check
+```
+
+Each step reads `ARCHITECTURE-GUARDRAILS.md` first, ends with
+`flutter analyze` + its tests, and reports what changed.
+
+---
+
+## Feature dependency map
+
+Build in dependency order even though the document is organised by feature.
+Nothing below depends on anything to its right.
+
+```
+CONTENT_DB ─┬─ Scriptures ── Reader ──┐
+            ├─ Temples ───────────────┤
+            ├─ Quiz/Riddles/Trivia ───┤
+            └─ Stories/Katha ─────────┤
+                                      ├── Search index ── Search UI
+GYAN_DB ────┬─ Entities ──┬─ Graph    │
+            │             ├─ Family Tree
+            │             ├─ Rishis / Astras / Symbols
+            │             └─ Related edges ── Related Rail ──┘
+            ├─ Narrative ── Ramayana / Mahabharata
+            ├─ Cosmology ── Srishty / Yuga
+            ├─ Festivals ── Festival Explorer (needs Panchang engine)
+            ├─ Dharma / Vidya / QA
+            └─ Paths ── Knowledge Journeys (needs everything above)
+
+USER_DB ────┬─ Journal ── Dharma reflections
+            ├─ Sadhana ── Japa / Breathing / Habits / Mandir
+            ├─ Bookmarks / Reading progress
+            ├─ Temple visits ── Pilgrimage Passport
+            └─ Interest signals ── discovery ordering only
+
+Panchang engine ─── Festivals · Calendar · Panchang screen
+Swiss Ephemeris ─── Kundli · Milan · Rashifal
+```
+
+**Consequences worth stating:**
+- Entities must be enriched **before** Graph, Family Tree, Rishis, Astras and
+  Symbols are worth polishing — the screens are ahead of the data
+- Knowledge Journeys is last: its steps point at everything else
+- Pilgrimage Passport needs only `USER_DB` + existing temple rows, which is why
+  it is cheap
+- Anything touching `CONTENT_DB` forces a `GYAN_DB` rebuild
 
 **Status key:** 🟢 solid · 🟡 works, needs depth · 🟠 foundation only ·
 🔴 not built · ⚠️ release risk
@@ -88,6 +157,90 @@ This table governs every "Data" field in this document. It merges our existing
 | **vedabase.io** | 🔴 never | Nothing | © BBT, actively enforced |
 | **drikpanchang.com** | 🔴 never | Nothing | Proprietary; we compute panchang ourselves |
 
+### Claim classification
+
+Not every statement in this app is the same kind of statement, and flattening
+them is how a devotional app quietly becomes untrustworthy. `props.nature` on
+astras (mythic / textual / symbolic) already does this in one place. Generalise
+it to a column on every content table:
+
+```sql
+claim_type TEXT CHECK (claim_type IN (
+  'traditional',        -- what the tradition holds
+  'textual',            -- what a named text states
+  'historical',         -- what historians accept
+  'archaeological',     -- what excavation supports
+  'modern_interpretation',
+  'scientific'          -- what evidence establishes
+))
+```
+
+So Krishna carries several claims rather than one blurred one:
+
+| claim_type | Statement |
+|---|---|
+| traditional | An avatar of Vishnu |
+| textual | Appears in the Mahabharata and the Bhagavata Purana |
+| historical | Historicity is disputed |
+
+**This is the single change that would most raise the app's credibility.**
+
+### Confidence model
+
+`verification_status` (verified / unverified / disputed) is not enough on its
+own. The full set per row:
+
+| Field | Values |
+|---|---|
+| `verification_status` | verified · unverified · disputed |
+| `source_quality` | primary · secondary · reference |
+| `claim_type` | as above |
+| `confidence` | high · medium · low |
+| `last_verified_at` | ISO date |
+| `verified_by` | initials |
+
+A Wikidata skeleton is `unverified / reference / traditional / low`. A
+hand-checked passage from Ganguli is `verified / primary / textual / high`.
+`--strict` already refuses unverified rows; this makes *why* legible.
+
+### Editorial workflow — enforced by folders
+
+AI output must never reach the database without a human in between. Make the
+gate physical rather than procedural:
+
+```
+content/curation/
+  inbox/       AI-generated candidates. NEVER built from.
+  approved/    a human read it against the cited source. Built from.
+  rejected/    kept, with a reason, so the same bad row is not regenerated
+```
+
+`extract.py --promote` reads `approved/` only. `validate.py` errors if anything
+in `inbox/` is referenced by a build.
+
+### Build snapshots and rollback
+
+Every content build writes a retained directory:
+
+```
+content/builds/2026-08-19_<sha>/
+  gyan.sqlite  report.html  manifest.json  checksums.json  content_snapshot.json
+```
+
+`current → previous` symlink, so a bad build is one command to undo.
+
+### Content diff — **built, and enforcing**
+
+`content/tools/content_diff.py` compares the build against the last trusted
+snapshot across 22 separate measures and **fails on any decrease**. Counts
+alone would not catch it: a build that adds 30 entities while dropping 22
+descriptions still looks like growth in a total. It names the missing slugs.
+
+This is the guard for the failure that already happened. Verified against a
+simulated loss: it reported `-3 entities_with_prose` and named the deleted
+entity. `build.py` runs it automatically and `--strict` refuses to ship a
+release build that lost content.
+
 **The pipeline rule, unchanged:** structure from Wikidata (CC0) → substance
 from public-domain translations → *we* write the prose → cited → human
 verified. AI rewrites and translates sourced material. AI never invents a
@@ -131,6 +284,16 @@ see [Mantra Analyzer](#mantra-analyzer) for the same problem in miniature.
 - "Continue reading" already exists; add per-chapter progress rings
 - Fix: word-meaning tab renders an honest empty state until data exists
 
+**Done when**
+- [ ] A verse screen shows Meaning / Explanation / Word meaning / Context tabs
+- [ ] Word meaning renders an honest empty state where no data exists
+- [ ] `RelatedRail` appears at the bottom of the section reader
+- [ ] Tapping a related entity opens the correct screen, not the error page
+- [ ] Bookmark and note round-trip through `USER_DB` and survive restart
+- [ ] Hindi renders without overflow at the largest system font scale
+- [ ] No network call on any path
+- [ ] `flutter analyze` clean · reader tests pass · device check done
+
 **Effort** M (L if word-meaning authoring is included)
 
 ---
@@ -153,6 +316,14 @@ infrastructure in the app.
 - Typo tolerance: one-edit-distance fallback when a query returns nothing
 - Keep it 100% offline. **No voice search** — it needs Google speech services
   and would break the offline guarantee for one convenience
+
+**Done when**
+- [ ] Results group by kind with per-kind counts
+- [ ] `krishna`, `kṛṣṇa` and `कृष्ण` return the same set
+- [ ] A query with no match offers a one-edit-distance suggestion
+- [ ] Every result taps through to a real screen
+- [ ] Still works with the network off
+- [ ] `test/search_fold_test.dart` and `search_repository_test.dart` pass
 
 **Effort** S
 
@@ -213,6 +384,16 @@ relations and a real description. 1,200+ relations.
 - Group the rail beneath the graph by family with headers
 - Empty state when an entity has no edges — say so rather than showing a dot
 
+**Done when**
+- [ ] 100% of P0 entities have a description and ≥3 verified relations
+- [ ] ≥80% of P1 entities have ≥2 verified relations
+- [ ] An entity with zero relations shows a written empty state, not a bare node
+- [ ] An entity with >20 relations groups them by family
+- [ ] Pan, zoom and re-centre all work; back navigation returns correctly
+- [ ] Hindi names render correctly in nodes and edge labels
+- [ ] No network call
+- [ ] Graph tests pass · **device check for scroll/pan performance**
+
 **Effort** L (mostly content)
 
 ---
@@ -238,6 +419,14 @@ Already fetched: `vp101`, `vp102`, `vp108` (Book IV chapters VIII, IX, XV).
 - `tradition` segmented control when edges disagree — the data model already
   carries it and no screen exposes it
 - Long-press re-root works; add a breadcrumb so the walk is reversible
+
+**Done when**
+- [ ] Relationship-type filter: Family · Lineage · Guru/Disciple · Dynasty
+- [ ] Tree renders to depth 3 with collapse past 4 children
+- [ ] `tradition` selector appears when edges disagree, and says which is shown
+- [ ] Re-root then back returns to the previous root
+- [ ] A figure with no lineage shows a written empty state
+- [ ] Family tree tests pass
 
 **Effort** M
 
@@ -438,6 +627,13 @@ content sitting unused.
 **Build** Second section on the stories screen or a merged list with a
 category chip. Then index them (they already are) and add `RelatedRail`.
 
+**Done when**
+- [ ] All 57 kathas are reachable from the UI
+- [ ] Each katha carries a category and is entity-linked
+- [ ] Search returns kathas
+- [ ] `RelatedRail` on the katha detail screen
+- [ ] `content_diff` shows no loss of stories
+
 **Effort** S · **Best value-per-hour in this document.**
 
 ---
@@ -515,6 +711,14 @@ Never let a user pay real money for a virtual offering.
 are a curation job over existing rows — no new content needed.
 
 **Build** New screen; the write path already exists.
+
+**Done when**
+- [ ] Visited count, per-temple stamp with date, note and rating
+- [ ] Collections render: Char Dham · 12 Jyotirlinga · Shakti Peetha
+- [ ] Marking a visit writes `temple_visits` and survives restart and upgrade
+- [ ] Works entirely offline
+- [ ] No sharing, no upload
+- [ ] Passport tests pass
 
 **Effort** M · **Highest-value unbuilt feature**, because the data is already
 there.
@@ -598,6 +802,16 @@ rules. Story link → narrative node. Puja vidhi link.
 the South-Indian Porutham spec reviewed earlier: **Rajju as a critical flag**
 (one factor that must never be averaged away), **birth-time accuracy** with a
 boundary-risk check, and **partial ≠ matched** in the score display.
+
+**Done when**
+- [ ] The Milan form asks explicitly which side is the bride and which the groom
+- [ ] Swapping the two produces the documented directional result, not a silent
+      change nobody can explain
+- [ ] A plain-language summary sits above the technical breakdown
+- [ ] Partial matches are shown as partial, never folded into the total
+- [ ] A critical traditional flag is surfaced, not averaged away
+- [ ] Methodology and its limits are stated on the result screen
+- [ ] `test/astro_*` pass · **device check** (sweph is degraded under test)
 
 **Effort** M
 
@@ -838,6 +1052,32 @@ Nothing ships until all of these are green. Detail in `RELEASE-CHECKLIST.md`.
 | RG-07 | `indexed_content_version` matches after any content swap | 🟢 |
 | RG-08 | Privacy policy states journal/progress/interests stay on device | 🔴 |
 | **RG-09** | **Run the app on a real device.** Nothing in this repo has ever been executed on hardware. The gzip DB inflate path carries 16 MB and has only run under `flutter test` | 🔴 |
+| RG-10 | **Offline verification.** Wi-Fi and mobile data OFF, then exercise search, scriptures, panchang, kundli, temples, gyan, journal, sadhana, mandir. Nothing essential may fail | 🔴 |
+| RG-11 | **Fresh install.** Uninstall → install → first launch → DB extraction → home. Not just upgrade | 🔴 |
+| RG-12 | **Upgrade.** Old version → new version with `USER_DB` preserved: journal, japa, habits, bookmarks, reading progress, temple visits, interests | 🔴 |
+| RG-13 | **Interrupted DB install.** Kill the app during extraction, reopen, must recover. The version marker is written last precisely so a crash re-runs the copy cleanly — verify that actually holds | 🔴 |
+| RG-14 | **Low storage.** With insufficient free space the app must say "not enough storage", never crash mid-extraction | 🔴 |
+| RG-15 | **Screen sizes.** Small phone · normal · large · tablet. Hindi labels are the first thing to overflow | 🔴 |
+| RG-16 | **Accessibility.** System font scaling, contrast, touch-target size, Hindi text, basic TalkBack | 🔴 |
+| RG-17 | **Size budget.** Measure the **AAB**, not just the APK. Databases ship gzipped (54.7 MB → 14.2 MB). Set a ceiling and fail CI above it | 🔴 |
+
+---
+
+## Size budget
+
+Set now, not at the end. Measure the **Android App Bundle**, not the APK.
+
+| Component | Budget | Today |
+|---|---|---|
+| `CONTENT_DB` gzipped | ≤ 12 MB | 10.2 MB |
+| `GYAN_DB` gzipped | ≤ 6 MB | 4.2 MB |
+| Images | ≤ 12 MB | 14 MB ⚠️ over |
+| Base app | ≤ 25 MB | — |
+| **Download total** | **≤ 55 MB** | ~45 MB + app |
+
+On-disk after first launch is roughly double the DB figures, since both
+databases are inflated into the documents directory. **RG-14 exists because of
+this**: extraction needs the compressed asset and the inflated file at once.
 
 ---
 

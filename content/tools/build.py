@@ -797,6 +797,18 @@ def main(argv: list[str] | None = None) -> int:
               "search_docs_count", "related_edges_count", "unverified_count"):
         print(f"  {k:<24} {meta.get(k, '0')}")
     print(f"  dart stamp               {'updated' if stamped else 'NOT FOUND'}")
+
+    # Compare against the last build we trusted. A build that adds rows while
+    # quietly dropping descriptions still looks like growth in a total, so
+    # every measure is checked on its own and any decrease is reported.
+    try:
+        from content.tools import content_diff
+        print()
+        if content_diff.main([]) != 0 and strict:
+            print("refusing to ship a release build that lost content")
+            return 1
+    except Exception as e:                                   # noqa: BLE001
+        print(f"  content diff skipped ({type(e).__name__})")
     print(f"  SOURCES.md               regenerated")
     return 0
 
