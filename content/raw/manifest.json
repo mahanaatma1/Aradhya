@@ -226,6 +226,114 @@
  },
  {
   "source_slug": "ganguli-mahabharata",
+  "path": "m01/m01140.htm",
+  "label": "The Mahabharata, Book 1: Adi Parva: Sambhava Parva: Secti...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m01_m01140.txt",
+  "chars": 4048,
+  "sha256": "7cb86cb376b256c2cbf3d85fbbd5b4f94609e6eb6f060d82e7a305b845db22ba"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m01/m01148.htm",
+  "label": "The Mahabharata, Book 1: Adi Parva: Jatugriha Parva: Sect...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m01_m01148.txt",
+  "chars": 5795,
+  "sha256": "0309df696ebd276b72e62011617e1826cbf3747a69752f3839d0df279312cb84"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m01/m01225.htm",
+  "label": "The Mahabharata, Book 1: Adi Parva: Khandava-daha Parva: ...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m01_m01225.txt",
+  "chars": 5606,
+  "sha256": "cb7baa410bc9317f729771b747d41ca59741020861d53f9d8dca4de18b957386"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m02/m02042.htm",
+  "label": "The Mahabharata, Book 2: Sabha Parva: Sisupala-badha Parv...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m02_m02042.txt",
+  "chars": 3700,
+  "sha256": "e7ab3a89d1464495824a459663566d5858b1e0c0cdaceba9bac4f6ef9794e4be"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m03/m03011.htm",
+  "label": "The Mahabharata, Book 3: Vana Parva: Kirmirabadha Parva: ...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m03_m03011.txt",
+  "chars": 11167,
+  "sha256": "c70d20378d98b361ea38f0ffaacdd3f57c5ae425589056076483d9c15cb4acab"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m04/m04014.htm",
+  "label": "The Mahabharata, Book 4: Virata Parva: Kichaka-badha Parv...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m04_m04014.txt",
+  "chars": 9489,
+  "sha256": "2a798008249778bc73520a08897c2cc80ce3a94310d2e5bf4673452ddcd72f35"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m04/m04023.htm",
+  "label": "The Mahabharata, Book 4: Virata Parva: Kichaka-badha Parv...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m04_m04023.txt",
+  "chars": 5416,
+  "sha256": "18f02bbbdb1a8a6bcfd6802c90dfdb659f75cb429aa6442c4f50b968588aeb5e"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m09/m09032.htm",
+  "label": "The Mahabharata, Book 9: Shalya Parva: Section 32",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m09_m09032.txt",
+  "chars": 10834,
+  "sha256": "7207738b18abffe8b9edb5106403b8895459e898fb9fed2d4c6c18092853eec5"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m09/m09058.htm",
+  "label": "The Mahabharata, Book 9: Shalya Parva: Section 58",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m09_m09058.txt",
+  "chars": 9225,
+  "sha256": "033b21cec5360458fbe684b4a3e28ce5f8f09f6d273b4c4b2f7db84365eed739"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m11/m11016.htm",
+  "label": "The Mahabharata, Book 11: Stri Parva: Stri-vilapa-parva: ...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m11_m11016.txt",
+  "chars": 4960,
+  "sha256": "78dfecee5f9098a93a6c589c01ad453a8b45c9a82e183dd1ec7f95bd88e0c3cf"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m16/m16004.htm",
+  "label": "The Mahabharata, Book 16: Mausala Parva: Section 4",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m16_m16004.txt",
+  "chars": 6224,
+  "sha256": "495d7d62a590988cf5bf2668cbe98f730d387500884ad17a3ccb1e962547695d"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m17/m17003.htm",
+  "label": "The Mahabharata, Book 17: Mahaprasthanika Parva: Section 3",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m17_m17003.txt",
+  "chars": 6939,
+  "sha256": "8df6f8bd419e178edeb173e7a1126f2feef29751a0ea07b352f5b0d7978d96f0"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
   "path": "m08/m08090.htm",
   "label": "The Mahabharata, Book 8: Karna Parva: Section 90",
   "label_verified": true,

@@ -146,11 +146,14 @@ class MahabharataArcs {
   MahabharataArcs._();
 
   /// (labelEn, labelHi, firstSequence, lastSequence)
+  // Ranges follow narrative_nodes.sequence_no and MUST be updated whenever
+  // scenes are inserted -- they were written for a twenty-scene path and
+  // silently mislabelled every arc once it grew to twenty-nine.
   static const arcs = <(String, String, int, int)>[
-    ('The House Divided', 'विभाजित कुल', 1, 4),
-    ('The Dice and the Exile', 'द्यूत और वनवास', 5, 9),
-    ('The War', 'युद्ध', 10, 16),
-    ('After', 'पश्चात्', 17, 20),
+    ('The House Divided', 'विभाजित कुल', 1, 7),
+    ('The Dice and the Exile', 'द्यूत और वनवास', 8, 16),
+    ('The War', 'युद्ध', 17, 24),
+    ('After', 'पश्चात्', 25, 40),
   ];
 
   static (String, String)? arcFor(int seq) {
