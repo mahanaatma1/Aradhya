@@ -118,12 +118,29 @@ class PersonMilan {
   });
 }
 
+/// Which traditional role a side is entered as.
+///
+/// This is NOT a statement about anyone's gender. Ashtakoot is a directional
+/// calculation: Varna compares the groom's rank against the bride's and is
+/// asymmetric, so the two sides are not interchangeable and the app has to
+/// know which is which. Asking for a role is asking which side of a
+/// traditional formula to place each chart on.
+enum MilanRole { groom, bride }
+
 class MilanResult {
   final PersonMilan a;
   final PersonMilan b;
   final List<KootScore> koots;
   final double total; // out of 36
-  const MilanResult(this.a, this.b, this.koots, this.total);
+  /// Which role side [a] was entered as. Carried through so the result screen
+  /// can label the two charts rather than calling them Side 1 and Side 2.
+  final MilanRole roleA;
+
+  const MilanResult(this.a, this.b, this.koots, this.total,
+      {this.roleA = MilanRole.groom});
+
+  PersonMilan get groom => roleA == MilanRole.groom ? a : b;
+  PersonMilan get bride => roleA == MilanRole.groom ? b : a;
 
   bool get manglikMismatch => a.manglik != b.manglik;
   KootScore koot(String key) => koots.firstWhere((k) => k.key == key);
@@ -198,18 +215,31 @@ PersonMilan _person(String name, BirthChart c) {
   );
 }
 
-/// Full Ashtakoot match. Side A is treated as the groom for the (mildly
-/// direction-sensitive) Varna and Tara koots.
+/// Full Ashtakoot match.
+///
+/// [roleA] says which traditional role the first chart occupies. It used to be
+/// assumed to be the groom and never asked for, while the input screen labelled
+/// the two sides "Side 1" and "Side 2" -- so entering the same couple in the
+/// other order could change the Varna point with nothing on screen explaining
+/// why. Varna is asymmetric by construction (`boyRank >= girlRank`), so the
+/// direction is part of the calculation, not a presentation detail.
 MilanResult computeMilan(
-    String nameA, BirthChart chartA, String nameB, BirthChart chartB) {
+    String nameA, BirthChart chartA, String nameB, BirthChart chartB,
+    {MilanRole roleA = MilanRole.groom}) {
   final a = _person(nameA, chartA);
   final b = _person(nameB, chartB);
+  // Varna and Tara read groom-first, so hand them the charts in that order
+  // regardless of which side the user filled in first.
+  final groom = roleA == MilanRole.groom ? a : b;
+  final bride = roleA == MilanRole.groom ? b : a;
 
   final koots = <KootScore>[
-    KootScore('varna', 'Varna', _varna(a.varnaRank, b.varnaRank), 1),
+    KootScore('varna', 'Varna',
+        _varna(groom.varnaRank, bride.varnaRank), 1),
     KootScore('vashya', 'Vashya', _vashya(a.rashi, b.rashi), 2),
     KootScore('tara', 'Tara',
-        _taraOne(a.nakshatra, b.nakshatra) + _taraOne(b.nakshatra, a.nakshatra), 3),
+        _taraOne(groom.nakshatra, bride.nakshatra) +
+            _taraOne(bride.nakshatra, groom.nakshatra), 3),
     KootScore('yoni', 'Yoni', _yoni(a.nakshatra, b.nakshatra), 4),
     KootScore('maitri', 'Graha Maitri', _grahaMaitri(a.rashi, b.rashi), 5),
     KootScore('gana', 'Gana', _gana(a.gana, b.gana), 6),
@@ -217,5 +247,5 @@ MilanResult computeMilan(
     KootScore('nadi', 'Nadi', _nadi(a.nakshatra, b.nakshatra), 8),
   ];
   final total = koots.fold<double>(0, (s, k) => s + k.got);
-  return MilanResult(a, b, koots, total);
+  return MilanResult(a, b, koots, total, roleA: roleA);
 }

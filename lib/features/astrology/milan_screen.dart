@@ -40,6 +40,7 @@ class _SideInput {
 
 class _MilanScreenState extends ConsumerState<MilanScreen> {
   late bool _useMine;
+  MilanRole _roleA = MilanRole.groom;
   final _side1 = _SideInput();
   final _side2 = _SideInput();
 
@@ -83,8 +84,9 @@ class _MilanScreenState extends ConsumerState<MilanScreen> {
       nameA = _side1.name.text.trim();
       chartA = _chartFrom(_side1);
     }
-    final result =
-        computeMilan(nameA, chartA, _side2.name.text.trim(), _chartFrom(_side2));
+    final result = computeMilan(
+        nameA, chartA, _side2.name.text.trim(), _chartFrom(_side2),
+        roleA: _roleA);
     context.push('/astrology/milan/result', extra: result);
   }
 
@@ -152,9 +154,22 @@ class _MilanScreenState extends ConsumerState<MilanScreen> {
             ),
           if (mine != null) const SizedBox(height: 16),
 
+          // Ashtakoot is directional -- Varna compares groom against bride --
+          // so the app has to know which chart sits on which side of the
+          // formula. Labelling them "Side 1" and "Side 2" meant entering the
+          // same couple in the other order could change the score silently.
+          _RoleSelector(
+            roleA: _roleA,
+            hindi: hi,
+            onChanged: (r) => setState(() => _roleA = r),
+          ),
+          const SizedBox(height: 14),
+
           // Side 1
           _SideCard(
-            label: hi ? 'पक्ष 1' : 'Side 1',
+            label: _roleA == MilanRole.groom
+                ? (hi ? 'वर' : 'Groom')
+                : (hi ? 'वधू' : 'Bride'),
             hi: hi,
             accent: scheme.primary,
             fromKundli: _useMine && mine != null,
@@ -189,7 +204,9 @@ class _MilanScreenState extends ConsumerState<MilanScreen> {
 
           // Side 2
           _SideCard(
-            label: hi ? 'पक्ष 2' : 'Side 2',
+            label: _roleA == MilanRole.groom
+                ? (hi ? 'वधू' : 'Bride')
+                : (hi ? 'वर' : 'Groom'),
             hi: hi,
             accent: scheme.primary,
             fromKundli: false,
@@ -230,6 +247,67 @@ class _MilanScreenState extends ConsumerState<MilanScreen> {
     );
   }
 
+}
+
+/// Which side is which.
+///
+/// Worth being careful about the wording: this asks which side of a
+/// traditional formula each chart sits on, not what anyone's gender is.
+/// Ashtakoot's Varna koot compares the groom's rank against the bride's and
+/// is asymmetric, so the calculation genuinely needs the direction.
+class _RoleSelector extends StatelessWidget {
+  final MilanRole roleA;
+  final bool hindi;
+  final ValueChanged<MilanRole> onChanged;
+
+  const _RoleSelector({
+    required this.roleA,
+    required this.hindi,
+    required this.onChanged,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          hindi ? 'पहला पक्ष कौन है?' : 'Which role is the first chart?',
+          style: TextStyle(
+              fontSize: 12.5,
+              fontWeight: FontWeight.w600,
+              color: scheme.onSurface.withValues(alpha: 0.75)),
+        ),
+        const SizedBox(height: 8),
+        SegmentedButton<MilanRole>(
+          segments: [
+            ButtonSegment(
+                value: MilanRole.groom,
+                label: Text(hindi ? 'वर' : 'Groom'),
+                icon: const Icon(Icons.person_rounded, size: 16)),
+            ButtonSegment(
+                value: MilanRole.bride,
+                label: Text(hindi ? 'वधू' : 'Bride'),
+                icon: const Icon(Icons.person_outline_rounded, size: 16)),
+          ],
+          selected: {roleA},
+          onSelectionChanged: (s) => onChanged(s.first),
+          showSelectedIcon: false,
+        ),
+        const SizedBox(height: 6),
+        Text(
+          hindi
+              ? 'अष्टकूट में वर्ण कूट वर और वधू की तुलना एक दिशा में करता है, इसलिए क्रम गणना का अंग है।'
+              : 'In Ashtakoot the Varna koot compares groom against bride in one direction, so the order is part of the calculation.',
+          style: TextStyle(
+              fontSize: 11,
+              height: 1.4,
+              color: scheme.onSurface.withValues(alpha: 0.5)),
+        ),
+      ],
+    );
+  }
 }
 
 class _SideCard extends StatelessWidget {

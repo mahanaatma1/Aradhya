@@ -140,31 +140,57 @@ class _MilanResultScreenState extends ConsumerState<MilanResultScreen> {
     );
   }
 
+  /// Role labels under the names.
+  ///
+  /// Varna and Tara are computed groom-first, so which chart held which role
+  /// changes the score. Showing it means a reader can tell whether the result
+  /// they are looking at matches the couple they entered.
+  Widget _roleLabel(String text) => Text(
+        text,
+        style: TextStyle(
+            fontSize: 10.5,
+            letterSpacing: 1.2,
+            fontWeight: FontWeight.w700,
+            color: _cream.withValues(alpha: 0.65)),
+      );
+
   Widget _names() => Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Flexible(
-            child: Text(r.a.name,
-                textAlign: TextAlign.right,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                    fontFamily: AppFonts.display,
-                    color: _cream,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(r.a.name,
+                    textAlign: TextAlign.right,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontFamily: AppFonts.display,
+                        color: _cream,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600)),
+                _roleLabel(r.roleA == MilanRole.groom ? 'GROOM' : 'BRIDE'),
+              ],
+            ),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 12),
             child: Icon(Icons.favorite_rounded, color: _gold, size: 20),
           ),
           Flexible(
-            child: Text(r.b.name,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
-                    fontFamily: AppFonts.display,
-                    color: _cream,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(r.b.name,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        fontFamily: AppFonts.display,
+                        color: _cream,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600)),
+                _roleLabel(r.roleA == MilanRole.groom ? 'BRIDE' : 'GROOM'),
+              ],
+            ),
           ),
         ],
       );

@@ -1094,12 +1094,12 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 | Knowledge system | 4 | 27 |
 | Narrative | 0 | 8 |
 | Practice & personal | 0 | 12 |
-| Calendar & astrology | 0 | 13 |
+| Calendar & astrology | 1 | 13 |
 | Discovery & play | 0 | 11 |
 | Temples | 0 | 9 |
 | Cross-cutting | 3 | 16 |
 | Release gate | 0 | 17 |
-| **Total** | **14** | **130** |
+| **Total** | **15** | **130** |
 
 ## Quick wins — do these first
 
@@ -1192,7 +1192,7 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date today
 - [ ] **FE-03** Festival to story-node link
 - [ ] **FE-04** Festival to puja vidhi link
-- [ ] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
+- [x] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
 - [ ] **KM-02** Plain-language summary above the technical breakdown
 - [ ] **KM-03** Partial matches shown as partial, never folded into the total
 - [ ] **KM-04** A critical traditional flag is surfaced, not averaged away
