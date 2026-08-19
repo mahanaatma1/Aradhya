@@ -45,6 +45,8 @@
 /mantras
 /onboarding
 /panchang
+/passport
+/passport/:tag
 /personality
 /puja
 /puja-detail

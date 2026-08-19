@@ -107,6 +107,20 @@ class ProfileScreen extends ConsumerWidget {
           Card(
             clipBehavior: Clip.antiAlias,
             child: ListTile(
+              leading: Icon(Icons.temple_hindu_rounded, color: scheme.primary),
+              title: Text(hi ? 'मेरी यात्रा' : 'My Yatra'),
+              subtitle: Text(hi
+                  ? 'दर्शन किए मंदिर, संग्रह और आपकी टिप्पणियाँ'
+                  : 'Temples visited, collections, and your own notes'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push('/passport'),
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
               leading: Icon(Icons.route_rounded, color: scheme.primary),
               title: Text(hi ? 'ज्ञान यात्राएँ' : 'Knowledge Journeys'),
               subtitle: Text(hi

@@ -90,6 +90,49 @@ class _TemplesScreenState extends ConsumerState<TemplesScreen> {
                   hi: hi,
                   onChanged: (v) => setState(() => _query = v),
                 )),
+                // The passport reads the same visit records this list writes,
+                // so it belongs next to the visited filter rather than buried
+                // in the You tab alone.
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                    child: InkWell(
+                      borderRadius: BorderRadius.circular(12),
+                      onTap: () => context.push('/passport'),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 12, vertical: 9),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFC08A2E).withValues(alpha: 0.10),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                              color: const Color(0xFFC08A2E)
+                                  .withValues(alpha: 0.35)),
+                        ),
+                        child: Row(
+                          children: [
+                            const Icon(Icons.temple_hindu_rounded,
+                                size: 17, color: Color(0xFF8A6A4F)),
+                            const SizedBox(width: 9),
+                            Expanded(
+                              child: Text(
+                                hi
+                                    ? 'मेरी यात्रा — दर्शन किए मंदिर और संग्रह'
+                                    : 'My Yatra — visits and collections',
+                                style: const TextStyle(
+                                    fontSize: 12.5,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color(0xFF8A6A4F)),
+                              ),
+                            ),
+                            const Icon(Icons.chevron_right_rounded,
+                                size: 18, color: Color(0xFF8A6A4F)),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 SliverToBoxAdapter(
                   child: _FilterBar(
                     hi: hi,

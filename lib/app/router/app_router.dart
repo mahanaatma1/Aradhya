@@ -65,6 +65,8 @@ import '../../features/stories/story_models.dart';
 import '../../features/stories/story_reader_screen.dart';
 import '../../features/temples/temple_detail_screen.dart';
 import '../../features/temples/temple_models.dart';
+import '../../features/temples/collection_screen.dart';
+import '../../features/temples/passport_screen.dart';
 import '../../features/temples/temples_screen.dart';
 import '../shell/nav_scaffold.dart';
 
@@ -238,6 +240,21 @@ final appRouter = GoRouter(
           path: 'play/:scenarioId',
           builder: (c, s) =>
               DharmaScenarioScreen(scenarioId: _intParam(s, 'scenarioId')),
+        ),
+      ],
+    ),
+
+    // ---- Pilgrimage Passport ----
+    // Reads temple_visits, which the app has been writing since Phase 0 with
+    // nowhere to show it.
+    GoRoute(
+      path: '/passport',
+      builder: (c, s) => const PassportScreen(),
+      routes: [
+        GoRoute(
+          path: ':tag',
+          builder: (c, s) =>
+              CollectionScreen(tag: s.pathParameters['tag'] ?? ''),
         ),
       ],
     ),

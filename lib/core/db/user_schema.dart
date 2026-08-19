@@ -18,7 +18,15 @@
 /// Those are mirrored here for history, not moved.
 library;
 
-const int kUserSchemaVersion = 1;
+const int kUserSchemaVersion = 2;
+
+/// v1 -> v2: the Pilgrimage Passport records how a visit felt, not only that
+/// it happened. Purely additive -- ALTER TABLE ADD COLUMN keeps every existing
+/// row and its note intact, which matters because this data exists nowhere
+/// else and a user who loses a temple note has lost it permanently.
+const List<String> kUserSchemaV2 = [
+  'ALTER TABLE temple_visits ADD COLUMN rating INTEGER',
+];
 
 /// Executed in order on create. Each statement is separate so `Database.execute`
 /// can run them one at a time (sqflite does not accept multi-statement SQL).
@@ -125,7 +133,8 @@ const List<String> kUserSchemaV1 = <String>[
   CREATE TABLE temple_visits (
     temple_id  INTEGER PRIMARY KEY,
     visited_at INTEGER NOT NULL,
-    note       TEXT
+    note       TEXT,
+    rating     INTEGER          -- 1..5, optional; added in v2
   )''',
 
   // -------------------------------------------------------- currency ledger

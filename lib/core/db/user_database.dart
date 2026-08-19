@@ -40,8 +40,19 @@ class UserDatabase {
         }
       },
       onUpgrade: (db, from, to) async {
-        // v1 is the first version; future migrations append here.
-        // Never drop a user table — this data has no backup anywhere.
+        // Never drop a user table and never rewrite a row: this data has no
+        // backup anywhere. Migrations are additive only, applied in order, and
+        // each is guarded so a re-run cannot fail the open.
+        if (from < 2) {
+          for (final stmt in kUserSchemaV2) {
+            try {
+              await db.execute(stmt);
+            } on DatabaseException {
+              // A column that already exists is not worth blocking the app
+              // over: it means a partial upgrade has already run.
+            }
+          }
+        }
       },
     );
 

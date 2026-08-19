@@ -8,6 +8,7 @@ import '../../shared/widgets/source_chip.dart';
 import '../related/related_rail.dart';
 import 'temple_map.dart';
 import 'temple_models.dart';
+import 'visit_sheet.dart';
 import 'temple_style.dart';
 
 /// One anchored section of the detail page.
@@ -122,6 +123,21 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
                         color: scheme.secondary,
                         onTap: () => _openMap(context, t),
                       ),
+                    // A visit is worth more than a tick. Once marked, offer
+                    // the note and rating the passport can show.
+                    if (visited) ...[
+                      const SizedBox(height: 10),
+                      OutlinedButton.icon(
+                        onPressed: () => showVisitSheet(context, ref, t.id, hi),
+                        icon: const Icon(Icons.edit_note_rounded, size: 18),
+                        label: Text(hi
+                            ? 'यात्रा का विवरण जोड़ें'
+                            : 'Add a note to this visit'),
+                        style: OutlinedButton.styleFrom(
+                          minimumSize: const Size.fromHeight(46),
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               ),

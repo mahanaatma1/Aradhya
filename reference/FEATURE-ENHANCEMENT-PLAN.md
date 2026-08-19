@@ -1093,13 +1093,13 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 | Reader & Search | 1 | 11 |
 | Knowledge system | 4 | 27 |
 | Narrative | 0 | 8 |
-| Practice & personal | 0 | 12 |
+| Practice & personal | 4 | 12 |
 | Calendar & astrology | 1 | 13 |
 | Discovery & play | 0 | 11 |
 | Temples | 0 | 9 |
 | Cross-cutting | 3 | 16 |
 | Release gate | 0 | 17 |
-| **Total** | **15** | **130** |
+| **Total** | **19** | **130** |
 
 ## Quick wins — do these first
 
@@ -1178,10 +1178,10 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **MN-01** Mandir: offering animates onto the idol
 - [ ] **MN-02** Mandir uses the user's `ishta_deity`
 - [ ] **MN-03** Confirm Kamal stays optional gamification, never a purchase
-- [ ] **PP-01** Pilgrimage Passport screen — `temple_visits` already records data
-- [ ] **PP-02** Per-temple stamp: date, note, rating
-- [ ] **PP-03** Collections: Char Dham · 12 Jyotirlinga · Shakti Peetha
-- [ ] **PP-04** Survives restart and upgrade
+- [x] **PP-01** Pilgrimage Passport screen — `temple_visits` already records data
+- [x] **PP-02** Per-temple stamp: date, note, rating
+- [x] **PP-03** Collections: Char Dham · 12 Jyotirlinga · Shakti Peetha
+- [x] **PP-04** Survives restart and upgrade
 
 ## Calendar & astrology
 
