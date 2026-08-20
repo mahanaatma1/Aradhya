@@ -1,10 +1,8 @@
-import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
 /// Renders [card] off-screen, captures it to a PNG and opens the share sheet
@@ -72,11 +70,15 @@ Future<void> shareCardImage({
 
   try {
     if (bytes != null) {
-      final dir = await getTemporaryDirectory();
-      final file = File('${dir.path}/$filename');
-      await file.writeAsBytes(bytes);
+      // Hand share_plus the bytes, not a path. It writes its own temp file on
+      // mobile and reads the bytes directly on web -- so this path no longer
+      // needs path_provider, which has no web implementation at all and was
+      // throwing MissingPluginException before the share sheet ever opened.
       await SharePlus.instance.share(ShareParams(
-        files: [XFile(file.path, mimeType: 'image/png')],
+        files: [
+          XFile.fromData(bytes, name: filename, mimeType: 'image/png'),
+        ],
+        fileNameOverrides: [filename],
         text: text,
       ));
       return;
@@ -85,9 +87,12 @@ Future<void> shareCardImage({
   } catch (e, st) {
     debugPrint('share failed: $e');
     debugPrintStack(stackTrace: st);
-    messenger?.showSnackBar(
-      const SnackBar(content: Text('Could not share')),
-    );
+    // The reason goes on screen, not just in the log. A sideloaded build has
+    // no adb attached, and a generic message there is worth nothing.
+    messenger?.showSnackBar(SnackBar(
+      duration: const Duration(seconds: 8),
+      content: Text('Could not share: $e', maxLines: 4),
+    ));
   }
 }
 

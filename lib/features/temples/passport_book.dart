@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 import '../../app/brand.dart';
@@ -28,77 +30,231 @@ class PassportCover extends StatelessWidget {
     required this.hindi,
   });
 
+  /// Gold leaf is not a flat colour -- it catches light across its face. A
+  /// shader across the glyphs is what separates embossed foil from yellow text.
+  static const _foil = LinearGradient(
+    colors: [
+      Color(0xFFF6E3A8),
+      Color(0xFFD9A441),
+      Color(0xFFA8761F),
+      Color(0xFFEBCE86),
+    ],
+    stops: [0.0, 0.38, 0.68, 1.0],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
+
+  Widget _foiled(Widget child) => ShaderMask(
+        shaderCallback: (r) => _foil.createShader(r),
+        blendMode: BlendMode.srcIn,
+        child: child,
+      );
+
   @override
   Widget build(BuildContext context) {
     return StitchedCard(
       radius: 18,
       stitchColor: _emboss.withValues(alpha: 0.55),
       gradient: const LinearGradient(
-        colors: [_cover, _coverDeep],
+        colors: [Color(0xFF6B3823), _cover, _coverDeep],
+        stops: [0.0, 0.45, 1.0],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       ),
-      padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            hindi ? 'तीर्थ यात्रा' : 'PILGRIMAGE',
-            style: TextStyle(
-              fontSize: 10,
-              letterSpacing: 3.4,
-              fontWeight: FontWeight.w800,
-              color: _emboss.withValues(alpha: 0.9),
-            ),
-          ),
-          const SizedBox(height: 14),
-          const AppLogo(size: 62),
-          const SizedBox(height: 14),
-          Text(
-            hindi ? 'यात्रा पासपोर्ट' : 'YATRA PASSPORT',
-            style: const TextStyle(
-              fontFamily: AppFonts.display,
-              fontSize: 22,
-              letterSpacing: 1.6,
-              fontWeight: FontWeight.w700,
-              color: Color(0xFFF3DFB8),
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            Brand.name.toUpperCase(),
-            style: TextStyle(
-              fontSize: 11,
-              letterSpacing: 4,
-              fontWeight: FontWeight.w700,
-              color: _emboss.withValues(alpha: 0.75),
-            ),
-          ),
-          const SizedBox(height: 18),
-          Container(
-            height: 1,
-            color: _emboss.withValues(alpha: 0.3),
-          ),
-          const SizedBox(height: 14),
-          Row(
+      padding: EdgeInsets.zero,
+      child: CustomPaint(
+        painter: _LeatherPainter(),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 20, 20, 18),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              _Field(
-                label: hindi ? 'यात्री' : 'HOLDER',
-                value: holder.isEmpty
-                    ? (hindi ? 'श्रद्धालु' : 'Devotee')
-                    : holder,
+              _foiled(Text(
+                hindi ? 'तीर्थ यात्रा' : 'PILGRIMAGE',
+                style: const TextStyle(
+                  fontSize: 10,
+                  letterSpacing: 3.4,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                ),
+              )),
+              const SizedBox(height: 12),
+              // The emblem sits in a struck gold ring, the way a crest does.
+              SizedBox(
+                width: 92,
+                height: 92,
+                child: CustomPaint(
+                  painter: _CrestPainter(),
+                  child: const Center(child: AppLogo(size: 54)),
+                ),
               ),
-              const SizedBox(width: 18),
-              _Field(
-                label: hindi ? 'दर्शन' : 'DARSHAN',
-                value: '$visits',
+              const SizedBox(height: 12),
+              _foiled(Text(
+                hindi ? 'यात्रा पासपोर्ट' : 'YATRA PASSPORT',
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontFamily: AppFonts.display,
+                  fontSize: 23,
+                  letterSpacing: 1.8,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+              )),
+              const SizedBox(height: 5),
+              _foiled(Text(
+                Brand.name.toUpperCase(),
+                style: const TextStyle(
+                  fontSize: 11,
+                  letterSpacing: 4.5,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.white,
+                ),
+              )),
+              const SizedBox(height: 16),
+              const _Rule(),
+              const SizedBox(height: 14),
+              Row(
+                children: [
+                  _Field(
+                    label: hindi ? 'यात्री' : 'HOLDER',
+                    value: holder.isEmpty
+                        ? (hindi ? 'श्रद्धालु' : 'Devotee')
+                        : holder,
+                  ),
+                  const SizedBox(width: 18),
+                  _Field(
+                    label: hindi ? 'दर्शन' : 'DARSHAN',
+                    value: '$visits',
+                  ),
+                ],
               ),
             ],
           ),
-        ],
+        ),
       ),
     );
   }
+}
+
+/// An ornamental rule with a centre diamond -- the divider a real cover uses
+/// instead of a plain line.
+class _Rule extends StatelessWidget {
+  const _Rule();
+
+  @override
+  Widget build(BuildContext context) {
+    Widget side(bool left) => Expanded(
+          child: Container(
+            height: 1,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  _emboss.withValues(alpha: left ? 0.0 : 0.55),
+                  _emboss.withValues(alpha: left ? 0.55 : 0.0),
+                ],
+              ),
+            ),
+          ),
+        );
+    return Row(
+      children: [
+        side(true),
+        const SizedBox(width: 8),
+        Transform.rotate(
+          angle: 0.785,
+          child: Container(width: 5, height: 5, color: _emboss),
+        ),
+        const SizedBox(width: 8),
+        side(false),
+      ],
+    );
+  }
+}
+
+/// Leather is grain and a darkened edge, not a flat gradient.
+class _LeatherPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rnd = math.Random(7);
+    final grain = Paint()..strokeWidth = 0.6;
+    for (var i = 0; i < 130; i++) {
+      final x = rnd.nextDouble() * size.width;
+      final y = rnd.nextDouble() * size.height;
+      final len = 4 + rnd.nextDouble() * 14;
+      final a = rnd.nextDouble() * math.pi;
+      grain.color =
+          Colors.white.withValues(alpha: 0.012 + rnd.nextDouble() * 0.022);
+      canvas.drawLine(Offset(x, y),
+          Offset(x + math.cos(a) * len, y + math.sin(a) * len), grain);
+    }
+
+    // Vignette: the edges of a bound cover sit lower than its face.
+    canvas.drawRect(
+      Offset.zero & size,
+      Paint()
+        ..shader = RadialGradient(
+          radius: 0.9,
+          colors: [Colors.transparent, Colors.black.withValues(alpha: 0.28)],
+          stops: const [0.55, 1.0],
+        ).createShader(Offset.zero & size),
+    );
+
+    // A blind-embossed frame, inset from the stitching.
+    final inset = const EdgeInsets.all(9).deflateRect(Offset.zero & size);
+    final rrect = RRect.fromRectAndRadius(inset, const Radius.circular(11));
+    canvas.drawRRect(
+        rrect.shift(const Offset(0, 1)),
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1
+          ..color = Colors.black.withValues(alpha: 0.22));
+    canvas.drawRRect(
+        rrect,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1
+          ..color = _emboss.withValues(alpha: 0.30));
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter old) => false;
+}
+
+/// The gold ring the emblem is struck into, with rays behind it.
+class _CrestPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final c = size.center(Offset.zero);
+    final r = size.width / 2;
+
+    for (var i = 0; i < 48; i++) {
+      final a = i / 48 * 2 * math.pi;
+      canvas.drawLine(
+        c + Offset(math.cos(a), math.sin(a)) * (r * 0.66),
+        c + Offset(math.cos(a), math.sin(a)) * (r * 0.82),
+        Paint()
+          ..strokeWidth = 0.7
+          ..color = _emboss.withValues(alpha: i.isEven ? 0.30 : 0.13),
+      );
+    }
+    canvas.drawCircle(
+        c,
+        r * 0.88,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.4
+          ..color = _emboss.withValues(alpha: 0.62));
+    canvas.drawCircle(
+        c,
+        r * 0.62,
+        Paint()
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 0.8
+          ..color = _emboss.withValues(alpha: 0.34));
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter old) => false;
 }
 
 class _Field extends StatelessWidget {

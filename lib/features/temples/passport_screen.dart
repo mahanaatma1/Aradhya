@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
@@ -6,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../app/brand.dart';
@@ -76,18 +74,20 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
               ),
           ],
 
-          const SizedBox(height: 12),
-          _PageLabel(hi ? 'संग्रह' : 'COLLECTIONS'),
-          const SizedBox(height: 10),
-          for (final c in kCollections)
-            _CollectionCard(collection: c, hindi: hi),
-
+          // The log belongs with the stamps -- a stamp is the record, this is
+          // what it says. Collections are a different question and come after.
           if (visited.isNotEmpty) ...[
             const SizedBox(height: 18),
             _PageLabel(hi ? 'यात्रा विवरण' : 'VISIT LOG'),
             const SizedBox(height: 10),
             for (final e in visited) _VisitRow(entry: e, hindi: hi),
           ],
+
+          const SizedBox(height: 18),
+          _PageLabel(hi ? 'संग्रह' : 'COLLECTIONS'),
+          const SizedBox(height: 10),
+          for (final c in kCollections)
+            _CollectionCard(collection: c, hindi: hi),
 
           const SizedBox(height: 20),
           _PrivacyNote(hindi: hi),
@@ -170,22 +170,19 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
     try {
       final bytes = await _capture(holder, visited, hi);
       if (bytes == null) return;
-      final dir = await getTemporaryDirectory();
-      final file = File('${dir.path}/aradhya_yatra_passport.png');
-      await file.writeAsBytes(bytes);
-      final result = await SharePlus.instance.share(ShareParams(
-        files: [XFile(file.path, mimeType: 'image/png')],
+      const name = 'aradhya_yatra_passport.png';
+      // The result is deliberately not inspected. ShareResultStatus.unavailable
+      // means "shared, but the user's action could not be determined" -- it is
+      // a success, and the web implementation returns it on every successful
+      // share. Treating it as a failure reported an error after the share had
+      // already worked.
+      await SharePlus.instance.share(ShareParams(
+        files: [XFile.fromData(bytes, name: name, mimeType: 'image/png')],
+        fileNameOverrides: const [name],
         text: hi
             ? '${visited.length} मंदिरों के दर्शन — ${Brand.name} यात्रा पासपोर्ट'
             : '${visited.length} temples visited — my ${Brand.name} Yatra Passport',
       ));
-      if (result.status == ShareResultStatus.unavailable && mounted) {
-        messenger.showSnackBar(SnackBar(
-          content: Text(hi
-              ? 'इस उपकरण पर साझा करना उपलब्ध नहीं है'
-              : 'Sharing is not available on this device'),
-        ));
-      }
     } catch (e, st) {
       // The failure has to be visible somewhere. A silent catch is why this
       // looked like "share does nothing" rather than a fixable bug.
@@ -193,9 +190,11 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
       debugPrintStack(stackTrace: st);
       if (!mounted) return;
       messenger.showSnackBar(SnackBar(
-        content: Text(hi
-            ? 'साझा नहीं हो सका'
-            : 'Could not share'),
+        duration: const Duration(seconds: 8),
+        content: Text(
+          '${hi ? 'साझा नहीं हो सका' : 'Could not share'}: $e',
+          maxLines: 4,
+        ),
       ));
     }
   }

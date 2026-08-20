@@ -6,6 +6,7 @@ import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
 import 'passport_providers.dart';
+import 'passport_stamp.dart';
 
 const _accent = Color(0xFF8A6A4F);
 const _gold = Color(0xFFC08A2E);
@@ -38,6 +39,14 @@ class CollectionScreen extends ConsumerWidget {
               _Progress(done: done, total: list.length,
                   canonical: collection.canonical, hindi: hi),
               const SizedBox(height: 16),
+
+              // The stamps earned in this set, on their own page. Seeing the
+              // gaps is the point -- an empty slot is what a collection is for.
+              if (list.isNotEmpty) ...[
+                _StampSheet(entries: list, hindi: hi),
+                const SizedBox(height: 18),
+              ],
+
               for (final e in list) _Row(entry: e, hindi: hi),
             ],
           );
@@ -173,6 +182,97 @@ class _Row extends StatelessWidget {
               Icon(Icons.chevron_right_rounded,
                   size: 18, color: scheme.onSurface.withValues(alpha: 0.3)),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+/// The collected stamps of one set, with an empty ring where one is missing.
+class _StampSheet extends StatelessWidget {
+  final List<PassportEntry> entries;
+  final bool hindi;
+  const _StampSheet({required this.entries, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    return PassportPaper(
+      padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            hindi ? 'एकत्रित मुद्रा' : 'STAMPS COLLECTED',
+            style: TextStyle(
+              fontSize: 8.5,
+              letterSpacing: 2.2,
+              fontWeight: FontWeight.w800,
+              color: kStampInk.withValues(alpha: 0.6),
+            ),
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 4,
+            runSpacing: 4,
+            alignment: WrapAlignment.center,
+            children: [
+              for (final e in entries)
+                if (e.visited)
+                  PassportStamp(
+                    templeId: e.templeId,
+                    place: e.name(hindi),
+                    date: e.visitedAt,
+                    size: 92,
+                  )
+                else
+                  _EmptySlot(label: e.name(hindi)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// A stamp that has not been earned: the outline, waiting.
+class _EmptySlot extends StatelessWidget {
+  final String label;
+  const _EmptySlot({required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 92,
+      height: 92,
+      child: Center(
+        child: Container(
+          width: 74,
+          height: 74,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: kStampInk.withValues(alpha: 0.16),
+              width: 1.2,
+            ),
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 6),
+              child: Text(
+                label,
+                textAlign: TextAlign.center,
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 8,
+                  height: 1.25,
+                  fontWeight: FontWeight.w600,
+                  color: kStampInk.withValues(alpha: 0.34),
+                ),
+              ),
+            ),
           ),
         ),
       ),

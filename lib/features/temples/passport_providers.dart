@@ -45,6 +45,8 @@ class PassportEntry {
   final String? note;
   final int? rating;
 
+  final bool _visited;
+
   const PassportEntry({
     required this.templeId,
     required this.nameEn,
@@ -53,9 +55,15 @@ class PassportEntry {
     this.visitedAt,
     this.note,
     this.rating,
-  });
+    bool visited = false,
+  }) : _visited = visited;
 
-  bool get visited => visitedAt != null;
+  /// Whether a visit is on record.
+  ///
+  /// A date always implies a visit. The flag exists for the other direction: a
+  /// visit backfilled from the old prefs-only set has no date -- it happened,
+  /// we just never wrote down when.
+  bool get visited => _visited || visitedAt != null;
   String name(bool hi) => (hi && (nameHi?.isNotEmpty ?? false)) ? nameHi! : nameEn;
 }
 
@@ -74,8 +82,11 @@ final visitRecordsProvider =
         (r['temple_id'] as int): PassportEntry(
           templeId: r['temple_id'] as int,
           nameEn: '',
-          visitedAt: DateTime.fromMillisecondsSinceEpoch(
-              (r['visited_at'] as int?) ?? 0),
+          visited: true,
+          visitedAt: switch (r['visited_at'] as int?) {
+            null || 0 => null,
+            final ms => DateTime.fromMillisecondsSinceEpoch(ms),
+          },
           note: r['note'] as String?,
           rating: r['rating'] as int?,
         ),
@@ -108,6 +119,7 @@ final collectionProvider =
           nameEn: (r['name_en'] as String?) ?? '',
           nameHi: r['name_hi'] as String?,
           state: r['state'] as String?,
+          visited: v != null,
           visitedAt: v?.visitedAt,
           note: v?.note,
           rating: v?.rating,
@@ -137,14 +149,20 @@ final visitedTemplesProvider = FutureProvider<List<PassportEntry>>((ref) async {
           nameEn: (r['name_en'] as String?) ?? '',
           nameHi: r['name_hi'] as String?,
           state: r['state'] as String?,
+          visited: true,
           visitedAt: v.visitedAt,
           note: v.note,
           rating: v.rating,
         );
       }(),
   ];
-  out.sort((a, b) => (b.visitedAt ?? DateTime(0))
-      .compareTo(a.visitedAt ?? DateTime(0)));
+  out.sort((a, b) {
+    final da = a.visitedAt, db_ = b.visitedAt;
+    if (da == null && db_ == null) return a.nameEn.compareTo(b.nameEn);
+    if (da == null) return 1;
+    if (db_ == null) return -1;
+    return db_.compareTo(da);
+  });
   return out;
 });
 

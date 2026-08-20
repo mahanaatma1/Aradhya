@@ -25,13 +25,22 @@ void main() {
     expect(canonicalOf('char_dham'), 4);
   });
 
-  test('an entry without a date is not a visit', () {
+  test('a date implies a visit, and a dated visit is a visit', () {
     const unvisited = PassportEntry(templeId: 1, nameEn: 'Somnath');
     expect(unvisited.visited, isFalse);
 
     final visited = PassportEntry(
         templeId: 1, nameEn: 'Somnath', visitedAt: DateTime(2026, 1, 1));
     expect(visited.visited, isTrue);
+  });
+
+  test('a visit backfilled from prefs counts even with no date recorded', () {
+    // Temples marked visited before temple_visits existed carry no timestamp.
+    // They still happened, and the passport has to show them.
+    const dateless =
+        PassportEntry(templeId: 1, nameEn: 'Somnath', visited: true);
+    expect(dateless.visited, isTrue);
+    expect(dateless.visitedAt, isNull);
   });
 
   test('names fall back to English rather than rendering empty', () {

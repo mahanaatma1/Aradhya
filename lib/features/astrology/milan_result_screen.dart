@@ -11,6 +11,7 @@ import 'package:go_router/go_router.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../../app/brand.dart';
 import '../../core/providers/app_providers.dart';
 import '../../app/theme/app_theme.dart';
 import '../panchang/panchang_names.dart' show nakshatraNames;
@@ -589,32 +590,46 @@ class _MilanResultScreenState extends ConsumerState<MilanResultScreen> {
 
   Future<Uint8List?> _captureCard() async {
     final key = GlobalKey();
-    final overlay = Overlay.of(context);
+    final overlay = Overlay.of(context, rootOverlay: true);
     final entry = OverlayEntry(
       builder: (_) => Positioned(
         left: -4000,
         top: 0,
-        child: Material(
-          type: MaterialType.transparency,
-          child: RepaintBoundary(
-            key: key,
-            child: MilanShareCard(result: r, hi: ref.read(isHindiProvider)),
+        // The card sets its own width; this only stops the screen's height
+        // constraint from shearing off the bottom of a tall result.
+        child: OverflowBox(
+          alignment: Alignment.topLeft,
+          minWidth: 0,
+          maxWidth: double.infinity,
+          minHeight: 0,
+          maxHeight: double.infinity,
+          child: Material(
+            type: MaterialType.transparency,
+            child: RepaintBoundary(
+              key: key,
+              child: MilanShareCard(result: r, hi: ref.read(isHindiProvider)),
+            ),
           ),
         ),
       ),
     );
     overlay.insert(entry);
     try {
-      await Future.delayed(const Duration(milliseconds: 60));
-      final ctx = key.currentContext;
-      if (ctx == null) return null;
-      // ignore: use_build_context_synchronously
-      final boundary = ctx.findRenderObject() as RenderRepaintBoundary;
-      if (boundary.debugNeedsPaint) {
-        await Future.delayed(const Duration(milliseconds: 60));
+      // Wait for real frames, not a guessed millisecond count.
+      RenderRepaintBoundary? boundary;
+      for (var i = 0; i < 12; i++) {
+        await WidgetsBinding.instance.endOfFrame;
+        if (!mounted) return null;
+        final object = key.currentContext?.findRenderObject();
+        if (object is RenderRepaintBoundary && !object.debugNeedsPaint) {
+          boundary = object;
+          break;
+        }
       }
+      if (boundary == null) return null;
       final image = await boundary.toImage(pixelRatio: 3);
       final data = await image.toByteData(format: ui.ImageByteFormat.png);
+      image.dispose();
       return data?.buffer.asUint8List();
     } finally {
       entry.remove();
@@ -627,14 +642,13 @@ class _MilanResultScreenState extends ConsumerState<MilanResultScreen> {
     try {
       final bytes = await _captureCard();
       if (bytes == null) return;
-      final dir = await getTemporaryDirectory();
-      final file = File('${dir.path}/divyavaani_milan.png');
-      await file.writeAsBytes(bytes);
+      const name = 'aradhya_milan.png';
       await SharePlus.instance.share(ShareParams(
-        files: [XFile(file.path)],
+        files: [XFile.fromData(bytes, name: name, mimeType: 'image/png')],
+        fileNameOverrides: const [name],
         text: hi
-            ? '${r.a.name} ♥ ${r.b.name} — DivyaVaani पर ${_fmt(r.total)}/36 गुण'
-            : '${r.a.name} ♥ ${r.b.name} — ${_fmt(r.total)}/36 guna on DivyaVaani',
+            ? '${r.a.name} ♥ ${r.b.name} — ${Brand.nameHi} पर ${_fmt(r.total)}/36 गुण'
+            : '${r.a.name} ♥ ${r.b.name} — ${_fmt(r.total)}/36 guna on ${Brand.name}',
       ));
     } catch (e) {
       messenger.showSnackBar(SnackBar(
@@ -649,7 +663,7 @@ class _MilanResultScreenState extends ConsumerState<MilanResultScreen> {
       final bytes = await _captureCard();
       if (bytes == null) return;
       final name =
-          'DivyaVaani_Milan_${r.a.name}_${r.b.name}'.replaceAll(' ', '_');
+          '${Brand.name}_Milan_${r.a.name}_${r.b.name}'.replaceAll(' ', '_');
       if (Platform.isAndroid || Platform.isIOS || Platform.isMacOS) {
         await Gal.putImageBytes(bytes, name: name);
         messenger.showSnackBar(SnackBar(
