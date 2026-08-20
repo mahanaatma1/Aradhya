@@ -103,23 +103,37 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
   /// The image is built from data already on the device and written to a temp
   /// file the user then chooses what to do with. Nothing is uploaded by the
   /// app itself.
+  ///
+  /// Two things here are load-bearing and were wrong the first time. The card
+  /// is taller than the screen, and an overlay child is laid out against the
+  /// screen's constraints -- so without the OverflowBox the Column overflowed
+  /// and the capture came out clipped. And a fixed delay is not a guarantee
+  /// that anything was painted; the boundary has to be waited on frame by
+  /// frame until it actually has something in it.
   Future<Uint8List?> _capture(
       String holder, List<PassportEntry> visited, bool hi) async {
     final key = GlobalKey();
-    final overlay = Overlay.of(context);
+    final overlay = Overlay.of(context, rootOverlay: true);
     final entry = OverlayEntry(
       builder: (_) => Positioned(
         left: -4000,
         top: 0,
-        child: Material(
-          type: MaterialType.transparency,
-          child: RepaintBoundary(
-            key: key,
-            child: PassportShareCard(
-              holder: holder,
-              visits: visited.length,
-              recent: visited,
-              hindi: hi,
+        child: OverflowBox(
+          alignment: Alignment.topLeft,
+          minWidth: 0,
+          maxWidth: 380,
+          minHeight: 0,
+          maxHeight: double.infinity,
+          child: Material(
+            type: MaterialType.transparency,
+            child: RepaintBoundary(
+              key: key,
+              child: PassportShareCard(
+                holder: holder,
+                visits: visited.length,
+                recent: visited,
+                hindi: hi,
+              ),
             ),
           ),
         ),
@@ -127,16 +141,23 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
     );
     overlay.insert(entry);
     try {
-      await Future.delayed(const Duration(milliseconds: 80));
-      final ctx = key.currentContext;
-      if (ctx == null || !mounted) return null;
-      // ignore: use_build_context_synchronously
-      final boundary = ctx.findRenderObject() as RenderRepaintBoundary;
-      if (boundary.debugNeedsPaint) {
-        await Future.delayed(const Duration(milliseconds: 80));
+      // Wait for real frames, not a guessed millisecond count.
+      RenderRepaintBoundary? boundary;
+      for (var i = 0; i < 12; i++) {
+        await WidgetsBinding.instance.endOfFrame;
+        if (!mounted) return null;
+        final object = key.currentContext?.findRenderObject();
+        if (object is RenderRepaintBoundary && !object.debugNeedsPaint) {
+          boundary = object;
+          break;
+        }
+      }
+      if (boundary == null) {
+        throw StateError('share card never painted');
       }
       final image = await boundary.toImage(pixelRatio: 3);
       final data = await image.toByteData(format: ui.ImageByteFormat.png);
+      image.dispose();
       return data?.buffer.asUint8List();
     } finally {
       entry.remove();
@@ -152,15 +173,29 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
       final dir = await getTemporaryDirectory();
       final file = File('${dir.path}/aradhya_yatra_passport.png');
       await file.writeAsBytes(bytes);
-      await SharePlus.instance.share(ShareParams(
-        files: [XFile(file.path)],
+      final result = await SharePlus.instance.share(ShareParams(
+        files: [XFile(file.path, mimeType: 'image/png')],
         text: hi
             ? '${visited.length} मंदिरों के दर्शन — ${Brand.name} यात्रा पासपोर्ट'
             : '${visited.length} temples visited — my ${Brand.name} Yatra Passport',
       ));
-    } catch (_) {
+      if (result.status == ShareResultStatus.unavailable && mounted) {
+        messenger.showSnackBar(SnackBar(
+          content: Text(hi
+              ? 'इस उपकरण पर साझा करना उपलब्ध नहीं है'
+              : 'Sharing is not available on this device'),
+        ));
+      }
+    } catch (e, st) {
+      // The failure has to be visible somewhere. A silent catch is why this
+      // looked like "share does nothing" rather than a fixable bug.
+      debugPrint('passport share failed: $e');
+      debugPrintStack(stackTrace: st);
+      if (!mounted) return;
       messenger.showSnackBar(SnackBar(
-        content: Text(hi ? 'साझा नहीं हो सका' : 'Could not share'),
+        content: Text(hi
+            ? 'साझा नहीं हो सका'
+            : 'Could not share'),
       ));
     }
   }

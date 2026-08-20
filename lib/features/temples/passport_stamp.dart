@@ -77,6 +77,11 @@ class _StampPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    // The ink breaks below are drawn with BlendMode.clear, which erases
+    // everything beneath it in the current layer -- including the page. The
+    // stamp needs a layer of its own so a gap in the ink shows the paper, not
+    // a hole through the whole card.
+    canvas.saveLayer(Offset.zero & size, Paint());
     final c = Offset(size.width / 2, size.height / 2);
     final r = size.width / 2 - 2;
     final colour = kStampInk.withValues(alpha: ink);
@@ -133,6 +138,7 @@ class _StampPainter extends CustomPainter {
       canvas.drawCircle(c + Offset(math.cos(a), math.sin(a)) * rad,
           1.2 + rnd.nextDouble() * 2.2, erase);
     }
+    canvas.restore();
   }
 
   void _line(Canvas canvas, Offset at, String text, Color colour, double size,
