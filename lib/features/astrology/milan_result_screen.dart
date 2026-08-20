@@ -595,20 +595,12 @@ class _MilanResultScreenState extends ConsumerState<MilanResultScreen> {
       builder: (_) => Positioned(
         left: -4000,
         top: 0,
-        // The card sets its own width; this only stops the screen's height
-        // constraint from shearing off the bottom of a tall result.
-        child: OverflowBox(
-          alignment: Alignment.topLeft,
-          minWidth: 0,
-          maxWidth: double.infinity,
-          minHeight: 0,
-          maxHeight: double.infinity,
-          child: Material(
-            type: MaterialType.transparency,
-            child: RepaintBoundary(
-              key: key,
-              child: MilanShareCard(result: r, hi: ref.read(isHindiProvider)),
-            ),
+        // Already unconstrained here; an OverflowBox would make it infinite.
+        child: Material(
+          type: MaterialType.transparency,
+          child: RepaintBoundary(
+            key: key,
+            child: MilanShareCard(result: r, hi: ref.read(isHindiProvider)),
           ),
         ),
       ),

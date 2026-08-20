@@ -23,11 +23,16 @@ class PassportCover extends StatelessWidget {
   final int visits;
   final bool hindi;
 
+  /// Optional. When present the cover becomes a data page rather than just a
+  /// title -- which is what stops it reading as an empty slab.
+  final PassportStats? stats;
+
   const PassportCover({
     super.key,
     required this.holder,
     required this.visits,
     required this.hindi,
+    this.stats,
   });
 
   /// Gold leaf is not a flat colour -- it catches light across its face. A
@@ -123,15 +128,99 @@ class PassportCover extends StatelessWidget {
                   ),
                   const SizedBox(width: 18),
                   _Field(
-                    label: hindi ? 'दर्शन' : 'DARSHAN',
-                    value: '$visits',
+                    label: hindi ? 'क्रमांक' : 'PASSPORT NO',
+                    value: PassportStats.number(holder),
                   ),
                 ],
               ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  _Field(
+                    label: hindi ? 'दर्शन' : 'DARSHAN',
+                    value: '$visits',
+                  ),
+                  const SizedBox(width: 18),
+                  _Field(
+                    label: hindi ? 'राज्य' : 'STATES',
+                    value: '${stats?.states ?? 0}',
+                  ),
+                  const SizedBox(width: 18),
+                  _Field(
+                    label: hindi ? 'से' : 'SINCE',
+                    value: stats?.sinceYear?.toString() ?? '—',
+                  ),
+                ],
+              ),
+              if (stats != null) ...[
+                const SizedBox(height: 14),
+                _RankStrip(visits: visits, hindi: hindi),
+              ],
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+/// Where this journey stands, and how far the next rung is.
+///
+/// The titles describe what someone is doing, not an honour the app is in any
+/// position to confer -- a pilgrimage is not a loyalty tier.
+class _RankStrip extends StatelessWidget {
+  final int visits;
+  final bool hindi;
+  const _RankStrip({required this.visits, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final rank = YatraRank.forCount(visits);
+    final next = YatraRank.next(visits);
+    final span = next == null ? 1 : next.from - rank.from;
+    final done = next == null ? 1.0 : ((visits - rank.from) / span).clamp(0, 1);
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              rank.title(hindi),
+              style: const TextStyle(
+                fontFamily: AppFonts.display,
+                fontSize: 15,
+                fontWeight: FontWeight.w700,
+                color: Color(0xFFF3DFB8),
+              ),
+            ),
+            const Spacer(),
+            Text(
+              next == null
+                  ? (hindi ? 'शिखर' : 'Highest')
+                  : (hindi
+                      ? '${next.from - visits} और ${next.titleHi} तक'
+                      : '${next.from - visits} more to ${next.titleEn}'),
+              style: TextStyle(
+                fontSize: 9.5,
+                fontWeight: FontWeight.w600,
+                color: _emboss.withValues(alpha: 0.72),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 6),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(3),
+          child: LinearProgressIndicator(
+            value: done.toDouble(),
+            minHeight: 4,
+            backgroundColor: Colors.black.withValues(alpha: 0.28),
+            valueColor: const AlwaysStoppedAnimation(_emboss),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -175,6 +264,11 @@ class _Rule extends StatelessWidget {
 class _LeatherPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
+    // The card is rounded; the grain, the vignette and the embossed frame all
+    // paint to the full rect, so without this the corners come out square and
+    // the shadow shows through them.
+    canvas.clipRRect(RRect.fromRectAndRadius(
+        Offset.zero & size, const Radius.circular(18)));
     final rnd = math.Random(7);
     final grain = Paint()..strokeWidth = 0.6;
     for (var i = 0; i < 130; i++) {
@@ -386,6 +480,7 @@ class PassportShareCard extends StatelessWidget {
   final int visits;
   final List<PassportEntry> recent;
   final bool hindi;
+  final PassportStats? stats;
 
   const PassportShareCard({
     super.key,
@@ -393,6 +488,7 @@ class PassportShareCard extends StatelessWidget {
     required this.visits,
     required this.recent,
     required this.hindi,
+    this.stats,
   });
 
   @override
@@ -410,7 +506,8 @@ class PassportShareCard extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          PassportCover(holder: holder, visits: visits, hindi: hindi),
+          PassportCover(
+              holder: holder, visits: visits, hindi: hindi, stats: stats),
           const SizedBox(height: 14),
           if (recent.isNotEmpty)
             StampPage(

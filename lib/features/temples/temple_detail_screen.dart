@@ -123,25 +123,31 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
                         color: scheme.secondary,
                         onTap: () => _openMap(context, t),
                       ),
-                    // A visit is worth more than a tick. Once marked, offer
-                    // the note and rating the passport can show.
-                    if (visited) ...[
-                      const SizedBox(height: 10),
-                      OutlinedButton.icon(
-                        onPressed: () => showVisitSheet(context, ref, t.id, hi),
-                        icon: const Icon(Icons.edit_note_rounded, size: 18),
-                        label: Text(hi
-                            ? 'यात्रा का विवरण जोड़ें'
-                            : 'Add a note to this visit'),
-                        style: OutlinedButton.styleFrom(
-                          minimumSize: const Size.fromHeight(46),
-                        ),
-                      ),
-                    ],
                   ],
                 ),
               ),
             ),
+
+            // A visit is worth more than a tick. Once marked, offer the note
+            // and rating the passport can show -- full width, on its own row.
+            // It cannot live in the row of round buttons above: a button asked
+            // for Size.fromHeight there is asked for infinite width.
+            if (visited)
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                  child: OutlinedButton.icon(
+                    onPressed: () => showVisitSheet(context, ref, t.id, hi),
+                    icon: const Icon(Icons.edit_note_rounded, size: 18),
+                    label: Text(hi
+                        ? 'यात्रा का विवरण जोड़ें'
+                        : 'Add a note to this visit'),
+                    style: OutlinedButton.styleFrom(
+                      minimumSize: const Size.fromHeight(46),
+                    ),
+                  ),
+                ),
+              ),
             SliverToBoxAdapter(
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(16, 6, 16, 12),

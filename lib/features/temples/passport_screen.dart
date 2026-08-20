@@ -54,7 +54,11 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
         padding: const EdgeInsets.fromLTRB(16, 14, 16, 30),
         children: [
           PassportCover(
-              holder: holder, visits: visited.length, hindi: hi),
+            holder: holder,
+            visits: visited.length,
+            hindi: hi,
+            stats: PassportStats.of(visited),
+          ),
           const SizedBox(height: 18),
 
           if (visited.isEmpty)
@@ -84,6 +88,7 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
           ],
 
           const SizedBox(height: 18),
+          const _NextStamp(),
           _PageLabel(hi ? 'संग्रह' : 'COLLECTIONS'),
           const SizedBox(height: 10),
           for (final c in kCollections)
@@ -118,22 +123,20 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
       builder: (_) => Positioned(
         left: -4000,
         top: 0,
-        child: OverflowBox(
-          alignment: Alignment.topLeft,
-          minWidth: 0,
-          maxWidth: 380,
-          minHeight: 0,
-          maxHeight: double.infinity,
-          child: Material(
-            type: MaterialType.transparency,
-            child: RepaintBoundary(
-              key: key,
-              child: PassportShareCard(
-                holder: holder,
-                visits: visited.length,
-                recent: visited,
-                hindi: hi,
-              ),
+        // The overlay already lays this out unconstrained, which is exactly
+        // what a tall card needs. Forcing an OverflowBox here made the box
+        // itself infinite, and an infinite size yields a non-finite transform
+        // that toImage rejects outright.
+        child: Material(
+          type: MaterialType.transparency,
+          child: RepaintBoundary(
+            key: key,
+            child: PassportShareCard(
+              holder: holder,
+              visits: visited.length,
+              recent: visited,
+              hindi: hi,
+              stats: PassportStats.of(visited),
             ),
           ),
         ),
@@ -473,6 +476,100 @@ class _PrivacyNote extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+
+/// The set closest to finishing, and what is still missing from it.
+///
+/// A passport that only records the past is a ledger. Naming the nearest
+/// remaining stamp is what makes it a plan -- and it is drawn from the same
+/// visit records, so it cannot claim progress that has not happened.
+class _NextStamp extends ConsumerWidget {
+  const _NextStamp();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hi = ref.watch(isHindiProvider);
+
+    Collection? best;
+    List<PassportEntry> missing = const [];
+    double bestShare = -1;
+
+    for (final c in kCollections) {
+      final list = ref.watch(collectionProvider(c.tag)).valueOrNull;
+      if (list == null || list.isEmpty) continue;
+      final done = list.where((e) => e.visited).length;
+      if (done == 0 || done == list.length) continue;
+      final share = done / list.length;
+      if (share > bestShare) {
+        bestShare = share;
+        best = c;
+        missing = list.where((e) => !e.visited).toList();
+      }
+    }
+
+    final set = best;
+    if (set == null || missing.isEmpty) return const SizedBox.shrink();
+    final names = missing.take(3).map((e) => e.name(hi)).join(' · ');
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: StitchedCard(
+        radius: 16,
+        background: kPaper,
+        stitchColor: _gold.withValues(alpha: 0.55),
+        padding: const EdgeInsets.all(14),
+        onTap: () => context.push('/passport/${set.tag}'),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(Icons.push_pin_rounded, size: 18, color: _gold),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    hi ? 'अगली मुद्रा' : 'NEXT STAMP',
+                    style: TextStyle(
+                      fontSize: 9,
+                      letterSpacing: 2,
+                      fontWeight: FontWeight.w800,
+                      color: _accent.withValues(alpha: 0.7),
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    hi
+                        ? '${set.title(true)} — ${missing.length} शेष'
+                        : '${set.title(false)} — ${missing.length} to go',
+                    style: const TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xFF4A3220),
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    names,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 12,
+                      height: 1.35,
+                      color: _accent.withValues(alpha: 0.85),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded,
+                size: 20, color: _accent.withValues(alpha: 0.6)),
+          ],
+        ),
+      ),
     );
   }
 }

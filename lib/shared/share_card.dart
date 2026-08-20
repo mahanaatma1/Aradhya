@@ -30,16 +30,11 @@ Future<void> shareCardImage({
     builder: (_) => Positioned(
       left: -4000,
       top: 0,
-      child: OverflowBox(
-        alignment: Alignment.topLeft,
-        minWidth: 0,
-        maxWidth: double.infinity,
-        minHeight: 0,
-        maxHeight: double.infinity,
-        child: Material(
-          type: MaterialType.transparency,
-          child: RepaintBoundary(key: key, child: card),
-        ),
+      // Unconstrained by the overlay already; an OverflowBox here would make
+      // the box infinite and the resulting transform non-finite.
+      child: Material(
+        type: MaterialType.transparency,
+        child: RepaintBoundary(key: key, child: card),
       ),
     ),
   );

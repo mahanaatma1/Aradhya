@@ -213,3 +213,91 @@ class PassportController {
 
 final passportControllerProvider =
     Provider((ref) => PassportController(ref));
+
+
+/// What the passport says about the journey so far.
+///
+/// Derived, never stored: every field here is a reading of `temple_visits`, so
+/// it cannot drift from the stamps on the page.
+class PassportStats {
+  final int darshan;
+  final int states;
+  final int? sinceYear;
+  final int collectionsComplete;
+  final int collectionsTotal;
+
+  const PassportStats({
+    required this.darshan,
+    required this.states,
+    required this.sinceYear,
+    required this.collectionsComplete,
+    required this.collectionsTotal,
+  });
+
+  static PassportStats of(List<PassportEntry> visited, {int complete = 0}) {
+    final states = <String>{
+      for (final e in visited)
+        if ((e.state ?? '').trim().isNotEmpty) e.state!.trim(),
+    };
+    final years = [
+      for (final e in visited)
+        if (e.visitedAt != null) e.visitedAt!.year,
+    ]..sort();
+    return PassportStats(
+      darshan: visited.length,
+      states: states.length,
+      sinceYear: years.isEmpty ? null : years.first,
+      collectionsComplete: complete,
+      collectionsTotal: kCollections.length,
+    );
+  }
+
+  /// A stable document number. Derived from the holder and nothing else, so it
+  /// does not change as stamps are added -- a passport number that renumbered
+  /// itself every trip would not be one.
+  static String number(String holder) {
+    var h = 0;
+    for (final unit in holder.isEmpty ? 'devotee'.codeUnits : holder.codeUnits) {
+      h = (h * 31 + unit) & 0x7fffffff;
+    }
+    return 'AR${(h % 9000000 + 1000000)}';
+  }
+}
+
+/// The rank ladder. Titles are descriptive of the journey, not honours the app
+/// is in any position to confer -- so they name what someone is doing, not what
+/// they have become.
+class YatraRank {
+  final String titleEn;
+  final String titleHi;
+  final int from;
+
+  const YatraRank(this.titleEn, this.titleHi, this.from);
+
+  static const ladder = <YatraRank>[
+    YatraRank('Setting out', 'प्रस्थान', 0),
+    YatraRank('Pathik', 'पथिक', 1),
+    YatraRank('Yatri', 'यात्री', 5),
+    YatraRank('Tirthayatri', 'तीर्थयात्री', 12),
+    YatraRank('Sadhaka', 'साधक', 25),
+    YatraRank('Mahayatri', 'महायात्री', 50),
+  ];
+
+  String title(bool hi) => hi ? titleHi : titleEn;
+
+  static YatraRank forCount(int n) {
+    var out = ladder.first;
+    for (final r in ladder) {
+      if (n >= r.from) out = r;
+    }
+    return out;
+  }
+
+  /// The next rung, or null at the top of the ladder.
+  static YatraRank? next(int n) {
+    for (final r in ladder) {
+      if (r.from > n) return r;
+    }
+    return null;
+  }
+}
