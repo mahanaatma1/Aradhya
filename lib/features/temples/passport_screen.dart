@@ -13,6 +13,7 @@ import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/stitched_border.dart';
 import 'passport_book.dart';
 import 'passport_providers.dart';
+import 'passport_sections.dart';
 import 'passport_stamp.dart';
 
 const _accent = Color(0xFF8A6A4F);
@@ -59,42 +60,59 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
             hindi: hi,
             stats: PassportStats.of(visited),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 16),
 
           if (visited.isEmpty)
             _EmptyState(hindi: hi)
           else ...[
-            _PageLabel(hi ? 'दर्शन मुद्रा' : 'STAMPS'),
-            const SizedBox(height: 10),
-            // Six to a page, the way a passport fills.
-            for (var i = 0; i < visited.length; i += 6)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 12),
-                child: StampPage(
-                  entries: visited.skip(i).take(6).toList(),
-                  hindi: hi,
-                  pageNumber: i ~/ 6 + 1,
-                ),
-              ),
-          ],
-
-          // The log belongs with the stamps -- a stamp is the record, this is
-          // what it says. Collections are a different question and come after.
-          if (visited.isNotEmpty) ...[
+            const StatsBar(),
             const SizedBox(height: 18),
-            _PageLabel(hi ? 'यात्रा विवरण' : 'VISIT LOG'),
+
+            // Recent stamps first: the passport is the stamps.
+            SectionHead(
+              hi ? 'हाल की मुद्रा' : 'RECENT STAMPS',
+              actionLabel: visited.length > 6 ? (hi ? 'सब' : 'VIEW ALL') : null,
+              onAction: () => context.push('/passport/journey'),
+            ),
             const SizedBox(height: 10),
-            for (final e in visited) _VisitRow(entry: e, hindi: hi),
+            StampPage(
+              entries: visited.take(6).toList(),
+              hindi: hi,
+              pageNumber: 1,
+            ),
+            const SizedBox(height: 20),
+
+            SectionHead(
+              hi ? 'यात्रा वृत्तांत' : 'YATRA JOURNEY',
+              actionLabel: visited.length > 3 ? (hi ? 'सब' : 'VIEW ALL') : null,
+              onAction: () => context.push('/passport/journey'),
+            ),
+            const SizedBox(height: 10),
+            JourneyTimeline(entries: visited.take(3).toList(), hindi: hi),
+            const SizedBox(height: 20),
           ],
 
-          const SizedBox(height: 18),
           const _NextStamp(),
-          _PageLabel(hi ? 'संग्रह' : 'COLLECTIONS'),
-          const SizedBox(height: 10),
-          for (final c in kCollections)
-            _CollectionCard(collection: c, hindi: hi),
 
-          const SizedBox(height: 20),
+          SectionHead(
+            hi ? 'संग्रह' : 'COLLECTIONS',
+            actionLabel: hi ? 'सब' : 'VIEW ALL',
+            onAction: () => context.push('/passport/collections'),
+          ),
+          const SizedBox(height: 10),
+          for (final c in kCollections.take(4))
+            _CollectionCard(collection: c, hindi: hi),
+          const SizedBox(height: 12),
+
+          SectionHead(
+            hi ? 'उपलब्धियाँ' : 'MILESTONES',
+            actionLabel: hi ? 'सब' : 'VIEW ALL',
+            onAction: () => context.push('/passport/milestones'),
+          ),
+          const SizedBox(height: 12),
+          const MilestoneRail(preview: true),
+
+          const SizedBox(height: 22),
           _PrivacyNote(hindi: hi),
         ],
       ),
@@ -137,6 +155,8 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
               recent: visited,
               hindi: hi,
               stats: PassportStats.of(visited),
+              jyotirlinga: _setCount('jyotirlinga'),
+              dham: _setCount('char_dham'),
             ),
           ),
         ),
@@ -165,6 +185,11 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
     } finally {
       entry.remove();
     }
+  }
+
+  int _setCount(String tag) {
+    final list = ref.read(collectionProvider(tag)).valueOrNull ?? const [];
+    return list.where((e) => e.visited).length;
   }
 
   Future<void> _share(
@@ -203,29 +228,6 @@ class _PassportScreenState extends ConsumerState<PassportScreen> {
   }
 }
 
-class _PageLabel extends StatelessWidget {
-  final String text;
-  const _PageLabel(this.text);
-
-  @override
-  Widget build(BuildContext context) => Row(
-        children: [
-          Text(text,
-              style: TextStyle(
-                fontSize: 10,
-                letterSpacing: 2.2,
-                fontWeight: FontWeight.w800,
-                color: _accent.withValues(alpha: 0.75),
-              )),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Container(
-                height: 1, color: _gold.withValues(alpha: 0.3)),
-          ),
-        ],
-      );
-}
-
 class _CollectionCard extends ConsumerWidget {
   final Collection collection;
   final bool hindi;
@@ -237,7 +239,11 @@ class _CollectionCard extends ConsumerWidget {
         ref.watch(collectionProvider(collection.tag)).valueOrNull ?? const [];
     final held = entries.length;
     final done = entries.where((e) => e.visited).length;
-    final complete = held > 0 && done == held;
+    // Progress is measured against what the tradition names, not against how
+    // many rows happen to carry the tag -- "5 of 4" is not a sentence.
+    final canonical = collection.canonical;
+    final complete = canonical > 0 && done >= canonical;
+    final extra = held > canonical ? held - canonical : 0;
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
@@ -249,7 +255,7 @@ class _CollectionCard extends ConsumerWidget {
         padding: const EdgeInsets.all(14),
         child: Row(
           children: [
-            _ProgressRing(done: done, total: held == 0 ? 1 : held),
+            _ProgressRing(done: done, total: canonical == 0 ? 1 : canonical),
             const SizedBox(width: 14),
             Expanded(
               child: Column(
@@ -263,19 +269,24 @@ class _CollectionCard extends ConsumerWidget {
                           color: Color(0xFF3A2A18))),
                   const SizedBox(height: 2),
                   Text(
-                    // Held vs canonical, so an incomplete set reads as
-                    // incomplete rather than passing for the whole tradition.
-                    held == collection.canonical
-                        ? (hindi
-                            ? '$done / $held दर्शन'
-                            : '$done of $held visited')
-                        : (hindi
-                            ? '$done / $held · परंपरा में ${collection.canonical}'
-                            : '$done of $held · ${collection.canonical} in the tradition'),
+                    hindi
+                        ? '$done / $canonical दर्शन'
+                        : '$done / $canonical visited',
                     style: TextStyle(
-                        fontSize: 11.5,
-                        color: const Color(0xFF3A2A18).withValues(alpha: 0.6)),
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xFF3A2A18).withValues(alpha: 0.75)),
                   ),
+                  if (extra > 0)
+                    Text(
+                      hindi
+                          ? '$canonical पारंपरिक + $extra अन्य'
+                          : '$canonical traditional + $extra additional',
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: const Color(0xFF3A2A18)
+                              .withValues(alpha: 0.55)),
+                    ),
                 ],
               ),
             ),
@@ -310,7 +321,9 @@ class _ProgressRing extends StatelessWidget {
             width: 42,
             height: 42,
             child: CircularProgressIndicator(
-              value: total == 0 ? 0 : done / total,
+              // A set can be over-full (5 darshan against 4 traditional
+              // Dhams), and a ring past 100% draws as a smear.
+              value: total == 0 ? 0 : (done / total).clamp(0.0, 1.0),
               strokeWidth: 4,
               backgroundColor: _gold.withValues(alpha: 0.18),
               valueColor: const AlwaysStoppedAnimation(_gold),
@@ -320,93 +333,6 @@ class _ProgressRing extends StatelessWidget {
               style: const TextStyle(
                   fontSize: 13, fontWeight: FontWeight.w800, color: _accent)),
         ],
-      ),
-    );
-  }
-}
-
-class _VisitRow extends StatelessWidget {
-  final PassportEntry entry;
-  final bool hindi;
-  const _VisitRow({required this.entry, required this.hindi});
-
-  static const _mon = [
-    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    final d = entry.visitedAt;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
-      child: StitchedCard(
-        radius: 14,
-        background: kPaper,
-        stitchColor: _gold.withValues(alpha: 0.4),
-        padding: const EdgeInsets.all(12),
-        onTap: () => context.push('/temple?id=${entry.templeId}'),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            PassportStamp(
-              templeId: entry.templeId,
-              place: entry.name(hindi),
-              date: d,
-              size: 62,
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(entry.name(hindi),
-                      style: const TextStyle(
-                          fontFamily: AppFonts.display,
-                          fontSize: 15.5,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF3A2A18))),
-                  if (d != null)
-                    Text(
-                      '${d.day} ${_mon[d.month - 1]} ${d.year}'
-                      '${entry.state != null ? " · ${entry.state}" : ""}',
-                      style: TextStyle(
-                          fontSize: 11.5,
-                          color:
-                              const Color(0xFF3A2A18).withValues(alpha: 0.6)),
-                    ),
-                  if ((entry.note ?? '').isNotEmpty) ...[
-                    const SizedBox(height: 4),
-                    Text(entry.note!,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                            fontFamily: AppFonts.accent,
-                            fontSize: 13,
-                            height: 1.35,
-                            fontStyle: FontStyle.italic,
-                            color: Color(0xFF5A4632))),
-                  ],
-                  if (entry.rating != null) ...[
-                    const SizedBox(height: 4),
-                    Row(
-                      children: [
-                        for (var i = 1; i <= 5; i++)
-                          Icon(
-                            i <= entry.rating!
-                                ? Icons.star_rounded
-                                : Icons.star_border_rounded,
-                            size: 14,
-                            color: _gold,
-                          ),
-                      ],
-                    ),
-                  ],
-                ],
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }

@@ -66,6 +66,7 @@ import '../../features/stories/story_reader_screen.dart';
 import '../../features/temples/temple_detail_screen.dart';
 import '../../features/temples/temple_models.dart';
 import '../../features/temples/collection_screen.dart';
+import '../../features/temples/passport_pages.dart';
 import '../../features/temples/passport_screen.dart';
 import '../../features/temples/temples_screen.dart';
 import '../shell/nav_scaffold.dart';
@@ -251,6 +252,12 @@ final appRouter = GoRouter(
       path: '/passport',
       builder: (c, s) => const PassportScreen(),
       routes: [
+        // These must come before ':tag', which would otherwise swallow them.
+        GoRoute(path: 'journey', builder: (c, s) => const JourneyScreen()),
+        GoRoute(
+            path: 'collections', builder: (c, s) => const CollectionsScreen()),
+        GoRoute(
+            path: 'milestones', builder: (c, s) => const MilestonesScreen()),
         GoRoute(
           path: ':tag',
           builder: (c, s) =>

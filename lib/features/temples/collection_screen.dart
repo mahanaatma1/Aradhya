@@ -224,6 +224,7 @@ class _StampSheet extends StatelessWidget {
                     templeId: e.templeId,
                     place: e.name(hindi),
                     date: e.visitedAt,
+                    state: e.state,
                     size: 92,
                   )
                 else

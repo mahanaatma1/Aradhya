@@ -156,6 +156,21 @@ class PassportCover extends StatelessWidget {
                 const SizedBox(height: 14),
                 _RankStrip(visits: visits, hindi: hindi),
               ],
+              const SizedBox(height: 14),
+              // The line that says what the document is actually for.
+              Text(
+                hindi
+                    ? 'यात्रा केवल स्थानों की नहीं, आत्मा की भी है।'
+                    : 'A journey is not only of places, but of the soul.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontFamily: AppFonts.accent,
+                  fontSize: 11.5,
+                  height: 1.4,
+                  fontStyle: FontStyle.italic,
+                  color: _emboss.withValues(alpha: 0.78),
+                ),
+              ),
             ],
           ),
         ),
@@ -187,10 +202,14 @@ class _RankStrip extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
-              rank.title(hindi),
+              hindi
+                  ? 'स्तर ${YatraRank.levelFor(visits)} • ${rank.titleHi}'
+                  : 'LEVEL ${YatraRank.levelFor(visits)} • '
+                      '${rank.titleEn.toUpperCase()}',
               style: const TextStyle(
                 fontFamily: AppFonts.display,
-                fontSize: 15,
+                fontSize: 14,
+                letterSpacing: 0.6,
                 fontWeight: FontWeight.w700,
                 color: Color(0xFFF3DFB8),
               ),
@@ -442,6 +461,7 @@ class StampPage extends StatelessWidget {
                   templeId: e.templeId,
                   place: e.name(hindi),
                   date: e.visitedAt,
+                  state: e.state,
                   size: 96,
                 ),
             ],
@@ -481,6 +501,8 @@ class PassportShareCard extends StatelessWidget {
   final List<PassportEntry> recent;
   final bool hindi;
   final PassportStats? stats;
+  final int jyotirlinga;
+  final int dham;
 
   const PassportShareCard({
     super.key,
@@ -489,6 +511,8 @@ class PassportShareCard extends StatelessWidget {
     required this.recent,
     required this.hindi,
     this.stats,
+    this.jyotirlinga = 0,
+    this.dham = 0,
   });
 
   @override
@@ -508,14 +532,46 @@ class PassportShareCard extends StatelessWidget {
         children: [
           PassportCover(
               holder: holder, visits: visits, hindi: hindi, stats: stats),
-          const SizedBox(height: 14),
+          const SizedBox(height: 12),
+
+          // What the journey adds up to, in four numbers somebody can read at
+          // a glance in a chat thread.
+          Row(
+            children: [
+              _ShareStat(
+                  value: '$visits', label: hindi ? 'दर्शन' : 'Darshan'),
+              _ShareStat(
+                  value: '${stats?.states ?? 0}',
+                  label: hindi ? 'राज्य' : 'States'),
+              _ShareStat(
+                  value: '$jyotirlinga',
+                  label: hindi ? 'ज्योतिर्लिंग' : 'Jyotirlinga'),
+              _ShareStat(
+                  value: '$dham', label: hindi ? 'धाम' : 'Dham'),
+            ],
+          ),
+          const SizedBox(height: 12),
+
           if (recent.isNotEmpty)
             StampPage(
-              entries: recent.take(6).toList(),
+              entries: recent.take(5).toList(),
               hindi: hindi,
               pageNumber: 1,
             ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 12),
+          Text(
+            hindi
+                ? 'श्रद्धा की यात्रा — एक बार में एक दर्शन।'
+                : 'A journey of faith, one darshan at a time.',
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontFamily: AppFonts.accent,
+              fontSize: 12.5,
+              fontStyle: FontStyle.italic,
+              color: Color(0xFF5A4632),
+            ),
+          ),
+          const SizedBox(height: 12),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -560,4 +616,38 @@ class PassportShareCard extends StatelessWidget {
       ),
     );
   }
+}
+
+/// One number on the share card, sized to be legible after a chat app has had
+/// its way with the image.
+class _ShareStat extends StatelessWidget {
+  final String value;
+  final String label;
+  const _ShareStat({required this.value, required this.label});
+
+  @override
+  Widget build(BuildContext context) => Expanded(
+        child: Column(
+          children: [
+            Text(value,
+                style: const TextStyle(
+                  fontFamily: AppFonts.display,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF3A2A18),
+                )),
+            const SizedBox(height: 2),
+            Text(label.toUpperCase(),
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 8,
+                  letterSpacing: 1.1,
+                  fontWeight: FontWeight.w700,
+                  color: Color(0xFF8A6A4F),
+                )),
+          ],
+        ),
+      );
 }

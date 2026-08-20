@@ -275,13 +275,16 @@ class YatraRank {
   const YatraRank(this.titleEn, this.titleHi, this.from);
 
   static const ladder = <YatraRank>[
-    YatraRank('Setting out', 'प्रस्थान', 0),
-    YatraRank('Pathik', 'पथिक', 1),
-    YatraRank('Yatri', 'यात्री', 5),
-    YatraRank('Tirthayatri', 'तीर्थयात्री', 12),
-    YatraRank('Sadhaka', 'साधक', 25),
-    YatraRank('Mahayatri', 'महायात्री', 50),
+    YatraRank('Yatri', 'यात्री', 0),
+    YatraRank('Bhakt', 'भक्त', 5),
+    YatraRank('Sadhak', 'साधक', 12),
+    YatraRank('Tirtha Yatri', 'तीर्थ यात्री', 25),
+    YatraRank('Tirtha Sevak', 'तीर्थ सेवक', 50),
+    YatraRank('Yatra Acharya', 'यात्रा आचार्य', 100),
   ];
+
+  /// One-based, because "Level 1" is where a journey starts, not level zero.
+  static int levelFor(int n) => ladder.indexOf(forCount(n)) + 1;
 
   String title(bool hi) => hi ? titleHi : titleEn;
 
@@ -301,3 +304,126 @@ class YatraRank {
     return null;
   }
 }
+
+/// A milestone: something that happened on the journey, marked once.
+///
+/// Deliberately not points, coins or a leaderboard. Each one names a real
+/// first -- a first darshan, a first state, a first dham -- so the reward for
+/// a pilgrimage is the record of it, not a score attached to it.
+class Milestone {
+  final String id;
+  final String titleEn;
+  final String titleHi;
+  final String blurbEn;
+  final String blurbHi;
+  final bool earned;
+
+  const Milestone({
+    required this.id,
+    required this.titleEn,
+    required this.titleHi,
+    required this.blurbEn,
+    required this.blurbHi,
+    required this.earned,
+  });
+
+  String title(bool hi) => hi ? titleHi : titleEn;
+  String blurb(bool hi) => hi ? blurbHi : blurbEn;
+}
+
+/// Every milestone, earned or not, in a fixed order.
+///
+/// Unearned ones are returned too: a milestone you cannot see is not something
+/// to aim at.
+final milestonesProvider = FutureProvider<List<Milestone>>((ref) async {
+  final visited = await ref.watch(visitedTemplesProvider.future);
+  final stats = PassportStats.of(visited);
+
+  var jyotirlinga = 0;
+  var dham = 0;
+  var setsComplete = 0;
+  for (final c in kCollections) {
+    final list = await ref.watch(collectionProvider(c.tag).future);
+    final done = list.where((e) => e.visited).length;
+    if (list.isNotEmpty && done >= list.length) setsComplete++;
+    if (c.tag == 'jyotirlinga') jyotirlinga = done;
+    if (c.tag == 'char_dham') dham = done;
+  }
+
+  return [
+    Milestone(
+      id: 'first_darshan',
+      titleEn: 'First Darshan',
+      titleHi: 'प्रथम दर्शन',
+      blurbEn: 'Your first pilgrimage recorded.',
+      blurbHi: 'आपकी पहली यात्रा दर्ज हुई।',
+      earned: stats.darshan >= 1,
+    ),
+    Milestone(
+      id: 'first_state',
+      titleEn: 'First State',
+      titleHi: 'प्रथम राज्य',
+      blurbEn: 'Your first state added to the passport.',
+      blurbHi: 'पासपोर्ट में पहला राज्य जुड़ा।',
+      earned: stats.states >= 1,
+    ),
+    Milestone(
+      id: 'five_temples',
+      titleEn: 'Five Darshans',
+      titleHi: 'पाँच दर्शन',
+      blurbEn: 'Five temples visited.',
+      blurbHi: 'पाँच मंदिरों के दर्शन।',
+      earned: stats.darshan >= 5,
+    ),
+    Milestone(
+      id: 'first_dham',
+      titleEn: 'First Dham',
+      titleHi: 'प्रथम धाम',
+      blurbEn: 'You have stood at one of the Char Dham.',
+      blurbHi: 'आपने चार धाम में से एक के दर्शन किए।',
+      earned: dham >= 1,
+    ),
+    Milestone(
+      id: 'jyotirlinga_seeker',
+      titleEn: 'Jyotirlinga Seeker',
+      titleHi: 'ज्योतिर्लिंग साधक',
+      blurbEn: 'Three of the twelve Jyotirlingas visited.',
+      blurbHi: 'बारह ज्योतिर्लिंगों में से तीन के दर्शन।',
+      earned: jyotirlinga >= 3,
+    ),
+    Milestone(
+      id: 'pan_india',
+      titleEn: 'Pan-India Yatri',
+      titleHi: 'अखिल भारत यात्री',
+      blurbEn: 'Temples visited across five states.',
+      blurbHi: 'पाँच राज्यों में मंदिरों के दर्शन।',
+      earned: stats.states >= 5,
+    ),
+    Milestone(
+      id: 'set_complete',
+      titleEn: 'A Set Complete',
+      titleHi: 'एक संग्रह पूर्ण',
+      blurbEn: 'Every temple in one traditional set.',
+      blurbHi: 'एक पारंपरिक संग्रह के सभी मंदिर।',
+      earned: setsComplete >= 1,
+    ),
+  ];
+});
+
+/// The states this journey has touched, most-visited first.
+final visitedStatesProvider = FutureProvider<List<MapEntry<String, int>>>(
+    (ref) async {
+  final visited = await ref.watch(visitedTemplesProvider.future);
+  final counts = <String, int>{};
+  for (final e in visited) {
+    final s = (e.state ?? '').trim();
+    if (s.isEmpty) continue;
+    counts[s] = (counts[s] ?? 0) + 1;
+  }
+  final out = counts.entries.toList()
+    ..sort((a, b) {
+      final c = b.value.compareTo(a.value);
+      return c != 0 ? c : a.key.compareTo(b.key);
+    });
+  return out;
+});

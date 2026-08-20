@@ -22,6 +22,10 @@ class PassportStamp extends StatelessWidget {
   final int templeId;
   final String place;
   final DateTime? date;
+
+  /// Rendered around the bottom rim. It is what makes one stamp tell itself
+  /// apart from another on a full page.
+  final String? state;
   final double size;
 
   const PassportStamp({
@@ -29,6 +33,7 @@ class PassportStamp extends StatelessWidget {
     required this.templeId,
     required this.place,
     this.date,
+    this.state,
     this.size = 104,
   });
 
@@ -48,6 +53,7 @@ class PassportStamp extends StatelessWidget {
           painter: _StampPainter(
             place: place,
             date: date,
+            state: state,
             ink: ink,
             seed: templeId,
           ),
@@ -60,12 +66,14 @@ class PassportStamp extends StatelessWidget {
 class _StampPainter extends CustomPainter {
   final String place;
   final DateTime? date;
+  final String? state;
   final double ink;
   final int seed;
 
   const _StampPainter({
     required this.place,
     required this.date,
+    required this.state,
     required this.ink,
     required this.seed,
   });
@@ -111,22 +119,40 @@ class _StampPainter extends CustomPainter {
     // Place name curved along the top of the rim.
     _arcText(canvas, c, r - 15, place.toUpperCase(), colour, top: true);
 
+    // A shikhara over the date, so a stamp reads as a temple rather than a
+    // generic cachet. Drawn from the seed so no two sit identically.
+    _shikhara(canvas, c.translate(0, -r * 0.30), r * 0.30, colour);
+
     // Date across the middle, the way an entry stamp reads.
     if (date != null) {
       final d = date!;
-      _line(canvas, c.translate(0, -7),
-          '${d.day.toString().padLeft(2, '0')} ${_mon[d.month - 1]}',
-          colour, 12.5, FontWeight.w800);
-      _line(canvas, c.translate(0, 7), '${d.year}', colour, 11, FontWeight.w700);
+      _line(
+          canvas,
+          c.translate(0, r * 0.16),
+          '${d.day.toString().padLeft(2, '0')} ${_mon[d.month - 1]} ${d.year}',
+          colour,
+          10.5,
+          FontWeight.w800);
+    } else {
+      _line(canvas, c.translate(0, r * 0.16), 'DARSHAN', colour, 9.5,
+          FontWeight.w700);
     }
 
     // Two rules, as on a real cachet.
-    canvas.drawLine(c.translate(-r * 0.42, -1), c.translate(r * 0.42, -1),
+    canvas.drawLine(c.translate(-r * 0.40, r * 0.04), c.translate(r * 0.40, r * 0.04),
         Paint()..strokeWidth = 0.9..color = colour.withValues(alpha: 0.5));
-    canvas.drawLine(c.translate(-r * 0.42, 16), c.translate(r * 0.42, 16),
+    canvas.drawLine(c.translate(-r * 0.40, r * 0.30), c.translate(r * 0.40, r * 0.30),
         Paint()..strokeWidth = 0.9..color = colour.withValues(alpha: 0.5));
 
-    _arcText(canvas, c, r - 15, 'ARADHYA', colour.withValues(alpha: 0.8),
+    _line(canvas, c.translate(0, r * 0.44), 'ARADHYA',
+        colour.withValues(alpha: 0.75), 6.5, FontWeight.w800);
+
+    // The state around the bottom rim -- the line that makes one stamp
+    // distinguishable from another at a glance.
+    final foot = (state == null || state!.trim().isEmpty)
+        ? 'YATRA'
+        : state!.toUpperCase();
+    _arcText(canvas, c, r - 15, foot, colour.withValues(alpha: 0.85),
         top: false);
 
     // Ink breaks: a struck stamp never prints evenly.
@@ -139,6 +165,48 @@ class _StampPainter extends CustomPainter {
           1.2 + rnd.nextDouble() * 2.2, erase);
     }
     canvas.restore();
+  }
+
+  /// A shikhara in outline: plinth, curved tower, kalasha.
+  ///
+  /// Two strokes and a dot is enough -- at 20 logical pixels a detailed
+  /// elevation turns to mud, and the point is recognition, not architecture.
+  void _shikhara(Canvas canvas, Offset base, double h, Color colour) {
+    final w = h * 0.86;
+    final stroke = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 1.25
+      ..strokeJoin = StrokeJoin.round
+      ..color = colour;
+
+    final left = base.dx - w / 2;
+    final right = base.dx + w / 2;
+    final bottom = base.dy + h / 2;
+    final top = base.dy - h / 2;
+
+    // Plinth.
+    canvas.drawLine(Offset(left - w * 0.14, bottom),
+        Offset(right + w * 0.14, bottom), stroke);
+
+    // Tower: two curves meeting under the finial.
+    final tower = Path()
+      ..moveTo(left, bottom)
+      ..quadraticBezierTo(left + w * 0.16, top + h * 0.30, base.dx, top)
+      ..quadraticBezierTo(right - w * 0.16, top + h * 0.30, right, bottom);
+    canvas.drawPath(tower, stroke);
+
+    // Doorway.
+    final door = Path()
+      ..moveTo(base.dx - w * 0.13, bottom)
+      ..lineTo(base.dx - w * 0.13, bottom - h * 0.22)
+      ..quadraticBezierTo(
+          base.dx, bottom - h * 0.34, base.dx + w * 0.13, bottom - h * 0.22)
+      ..lineTo(base.dx + w * 0.13, bottom);
+    canvas.drawPath(door, stroke..strokeWidth = 0.9);
+
+    // Kalasha.
+    canvas.drawCircle(Offset(base.dx, top - h * 0.10), h * 0.075,
+        Paint()..color = colour);
   }
 
   void _line(Canvas canvas, Offset at, String text, Color colour, double size,
@@ -193,7 +261,10 @@ class _StampPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _StampPainter old) =>
-      old.place != place || old.date != date || old.ink != ink;
+      old.place != place ||
+      old.date != date ||
+      old.state != state ||
+      old.ink != ink;
 }
 
 /// The paper a passport page is printed on: warm stock with a faint guilloche

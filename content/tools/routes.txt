@@ -47,6 +47,9 @@
 /panchang
 /passport
 /passport/:tag
+/passport/collections
+/passport/journey
+/passport/milestones
 /personality
 /puja
 /puja-detail
