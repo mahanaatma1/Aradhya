@@ -423,7 +423,7 @@ Already fetched: `vp101`, `vp102`, `vp108` (Book IV chapters VIII, IX, XV).
 **Done when**
 - [ ] Relationship-type filter: Family · Lineage · Guru/Disciple · Dynasty
 - [ ] Tree renders to depth 3 with collapse past 4 children
-- [ ] `tradition` selector appears when edges disagree, and says which is shown
+- [x] `tradition` selector appears when edges disagree, and says which is shown
 - [ ] Re-root then back returns to the previous root
 - [ ] A figure with no lineage shows a written empty state
 - [ ] Family tree tests pass
@@ -1136,9 +1136,9 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **KG-08** Device check: pan and zoom performance on the canvas
 - [ ] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple · Dynasty
 - [ ] **FT-02** Recursive layout to depth 3
-- [ ] **FT-03** Collapse and expand past 4 children
-- [ ] **FT-04** `tradition` selector when edges disagree
-- [ ] **FT-05** Breadcrumb so a re-root walk is reversible
+- [x] **FT-03** Collapse and expand past 4 children
+- [x] **FT-04** `tradition` selector when edges disagree
+- [x] **FT-05** Breadcrumb so a re-root walk is reversible
 - [x] **SY-01** Prose on all 30 cosmology nodes — was 14; Creation and Time had none
 - [x] **SY-02** Traditions-differ layer, rendered in its own panel
 - [x] **SY-03** Brahmanda diagram replaces the loka list

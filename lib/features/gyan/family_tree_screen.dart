@@ -30,10 +30,37 @@ class FamilyTreeScreen extends ConsumerStatefulWidget {
 class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
   int? _root;
 
+  /// Where the walk has been. Long-pressing re-roots in place rather than
+  /// pushing a route, so without this the way back is lost the moment you
+  /// move -- and the back button leaves the tree entirely.
+  final List<int> _trail = [];
+
+  /// Which tradition's reading to show, when the edges disagree (FT-04).
+  String? _tradition;
+
   @override
   void initState() {
     super.initState();
     _root = widget.rootId;
+    if (_root != null) _trail.add(_root!);
+  }
+
+  void _reroot(int id) {
+    setState(() {
+      if (_trail.contains(id)) {
+        _trail.removeRange(_trail.indexOf(id) + 1, _trail.length);
+      } else {
+        _trail.add(id);
+      }
+      _root = id;
+    });
+  }
+
+  void _truncateTo(int index) {
+    setState(() {
+      _trail.removeRange(index + 1, _trail.length);
+      _root = _trail[index];
+    });
   }
 
   @override
@@ -49,7 +76,11 @@ class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
             IconButton(
               tooltip: hi ? 'दूसरा मूल चुनें' : 'Choose another root',
               icon: const Icon(Icons.account_tree_rounded),
-              onPressed: () => setState(() => _root = null),
+              onPressed: () => setState(() {
+                _root = null;
+                _trail.clear();
+                _tradition = null;
+              }),
             ),
         ],
       ),
@@ -62,14 +93,30 @@ class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
             return _RootPicker(
               entities: entities,
               hindi: hi,
-              onPick: (id) => setState(() => _root = id),
+              onPick: _reroot,
             );
           }
-          return _Tree(
-            rootId: _root!,
-            byId: {for (final e in entities) e.id: e},
-            hindi: hi,
-            onReroot: (id) => setState(() => _root = id),
+          final byId = {for (final e in entities) e.id: e};
+          return Column(
+            children: [
+              if (_trail.length > 1)
+                _Breadcrumb(
+                  trail: _trail,
+                  byId: byId,
+                  hindi: hi,
+                  onTap: _truncateTo,
+                ),
+              Expanded(
+                child: _Tree(
+                  rootId: _root!,
+                  byId: byId,
+                  hindi: hi,
+                  onReroot: _reroot,
+                  tradition: _tradition,
+                  onTradition: (t) => setState(() => _tradition = t),
+                ),
+              ),
+            ],
           );
         },
       ),
@@ -175,6 +222,8 @@ class _RootRow extends ConsumerWidget {
 /// canvas, and re-rooting (long-press) walks the tree one step at a time.
 class _Tree extends ConsumerWidget {
   final int rootId;
+  final String? tradition;
+  final ValueChanged<String?> onTradition;
   final Map<int, Entity> byId;
   final bool hindi;
   final ValueChanged<int> onReroot;
@@ -184,6 +233,8 @@ class _Tree extends ConsumerWidget {
     required this.byId,
     required this.hindi,
     required this.onReroot,
+    required this.tradition,
+    required this.onTradition,
   });
 
   @override
@@ -193,22 +244,34 @@ class _Tree extends ConsumerWidget {
         ref.watch(entityRelationsProvider(rootId)).valueOrNull ?? const [];
     if (root == null) return const SizedBox.shrink();
 
-    final parents = rels
-        .where((r) => r.relType == 'child_of' || r.relType == 'parent_of')
-        .toList();
-    final partners = rels
-        .where((r) => r.relType == 'spouse_of' || r.relType == 'consort_of')
-        .toList();
-    final children = rels
-        .where((r) => r.relType == 'father_of' || r.relType == 'mother_of')
-        .toList();
-    final siblings = rels.where((r) => r.relType == 'sibling_of').toList();
-
-    // Traditions that disagree are labelled, never silently reconciled.
+    // Traditions that disagree are labelled, never silently reconciled. When
+    // one is chosen, edges with no tradition stay -- they are the undisputed
+    // ones, and dropping them would empty most of the tree.
     final traditions = {
       for (final r in rels)
         if (r.tradition != null && r.tradition!.isNotEmpty) r.tradition!,
-    };
+    }.toList()
+      ..sort();
+
+    final rels2 = tradition == null
+        ? rels
+        : rels
+            .where((r) =>
+                r.tradition == null ||
+                r.tradition!.isEmpty ||
+                r.tradition == tradition)
+            .toList();
+
+    final parents = rels2
+        .where((r) => r.relType == 'child_of' || r.relType == 'parent_of')
+        .toList();
+    final partners = rels2
+        .where((r) => r.relType == 'spouse_of' || r.relType == 'consort_of')
+        .toList();
+    final children = rels2
+        .where((r) => r.relType == 'father_of' || r.relType == 'mother_of')
+        .toList();
+    final siblings = rels2.where((r) => r.relType == 'sibling_of').toList();
 
     final scheme = Theme.of(context).colorScheme;
 
@@ -220,6 +283,15 @@ class _Tree extends ConsumerWidget {
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
         child: Column(
           children: [
+            if (traditions.length > 1) ...[
+              _TraditionPicker(
+                traditions: traditions,
+                selected: tradition,
+                hindi: hindi,
+                onPick: onTradition,
+              ),
+              const SizedBox(height: 12),
+            ],
             // Generations run top to bottom and are joined with real brackets,
             // so three children read as three descents from one couple rather
             // than as a list that happens to sit lower on the screen.
@@ -277,8 +349,8 @@ class _Tree extends ConsumerWidget {
                       ? 'लंबे समय तक दबाकर किसी नाम को केंद्र बनाएँ।'
                       : 'Long-press a name to re-root the tree there.')
                   : (hindi
-                      ? 'परंपरा अनुसार: ${traditions.join(", ")}'
-                      : 'As given in: ${traditions.join(", ")}'),
+                      ? 'परंपरा अनुसार: ${tradition ?? traditions.join(", ")}'
+                      : 'As given in: ${tradition ?? traditions.join(", ")}'),
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 11.5,
@@ -501,7 +573,10 @@ class _RootCard extends StatelessWidget {
   }
 }
 
-class _Band extends StatelessWidget {
+/// A generation band. Past four names it collapses, because a canvas is only
+/// readable while a generation fits on one screen -- and some of these
+/// lineages run to dozens of children.
+class _Band extends StatefulWidget {
   final List<EntityRelation> relations;
   final bool hindi;
   final ValueChanged<int> onReroot;
@@ -509,14 +584,52 @@ class _Band extends StatelessWidget {
       {required this.relations, required this.hindi, required this.onReroot});
 
   @override
+  State<_Band> createState() => _BandState();
+}
+
+class _BandState extends State<_Band> {
+  static const _cap = 4;
+  bool _open = false;
+
+  @override
   Widget build(BuildContext context) {
-    return Wrap(
-      alignment: WrapAlignment.center,
-      spacing: 8,
-      runSpacing: 8,
+    final all = widget.relations;
+    final collapsed = !_open && all.length > _cap;
+    final shown = collapsed ? all.take(_cap).toList() : all;
+    final scheme = Theme.of(context).colorScheme;
+
+    return Column(
       children: [
-        for (final r in relations)
-          _PersonCard(relation: r, hindi: hindi, onReroot: onReroot),
+        Wrap(
+          alignment: WrapAlignment.center,
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final r in shown)
+              _PersonCard(
+                  relation: r,
+                  hindi: widget.hindi,
+                  onReroot: widget.onReroot),
+          ],
+        ),
+        if (all.length > _cap)
+          TextButton(
+            onPressed: () => setState(() => _open = !_open),
+            style: TextButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 6),
+              minimumSize: const Size(0, 30),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            ),
+            child: Text(
+              collapsed
+                  ? (widget.hindi
+                      ? '${all.length - _cap} और'
+                      : 'Show ${all.length - _cap} more')
+                  : (widget.hindi ? 'कम दिखाएँ' : 'Show fewer'),
+              style: TextStyle(
+                  fontSize: 12, color: scheme.primary.withValues(alpha: 0.9)),
+            ),
+          ),
       ],
     );
   }
@@ -569,6 +682,107 @@ class _PersonCard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// The path a re-root walk has taken, so it can be undone.
+class _Breadcrumb extends StatelessWidget {
+  final List<int> trail;
+  final Map<int, Entity> byId;
+  final bool hindi;
+  final ValueChanged<int> onTap;
+  const _Breadcrumb({
+    required this.trail,
+    required this.byId,
+    required this.hindi,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return SizedBox(
+      height: 40,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        itemCount: trail.length,
+        itemBuilder: (c, i) {
+          final e = byId[trail[i]];
+          if (e == null) return const SizedBox.shrink();
+          final last = i == trail.length - 1;
+          return Row(
+            children: [
+              if (i > 0)
+                Icon(Icons.chevron_right_rounded,
+                    size: 16,
+                    color: scheme.onSurface.withValues(alpha: 0.35)),
+              InkWell(
+                borderRadius: BorderRadius.circular(8),
+                onTap: last ? null : () => onTap(i),
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+                  child: Text(
+                    e.title(hindi),
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      fontWeight: last ? FontWeight.w700 : FontWeight.w500,
+                      color: last
+                          ? scheme.onSurface
+                          : scheme.primary.withValues(alpha: 0.9),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}
+
+/// Which tradition's lineage to read.
+///
+/// Only appears when the edges actually disagree. The app does not pick a
+/// winner; it shows one reading at a time and says which.
+class _TraditionPicker extends StatelessWidget {
+  final List<String> traditions;
+  final String? selected;
+  final bool hindi;
+  final ValueChanged<String?> onPick;
+  const _TraditionPicker({
+    required this.traditions,
+    required this.selected,
+    required this.hindi,
+    required this.onPick,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      alignment: WrapAlignment.center,
+      spacing: 6,
+      runSpacing: 6,
+      children: [
+        ChoiceChip(
+          label: Text(hindi ? 'सभी परंपराएँ' : 'All traditions'),
+          labelStyle: const TextStyle(fontSize: 12),
+          visualDensity: VisualDensity.compact,
+          selected: selected == null,
+          onSelected: (_) => onPick(null),
+        ),
+        for (final t in traditions)
+          ChoiceChip(
+            label: Text(t),
+            labelStyle: const TextStyle(fontSize: 12),
+            visualDensity: VisualDensity.compact,
+            selected: selected == t,
+            onSelected: (_) => onPick(selected == t ? null : t),
+          ),
+      ],
     );
   }
 }
