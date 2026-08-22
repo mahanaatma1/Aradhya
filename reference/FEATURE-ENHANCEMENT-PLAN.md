@@ -570,6 +570,126 @@ panel is correct and should not be reordered.
 
 # Part 3 — Narrative
 
+## Story Cards — the narrative redesign
+
+**Decided 2026-08-22.** The Narrative section stops presenting itself as a
+timeline of records and becomes two small illustrated books. This is a
+presentation and data-model upgrade over `narrative_nodes`, **not a new
+module** — Search, Related Content, the Knowledge Graph, Journeys and Ask all
+keep reading the same table.
+
+### The hierarchy
+
+```
+Epic
+ └── Section        (Kanda / Parva)
+      └── Story Arc
+           └── Event
+                ├── Quick Summary      30-second read
+                ├── Story              100-250 words minor, 300-600 major
+                ├── Reflection         a question, never a moral
+                ├── Characters         narrative_cast
+                ├── Places             place_entity_id
+                └── Sources            recension + chapter
+```
+
+**Arc is the new level.** Today a kanda holds a flat run of scenes; an arc
+groups the handful that belong to one movement of the story, which is what
+makes a section navigable without a scroll bar.
+
+### Do not set a target count
+
+The plan previously said "45–50 scenes" and "45–55 events". **Both numbers are
+withdrawn.** Map `Section -> Arc -> Event -> source reference` first and let
+the count fall out. A fixed target is an invitation to split one meaningful
+event into five to reach it, which is the padding failure the coverage rule at
+the top of this document already forbids.
+
+### Schema additions to `narrative_nodes`
+
+Additive only; every column nullable so existing rows stay valid.
+
+| Column | Why |
+|---|---|
+| `arc_slug`, `arc_title_en/hi` | the missing middle level |
+| `quick_summary_en/hi` | the 30-second read; distinct from `short_description`, which is a card blurb |
+| `story_en/hi` | the narrative proper. `long_description` is reused where it already holds one |
+| `key_moments_en/hi` | JSON array of 3–6 beats, for the "What happened" list |
+| `reflection_en/hi` | a **question**, not a lesson. Feeds the Dharma game and Journal |
+| `themes` | JSON array: dharma, duty, sacrifice — drives Explore-by-theme |
+| `illustration_asset` | nullable; the manifest gate in §1.12 applies |
+| `prev_node_id`, `next_node_id` | denormalised at build time so prev/next never costs a query |
+
+`lesson_en/hi` stays for existing rows but is **deprecated in favour of
+`reflection_*`**: "Moral lesson: be good" is the register to avoid.
+
+### Screens
+
+**Epic home — two modes, one toggle.**
+`[ Story ]` renders the kanda/parva books with arcs inside them.
+`[ Timeline ]` keeps the existing vertical path for Ramayana and horizontal
+band for Mahabharata. Neither is the "real" one; the toggle is remembered.
+
+**Explore by** — a chip row above both modes: Book · Story · Characters ·
+Places · Themes. Characters and Places are filters over `narrative_cast` and
+`place_entity_id`, which already exist; Themes needs the new column.
+
+**Event page**, in fixed order:
+illustration → title with section and arc → Quick Summary → Story →
+Key moments → Reflection (a question, with "Think about it →" into the
+Journal) → People → Place → Themes → **Read the original text** → RelatedRail
+→ Previous / Next with a one-line preview of what is next.
+
+**Two layers, always.** Story mode is ours and plain; scripture mode is the
+cited text. The "Read the original" button is not optional decoration — it is
+what makes the retelling trustworthy, and it must land on the exact
+`scripture_section_id`, not the top of a book.
+
+### Content rule — non-negotiable
+
+Narrative prose is **never** written from model memory. Every event follows:
+
+```
+cited PD chapter -> fetched into raw/ -> read -> drafted -> verified -> DB
+```
+
+with `recension` and the chapter recorded per event. Valmiki, Ramcharitmanas
+and Kamba are separate recensions and are never mixed into one sequence. Where
+traditions differ the event says so, exactly as the Family Tree does.
+
+**Uttara Kanda is labelled a distinct traditional section**, because textual
+traditions and scholarly views of its place differ. That label is content, not
+commentary from us.
+
+### Sections to build
+
+**Ramayana — 7 kandas.** Bala (birth and education, Vishvamitra, Ahalya,
+swayamvara, the bow, marriage) · Ayodhya (the boons, exile, Sita's and
+Lakshmana's choice, departure, Dasharatha's grief, Bharata and the sandals) ·
+Aranya (the forest, Surpanakha, Khara and Dushana, the golden deer, Maricha,
+the abduction, Jatayu, Shabari) · Kishkindha (Hanuman, Sugriva, Vali, the
+search, Sampati) · Sundara (the crossing, Surasa, Lanka, Ashoka Vatika, Sita,
+the ring, the burning, the return) · Yuddha (the ocean, the bridge, the
+negotiations, Kumbhakarna, Indrajit, Ravana, Sita's return) · Uttara (the
+reign, Lava and Kusha, the departure) — labelled as above.
+
+**Mahabharata — 18 parvas**, each a book, with arcs inside. Adi (lineage,
+births, Drona, Ekalavya, Lakshagriha, Hidimba, Draupadi) · Sabha (Rajasuya,
+Shishupala, the dice game, the assembly) · Vana (exile, Arjuna's journey,
+Kirata, Bhima and Hanuman, Nala-Damayanti, Yaksha Prashna) · Virata (the
+disguises, Kichaka, the cattle raid) · Udyoga (the peace mission, Krishna's
+choice, the armies) · Bhishma (the field, Arjuna's dilemma, the Gita, the
+fall) · Drona (Abhimanyu, the chakravyuha, the vow, Jayadratha) · Karna ·
+Shalya · Sauptika (the night attack) · Stri (the grief, Gandhari) · Shanti and
+Anushasana — **treated as teachings, not events**, and presented as topics ·
+Ashvamedhika · Ashramavasika · Mausala · Mahaprasthanika · Svargarohana.
+
+Shanti and Anushasana deserve the different treatment: they are Bhishma
+discoursing on dharma and governance from the bed of arrows, and forcing them
+into "event" cards would misrepresent what they are.
+
+---
+
 ## Ramayana Journey
 
 **State** 🟢 · 32 scenes, seven kandas, all with bilingual prose. Vertical
@@ -578,7 +698,9 @@ and pinned by test.
 
 **Gap** Uttara Kanda has one scene. No place-linked map view.
 
-**Target** 45–50 scenes; every scene linked to a `place` entity.
+**Target** Every kanda mapped to arcs, every event sourced, every scene
+linked to a `place` entity. **No scene count** — see the Story Cards rule
+above.
 
 **Data** Griffith (fetched, 13 cantos located by probing). Dutt's Ramayana for
 cross-check. **Method note:** Griffith writes ś as the digraph `s'`
@@ -1167,12 +1289,32 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Narrative
 
-- [ ] **RM-01** Ramayana 32 to 45–50 scenes; Uttara Kanda has one
+### Story Cards (2026-08-22)
+
+- [ ] **SC-01** Schema: `arc_*`, `quick_summary_*`, `story_*`, `key_moments_*`,
+      `reflection_*`, `themes`, `illustration_asset`, `prev/next_node_id`
+- [ ] **SC-02** Map Ramayana kandas to arcs, with a source reference per event
+- [ ] **SC-03** Map Mahabharata parvas to arcs, ditto
+- [ ] **SC-04** Fetch the PD chapters each mapped event needs
+- [ ] **SC-05** Quick Summary for every event — 30-second read
+- [ ] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited
+- [ ] **SC-07** Key moments: 3–6 beats per event
+- [ ] **SC-08** Reflection as a **question**, wired to Journal and Dharma game
+- [ ] **SC-09** Deprecate `lesson_*` in favour of `reflection_*`
+- [ ] **SC-10** Event page in the fixed order, ending in prev/next with preview
+- [ ] **SC-11** "Read the original" lands on the exact `scripture_section_id`
+- [ ] **SC-12** Story / Timeline toggle, remembered per user
+- [ ] **SC-13** Explore by: Book · Story · Characters · Places · Themes
+- [ ] **SC-14** Shanti and Anushasana presented as teachings, not events
+- [ ] **SC-15** Uttara Kanda labelled a distinct traditional section
+- [ ] **SC-16** `prev/next_node_id` denormalised at build time
+
 - [ ] **RM-02** Every scene linked to a `place` entity
 - [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka
-- [ ] **MB-01** Mahabharata 29 to 45–55 events; every parva represented
 - [ ] **MB-02** Optional parva rail beside the arc chips
 - [ ] **NR-01** Add `chronology_confidence` — narrative order is not historical order
+- [-] **RM-01** ~~Ramayana 32 to 45–50 scenes~~ — count withdrawn, see SC-02
+- [-] **MB-01** ~~Mahabharata 29 to 45–55 events~~ — count withdrawn, see SC-03
 - [ ] **ST-01** Merge stories and kathas into one categorised list
 - [ ] **ST-02** Every story entity-linked
 
