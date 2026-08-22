@@ -1,11 +1,11 @@
 {
  "counts": {
-  "entities": 511,
-  "entities_verified": 176,
+  "entities": 512,
+  "entities_verified": 177,
   "entities_with_prose": 27,
-  "entities_hindi": 511,
-  "relations": 578,
-  "aliases": 2120,
+  "entities_hindi": 512,
+  "relations": 970,
+  "aliases": 2125,
   "narrative_nodes": 79,
   "narrative_with_prose": 61,
   "cosmology_nodes": 30,
@@ -19,9 +19,9 @@
   "path_steps": 49,
   "journal_prompts": 28,
   "sources": 18,
-  "item_sources": 870,
-  "search_docs": 33245,
-  "related_edges": 4650
+  "item_sources": 871,
+  "search_docs": 33246,
+  "related_edges": 4839
  },
  "slugs": {
   "entities": [
@@ -94,6 +94,7 @@
    "bhaga",
    "bhagadatta",
    "bhagavad-gita",
+   "bhagavata-purana",
    "bhairava",
    "bhairavi",
    "bhakti",

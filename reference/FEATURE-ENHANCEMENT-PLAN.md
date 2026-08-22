@@ -1126,10 +1126,13 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Knowledge system
 
-- [ ] **KG-01** Widen the Wikidata pull: `P1080`, `P527`, `P361`, `P2789` + epic properties
-- [ ] **KG-02** 100% of P0 entities have a description
-- [ ] **KG-03** 100% of P0 entities have 3 or more verified relations
-- [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations
+- [x] **KG-01** Widen the Wikidata pull: `P527`, `P361`, **`P1441`** + epic properties
+      — the pull already fetched them; `wd_promote` was discarding 433 of 1362
+      edges. `wd_edges_extra.py` maps them. Relations 578 -> 970; entities with
+      no edges 285 -> 208. `P1080`/`P2789` return nothing for this corpus
+- [x] **KG-02** 100% of P0 entities have a description — measured 135/135
+- [ ] **KG-03** 100% of P0 entities have 3 or more verified relations — **36/135 today**
+- [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations — **63% (237/376) today**
 - [x] **KG-05** Written empty state for an entity with no edges — 285 of 511 today
 - [x] **KG-06** Group more than 20 relations by family
 - [x] **KG-07** Relation-family filter chips
