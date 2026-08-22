@@ -216,10 +216,11 @@ class _Body extends ConsumerWidget {
                   const SizedBox(height: 18),
                   _PropsCard(entity: entity, hindi: hindi),
                 ],
-                if (relations.isNotEmpty) ...[
-                  const SizedBox(height: 18),
-                  _Connections(relations: relations, hindi: hindi),
-                ],
+                const SizedBox(height: 18),
+                if (relations.isNotEmpty)
+                  _Connections(relations: relations, hindi: hindi)
+                else
+                  _NoConnections(hindi: hindi),
               ],
             ),
           ),
@@ -430,26 +431,93 @@ class _InterpretationPanel extends StatelessWidget {
 }
 
 /// Typed edges, grouped by family, each row navigating deeper into the graph.
-class _Connections extends StatelessWidget {
+/// Connections, grouped by family.
+///
+/// Two behaviours only kick in on the well-connected entities: past twenty
+/// edges the families collapse to a few rows each, and filter chips appear.
+/// Krishna has enough relations to bury the rest of the page otherwise, while
+/// an entity with four edges needs neither and gets neither.
+class _Connections extends StatefulWidget {
   final List<EntityRelation> relations;
   final bool hindi;
   const _Connections({required this.relations, required this.hindi});
 
   @override
+  State<_Connections> createState() => _ConnectionsState();
+}
+
+class _ConnectionsState extends State<_Connections> {
+  static const _order = [
+    'lineage', 'teaching', 'epic', 'text', 'place', 'general'
+  ];
+
+  /// Beyond this many edges the section starts managing itself.
+  static const _busy = 20;
+
+  /// Rows shown per family before a "show all" appears.
+  static const _perFamily = 5;
+
+  String? _filter;
+  final _expanded = <String>{};
+
+  @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final hindi = widget.hindi;
+    final relations = widget.relations;
+    final busy = relations.length > _busy;
 
     final groups = <String, List<EntityRelation>>{};
     for (final r in relations) {
       groups.putIfAbsent(r.family, () => []).add(r);
     }
-    const order = ['lineage', 'teaching', 'epic', 'text', 'place', 'general'];
-    final keys = order.where(groups.containsKey);
+    final present = _order.where(groups.containsKey).toList();
+    final keys = _filter == null
+        ? present
+        : present.where((f) => f == _filter).toList();
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _Label(hindi ? 'संबंध' : 'CONNECTIONS'),
+        Row(
+          children: [
+            _Label(hindi ? 'संबंध' : 'CONNECTIONS'),
+            const SizedBox(width: 8),
+            Text('${relations.length}',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                  color: scheme.onSurface.withValues(alpha: 0.4),
+                )),
+          ],
+        ),
+        // Filter chips only where they earn their space.
+        if (busy && present.length > 1) ...[
+          const SizedBox(height: 10),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              ChoiceChip(
+                label: Text(hindi ? 'सभी' : 'All'),
+                labelStyle: const TextStyle(fontSize: 12),
+                visualDensity: VisualDensity.compact,
+                selected: _filter == null,
+                onSelected: (_) => setState(() => _filter = null),
+              ),
+              for (final f in present)
+                ChoiceChip(
+                  label: Text(
+                      '${RelLabels.familyLabel(f, hindi)} ${groups[f]!.length}'),
+                  labelStyle: const TextStyle(fontSize: 12),
+                  visualDensity: VisualDensity.compact,
+                  selected: _filter == f,
+                  onSelected: (_) => setState(
+                      () => _filter = _filter == f ? null : f),
+                ),
+            ],
+          ),
+        ],
         for (final family in keys) ...[
           const SizedBox(height: 10),
           Text(RelLabels.familyLabel(family, hindi),
@@ -458,7 +526,7 @@ class _Connections extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                   color: scheme.primary)),
           const SizedBox(height: 6),
-          for (final r in groups[family]!)
+          for (final r in _rowsFor(groups[family]!, family, busy))
             InkWell(
               borderRadius: BorderRadius.circular(10),
               onTap: () => context.push('/gyan/entity/${r.dstId}'),
@@ -509,7 +577,90 @@ class _Connections extends StatelessWidget {
                 ),
               ),
             ),
+          if (_hiddenIn(groups[family]!, family, busy) > 0)
+            TextButton(
+              onPressed: () => setState(() => _expanded.add(family)),
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                minimumSize: const Size(0, 32),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
+              child: Text(
+                hindi
+                    ? '${_hiddenIn(groups[family]!, family, busy)} और दिखाएँ'
+                    : 'Show ${_hiddenIn(groups[family]!, family, busy)} more',
+                style: const TextStyle(fontSize: 12.5),
+              ),
+            ),
         ],
+      ],
+    );
+  }
+
+  /// The rows to render for one family, capped only when the section is busy
+  /// and the user has not asked for the rest.
+  List<EntityRelation> _rowsFor(
+      List<EntityRelation> all, String family, bool busy) {
+    if (!busy || _expanded.contains(family) || all.length <= _perFamily) {
+      return all;
+    }
+    return all.take(_perFamily).toList();
+  }
+
+  int _hiddenIn(List<EntityRelation> all, String family, bool busy) =>
+      all.length - _rowsFor(all, family, busy).length;
+}
+
+/// What a page says when the graph has nothing on this entity yet.
+///
+/// Most of the corpus is still skeletons imported from Wikidata, and a screen
+/// that simply omits the section reads as though the entity has no place in
+/// anything. Saying so plainly is more honest than an absence, and it does not
+/// invent an edge to fill the gap.
+class _NoConnections extends StatelessWidget {
+  final bool hindi;
+  const _NoConnections({required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _Label(hindi ? 'संबंध' : 'CONNECTIONS'),
+        const SizedBox(height: 10),
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: scheme.surfaceContainerHighest.withValues(alpha: 0.4),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+                color: scheme.outlineVariant.withValues(alpha: 0.6)),
+          ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(Icons.hub_outlined,
+                  size: 18, color: scheme.onSurface.withValues(alpha: 0.45)),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  hindi
+                      ? 'इस प्रविष्टि के लिए अभी कोई सत्यापित संबंध दर्ज नहीं है। '
+                          'जो सत्यापित नहीं है, वह यहाँ नहीं दिखाया जाता।'
+                      : 'No verified connections are recorded for this entry '
+                          'yet. Nothing unverified is shown here.',
+                  style: TextStyle(
+                    fontSize: 12.5,
+                    height: 1.4,
+                    color: scheme.onSurface.withValues(alpha: 0.62),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

@@ -387,8 +387,8 @@ relations and a real description. 1,200+ relations.
 **Done when**
 - [ ] 100% of P0 entities have a description and ≥3 verified relations
 - [ ] ≥80% of P1 entities have ≥2 verified relations
-- [ ] An entity with zero relations shows a written empty state, not a bare node
-- [ ] An entity with >20 relations groups them by family
+- [x] An entity with zero relations shows a written empty state, not a bare node
+- [x] An entity with >20 relations groups them by family
 - [ ] Pan, zoom and re-centre all work; back navigation returns correctly
 - [ ] Hindi names render correctly in nodes and edge labels
 - [ ] No network call
@@ -1130,9 +1130,9 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **KG-02** 100% of P0 entities have a description
 - [ ] **KG-03** 100% of P0 entities have 3 or more verified relations
 - [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations
-- [ ] **KG-05** Written empty state for an entity with no edges — 285 of 511 today
-- [ ] **KG-06** Group more than 20 relations by family
-- [ ] **KG-07** Relation-family filter chips
+- [x] **KG-05** Written empty state for an entity with no edges — 285 of 511 today
+- [x] **KG-06** Group more than 20 relations by family
+- [x] **KG-07** Relation-family filter chips
 - [ ] **KG-08** Device check: pan and zoom performance on the canvas
 - [ ] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple · Dynasty
 - [ ] **FT-02** Recursive layout to depth 3
@@ -1182,6 +1182,15 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [x] **PP-02** Per-temple stamp: date, note, rating
 - [x] **PP-03** Collections: Char Dham · 12 Jyotirlinga · Shakti Peetha
 - [x] **PP-04** Survives restart and upgrade
+- [x] **PP-05** Passport reads as a document: embossed cover, stamp pages, MRZ
+- [x] **PP-06** Share renders a Yatra card to PNG, on-device, nothing uploaded
+- [x] **PP-07** Stamps carry temple identity — shikhara, date, state on the rim
+- [x] **PP-08** Yatra Journey timeline replaces the flat visit log
+- [x] **PP-09** Level ladder + milestone seals, no points/coins/leaderboard
+- [x] **PP-10** Collections read against the tradition's count, extras explained
+- [x] **PP-11** Journey · Collections · Milestones on their own pages
+- [ ] **PP-12** Yatra map — needs state outlines the project does not hold (ODbL
+      attribution if sourced from OSM). Deferred, not skipped
 
 ## Calendar & astrology
 
