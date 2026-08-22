@@ -1298,7 +1298,10 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       one assumed: `ram-return` was labelled Uttara while its own citation
       read "Yuddha Kanda, sargas 123-128". The label was wrong, not the
       citation, so it moved to Yuddha
-- [ ] **SC-03** Map Mahabharata parvas to arcs, ditto
+- [x] **SC-03** Map Mahabharata parvas to arcs — 47 events into 26 arcs. The
+      18 Kurukshetra days group by who held command, which is how the war is
+      actually remembered. Anushasana, Ashvamedhika, Ashramavasika and
+      Virata-adjacent parvas hold no events yet
 - [ ] **SC-04** Fetch the PD chapters each mapped event needs
 - [ ] **SC-05** Quick Summary for every event — 30-second read
 - [ ] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited
@@ -1310,7 +1313,9 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **SC-11** "Read the original" lands on the exact `scripture_section_id`
 - [ ] **SC-12** Story / Timeline toggle, remembered per user
 - [ ] **SC-13** Explore by: Book · Story · Characters · Places · Themes
-- [ ] **SC-14** Shanti and Anushasana presented as teachings, not events
+- [~] **SC-14** Shanti marked `themes: [dharma, governance, teaching]` and
+      arc-titled "Bhishma's Teaching". Anushasana has no events to mark yet;
+      the UI half still to come
 - [ ] **SC-15** Uttara Kanda labelled a distinct traditional section
 - [x] **SC-16** `prev/next_node_id` denormalised at build time — chained per
       (epic, recension); invariants pinned in `content_integrity_test`

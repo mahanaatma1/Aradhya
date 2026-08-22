@@ -45,27 +45,40 @@ void main() {
         'long_description_en IS NOT NULL'), greaterThanOrEqualTo(61));
   });
 
-  test('every Ramayana scene belongs to an arc', () async {
-    // The arc is what lets Story mode present a kanda as a chapter rather
-    // than a scroll. A scene with no arc would silently vanish from that
-    // grouping while still appearing on the timeline.
+  test('every scene in both epics belongs to an arc', () async {
+    // The arc is what lets Story mode present a kanda or parva as a chapter
+    // rather than a scroll. A scene with no arc would silently vanish from
+    // that grouping while still appearing on the timeline.
     expect(await count("SELECT COUNT(*) FROM narrative_nodes "
-        "WHERE epic='ramayana' AND (arc_slug IS NULL OR arc_slug = '')"), 0,
-        reason: 'a Ramayana scene has no arc');
+        "WHERE arc_slug IS NULL OR arc_slug = ''"), 0,
+        reason: 'a scene has no arc');
     expect(await count("SELECT COUNT(DISTINCT arc_slug) FROM narrative_nodes "
         "WHERE epic='ramayana'"), greaterThanOrEqualTo(16));
+    expect(await count("SELECT COUNT(DISTINCT arc_slug) FROM narrative_nodes "
+        "WHERE epic='mahabharata'"), greaterThanOrEqualTo(26));
   });
 
-  test('an arc never straddles two kandas', () async {
+  test('an arc never straddles two sections', () async {
     // An arc is a movement inside one section. If the same arc_slug appears
     // under two book numbers, either the mapping or a book label is wrong --
     // which is exactly how ram-return was caught sitting in Uttara Kanda
     // while its own citation read Yuddha Kanda.
     expect(await count('''SELECT COUNT(*) FROM (
-        SELECT arc_slug FROM narrative_nodes
-        WHERE epic='ramayana' AND arc_slug IS NOT NULL
+        SELECT arc_slug FROM narrative_nodes WHERE arc_slug IS NOT NULL
         GROUP BY arc_slug HAVING COUNT(DISTINCT book_no) > 1)'''), 0,
-        reason: 'an arc spans more than one kanda');
+        reason: 'an arc spans more than one section');
+  });
+
+  test('arc numbers are unique inside their section', () async {
+    // Two arcs sharing a number in one parva would order arbitrarily. The
+    // Kurukshetra day-arcs share book_no 6 with Bhishma Parva, so this is a
+    // live risk rather than a theoretical one.
+    expect(await count('''SELECT COUNT(*) FROM (
+        SELECT epic, book_no, arc_no FROM narrative_nodes
+        WHERE arc_slug IS NOT NULL
+        GROUP BY epic, book_no, arc_no
+        HAVING COUNT(DISTINCT arc_slug) > 1)'''), 0,
+        reason: 'two arcs share an arc_no within one section');
   });
 
   test('every scene is chained, and never across a telling', () async {
