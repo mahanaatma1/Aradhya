@@ -349,6 +349,14 @@ class Builder:
             t, sd, ld = o.get("title") or {}, o.get("short_description") or {}, \
                 o.get("long_description") or {}
             bl, lesson = o.get("book_label") or {}, o.get("lesson") or {}
+            # Story Cards blocks. Absent on every row written before SC-01,
+            # which is why each defaults to an empty mapping rather than
+            # raising -- the migration is additive, not a rewrite.
+            arc = o.get("arc") or {}
+            quick = o.get("quick_summary") or {}
+            story = o.get("story") or {}
+            moments = o.get("key_moments") or {}
+            refl = o.get("reflection") or {}
             cur = self.db.execute(
                 """insert into narrative_nodes
                    (slug, epic, recension, book_label_en, book_label_hi, book_no,
@@ -356,15 +364,31 @@ class Builder:
                     short_description_en, short_description_hi,
                     long_description_en, long_description_hi,
                     lesson_en, lesson_hi, place_entity_id, image_asset,
-                    tags, region, verification_status)
-                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    tags, region, verification_status,
+                    arc_slug, arc_title_en, arc_title_hi, arc_no,
+                    quick_summary_en, quick_summary_hi,
+                    story_en, story_hi,
+                    key_moments_en, key_moments_hi,
+                    reflection_en, reflection_hi,
+                    themes, illustration_asset)
+                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+                           ?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (o["slug"], o["epic"], o["recension"], bl.get("en"), bl.get("hi"),
                  o.get("book_no"), o["sequence_no"], t.get("en"), t.get("hi"),
                  sd.get("en"), sd.get("hi"), ld.get("en"), ld.get("hi"),
                  lesson.get("en"), lesson.get("hi"),
                  self.entity_ids.get(o.get("place_entity_slug") or ""),
                  o.get("image_asset"), _jstr(o.get("tags")), o.get("region"),
-                 _status(o)))
+                 _status(o),
+                 # ---- Story Cards (SC-01). All optional: an event written
+                 # before this migration simply carries nulls here.
+                 arc.get("slug"), arc.get("title_en"), arc.get("title_hi"),
+                 arc.get("no"),
+                 quick.get("en"), quick.get("hi"),
+                 story.get("en"), story.get("hi"),
+                 _jstr(moments.get("en")), _jstr(moments.get("hi")),
+                 refl.get("en"), refl.get("hi"),
+                 _jstr(o.get("themes")), o.get("illustration_asset")))
             nid = cur.lastrowid
             self.narrative_ids[o["slug"]] = nid
             self._stamp("narrative_nodes", nid, o)
@@ -374,6 +398,34 @@ class Builder:
                     self.db.execute(
                         "insert or ignore into narrative_cast (node_id, entity_id, role)"
                         " values (?,?,?)", (nid, eid, c.get("role")))
+
+    def link_narrative_neighbours(self) -> None:
+        """Denormalise prev/next so paging an event never costs a query.
+
+        Order is (epic, recension, sequence_no) -- the reading order, which is
+        the only order a "next event" arrow can honestly mean. Recensions are
+        chained separately: a Valmiki scene must never page into a
+        Ramcharitmanas one, because they are different tellings rather than
+        different chapters of the same telling.
+        """
+        chains: dict[tuple[str, str], list[int]] = {}
+        rows = self.db.execute(
+            "select id, epic, recension from narrative_nodes "
+            "order by epic, recension, sequence_no, id").fetchall()
+        for nid, epic, rec in rows:
+            chains.setdefault((epic, rec), []).append(nid)
+
+        linked = 0
+        for ids in chains.values():
+            for i, nid in enumerate(ids):
+                prev_id = ids[i - 1] if i > 0 else None
+                next_id = ids[i + 1] if i + 1 < len(ids) else None
+                self.db.execute(
+                    "update narrative_nodes set prev_node_id=?, next_node_id=? "
+                    "where id=?", (prev_id, next_id, nid))
+                linked += 1
+        self.counts["narrative_chains"] = len(chains)
+        self.counts["narrative_linked"] = linked
 
     def insert_dharma(self) -> None:
         for o in self.rows("dharma"):
@@ -747,6 +799,7 @@ def main(argv: list[str] | None = None) -> int:
         b.insert_relations()
         b.insert_cosmology()
         b.insert_narrative()
+        b.link_narrative_neighbours()
         b.insert_dharma()
         b.insert_vidya()
         b.insert_festivals()

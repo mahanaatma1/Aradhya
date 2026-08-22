@@ -172,7 +172,45 @@ CREATE TABLE narrative_nodes (
   title_en             TEXT NOT NULL, title_hi TEXT,
   short_description_en TEXT NOT NULL, short_description_hi TEXT,
   long_description_en  TEXT,          long_description_hi  TEXT,
+  -- Deprecated in favour of reflection_*: a lesson states a moral, and
+  -- "Moral lesson: be good" is the register this feature must avoid. Kept so
+  -- existing rows stay valid; new content writes reflection_* instead.
   lesson_en            TEXT,          lesson_hi TEXT,
+
+  -- ---- Story Cards (SC-01) -------------------------------------------
+  -- All nullable: every column here is additive so the rows written before
+  -- this migration remain valid without a backfill.
+  --
+  -- The arc is the missing middle level. A kanda holds a flat run of scenes
+  -- today; an arc groups the handful belonging to one movement of the story,
+  -- which is what makes a section navigable without a scroll bar.
+  arc_slug             TEXT,
+  arc_title_en         TEXT,          arc_title_hi TEXT,
+  arc_no               INTEGER,       -- order of the arc within its section
+
+  -- The 30-second read. Deliberately distinct from short_description, which
+  -- is a card blurb and is often a fragment rather than a summary.
+  quick_summary_en     TEXT,          quick_summary_hi TEXT,
+
+  -- The narrative proper: 100-250 words for a minor event, 300-600 for a
+  -- major one. long_description is reused where it already holds one.
+  story_en             TEXT,          story_hi TEXT,
+
+  -- JSON array of 3-6 beats, for the "What happened" list.
+  key_moments_en       TEXT,          key_moments_hi TEXT,
+
+  -- A QUESTION, never a moral. Feeds the Dharma game and the Journal.
+  reflection_en        TEXT,          reflection_hi TEXT,
+
+  -- JSON array: dharma, duty, sacrifice. Drives Explore-by-theme.
+  themes               TEXT,
+
+  illustration_asset   TEXT,          -- manifest gate in 1.12 applies
+
+  -- Denormalised at build time so paging never costs a query.
+  prev_node_id         INTEGER,       next_node_id INTEGER,
+  -- --------------------------------------------------------------------
+
   place_entity_id      INTEGER REFERENCES entities(id),
   scripture_section_id INTEGER,       -- soft link into main.scripture_sections (no FK: other DB)
   image_asset          TEXT,
@@ -183,6 +221,8 @@ CREATE TABLE narrative_nodes (
       CHECK (verification_status IN ('unverified','verified','disputed'))
 );
 CREATE INDEX ix_narr_seq ON narrative_nodes(epic, recension, sequence_no);
+-- Story mode groups by section then arc; the timeline still uses ix_narr_seq.
+CREATE INDEX ix_narr_arc ON narrative_nodes(epic, book_no, arc_no, sequence_no);
 
 CREATE TABLE narrative_cast (
   node_id   INTEGER NOT NULL REFERENCES narrative_nodes(id),

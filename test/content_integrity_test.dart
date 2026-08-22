@@ -45,6 +45,28 @@ void main() {
         'long_description_en IS NOT NULL'), greaterThanOrEqualTo(61));
   });
 
+  test('every scene is chained, and never across a telling', () async {
+    // prev/next are denormalised at build time so paging costs no query. The
+    // invariant that matters is that a chain never leaves its own
+    // (epic, recension): a Valmiki scene must not page into a Ramcharitmanas
+    // one, because those are different tellings rather than adjacent chapters.
+    expect(await count('''SELECT COUNT(*) FROM narrative_nodes a
+        JOIN narrative_nodes b ON a.next_node_id = b.id
+        WHERE a.epic <> b.epic OR a.recension <> b.recension'''), 0,
+        reason: 'a next-link crosses an epic or a recension');
+
+    // Exactly one head and one tail per chain, or the ordering is broken.
+    final chains = await count(
+        'SELECT COUNT(*) FROM (SELECT DISTINCT epic, recension '
+        'FROM narrative_nodes)');
+    expect(await count(
+        'SELECT COUNT(*) FROM narrative_nodes WHERE next_node_id IS NULL'),
+        chains, reason: 'each chain should end exactly once');
+    expect(await count(
+        'SELECT COUNT(*) FROM narrative_nodes WHERE prev_node_id IS NULL'),
+        chains, reason: 'each chain should start exactly once');
+  });
+
   test('everything user-facing is bilingual', () async {
     for (final t in ['entities', 'festivals', 'narrative_nodes',
                      'cosmology_nodes', 'vidya_topics']) {

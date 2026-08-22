@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 /// One scene of an epic.
 ///
 /// `sequenceNo` is **narrative order only**. No absolute historical date is
@@ -45,6 +47,45 @@ class NarrativeNode {
   /// timeline to do that would be wasted work.
   final String? tagsRaw;
 
+  // ---- Story Cards (SC-01) ------------------------------------------
+  // Every field here is nullable. Scenes written before the migration carry
+  // none of it, and the UI falls back to what they do have rather than
+  // rendering an empty section.
+
+  /// The middle level between a kanda/parva and an event.
+  final String? arcSlug;
+  final String? arcTitleEn;
+  final String? arcTitleHi;
+  final int? arcNo;
+
+  /// The 30-second read. Distinct from [descEn], which is a card blurb and is
+  /// often a fragment rather than a summary.
+  final String? quickEn;
+  final String? quickHi;
+
+  /// The narrative proper.
+  final String? storyEn;
+  final String? storyHi;
+
+  /// Raw JSON arrays of 3-6 beats, parsed only when the event page opens.
+  final String? keyMomentsRawEn;
+  final String? keyMomentsRawHi;
+
+  /// A question, not a moral. [lessonEn] is the deprecated predecessor.
+  final String? reflectionEn;
+  final String? reflectionHi;
+
+  /// Raw JSON array of theme slugs.
+  final String? themesRaw;
+
+  final String? illustrationAsset;
+
+  /// Denormalised at build time, so paging costs no query. Chained within one
+  /// (epic, recension) only -- a Valmiki scene never pages into another
+  /// telling.
+  final int? prevNodeId;
+  final int? nextNodeId;
+
   const NarrativeNode({
     required this.id,
     required this.slug,
@@ -70,6 +111,22 @@ class NarrativeNode {
     this.sourceUrl,
     this.lastVerifiedAt,
     this.tagsRaw,
+    this.arcSlug,
+    this.arcTitleEn,
+    this.arcTitleHi,
+    this.arcNo,
+    this.quickEn,
+    this.quickHi,
+    this.storyEn,
+    this.storyHi,
+    this.keyMomentsRawEn,
+    this.keyMomentsRawHi,
+    this.reflectionEn,
+    this.reflectionHi,
+    this.themesRaw,
+    this.illustrationAsset,
+    this.prevNodeId,
+    this.nextNodeId,
   });
 
   factory NarrativeNode.fromRow(Map<String, Object?> r) => NarrativeNode(
@@ -97,6 +154,22 @@ class NarrativeNode {
         sourceUrl: r['primary_source_url'] as String?,
         lastVerifiedAt: r['last_verified_at'] as String?,
         tagsRaw: r['tags'] as String?,
+        arcSlug: r['arc_slug'] as String?,
+        arcTitleEn: r['arc_title_en'] as String?,
+        arcTitleHi: r['arc_title_hi'] as String?,
+        arcNo: r['arc_no'] as int?,
+        quickEn: r['quick_summary_en'] as String?,
+        quickHi: r['quick_summary_hi'] as String?,
+        storyEn: r['story_en'] as String?,
+        storyHi: r['story_hi'] as String?,
+        keyMomentsRawEn: r['key_moments_en'] as String?,
+        keyMomentsRawHi: r['key_moments_hi'] as String?,
+        reflectionEn: r['reflection_en'] as String?,
+        reflectionHi: r['reflection_hi'] as String?,
+        themesRaw: r['themes'] as String?,
+        illustrationAsset: r['illustration_asset'] as String?,
+        prevNodeId: r['prev_node_id'] as int?,
+        nextNodeId: r['next_node_id'] as int?,
       );
 
   String title(bool hi) =>
@@ -108,6 +181,51 @@ class NarrativeNode {
       (hi && (lessonHi?.isNotEmpty ?? false)) ? lessonHi : lessonEn;
   String? bookLabel(bool hi) =>
       (hi && (bookLabelHi?.isNotEmpty ?? false)) ? bookLabelHi : bookLabelEn;
+  String? arcTitle(bool hi) =>
+      (hi && (arcTitleHi?.isNotEmpty ?? false)) ? arcTitleHi : arcTitleEn;
+  String? quickSummary(bool hi) =>
+      (hi && (quickHi?.isNotEmpty ?? false)) ? quickHi : quickEn;
+
+  /// The narrative body, falling back to the long description for scenes
+  /// written before Story Cards existed.
+  String? story(bool hi) {
+    final s = (hi && (storyHi?.isNotEmpty ?? false)) ? storyHi : storyEn;
+    return (s?.isNotEmpty ?? false) ? s : long(hi);
+  }
+
+  /// A question where one is written; otherwise the deprecated lesson, so an
+  /// older scene still has something to say rather than showing nothing.
+  String? reflection(bool hi) {
+    final r =
+        (hi && (reflectionHi?.isNotEmpty ?? false)) ? reflectionHi : reflectionEn;
+    return (r?.isNotEmpty ?? false) ? r : lesson(hi);
+  }
+
+  List<String> keyMoments(bool hi) {
+    final raw =
+        (hi && (keyMomentsRawHi?.isNotEmpty ?? false))
+            ? keyMomentsRawHi
+            : keyMomentsRawEn;
+    return _stringList(raw);
+  }
+
+  List<String> get themes => _stringList(themesRaw);
+
+  static List<String> _stringList(String? raw) {
+    if (raw == null || raw.isEmpty) return const [];
+    try {
+      final v = jsonDecode(raw);
+      if (v is List) {
+        return [
+          for (final x in v)
+            if (x is String && x.isNotEmpty) x,
+        ];
+      }
+    } on FormatException {
+      // Malformed JSON in a content column must not take the screen down.
+    }
+    return const [];
+  }
 }
 
 /// A figure appearing in a scene, already resolved to their entity.

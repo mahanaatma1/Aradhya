@@ -1291,7 +1291,7 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ### Story Cards (2026-08-22)
 
-- [ ] **SC-01** Schema: `arc_*`, `quick_summary_*`, `story_*`, `key_moments_*`,
+- [x] **SC-01** Schema: `arc_*`, `quick_summary_*`, `story_*`, `key_moments_*`,
       `reflection_*`, `themes`, `illustration_asset`, `prev/next_node_id`
 - [ ] **SC-02** Map Ramayana kandas to arcs, with a source reference per event
 - [ ] **SC-03** Map Mahabharata parvas to arcs, ditto
@@ -1300,14 +1300,16 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited
 - [ ] **SC-07** Key moments: 3–6 beats per event
 - [ ] **SC-08** Reflection as a **question**, wired to Journal and Dharma game
-- [ ] **SC-09** Deprecate `lesson_*` in favour of `reflection_*`
+- [x] **SC-09** Deprecate `lesson_*` in favour of `reflection_*` — column kept,
+      marked deprecated, `reflection()` falls back to it for older scenes
 - [ ] **SC-10** Event page in the fixed order, ending in prev/next with preview
 - [ ] **SC-11** "Read the original" lands on the exact `scripture_section_id`
 - [ ] **SC-12** Story / Timeline toggle, remembered per user
 - [ ] **SC-13** Explore by: Book · Story · Characters · Places · Themes
 - [ ] **SC-14** Shanti and Anushasana presented as teachings, not events
 - [ ] **SC-15** Uttara Kanda labelled a distinct traditional section
-- [ ] **SC-16** `prev/next_node_id` denormalised at build time
+- [x] **SC-16** `prev/next_node_id` denormalised at build time — chained per
+      (epic, recension); invariants pinned in `content_integrity_test`
 
 - [ ] **RM-02** Every scene linked to a `place` entity
 - [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka
