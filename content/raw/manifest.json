@@ -181,6 +181,51 @@
  },
  {
   "source_slug": "ganguli-mahabharata",
+  "path": "m03/m03096.htm",
+  "label": "The Mahabharata, Book 3: Vana Parva: Tirtha-yatra Parva: ...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m03_m03096.txt",
+  "chars": 4923,
+  "sha256": "dd433bcd2701b843a8cee02d3fee68052874b78612abb5159f8b3656ab5a094c"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m03/m03097.htm",
+  "label": "The Mahabharata, Book 3: Vana Parva: Tirtha-yatra Parva: ...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m03_m03097.txt",
+  "chars": 3913,
+  "sha256": "cbdd86b13c53fec26bce4ad3693e3288b58d6df1319e92922fdb8ef585a4cd49"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m03/m03122.htm",
+  "label": "The Mahabharata, Book 3: Vana Parva: Tirtha-yatra Parva: ...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m03_m03122.txt",
+  "chars": 4539,
+  "sha256": "e1429448628e0a1b3e6f4d11896942e80e036e22150a21af4faafe0ec4dd445a"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m03/m03186.htm",
+  "label": "The Mahabharata, Book 3: Vana Parva: Markandeya-Samasya P...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m03_m03186.txt",
+  "chars": 7612,
+  "sha256": "caa1a9c420784b75f848bcaab241eab1f6462bd0f82bc2e3a0d00349d413ea7c"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
+  "path": "m03/m03187.htm",
+  "label": "The Mahabharata, Book 3: Vana Parva: Markandeya-Samasya P...",
+  "label_verified": true,
+  "file": "ganguli-mahabharata\\m03_m03187.txt",
+  "chars": 22246,
+  "sha256": "b3eebcd34017d6ed849ccb9a547c2a8966926835c0e720755240738047368a67"
+ },
+ {
+  "source_slug": "ganguli-mahabharata",
   "path": "m01/m01135.htm",
   "label": "The Mahabharata, Book 1: Adi Parva: Section CXXXIV",
   "label_verified": true,
@@ -493,5 +538,86 @@
   "file": "griffith-ramayana\\rama_ry060.txt",
   "chars": 5081,
   "sha256": "d8d9597190ccf7e8208b2e4f6179cc1c3a5a8183628780c083420e1ca359b8a0"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry009.htm",
+  "label": "BOOK I: Canto VII.: The Ministers.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry009.txt",
+  "chars": 3864,
+  "sha256": "7468d5a4a8e9fecf7dec55bdc29d591b6256bbf60147a94807cb9aae17ae2a18"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry010.htm",
+  "label": "BOOK I: Canto VIII.: Sumantra's Speech.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry010.txt",
+  "chars": 4168,
+  "sha256": "949560fa3f2bef3924a4b3a4689b66d80306f2ec029279b3ba5799a36fba497f"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry056.htm",
+  "label": "BOOK I: Canto LVI.: Vis'vámitra's Vow.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry056.txt",
+  "chars": 4239,
+  "sha256": "112ef6614429579d92c39b74c2ab02b94bddcba5530b2bed8852c4a9e68035cb"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry057.htm",
+  "label": "BOOK I: Canto LVII.: Tris'anku.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry057.txt",
+  "chars": 3417,
+  "sha256": "4dbb8a5fafd84df001834402fd51153233219a0407650e670c98ab14148db1f4"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry061.htm",
+  "label": "BOOK I: Canto LXI: S'unahs'epha.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry061.txt",
+  "chars": 4999,
+  "sha256": "fd7f7e7cf8e36f2946f673f9515ff8aa42a37ebc6df02c1eeb09ea95b5d38a8a"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry064.htm",
+  "label": "BOOK I: Canto LXIV.: Rambhá.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry064.txt",
+  "chars": 2798,
+  "sha256": "19295fe57abf79e875c684be363dc64ab4887dc9e4a65ac5b227c570b147b07d"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry065.htm",
+  "label": "BOOK I: Canto LXV.: Vis'vámitra's Triumph",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry065.txt",
+  "chars": 5402,
+  "sha256": "41e64804c6ba50a9a01eb4b8991702dbcd0802b881406eb285e2d1d41a5f747d"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry066.htm",
+  "label": "BOOK I: Canto LXVI.: Janak's Speech.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry066.txt",
+  "chars": 4350,
+  "sha256": "e92f346a6eaf1426e679ea81738dcc3818b85a2122c4f2f8a92f0cff4d520f11"
+ },
+ {
+  "source_slug": "griffith-ramayana",
+  "path": "rama/ry082.htm",
+  "label": "Book II: Canto IV.: Ráma Summoned.",
+  "label_verified": true,
+  "file": "griffith-ramayana\\rama_ry082.txt",
+  "chars": 6252,
+  "sha256": "31bad7d9d283f10816c137c981dbfd125625051a8be99c2f73d4623668dfba0b"
  }
 ]

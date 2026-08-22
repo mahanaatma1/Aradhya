@@ -1,10 +1,10 @@
 {
  "counts": {
   "entities": 512,
-  "entities_verified": 177,
-  "entities_with_prose": 27,
+  "entities_verified": 178,
+  "entities_with_prose": 31,
   "entities_hindi": 512,
-  "relations": 970,
+  "relations": 972,
   "aliases": 2125,
   "narrative_nodes": 79,
   "narrative_with_prose": 61,
@@ -19,9 +19,9 @@
   "path_steps": 49,
   "journal_prompts": 28,
   "sources": 18,
-  "item_sources": 871,
+  "item_sources": 875,
   "search_docs": 33246,
-  "related_edges": 4839
+  "related_edges": 4841
  },
  "slugs": {
   "entities": [

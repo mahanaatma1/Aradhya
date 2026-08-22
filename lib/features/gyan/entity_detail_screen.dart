@@ -216,6 +216,15 @@ class _Body extends ConsumerWidget {
                   const SizedBox(height: 18),
                   _PropsCard(entity: entity, hindi: hindi),
                 ],
+                // RS-05: attributions in this corpus follow the tradition of
+                // the text they are cited from. Two traditions can assign the
+                // same hymn or lineage differently, and the app is in no
+                // position to arbitrate -- so it says whose account it is
+                // showing rather than presenting one as settled fact.
+                if (entity.kind == 'rishi') ...[
+                  const SizedBox(height: 14),
+                  _AttributionNote(hindi: hindi),
+                ],
                 const SizedBox(height: 18),
                 if (relations.isNotEmpty)
                   _Connections(relations: relations, hindi: hindi)
@@ -659,6 +668,40 @@ class _NoConnections extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+
+/// Standing note on rishi pages: attributions follow the cited tradition.
+class _AttributionNote extends StatelessWidget {
+  final bool hindi;
+  const _AttributionNote({required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(Icons.menu_book_rounded,
+            size: 14, color: scheme.onSurface.withValues(alpha: 0.4)),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            hindi
+                ? 'गोत्र, वेद, सूक्त और गुरु-परंपरा उसी ग्रंथ के अनुसार दी गई हैं '
+                    'जिसका यहाँ उल्लेख है। परंपराओं में भिन्नता हो सकती है।'
+                : 'Gotra, veda, hymn and lineage attributions follow the text '
+                    'cited here. Traditions differ, and this shows one account.',
+            style: TextStyle(
+              fontSize: 11.5,
+              height: 1.35,
+              color: scheme.onSurface.withValues(alpha: 0.55),
+            ),
           ),
         ),
       ],

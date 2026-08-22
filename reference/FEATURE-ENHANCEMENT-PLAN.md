@@ -1148,11 +1148,16 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [x] **SY-04** Warm palette; starfield removed
 - [ ] **SY-05** Decide whether Creation and Time need their own diagram
 - [ ] **YG-01** Link each yuga to narrative nodes set in it
-- [ ] **RS-01** Widen the rishi roster — 20 today, 2 with prose
-- [ ] **RS-02** Prose for every P0 and P1 rishi
+- [~] **RS-01** Widen the rishi roster — 20 today. Corpus widened 55 -> 69
+      PD chapters; roster itself unchanged pending more sourced sages
+- [~] **RS-02** Prose for every P0 and P1 rishi — **6 of 20** (was 2).
+      Vyasa, Agastya, Markandeya, Chyavana added, each written from a
+      fetched chapter. The rest have only passing mentions in the corpus;
+      writing biographies from those would be padding, so they wait on a
+      wider fetch rather than on invention
 - [ ] **RS-03** Gotra · veda · guru · disciples · hymns · ashram populated
 - [ ] **RS-04** Teaching-lineage mini-tree on the detail screen
-- [ ] **RS-05** Attributions labelled "according to the cited tradition"
+- [x] **RS-05** Attributions labelled "according to the cited tradition"
 - [ ] **AS-01** Expand astras; `nature` shown near the top
 - [ ] **AS-02** Rename "Powers" to traditional effect unless the source says otherwise
 - [ ] **AS-03** Symbolism in its own panel, separate from the mythic account

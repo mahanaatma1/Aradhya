@@ -55,6 +55,13 @@ TARGETS = {
         ("m01/m01100.htm", "Adi Parva, Section C"),
         ("m01/m01123.htm", "Adi Parva, Section CXXIII"),
         ("m01/m01130.htm", "Adi Parva, Section CXXX"),
+        # Rishi encyclopedia: Agastya, Markandeya, Narada, Chyavana.
+        ("m03/m03096.htm", "Vana Parva, Agastya"),
+        ("m03/m03097.htm", "Vana Parva, Agastya"),
+        ("m03/m03122.htm", "Vana Parva, Chyavana"),
+        ("m03/m03186.htm", "Vana Parva, Markandeya"),
+        ("m03/m03187.htm", "Vana Parva, Markandeya"),
+        ("m12/m12124.htm", "Santi Parva, Narada"),
         ("m01/m01135.htm", "Adi Parva, Section CXXXV"),
         ("m01/m01187.htm", "Adi Parva, Section CLXXXVII"),
         # Located by probing for the figures themselves, then labelled from
@@ -100,6 +107,17 @@ TARGETS = {
         ("rama/ry341.htm", "Canto titled Hanuman"),
         ("rama/ry055.htm", "Vishvamitra and Vasishtha"),
         ("rama/ry060.htm", "Trisanku"),
+        # For the Rishi encyclopedia: Valmiki's own opening, and the long
+        # Vishvamitra arc that runs through the back half of Bala Kanda.
+        ("rama/ry009.htm", "Book I, Canto II"),
+        ("rama/ry010.htm", "Book I, Canto III"),
+        ("rama/ry056.htm", "Vishvamitra arc"),
+        ("rama/ry057.htm", "Vishvamitra arc"),
+        ("rama/ry061.htm", "Vishvamitra arc"),
+        ("rama/ry064.htm", "Vishvamitra arc"),
+        ("rama/ry065.htm", "Vishvamitra arc"),
+        ("rama/ry066.htm", "Vishvamitra arc"),
+        ("rama/ry082.htm", "Book I, later cantos"),
     ],
 }
 
@@ -110,6 +128,19 @@ def strip_html(raw: str) -> str:
     txt = html.unescape(txt)
     return re.sub(r'\s+', ' ', txt).strip()
 
+
+def clean_label(text: str) -> str:
+    """Unescape until stable.
+
+    Several sacred-texts pages are double-encoded, so a single unescape leaves
+    `Vis'v&aacute;mitra` in the label -- which would then render literally in a
+    citation on the entity screen. Repeat until it stops changing.
+    """
+    prev = None
+    out = re.sub(r'\s+', ' ', text)
+    while out != prev:
+        prev, out = out, html.unescape(out)
+    return out.split('|')[0].strip()
 
 def main() -> int:
     # Carry forward labels that were already verified against the page itself.
@@ -143,8 +174,7 @@ def main() -> int:
                     # so the title is taken here and never inferred.
                     t = re.search(r'<title>(.*?)</title>', raw, re.I | re.S)
                     if t:
-                        prior.setdefault(path, html.unescape(
-                            re.sub(r'\s+', ' ', t.group(1))).split('|')[0].strip())
+                        prior.setdefault(path, clean_label(t.group(1)))
                     body = strip_html(raw)
                 except Exception as e:                    # noqa: BLE001
                     print(f"  FAIL {path}: {type(e).__name__}")
@@ -154,7 +184,7 @@ def main() -> int:
             sha = hashlib.sha256(body.encode('utf-8')).hexdigest()
             verified = path in prior
             manifest.append({"source_slug": source, "path": path,
-                             "label": prior.get(path, label),
+                             "label": clean_label(prior.get(path, label)),
                              "label_verified": verified,
                              "file": str(dest.relative_to(RAW)),
                              "chars": len(body), "sha256": sha})
