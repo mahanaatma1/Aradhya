@@ -696,7 +696,7 @@ into "event" cards would misrepresent what they are.
 dashed path, kanda banners, read/unread, continue pill. Kanda ordering fixed
 and pinned by test.
 
-**Gap** Uttara Kanda has one scene. No place-linked map view.
+**Gap** Uttara Kanda has **no** scenes (see SC-02). No place-linked map view.
 
 **Target** Every kanda mapped to arcs, every event sourced, every scene
 linked to a `place` entity. **No scene count** — see the Story Cards rule
@@ -1293,7 +1293,11 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 - [x] **SC-01** Schema: `arc_*`, `quick_summary_*`, `story_*`, `key_moments_*`,
       `reflection_*`, `themes`, `illustration_asset`, `prev/next_node_id`
-- [ ] **SC-02** Map Ramayana kandas to arcs, with a source reference per event
+- [x] **SC-02** Map Ramayana kandas to arcs — 32 scenes into 16 arcs across
+      6 kandas, every scene sourced. **Uttara Kanda holds 0 scenes**, not the
+      one assumed: `ram-return` was labelled Uttara while its own citation
+      read "Yuddha Kanda, sargas 123-128". The label was wrong, not the
+      citation, so it moved to Yuddha
 - [ ] **SC-03** Map Mahabharata parvas to arcs, ditto
 - [ ] **SC-04** Fetch the PD chapters each mapped event needs
 - [ ] **SC-05** Quick Summary for every event — 30-second read
