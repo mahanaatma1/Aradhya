@@ -812,20 +812,52 @@
    "citations": [
     {
      "cited_source": "ganguli-mahabharata",
-     "cited_as": "Vana Parva, Kairata Parva",
+     "cited_as": "Vana Parva, Sections 38-41 (Kairata Parva)",
      "read_from": "ganguli-mahabharata",
      "book_no": 3,
-     "sections": [],
-     "note": "citation names no section, sarga or canto"
+     "sections": [
+      38,
+      39,
+      40,
+      41
+     ],
+     "note": ""
     }
    ],
-   "chapters": [],
-   "missing": [],
-   "blocked": [
-    "Vana Parva, Kairata Parva: citation names no section, sarga or canto"
+   "chapters": [
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 3,
+     "section": 38,
+     "path": "m03/m03038.htm",
+     "file": "ganguli-mahabharata\\m03_m03038.txt"
+    },
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 3,
+     "section": 39,
+     "path": "m03/m03039.htm",
+     "file": "ganguli-mahabharata\\m03_m03039.txt"
+    },
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 3,
+     "section": 40,
+     "path": "m03/m03040.htm",
+     "file": "ganguli-mahabharata\\m03_m03040.txt"
+    },
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 3,
+     "section": 41,
+     "path": "m03/m03041.htm",
+     "file": "ganguli-mahabharata\\m03_m03041.txt"
+    }
    ],
-   "wanted": 0,
-   "present": 0,
+   "missing": [],
+   "blocked": [],
+   "wanted": 4,
+   "present": 4,
    "too_broad_to_author_from": false
   },
   {
