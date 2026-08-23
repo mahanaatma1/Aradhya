@@ -80,6 +80,28 @@ LINEAGE_RELS = {"father_of", "mother_of", "spouse_of", "sibling_of", "child_of",
 
 ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
+# The 30-second read, in words per language. apply_narrative.py gates one patch
+# as it is written; this gates the finished set. The two bounds must be the same
+# pair: a looser applier would write rows this gate then refuses, and no tool
+# would be able to fix them. selftest_narrative.py asserts they still match.
+QUICK_SUMMARY_WORDS = (30, 95)
+
+# A quick summary is prose, and prose never carries its own citation -- the
+# chapter lives in source_chapter_or_section, where the reader can see it.
+CITES_INLINE = re.compile(r"\b(sarga|canto|section|parva\s+\d)\b", re.I)
+
+# Events whose quick summary cannot be drafted from a cited public-domain
+# chapter, and why. Recorded rather than skipped: every entry is reported on
+# every run, and an entry that has stopped being needed is an error, not a
+# leftover that quietly excuses a gap.
+QUICK_SUMMARY_EXCEPTIONS: dict[str, str] = {
+    "ram-indrajit": (
+        "Griffith abridges the war -- his Book VI has no cantos 76-92, so "
+        "sargas 88-91 are unreachable at any number. Needs a second recension "
+        "(SC-06); must not silently borrow one."
+    ),
+}
+
 # ---------------------------------------------------------------------------
 # Findings
 # ---------------------------------------------------------------------------
@@ -463,6 +485,105 @@ def check_bilingual(rows: list[Row], rep: Report, strict: bool) -> None:
                     file=r.rel, line=r.line, module=r.module)
 
 
+def check_quick_summary(rows: list[Row], rep: Report, strict: bool) -> None:
+    """12. Every narrative event carries the 30-second read (SC-05).
+
+    Absence is a warning while the epics are still being authored and an error
+    under --strict, which is what ships. Everything else here is an error in
+    both modes, because a summary that is the card blurb again, or that runs to
+    two hundred words, is not unfinished work -- it is wrong work, and it got
+    past the applier somehow.
+    """
+    lo, hi = QUICK_SUMMARY_WORDS
+    sev = "error" if strict else "warning"
+    seen: set[str] = set()
+
+    for r in rows:
+        if r.module != "narrative":
+            continue
+        seen.add(r.slug)
+        o = r.obj
+        qs = o.get("quick_summary") or {}
+        sd = o.get("short_description") or {}
+        excused = QUICK_SUMMARY_EXCEPTIONS.get(r.slug)
+        sides = {lang: ((qs.get(lang) or "").strip()) for lang in ("en", "hi")}
+
+        if not any(sides.values()):
+            if excused:
+                # Always emitted, in both modes. An excepted event is a gap the
+                # reader will meet in the app, not a box that has been ticked.
+                rep.add("warning", "quick-summary-excepted",
+                        f"{r.slug}: no quick summary -- {excused}",
+                        file=r.rel, line=r.line, module=r.module)
+            else:
+                rep.add(sev, "missing-quick-summary",
+                        f"{r.slug}: no quick_summary -- every event needs the "
+                        f"30-second read (SC-05)",
+                        file=r.rel, line=r.line, module=r.module)
+            continue
+
+        if excused:
+            rep.add("error", "stale-quick-summary-exception",
+                    f"{r.slug} has a quick summary now, so its entry in "
+                    f"QUICK_SUMMARY_EXCEPTIONS is obsolete -- delete it",
+                    file=r.rel, line=r.line, module=r.module)
+
+        for lang, text in sides.items():
+            if not text:
+                rep.add("error", "quick-summary-one-language",
+                        f"{r.slug}: quick_summary.{lang} is empty -- both "
+                        f"languages or neither",
+                        file=r.rel, line=r.line, module=r.module)
+                continue
+
+            n = len(text.split())
+            if not lo <= n <= hi:
+                rep.add("error", "quick-summary-length",
+                        f"{r.slug}: quick_summary.{lang} is {n} words, "
+                        f"wanted {lo}-{hi}",
+                        file=r.rel, line=r.line, module=r.module)
+
+            m = CITES_INLINE.search(text)
+            if m:
+                rep.add("error", "quick-summary-cites-inline",
+                        f"{r.slug}: quick_summary.{lang} says '{m.group(0)}' -- "
+                        f"the chapter belongs in source_chapter_or_section, "
+                        f"not in the prose",
+                        file=r.rel, line=r.line, module=r.module)
+
+            blurb = (sd.get(lang) or "").strip()
+            if not blurb:
+                continue
+            if text == blurb:
+                rep.add("error", "quick-summary-is-blurb",
+                        f"{r.slug}: quick_summary.{lang} is short_description "
+                        f"verbatim",
+                        file=r.rel, line=r.line, module=r.module)
+            elif blurb in text:
+                rep.add("error", "quick-summary-repeats-blurb",
+                        f"{r.slug}: quick_summary.{lang} contains "
+                        f"short_description verbatim",
+                        file=r.rel, line=r.line, module=r.module)
+            elif n <= len(blurb.split()):
+                rep.add("error", "quick-summary-not-longer",
+                        f"{r.slug}: quick_summary.{lang} is {n} words against "
+                        f"a {len(blurb.split())}-word blurb -- it expands the "
+                        f"blurb or it has no reason to exist",
+                        file=r.rel, line=r.line, module=r.module)
+
+    # Only worth saying when there is a narrative set to compare against: on a
+    # partial checkout, or a fabricated one in the selftest, every name here
+    # would look unknown. And it is a hygiene notice, not a gate -- if the slug
+    # is a typo then the real event still has no summary, and
+    # missing-quick-summary catches it under the name it actually has.
+    if seen:
+        for slug, why in QUICK_SUMMARY_EXCEPTIONS.items():
+            if slug not in seen:
+                rep.add("warning", "unknown-quick-summary-exception",
+                        f"QUICK_SUMMARY_EXCEPTIONS names '{slug}', which is not "
+                        f"a narrative event -- renamed or removed? ({why})")
+
+
 def check_verification(rows: list[Row], rep: Report, strict: bool) -> None:
     """--strict refuses unverified content in BOTH languages."""
     if not strict:
@@ -617,6 +738,7 @@ def run(strict: bool = False, skip_index_check: bool = False) -> Report:
         check_duplicates(rows, rep)
         check_module_rules(rows, rep)
         check_bilingual(rows, rep, strict)
+        check_quick_summary(rows, rep, strict)
         check_verification(rows, rep, strict)
         check_routes(rows, rep)
         check_assets(rows, rep, strict)
