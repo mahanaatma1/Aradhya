@@ -44,10 +44,16 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Aradhya content pipeline
-content/raw/            # downloaded public-domain scans; reproducible via sha256 in registry.jsonl
-content/build/          # report.html + build logs
-assets/db/build/        # stale flutter asset build markers
+# Aradhya content pipeline.
+# Comments go on their own line: git has no inline comment, so
+# "content/raw/    # downloaded scans" is a pattern ending in the word "scans"
+# and matches nothing. These three read as ignored for months and were not.
+# downloaded public-domain scans; reproducible via the sha256 in registry.jsonl
+content/raw/
+# report.html + build logs
+content/build/
+# stale flutter asset build markers
+assets/db/build/
 
 # Flutter run/build noise that was previously committed at the repo root
 flutter_*.log

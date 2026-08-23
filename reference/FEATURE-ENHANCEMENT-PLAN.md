@@ -1302,7 +1302,24 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       18 Kurukshetra days group by who held command, which is how the war is
       actually remembered. Anushasana, Ashvamedhika, Ashramavasika and
       Virata-adjacent parvas hold no events yet
-- [ ] **SC-04** Fetch the PD chapters each mapped event needs
+- [x] **SC-04** Fetch the PD chapters each mapped event needs — 629 chapters,
+      4.1M chars, in `raw/` with a manifest carrying each page's own heading and
+      a sha256. 72 of 79 events have every cited chapter; 5 are short by one
+      section, 2 have nothing. Nothing is filed under a guessed name: a page is
+      a position in a book's own index (the Shanti Parva is `m12a/b/c###`, so
+      filenames are not computable), and the heading the page states corrects
+      the guess before anything is written. 627 of 629 pages identified that
+      way; the two exceptions are a volume title page and Griffith's errata.
+      What is missing is missing at the source, and the coverage file says so in
+      the archive's own words rather than reporting "unresolved": **Griffith
+      abridges the war**, so Book VI has no cantos 76–92 and `ram-indrajit`
+      (sargas 88–91) cannot be written from him at all — SC-06 needs a second
+      recension for it, and must not silently borrow one. `mbh-pashupata` cites
+      "Vana Parva, Kairata Parva", a sub-parva with no section range, which is a
+      citation to fix, not a fetch to retry. Recorded substitution: the 4 events
+      citing Dutt read from Griffith, because Dutt is not in this archive.
+      14 events cite ranges wider than 12 sections and are flagged
+      `too_broad_to_author_from` — SC-06 narrows the citation first
 - [ ] **SC-05** Quick Summary for every event — 30-second read
 - [ ] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited
 - [ ] **SC-07** Key moments: 3–6 beats per event
