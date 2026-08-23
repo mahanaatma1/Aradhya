@@ -166,6 +166,17 @@ CRUMBS = {'sacred', 'texts', 'hinduism', 'mahabharata', 'ramayana',
           'index', 'previous', 'next'}
 NAMES = ('section', 'canto')
 
+# The footer names the chapter that comes *next*: "Next: Canto I.: Rama's
+# Speech." On a full chapter it sits thousands of characters past the heading and
+# is never reached. On a page short enough for the footer to fall inside the
+# window, though, the page gets identified as its own successor -- and Griffith's
+# book divider pages are exactly that short. "BOOK VI. 1b" is eleven characters,
+# so ry343 and ry399 were both filed as Canto 1 of the book they merely
+# introduce, and filed with heading_verified true, which is worse than failing:
+# ram-leap and ram-rama-speech each got 220 bytes of navigation in place of a
+# chapter and nothing said so.
+FOOTER = re.compile(r'\bNext:\s', re.I)
+
 
 def heading_of(body: str) -> tuple[str, int, int] | None:
     """What a page says it is: the kind, and the first and last section on it.
@@ -173,6 +184,9 @@ def heading_of(body: str) -> tuple[str, int, int] | None:
     Almost always the two numbers are the same. The one page that carries a span
     is why the shape has room for two.
     """
+    footer = FOOTER.search(body)
+    if footer:
+        body = body[:footer.start()]
     tokens = body[:400].split()
 
     for i, token in enumerate(tokens[:-1]):

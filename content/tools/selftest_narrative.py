@@ -468,6 +468,39 @@ def _():
         f'the search wandered out of Book II: {a.reads}'
 
 
+@case('a book divider is not the first canto of the book it introduces')
+def _():
+    # Griffith puts a bare "BOOK VI." on its own page between the books. At 221
+    # characters the whole page fits inside the heading window, footer included
+    # -- and the footer names what comes next: "Next: Canto I.: Rama's Speech."
+    # So the divider was read as Canto 1, marked heading_verified, and handed to
+    # ram-rama-speech as its chapter. Two events got 220 bytes of navigation
+    # instead of scripture, and nothing reported a failure, because as far as the
+    # fetcher was concerned it had found exactly what it went looking for.
+    divider = ("Sacred Texts Hinduism Index Previous Next BOOK VI. 1b "
+               "Next: Canto I.: Ráma's Speech. Sacred Texts | Hinduism "
+               "« Previous: BOOK V: Canto LXVI. Index Next: BOOK VI: "
+               "Canto I.: Ráma's Speech. »")
+    eq(fn.heading_of(divider), None, 'the divider claims no canto of its own')
+
+    real = ("Sacred Texts Hinduism Index Previous Next CANTO I.: RÁMA'S "
+            "SPEECH. The son of Raghu heard, consoled, The wondrous tale "
+            "Hanumán told; Next: Canto II.: Sugríva's Speech.")
+    eq(fn.heading_of(real), ('CANTO', 1, 1), 'the canto after it still reads')
+
+
+@case('a footer cannot supply the heading of a full chapter either')
+def _():
+    # The cut has to be harmless on the pages that were never broken: on a real
+    # chapter the footer sits thousands of characters past the heading and was
+    # already out of the window. Asserted so the fix cannot be "corrected" later
+    # into something that trims a chapter short.
+    body = ('SECTION CXLVII (Jatugriha Parva continued) "Vaisampayana said, '
+            + 'the Pandavas got into their cars. ' * 40
+            + 'Next: Section CXLVIII')
+    eq(fn.heading_of(body), ('SECTION', 147, 147))
+
+
 def main() -> int:
     failures = 0
     for name, test in CASES:

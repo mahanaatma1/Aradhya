@@ -48,8 +48,20 @@ OUT = ROOT / 'content' / 'staging' / 'narrative_digests'
 # The archive wraps every chapter in navigation. Left in, it is the most
 # repeated text in the corpus and the least informative, and at 700 characters
 # an extract it would be most of the extract.
-CRUMB_HEAD = re.compile(r'^\s*Sacred Texts.*?(?=(?:SECTION|CANTO|THE MAHABHARATA)\b)',
-                        re.I | re.S)
+#
+# The head crumb is matched as itself -- a bounded run of nav words ending in
+# "Next" -- and not by looking ahead for where the body starts. The first
+# version did look ahead, for SECTION or CANTO, which held until it met a book
+# that has neither: in books 8, 9, 11, 16 and 17 Ganguli heads a chapter with a
+# bare number. With no heading word to find, the lookahead ran past the whole
+# chapter and matched the word "Section" in the *footer* -- "Next: Section 33"
+# -- so the digest threw away 10,836 characters of Duryodhana at the lake and
+# kept the two words of the footer. Nine events read as empty because of it.
+#
+# The bound is what keeps it honest: the run may not cross a quotation mark and
+# may not run past 120 characters, so it cannot reach out of the navigation and
+# into the chapter however the page is shaped.
+CRUMB_HEAD = re.compile(r'^\s*Sacred Texts\b[^"\n]{0,120}?\bNext\b\s*', re.I)
 CRUMB_TAIL = re.compile(r'\s*Next:.*$|\s*Sacred Texts \|.*$', re.I | re.S)
 PRINT_PAGE = re.compile(r'\bp\.\s*\d+\s*')
 
