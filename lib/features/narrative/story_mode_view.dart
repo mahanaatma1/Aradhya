@@ -52,6 +52,19 @@ class StoryModeView extends ConsumerStatefulWidget {
   /// Mahabharata screen uses this to link its own sub-view, counted.
   final Widget? Function(EpicSection section)? sectionExtra;
 
+  /// Leave sections with nothing in them out, instead of saying they are empty.
+  ///
+  /// Off by default, because "No events yet" on the Uttara Kanda is a true and
+  /// useful thing to say: the section exists in the work and we have not written
+  /// it (SC-15). Turned on when the Explore row is filtering (SC-13), where a
+  /// section is empty because the *reader* narrowed the list — reporting that as
+  /// unwritten content would be a lie about the data.
+  ///
+  /// A section whose only content is [sectionExtra] counts as empty here, which
+  /// is why the epic screens drop the extra while a filter is on: eighteen
+  /// unfiltered war days under a filtered parva would not belong to either.
+  final bool hideEmpty;
+
   const StoryModeView({
     super.key,
     required this.epic,
@@ -59,6 +72,7 @@ class StoryModeView extends ConsumerStatefulWidget {
     required this.hindi,
     required this.header,
     this.sectionExtra,
+    this.hideEmpty = false,
   });
 
   @override
@@ -75,15 +89,20 @@ class _StoryModeViewState extends ConsumerState<StoryModeView> {
   Widget build(BuildContext context) {
     final hi = widget.hindi;
     final progress = ref.watch(epicProgressProvider);
-    final sections = buildStory(widget.epic, widget.scenes);
+    final all = buildStory(widget.epic, widget.scenes);
+    final sections =
+        widget.hideEmpty ? all.where((s) => !s.isEmpty).toList() : all;
 
     _open ??= _seed(sections, progress);
 
     return ListView.builder(
       padding: const EdgeInsets.fromLTRB(16, 10, 16, 92),
-      itemCount: sections.length + 1,
+      // A filter that survives its own chip disappearing leaves nothing to draw.
+      // The header alone, with no word about why, reads as a broken screen.
+      itemCount: sections.isEmpty ? 2 : sections.length + 1,
       itemBuilder: (context, i) {
         if (i == 0) return widget.header;
+        if (sections.isEmpty) return _NothingMatched(hindi: hi);
         final s = sections[i - 1];
         return _SectionCard(
           story: s,
@@ -277,6 +296,44 @@ class _SectionCard extends StatelessWidget {
     final arcWord = hindi ? 'खंड' : (arcs == 1 ? 'arc' : 'arcs');
     final base = '$n $unit  ·  $arcs $arcWord';
     return done == 0 ? base : '$base  ·  $done ${hindi ? "पढ़े" : "read"}';
+  }
+}
+
+/// Shown when a filter leaves no section standing — see [StoryModeView.hideEmpty].
+class _NothingMatched extends StatelessWidget {
+  final bool hindi;
+  const _NothingMatched({required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 16, 14, 16),
+      decoration: BoxDecoration(
+        color: _panel(scheme, 0.45),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: scheme.outline.withValues(alpha: 0.18)),
+      ),
+      child: Row(
+        children: [
+          Icon(Icons.filter_alt_off_rounded,
+              size: 18, color: scheme.onSurface.withValues(alpha: 0.5)),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              hindi
+                  ? 'इस चयन में कोई प्रसंग नहीं। ऊपर से "सब" चुनें।'
+                  : 'No events under this choice. Pick "All" above.',
+              style: TextStyle(
+                fontSize: 12.5,
+                height: _lh(hindi, 1.35),
+                color: scheme.onSurface.withValues(alpha: 0.7),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
 

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
+import 'epic_explore.dart';
 import 'epic_view_mode.dart';
 import 'journey_view.dart';
 import 'narrative_models.dart';
@@ -12,7 +13,7 @@ import 'story_mode_view.dart';
 
 const _accent = Color(0xFF8A6A4F);
 
-/// The Mahabharata, in two views of one text (SC-12).
+/// The Mahabharata, in two views of one text (SC-12), cut along four axes (SC-13).
 ///
 /// Story mode is the eighteen parvas with their arcs inside. Timeline is the
 /// vertical path: this was a horizontal band, and side by side with the Ramayana
@@ -21,6 +22,11 @@ const _accent = Color(0xFF8A6A4F);
 /// through twenty events to reach the war. What stays distinctly Mahabharata is
 /// the structure above the path — the four remembered arcs, and the eighteen
 /// days.
+///
+/// The four remembered arcs of `MahabharataArcs` still head the path in Timeline
+/// mode. They stopped being a *filter* when the Explore row arrived: it offers the
+/// twenty-two arcs the rows were actually authored into (SC-03), and two chip rows
+/// both called "arc" at two granularities is the failure that would have been.
 ///
 /// Ordering is **narrative**, never dates. Putting these events on a calendar
 /// would assert a chronology the sources do not support.
@@ -34,12 +40,15 @@ class MahabharataTimelineScreen extends ConsumerStatefulWidget {
 
 class _MahabharataTimelineScreenState
     extends ConsumerState<MahabharataTimelineScreen> {
-  String? _arcFilter;
+  ExploreBy _facet = ExploreBy.book;
+  String? _value;
+
+  static const _epic = 'mahabharata';
 
   @override
   Widget build(BuildContext context) {
     final hi = ref.watch(isHindiProvider);
-    final scenes = ref.watch(epicScenesProvider('mahabharata'));
+    final scenes = ref.watch(epicScenesProvider(_epic));
     final progress = ref.watch(epicProgressProvider);
     // Watched here rather than inside the AsyncView builder: that callback runs
     // during a descendant's build, and this ref belongs to this element.
@@ -49,6 +58,9 @@ class _MahabharataTimelineScreenState
     // belong to instead of reporting that parva as two events.
     final warDays = ref.watch(warDaysProvider).valueOrNull ?? const [];
     final warBookNo = warDays.isEmpty ? null : warDays.first.bookNo;
+    final cast = ref.watch(epicCastFacetProvider(_epic)).valueOrNull ?? const [];
+    final places =
+        ref.watch(epicPlaceFacetProvider(_epic)).valueOrNull ?? const [];
 
     return Scaffold(
       appBar: AppBar(
@@ -66,14 +78,16 @@ class _MahabharataTimelineScreenState
         isEmpty: (l) => l.isEmpty,
         emptyMessage: hi ? 'अभी कोई घटना नहीं' : 'No events yet',
         builder: (all) {
-          // The chips filter the flat path. In Story mode the parvas already do
-          // the grouping, so the filter is neither shown nor applied.
-          final list = (story || _arcFilter == null)
-              ? all
-              : all
-                  .where((s) =>
-                      MahabharataArcs.arcFor(s.sequenceNo)?.$1 == _arcFilter)
-                  .toList();
+          final scope = ExploreScope.of(
+            epic: _epic,
+            all: all,
+            facet: _facet,
+            value: _value,
+            hindi: hi,
+            cast: cast,
+            places: places,
+          );
+          final list = scope.events;
           final next = ref.read(epicProgressProvider.notifier).nextIn(list);
           final done = list.where((s) => progress.contains(s.id)).length;
 
@@ -93,15 +107,37 @@ class _MahabharataTimelineScreenState
                         : 'The Mahabharata in four arcs — in narrative order, not a chronology.'),
               ),
               EpicModeToggle(hindi: hi),
-              const SizedBox(height: 12),
+              const SizedBox(height: 10),
+              ExploreByChips(
+                epic: _epic,
+                selected: _facet,
+                hindi: hi,
+                // A held value means nothing under a different axis, so changing
+                // the axis clears it rather than filtering by an id from the
+                // wrong table.
+                onSelected: (f) => setState(() {
+                  _facet = f;
+                  _value = null;
+                }),
+              ),
+              if (scope.choices.isNotEmpty)
+                FacetValueChips(
+                  choices: scope.choices,
+                  total: scope.total,
+                  selected: _value,
+                  hindi: hi,
+                  onSelected: (v) => setState(() => _value = v),
+                ),
+              if (scope.unassigned > 0)
+                ExploreGapNote(
+                    text: _facet.gap(scope.unassigned, scope.total, hi),
+                    hindi: hi),
               // In Story mode this link lives inside the parva that holds the
               // days, which is a truer place for it than the top of the screen.
-              if (!story) ...[
-                _ArcChips(
-                  selected: _arcFilter,
-                  hindi: hi,
-                  onSelected: (a) => setState(() => _arcFilter = a),
-                ),
+              // Under a filter it is offered nowhere: the days are not filtered,
+              // and eighteen unnarrowed rows beneath a narrowed list would belong
+              // to neither.
+              if (!story && !scope.filtered) ...[
                 const SizedBox(height: 10),
                 _EighteenDaysLink(hindi: hi, count: warDays.length),
               ],
@@ -113,12 +149,20 @@ class _MahabharataTimelineScreenState
             children: [
               if (story)
                 StoryModeView(
-                  epic: 'mahabharata',
+                  // A new filter is a new reading position: the shelf re-seeds
+                  // which section is open instead of leaving the reader looking
+                  // at collapsed titles.
+                  key: ValueKey(scope.stateKey),
+                  epic: _epic,
                   scenes: list,
                   hindi: hi,
                   header: header,
-                  sectionExtra: (s) =>
-                      (warBookNo != null && s.no == warBookNo && warDays.isNotEmpty)
+                  hideEmpty: scope.filtered,
+                  sectionExtra: scope.filtered
+                      ? null
+                      : (s) => (warBookNo != null &&
+                              s.no == warBookNo &&
+                              warDays.isNotEmpty)
                           ? _EighteenDaysLink(hindi: hi, count: warDays.length)
                           : null,
                 )
@@ -171,54 +215,6 @@ class _MahabharataTimelineScreenState
             ],
           );
         },
-      ),
-    );
-  }
-}
-
-class _ArcChips extends StatelessWidget {
-  final String? selected;
-  final bool hindi;
-  final ValueChanged<String?> onSelected;
-
-  const _ArcChips({
-    required this.selected,
-    required this.hindi,
-    required this.onSelected,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-
-    Widget chip(String? value, String label) {
-      final on = selected == value;
-      return Padding(
-        padding: const EdgeInsets.only(right: 8),
-        child: ChoiceChip(
-          label: Text(label),
-          selected: on,
-          onSelected: (_) => onSelected(on ? null : value),
-          labelStyle: TextStyle(
-            fontSize: 12,
-            fontWeight: on ? FontWeight.w700 : FontWeight.w500,
-            color: on ? _accent : scheme.onSurface.withValues(alpha: .8),
-          ),
-          selectedColor: _accent.withValues(alpha: 0.16),
-          side: BorderSide(color: scheme.outline.withValues(alpha: 0.25)),
-        ),
-      );
-    }
-
-    return SizedBox(
-      height: 44,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          chip(null, hindi ? 'सब' : 'All'),
-          for (final (en, hiLabel, _, _) in MahabharataArcs.arcs)
-            chip(en, hindi ? hiLabel : en),
-        ],
       ),
     );
   }

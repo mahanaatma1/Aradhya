@@ -1326,7 +1326,21 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       batches. The 18 war days are offered from inside the Bhishma Parva
       through `sectionExtra` rather than being folded into the flat list, which
       would have moved the progress total across a toggle
-- [ ] **SC-13** Explore by: Book · Story · Characters · Places · Themes
+- [x] **SC-13** Explore by: a chip row above both modes on both epics, cutting by
+      section · arc · character · place. Four axes, not five: **Themes is
+      deliberately absent** — one narrative row in 79 carries a theme, so the chip
+      would be a filter with nothing behind it, and it arrives with the content.
+      Labelled "Arc" not "Story" because one of the two view modes is already
+      named Story and a chip sharing that word would mean something else. The
+      section chip says Kanda or Parva, per epic, not "Book".
+      Counts are computed from the list on screen, never from a table aggregate:
+      Kurukshetra is 8 events on the Mahabharata screen and 26 in
+      `narrative_nodes`, and `epic_explore_test` pins that difference. Live shape:
+      Ramayana 19 character chips / 4 place chips / 19 of 32 unplaced; Mahabharata
+      26 / 3 / 14 of 29. The place shortfall is **stated above the row** rather
+      than left implied — RM-02 is the task that closes it. The Mahabharata's old
+      four-arc `_ArcChips` filter is gone, absorbed by this row's 22 authored arcs;
+      the four remembered arcs still head the path in Timeline mode
 - [x] **SC-14** Shanti marked `themes: [dharma, governance, teaching]` and
       arc-titled "Bhishma's Teaching". Anushasana has no events to mark yet.
       UI half: both parvas carry a "Teachings, not events" badge, a tradition
@@ -1337,16 +1351,32 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [x] **SC-16** `prev/next_node_id` denormalised at build time — chained per
       (epic, recension); invariants pinned in `content_integrity_test`
 
-- [ ] **RM-02** Every scene linked to a `place` entity
+- [ ] **RM-02** Every scene linked to a `place` entity — now has a symptom a reader
+      can see, which moves it up: SC-13's Places chip row states "19 of 32 events
+      have no place recorded yet" on the Ramayana and "14 of 29" on the
+      Mahabharata. Four places for the Ramayana (Ayodhya 5, Lanka 5, Kishkindha 2,
+      Mithila 1) and three for the Mahabharata (Kurukshetra 8, Hastinapura 6,
+      Himalaya 1). The line disappears on its own when the column fills
 - [ ] **NR-02** Normalise `book_label_hi` in the content build — the same
       `book_no` is spelled two ways in bk1/2/4/5/6 ("बाल कांड" / "बालकांड"),
       because the labels were authored per batch. Nothing user-facing reads
       them any more (the roster in `story_structure.dart` is the authority, on
       both the epic screens and the event page), so this is a tidy, not a bug
       with a symptom. Fix it in the JSONL, not in the shipped `.sqlite`
-- [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka
-- [ ] **MB-02** Optional parva rail beside the arc chips
+- [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka — SC-13's
+      Places axis is the filter half of this; what is still missing is the
+      *journey*, places in narrative order rather than by count, which needs RM-02
+      finished first or the route has nineteen gaps in it
+- [-] **MB-02** ~~Optional parva rail beside the arc chips~~ — superseded by
+      SC-13: the parvas are the section axis of the Explore row, on both epics,
+      which is the same affordance without a second rail
 - [ ] **NR-01** Add `chronology_confidence` — narrative order is not historical order
+- [ ] **NR-03** "Appears in" on the entity page — `entity_detail_screen` watches
+      relations and aliases only, and nothing there reaches `narrative_cast`, so
+      Rama's page cannot say he is in eighteen events while the Ramayana screen
+      can. SC-13's `epicCastFacetProvider` is the inverse join already written;
+      what is missing is a per-entity variant and a rail on that page.
+      `_NoConnections` is the honest-empty widget for a figure with no scenes
 - [-] **RM-01** ~~Ramayana 32 to 45–50 scenes~~ — count withdrawn, see SC-02
 - [-] **MB-01** ~~Mahabharata 29 to 45–55 events~~ — count withdrawn, see SC-03
 - [ ] **ST-01** Merge stories and kathas into one categorised list

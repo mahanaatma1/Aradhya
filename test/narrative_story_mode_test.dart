@@ -86,6 +86,7 @@ StoryModeView _view(
   bool hindi = false,
   Widget? Function(EpicSection)? sectionExtra,
   Widget header = const SizedBox.shrink(),
+  bool hideEmpty = false,
 }) =>
     StoryModeView(
       epic: epic,
@@ -93,6 +94,7 @@ StoryModeView _view(
       hindi: hindi,
       header: header,
       sectionExtra: sectionExtra,
+      hideEmpty: hideEmpty,
     );
 
 void main() {
@@ -243,6 +245,74 @@ void main() {
       await tester.tap(find.text('Ayodhya Kanda'));
       await tester.pumpAndSettle();
       expect(find.textContaining('Scene 2'), findsNothing);
+    });
+  });
+
+  group('the shelf under a filter (SC-13)', () {
+    // Two different reasons a section can hold nothing, and they must not be
+    // reported the same way. Unfiltered, an empty kanda is content we have not
+    // written and saying so is the point (SC-15). Filtered, it is empty because
+    // the reader narrowed the list — calling that unwritten would be a lie about
+    // the data.
+    testWidgets('an excluded section is left out, not called empty',
+        (tester) async {
+      await pumpStory(
+        tester,
+        _view('ramayana', [_node(1, 3)], hideEmpty: true),
+      );
+      expect(find.text('No events yet'), findsNothing);
+      expect(find.text('Aranya Kanda'), findsOneWidget);
+      expect(find.text('Bala Kanda'), findsNothing);
+      // And its own note goes with it: a tradition note about a section the
+      // reader has filtered away has nothing to annotate.
+      expect(find.text('IN THE TRADITION'), findsNothing);
+      expect(find.byIcon(Icons.expand_more_rounded), findsOneWidget);
+    });
+
+    testWidgets('unfiltered, the same shelf still admits what it lacks',
+        (tester) async {
+      await pumpStory(tester, _view('ramayana', [_node(1, 3)]));
+      expect(find.text('No events yet'), findsNWidgets(6));
+      expect(find.text('IN THE TRADITION'), findsOneWidget);
+    });
+
+    testWidgets('a filter that matches nothing says so, and how to undo it',
+        (tester) async {
+      // Reachable when the data moves under a held filter. The header alone,
+      // with no word about why, reads as a broken screen.
+      await pumpStory(
+        tester,
+        _view('ramayana', const [], hideEmpty: true,
+            header: const Text('PROGRESS HEADER')),
+      );
+      expect(tester.takeException(), isNull);
+      expect(find.text('PROGRESS HEADER'), findsOneWidget);
+      expect(find.textContaining('No events under this choice'), findsOneWidget);
+      expect(find.text('No events yet'), findsNothing);
+    });
+
+    testWidgets('the nothing-matched note survives Hindi at 320 dp',
+        (tester) async {
+      await pumpStory(
+        tester,
+        _view('mahabharata', const [], hindi: true, hideEmpty: true),
+        width: 320,
+        height: 800,
+      );
+      expect(tester.takeException(), isNull);
+      expect(find.textContaining('कोई प्रसंग नहीं'), findsOneWidget);
+    });
+
+    testWidgets('surviving sections keep their real counts', (tester) async {
+      // The subtitle counts what is in front of the reader. Under a filter that
+      // is the filtered number, which is the only number that matches the rows
+      // below it.
+      await pumpStory(
+        tester,
+        _view('ramayana', [_node(1, 5), _node(2, 5)], hideEmpty: true),
+      );
+      expect(find.textContaining('2 events'), findsOneWidget);
+      expect(find.text('Sundara Kanda'), findsOneWidget);
     });
   });
 

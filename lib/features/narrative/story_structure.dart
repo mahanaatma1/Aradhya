@@ -119,6 +119,15 @@ const mahabharataSections = <EpicSection>[
 List<EpicSection> sectionsFor(String epic) =>
     epic == 'mahabharata' ? mahabharataSections : ramayanaSections;
 
+/// What one section of this epic is called.
+///
+/// `book_no` is the column name. A reader who knows these works knows kandas and
+/// parvas, so the chip that cuts an epic by section says the word the tradition
+/// says.
+String sectionWord(String epic, bool hindi) => epic == 'mahabharata'
+    ? (hindi ? 'पर्व' : 'Parva')
+    : (hindi ? 'कांड' : 'Kanda');
+
 /// A run of events belonging to one movement of the story.
 class StoryArc {
   final String slug;
@@ -201,6 +210,40 @@ List<StorySection> buildStory(String epic, List<NarrativeNode> nodes) {
     ));
   }
   return out;
+}
+
+/// Every arc of an epic, in narrative order (SC-13).
+///
+/// Sections come from a roster because an empty section is a fact about the work.
+/// Arcs do not: an arc exists because events were written into it, so an arc with
+/// nothing in it is not a gap to report but a filter with no results, and it is
+/// simply not offered.
+///
+/// Arcs are merged by slug. Nothing in the shipped data spans two sections, but
+/// were an arc ever authored across a section boundary, flattening [buildStory]
+/// would offer it as two identically-labelled chips each filtering to half of
+/// it — a filter giving a quietly wrong answer, which is worse than none.
+List<StoryArc> allArcs(String epic, List<NarrativeNode> nodes) {
+  final merged = <String, StoryArc>{};
+  for (final section in buildStory(epic, nodes)) {
+    for (final arc in section.arcs) {
+      // Pre-SC-02 rows carry no arc and land in one untitled group. An unlabelled
+      // chip is not a filter, so those events are reachable by section only —
+      // which is what the gap line above the row is for.
+      if ((arc.title(false) ?? '').isEmpty) continue;
+      final have = merged[arc.slug];
+      merged[arc.slug] = have == null
+          ? arc
+          : StoryArc(
+              slug: arc.slug,
+              no: have.no,
+              titleEn: have.titleEn,
+              titleHi: have.titleHi,
+              events: [...have.events, ...arc.events],
+            );
+    }
+  }
+  return merged.values.toList();
 }
 
 /// Groups one section's events by arc, in `arc_no` order.

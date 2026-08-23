@@ -4,28 +4,48 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
+import 'epic_explore.dart';
 import 'epic_view_mode.dart';
 import 'journey_view.dart';
 import 'narrative_providers.dart';
 import 'story_mode_view.dart';
 
-/// The Ramayana, in two views of one text (SC-12).
+/// The Ramayana, in two views of one text (SC-12), cut along four axes (SC-13).
 ///
 /// Story mode is the seven kandas with their arcs inside — the shape of the
 /// work. Timeline is the vertical path, shared with the Mahabharata via
 /// journey_view.dart, so the two epics read as one app rather than two
 /// experiments. Which one you last used is remembered.
-class RamayanaJourneyScreen extends ConsumerWidget {
+///
+/// Above both sits the Explore row, which narrows *what* is shown without
+/// touching *how*: an arc, a character, a place. It is not remembered — a filter
+/// you left on three days ago is a confusing thing to come back to, where a
+/// preferred view is not.
+class RamayanaJourneyScreen extends ConsumerStatefulWidget {
   const RamayanaJourneyScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<RamayanaJourneyScreen> createState() =>
+      _RamayanaJourneyScreenState();
+}
+
+class _RamayanaJourneyScreenState extends ConsumerState<RamayanaJourneyScreen> {
+  ExploreBy _facet = ExploreBy.book;
+  String? _value;
+
+  static const _epic = 'ramayana';
+
+  @override
+  Widget build(BuildContext context) {
     final hi = ref.watch(isHindiProvider);
-    final scenes = ref.watch(epicScenesProvider('ramayana'));
+    final scenes = ref.watch(epicScenesProvider(_epic));
     final progress = ref.watch(epicProgressProvider);
     // Watched here rather than inside the AsyncView builder: that callback runs
     // during a descendant's build, and this ref belongs to this element.
     final mode = ref.watch(epicViewModeProvider);
+    final cast = ref.watch(epicCastFacetProvider(_epic)).valueOrNull ?? const [];
+    final places =
+        ref.watch(epicPlaceFacetProvider(_epic)).valueOrNull ?? const [];
 
     return Scaffold(
       appBar: AppBar(
@@ -42,7 +62,17 @@ class RamayanaJourneyScreen extends ConsumerWidget {
         value: scenes,
         isEmpty: (l) => l.isEmpty,
         emptyMessage: hi ? 'अभी कोई दृश्य नहीं' : 'No scenes yet',
-        builder: (list) {
+        builder: (all) {
+          final scope = ExploreScope.of(
+            epic: _epic,
+            all: all,
+            facet: _facet,
+            value: _value,
+            hindi: hi,
+            cast: cast,
+            places: places,
+          );
+          final list = scope.events;
           final next = ref.read(epicProgressProvider.notifier).nextIn(list);
           final done = list.where((s) => progress.contains(s.id)).length;
 
@@ -58,6 +88,31 @@ class RamayanaJourneyScreen extends ConsumerWidget {
                     : 'The seven kandas of the Valmiki Ramayana, scene by scene.',
               ),
               EpicModeToggle(hindi: hi),
+              const SizedBox(height: 10),
+              ExploreByChips(
+                epic: _epic,
+                selected: _facet,
+                hindi: hi,
+                // A held value means nothing under a different axis, so changing
+                // the axis clears it rather than filtering by an id from the
+                // wrong table.
+                onSelected: (f) => setState(() {
+                  _facet = f;
+                  _value = null;
+                }),
+              ),
+              if (scope.choices.isNotEmpty)
+                FacetValueChips(
+                  choices: scope.choices,
+                  total: scope.total,
+                  selected: _value,
+                  hindi: hi,
+                  onSelected: (v) => setState(() => _value = v),
+                ),
+              if (scope.unassigned > 0)
+                ExploreGapNote(
+                    text: _facet.gap(scope.unassigned, scope.total, hi),
+                    hindi: hi),
               const SizedBox(height: 14),
             ],
           );
@@ -66,10 +121,15 @@ class RamayanaJourneyScreen extends ConsumerWidget {
             children: [
               if (mode == EpicViewMode.story)
                 StoryModeView(
-                  epic: 'ramayana',
+                  // A new filter is a new reading position: the shelf re-seeds
+                  // which section is open instead of leaving the reader looking
+                  // at collapsed titles.
+                  key: ValueKey(scope.stateKey),
+                  epic: _epic,
                   scenes: list,
                   hindi: hi,
                   header: header,
+                  hideEmpty: scope.filtered,
                 )
               else
                 ListView.builder(
