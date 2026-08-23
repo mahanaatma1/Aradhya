@@ -4,13 +4,17 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
+import 'epic_view_mode.dart';
 import 'journey_view.dart';
 import 'narrative_providers.dart';
+import 'story_mode_view.dart';
 
-/// The Ramayana as a journey down the page.
+/// The Ramayana, in two views of one text (SC-12).
 ///
-/// The presentation now lives in journey_view.dart, shared with the
-/// Mahabharata, so the two epics read as one app rather than two experiments.
+/// Story mode is the seven kandas with their arcs inside — the shape of the
+/// work. Timeline is the vertical path, shared with the Mahabharata via
+/// journey_view.dart, so the two epics read as one app rather than two
+/// experiments. Which one you last used is remembered.
 class RamayanaJourneyScreen extends ConsumerWidget {
   const RamayanaJourneyScreen({super.key});
 
@@ -19,6 +23,9 @@ class RamayanaJourneyScreen extends ConsumerWidget {
     final hi = ref.watch(isHindiProvider);
     final scenes = ref.watch(epicScenesProvider('ramayana'));
     final progress = ref.watch(epicProgressProvider);
+    // Watched here rather than inside the AsyncView builder: that callback runs
+    // during a descendant's build, and this ref belongs to this element.
+    final mode = ref.watch(epicViewModeProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -39,44 +46,59 @@ class RamayanaJourneyScreen extends ConsumerWidget {
           final next = ref.read(epicProgressProvider.notifier).nextIn(list);
           final done = list.where((s) => progress.contains(s.id)).length;
 
+          final header = Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              JourneyHeader(
+                done: done,
+                total: list.length,
+                hindi: hi,
+                subtitle: hi
+                    ? 'वाल्मीकि रामायण के सात कांड, दृश्य दर दृश्य।'
+                    : 'The seven kandas of the Valmiki Ramayana, scene by scene.',
+              ),
+              EpicModeToggle(hindi: hi),
+              const SizedBox(height: 14),
+            ],
+          );
+
           return Stack(
             children: [
-              ListView.builder(
-                padding: const EdgeInsets.fromLTRB(16, 10, 16, 92),
-                itemCount: list.length + 1,
-                itemBuilder: (context, i) {
-                  if (i == 0) {
-                    return JourneyHeader(
-                      done: done,
-                      total: list.length,
-                      hindi: hi,
-                      subtitle: hi
-                          ? 'वाल्मीकि रामायण के सात कांड, दृश्य दर दृश्य।'
-                          : 'The seven kandas of the Valmiki Ramayana, scene by scene.',
-                    );
-                  }
-                  final scene = list[i - 1];
-                  final prev = i >= 2 ? list[i - 2] : null;
-                  final newKanda = prev?.bookNo != scene.bookNo;
+              if (mode == EpicViewMode.story)
+                StoryModeView(
+                  epic: 'ramayana',
+                  scenes: list,
+                  hindi: hi,
+                  header: header,
+                )
+              else
+                ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(16, 10, 16, 92),
+                  itemCount: list.length + 1,
+                  itemBuilder: (context, i) {
+                    if (i == 0) return header;
+                    final scene = list[i - 1];
+                    final prev = i >= 2 ? list[i - 2] : null;
+                    final newKanda = prev?.bookNo != scene.bookNo;
 
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      if (newKanda)
-                        JourneyBanner(
-                            label: scene.bookLabel(hi) ?? '', hindi: hi),
-                      JourneySceneRow(
-                        scene: scene,
-                        hindi: hi,
-                        read: progress.contains(scene.id),
-                        isNext: next?.id == scene.id,
-                        left: (i - 1).isEven,
-                        isLast: i == list.length,
-                      ),
-                    ],
-                  );
-                },
-              ),
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        if (newKanda)
+                          JourneyBanner(
+                              label: scene.bookLabel(hi) ?? '', hindi: hi),
+                        JourneySceneRow(
+                          scene: scene,
+                          hindi: hi,
+                          read: progress.contains(scene.id),
+                          isNext: next?.id == scene.id,
+                          left: (i - 1).isEven,
+                          isLast: i == list.length,
+                        ),
+                      ],
+                    );
+                  },
+                ),
               if (next != null)
                 Positioned(
                   left: 0,

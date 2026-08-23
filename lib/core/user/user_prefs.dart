@@ -62,4 +62,5 @@ class PrefKeys {
   static const scripturePosPrefix = 'scripture_pos_'; // + bookId → verse index
   static const scriptureLast = 'scripture_last'; // JSON {scriptureId,bookId,index}
   static const readerFontScale = 'reader_font_scale'; // shared by all readers
+  static const epicViewMode = 'epic_view_mode'; // 'story' | 'timeline'
 }

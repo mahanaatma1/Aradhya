@@ -291,7 +291,13 @@ final appRouter = GoRouter(
       path: '/journal',
       builder: (c, s) => const JournalScreen(),
       routes: [
-        GoRoute(path: 'new', builder: (c, s) => const JournalEditorScreen()),
+        // `?prompt=` carries a question in from elsewhere — a scene's
+        // reflection, via "Think about it".
+        GoRoute(
+          path: 'new',
+          builder: (c, s) => JournalEditorScreen(
+              seedPrompt: s.uri.queryParameters['prompt']),
+        ),
         GoRoute(
           path: 'entry/:entryId',
           builder: (c, s) =>

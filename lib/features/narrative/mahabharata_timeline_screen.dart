@@ -4,19 +4,23 @@ import 'package:go_router/go_router.dart';
 
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
+import 'epic_view_mode.dart';
 import 'journey_view.dart';
 import 'narrative_models.dart';
 import 'narrative_providers.dart';
+import 'story_mode_view.dart';
 
 const _accent = Color(0xFF8A6A4F);
 
-/// The Mahabharata, down the page.
+/// The Mahabharata, in two views of one text (SC-12).
 ///
-/// This was a horizontal band, and side by side with the Ramayana the vertical
-/// path simply won: it scrolls the way a phone scrolls, each scene gets room
-/// for its cast and its blurb, and nobody has to swipe sideways through twenty
-/// events to reach the war. What stays distinctly Mahabharata is the structure
-/// above the path — the four arcs, and the eighteen days.
+/// Story mode is the eighteen parvas with their arcs inside. Timeline is the
+/// vertical path: this was a horizontal band, and side by side with the Ramayana
+/// the vertical path simply won — it scrolls the way a phone scrolls, each scene
+/// gets room for its cast and its blurb, and nobody has to swipe sideways
+/// through twenty events to reach the war. What stays distinctly Mahabharata is
+/// the structure above the path — the four remembered arcs, and the eighteen
+/// days.
 ///
 /// Ordering is **narrative**, never dates. Putting these events on a calendar
 /// would assert a chronology the sources do not support.
@@ -37,6 +41,14 @@ class _MahabharataTimelineScreenState
     final hi = ref.watch(isHindiProvider);
     final scenes = ref.watch(epicScenesProvider('mahabharata'));
     final progress = ref.watch(epicProgressProvider);
+    // Watched here rather than inside the AsyncView builder: that callback runs
+    // during a descendant's build, and this ref belongs to this element.
+    final mode = ref.watch(epicViewModeProvider);
+    final story = mode == EpicViewMode.story;
+    // The eighteen days, so Story mode can offer them from inside the parva they
+    // belong to instead of reporting that parva as two events.
+    final warDays = ref.watch(warDaysProvider).valueOrNull ?? const [];
+    final warBookNo = warDays.isEmpty ? null : warDays.first.bookNo;
 
     return Scaffold(
       appBar: AppBar(
@@ -54,7 +66,9 @@ class _MahabharataTimelineScreenState
         isEmpty: (l) => l.isEmpty,
         emptyMessage: hi ? 'अभी कोई घटना नहीं' : 'No events yet',
         builder: (all) {
-          final list = _arcFilter == null
+          // The chips filter the flat path. In Story mode the parvas already do
+          // the grouping, so the filter is neither shown nor applied.
+          final list = (story || _arcFilter == null)
               ? all
               : all
                   .where((s) =>
@@ -63,60 +77,82 @@ class _MahabharataTimelineScreenState
           final next = ref.read(epicProgressProvider.notifier).nextIn(list);
           final done = list.where((s) => progress.contains(s.id)).length;
 
+          final header = Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              JourneyHeader(
+                done: done,
+                total: list.length,
+                hindi: hi,
+                subtitle: story
+                    ? (hi
+                        ? 'महाभारत के अठारह पर्व, प्रत्येक अपने खंडों में — कथा-क्रम में, तिथि-क्रम में नहीं।'
+                        : 'The eighteen parvas of the Mahabharata, each in its arcs — in narrative order, not a chronology.')
+                    : (hi
+                        ? 'चार पर्वों में महाभारत — कथा-क्रम में, तिथि-क्रम में नहीं।'
+                        : 'The Mahabharata in four arcs — in narrative order, not a chronology.'),
+              ),
+              EpicModeToggle(hindi: hi),
+              const SizedBox(height: 12),
+              // In Story mode this link lives inside the parva that holds the
+              // days, which is a truer place for it than the top of the screen.
+              if (!story) ...[
+                _ArcChips(
+                  selected: _arcFilter,
+                  hindi: hi,
+                  onSelected: (a) => setState(() => _arcFilter = a),
+                ),
+                const SizedBox(height: 10),
+                _EighteenDaysLink(hindi: hi, count: warDays.length),
+              ],
+              const SizedBox(height: 14),
+            ],
+          );
+
           return Stack(
             children: [
-              ListView.builder(
-                padding: const EdgeInsets.fromLTRB(16, 10, 16, 92),
-                itemCount: list.length + 1,
-                itemBuilder: (context, i) {
-                  if (i == 0) {
+              if (story)
+                StoryModeView(
+                  epic: 'mahabharata',
+                  scenes: list,
+                  hindi: hi,
+                  header: header,
+                  sectionExtra: (s) =>
+                      (warBookNo != null && s.no == warBookNo && warDays.isNotEmpty)
+                          ? _EighteenDaysLink(hindi: hi, count: warDays.length)
+                          : null,
+                )
+              else
+                ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(16, 10, 16, 92),
+                  itemCount: list.length + 1,
+                  itemBuilder: (context, i) {
+                    if (i == 0) return header;
+                    final scene = list[i - 1];
+                    final prev = i >= 2 ? list[i - 2] : null;
+                    final arc = MahabharataArcs.arcFor(scene.sequenceNo);
+                    final prevArc = prev == null
+                        ? null
+                        : MahabharataArcs.arcFor(prev.sequenceNo);
+                    final newArc = arc != null && arc.$1 != prevArc?.$1;
+
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        JourneyHeader(
-                          done: done,
-                          total: list.length,
+                        if (newArc)
+                          JourneyBanner(label: hi ? arc.$2 : arc.$1, hindi: hi),
+                        JourneySceneRow(
+                          scene: scene,
                           hindi: hi,
-                          subtitle: hi
-                              ? 'चार पर्वों में महाभारत — कथा-क्रम में, तिथि-क्रम में नहीं।'
-                              : 'The Mahabharata in four arcs — in narrative order, not a chronology.',
+                          read: progress.contains(scene.id),
+                          isNext: next?.id == scene.id,
+                          left: (i - 1).isEven,
+                          isLast: i == list.length,
                         ),
-                        _ArcChips(
-                          selected: _arcFilter,
-                          hindi: hi,
-                          onSelected: (a) => setState(() => _arcFilter = a),
-                        ),
-                        const SizedBox(height: 10),
-                        _EighteenDaysLink(hindi: hi),
                       ],
                     );
-                  }
-                  final scene = list[i - 1];
-                  final prev = i >= 2 ? list[i - 2] : null;
-                  final arc = MahabharataArcs.arcFor(scene.sequenceNo);
-                  final prevArc = prev == null
-                      ? null
-                      : MahabharataArcs.arcFor(prev.sequenceNo);
-                  final newArc = arc != null && arc.$1 != prevArc?.$1;
-
-                  return Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      if (newArc)
-                        JourneyBanner(
-                            label: hi ? arc.$2 : arc.$1, hindi: hi),
-                      JourneySceneRow(
-                        scene: scene,
-                        hindi: hi,
-                        read: progress.contains(scene.id),
-                        isNext: next?.id == scene.id,
-                        left: (i - 1).isEven,
-                        isLast: i == list.length,
-                      ),
-                    ],
-                  );
-                },
-              ),
+                  },
+                ),
               if (next != null)
                 Positioned(
                   left: 0,
@@ -189,9 +225,13 @@ class _ArcChips extends StatelessWidget {
 }
 
 /// Entry to the day-by-day view of the war.
+///
+/// The count is passed in rather than written as "eighteen", so the label cannot
+/// drift from the data the way the hardcoded arc ranges once did.
 class _EighteenDaysLink extends StatelessWidget {
   final bool hindi;
-  const _EighteenDaysLink({required this.hindi});
+  final int count;
+  const _EighteenDaysLink({required this.hindi, required this.count});
 
   @override
   Widget build(BuildContext context) {
@@ -211,14 +251,29 @@ class _EighteenDaysLink extends StatelessWidget {
                 size: 17, color: _accent),
             const SizedBox(width: 9),
             Expanded(
-              child: Text(
-                hindi
-                    ? 'कुरुक्षेत्र के अठारह दिन, सेनापति अनुसार'
-                    : 'The eighteen days of Kurukshetra, by commander',
-                style: const TextStyle(
-                    fontSize: 12.5,
-                    fontWeight: FontWeight.w600,
-                    color: _accent),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    hindi
+                        ? 'कुरुक्षेत्र के दिन, सेनापति अनुसार'
+                        : 'The days of Kurukshetra, by commander',
+                    style: const TextStyle(
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w600,
+                        height: 1.3,
+                        color: _accent),
+                  ),
+                  if (count > 0)
+                    Text(
+                      hindi
+                          ? '$count दिन'
+                          : '$count ${count == 1 ? "day" : "days"}',
+                      style: TextStyle(
+                          fontSize: 11,
+                          color: _accent.withValues(alpha: 0.8)),
+                    ),
+                ],
               ),
             ),
             const Icon(Icons.chevron_right_rounded, size: 18, color: _accent),

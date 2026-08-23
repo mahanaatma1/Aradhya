@@ -5,7 +5,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:divyavaani/features/ask/ask_models.dart';
 import 'package:divyavaani/features/dharma/dharma_models.dart';
 import 'package:divyavaani/features/festivals/festival_models.dart';
-import 'package:divyavaani/features/vidya/vidya_models.dart';
 import 'package:divyavaani/features/vidya/vidya_screen.dart';
 
 /// P7-13 and P7-03. Two things are checked together here: that the new

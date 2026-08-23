@@ -1309,18 +1309,41 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **SC-08** Reflection as a **question**, wired to Journal and Dharma game
 - [x] **SC-09** Deprecate `lesson_*` in favour of `reflection_*` — column kept,
       marked deprecated, `reflection()` falls back to it for older scenes
-- [ ] **SC-10** Event page in the fixed order, ending in prev/next with preview
-- [ ] **SC-11** "Read the original" lands on the exact `scripture_section_id`
-- [ ] **SC-12** Story / Timeline toggle, remembered per user
+- [x] **SC-10** Event page in the fixed order, ending in prev/next with preview
+      — illustration, title with section and arc, quick summary, story, key
+      moments, reflection, people, place, themes, the original text, related,
+      prev/next. Every block is conditional on its content: the prose is not
+      written yet and a page of empty labelled panels would promise what is not
+      there. `long_description`/`lesson` stand in through the model's fallbacks.
+      Order pinned by measured position in `narrative_scene_screen_test`
+- [~] **SC-11** "Read the original" lands on the exact `scripture_section_id`
+      — UI done, reusing `verseLocationProvider` so there is one entry point
+      into the reader. The button appears only when the id resolves; 0 of 79
+      events carry one, so it lights up on its own when the data lands
+- [x] **SC-12** Story / Timeline toggle, remembered per user — Story is the
+      default; both epics share `StoryModeView`. Sections group on `book_no`,
+      never on `book_label_*`, which disagrees with itself across authoring
+      batches. The 18 war days are offered from inside the Bhishma Parva
+      through `sectionExtra` rather than being folded into the flat list, which
+      would have moved the progress total across a toggle
 - [ ] **SC-13** Explore by: Book · Story · Characters · Places · Themes
-- [~] **SC-14** Shanti marked `themes: [dharma, governance, teaching]` and
-      arc-titled "Bhishma's Teaching". Anushasana has no events to mark yet;
-      the UI half still to come
-- [ ] **SC-15** Uttara Kanda labelled a distinct traditional section
+- [x] **SC-14** Shanti marked `themes: [dharma, governance, teaching]` and
+      arc-titled "Bhishma's Teaching". Anushasana has no events to mark yet.
+      UI half: both parvas carry a "Teachings, not events" badge, a tradition
+      note, and are counted in teachings rather than events
+- [x] **SC-15** Uttara Kanda labelled a distinct traditional section — present
+      in the roster with its tradition note in both languages, and honest about
+      holding nothing: it says so, and does not pretend to open
 - [x] **SC-16** `prev/next_node_id` denormalised at build time — chained per
       (epic, recension); invariants pinned in `content_integrity_test`
 
 - [ ] **RM-02** Every scene linked to a `place` entity
+- [ ] **NR-02** Normalise `book_label_hi` in the content build — the same
+      `book_no` is spelled two ways in bk1/2/4/5/6 ("बाल कांड" / "बालकांड"),
+      because the labels were authored per batch. Nothing user-facing reads
+      them any more (the roster in `story_structure.dart` is the authority, on
+      both the epic screens and the event page), so this is a tidy, not a bug
+      with a symptom. Fix it in the JSONL, not in the shipped `.sqlite`
 - [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka
 - [ ] **MB-02** Optional parva rail beside the arc chips
 - [ ] **NR-01** Add `chronology_confidence` — narrative order is not historical order

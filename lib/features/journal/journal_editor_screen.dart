@@ -17,7 +17,14 @@ import 'journal_providers.dart';
 class JournalEditorScreen extends ConsumerStatefulWidget {
   /// Null for a new entry.
   final int? entryId;
-  const JournalEditorScreen({super.key, this.entryId});
+
+  /// A question carried in from somewhere else in the app — a scene's reflection
+  /// arriving via "Think about it" (SC-10). It stands in for today's prompt so
+  /// the entry keeps the question that provoked it, and it deliberately has no
+  /// `prompt_id`: it is not a `journal_prompts` row.
+  final String? seedPrompt;
+
+  const JournalEditorScreen({super.key, this.entryId, this.seedPrompt});
 
   @override
   ConsumerState<JournalEditorScreen> createState() =>
@@ -99,6 +106,10 @@ class _JournalEditorScreenState extends ConsumerState<JournalEditorScreen> {
           _promptText = e.promptText;
           _promptId = e.promptId;
         }
+      } else if (widget.seedPrompt != null && widget.seedPrompt!.isNotEmpty) {
+        // A question handed over from elsewhere wins over today's prompt: the
+        // reader tapped that one.
+        _promptText = widget.seedPrompt;
       } else {
         final p = ref.read(todaysPromptProvider).valueOrNull;
         if (p != null) {
