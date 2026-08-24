@@ -527,7 +527,8 @@ class _EventRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     // The quick summary is the 30-second read and is the right blurb here.
-    // Until SC-05 lands it is null everywhere, so the card blurb stands in.
+    // It is null only where SC-05 found no source to write one from, and the
+    // card blurb stands in for those.
     final blurb = event.quickSummary(hindi) ?? event.desc(hindi);
 
     return InkWell(

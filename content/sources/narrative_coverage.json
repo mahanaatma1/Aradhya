@@ -292,16 +292,24 @@
    "citations": [
     {
      "cited_source": "ganguli-mahabharata",
-     "cited_as": "The Mahabharata, Book 1: Adi Parva: Section CXLVII",
+     "cited_as": "The Mahabharata, Book 1: Adi Parva: Sections CXLVI-CXLVII",
      "read_from": "ganguli-mahabharata",
      "book_no": 1,
      "sections": [
+      146,
       147
      ],
      "note": ""
     }
    ],
    "chapters": [
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 1,
+     "section": 146,
+     "path": "m01/m01147.htm",
+     "file": "ganguli-mahabharata\\m01_m01147.txt"
+    },
     {
      "source_slug": "ganguli-mahabharata",
      "book_no": 1,
@@ -312,8 +320,8 @@
    ],
    "missing": [],
    "blocked": [],
-   "wanted": 1,
-   "present": 1,
+   "wanted": 2,
+   "present": 2,
    "too_broad_to_author_from": false
   },
   {
@@ -920,11 +928,13 @@
    "citations": [
     {
      "cited_source": "ganguli-mahabharata",
-     "cited_as": "The Mahabharata, Book 4: Virata Parva: Section XIV",
+     "cited_as": "The Mahabharata, Book 4: Virata Parva: Sections I-III",
      "read_from": "ganguli-mahabharata",
      "book_no": 4,
      "sections": [
-      14
+      1,
+      2,
+      3
      ],
      "note": ""
     }
@@ -933,15 +943,29 @@
     {
      "source_slug": "ganguli-mahabharata",
      "book_no": 4,
-     "section": 14,
-     "path": "m04/m04014.htm",
-     "file": "ganguli-mahabharata\\m04_m04014.txt"
+     "section": 1,
+     "path": "m04/m04001.htm",
+     "file": "ganguli-mahabharata\\m04_m04001.txt"
+    },
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 4,
+     "section": 2,
+     "path": "m04/m04002.htm",
+     "file": "ganguli-mahabharata\\m04_m04002.txt"
+    },
+    {
+     "source_slug": "ganguli-mahabharata",
+     "book_no": 4,
+     "section": 3,
+     "path": "m04/m04003.htm",
+     "file": "ganguli-mahabharata\\m04_m04003.txt"
     }
    ],
    "missing": [],
    "blocked": [],
-   "wanted": 1,
-   "present": 1,
+   "wanted": 3,
+   "present": 3,
    "too_broad_to_author_from": false
   },
   {
@@ -5126,6 +5150,16 @@
       6
      ],
      "note": ""
+    },
+    {
+     "cited_source": "griffith-ramayana",
+     "cited_as": "BOOK I: Canto VIII.: Sumantra's Speech.",
+     "read_from": "griffith-ramayana",
+     "book_no": 1,
+     "sections": [
+      8
+     ],
+     "note": ""
     }
    ],
    "chapters": [
@@ -5135,12 +5169,19 @@
      "section": 6,
      "path": "rama/ry008.htm",
      "file": "griffith-ramayana\\rama_ry008.txt"
+    },
+    {
+     "source_slug": "griffith-ramayana",
+     "book_no": 1,
+     "section": 8,
+     "path": "rama/ry010.htm",
+     "file": "griffith-ramayana\\rama_ry010.txt"
     }
    ],
    "missing": [],
    "blocked": [],
-   "wanted": 1,
-   "present": 1,
+   "wanted": 2,
+   "present": 2,
    "too_broad_to_author_from": false
   },
   {
@@ -5161,6 +5202,16 @@
       16,
       17,
       18
+     ],
+     "note": ""
+    },
+    {
+     "cited_source": "griffith-ramayana",
+     "cited_as": "BOOK I: Canto XIX.: The Birth of the Princes.",
+     "read_from": "griffith-ramayana",
+     "book_no": 1,
+     "sections": [
+      19
      ],
      "note": ""
     }
@@ -5193,12 +5244,19 @@
      "section": 18,
      "path": "rama/ry020.htm",
      "file": "griffith-ramayana\\rama_ry020.txt"
+    },
+    {
+     "source_slug": "griffith-ramayana",
+     "book_no": 1,
+     "section": 19,
+     "path": "rama/ry021.htm",
+     "file": "griffith-ramayana\\rama_ry021.txt"
     }
    ],
    "missing": [],
    "blocked": [],
-   "wanted": 4,
-   "present": 4,
+   "wanted": 5,
+   "present": 5,
    "too_broad_to_author_from": false
   },
   {
@@ -5218,6 +5276,17 @@
       19,
       20,
       21
+     ],
+     "note": ""
+    },
+    {
+     "cited_source": "griffith-ramayana",
+     "cited_as": "BOOK I: Cantos XXII-XXIII.",
+     "read_from": "griffith-ramayana",
+     "book_no": 1,
+     "sections": [
+      22,
+      23
      ],
      "note": ""
     }
@@ -5243,12 +5312,26 @@
      "section": 21,
      "path": "rama/ry023.htm",
      "file": "griffith-ramayana\\rama_ry023.txt"
+    },
+    {
+     "source_slug": "griffith-ramayana",
+     "book_no": 1,
+     "section": 22,
+     "path": "rama/ry024.htm",
+     "file": "griffith-ramayana\\rama_ry024.txt"
+    },
+    {
+     "source_slug": "griffith-ramayana",
+     "book_no": 1,
+     "section": 23,
+     "path": "rama/ry025.htm",
+     "file": "griffith-ramayana\\rama_ry025.txt"
     }
    ],
    "missing": [],
    "blocked": [],
-   "wanted": 3,
-   "present": 3,
+   "wanted": 5,
+   "present": 5,
    "too_broad_to_author_from": false
   },
   {
@@ -5612,6 +5695,16 @@
       45
      ],
      "note": ""
+    },
+    {
+     "cited_source": "griffith-ramayana",
+     "cited_as": "Book II: Canto XLVI.: The Halt.",
+     "read_from": "griffith-ramayana",
+     "book_no": 2,
+     "sections": [
+      46
+     ],
+     "note": ""
     }
    ],
    "chapters": [
@@ -5621,12 +5714,19 @@
      "section": 45,
      "path": "rama/ry123.htm",
      "file": "griffith-ramayana\\rama_ry123.txt"
+    },
+    {
+     "source_slug": "griffith-ramayana",
+     "book_no": 2,
+     "section": 46,
+     "path": "rama/ry124.htm",
+     "file": "griffith-ramayana\\rama_ry124.txt"
     }
    ],
    "missing": [],
    "blocked": [],
-   "wanted": 1,
-   "present": 1,
+   "wanted": 2,
+   "present": 2,
    "too_broad_to_author_from": false
   },
   {

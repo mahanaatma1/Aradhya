@@ -1320,7 +1320,25 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       citing Dutt read from Griffith, because Dutt is not in this archive.
       14 events cite ranges wider than 12 sections and are flagged
       `too_broad_to_author_from` — SC-06 narrows the citation first
-- [ ] **SC-05** Quick Summary for every event — 30-second read
+- [x] **SC-05** Quick Summary for every event — 30-second read. 78 of 79 rows
+      carry both languages, drafted only from the fetched chapters as each
+      event's digest presents them and written through `apply_narrative.py`,
+      still the only tool that may touch these files. `ram-indrajit` is the one
+      blank and stays blank: Griffith's Book VI runs canto LXXV straight into
+      XCIII, so Indrajit's death is not in this archive, and the row cites Dutt,
+      who is not in it either. The blank shows as a blank — the event page drops
+      the `IN SHORT` label and lets the card blurb stand in, per SC-10.
+      What the drafting turned up is a citation problem rather than a prose one:
+      a row's title routinely promises a beat its cited range does not contain.
+      `kuru-day-16` is titled for Karna taking command and cites the sections
+      after it. `mbh-khandava` cites Adi 224 alone, which ends before the forest
+      is lit — it ends on Agni arriving as a Brahmana. `mbh-karna-tournament`
+      cites the aftermath, not the contest. `mbh-peace-fails` promises "five
+      villages" across 42 cited sections that do not include the refusal. In
+      every case the prose was written to what the chapter shows and the
+      promised beat declined, so the summaries are honest and narrower than
+      their own titles. SC-06 narrows the citations before it writes, which is
+      where those rows get their beat back.
 - [ ] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited
 - [ ] **SC-07** Key moments: 3–6 beats per event
 - [ ] **SC-08** Reflection as a **question**, wired to Journal and Dharma game
