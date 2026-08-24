@@ -3,6 +3,7 @@
     py -m content.tools.apply_narrative content/staging/quick_summaries.json
     py -m content.tools.apply_narrative <patch> --replace     # overwrite existing
     py -m content.tools.apply_narrative <patch> --dry-run
+    py -m content.tools.apply_narrative <patch> --verified-by TS   # citations
 
 The patch is `{"<slug>": {"quick_summary": {"en": ..., "hi": ...}}}`. Prose is
 drafted from the digests, which are drafted from the fetched chapters; this is
@@ -16,7 +17,7 @@ are parsed, patched, and re-serialised with `sort_keys=True,
 ensure_ascii=False`, which reproduces every untouched row byte for byte -- that
 was checked against all seventy-nine before this tool was written, and it is
 checked again on every run: a file is only rewritten if the rows this patch
-names are the only ones that changed.
+names are the only lines that changed.
 
 What it refuses. An empty side of a bilingual pair, prose that merely repeats
 `short_description` (the plan asks for a quick summary *distinct* from the card
@@ -26,8 +27,33 @@ it does not recognise. It also refuses to overwrite prose that is already there
 unless told to, because a second run of a stale patch should not silently undo
 an edit made after it.
 
-Reads and writes content/data/narrative/*.jsonl. It does not touch the schema
-or the shipped databases; `build.py` is what carries these fields into a DB.
+Citations, `{"<slug>": {"citation": [{"source_slug": ..., "sections": [...],
+"cited_as": ...}]}}`, are the one field here that is not prose, and they are
+held to more than the prose is. SC-06 narrows citations that were too wide to
+author from -- forty-two sections of Udyoga Parva down to the one that holds the
+scene -- and a citation is the row's claim about where it got its story, so:
+
+*A narrowing may not widen.* Every section named has to be inside what the row
+already cites, per the coverage file. Tightening a citation weakens the claim,
+which is safe; extending one asserts something no verifier saw.
+
+*A narrowing may not change the source.* A `source_slug` the row does not
+already cite is refused outright. Some events genuinely need a second recension
+-- `ram-indrajit`'s sargas are absent from Griffith -- and the plan's rule is
+that such a row must not silently borrow one.
+
+*Every section has to be on disk.* A citation is only worth narrowing to text
+that was fetched and can be read; the coverage file is the authority.
+
+*Somebody's name goes on it.* `--verified-by` has no default. The row records a
+person's initials against a date, and a tool cannot supply either on their
+behalf, so a citation patch without a name is refused. The old range is kept in
+`verification.notes` so the narrowing can be read back and undone.
+
+Reads and writes content/data/narrative/*.jsonl, and reads
+content/sources/narrative_coverage.json to check a citation. It does not touch
+the schema or the shipped databases; `build.py` is what carries these fields
+into a DB.
 """
 
 from __future__ import annotations
@@ -35,10 +61,12 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 NARRATIVE = ROOT / 'content' / 'data' / 'narrative'
+COVERAGE = ROOT / 'content' / 'sources' / 'narrative_coverage.json'
 
 # Bilingual prose blocks this tool will write, with the word bounds each one is
 # held to. The quick summary's ceiling is the point of it: "the 30-second read"
@@ -56,15 +84,24 @@ def words(text: str) -> int:
     return len(text.split())
 
 
-def load_rows() -> tuple[dict[str, dict], dict[str, Path], dict[Path, list[str]]]:
-    """Rows by slug, the file each came from, and each file's slug order.
+def load_rows() -> tuple[dict[str, dict], dict[str, Path],
+                         dict[Path, list[str]], dict[str, str]]:
+    """Rows by slug, the file each came from, each file's slug order, and the
+    line each row arrived on.
 
     The order matters: rows are rewritten in place, so a file has to go back out
     in the sequence it came in. Nothing here sorts anything.
+
+    The lines are kept so the write can prove it changed only what the patch
+    named. Re-serialising a row this tool did not touch should reproduce the line
+    it came from exactly, and if it ever stops doing that -- a json module that
+    escapes differently, a row that arrived with keys out of order -- the whole
+    file silently rewrites and the diff is unreadable.
     """
     rows: dict[str, dict] = {}
     origin: dict[str, Path] = {}
     order: dict[Path, list[str]] = {}
+    source_line: dict[str, str] = {}
     for path in sorted(NARRATIVE.glob('*.jsonl')):
         order[path] = []
         for line in path.read_text(encoding='utf-8').splitlines():
@@ -75,8 +112,34 @@ def load_rows() -> tuple[dict[str, dict], dict[str, Path], dict[Path, list[str]]
             if slug in rows:
                 raise SystemExit(f'duplicate slug across narrative files: {slug}')
             rows[slug], origin[slug] = row, path
+            source_line[slug] = line
             order[path].append(slug)
-    return rows, origin, order
+    return rows, origin, order, source_line
+
+
+def cited_sections() -> dict[tuple[str, str], set[int]]:
+    """`(slug, source_slug) -> every section that row already cites`, and
+    `(slug, source_slug, 'disk')` for the subset that was fetched.
+
+    Taken from the coverage file rather than parsed out of
+    `source_chapter_or_section`, because that field is prose -- "Sundara Kanda,
+    sargas 14-38", "The Mahabharata, Book 1: Adi Parva: Section CCXXIV" -- and
+    fetch_narrative already did the work of resolving it to numbers against the
+    archive's own numbering. Parsing it a second time here is how the two would
+    drift.
+    """
+    out: dict[tuple[str, str], set[int]] = {}
+    if not COVERAGE.exists():
+        return out
+    coverage = json.loads(COVERAGE.read_text(encoding='utf-8'))
+    for event in coverage['events']:
+        for c in event['citations']:
+            key = (event['slug'], c['read_from'])
+            out.setdefault(key, set()).update(c['sections'])
+        for ch in event['chapters']:
+            key = (event['slug'], ch['source_slug'], 'disk')
+            out.setdefault(key, set()).add(ch['section'])
+    return out
 
 
 def check(slug: str, field: str, value, row: dict) -> list[str]:
@@ -119,6 +182,80 @@ def check(slug: str, field: str, value, row: dict) -> list[str]:
     return bad
 
 
+def check_citation(slug: str, value, row: dict, cited: dict) -> list[str]:
+    """Everything wrong with a citation patch, as sentences. Empty means fine.
+
+    The four rules are in the module docstring; this is where they are enforced.
+    Each one refuses rather than repairs, because the repair for a citation that
+    names an unfetched chapter is to fetch it, and a tool that quietly dropped
+    the section would leave the row claiming less than the person who wrote the
+    patch believed it claimed.
+    """
+    bad: list[str] = []
+    if not isinstance(value, list) or not value:
+        return ['citation must be a non-empty list of {source_slug, sections,'
+                ' cited_as}']
+    have = {s.get('source_slug') for s in (row.get('sources') or [])}
+    for i, entry in enumerate(value):
+        where = f'citation[{i}]'
+        source = entry.get('source_slug')
+        sections = entry.get('sections')
+        label = (entry.get('cited_as') or '').strip()
+        if not source:
+            bad.append(f'{where} has no source_slug')
+            continue
+        if source not in have:
+            bad.append(f'{where} cites {source}, which this row does not already'
+                       f' cite -- a narrowing cannot change the source')
+            continue
+        if not label:
+            bad.append(f'{where} has no cited_as -- the row shows this to a reader')
+        if not sections or not all(isinstance(s, int) for s in sections):
+            bad.append(f'{where} has no sections, or a section that is not a number')
+            continue
+        was = cited.get((slug, source)) or set()
+        if not was:
+            bad.append(f'{where}: the coverage file has no {source} citation for'
+                       f' this row -- re-run fetch_narrative before narrowing')
+            continue
+        wider = sorted(set(sections) - was)
+        if wider:
+            bad.append(f'{where} adds {", ".join(str(s) for s in wider)}, which the'
+                       f' row does not already cite -- this widens, it does not narrow')
+        on_disk = cited.get((slug, source, 'disk')) or set()
+        absent = sorted(set(sections) - on_disk)
+        if absent:
+            bad.append(f'{where} names {", ".join(str(s) for s in absent)}, not'
+                       f' fetched -- a citation has to point at text that was read')
+    return bad
+
+
+def apply_citation(row: dict, value: list, who: str, when: str) -> None:
+    """Rewrite the row's `sources` to the narrowed sections, keeping the old
+    range where it can be read back.
+
+    Only the cited entries are touched. A row can carry sources this patch says
+    nothing about -- a secondary reference, a second recension -- and those keep
+    their own verifier and date, because nobody re-checked them today.
+    """
+    by_source = {e['source_slug']: e for e in value}
+    notes = []
+    for entry in row.get('sources') or []:
+        new = by_source.get(entry.get('source_slug'))
+        if new is None:
+            continue
+        was = entry.get('source_chapter_or_section') or '(none)'
+        entry['source_chapter_or_section'] = new['cited_as']
+        entry['last_verified_at'] = when
+        entry['verified_by'] = who
+        notes.append(f'{entry["source_slug"]}: {was} -> {new["cited_as"]}')
+    v = row.setdefault('verification', {})
+    old = (v.get('notes') or '').strip()
+    line = f'{when} narrowed by {who}; was ' + '; '.join(notes)
+    v['notes'] = f'{old} {line}'.strip() if old else line
+    v['at'], v['by'] = when, who
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('patch', help='JSON file: {slug: {field: value}}')
@@ -126,10 +263,17 @@ def main() -> int:
                    help='overwrite a field that already has prose in it')
     p.add_argument('--dry-run', action='store_true',
                    help='check and report, write nothing')
+    p.add_argument('--verified-by', metavar='INITIALS',
+                   help='who checked a citation patch against the text; required'
+                        ' for citations, and there is no default')
+    p.add_argument('--verified-at', metavar='YYYY-MM-DD',
+                   help='the date to record; defaults to today')
     args = p.parse_args()
 
     patch = json.loads(Path(args.patch).read_text(encoding='utf-8'))
-    rows, origin, order = load_rows()
+    rows, origin, order, source_line = load_rows()
+    cited = cited_sections()
+    when = args.verified_at or date.today().isoformat()
 
     problems: list[str] = []
     touched: dict[Path, int] = {}
@@ -140,6 +284,18 @@ def main() -> int:
             problems.append(f'{slug}: no such narrative row')
             continue
         for field, value in fields.items():
+            if field == 'citation':
+                if not args.verified_by:
+                    problems.append(f'{slug}: a citation patch needs --verified-by'
+                                    ' -- somebody read the chapter, not this tool')
+                    continue
+                bad = check_citation(slug, value, row, cited)
+                if bad:
+                    problems += [f'{slug}: {b}' for b in bad]
+                    continue
+                apply_citation(row, value, args.verified_by, when)
+                touched[origin[slug]] = touched.get(origin[slug], 0) + 1
+                continue
             bad = check(slug, field, value, row)
             if bad:
                 problems += [f'{slug}: {b}' for b in bad]
@@ -162,6 +318,20 @@ def main() -> int:
     if not touched:
         print('nothing to write')
         return 0
+
+    # The claim in the docstring, checked rather than asserted: a row this patch
+    # did not name has to re-serialise to the line it arrived on.
+    named = set(patch)
+    for path in touched:
+        for slug in order[path]:
+            if slug in named:
+                continue
+            again = json.dumps(rows[slug], ensure_ascii=False, sort_keys=True)
+            if again != source_line[slug]:
+                print(f'  ERROR  {slug} would change and this patch does not name'
+                      f' it -- refusing to rewrite {path.name}')
+                return 1
+
     if args.dry_run:
         for path, n in touched.items():
             print(f'  would write {n} field(s) in {path.name}')
