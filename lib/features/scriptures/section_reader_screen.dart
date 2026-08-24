@@ -20,6 +20,7 @@ import '../../shared/widgets/skeleton.dart';
 import '../../shared/widgets/stitched_border.dart';
 import 'scripture_models.dart';
 import 'scripture_providers.dart';
+import 'verse_tabs.dart';
 
 /// The verse reader for one book/chapter, styled after the reference app:
 /// centred verse number → Sanskrit → transliteration → a short divider →
@@ -172,6 +173,20 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
     final book = bookAsync.asData?.value;
     final title = book?.title(hi) ?? t.catScriptures;
 
+    // The scripture this book belongs to, for the Context tab (RD-01). Watched
+    // here rather than in the verse page so the list is resolved once for the
+    // whole chapter instead of on every swipe.
+    String? scriptureName;
+    final scriptures = ref.watch(scripturesProvider).asData?.value;
+    if (scriptures != null && book != null) {
+      for (final s in scriptures) {
+        if (s.id == book.scriptureId) {
+          scriptureName = s.name(hi);
+          break;
+        }
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -213,14 +228,24 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
               (current != null && pos < current.length) ? current[pos] : null;
 
           // Backfill section totals and record the starting position once.
+          // Deferred by a frame on purpose: both calls set a StateNotifier's
+          // state synchronously, and doing that from inside a build only works
+          // by accident — it works in the app because the reader is pushed as a
+          // route, in its own build pass, and it throws the moment the reader is
+          // mounted in the same frame as its ProviderScope. A widget test does
+          // exactly that, and so would any caller that inlined this screen.
           if (!_savedInitial && book != null) {
             _savedInitial = true;
-            ref.read(readingProgressProvider.notifier).ensureBookOpen(
-                  bookId: widget.bookId,
-                  scriptureId: book.scriptureId,
-                  sectionsTotal: count,
-                );
-            _saveProgress(_index, book.scriptureId, count);
+            final scriptureId = book.scriptureId;
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              if (!mounted) return;
+              ref.read(readingProgressProvider.notifier).ensureBookOpen(
+                    bookId: widget.bookId,
+                    scriptureId: scriptureId,
+                    sectionsTotal: count,
+                  );
+              _saveProgress(_index, scriptureId, count);
+            });
           }
 
           return Column(
@@ -269,8 +294,14 @@ class _SectionReaderScreenState extends ConsumerState<SectionReaderScreen> {
                     setState(() => _index = i);
                     _saveProgress(i, book?.scriptureId, count);
                   },
-                  itemBuilder: (ctx, i) =>
-                      _VersePage(bookId: widget.bookId, index: i, hindi: hi),
+                  itemBuilder: (ctx, i) => _VersePage(
+                    bookId: widget.bookId,
+                    index: i,
+                    hindi: hi,
+                    book: book,
+                    scriptureName: scriptureName,
+                    count: count,
+                  ),
                 ),
               ),
               _PagerPill(
@@ -505,8 +536,17 @@ class _VersePage extends ConsumerWidget {
   final int bookId;
   final int index;
   final bool hindi;
-  const _VersePage(
-      {required this.bookId, required this.index, required this.hindi});
+  final ScriptureBook? book;
+  final String? scriptureName;
+  final int count;
+  const _VersePage({
+    required this.bookId,
+    required this.index,
+    required this.hindi,
+    required this.book,
+    required this.scriptureName,
+    required this.count,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -521,7 +561,14 @@ class _VersePage extends ConsumerWidget {
         if (pos >= list.length) return const SizedBox.shrink();
         return SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(20, 18, 20, 28),
-          child: _ShlokaBody(section: list[pos], hindi: hindi),
+          child: _ShlokaBody(
+            section: list[pos],
+            hindi: hindi,
+            book: book,
+            scriptureName: scriptureName,
+            index: index,
+            count: count,
+          ),
         );
       },
     );
@@ -531,14 +578,23 @@ class _VersePage extends ConsumerWidget {
 class _ShlokaBody extends ConsumerWidget {
   final ScriptureSection section;
   final bool hindi;
-  const _ShlokaBody({required this.section, required this.hindi});
+  final ScriptureBook? book;
+  final String? scriptureName;
+  final int index;
+  final int count;
+  const _ShlokaBody({
+    required this.section,
+    required this.hindi,
+    required this.book,
+    required this.scriptureName,
+    required this.index,
+    required this.count,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final scale = ref.watch(readerFontScaleProvider);
     final scheme = Theme.of(context).colorScheme;
-    final body = section.body(hindi);
-    final commentary = section.commentary(hindi);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -587,66 +643,40 @@ class _ShlokaBody extends ConsumerWidget {
           ),
         ],
 
-        // Short centred divider.
-        if (body != null) ...[
-          const SizedBox(height: 22),
-          Center(
-            child: Container(
-              width: 60,
-              height: 2,
-              decoration: BoxDecoration(
-                color: scheme.secondary.withValues(alpha: 0.5),
-                borderRadius: BorderRadius.circular(2),
-              ),
-            ),
-          ),
-          const SizedBox(height: 22),
-
-          // Translation (left-aligned, roomy).
-          Text(
-            body,
-            style: TextStyle(
-              fontFamily: hindi ? AppFonts.devanagari : AppFonts.display,
-              fontSize: 17 * scale,
-              height: 1.6,
-              color: scheme.onSurface,
-            ),
-          ),
-        ],
-
-        // Commentary — a warm, collapsible box.
-        if (commentary != null) ...[
-          const SizedBox(height: 24),
-          Text(
-            hindi ? 'व्याख्या' : 'COMMENTARY',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 12 * scale,
-              letterSpacing: 1.8,
-              fontWeight: FontWeight.w700,
-              color: scheme.secondary,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.all(16),
+        // Short centred divider, then the four facets of the verse.
+        const SizedBox(height: 22),
+        Center(
+          child: Container(
+            width: 60,
+            height: 2,
             decoration: BoxDecoration(
-              color: scheme.primary.withValues(alpha: 0.05),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: scheme.primary.withValues(alpha: 0.12)),
-            ),
-            child: Text(
-              commentary,
-              style: TextStyle(
-                fontFamily: hindi ? AppFonts.devanagari : AppFonts.body,
-                fontSize: 14.5 * scale,
-                height: 1.65,
-                color: scheme.onSurface.withValues(alpha: 0.88),
-              ),
+              color: scheme.secondary.withValues(alpha: 0.5),
+              borderRadius: BorderRadius.circular(2),
             ),
           ),
-        ],
+        ),
+        const SizedBox(height: 14),
+
+        // RD-01. Meaning · Explanation · Word meaning · Context. The
+        // translation used to sit here unlabelled with the commentary stacked
+        // under it, which reads fine on a Gita verse and is misleading
+        // everywhere else: 27,189 of 27,890 sections have no commentary, so
+        // the page simply ended after the translation with no indication that
+        // anything was meant to follow. The tabs name the four facets, and
+        // each says why it is empty when it is (RD-02).
+        VerseTabStrip(section: section, hindi: hindi, scale: scale),
+        Divider(
+            height: 1, color: scheme.outline.withValues(alpha: 0.15)),
+        const SizedBox(height: 18),
+        VerseTabPanel(
+          section: section,
+          book: book,
+          scriptureName: scriptureName,
+          index: index,
+          count: count,
+          hindi: hindi,
+          scale: scale,
+        ),
 
         // RD-03. The reader sits on the richest content in the app and was the
         // only detail surface with no way out of it -- a verse knew nothing

@@ -63,4 +63,8 @@ class PrefKeys {
   static const scriptureLast = 'scripture_last'; // JSON {scriptureId,bookId,index}
   static const readerFontScale = 'reader_font_scale'; // shared by all readers
   static const epicViewMode = 'epic_view_mode'; // 'story' | 'timeline'
+  // Which verse facet the scripture reader is showing — a `ReaderTab` name.
+  // Persisted so a reader working through a chapter's commentary is not
+  // dropped back onto the translation on every swipe, or on the next launch.
+  static const readerTab = 'reader_tab';
 }
