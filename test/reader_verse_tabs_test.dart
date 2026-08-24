@@ -102,6 +102,7 @@ Future<void> pumpReader(
   double width = 380,
   double height = 2400,
   double fontScale = 1.0,
+  double systemScale = 1.0,
 }) async {
   tester.view.physicalSize = Size(width, height);
   tester.view.devicePixelRatio = 1.0;
@@ -130,6 +131,15 @@ Future<void> pumpReader(
       locale: Locale(hindi ? 'hi' : 'en'),
       localizationsDelegates: L10n.localizationsDelegates,
       supportedLocales: L10n.supportedLocales,
+      // Two multipliers stack on this screen and they are not the same axis:
+      // `reader_font_scale` is the reader's own slider, `textScaler` is the OS
+      // accessibility setting. Nothing in lib/ reads or clamps the second one,
+      // so it has to be applied here or RD-06 goes untested.
+      builder: (context, child) => MediaQuery.withClampedTextScaling(
+        minScaleFactor: systemScale,
+        maxScaleFactor: systemScale,
+        child: child!,
+      ),
       home: const SectionReaderScreen(bookId: 7),
     ),
   ));
@@ -327,6 +337,79 @@ void main() {
           height: 2600);
       expect(tester.takeException(), isNull);
       expect(find.text(ReaderTab.wordMeaning.hi), findsOneWidget);
+    });
+
+    testWidgets('the pager keeps its words at ordinary sizes', (tester) async {
+      // The other half of the fallback below. Measuring the labels is only safe
+      // if the measurement says yes in the common case, and an off-by-one in
+      // the arithmetic would silently leave every phone on icon-only buttons.
+      await pumpReader(tester, section: _gita());
+      expect(find.text('Prev'), findsOneWidget);
+      expect(find.text('Next'), findsOneWidget);
+    });
+
+    testWidgets('the pager drops to chevrons when the words cannot fit',
+        (tester) async {
+      // 288 logical pixels of row against ~360 of labelled buttons. What used
+      // to happen here was a 74-pixel overflow, which clips the Next button —
+      // the one control that gets a reader to the following verse.
+      await pumpReader(tester,
+          section: _gita(),
+          width: 320,
+          fontScale: 1.6,
+          systemScale: 2.0,
+          height: 4000);
+      expect(tester.takeException(), isNull);
+      expect(find.text('Prev'), findsNothing);
+      expect(find.text('Next'), findsNothing);
+      expect(find.text('1 / 24'), findsOneWidget,
+          reason: 'the counter is what survives, because it is the position');
+      // The words went, the buttons did not.
+      expect(find.byIcon(Icons.chevron_right_rounded), findsWidgets);
+    });
+
+    testWidgets('the OS accessibility scale stacks on top of the slider',
+        (tester) async {
+      // The case RD-06 actually names. Android's largest accessibility setting
+      // is 2.0, and nothing in lib/ clamps it, so it multiplies the reader's
+      // own 1.6 — every label, empty state and context line lays out at 3.2x
+      // on the narrowest phone we support. Hindi, because Devanagari sets
+      // taller than Latin and the empty states are its longest strings.
+      await pumpReader(tester,
+          section: _ramayana(),
+          hindi: true,
+          start: ReaderTab.wordMeaning,
+          width: 320,
+          fontScale: 1.6,
+          systemScale: 2.0,
+          height: 4000);
+      expect(tester.takeException(), isNull);
+      expect(find.textContaining('शब्द-दर-शब्द'), findsOneWidget);
+    });
+
+    testWidgets('Context lays out at the largest scale, in both languages',
+        (tester) async {
+      // Context is the densest panel — three labelled rows plus a linked
+      // event plus a question list — and the only one that is never empty,
+      // so it is the one a reader at 3.2x will actually be looking at.
+      for (final hindi in [false, true]) {
+        await pumpReader(tester,
+            section: _gita(),
+            hindi: hindi,
+            start: ReaderTab.context,
+            context: const VerseContext(
+              questions: [
+                (id: 1, en: 'What does the Gita say about fear?', hi: 'गीता भय के बारे में क्या कहती है?'),
+              ],
+              event: (id: 12, en: 'Arjuna sees both armies', hi: 'अर्जुन दोनों सेनाओं को देखता है'),
+            ),
+            width: 320,
+            fontScale: 1.6,
+            systemScale: 2.0,
+            height: 4000);
+        expect(tester.takeException(), isNull,
+            reason: 'Context overflowed at 3.2x in ${hindi ? "Hindi" : "English"}');
+      }
     });
   });
 }

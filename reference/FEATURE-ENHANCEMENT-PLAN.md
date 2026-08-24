@@ -1234,13 +1234,48 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Reader & Search
 
-- [ ] **RD-01** Tabs under the verse: Meaning · Explanation · Word meaning · Context
-- [ ] **RD-02** Word-meaning tab renders an honest empty state until data exists
+### Reader (2026-08-24)
+
+- [x] **RD-01** Tabs under the verse: Meaning · Explanation · Word meaning · Context
+      — measured all 27,890 shipped sections before designing anything:
+      Meaning 27,890 (100%), Explanation 701 (3%, **Bhagavad Gita only** —
+      Ramayana 0 of 20,135, Upanishads 0 of 7,054), Word meaning 0 (no column
+      and no table anywhere), Context always. Empty tabs are shown dimmed
+      rather than hidden: hiding them shuffles the rest sideways between a
+      Gita verse and a Ramayana one in the same chapter list. The facet lives
+      in a persisted provider, not the verse page, so a swipe does not drop a
+      reader working through commentary back onto the translation
+- [x] **RD-02** Word-meaning tab renders an honest empty state until data exists
+      — two tabs needed one, not one. Each names the gap *and its extent*
+      ("true of the whole collection"), because a verse-local message sends the
+      reader looking for a verse that was not skipped. No "Coming soon" and no
+      spinner: both promise work nobody has undertaken. Context needs no
+      authored data at all and lights up further on its own as two soft links
+      fill in — `qa_pairs.scripture_section_id` (20/20 today, grows with AK-01)
+      and `narrative_nodes.scripture_section_id` (0/79, grows with SC-11)
 - [x] **RD-03** `RelatedRail` at the bottom of the section reader
 - [ ] **RD-04** Verse actions row: bookmark · note · listen (TTS) · share text
-- [ ] **RD-05** Per-chapter progress rings on the book list
-- [ ] **RD-06** Hindi at max system font scale without overflow
-- [ ] **RD-07** Reader tests + device check
+      — bookmark, listen, continuous read-aloud, voice settings and share are
+      all wired; **note is the only one missing**
+- [x] **RD-05** Per-chapter progress rings on the book list — `BookProgressRing`
+      on `scripture_books_screen.dart:128`; shipped as P3-13 and never ticked
+- [x] **RD-06** Hindi at max system font scale without overflow — the item names
+      the *system* scale, which is a second multiplier on top of the reader's
+      own 0.85–1.6 slider, and nothing in `lib/` reads or clamps it. Testing
+      both together at Android's largest setting (1.6 x 2.0 = 3.2x on a 320-wide
+      phone) found a real **74-pixel overflow in the bottom pager**, which clips
+      the Next button — the one control that reaches the following verse. The
+      pager now measures its own labels and drops to chevrons when the words
+      cannot fit, keeping the counter and the tap targets; the labels stay in
+      the semantics tree so a screen reader still names both buttons
+- [~] **RD-07** Reader tests + device check — 21 widget tests in
+      `test/reader_verse_tabs_test.dart` covering all four facets, every empty
+      state in both languages, facet persistence across a swipe and a restart,
+      and layout at 3.2x. **Device check still outstanding.** Also fixed here:
+      the reader set a `StateNotifier` from inside `build`, which works in the
+      app only because the screen is pushed as a route in its own build pass,
+      and throws the moment it is mounted in the same frame as its
+      `ProviderScope`
 - [ ] **SR-01** Group results by kind with per-kind counts
 - [ ] **SR-02** Curated "Try" row driven by `importance`, not hardcoded
 - [ ] **SR-03** One-edit-distance fallback when a query returns nothing
@@ -1505,7 +1540,26 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Release gate
 
-- [ ] **RG-01** `content.sqlite` replaced — Ishvarvaani fixture gone
+- [ ] **RG-01** `content.sqlite` replaced — Ishvarvaani fixture gone.
+      **This is a re-sourcing project, not a database swap.** A verse row holds
+      four layers with four different statuses: `sanskrit` (ancient, PD) and
+      `transliteration` (mechanical, thin-to-no copyright) migrate cleanly;
+      `body_en`/`body_hi` are a modern translator's **new original work** with
+      its own full term, and `commentary_*` is modern authored prose. The
+      Sanskrit being 2,500 years old grants nothing about a 2019 translation of
+      it. None of the three scripture tables carries a translator, edition,
+      year or licence column (checked), so we cannot even name who to ask.
+      Copying those columns into `gyan.sqlite` would tick this box while
+      changing our exposure by exactly zero. Against the PD sources declared in
+      `content/SOURCES.md`: **Gita clean** (Telang, SBE 8, 1882 — verse-numbered,
+      all 701); **Upanishads ~12 of 106 books** (Müller, SBE 1 & 15, principal
+      Upanishads only); **Ramayana unalignable** (Griffith is 505 rhymed cantos,
+      *abridged* — Book VI skips 76–92 — with no verse numbers at all, so it
+      cannot map 1:1 to 20,135 numbered shlokas; canto level is the ceiling);
+      **Hindi: nothing**, no PD Hindi translation for any of the three. So
+      Meaning drops from 100% coverage to roughly 3–15% English and 0% Hindi
+      until commissioned translation fills it back in — which is what makes
+      RD-02's Meaning empty state load-bearing rather than defensive
 - [ ] **RG-02** `meta.data_source` no longer says "DEV FIXTURE"
 - [ ] **RG-03** Zero manifest rows with `replace_before_ship: true`
 - [ ] **RG-04** `reference/ishvarvaani-apk/` out of the shipped tree
@@ -1521,6 +1575,8 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **RG-14** Low storage message, not a crash
 - [ ] **RG-15** Screen sizes: small · normal · large · tablet
 - [ ] **RG-16** Accessibility: font scale · contrast · touch targets · TalkBack
+      — the scripture reader's font-scale axis is covered by tests at 3.2x in
+      both languages (RD-06); every other screen is unverified
 - [ ] **RG-17** AAB size measured against the budget
 
 ---

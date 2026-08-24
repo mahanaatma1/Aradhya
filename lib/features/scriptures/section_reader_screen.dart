@@ -718,7 +718,9 @@ class _PagerPill extends StatelessWidget {
     final scheme = Theme.of(context).colorScheme;
 
     Widget btn(String label, IconData icon, VoidCallback? onTap,
-        {required bool filled, required bool leading}) {
+        {required bool filled,
+        required bool leading,
+        required bool showLabel}) {
       final enabled = onTap != null;
       final fg = filled
           ? scheme.onPrimary
@@ -732,51 +734,96 @@ class _PagerPill extends StatelessWidget {
           borderRadius: BorderRadius.circular(999),
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                if (leading) Icon(icon, size: 18, color: fg),
-                if (leading) const SizedBox(width: 4),
-                Text(label,
-                    style: TextStyle(fontWeight: FontWeight.w700, color: fg)),
-                if (!leading) const SizedBox(width: 4),
-                if (!leading) Icon(icon, size: 18, color: fg),
-              ],
+            padding: EdgeInsets.symmetric(
+                horizontal: showLabel ? 16 : 14, vertical: 10),
+            child: Semantics(
+              // The label is what named this button when it had one; dropping
+              // the word must not drop it from the screen reader too.
+              label: label,
+              button: true,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  if (leading) Icon(icon, size: 18, color: fg),
+                  if (leading && showLabel) const SizedBox(width: 4),
+                  if (showLabel)
+                    ExcludeSemantics(
+                      child: Text(label,
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700, color: fg)),
+                    ),
+                  if (!leading && showLabel) const SizedBox(width: 4),
+                  if (!leading) Icon(icon, size: 18, color: fg),
+                ],
+              ),
             ),
           ),
         ),
       );
     }
 
+    final prev = hi ? 'पिछला' : 'Prev';
+    final next = hi ? 'अगला' : 'Next';
+    final counter = '${index + 1} / $count';
+
     return SafeArea(
       top: false,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 6, 16, 12),
-        child: Row(
-          children: [
-            btn(hi ? 'पिछला' : 'Prev', Icons.chevron_left_rounded, onPrev,
-                filled: false, leading: true),
-            Expanded(
-              child: InkWell(
-                borderRadius: BorderRadius.circular(999),
-                onTap: onTapCount,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  child: Text(
-                    '${index + 1} / $count',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: scheme.onSurface.withValues(alpha: 0.7),
+        child: LayoutBuilder(
+          builder: (context, box) {
+            // Whether the two words fit, measured rather than guessed. At the
+            // OS's largest accessibility scale on a 320-wide phone the labelled
+            // buttons plus the counter want about 360 logical pixels and this
+            // row has 288, which used to overflow by 74. The chevrons carry the
+            // meaning on their own, and the counter — the one thing a reader at
+            // that scale is trying to read — keeps its space.
+            final style = DefaultTextStyle.of(context)
+                .style
+                .copyWith(fontWeight: FontWeight.w700);
+            final scaler = MediaQuery.textScalerOf(context);
+            double textWidth(String s) => (TextPainter(
+                  text: TextSpan(text: s, style: style),
+                  textDirection: Directionality.of(context),
+                  textScaler: scaler,
+                  maxLines: 1,
+                )..layout())
+                .width;
+
+            const chrome = 16 * 2 + 18 + 4; // padding + chevron + its gap
+            final wanted = textWidth(prev) +
+                textWidth(next) +
+                textWidth(counter) +
+                chrome * 2 +
+                24; // breathing room either side of the counter
+            final showLabel = wanted <= box.maxWidth;
+
+            return Row(
+              children: [
+                btn(prev, Icons.chevron_left_rounded, onPrev,
+                    filled: false, leading: true, showLabel: showLabel),
+                Expanded(
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(999),
+                    onTap: onTapCount,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      child: Text(
+                        counter,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: scheme.onSurface.withValues(alpha: 0.7),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            btn(hi ? 'अगला' : 'Next', Icons.chevron_right_rounded, onNext,
-                filled: true, leading: false),
-          ],
+                btn(next, Icons.chevron_right_rounded, onNext,
+                    filled: true, leading: false, showLabel: showLabel),
+              ],
+            );
+          },
         ),
       ),
     );
