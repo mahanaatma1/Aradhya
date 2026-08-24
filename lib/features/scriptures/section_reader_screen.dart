@@ -20,6 +20,7 @@ import '../../shared/widgets/skeleton.dart';
 import '../../shared/widgets/stitched_border.dart';
 import 'scripture_models.dart';
 import 'scripture_providers.dart';
+import 'verse_note_sheet.dart';
 import 'verse_tabs.dart';
 
 /// The verse reader for one book/chapter, styled after the reference app:
@@ -439,7 +440,10 @@ class _ActionRow extends ConsumerWidget {
       titleEn: book?.titleEn ?? 'Verse',
       titleHi: book?.titleHi,
       subtitle: trimmed.isEmpty ? label : '$label · $trimmed',
-      route: '/scriptures/book/$bookId',
+      // `?v=` carries the verse. Without it a bookmark on verse 47 reopened the
+      // chapter at verse 1, which reads as the bookmark having been lost — the
+      // router has understood this parameter since the route was registered.
+      route: '/scriptures/book/$bookId?v=$index',
     );
   }
 
@@ -467,8 +471,15 @@ class _ActionRow extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final scheme = Theme.of(context).colorScheme;
     final ready = section != null;
-    final saved = ready &&
-        ref.watch(bookmarksProvider).any((b) => b.uid == _bookmark().uid);
+    final marks = ref.watch(bookmarksProvider);
+    final uid = ready ? _bookmark().uid : '';
+    final saved = ready && marks.any((b) => b.uid == uid);
+    // A note is shown as written, not as saveable — a filled sticky-note icon
+    // is the only clue on this screen that one exists at all.
+    final hasNote = ready &&
+        marks
+            .where((b) => b.uid == uid)
+            .any((b) => (b.note ?? '').isNotEmpty);
 
     Widget action(IconData icon, String tip, VoidCallback? onTap,
             {Color? color}) =>
@@ -479,49 +490,82 @@ class _ActionRow extends ConsumerWidget {
           iconSize: 22,
         );
 
+    // Ordered by how much a reader would miss it, because on a narrow phone the
+    // tail of this row is what scrolls out of sight. Seven 48-pixel targets plus
+    // the size button want 340 logical pixels and a 320-wide phone has 304, so
+    // something has to go — and it must not be the bookmark. Shrinking the
+    // buttons instead was the other option and a worse one: 48 is the smallest
+    // target a thumb can be asked to hit.
+    final actions = <Widget>[
+      action(
+        saved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+        saved
+            ? (hi ? 'हटाएँ' : 'Remove bookmark')
+            : (hi ? 'सहेजें' : 'Bookmark'),
+        ready
+            ? () => ref.read(bookmarksProvider.notifier).toggle(_bookmark())
+            : null,
+      ),
+      action(
+        hasNote ? Icons.sticky_note_2_rounded : Icons.sticky_note_2_outlined,
+        hasNote
+            ? (hi ? 'नोट देखें' : 'Edit note')
+            : (hi ? 'नोट जोड़ें' : 'Add note'),
+        ready
+            ? () => showVerseNoteSheet(
+                  context: context,
+                  ref: ref,
+                  bookmark: _bookmark(),
+                  reference: '${book?.title(hi) ?? ''} $_verseNo'.trim(),
+                  hindi: hi,
+                )
+            : null,
+        color: hasNote ? AppColors.terracotta : scheme.primary,
+      ),
+      // Listen — this verse only.
+      ValueListenableBuilder<bool>(
+        valueListenable: tts.speaking,
+        builder: (_, speaking, _) {
+          final active = speaking && !autoPlay;
+          return action(
+            active ? Icons.stop_rounded : Icons.volume_up_rounded,
+            active ? (hi ? 'रोकें' : 'Stop') : (hi ? 'सुनें' : 'Listen'),
+            (ready && !autoPlay) ? onListen : null,
+            color: active ? scheme.error : scheme.primary,
+          );
+        },
+      ),
+      action(Icons.ios_share_rounded, hi ? 'साझा करें' : 'Share',
+          ready ? () => _share(context) : null),
+      // Auto-play — read the whole chapter, auto-advancing.
+      action(
+        autoPlay ? Icons.stop_circle_rounded : Icons.playlist_play_rounded,
+        autoPlay ? (hi ? 'पाठ बंद' : 'Stop') : (hi ? 'सस्वर पाठ' : 'Read all'),
+        ready ? onAutoPlay : null,
+        color: autoPlay ? scheme.error : scheme.primary,
+      ),
+      // Last on purpose: choosing a voice is a setting, and the only control
+      // here that is not about the verse in front of the reader.
+      action(Icons.record_voice_over_outlined, hi ? 'आवाज़' : 'Voice',
+          () => tts.chooseVoice(context, ref.read(sharedPrefsProvider), hi)),
+    ];
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Listen — this verse only.
-          ValueListenableBuilder<bool>(
-            valueListenable: tts.speaking,
-            builder: (_, speaking, _) {
-              final active = speaking && !autoPlay;
-              return action(
-                active ? Icons.stop_rounded : Icons.volume_up_rounded,
-                active ? (hi ? 'रोकें' : 'Stop') : (hi ? 'सुनें' : 'Listen'),
-                (ready && !autoPlay) ? onListen : null,
-                color: active ? scheme.error : scheme.primary,
-              );
-            },
+          Expanded(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              // Never clipped, so a control that does not fit can still be
+              // reached; and the leading edge stays put, so the bookmark is
+              // always the button under the reader's left thumb.
+              child: Row(children: actions),
+            ),
           ),
-          // Auto-play — read the whole chapter, auto-advancing.
-          action(
-            autoPlay ? Icons.stop_circle_rounded : Icons.playlist_play_rounded,
-            autoPlay ? (hi ? 'पाठ बंद' : 'Stop') : (hi ? 'सस्वर पाठ' : 'Read all'),
-            ready ? onAutoPlay : null,
-            color: autoPlay ? scheme.error : scheme.primary,
-          ),
-          action(
-              Icons.record_voice_over_outlined,
-              hi ? 'आवाज़' : 'Voice',
-              () => tts.chooseVoice(context, ref.read(sharedPrefsProvider), hi)),
-          action(Icons.ios_share_rounded, hi ? 'साझा करें' : 'Share',
-              ready ? () => _share(context) : null),
-          action(
-            saved
-                ? Icons.bookmark_rounded
-                : Icons.bookmark_border_rounded,
-            saved
-                ? (hi ? 'हटाएँ' : 'Remove bookmark')
-                : (hi ? 'सहेजें' : 'Bookmark'),
-            ready
-                ? () => ref.read(bookmarksProvider.notifier).toggle(_bookmark())
-                : null,
-          ),
-          const Spacer(),
+          // Pinned outside the scroller: text size is how a reader gets out of
+          // a size that is too big to read, so it cannot be the thing that a
+          // size that is too big pushes off the screen.
           _FontSizeButton(),
           const SizedBox(width: 4),
         ],

@@ -55,7 +55,17 @@ class Bookmark {
   String get uid => '$src:$kind:$id';
   bool get isNavigable => route.isNotEmpty;
 
-  Bookmark copyWith({String? note, List<String>? tags, String? route}) =>
+  /// `note: null` cannot mean "clear it" — that is also what an untouched
+  /// argument looks like — so clearing is asked for explicitly. Without
+  /// [clearNote] a reader who deleted their note watched the words come back:
+  /// the database row was blanked but the in-memory copy kept the old text
+  /// until the next launch.
+  Bookmark copyWith({
+    String? note,
+    bool clearNote = false,
+    List<String>? tags,
+    String? route,
+  }) =>
       Bookmark(
         src: src,
         kind: kind,
@@ -64,7 +74,7 @@ class Bookmark {
         titleHi: titleHi,
         subtitle: subtitle,
         route: route ?? this.route,
-        note: note ?? this.note,
+        note: clearNote ? null : (note ?? this.note),
         tags: tags ?? this.tags,
         createdAt: createdAt,
       );
@@ -211,7 +221,8 @@ class BookmarksController extends StateNotifier<List<Bookmark>> {
     final b = state[idx];
     final trimmed = note?.trim();
     final next = trimmed == null || trimmed.isEmpty ? null : trimmed;
-    state = [...state]..[idx] = b.copyWith(note: next);
+    state = [...state]..[idx] =
+        b.copyWith(note: next, clearNote: next == null);
 
     final db = _ref.read(userDatabaseProvider);
     if (db == null) return;
