@@ -30,6 +30,16 @@ class SearchRepository {
   /// picker; 4,276 of them would swamp every other result.
   static const _hiddenKinds = ["'city'"];
 
+  /// The shortest thing that can be searched for.
+  ///
+  /// One character matches too much to be worth ranking, so single-character
+  /// queries are dropped before they reach the index. Named because it is not
+  /// only a guard: anything that *offers* a query — the curated "Try" row, a
+  /// spelling correction — has to respect the same floor, or it offers a word
+  /// the search cannot honour. That is how "ॐ" came to be a chip that returned
+  /// "Nothing found".
+  static const minQueryLength = 2;
+
   /// Search across everything.
   ///
   /// [kind] restricts to one `search_docs.kind`. [includeHidden] is used by the
@@ -170,6 +180,158 @@ class SearchRepository {
   /// find "Navi Mumbai" from "mumbai".
   Future<List<SearchHit>> searchCities(String query, {int limit = 30}) =>
       search(query, kind: 'city', limit: limit, includeHidden: true);
+
+  /// The empty-state "Try" terms, taken from the entities the corpus itself
+  /// marks as major (`importance = 1`, 38 rows) rather than from a list kept by
+  /// hand in Dart. A hand-kept list goes stale silently: it named "Ekadashi"
+  /// and "Gita" while the knowledge graph had grown its own answer to
+  /// "what matters here".
+  ///
+  /// Round-robined across `kind` because importance alone would hand back
+  /// thirteen deities before the first hero: the point of the row is to show
+  /// the *reach* of the index — a deity, a hero, a scripture, a concept — not
+  /// to rank gods. Kind order is fixed so the row does not reshuffle between
+  /// launches.
+  Future<List<CuratedTerm>> curatedTerms({int limit = 8}) async {
+    try {
+      final rows = await _db.rawQuery('''
+        SELECT kind, title_en, title_hi
+        FROM gyan.entities
+        WHERE importance = 1
+        ORDER BY kind, id
+      ''');
+
+      final byKind = <String, List<CuratedTerm>>{};
+      for (final r in rows) {
+        final en = (r['title_en'] as String?) ?? '';
+        final hi = r['title_hi'] as String?;
+        // Offered only if it works in BOTH languages: the chip submits whichever
+        // spelling the reader can see, so a term searchable in one and not the
+        // other is a "Nothing found" waiting to happen — "Om" / "ॐ", whose
+        // single Devanagari glyph is below [minQueryLength], was exactly that.
+        if (en.length < minQueryLength) continue;
+        if (hi == null || hi.length < minQueryLength) continue;
+        (byKind[r['kind'] as String] ??= []).add((en: en, hi: hi));
+      }
+
+      // Anything not named here still appears, just after the kinds that are —
+      // a new entity kind must never be able to empty this row.
+      const preferred = [
+        'deity', 'human', 'scripture', 'concept', 'symbol', 'weapon', 'rishi',
+      ];
+      final kinds = [
+        ...preferred.where(byKind.containsKey),
+        ...byKind.keys.where((k) => !preferred.contains(k)),
+      ];
+
+      final out = <CuratedTerm>[];
+      for (var round = 0; out.length < limit; round++) {
+        var took = false;
+        for (final k in kinds) {
+          final bucket = byKind[k]!;
+          if (round >= bucket.length) continue;
+          out.add(bucket[round]);
+          took = true;
+          if (out.length >= limit) break;
+        }
+        if (!took) break;
+      }
+      return out;
+    } catch (e) {
+      debugPrint('SearchRepository: curatedTerms failed ($e)');
+      return const [];
+    }
+  }
+
+  /// Terms within one edit of the query, for a "Did you mean" after a miss.
+  ///
+  /// Two deliberate limits, both of them the price of not scanning all 20,227
+  /// terms on every failed keystroke:
+  ///
+  ///  * **Single-word queries only.** A multi-word query almost never returns
+  ///    nothing — the AND has to eliminate everything — and correcting one word
+  ///    of several is a different, harder problem.
+  ///  * **The first character must be right.** Candidates are bounded by the
+  ///    same first-character range scan the index is built for, so `hanumam`
+  ///    reaches `hanuman` but `januman` never will.
+  ///
+  /// Ranked by how many documents each candidate appears in, so the correction
+  /// offered is the one most likely to have been meant — not merely the first
+  /// one the dictionary happens to hold.
+  Future<List<String>> spellingSuggestions(String query, {int limit = 3}) async {
+    final words = _queryWords(query);
+    if (words.length != 1) return const [];
+
+    // The primary folded form. Comparing folded-to-folded matters: the stored
+    // tokens are folded, so an unfolded query word would differ from its own
+    // spelling and every distance would come out one too high.
+    final w = words.first.first;
+    if (w.length < 3) return const [];
+
+    try {
+      final rows = await _db.rawQuery('''
+        SELECT t.token AS token, COUNT(k.doc_id) AS n
+        FROM gyan.search_terms t
+        JOIN gyan.search_tokens k ON k.term_id = t.id
+        WHERE t.token >= ? AND t.token < ?
+          AND LENGTH(t.token) BETWEEN ? AND ?
+        GROUP BY t.token
+      ''', [w[0], '${w[0]}\u{10FFFF}', w.length - 1, w.length + 1]);
+
+      final scored = <(String, int)>[];
+      for (final r in rows) {
+        final token = r['token'] as String;
+        // Cannot happen while this is only called after a miss — a term in the
+        // dictionary always has at least one posting — but a suggestion
+        // identical to the query would read as the app malfunctioning.
+        if (token == w) continue;
+        if (_within1Edit(token, w)) scored.add((token, r['n'] as int));
+      }
+      scored.sort((a, b) => b.$2.compareTo(a.$2));
+      return [for (final s in scored.take(limit)) s.$1];
+    } catch (e) {
+      debugPrint('SearchRepository: spellingSuggestions failed ($e)');
+      return const [];
+    }
+  }
+
+  /// True when [a] becomes [b] under at most one insertion, deletion or
+  /// substitution. Bounded rather than a full Levenshtein table, because the
+  /// only distance ever asked about is one — and this runs over several hundred
+  /// candidates while someone is still typing.
+  ///
+  /// Compares UTF-16 code units, so a Devanagari vowel sign counts as its own
+  /// edit. That is the right answer for a typo (a dropped मात्रा is a dropped
+  /// keystroke) and the wrong one for a linguist.
+  static bool _within1Edit(String a, String b) {
+    if ((a.length - b.length).abs() > 1) return false;
+
+    if (a.length == b.length) {
+      var diffs = 0;
+      for (var i = 0; i < a.length; i++) {
+        if (a.codeUnitAt(i) != b.codeUnitAt(i) && ++diffs > 1) return false;
+      }
+      return true;
+    }
+
+    // Lengths differ by one, so the longer must be the shorter with a single
+    // character inserted somewhere. Walk both, allowing one skip.
+    final shorter = a.length < b.length ? a : b;
+    final longer = a.length < b.length ? b : a;
+    var i = 0, j = 0;
+    var skipped = false;
+    while (i < shorter.length && j < longer.length) {
+      if (shorter.codeUnitAt(i) == longer.codeUnitAt(j)) {
+        i++;
+        j++;
+      } else {
+        if (skipped) return false;
+        skipped = true;
+        j++;
+      }
+    }
+    return true;
+  }
 
   /// Folded variants per query word, dropping words that fold to nothing.
   List<List<String>> _queryWords(String query) {

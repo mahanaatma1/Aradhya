@@ -257,9 +257,28 @@ class _EmptyState extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final recent = ref.watch(recentSearchesProvider);
+    final curated = ref.watch(curatedTermsProvider).valueOrNull ??
+        [for (final s in searchSuggestions) (en: s, hi: null)];
     final scheme = Theme.of(context).colorScheme;
 
-    Widget section(String title, List<String> items, {bool recentRow = false}) {
+    // A curated term carries both spellings; a recent search is a bare string.
+    // Both fold to the same documents, so what changes is only the label.
+    Widget chips(List<CuratedTerm> items) => Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            for (final t in items)
+              ActionChip(
+                label: Text((hindi && (t.hi?.isNotEmpty ?? false)) ? t.hi! : t.en),
+                onPressed: () => onPick(
+                    (hindi && (t.hi?.isNotEmpty ?? false)) ? t.hi! : t.en),
+                side: BorderSide(color: scheme.outline.withValues(alpha: 0.25)),
+              ),
+          ],
+        );
+
+    Widget section(String title, List<CuratedTerm> items,
+        {bool recentRow = false}) {
       if (items.isEmpty) return const SizedBox.shrink();
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -283,19 +302,7 @@ class _EmptyState extends ConsumerWidget {
             ],
           ),
           const SizedBox(height: 8),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              for (final s in items)
-                ActionChip(
-                  label: Text(s),
-                  onPressed: () => onPick(s),
-                  side: BorderSide(
-                      color: scheme.outline.withValues(alpha: 0.25)),
-                ),
-            ],
-          ),
+          chips(items),
           const SizedBox(height: 22),
         ],
       );
@@ -304,8 +311,9 @@ class _EmptyState extends ConsumerWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 18, 16, 24),
       children: [
-        section(hindi ? 'हाल की खोज' : 'RECENT', recent, recentRow: true),
-        section(hindi ? 'आज़माएँ' : 'TRY', searchSuggestions),
+        section(hindi ? 'हाल की खोज' : 'RECENT',
+            [for (final r in recent) (en: r, hi: null)], recentRow: true),
+        section(hindi ? 'आज़माएँ' : 'TRY', curated),
       ],
     );
   }
@@ -338,54 +346,241 @@ class _Results extends ConsumerWidget {
         ),
       ),
       data: (hits) {
-        if (hits.isEmpty) {
-          return Center(
-            child: Padding(
-              padding: const EdgeInsets.all(32),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Icon(Icons.search_off_rounded,
-                      size: 40, color: scheme.onSurface.withValues(alpha: 0.25)),
-                  const SizedBox(height: 12),
-                  Text(
-                    hindi ? 'कुछ नहीं मिला' : 'Nothing found',
-                    style: const TextStyle(
-                        fontFamily: AppFonts.display, fontSize: 18),
-                  ),
-                  const SizedBox(height: 6),
-                  Text(
-                    hindi
-                        ? 'वर्तनी जाँचें, या कोई छोटा शब्द आज़माएँ।'
-                        : 'Check the spelling, or try a shorter word.',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 13,
-                        color: scheme.onSurface.withValues(alpha: 0.55)),
-                  ),
-                ],
-              ),
-            ),
+        if (hits.isEmpty) return _NoResults(hindi: hindi, onPick: onOpened);
+
+        void open(SearchHit hit) {
+          onOpened(ref.read(searchQueryProvider));
+          // `route` was resolved at index time and validated against the real
+          // router, so this can never hit the error page.
+          context.push(hit.route);
+        }
+
+        Widget tile(SearchHit hit, {bool showKind = true}) => _ResultTile(
+              hit: hit,
+              hindi: hindi,
+              query: ref.read(searchQueryProvider),
+              showKind: showKind,
+              onTap: () => open(hit),
+            );
+
+        // A chosen kind is already a narrowing, so its results stay a plain
+        // score-ordered list. Grouping is for the "All" view, where a reader is
+        // scanning across kinds and the list is otherwise a wall of verses.
+        final kind = ref.watch(searchKindProvider);
+        if (kind != null) {
+          return ListView.separated(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+            itemCount: hits.length,
+            separatorBuilder: (_, _) => const SizedBox(height: 10),
+            // Every row is the same kind and the chip above already says which,
+            // so the corner label would be the third time a reader is told.
+            itemBuilder: (context, i) => tile(hits[i], showKind: false),
           );
         }
 
-        return ListView.separated(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-          itemCount: hits.length,
-          separatorBuilder: (_, _) => const SizedBox(height: 10),
-          itemBuilder: (context, i) => _ResultTile(
-            hit: hits[i],
-            hindi: hindi,
-            query: ref.read(searchQueryProvider),
-            onTap: () {
-              onOpened(ref.read(searchQueryProvider));
-              // `route` was resolved at index time and validated against the
-              // real router, so this can never hit the error page.
-              context.push(hits[i].route);
-            },
-          ),
+        return _GroupedResults(
+          hits: hits,
+          hindi: hindi,
+          tile: (hit) => tile(hit, showKind: false),
         );
       },
+    );
+  }
+}
+
+/// The "All" view, bucketed by kind (SR-01).
+///
+/// The hits arrive score-ordered, so bucketing them into a [LinkedHashMap]
+/// makes the *groups* appear in relevance order too — the kind of the single
+/// best hit leads. Each group shows a handful and defers the rest to its own
+/// filtered view, because the whole point of grouping is that no one kind (883
+/// verses for "hanuman") can bury the others.
+class _GroupedResults extends ConsumerWidget {
+  final List<SearchHit> hits;
+  final bool hindi;
+  final Widget Function(SearchHit) tile;
+  const _GroupedResults(
+      {required this.hits, required this.hindi, required this.tile});
+
+  /// How many rows of one kind to show before "See all". Small on purpose: the
+  /// row is a sample that says "this kind has matches", not the kind's results.
+  static const _perGroup = 4;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
+    // True totals, so "See all 109" is the real number and not the ~40-row
+    // page this view was built from — a kind can have far more matches than
+    // reach the top of the score-ordered page.
+    final counts = ref.watch(searchCountsProvider).valueOrNull ?? const {};
+
+    final groups = <String, List<SearchHit>>{};
+    for (final h in hits) {
+      (groups[h.kind] ??= []).add(h);
+    }
+
+    final children = <Widget>[];
+    for (final entry in groups.entries) {
+      final ks = SearchKinds.of(entry.key);
+      final shown = entry.value.take(_perGroup).toList();
+      final total = counts[entry.key] ?? entry.value.length;
+
+      children.add(Padding(
+        padding: const EdgeInsets.fromLTRB(4, 0, 4, 8),
+        child: Row(
+          children: [
+            Icon(ks.icon, size: 15, color: scheme.primary),
+            const SizedBox(width: 7),
+            // Flexible so a long kind name at a large text scale ellipsizes
+            // rather than pushing the count off the right edge and overflowing.
+            Flexible(
+              child: Text(
+                hindi ? ks.hi : ks.en,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontFamily: AppFonts.display,
+                  fontSize: 13.5,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 0.3,
+                  color: scheme.onSurface.withValues(alpha: 0.7),
+                ),
+              ),
+            ),
+            const SizedBox(width: 6),
+            Text(
+              '$total',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: scheme.onSurface.withValues(alpha: 0.4),
+              ),
+            ),
+          ],
+        ),
+      ));
+
+      for (final h in shown) {
+        children.add(Padding(
+          padding: const EdgeInsets.only(bottom: 10),
+          child: tile(h),
+        ));
+      }
+
+      if (total > shown.length) {
+        children.add(Padding(
+          padding: const EdgeInsets.only(bottom: 8),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(10),
+            // Switching to this kind's chip drops into the flat, score-ordered
+            // list for that kind — the same view the chip itself opens.
+            onTap: () =>
+                ref.read(searchKindProvider.notifier).state = entry.key,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+              child: Row(
+                children: [
+                  Flexible(
+                    child: Text(
+                      hindi ? 'सभी $total देखें' : 'See all $total',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: scheme.primary,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 2),
+                  Icon(Icons.chevron_right_rounded,
+                      size: 18, color: scheme.primary),
+                ],
+              ),
+            ),
+          ),
+        ));
+      }
+
+      children.add(const SizedBox(height: 14));
+    }
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
+      children: children,
+    );
+  }
+}
+
+/// The miss: "Nothing found", plus SR-03's "Did you mean" when a single-word
+/// query is one edit away from a term the index does hold.
+class _NoResults extends ConsumerWidget {
+  final bool hindi;
+  final ValueChanged<String> onPick;
+  const _NoResults({required this.hindi, required this.onPick});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
+    final suggestions = ref.watch(didYouMeanProvider).valueOrNull ?? const [];
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.search_off_rounded,
+                size: 40, color: scheme.onSurface.withValues(alpha: 0.25)),
+            const SizedBox(height: 12),
+            Text(
+              hindi ? 'कुछ नहीं मिला' : 'Nothing found',
+              style:
+                  const TextStyle(fontFamily: AppFonts.display, fontSize: 18),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              hindi
+                  ? 'वर्तनी जाँचें, या कोई छोटा शब्द आज़माएँ।'
+                  : 'Check the spelling, or try a shorter word.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 13,
+                  color: scheme.onSurface.withValues(alpha: 0.55)),
+            ),
+            if (suggestions.isNotEmpty) ...[
+              const SizedBox(height: 22),
+              Text(
+                hindi ? 'क्या आपका मतलब था' : 'Did you mean',
+                style: TextStyle(
+                    fontSize: 11.5,
+                    letterSpacing: 1.2,
+                    fontWeight: FontWeight.w700,
+                    color: scheme.onSurface.withValues(alpha: 0.5)),
+              ),
+              const SizedBox(height: 10),
+              Wrap(
+                alignment: WrapAlignment.center,
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final s in suggestions)
+                    ActionChip(
+                      label: Text(s),
+                      onPressed: () => onPick(s),
+                      side: BorderSide(
+                          color: scheme.primary.withValues(alpha: 0.4)),
+                      labelStyle: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: scheme.primary),
+                    ),
+                ],
+              ),
+            ],
+          ],
+        ),
+      ),
     );
   }
 }
@@ -396,11 +591,17 @@ class _ResultTile extends StatelessWidget {
   final String query;
   final VoidCallback onTap;
 
+  /// The kind name in the corner. Off whenever something above the row already
+  /// says it — a group heading, or a selected filter chip — because repeating
+  /// it costs the title the width it needs and tells the reader nothing.
+  final bool showKind;
+
   const _ResultTile({
     required this.hit,
     required this.hindi,
     required this.query,
     required this.onTap,
+    this.showKind = true,
   });
 
   @override
@@ -476,25 +677,26 @@ class _ResultTile extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 8),
-            Padding(
-              padding: const EdgeInsets.only(top: 2),
-              // Bounded: Hindi kind names ("व्रत कथा") are wider than their
-              // English counterparts and would otherwise squeeze the title.
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 62),
-                child: Text(
-                hindi ? ks.hi : ks.en,
-                textAlign: TextAlign.right,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontSize: 10.5,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.4,
-                    color: scheme.onSurface.withValues(alpha: 0.38)),
+            if (showKind)
+              Padding(
+                padding: const EdgeInsets.only(top: 2),
+                // Bounded: Hindi kind names ("व्रत कथा") are wider than their
+                // English counterparts and would otherwise squeeze the title.
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(maxWidth: 62),
+                  child: Text(
+                    hindi ? ks.hi : ks.en,
+                    textAlign: TextAlign.right,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 0.4,
+                        color: scheme.onSurface.withValues(alpha: 0.38)),
+                  ),
+                ),
               ),
-              ),
-            ),
           ],
         ),
       ),
@@ -549,10 +751,16 @@ class _Highlighted extends StatelessWidget {
       spans.add(TextSpan(text: text.substring(cursor)));
     }
 
-    return RichText(
+    // `Text.rich`, not a bare `RichText`. RichText defaults to
+    // `TextScaler.noScaling`, so at 2x OS text size the title alone would have
+    // stayed at 16px beside a subtitle that had grown to 25 — the one line in
+    // the tile that ignored the reader's setting. Text also inherits
+    // DefaultTextStyle, which is where the colour was being copied in by hand.
+    return Text.rich(
+      TextSpan(children: spans),
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
-      text: TextSpan(style: style.copyWith(color: DefaultTextStyle.of(context).style.color), children: spans),
+      style: style,
     );
   }
 }

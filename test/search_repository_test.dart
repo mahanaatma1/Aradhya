@@ -153,4 +153,120 @@ void main() {
       expect(await repo.search('zzzzqqqqxxxx'), isEmpty);
     });
   });
+
+  group('the "Try" row comes from the corpus (SR-02)', () {
+    test('every term is a major entity, in both languages', () async {
+      final terms = await repo.curatedTerms();
+      expect(terms.length, 8, reason: 'the row asks for eight');
+      for (final t in terms) {
+        expect(t.en, isNotEmpty);
+        expect(t.hi, isNotNull,
+            reason: 'a Hindi reader must not be shown a Latin chip: ${t.en}');
+        expect(t.hi, isNotEmpty);
+      }
+    });
+
+    test('every term actually finds something', () async {
+      // The failure this guards is the quiet one: a chip that looks like an
+      // invitation and returns "Nothing found" when tapped. Both spellings are
+      // checked, because the chip submits whichever the reader can see.
+      for (final t in await repo.curatedTerms()) {
+        expect(await repo.search(t.en, limit: 1), isNotEmpty,
+            reason: '"${t.en}" is offered but finds nothing');
+        expect(await repo.search(t.hi!, limit: 1), isNotEmpty,
+            reason: '"${t.hi}" is offered but finds nothing');
+      }
+    });
+
+    test('the row is a spread of kinds, not eight deities', () async {
+      // importance alone would hand back thirteen deities before the first
+      // hero — the round-robin is the whole point of the method.
+      final terms = await repo.curatedTerms();
+      final kinds = <String>{};
+      for (final t in terms) {
+        final row = await db.rawQuery(
+            'SELECT kind FROM gyan.entities WHERE title_en = ? LIMIT 1',
+            [t.en]);
+        kinds.add(row.first['kind'] as String);
+      }
+      expect(kinds.length, greaterThanOrEqualTo(4),
+          reason: 'got only $kinds across eight chips');
+    });
+
+    test('the order is stable, so the row does not reshuffle', () async {
+      final a = await repo.curatedTerms();
+      final b = await repo.curatedTerms();
+      expect([for (final t in a) t.en], [for (final t in b) t.en]);
+    });
+  });
+
+  group('one edit away (SR-03)', () {
+    test('a dropped letter is corrected', () async {
+      // "hanumn" — the sort of miss a thumb makes on a phone keyboard.
+      final s = await repo.spellingSuggestions('hanumn');
+      expect(s, contains('hanuman'));
+    });
+
+    test('a doubled letter is corrected', () async {
+      expect(await repo.spellingSuggestions('krishnaa'), contains('krishna'));
+    });
+
+    test('a wrong letter is corrected', () async {
+      expect(await repo.spellingSuggestions('shivx'), contains('shiva'));
+    });
+
+    test('the most-used correction is offered first', () async {
+      // Ranked by how many documents hold the term, so the suggestion is the
+      // word most likely meant rather than whichever the dictionary reached
+      // first. Without the ordering this returns something valid but arbitrary.
+      final s = await repo.spellingSuggestions('ram');
+      expect(s, isNotEmpty);
+      final counts = <String, int>{};
+      for (final token in s) {
+        counts[token] = (await repo.search(token, limit: 5000)).length;
+      }
+      expect(counts[s.first], counts.values.reduce((a, b) => a > b ? a : b),
+          reason: 'the head of $s is not the most widely used of them');
+    });
+
+    test('a correct spelling is never "corrected"', () async {
+      // Nothing is suggested when the word is already in the dictionary,
+      // because the caller only asks after a miss — and a suggestion identical
+      // to what was typed reads as the app malfunctioning.
+      expect(await repo.spellingSuggestions('hanuman'),
+          isNot(contains('hanuman')));
+    });
+
+    test('a first-letter typo is not corrected, and says so by returning none',
+        () async {
+      // The documented limit. Candidates are bounded to the same first letter,
+      // which is what keeps this to a few hundred rows instead of all 20,227
+      // terms on every failed keystroke.
+      expect(await repo.spellingSuggestions('janumam'), isEmpty);
+    });
+
+    test('two edits away is not a correction', () async {
+      expect(await repo.spellingSuggestions('hanxmxn'), isEmpty);
+    });
+
+    test('multi-word and very short queries are left alone', () async {
+      // A multi-word query almost never returns nothing, and correcting one
+      // word of several is a different problem.
+      expect(await repo.spellingSuggestions('hanumn chalisa'), isEmpty);
+      expect(await repo.spellingSuggestions('ab'), isEmpty);
+      expect(await repo.spellingSuggestions(''), isEmpty);
+    });
+
+    test('every correction offered actually finds something', () async {
+      // A suggestion is drawn from the term dictionary, so it must have at
+      // least one posting. If this ever fails, the dictionary and the postings
+      // have diverged.
+      for (final q in ['hanumn', 'krishnaa', 'shivx', 'gitaa']) {
+        for (final s in await repo.spellingSuggestions(q)) {
+          expect(await repo.search(s, limit: 1), isNotEmpty,
+              reason: '"$q" suggested "$s", which finds nothing');
+        }
+      }
+    });
+  });
 }

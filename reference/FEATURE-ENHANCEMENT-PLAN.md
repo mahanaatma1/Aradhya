@@ -1292,10 +1292,45 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       `StateNotifier` from inside `build`, which works in the app only because
       the screen is pushed as a route in its own build pass, and throws the
       moment it is mounted in the same frame as its `ProviderScope`
-- [ ] **SR-01** Group results by kind with per-kind counts
-- [ ] **SR-02** Curated "Try" row driven by `importance`, not hardcoded
-- [ ] **SR-03** One-edit-distance fallback when a query returns nothing
-- [ ] **SR-04** Confirm no result taps through to the error page
+- [x] **SR-01** Group results by kind with per-kind counts — a top-40 page is
+      the wrong unit to read from: for "shiva" it holds 6 of the 10 kinds that
+      match and shows **0 of 109 verses**, all crowded out by 31 temples. The
+      results view now buckets the score-ordered hits into per-kind sections (a
+      plain insertion-ordered map, so the kind holding the single best hit leads),
+      caps each at 4, and heads each with the **true** total from
+      `countsByKind` — not the page count — behind a "See all N" that opens that
+      kind. Picking a kind chip drops back to a flat, uncapped list, since the
+      heading and cap would only hide results the reader just asked to see.
+      `_ResultTile` grew a `showKind` flag (off inside a group or a filtered
+      list — the heading already names the kind), and its title moved from a bare
+      `RichText` to `Text.rich`, which was silently ignoring OS text scale. 19
+      widget tests in `test/search_screen_test.dart`
+- [x] **SR-02** Curated "Try" row driven by `importance`, not hardcoded — the
+      hand-kept list had gone stale (it named "Ekadashi" and "Gita" while the
+      graph had its own answer). `curatedTerms()` reads the 38 `importance = 1`
+      entities and round-robins across `kind`, because importance alone hands
+      back 13 deities before the first hero; the row exists to show the index's
+      *reach* — a deity, a hero, a scripture, a concept, a weapon, a rishi. A
+      chip is offered only if it works in **both** languages: this is what caught
+      "Om" / "ॐ", whose single Devanagari glyph is below `minQueryLength` and so
+      would have been a chip that returned "Nothing found". Falls back to the old
+      const list when the DB is absent (first launch). Covered by 4 repository
+      tests + 4 widget tests
+- [x] **SR-03** One-edit-distance fallback when a query returns nothing —
+      `spellingSuggestions()` offers a "Did you mean" after a miss, ranked by how
+      many documents each candidate appears in so the correction is the word most
+      likely meant. Bounded on purpose to stay cheap on every failed keystroke:
+      single-word only, first character must be right, ≥3 chars — which scans
+      ~280 candidates for "hanumn" instead of all 20,227 terms. `januman` never
+      reaches `hanuman` (a documented limit, tested). 8 repository tests + 5
+      widget tests
+- [x] **SR-04** Confirm no result taps through to the error page — the Python
+      build already gates this (`route_ok` drops any doc whose route is not in
+      `routes.txt`), so `test/search_routes_test.dart` is the second, different
+      line: it runs the **real** `appRouter` against one representative of each
+      of the 11 route shapes in the shipped index, catching a route the Dart
+      side renamed after the index was built. Includes a teeth-check so a broken
+      matcher cannot pass vacuously
 
 ## Knowledge system
 

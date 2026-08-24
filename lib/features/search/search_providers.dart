@@ -70,6 +70,23 @@ Future<void> _debounce(Ref ref, Duration d) {
   return completer.future;
 }
 
+/// Spelling corrections for a query that found nothing (SR-03).
+///
+/// Deliberately chained off [searchResultsProvider] rather than off the query
+/// text: a search that worked returns here immediately without touching the
+/// database, so the correction costs a query only on the misses — and it
+/// inherits that provider's debounce instead of adding a second one.
+final didYouMeanProvider = FutureProvider<List<String>>((ref) async {
+  final query = ref.watch(searchQueryProvider);
+  if (query.trim().length < 2) return const [];
+
+  final hits = await ref.watch(searchResultsProvider.future);
+  if (hits.isNotEmpty) return const [];
+
+  final repo = await ref.watch(searchRepositoryProvider.future);
+  return repo.spellingSuggestions(query);
+});
+
 /// The last few queries, kept locally so the empty state is useful.
 class RecentSearches extends StateNotifier<List<String>> {
   RecentSearches(this._prefs) : super(_prefs.getStringList(_key) ?? const []);
@@ -98,9 +115,25 @@ final recentSearchesProvider =
     StateNotifierProvider<RecentSearches, List<String>>(
         (ref) => RecentSearches(ref.read(sharedPrefsProvider)));
 
-/// Shown in the empty state. Chosen to demonstrate what the index can do —
-/// a Devanagari term, a diacritic term, and a substring city match — rather
-/// than just being popular words.
+/// The empty-state "Try" row (SR-02).
+///
+/// Drawn from `gyan.entities.importance = 1` — the corpus's own answer to what
+/// matters — round-robined across kinds so the row shows the reach of the index
+/// rather than a wall of deities. [searchSuggestions] is the fallback if the
+/// query fails or the DB is absent, so the empty state is never itself empty.
+final curatedTermsProvider = FutureProvider<List<CuratedTerm>>((ref) async {
+  final repo = await ref.watch(searchRepositoryProvider.future);
+  final curated = await repo.curatedTerms();
+  if (curated.isNotEmpty) return curated;
+  return [for (final s in searchSuggestions) (en: s, hi: null)];
+});
+
+/// The hardcoded fallback for [curatedTermsProvider]. Kept because a curated
+/// row driven entirely by the database would show nothing at all if the query
+/// ever failed — and an empty "Try" row is worse than a slightly stale one.
+///
+/// Chosen to demonstrate what the index can do — a Devanagari term, a diacritic
+/// term, and a substring city match — rather than just being popular words.
 const searchSuggestions = <String>[
   'Hanuman',
   'कृष्ण',

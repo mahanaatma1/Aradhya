@@ -71,6 +71,11 @@ class SearchHit {
       (hi && (snippetHi?.isNotEmpty ?? false)) ? snippetHi : snippetEn;
 }
 
+/// A word for the empty-state "Try" row, with the Hindi spelling to search by
+/// when the app is in Hindi. Both forms reach the same documents through the
+/// folded index, so which one is submitted is purely what the reader sees.
+typedef CuratedTerm = ({String en, String? hi});
+
 /// Presentation for each `search_docs.kind`: label, glyph and tile colour.
 ///
 /// Keyed by the same strings the Python indexer writes, so adding a kind means
