@@ -1254,9 +1254,23 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       fill in — `qa_pairs.scripture_section_id` (20/20 today, grows with AK-01)
       and `narrative_nodes.scripture_section_id` (0/79, grows with SC-11)
 - [x] **RD-03** `RelatedRail` at the bottom of the section reader
-- [ ] **RD-04** Verse actions row: bookmark · note · listen (TTS) · share text
-      — bookmark, listen, continuous read-aloud, voice settings and share are
-      all wired; **note is the only one missing**
+- [x] **RD-04** Verse actions row: bookmark · note · listen (TTS) · share text
+      — the note was the only one missing, and it needed no new storage:
+      `bookmarks.note`, `setNote` and the Bookmarks screen's editor all already
+      existed, with no way to reach any of them from the screen where someone is
+      reading. A verse note is therefore a note on the verse's bookmark row
+      (`verse_note_sheet.dart`). Because `setNote` returns silently without a
+      row, saving a note bookmarks the verse — stated in the sheet before the
+      reader types, not in a snackbar afterwards — while clearing a note
+      deliberately does **not** unbookmark it. Three bugs fell out:
+      `Bookmark.copyWith` did `note ?? this.note`, so erasing a note blanked the
+      database row and kept the old words on screen until the next launch;
+      the seventh control overflowed the row by 36 px on a 320-wide phone at
+      *every* text size (seven 48-px targets plus the size button want 340,
+      there are 304), so the row now scrolls, ordered so the voice picker leaves
+      the screen rather than the bookmark, with the size button pinned outside
+      the scroller; and `_bookmark()` stored no verse, so a bookmark on verse 48
+      reopened the chapter at verse 1 — the route now carries `?v=`
 - [x] **RD-05** Per-chapter progress rings on the book list — `BookProgressRing`
       on `scripture_books_screen.dart:128`; shipped as P3-13 and never ticked
 - [x] **RD-06** Hindi at max system font scale without overflow — the item names
@@ -1268,14 +1282,16 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       pager now measures its own labels and drops to chevrons when the words
       cannot fit, keeping the counter and the tap targets; the labels stay in
       the semantics tree so a screen reader still names both buttons
-- [~] **RD-07** Reader tests + device check — 21 widget tests in
-      `test/reader_verse_tabs_test.dart` covering all four facets, every empty
-      state in both languages, facet persistence across a swipe and a restart,
-      and layout at 3.2x. **Device check still outstanding.** Also fixed here:
-      the reader set a `StateNotifier` from inside `build`, which works in the
-      app only because the screen is pushed as a route in its own build pass,
-      and throws the moment it is mounted in the same frame as its
-      `ProviderScope`
+- [~] **RD-07** Reader tests + device check — 35 widget tests across
+      `test/reader_verse_tabs_test.dart` (four facets, every empty state in both
+      languages, facet persistence across a swipe and a restart, layout at 3.2x)
+      and `test/reader_verse_note_test.dart` (the action row's width and
+      ordering, the note lifecycle in both languages, the bookmark route), with
+      fixtures shared via `test/support/reader_harness.dart`. **Device check
+      still outstanding** — blocked on RG-09. Also fixed here: the reader set a
+      `StateNotifier` from inside `build`, which works in the app only because
+      the screen is pushed as a route in its own build pass, and throws the
+      moment it is mounted in the same frame as its `ProviderScope`
 - [ ] **SR-01** Group results by kind with per-kind counts
 - [ ] **SR-02** Curated "Try" row driven by `importance`, not hardcoded
 - [ ] **SR-03** One-edit-distance fallback when a query returns nothing
