@@ -1608,7 +1608,37 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       for these 7). `knowledge_graph_screen.dart`'s node fallback — the
       entity's title text — was left alone; that already reads fine and
       isn't the "anonymous mark" problem this item targets
-- [ ] **VD-01** Expand vidya topics **only where they pass the evidence bar** — 34 excellent beats 50 padded
+- [~] **VD-01** Expand vidya topics **only where they pass the evidence bar** —
+      **18 topics today (was 17)**, added one: "Yama and Niyama — the first
+      two limbs" (`yama-niyama`), the five restraints and five observances
+      that open Patanjali's eight limbs, cited to Vivekananda's own
+      translation directly fetched and quoted (The Complete Works, Volume 1,
+      Raja-Yoga, "The First Steps") — genuinely new, not a duplicate of the
+      existing `ashtanga-yoga` entry, which names all eight limbs but does
+      not open Yama/Niyama out individually. All 6 disciplines the schema
+      allows (ayurveda, jyotisha, shulba, yoga, vyakarana, chandas) already
+      had at least one topic; this adds a second to yoga specifically,
+      which was the one discipline with clean, correctly-attributed
+      sourcing to check for legitimate expansion room.
+
+      **A real, pre-existing data-quality problem was found while checking
+      this and should be tracked separately from VD-01 itself:** all 5
+      ayurveda topics (Dinacharya, Ritucharya, Tridosha, Agni-digestion,
+      Abhyanga) and the `vyakarana` topic Sandhi are cited to
+      `muller-upanishads` — but Muller's Upanishads translation does not
+      cover Ayurvedic daily-routine/dosha/digestion concepts, and Sandhi
+      (Sanskrit phonetic-junction rules) is Panini's grammar domain, not
+      Upanishadic content either. Neither citation looks defensible on
+      inspection. Worse: no Ayurveda-specific primary source (Charaka
+      Samhita, Ashtanga Hridaya, or similar) is registered in
+      `content/sources/registry.jsonl` at all, so even a corrected citation
+      has nowhere accurate to point yet — these 6 topics cannot be properly
+      re-sourced without registering a new source first, which is outside
+      what a content pass alone can fix. Flagging rather than silently
+      re-citing to something equally wrong: **do not add further ayurveda
+      topics until this is resolved**, and the existing 5 should be
+      reviewed against a real Ayurveda source or have their citation
+      pulled rather than left standing as if it were checked
 
 ## Narrative
 
