@@ -233,6 +233,37 @@ class Relator:
                 subtitle_en=ekind, subtitle_hi=ekind,
                 route=f"/gyan/entity/{eid}")
 
+    def link_narrative_cast(self) -> None:
+        """Entity to the scenes they appear in (NR-03's "Appears in" rail).
+
+        `epicCastFacetProvider` already answers the inverse question -- which
+        figures are in an epic -- from the same `narrative_cast` join, on the
+        Ramayana/Mahabharata Explore screens. This is the direction the entity
+        detail page needs and did not have: Rama's page could not say he is in
+        eighteen events while the Ramayana screen could say so about him.
+
+        Weight sits with `relation:*` (0.75): a scripted appearance is as
+        certain as a curated relation, not a name match to be second-guessed.
+        Capped per entity by MAX_EDGES_PER_KIND in flush(), most-major
+        role first, so a walk-on part does not crowd out a protagonist scene.
+        """
+        by_role = {"protagonist": 0.90, "antagonist": 0.85, "witness": 0.78}
+        rows = self.db.execute(
+            """select c.entity_id, e.title_en, e.title_hi, c.role,
+                      n.id, n.title_en, n.title_hi,
+                      n.book_label_en, n.book_label_hi, n.epic
+               from narrative_cast c
+               join entities e on e.id = c.entity_id
+               join narrative_nodes n on n.id = c.node_id""")
+        for eid, eten, ethi, role, nid, nten, nthi, blen, blhi, epic in rows:
+            w = by_role.get(role or "", 0.75)
+            self.add(
+                ("gyan", "entities", eid), ("gyan", "narrative_nodes", nid),
+                dst_kind="scene", reason="appears_in", weight=w,
+                title_en=nten or "", title_hi=nthi,
+                subtitle_en=blen or epic, subtitle_hi=blhi or epic,
+                route=f"/gyan/scene/{nid}")
+
     def link_verses(self, legacy: sqlite3.Connection) -> None:
         """Verses to the figures named in them.
 
@@ -382,6 +413,114 @@ class Relator:
                             subtitle_en="Gyan", subtitle_hi="ज्ञान",
                             route=f"/gyan/entity/{eid}")
 
+    # -- quiz, riddles, trivia -> the entity they are about ----------------
+
+    def link_quiz_riddle_trivia(self, legacy: sqlite3.Connection) -> None:
+        """Quiz/riddle/trivia to the entity the item is actually about.
+
+        None of `knowledge_quiz`, `clue_riddles`, `trivia_facts` carry a
+        `deity` column, so `link_legacy_by_deity` never touches them and a
+        quiz answer or trivia fact has always been a dead end -- no "why is
+        this true", no way to read more. QZ-01/04/05/06.
+
+        Three different match strengths, because the three tables offer very
+        different signal:
+
+        * Quiz: the CORRECT option's text is matched whole against a primary
+          alias (e.g. option text "Vyasa" == alias "vyasa"). This is as
+          precise as a curated field -- the option text names exactly one
+          thing -- so it gets `relation:*`-grade weight (0.75).
+        * Riddle: same idea, matched against the `answer` column, which is
+          always a single name (the whole point of the riddle).
+        * Trivia: there's no isolated answer field, only a sentence.
+          Word-boundary tokenize against ONLY the entity's `primary` alias
+          in English, same restricted recipe as `link_verses` (importance
+          <= 2, no epithets, no plain substring match, so "Rama" cannot
+          match inside a different word) -- and weighted lower (0.5) because
+          "named in a sentence" is weaker evidence than "is the answer".
+        """
+        tables = {r[0] for r in legacy.execute(
+            "select name from sqlite_master where type='table'")}
+
+        # primary aliases, entity_id -> matchable text, both directions.
+        alias_map: dict[str, tuple[int, str, str | None]] = {}
+        major_aliases: list[tuple[int, str, str, str | None]] = []
+        for eid, ten, thi, importance in self.db.execute(
+                "select id, title_en, title_hi, importance from entities"):
+            for (alias,) in self.db.execute(
+                    "select alias from entity_aliases where entity_id=? "
+                    "and alias_kind='primary' and lang='en'", (eid,)):
+                f = fold(alias)
+                if len(f) < 4 or f in AMBIGUOUS_DEITY_TOKENS:
+                    continue
+                alias_map[f] = (eid, ten or "", thi)
+                if (importance or 9) <= 2:
+                    major_aliases.append((eid, f, ten or "", thi))
+
+        # -- quiz: the correct option's own text is the match key ----------
+        if "knowledge_quiz" in tables:
+            import json
+            for qid, q_en, options_json, correct_key in legacy.execute(
+                    "select id, question_en, options, correct_key "
+                    "from knowledge_quiz"):
+                try:
+                    options = json.loads(options_json)
+                except (ValueError, TypeError):
+                    continue
+                answer_en = next(
+                    (o.get("en") for o in options
+                     if o.get("key") == correct_key), None)
+                hit = alias_map.get(fold(answer_en or ""))
+                if not hit:
+                    continue
+                eid, e_ten, e_thi = hit
+                self.add(
+                    ("content", "knowledge_quiz", qid),
+                    ("gyan", "entities", eid),
+                    dst_kind="entity", reason="quiz_answer", weight=0.75,
+                    title_en=e_ten, title_hi=e_thi,
+                    subtitle_en="Learn more", subtitle_hi="और जानें",
+                    route=f"/gyan/entity/{eid}")
+
+        # -- riddles: the `answer` column is the match key ------------------
+        if "clue_riddles" in tables:
+            for rid, answer in legacy.execute(
+                    "select id, answer from clue_riddles"):
+                hit = alias_map.get(fold(answer or ""))
+                if not hit:
+                    continue
+                eid, e_ten, e_thi = hit
+                self.add(
+                    ("content", "clue_riddles", rid),
+                    ("gyan", "entities", eid),
+                    dst_kind="entity", reason="riddle_answer", weight=0.75,
+                    title_en=e_ten, title_hi=e_thi,
+                    subtitle_en="Learn more", subtitle_hi="और जानें",
+                    route=f"/gyan/entity/{eid}")
+
+        # -- trivia: scan the sentence for a major entity's name ------------
+        if "trivia_facts" in tables and major_aliases:
+            for tid, fact_en in legacy.execute(
+                    "select id, fact_en from trivia_facts"):
+                words = set(tokenize(fact_en or ""))
+                if not words:
+                    continue
+                hits = 0
+                for eid, f, e_ten, e_thi in major_aliases:
+                    if f not in words:
+                        continue
+                    hits += 1
+                    if hits > 2:
+                        break
+                    self.add(
+                        ("content", "trivia_facts", tid),
+                        ("gyan", "entities", eid),
+                        dst_kind="entity", reason="trivia_mentions",
+                        weight=0.5,
+                        title_en=e_ten, title_hi=e_thi,
+                        subtitle_en="Learn more", subtitle_hi="और जानें",
+                        route=f"/gyan/entity/{eid}")
+
     # -- flush -------------------------------------------------------------
 
     def flush(self, routes: set[str]) -> int:
@@ -460,7 +599,9 @@ def build_into(db: sqlite3.Connection) -> dict:
             r.link_stories_by_emotion(legacy)
             r.link_entities(legacy)
             r.link_festivals()
+            r.link_narrative_cast()
             r.link_verses(legacy)
+            r.link_quiz_riddle_trivia(legacy)
         finally:
             legacy.close()
 

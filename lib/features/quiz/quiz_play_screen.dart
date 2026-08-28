@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
+import '../related/related_rail.dart';
 import 'quiz_models.dart';
 import 'quiz_providers.dart';
 
@@ -126,6 +127,8 @@ class _QuizPlayScreenState extends ConsumerState<QuizPlayScreen> {
                             state: _stateFor(o, q),
                             onTap: () => _answer(q, o.key),
                           )),
+                      if (selected != null)
+                        RelatedRail(table: 'knowledge_quiz', id: q.id),
                     ],
                   ),
                 ),

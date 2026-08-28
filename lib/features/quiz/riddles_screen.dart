@@ -6,6 +6,7 @@ import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/streak.dart';
 import '../../shared/widgets/skeleton.dart';
+import '../related/related_rail.dart';
 import 'riddles_providers.dart';
 
 /// Riddles game — clues reveal one at a time; guess the answer for more points
@@ -142,6 +143,8 @@ class _RiddlesScreenState extends ConsumerState<RiddlesScreen> {
                               : 'Next clue (${clues.length - shown} left)'),
                         ),
                       ),
+                    if (_solved)
+                      RelatedRail(table: 'clue_riddles', id: r.id),
                   ],
                 ),
               ),

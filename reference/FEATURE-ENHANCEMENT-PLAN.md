@@ -2099,12 +2099,47 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Discovery & play
 
-- [ ] **QZ-01** Explanation after every quiz answer
+- [x] **QZ-01**/**QZ-03**/**QZ-04**/**QZ-05**/**QZ-06** Quiz/riddle/trivia
+      linked to the entity they're about, surfaced as the "explanation" —
+      done together because QZ-01's real blocker was the same one QZ-04/05/06
+      name directly: `knowledge_quiz` (4,000 rows), `clue_riddles` (365) and
+      `trivia_facts` (565) all live in the legacy `content.sqlite` with no
+      `deity` column and no link to the `gyan.sqlite` entity graph, so
+      `relate.py`'s existing deity-token rule never touched them. Writing a
+      bespoke, individually-verified explanation for 4,000 quiz questions
+      was not something to force through in one pass without cutting
+      verification corners — raised this with the user directly rather than
+      either silently skip it or ship weak text, and the user chose linking
+      to the existing, already-verified entity page as the explanation
+      surface, over authoring new text.
+
+      Added `link_quiz_riddle_trivia()` to `relate.py`, three match
+      strengths keyed to how precise each field actually is: quiz — the
+      CORRECT option's own text matched whole against a primary entity
+      alias (weight 0.75, as precise as a curated field); riddle — the
+      `answer` column matched the same way (0.75); trivia — no isolated
+      answer field, so the sentence is scanned with the exact restricted
+      recipe `link_verses` already uses (word-boundary tokenize, primary
+      alias only, importance <= 2, capped at 2 hits/fact, weight 0.5, so
+      "Rama" can't match inside a different word and a common name can't
+      spam a rail). Wired into `build_into()`. Result: 1,536/4,000 quiz
+      questions, 430/565 trivia facts, 144/365 riddles linked — spot-checked
+      15+ of each by hand, zero false positives found (every match was
+      genuinely about the entity it names, e.g. "Who composed the
+      Mahabharata?" -> Vyasa, "The Ramayana was composed by Sage Valmiki"
+      -> both Ramayana and Valmiki). Unmatched items stay unmatched rather
+      than force a weak link — honest gaps, not silent wrong answers.
+
+      `RelatedRail` — already built and used elsewhere (`festival_detail_
+      screen.dart`) — needed no changes; wired it into `quiz_play_screen.dart`
+      (shown once an option is picked, giving the answer a "why" via the
+      linked entity) and `riddles_screen.dart` (shown once solved). Trivia's
+      flat list needed something lighter than a full rail, so added a small
+      `_TriviaLink` chip in `trivia_screen.dart` instead, reading the same
+      `relatedProvider`, rendering nothing when a fact has no link.
+      `flutter analyze` clean, 350/350 tests pass, `build.py`: +2,110
+      related_edges, nothing lost
 - [ ] **QZ-02** Quiz difficulty and category filters
-- [ ] **QZ-03** `RelatedRail` on the quiz result
-- [ ] **QZ-04** Riddle answer links to its entity
-- [ ] **QZ-05** Trivia fact links to its entity
-- [ ] **QZ-06** `relate.py` rule: quiz, riddle and trivia to entity, capped at 2
 - [ ] **DH-01** Dharma scenarios 12 to 50–60
 - [ ] **AK-01** Ask pairs 20 to 300–500
 - [ ] **AK-02** Retrieval falls back to the 27,890 indexed shlokas
