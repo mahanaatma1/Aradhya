@@ -1339,14 +1339,138 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       edges. `wd_edges_extra.py` maps them. Relations 578 -> 970; entities with
       no edges 285 -> 208. `P1080`/`P2789` return nothing for this corpus
 - [x] **KG-02** 100% of P0 entities have a description — measured 135/135
-- [ ] **KG-03** 100% of P0 entities have 3 or more verified relations — **36/135 today**
-- [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations — **63% (237/376) today**
+- [ ] **KG-03** 100% of P0 entities have 3 or more verified relations —
+      **124/136 today (91.2%)**, up from 36 at the start of this pass. Every
+      relation added carries an exact Parva/Sarga/Section citation against a
+      primary translation (`ganguli-mahabharata`, `dutt-ramayana`,
+      `wilson-vishnu-purana`, `muller-upanishads`, `griffith-rigveda`) —
+      independently fetched and quoted, not taken from secondary summaries.
+      Where a summary source turned out to cite the wrong chapter or the
+      wrong deity for an episode, the mistake was caught and corrected
+      before writing (e.g. an early attempt attributed Dasharatha's
+      putrakameshti yajna to Vasishtha; the primary text names Rishyasringa).
+      New entities were created only where a real, sourced relation had no
+      destination to point to: Lopamudra (Agastya's wife), Manu (Vaivasvata
+      Manu, saved by Matsya). A new relation type, `member_of`/`has_member`,
+      was added to the schema (`gyan.sql`, `validate.py`) rather than
+      misusing `ruled_by` or `part_of`, both of which already carry a
+      different meaning in this data.
+
+      Closed this session, on top of the earlier 106: Kalash (Dhanvantari
+      bearing the Amrita-cup from the churned ocean, Wilson Book I Ch. IX),
+      Agneyastra and Narayanastra (both traced to the same Drona Parva
+      §CCI passage — Ashvatthama's fire weapon countered by Arjuna's Brahma
+      weapon; the Narayana weapon pacified only when Bhima lays down arms
+      at Krishna's counsel), Ekalavya (disciple_of Drona via the thumb
+      guru-dakshina episode, Adi Parva §CXXXIV — the earlier Wikisource
+      404s were a dead end; the ibiblio mirror had the passage all along),
+      Shankha (added a 2nd citation, Krishna's Panchajanya at Bhishma Parva
+      §XXV), Yamuna (sibling_of Yama and paired with Ganga, both via
+      Rigveda Mandala 10).
+
+      **12 P0 entities remain below the bar, and each was individually
+      researched and rejected as unciteable from a registered source, not
+      skipped:** Damaru, Diya, Rudraksha, Swastika, Tilaka (ritual objects
+      whose textual glorification lives in the Shiva Purana / Rudraksha
+      Jabala Upanishad / Devi Mahatmya — none registered; the one Mahabharata
+      passage on lamp-merit found, Anusasana Parva §XCVIII, blesses "the
+      deities" collectively with no single named destination to cite
+      honestly); Dvaraka, Mathura, Vrindavana, Kali, Radha's 3rd relation
+      (confirmed Puranic-only mythology — Devi Mahatmya and Bhagavata/
+      Brahma-Vaivarta material, both unregistered; Rigveda's "Kali" is a
+      different referent — Agni's tongue, not this goddess, so citing it
+      would misattribute); Harishchandra (the only Mahabharata mention
+      found, Anusasana Parva §CLXV, is a bare 30-king name-list recited for
+      its purifying sound — too thin to support a real `related_to` edge to
+      one specific king); Padma's 3rd relation (the Brahma-born-from-a-
+      lotus-navel myth is not in Wilson's Vishnu Purana in that form — every
+      chapter checked either omits the lotus or omits the navel). None of
+      these are a research-time problem; they are a source-registration
+      ceiling. 124/136 is the practical maximum without either registering
+      a new source (would need Wiki approval — out of scope here) or
+      citing thin/misattributed material, which the standing "don't
+      compromise" instruction rules out.
+- [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations —
+      **65.5% (247/377) today**, moving in step with KG-03's work above
+      since most P0 rishis, places, weapons, and concepts are also P1-tier
+      or touch P1 entities as their relation partner. Still short of 80%;
+      not yet the direct focus of a dedicated pass
 - [x] **KG-05** Written empty state for an entity with no edges — 285 of 511 today
 - [x] **KG-06** Group more than 20 relations by family
 - [x] **KG-07** Relation-family filter chips
-- [ ] **KG-08** Device check: pan and zoom performance on the canvas
-- [ ] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple · Dynasty
-- [ ] **FT-02** Recursive layout to depth 3
+- [ ] **KG-08** Device check: pan and zoom performance on the canvas —
+      **cannot be done from here.** `flutter devices` in this environment
+      shows only Windows desktop and web (Chrome/Edge); no Android/iOS
+      device or emulator is attached, and this is a mobile app — desktop/web
+      GPU and input characteristics don't stand in for a phone, so a
+      pass/fail here would not be trustworthy. Code read as a partial
+      substitute: `_EdgePainter.shouldRepaint` correctly guards on
+      centre/target-count change rather than always repainting, and the
+      edge count is already bounded by the `_families` filter — no obvious
+      anti-pattern, but that is not the same claim as "it is smooth on a
+      device," which is what this item actually asks. Needs a real phone
+      (mid-range Android in particular) run through pan/zoom on an
+      entity with many relations (Krishna: 506 related_edges is the
+      largest in the DB today) before this can honestly be checked off
+- [~] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple ·
+      Dynasty — researched and partially unblocked, not a filter chip yet.
+      `guru_of`/`disciple_of` were already in the relation vocabulary
+      (`validate.py` `REL_INVERSE`, `LINEAGE_RELS`) and in `gyan.sql`'s
+      comment, but zero edges existed. Added 3 real, source-cited relations
+      to `content/data/relations/rishis.jsonl` (Vishvamitra guru_of Rama +
+      Lakshmana, Bala Kanda Sarga 22 — teaching the Bala/Atibala mantras,
+      confidence high; Vasishtha guru_of Rama, Bala Kanda Sarga 18 naming
+      ceremony, confidence medium — the general-tutor claim is well attested
+      across the tradition but I could not pin it to one further sarga, so it
+      is not overstated to "high"), cited to `dutt-ramayana` (the registered
+      *primary* translation — `griffith-ramayana` is registered `secondary`,
+      used only to cross-check Dutt, so it is the wrong citation to lead
+      with). Verified against the primary text directly (a first citation
+      attempt, Vasishtha performing the putrakameshti yajna, turned out to be
+      wrong — that was Rishyasringa's role, not his — and was corrected before
+      writing anything). Rebuilt: +6 relations, +4 related_edges, confirmed
+      both directions materialise correctly. These already surface on
+      `RelatedRail` via the existing `link_entities()` rule — no Dart needed.
+      Dynasty (`ikshvaku-dynasty`/`kuru-dynasty`/`yadu-dynasty`) entities
+      exist but have **zero relations of any kind** — populating real
+      membership/founding edges for three dynasties across two epics is a
+      research task of its own, not done here.
+      What is still genuinely missing: (1) a filter UI — `FamilyTreeScreen`'s
+      three-band layout (parents/root/spouses+children) has no slot for a
+      teaching relation, which is not the same shape as a genealogical band;
+      the right home for guru/disciple is the entity page's `RelatedRail`,
+      which already shows it, but the *reason* ("guru" vs a generic "related
+      entity") is not rendered there — `RelatedItem.reason` reaches the model
+      and stops, unused in `_RelatedCard`. Making that visible is a
+      real, scoped follow-up (call it NR-04), not done here to avoid
+      redesigning the rail's display for every relation kind as a side
+      effect of one screen's filter.
+      (2) Dynasty: added a real fix, not just data. No relation type existed
+      for "person belongs to a dynasty" — `ruled_by` already means place→ruler
+      and `part_of` already means deity-manifestation (checked actual usage:
+      Bala Krishna part_of Krishna, Chandraghanta part_of Durga — reusing
+      either would misrepresent the data, not just reuse it loosely). Added
+      `member_of`/`has_member` to the vocabulary (`gyan.sql`'s relation-family
+      comment, `validate.py`'s `REL_INVERSE` — deliberately NOT added to
+      `LINEAGE_RELS`, same reason as guru/disciple: it doesn't fit the
+      three-band layout either). Then researched and cited 3 real dynasty
+      memberships in new `content/data/relations/dynasties.jsonl`: Rama
+      member_of Ikshvaku (Bala Kanda Sarga 70, Vasishtha's wedding-lineage
+      recitation, confidence high), Krishna member_of Yadu (Sabha Parva
+      Section II, "the foremost of the Yadava race," confidence high),
+      Yudhishthira member_of Kuru (Sabha Parva Section VII, "scion of the
+      Kuru race" — addressed to "a son of Pritha," contextually Yudhishthira
+      but the excerpt alone doesn't name him, so confidence medium, not
+      high). Rebuilt again: +6 relations, +3 related_edges, both directions
+      confirmed. `flutter test`: 350/350 pass throughout both rebuilds.
+- [ ] **FT-02** Recursive layout to depth 3 — **not implemented, and should
+      not be without a design decision first.** `_Tree`'s own doc comment
+      states this is deliberate: "Deliberately not a full recursive
+      genealogy... a three-band view around a movable root is more readable
+      than a sprawling canvas." Implementing FT-02 as literally scoped means
+      overriding a considered, documented design choice already made in this
+      codebase — that is not mine to reverse unilaterally. Needs a decision
+      from whoever owns that call, not a mechanical build
 - [x] **FT-03** Collapse and expand past 4 children
 - [x] **FT-04** `tradition` selector when edges disagree
 - [x] **FT-05** Breadcrumb so a re-root walk is reversible
@@ -1366,9 +1490,25 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **RS-03** Gotra · veda · guru · disciples · hymns · ashram populated
 - [ ] **RS-04** Teaching-lineage mini-tree on the detail screen
 - [x] **RS-05** Attributions labelled "according to the cited tradition"
-- [ ] **AS-01** Expand astras; `nature` shown near the top
-- [ ] **AS-02** Rename "Powers" to traditional effect unless the source says otherwise
-- [ ] **AS-03** Symbolism in its own panel, separate from the mythic account
+- [~] **AS-01** Expand astras; `nature` shown near the top — the ordering
+      half is done: `nature` moved to the 2nd row in `entity_detail_screen.dart`
+      (right after `Type`, ahead of Invocation/Effect/Counter). "Expand
+      astras" is content authoring (only Brahmastra has a `powers_en`/
+      `counter_en`/`symbolic_meaning_en` today; every other astra/ayudha has
+      just `nature` and `weapon_type`) and needs the same source-verification
+      standard as the guru/dynasty relations, not attempted in this pass
+- [x] **AS-02** Renamed "Powers"/"सामर्थ्य" to "Effect"/"प्रभाव" in
+      `entity_detail_screen.dart`. Researched whether a traditional term
+      exists first (checked Mahabharata Adi Parva 138 and other primary/
+      secondary descriptions of the Brahmastra — the only astra with a
+      `powers_en` field today) — no single canonical Sanskrit term for "what
+      it does" surfaced across sources, so "Effect" (what the search results
+      themselves called it) is accurate rather than invented terminology
+- [x] **AS-03** Symbolism in its own panel, separate from the mythic account —
+      already implemented: `symbolic_meaning_en` renders through a distinct
+      `_InterpretationPanel` widget below the facts card, with its own
+      "Symbolic meaning" heading, plus a separate `meaning_varies_by` panel
+      when traditions disagree. Was unchecked despite being done
 - [ ] **SB-01** Expand symbols — 12 today; mudras and yantras absent
 - [ ] **SB-02** Drawn motif where no Unicode glyph exists
 - [ ] **VD-01** Expand vidya topics **only where they pass the evidence bar** — 34 excellent beats 50 padded
@@ -1478,12 +1618,11 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       Mahabharata. Four places for the Ramayana (Ayodhya 5, Lanka 5, Kishkindha 2,
       Mithila 1) and three for the Mahabharata (Kurukshetra 8, Hastinapura 6,
       Himalaya 1). The line disappears on its own when the column fills
-- [ ] **NR-02** Normalise `book_label_hi` in the content build — the same
-      `book_no` is spelled two ways in bk1/2/4/5/6 ("बाल कांड" / "बालकांड"),
-      because the labels were authored per batch. Nothing user-facing reads
-      them any more (the roster in `story_structure.dart` is the authority, on
-      both the epic screens and the event page), so this is a tidy, not a bug
-      with a symptom. Fix it in the JSONL, not in the shipped `.sqlite`
+- [x] **NR-02** Normalised `book_label_hi` in `content/data/narrative/ramayana_more.jsonl`
+      — all 5 kandas (Bala/Ayodhya/Kishkindha/Sundara/Yuddha) used a spaced
+      form ("बाल कांड") while `epics.jsonl` used the standard compound form
+      ("बालकांड"); fixed in the JSONL to match the compound spelling,
+      rebuilt (`content.tools.build`), no errors introduced
 - [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka — SC-13's
       Places axis is the filter half of this; what is still missing is the
       *journey*, places in narrative order rather than by count, which needs RM-02
@@ -1491,28 +1630,76 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [-] **MB-02** ~~Optional parva rail beside the arc chips~~ — superseded by
       SC-13: the parvas are the section axis of the Explore row, on both epics,
       which is the same affordance without a second rail
-- [ ] **NR-01** Add `chronology_confidence` — narrative order is not historical order
-- [ ] **NR-03** "Appears in" on the entity page — `entity_detail_screen` watches
-      relations and aliases only, and nothing there reaches `narrative_cast`, so
-      Rama's page cannot say he is in eighteen events while the Ramayana screen
-      can. SC-13's `epicCastFacetProvider` is the inverse join already written;
-      what is missing is a per-entity variant and a rail on that page.
-      `_NoConnections` is the honest-empty widget for a figure with no scenes
+- [x] **NR-01** Added `chronology_confidence` — new `TEXT NOT NULL DEFAULT
+      'traditional'` column on `narrative_nodes` in `gyan.sql`
+      (`CHECK IN ('traditional','disputed','confirmed')`), a `_chronology()`
+      helper in `build.py` reading an optional JSONL field with the same
+      default, and `NarrativeNode.chronologyConfidence` in the Dart model
+      (all 3 provider queries use `SELECT *`, so no query changes needed).
+      Rebuilt: all 79 narrative_nodes correctly default to 'traditional'.
+      `flutter test`: 350/350 pass
+- [x] **NR-03** "Appears in" on the entity page — added `link_narrative_cast()`
+      to `content/tools/relate.py` (registered in `build_into`), joining
+      `narrative_cast` → `narrative_nodes` into `related_edges` as
+      `dst_kind='scene'`, weighted by role (protagonist 0.90 / antagonist 0.85
+      / witness 0.78 / other 0.75), routed to `/gyan/scene/:id` (already
+      allowlisted in `routes.txt`). `entity_detail_screen`'s existing
+      `RelatedRail(src: 'gyan', table: 'entities', id: entity.id)` picks these
+      up with **no Dart changes** — 'scene' was already a registered
+      `SearchKinds` entry. Rebuilt: +99 `related_edges`, confirmed Rama shows
+      scene edges (capped at `MAX_EDGES_PER_KIND=4` of 18 raw appearances,
+      same cap every other kind on the rail already uses — not special-cased).
+      `flutter test`: 350/350 pass
 - [-] **RM-01** ~~Ramayana 32 to 45–50 scenes~~ — count withdrawn, see SC-02
 - [-] **MB-01** ~~Mahabharata 29 to 45–55 events~~ — count withdrawn, see SC-03
-- [ ] **ST-01** Merge stories and kathas into one categorised list
+- [x] **ST-01** Merge stories and kathas into one categorised list — was a
+      hard either/or (`_CollectionToggle`, `bool _showKathas`) between two
+      separately-filtered views (stories by emotion, kathas by deity — a real
+      asymmetry, not an oversight, since kathas carry no emotion tags).
+      Replaced with a 3-way `_StoryCollection` selector (All / Stories /
+      Vrat Katha, `stories_screen.dart`) backed by a new `allStoriesProvider`
+      (`story_providers.dart`) that merges both lists, stories first — kept
+      each collection's existing internal order rather than interleaving, so
+      "browse everything" reads as categorised, not shuffled. `_filterAll`
+      applies the deity filter only to the katha portion of the merged list,
+      so switching from Vrat Katha to All with a deity chip picked does not
+      silently drop it. Fixed a title bug while here: the pre-existing
+      `t.catKatha` string is literally "Katha"/"कथा" and was already wrong as
+      the Stories-only title before this change; now titled correctly per
+      collection. Caught and fixed one bug of my own before it shipped: the
+      new `_collection` field defaulted to `.all` even when arriving from a
+      Home emotion tile, which the title switch could not resolve correctly
+      (emotion is a story-only concept) — now defaults to `.story` on that
+      path, `.all` otherwise. `flutter analyze`: clean. `flutter test`:
+      350/350 pass, though `stories_screen.dart` has **zero existing test
+      coverage** (pre-existing, not introduced here) — the merge is
+      unverified by anything beyond manual code reading and the fact that
+      nothing else broke
 - [ ] **ST-02** Every story entity-linked
 
 ## Practice & personal
 
-- [ ] **SD-01** Sadhana entry point on Home
-- [ ] **SD-02** Inline per-practice goal editing
-- [ ] **SD-03** Milestones rail
-- [ ] **SD-04** Frame as personal practice, not a productivity score
+- [x] **SD-01** Sadhana entry point on Home — `_SadhanaCard` added to
+      `home_screen.dart` (mirrors `_MandirCard`'s pattern), shows "$done of
+      $total practices done today" from `practicesDoneTodayProvider`,
+      pushes `/sadhana` (route already existed, just wasn't linked)
+- [x] **SD-02** Inline per-practice goal editing — already built:
+      `_PracticeRow._editGoal` in `sadhana_hub_screen.dart` (long-press →
+      dialog → `setSadhanaGoal`)
+- [x] **SD-03** Milestones rail — already built: `_MilestoneRail` in
+      `sadhana_hub_screen.dart`
+- [x] **SD-04** Frame as personal practice, not a productivity score —
+      confirmed: the hub shows a streak flame as a small supporting detail
+      next to each practice row, never as a headline score, points, or
+      leaderboard; no changes needed
 - [ ] **KJ-01** Journal prompts to 150–200, each cited to a verse
-- [ ] **MN-01** Mandir: offering animates onto the idol
-- [ ] **MN-02** Mandir uses the user's `ishta_deity`
-- [ ] **MN-03** Confirm Kamal stays optional gamification, never a purchase
+- [x] **MN-01** Mandir: offering animates onto the idol — `_FlyingOffering`
+      driven by an `AnimationController` in `mandir_screen.dart`, already built
+- [x] **MN-02** Mandir uses the user's `ishta_deity` — `ishtaDeityProvider`
+      (set at onboarding) is watched in `mandir_screen.dart` and drives `_Idol`
+- [x] **MN-03** Confirmed Kamal stays optional gamification, never a purchase —
+      no `in_app_purchase`/billing package in `pubspec.yaml`, no billing code
+      anywhere in `lib/`; Kamal is earned/spent only via `currency_ledger`
 - [x] **PP-01** Pilgrimage Passport screen — `temple_visits` already records data
 - [x] **PP-02** Per-temple stamp: date, note, rating
 - [x] **PP-03** Collections: Char Dham · 12 Jyotirlinga · Shakti Peetha
