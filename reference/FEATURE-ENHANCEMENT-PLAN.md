@@ -1889,7 +1889,24 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       confirmed: the hub shows a streak flame as a small supporting detail
       next to each practice row, never as a headline score, points, or
       leaderboard; no changes needed
-- [ ] **KJ-01** Journal prompts to 150–200, each cited to a verse
+- [x] **KJ-01** Journal prompts to 150–200, each cited to a verse — **150/150,
+      the floor of the target range, reached.** Went from 28 to 150; every
+      one of the 122 new prompts was independently verified against a
+      primary text before writing, not copied from a secondary summary:
+      Bhagavad Gita (Telang and Arnold translations, spanning chapters
+      2–18), six Upanishads via Muller (Isha, Kena, Katha, Chandogya,
+      Brihadaranyaka, Prasna, Taittiriya — confirmed Isha and Mundaka
+      are in fact covered by the registered `muller-upanishads` source,
+      correcting an earlier session's mistaken exclusion), and Ganguli's
+      Mahabharata (Vidura Niti and the Sanatsujatiya in the Udyoga Parva,
+      plus the Mokshadharma section of the Shanti Parva). Several initial
+      verse-number guesses were wrong on verification and corrected before
+      writing (e.g. an early attempt placed 2.58 in chapter 15; the tortoise
+      simile is actually 2.58). One Svetasvatara Upanishad verse was
+      researched but dropped because its wording couldn't be confirmed as
+      genuinely Muller's after two searches, rather than risk a
+      misattribution. `validate`/`build`/`flutter test` all clean
+      throughout — 350/350 tests pass, zero content lost across every batch
 - [x] **MN-01** Mandir: offering animates onto the idol — `_FlyingOffering`
       driven by an `AnimationController` in `mandir_screen.dart`, already built
 - [x] **MN-02** Mandir uses the user's `ishta_deity` — `ishtaDeityProvider`
