@@ -1478,8 +1478,31 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [x] **SY-02** Traditions-differ layer, rendered in its own panel
 - [x] **SY-03** Brahmanda diagram replaces the loka list
 - [x] **SY-04** Warm palette; starfield removed
-- [ ] **SY-05** Decide whether Creation and Time need their own diagram
-- [ ] **YG-01** Link each yuga to narrative nodes set in it
+- [x] **SY-05** Decide whether Creation and Time need their own diagram —
+      **decided: no.** Brahmanda earned a bespoke diagram (SY-03) because the
+      14 lokas are a *spatial* structure — seven worlds above the earth,
+      seven below, and that above/below relationship is the content a list
+      cannot show. Creation (8 nodes) and Time (yuga → mahayuga → manvantara
+      → kalpa, each a fixed multiplier of the last) are both *sequential*,
+      not spatial: `srishty_screen.dart`'s `_LadderRow` already switches to a
+      plain numbered spine for them (`numbered = track != 'loka'`,
+      `_NodeCard` hides the loka-style band index and shows order instead),
+      and the Yuga screen's `_ZoomOut` section separately renders the Time
+      cycle as a numbered "1 → 2 → 3 → 4" list with each step's multiplier
+      stated in prose. A bespoke diagram for either would decorate a
+      sequence that a numbered list already states in full — it would not
+      surface a relationship the reader can't currently see, the way
+      Brahmanda's above/below did. No further work needed here
+- [x] **YG-01** Link each yuga to narrative nodes set in it — `yuga_screen.dart`'s
+      `_Detail` card now shows a tappable "Set in this age: the Ramayana /
+      the Mahabharata" row with a live scene count from `epicScenesProvider`,
+      for Treta and Dvapara only (the Purana's own short_description text
+      names these two as "the age of the Ramayana"/"the age of the
+      Mahabharata"; Satya and Kali carry no epic in this corpus, so they
+      correctly show nothing rather than a guessed link). Taps to
+      `/gyan/ramayana` or `/gyan/mahabharata`, the existing epic screens —
+      no schema change needed since `epicScenesProvider` already queried
+      `narrative_nodes` by epic
 - [~] **RS-01** Widen the rishi roster — 20 today. Corpus widened 55 -> 69
       PD chapters; roster itself unchanged pending more sourced sages
 - [~] **RS-02** Prose for every P0 and P1 rishi — **6 of 20** (was 2).

@@ -2,13 +2,26 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
 import '../../shared/widgets/source_chip.dart';
+import '../narrative/narrative_providers.dart';
 import 'cosmology_models.dart';
 import 'cosmology_providers.dart';
+
+/// YG-01: which epic's narrative is set in each yuga, per the Purana's own
+/// account (Treta is "the age of the Ramayana", Dvapara "the age of the
+/// Mahabharata" — see the yuga entries' short_description in
+/// content/data/cosmology/vishnu_purana.jsonl). Satya and Kali carry no epic
+/// of their own in this corpus, so they are intentionally absent here rather
+/// than guessed at.
+const _yugaEpic = {
+  'yuga-treta': 'ramayana',
+  'yuga-dvapara': 'mahabharata',
+};
 
 /// Yuga Explorer — the four ages, drawn to scale.
 ///
@@ -347,7 +360,7 @@ class _AgeBars extends StatelessWidget {
   }
 }
 
-class _Detail extends StatelessWidget {
+class _Detail extends ConsumerWidget {
   final CosmologyNode yuga;
   final Color colour;
   final bool hindi;
@@ -355,7 +368,7 @@ class _Detail extends StatelessWidget {
       {required this.yuga, required this.colour, required this.hindi});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final scheme = Theme.of(context).colorScheme;
     final ratio = yuga.attributes['dharma_ratio'];
     final have = (ratio is List && ratio.length == 2)
@@ -448,6 +461,10 @@ class _Detail extends StatelessWidget {
                     height: 1.55,
                     color: scheme.onSurface.withValues(alpha: 0.78))),
           ],
+          if (_yugaEpic[yuga.slug] != null) ...[
+            const SizedBox(height: 12),
+            _EpicLink(epic: _yugaEpic[yuga.slug]!, colour: colour, hindi: hindi),
+          ],
           const SizedBox(height: 12),
           SourceChip(
             sourceName: yuga.sourceName,
@@ -457,6 +474,74 @@ class _Detail extends StatelessWidget {
             hindi: hindi,
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// YG-01: a tappable link from the yuga to the epic set in it, with the
+/// scene count fetched so the claim isn't just a label — "38 scenes" says
+/// there is somewhere to actually go.
+class _EpicLink extends ConsumerWidget {
+  final String epic;
+  final Color colour;
+  final bool hindi;
+  const _EpicLink(
+      {required this.epic, required this.colour, required this.hindi});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scenes = ref.watch(epicScenesProvider(epic)).valueOrNull;
+    final isRamayana = epic == 'ramayana';
+    final label = isRamayana
+        ? (hindi ? 'रामायण' : 'the Ramayana')
+        : (hindi ? 'महाभारत' : 'the Mahabharata');
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(12),
+      onTap: () => context.push('/gyan/$epic'),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+        decoration: BoxDecoration(
+          color: colour.withValues(alpha: 0.12),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Row(
+          children: [
+            Icon(Icons.auto_stories_rounded, size: 18, color: colour),
+            const SizedBox(width: 9),
+            Expanded(
+              child: Text.rich(
+                TextSpan(
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: Theme.of(context).colorScheme.onSurface),
+                  children: [
+                    TextSpan(
+                        text: hindi ? 'इसी युग में सेट: ' : 'Set in this age: '),
+                    TextSpan(
+                      text: label,
+                      style: TextStyle(fontWeight: FontWeight.w800, color: colour),
+                    ),
+                    if (scenes != null)
+                      TextSpan(
+                        text: hindi
+                            ? ' (${scenes.length} दृश्य)'
+                            : ' (${scenes.length} scenes)',
+                        style: TextStyle(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withValues(alpha: 0.55)),
+                      ),
+                  ],
+                ),
+              ),
+            ),
+            Icon(Icons.chevron_right_rounded,
+                size: 18, color: colour.withValues(alpha: 0.7)),
+          ],
+        ),
       ),
     );
   }
