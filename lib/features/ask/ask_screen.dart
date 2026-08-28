@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/source_chip.dart';
+import '../search/search_models.dart' show SearchHit;
 import 'ask_models.dart';
 import 'ask_providers.dart';
 
@@ -61,8 +62,10 @@ class _AskScreenState extends ConsumerState<AskScreen> {
                     _submit(q);
                   }),
               AskOutcome.answered => _Answer(pair: result.best!, hindi: hi),
-              AskOutcome.notSure =>
-                _NotSure(candidates: result.candidates, hindi: hi),
+              AskOutcome.notSure => _NotSure(
+                  candidates: result.candidates,
+                  verseFallback: result.verseFallback,
+                  hindi: hi),
             },
           if (!busy && result.outcome == AskOutcome.answered &&
               result.candidates.isNotEmpty) ...[
@@ -307,8 +310,12 @@ class _ReadInContext extends ConsumerWidget {
 /// that quietly shows the least-bad row as though it were the answer.
 class _NotSure extends StatelessWidget {
   final List<QaPair> candidates;
+  final List<SearchHit> verseFallback;
   final bool hindi;
-  const _NotSure({required this.candidates, required this.hindi});
+  const _NotSure(
+      {required this.candidates,
+      this.verseFallback = const [],
+      required this.hindi});
 
   @override
   Widget build(BuildContext context) {
@@ -330,6 +337,20 @@ class _NotSure extends StatelessWidget {
             style: const TextStyle(fontSize: 14.5, height: 1.5),
           ),
         ),
+        // AK-02: a broader search over the full scripture index, offered
+        // only as "verses that mention this" — never dressed up as a
+        // curated answer the way the `answered` outcome is.
+        if (verseFallback.isNotEmpty) ...[
+          const SizedBox(height: 16),
+          Text(hindi ? 'इनमें यह शब्द मिलता है' : 'Verses that mention this',
+              style: TextStyle(
+                  fontSize: 11.5,
+                  letterSpacing: 1.1,
+                  fontWeight: FontWeight.w800,
+                  color: scheme.onSurface.withValues(alpha: 0.5))),
+          const SizedBox(height: 8),
+          for (final v in verseFallback) _VerseFallbackTile(hit: v, hindi: hindi),
+        ],
         if (candidates.isNotEmpty) ...[
           const SizedBox(height: 16),
           Text(hindi ? 'निकटतम प्रश्न' : 'Closest questions',
@@ -347,6 +368,54 @@ class _NotSure extends StatelessWidget {
             ),
         ],
       ],
+    );
+  }
+}
+
+class _VerseFallbackTile extends StatelessWidget {
+  final SearchHit hit;
+  final bool hindi;
+  const _VerseFallbackTile({required this.hit, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final snippet = hit.snippet(hindi);
+    return InkWell(
+      onTap: () => context.push(hit.route),
+      borderRadius: BorderRadius.circular(13),
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 8),
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: _teal.withValues(alpha: 0.05),
+          borderRadius: BorderRadius.circular(13),
+          border: Border.all(color: _teal.withValues(alpha: 0.2)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(hit.title(hindi),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w700, fontSize: 13.5)),
+            if (hit.subtitle(hindi) != null)
+              Text(hit.subtitle(hindi)!,
+                  style: TextStyle(
+                      fontSize: 11.5,
+                      color: scheme.onSurface.withValues(alpha: 0.5))),
+            if (snippet != null && snippet.isNotEmpty) ...[
+              const SizedBox(height: 4),
+              Text(snippet,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      fontSize: 12.5,
+                      height: 1.4,
+                      color: scheme.onSurface.withValues(alpha: 0.75))),
+            ],
+          ],
+        ),
+      ),
     );
   }
 }

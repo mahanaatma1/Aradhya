@@ -2157,10 +2157,50 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       questions stay reachable only through "All", which is the honest
       state of the data rather than a filter pretending to cover everything.
       `flutter analyze` clean, 350/350 tests pass
-- [ ] **DH-01** Dharma scenarios 12 to 50–60
-- [ ] **AK-01** Ask pairs 20 to 300–500
-- [ ] **AK-02** Retrieval falls back to the 27,890 indexed shlokas
-- [ ] **AK-03** Confidence threshold tuned so weak matches still say *not sure*
+- [~] **DH-01** Dharma scenarios 12 to 50–60 — **12/50, deferred, not
+      skipped.** Each existing scenario (`content/data/dharma/
+      scenarios.jsonl`) is a real content-authoring effort at the same bar
+      as KJ-01's journal prompts: a primary-source citation, a genuine
+      three-way dilemma with distinct consequences per guna, and a bilingual
+      reflection that resists a simple moral — not a quick data-entry task.
+      Raised the actual size of this with the user (~38 more scenarios,
+      each needing the same verification rigor) before starting, rather
+      than force a partial batch that would leave the item half-marked done;
+      the user chose to defer it rather than spend the remaining session
+      time here. Next session: continue from slug 13 onward, sourcing
+      further episodes from the same three registered translations already
+      in use (`ganguli-mahabharata`, `dutt-ramayana`,
+      `telang-bhagavadgita`), each verified against the actual primary text
+      before writing, exactly as KJ-01 was done.
+- [~] **AK-01** Ask pairs 20 to 300–500 — **20/300, deferred, not skipped**,
+      same reason as DH-01: each `qa_pairs` row needs a resolved
+      `scripture_section_id` (build.py refuses to guess it, per the field's
+      own comment) and a real citation, the same content-authoring bar as
+      KJ-01. Raised the size of this with the user directly; deferred to
+      spend the session on AK-02/AK-03 and the rest of the section instead
+      of a partial, half-marked batch.
+- [x] **AK-02** Retrieval falls back to the 27,890 indexed shlokas — until
+      now a `notSure` outcome only ever offered "closest questions" drawn
+      from the same small curated `qa_pairs` set (hundreds of rows) that
+      had already failed to answer, which is not a real fallback. Added a
+      `verseFallback` field to `AskResult`, populated in
+      `AskController.ask()` by calling the existing
+      `SearchRepository.search(question, kind: 'shloka')` — the same
+      indexed search and ranking universal search already uses — whenever
+      the curated matcher says not-sure. Rendered as "Verses that mention
+      this" in `ask_screen.dart`'s `_NotSure` state, clearly separated from
+      and below the not-sure message, each tile opening the reader at that
+      exact verse. Nothing generated: still only real indexed passages,
+      ranked and cited.
+- [x] **AK-03** Confidence threshold tuned so weak matches still say *not
+      sure* — this was already correctly implemented in
+      `ask_repository.dart` (`answerThreshold = 0.34`, plus low/
+      needs_review-confidence pairs refused as an answer regardless of
+      score) and already covered by `test/ask_repository_test.dart`
+      (unrelated question -> not-sure, low-confidence row never presented,
+      stop-words-only query -> not-sure). Verified the logic and its tests
+      hold; no change needed.
+      `flutter analyze` clean, 350/350 tests pass
 - [ ] **JN-01** Knowledge Journeys 10 to 18–20 paths
 
 ## Temples

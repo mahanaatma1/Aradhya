@@ -1,3 +1,5 @@
+import '../search/search_models.dart' show SearchHit;
+
 /// A curated question and the passage that answers it.
 ///
 /// The answer is always a real passage. Nothing is generated: there is no
@@ -97,7 +99,15 @@ class AskResult {
   /// related chips under an answer.
   final List<QaPair> candidates;
 
-  const AskResult(this.outcome, {this.best, this.candidates = const []});
+  /// AK-02: when the curated 20-ish `qa_pairs` set has nothing close, this
+  /// falls back to the 27,890-shloka search index instead of leaving the
+  /// reader with only "closest questions" from a set too small to have one.
+  /// Still never generated — these are indexed verses, ranked by the same
+  /// token-overlap search the rest of the app uses, with their own citation.
+  final List<SearchHit> verseFallback;
+
+  const AskResult(this.outcome,
+      {this.best, this.candidates = const [], this.verseFallback = const []});
 
   static const empty = AskResult(AskOutcome.empty);
 }

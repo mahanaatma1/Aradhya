@@ -1,6 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/providers/app_providers.dart';
+import '../search/search_providers.dart';
 import 'ask_models.dart';
 import 'ask_repository.dart';
 
@@ -40,7 +41,23 @@ class AskController extends StateNotifier<AskResult> {
     // answer does not appear before the reader has finished asking.
     await Future<void>.delayed(const Duration(milliseconds: 600));
     final all = await _ref.read(qaPairsProvider.future);
-    final result = _ref.read(askRepositoryProvider).ask(question, all);
+    var result = _ref.read(askRepositoryProvider).ask(question, all);
+
+    // AK-02: the curated set is small (hundreds of rows) and will not have
+    // everything. Rather than leave a not-sure reader with only "closest
+    // questions" drawn from that same small set, fall back to the 27,890
+    // indexed shlokas — the same search index and ranking the rest of the
+    // app already uses, restricted to kind 'shloka'.
+    if (result.outcome == AskOutcome.notSure) {
+      final search = await _ref.read(searchRepositoryProvider.future);
+      final hits =
+          await search.search(question, kind: 'shloka', limit: 5);
+      if (hits.isNotEmpty) {
+        result = AskResult(AskOutcome.notSure,
+            candidates: result.candidates, verseFallback: hits);
+      }
+    }
+
     _busy = false;
     if (mounted) state = result;
   }
