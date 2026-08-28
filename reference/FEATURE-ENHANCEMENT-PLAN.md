@@ -1773,32 +1773,36 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [x] **SC-16** `prev/next_node_id` denormalised at build time — chained per
       (epic, recension); invariants pinned in `content_integrity_test`
 
-- [~] **RM-02** Every scene linked to a `place` entity — **15 of 32 Ramayana
-      events and 12 of 29 Mahabharata events still lack one (was 19/32 and
-      14/29)**. This pass linked 6 events, each individually checked against
-      its own cited passage rather than assumed from the arc title:
-      `ram-dasharatha-sonless` and `ram-vishvamitra` to Ayodhya (Dasharatha's
-      court), `ram-ravan-in-lanka` and `ram-vibhishana` to Lanka (Ravana's
-      palace grove; the court scene, even though Vibhishana then flies out
-      over the shore), `mbh-karna-tournament` to Hastinapura (the same
-      tournament ground as `mbh-drona`), `mbh-mausala` to Dvaraka (the
-      massacre and the city Krishna leaves behind).
+- [~] **RM-02** Every scene linked to a `place` entity — **12 of 32 Ramayana
+      events and 10 of 29 Mahabharata events still lack one (was 19/32 and
+      14/29 at the start of this session)**. Two new place entities were
+      created and sourced this pass, both load-bearing enough to justify it:
+      **Panchavati** (Griffith's Ramayana, Book III Canto XIII, Agastya's
+      own directions — "Beloved son, four leagues away / Is Panchavati
+      bright and gay...Godávarí's pure stream is nigh") and **Indraprastha**
+      (Ganguli's Mahabharata, Adi Parva Section CCIX — "Surrounded by a
+      trench wide as the sea and by walls reaching high up to the heavens").
+      12 events total now link to a place this pass: `ram-dasharatha-sonless`
+      and `ram-vishvamitra` to Ayodhya, `ram-ravan-in-lanka` and
+      `ram-vibhishana` to Lanka, `mbh-karna-tournament` to Hastinapura,
+      `mbh-mausala` to Dvaraka, `ram-shurpanakha`/`ram-golden-deer`/
+      `ram-abduction` to the new Panchavati, `mbh-khandava`/
+      `mbh-shishupala` to the new Indraprastha — each individually checked
+      against its own cited passage, not assumed from the arc title.
+      `ram-jatayu` was considered for Panchavati and left unlinked: Jatayu
+      intercepts Ravana's chariot mid-flight, away from the hermitage, so
+      the place isn't specific enough to name.
 
       **The remaining gaps are a real content ceiling, not an oversight:**
-      checked individually, most of the still-unlinked events happen at
-      places this corpus has no entity for at all — Panchavati (Shurpanakha,
-      the golden deer, the abduction, Jatayu's fall), the seashore facing
-      Lanka before the crossing (`ram-rama-speech`, `ram-hanuman-named` —
-      explicitly not Kishkindha itself, the search party has already left
-      it), Vishvamitra's own hermitage (`ram-trisanku`), Indraprastha
-      (`mbh-khandava`, `mbh-shishupala` — no entity exists for the
-      Pandavas' own capital at all), Virata's kingdom (`mbh-virata`,
-      `mbh-kichaka`), and assorted forest/exile locations
-      (`mbh-exile`, `mbh-kirmira`, `mbh-pashupata`, `mbh-yaksha`,
-      `mbh-lake`). Closing these properly needs new place entities
-      (Panchavati and Indraprastha especially — both load-bearing enough
-      to justify one), which is scoped, sourced content-authoring work
-      beyond what a linking pass alone can do honestly
+      the seashore facing Lanka before the crossing (`ram-rama-speech`,
+      `ram-hanuman-named` — explicitly not Kishkindha itself, the search
+      party has already left it), Vishvamitra's own hermitage
+      (`ram-trisanku`), Virata's kingdom (`mbh-virata`, `mbh-kichaka`,
+      `mbh-lake`), and forest/exile locations without their own entity
+      (`mbh-exile`, `mbh-kirmira`, `mbh-pashupata`, `mbh-yaksha`). Each
+      would need its own new place entity the way Panchavati and
+      Indraprastha just got theirs — real, scoped, sourced work for a
+      future pass, not a linking-pass afterthought
 - [x] **NR-02** Normalised `book_label_hi` in `content/data/narrative/ramayana_more.jsonl`
       — all 5 kandas (Bala/Ayodhya/Kishkindha/Sundara/Yuddha) used a spaced
       form ("बाल कांड") while `epics.jsonl` used the standard compound form
