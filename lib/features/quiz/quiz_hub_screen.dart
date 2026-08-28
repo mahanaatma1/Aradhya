@@ -9,6 +9,24 @@ import '../../l10n/app_localizations.dart';
 import '../../shared/widgets/skeleton.dart';
 import 'quiz_providers.dart';
 
+/// Labels for the entity `kind`s a quiz question can be filtered by
+/// (QZ-02). A different vocabulary from `SearchKinds` — these are
+/// `entities.kind` values ('deity', 'human', …), not `search_docs.kind`.
+const _quizCategoryLabels = <String, (String, String)>{
+  'deity': ('Deities', 'देवी-देवता'),
+  'human': ('People', 'व्यक्ति'),
+  'scripture': ('Scriptures', 'ग्रंथ'),
+  'river': ('Rivers', 'नदियाँ'),
+  'rishi': ('Sages', 'ऋषि'),
+  'concept': ('Concepts', 'अवधारणाएँ'),
+  'avatar': ('Avatars', 'अवतार'),
+  'asura': ('Asuras', 'असुर'),
+  'place': ('Places', 'स्थान'),
+  'weapon': ('Weapons', 'अस्त्र'),
+  'symbol': ('Symbols', 'प्रतीक'),
+  'mountain': ('Mountains', 'पर्वत'),
+};
+
 /// Pauranik Prasna hub: choose Knowledge Quiz / Riddles / Trivia.
 class QuizHubScreen extends ConsumerWidget {
   const QuizHubScreen({super.key});
@@ -37,6 +55,7 @@ class QuizHubScreen extends ConsumerWidget {
                   : '${c['quiz']} questions · पौराणिक प्रश्न',
               onTap: () => context.push('/quiz/play'),
             ),
+            const _QuizCategoryPicker(),
             const SizedBox(height: 12),
             _ModeCard(
               gradient: cats.astrology.linear,
@@ -70,6 +89,60 @@ class QuizHubScreen extends ConsumerWidget {
                   : 'Questions from the texts — no right answers',
               onTap: () => context.push('/dharma'),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Chip row to narrow the next Knowledge Quiz session to one category
+/// (QZ-02). Reads `quizCategoriesProvider` so only categories that actually
+/// have linked questions appear — a chip can never lead to an empty quiz.
+/// Renders nothing while categories are still loading or if none exist.
+class _QuizCategoryPicker extends ConsumerWidget {
+  const _QuizCategoryPicker();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hi = ref.watch(isHindiProvider);
+    final cats = ref.watch(quizCategoriesProvider).valueOrNull ?? const [];
+    if (cats.isEmpty) return const SizedBox.shrink();
+    final selected = ref.watch(quizCategoryProvider);
+    final scheme = Theme.of(context).colorScheme;
+
+    Widget chip(String? kind, String label) {
+      final isSelected = selected == kind;
+      return Padding(
+        padding: const EdgeInsets.only(right: 8),
+        child: ChoiceChip(
+          label: Text(label),
+          selected: isSelected,
+          onSelected: (_) =>
+              ref.read(quizCategoryProvider.notifier).state = kind,
+          selectedColor: scheme.primary.withValues(alpha: 0.18),
+          labelStyle: TextStyle(
+            color: isSelected ? scheme.primary : null,
+            fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
+          ),
+        ),
+      );
+    }
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 4),
+      child: SizedBox(
+        height: 38,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            chip(null, hi ? 'सभी' : 'All'),
+            for (final (kind, n) in cats)
+              chip(kind, () {
+                final label = _quizCategoryLabels[kind];
+                final text = label == null ? kind : (hi ? label.$2 : label.$1);
+                return '$text ($n)';
+              }()),
           ],
         ),
       ),

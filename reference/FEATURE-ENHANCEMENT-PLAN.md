@@ -2139,7 +2139,24 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       `relatedProvider`, rendering nothing when a fact has no link.
       `flutter analyze` clean, 350/350 tests pass, `build.py`: +2,110
       related_edges, nothing lost
-- [ ] **QZ-02** Quiz difficulty and category filters
+- [x] **QZ-02** Quiz difficulty and category filters — `knowledge_quiz` has
+      no difficulty or category column at all, and difficulty has zero
+      signal anywhere in the data, so that half was not built rather than
+      invent scores nobody verified. Category was scoped down with the user
+      first: `knowledge_quiz` still carries no category column, but the
+      QZ-01/04/05/06 entity link now gives a real category — the linked
+      entity's `kind` ('deity', 'human', 'scripture', 'rishi', …) — for
+      1,536/4,000 questions (~38%). Added `QuizRepository.randomQuestions`'s
+      optional `category` filter (cross-database join through
+      `gyan.related_edges`/`gyan.entities`, verified directly against the
+      DB) and `quizCategories()` for the counts, `quizCategoryProvider` +
+      `quizCategoriesProvider` in `quiz_providers.dart`, and a
+      `_QuizCategoryPicker` chip row on the hub screen — only categories
+      that actually have linked questions appear, each labelled with its
+      count, so a chip can never lead to an empty quiz. The other 62% of
+      questions stay reachable only through "All", which is the honest
+      state of the data rather than a filter pretending to cover everything.
+      `flutter analyze` clean, 350/350 tests pass
 - [ ] **DH-01** Dharma scenarios 12 to 50–60
 - [ ] **AK-01** Ask pairs 20 to 300–500
 - [ ] **AK-02** Retrieval falls back to the 27,890 indexed shlokas

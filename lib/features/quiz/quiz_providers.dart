@@ -19,10 +19,27 @@ final quizCountsProvider = FutureProvider<Map<String, int>>((ref) async {
   };
 });
 
-/// A fresh 10-question session. Invalidate to reshuffle.
+/// The category (an entity `kind` — 'deity', 'human', 'scripture', …) the
+/// next session should be filtered to, or null for "all questions" (QZ-02).
+/// Chosen on the hub before starting a session, so it's a settable provider
+/// rather than derived.
+final quizCategoryProvider = StateProvider<String?>((ref) => null);
+
+/// Entity kinds available to filter quiz questions by, each with a count —
+/// only kinds actually linked to a question, from `relate.py`'s
+/// `link_quiz_riddle_trivia`.
+final quizCategoriesProvider =
+    FutureProvider<List<(String, int)>>((ref) async {
+  final repo = await ref.watch(quizRepoProvider.future);
+  return repo.quizCategories();
+});
+
+/// A fresh 10-question session, filtered to `quizCategoryProvider` when set.
+/// Invalidate to reshuffle.
 final quizSessionProvider = FutureProvider<List<QuizQuestion>>((ref) async {
   final repo = await ref.watch(quizRepoProvider.future);
-  return repo.randomQuestions(10);
+  final category = ref.watch(quizCategoryProvider);
+  return repo.randomQuestions(10, category: category);
 });
 
 /// Random trivia set for the browse screen.
