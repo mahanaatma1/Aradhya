@@ -79,6 +79,8 @@ class FestivalDetailScreen extends ConsumerWidget {
                     _RemindMe(festival: f, hindi: hi),
                     if (f.deityEntityId != null)
                       _DeityLink(entityId: f.deityEntityId!, hindi: hi),
+                    if (f.storyNodeId != null)
+                      _StoryLink(sceneId: f.storyNodeId!, hindi: hi),
                     const SizedBox(height: 14),
                     SourceChip(
                       sourceName: f.sourceName,
@@ -325,6 +327,30 @@ class _Section extends StatelessWidget {
                   height: 1.5,
                   color: scheme.onSurface.withValues(alpha: 0.78))),
         ],
+      ),
+    );
+  }
+}
+
+class _StoryLink extends StatelessWidget {
+  final int sceneId;
+  final bool hindi;
+  const _StoryLink({required this.sceneId, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 18),
+      child: OutlinedButton.icon(
+        onPressed: () => context.push('/gyan/scene/$sceneId'),
+        icon: const Icon(Icons.auto_stories_rounded, size: 16),
+        label: Text(hindi ? 'कथा पढ़ें' : 'Read the story'),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: _accentDeep,
+          side: BorderSide(color: _accent.withValues(alpha: 0.5)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        ),
       ),
     );
   }

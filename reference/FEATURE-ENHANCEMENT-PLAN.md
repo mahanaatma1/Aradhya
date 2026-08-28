@@ -2009,7 +2009,24 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       alone: Onam now resolves to 2024-09-15, 2025-09-05, 2026-08-26,
       matching the actual observed dates for those years.
       `flutter analyze` clean, 350/350 tests pass
-- [ ] **FE-03** Festival to story-node link
+- [x] **FE-03** Festival to story-node link — the SQL pipeline already
+      resolved `story_node_slug` -> `story_node_id` in
+      `content/tools/build.py`'s `insert_festivals()`, and
+      `festival_models.dart` already parsed `storyNodeId` off the row;
+      nothing consumed it. Set `story_node_slug` on three festivals whose
+      narrative scene is actually in the registered Mahabharata/Ramayana
+      node set: `ram-navami` -> `ram-birth`, `dussehra` ->
+      `ram-ravana-falls`, `diwali` -> `ram-return`. Checked the obvious
+      other candidates and left them unlinked because no matching scene
+      exists: Hanuman Jayanti (no Hanuman-birth node), Krishna festivals
+      (no Krishna-birth scene among the registered nodes), Holika Dahan
+      (no matching scene). Added `_StoryLink` in
+      `festival_detail_screen.dart`, mirroring `_DeityLink` exactly
+      (same `OutlinedButton.icon` styling, `/gyan/scene/$sceneId` via
+      go_router, confirmed against the `path: '/gyan'` parent route and
+      the nested `scene/:sceneId` child route in
+      `lib/app/router/app_router.dart`), gated on `f.storyNodeId != null`.
+      `flutter analyze` clean, 350/350 tests pass
 - [ ] **FE-04** Festival to puja vidhi link
 - [x] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
 - [ ] **KM-02** Plain-language summary above the technical breakdown
