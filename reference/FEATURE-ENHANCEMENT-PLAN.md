@@ -1965,7 +1965,28 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       data, no new interaction pattern, just a second honest projection of
       what was already there. Year navigation via arrows either side of
       the wheel. `flutter analyze` clean, 350/350 tests pass
-- [ ] **FE-01** Festivals 58 to 100–150 **verified** rules
+- [~] **FE-01** Festivals 58 to 100–150 **verified** rules — **63/100-150,
+      paused for time, not abandoned.** 5 new entries added this pass, each
+      independently fetched from `underhill-hindu-year` or
+      `gupte-hindu-holidays` and quoted directly: Ratha Saptami, Narali
+      Purnima, Madana Trayodashi, Tula Sankranti, Ashok Shashthi (this last
+      one flags a real discrepancy the source itself contains between the
+      festival's own name and a cross-referenced date, rather than silently
+      picking one). A `somavati-amavasya` entry was drafted, then removed
+      before commit: its actual rule is "new moon that falls on a Monday,"
+      but the app's date-matching has no weekday filter, so shipping it as
+      plain tithi 15 / paksha krishna would have made it wrongly appear on
+      *every* amavasya (12-13 times a year) instead of the rare Mondays —
+      a correctness bug, not a documentation gap, so it was left out rather
+      than shipped wrong. The same problem blocks Shitala Ashtami (also
+      Tuesday-conditional in the source). Several more candidates
+      (Vasu-Baras, Shitala Shashthi, Ganesh Jayanti) were identified in
+      `gupte-hindu-holidays`'s table of contents but the book's full text
+      would not load past its front matter through any working mirror this
+      session — the next pass should try archive.org's per-page image/OCR
+      view rather than the single giant `_djvu.txt` stream. Remaining gap
+      to the 100 floor is real content-authoring work at the same rigor,
+      not something to rush by relaxing the verification bar
 - [ ] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date today
 - [ ] **FE-03** Festival to story-node link
 - [ ] **FE-04** Festival to puja vidhi link
