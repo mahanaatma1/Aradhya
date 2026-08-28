@@ -83,6 +83,8 @@ class _CosmosScreenState extends ConsumerState<CosmosScreen> {
             ),
           ] else
             _PersonalizedCta(hi: hi),
+          const SizedBox(height: 22),
+          _DisclaimerNote(hi: hi),
         ],
       ),
     );
@@ -661,6 +663,28 @@ class _DeeperCard extends StatelessWidget {
       ),
     );
   }
+}
+
+/// States plainly, once, that this reading is traditional interpretation —
+/// not a prediction or a guarantee. Shown regardless of whether a birth
+/// chart is set up, since the classic 12-Rashi horoscope above needs none.
+class _DisclaimerNote extends StatelessWidget {
+  final bool hi;
+  const _DisclaimerNote({required this.hi});
+  @override
+  Widget build(BuildContext context) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: Text(cDisclaimer.call(hi),
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Theme.of(context)
+                    .colorScheme
+                    .onSurface
+                    .withValues(alpha: 0.5),
+                fontSize: 11.5,
+                height: 1.5,
+                fontStyle: FontStyle.italic)),
+      );
 }
 
 class _SectionHeader extends StatelessWidget {

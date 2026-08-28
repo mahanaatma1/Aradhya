@@ -284,3 +284,17 @@ const cDeeperLocked =
     NamePair('Unlock with Kamal', 'कमल से अनलॉक करें');
 const cDeeperInsufficient =
     NamePair('Not enough Kamal yet', 'पर्याप्त कमल नहीं');
+
+// ---- Methodology disclaimer (RF-01) ----
+//
+// Both the classic 12-Rashi horoscope and the personalized reading are
+// readings drawn from Vedic astrology's traditional rules (transits, dasha,
+// panchang) — a way of looking at the day, not a guarantee of what will
+// happen. Said once, plainly, so nobody mistakes either for a promise.
+const cDisclaimer = NamePair(
+    "This Rashifal is a traditional astrological reading, based on planetary "
+    "positions and classical rules — it is not a prediction or a guarantee. "
+    "Use it as gentle guidance, and trust your own judgement for real decisions.",
+    'यह राशिफल पारंपरिक ज्योतिष पर आधारित एक विवेचन है — ग्रहों की स्थिति और शास्त्रीय '
+    'नियमों से बना — यह कोई भविष्यवाणी या गारंटी नहीं है। इसे एक हल्के मार्गदर्शन की तरह लें, '
+    'और असली फ़ैसलों में अपनी समझ पर भरोसा रखें।');

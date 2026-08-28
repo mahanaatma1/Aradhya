@@ -2049,11 +2049,53 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       `app_router.dart`, so no new route was needed).
       `flutter analyze` clean, 350/350 tests pass
 - [x] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
-- [ ] **KM-02** Plain-language summary above the technical breakdown
-- [ ] **KM-03** Partial matches shown as partial, never folded into the total
-- [ ] **KM-04** A critical traditional flag is surfaced, not averaged away
-- [ ] **KM-05** Methodology and its limits stated on the result screen
-- [ ] **RF-01** Rashifal content pass plus "traditional interpretation, not prediction"
+- [x] **KM-02** Plain-language summary above the technical breakdown —
+      already true in `milan_result_screen.dart`: the gauge and
+      `milanVerdict()`'s plain-language title/body render right under
+      the header, and the "8 Koots" technical breakdown only starts
+      after that, further gated behind a "Show Detailed Analysis"
+      toggle (`_expanded`, defaults open but collapsible) for the
+      per-koot numbers and dimension cards. No change needed; verified
+      by reading the widget tree top to bottom in `build()`.
+- [x] **KM-03** Partial matches shown as partial, never folded into the
+      total — each `_kootRow` already renders its own `got / max`
+      (e.g. "5 / 7") with a colour keyed to the ratio
+      (`_scoreColor`), so a partial koot reads as partial, not as pass
+      or fail. `MilanResult.total` in `ashtakoot.dart` is a plain sum
+      of the 8 koots' `got` values (line 249) — that's the standard
+      Ashtakoot method itself, not the UI hiding anything; the
+      per-koot breakdown stays visible alongside the total rather than
+      replacing it. No change needed.
+- [x] **KM-04** A critical traditional flag is surfaced, not averaged
+      away — Nadi Dosha (heaviest of the 8 koots, worth 8/36) gets its
+      own row like every other koot, and additionally gets called out
+      by name in "Areas Asking for Awareness" whenever its score is
+      weak (`milanAwareItems`, `_awareBlurbEn['nadi']`, triggered at
+      got/max <= 0.34) — explicit text: "the heaviest check... needs
+      attention and a remedy." Mangal Dosha, the other classical
+      make-or-break flag, gets a fully dedicated `_manglikCard` outside
+      the 8-koot table entirely, so it can never be silently absorbed
+      into the numeric total (Manglik isn't a koot and never was
+      counted in the 36). No change needed.
+- [x] **KM-05** Methodology and its limits stated on the result screen
+      — `milanDisclaimer()` already renders at the foot of the screen,
+      stating plainly that this is guidance from classical tradition,
+      not a substitute for an astrologer, and to seek expert advice for
+      a decision like marriage. No change needed.
+- [x] **RF-01** Rashifal content pass plus "traditional interpretation,
+      not prediction" — the content pass itself was effectively already
+      done: `cosmos_content.dart` carries a full bilingual set (day
+      verdicts, 12-house Chandra-gochar themes, 3-variant tone-tiered
+      predictions for love/career/health/money/family, dasha themes by
+      lord, Sade Sati phase notes, lucky colour/direction by ruling
+      planet), all EN+HI, nothing English-only. What was actually
+      missing was the framing: `cosmos_screen.dart` had no disclaimer
+      anywhere, unlike Milan's `milanDisclaimer`. Added `cDisclaimer` to
+      `cosmos_content.dart` and a `_DisclaimerNote` widget rendered at
+      the foot of the screen (after both the classic 12-Rashi horoscope,
+      which needs no birth chart, and the personalized reading), stating
+      plainly this is a traditional reading, not a prediction or
+      guarantee. `flutter analyze` clean, 350/350 tests pass
 
 ## Discovery & play
 
