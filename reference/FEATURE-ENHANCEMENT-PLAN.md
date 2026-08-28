@@ -1544,7 +1544,20 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       (already substantially populated by KG-03's rishi work) than by a
       redundant `props` string — RS-04's teaching-lineage tree is the right
       home for that data, not a second copy in `props`
-- [ ] **RS-04** Teaching-lineage mini-tree on the detail screen
+- [x] **RS-04** Teaching-lineage mini-tree on the detail screen —
+      `entity_detail_screen.dart`'s new `_TeachingLineage` widget renders a
+      "Guru" row and a "Disciples" row (tappable chips, navigating to each
+      entity) for any rishi with `guru_of`/`disciple_of` edges. Built
+      entirely from the `relations` data `RelatedRail` already queries below
+      it on the same page — no new dataset, no risk of drift — it just gives
+      the teaching edges their own shape instead of leaving them to read as
+      one more generic related-entity card (the gap FT-01 named: guru/
+      disciple correctly does NOT belong in the Family Tree's three-band
+      genealogical layout, since it's a teaching chain, not a birth
+      generation, but it also had nowhere else to be *shown as lineage*
+      until now). Verified against real data: Brihaspati → Indra,
+      Shukracharya → Kacha, Vasishtha/Vishvamitra → Rama (+ Vishvamitra →
+      Lakshmana) all render today from KG-03's relation work
 - [x] **RS-05** Attributions labelled "according to the cited tradition"
 - [~] **AS-01** Expand astras; `nature` shown near the top — the ordering
       half is done: `nature` moved to the 2nd row in `entity_detail_screen.dart`

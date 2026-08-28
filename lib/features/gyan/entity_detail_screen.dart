@@ -216,6 +216,16 @@ class _Body extends ConsumerWidget {
                   const SizedBox(height: 18),
                   _PropsCard(entity: entity, hindi: hindi),
                 ],
+                // RS-04: guru/disciple is a teaching chain, not a birth
+                // generation, so it does not belong in the Family Tree's
+                // three-band genealogical layout (see FT-01's note on why
+                // that screen only reads child_of/parent_of/father_of/
+                // mother_of). It already reaches this page via `relations`
+                // and RelatedRail below, just without ever being singled
+                // out as *lineage* -- this renders that same data as a
+                // compact one-level tree instead of a generic related-card.
+                if (entity.kind == 'rishi')
+                  _TeachingLineage(relations: relations, hindi: hindi),
                 // RS-05: attributions in this corpus follow the tradition of
                 // the text they are cited from. Two traditions can assign the
                 // same hymn or lineage differently, and the app is in no
@@ -269,6 +279,106 @@ class _Label extends StatelessWidget {
       );
 }
 
+/// RS-04: a one-level teaching tree — this rishi's own guru above, their
+/// disciples below. Built from `relations`, so it can never drift from the
+/// data RelatedRail already shows lower on the page; it just gives the
+/// teaching edges a shape of their own instead of leaving them to read as
+/// one more generic "related entity" card.
+class _TeachingLineage extends StatelessWidget {
+  final List<EntityRelation> relations;
+  final bool hindi;
+  const _TeachingLineage({required this.relations, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final guru = relations.where((r) => r.relType == 'disciple_of').toList();
+    final disciples = relations.where((r) => r.relType == 'guru_of').toList();
+    if (guru.isEmpty && disciples.isEmpty) return const SizedBox.shrink();
+
+    final scheme = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.only(top: 18),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: scheme.surfaceContainerHighest.withValues(alpha: 0.35),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: scheme.outline.withValues(alpha: 0.2)),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _Label(hindi ? 'गुरु-परंपरा' : 'TEACHING LINEAGE'),
+            const SizedBox(height: 10),
+            if (guru.isNotEmpty) ...[
+              _LineageRow(
+                  label: hindi ? 'गुरु' : 'Guru', people: guru, hindi: hindi),
+              if (disciples.isNotEmpty) const SizedBox(height: 8),
+            ],
+            if (disciples.isNotEmpty)
+              _LineageRow(
+                  label: hindi ? 'शिष्य' : 'Disciples',
+                  people: disciples,
+                  hindi: hindi),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LineageRow extends StatelessWidget {
+  final String label;
+  final List<EntityRelation> people;
+  final bool hindi;
+  const _LineageRow(
+      {required this.label, required this.people, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 58,
+          child: Text(label,
+              style: TextStyle(
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w700,
+                  color: scheme.onSurface.withValues(alpha: 0.65))),
+        ),
+        Expanded(
+          child: Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              for (final r in people)
+                InkWell(
+                  borderRadius: BorderRadius.circular(999),
+                  onTap: () => context.push('/gyan/entity/${r.dstId}'),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: scheme.primary.withValues(alpha: 0.1),
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                    child: Text(r.dstTitle(hindi),
+                        style: TextStyle(
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w600,
+                            color: scheme.primary)),
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 /// Kind-specific facts, rendered from `props`.
 ///
 /// Symbolic readings get their own panel rather than sitting in the fact list:
@@ -296,10 +406,10 @@ class _PropsCard extends StatelessWidget {
     switch (entity.kind) {
       case 'weapon':
         add('Type', 'प्रकार', p['weapon_type']);
-        add('Invocation', 'आह्वान', p['invocation']);
-        add('Powers', 'सामर्थ्य', p['powers_en']);
-        add('Counter', 'प्रतिकार', p['counter_en']);
         add('Nature', 'स्वरूप', p['nature']);
+        add('Invocation', 'आह्वान', p['invocation']);
+        add('Effect', 'प्रभाव', p['powers_en']);
+        add('Counter', 'प्रतिकार', p['counter_en']);
       case 'symbol':
         add('Visual form', 'स्वरूप', p['visual_form_en']);
         add('Common usage', 'प्रयोग', p['common_usage_en']);
