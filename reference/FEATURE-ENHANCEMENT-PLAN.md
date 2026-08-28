@@ -1510,7 +1510,40 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       fetched chapter. The rest have only passing mentions in the corpus;
       writing biographies from those would be padding, so they wait on a
       wider fetch rather than on invention
-- [ ] **RS-03** Gotra · veda · guru · disciples · hymns · ashram populated
+- [~] **RS-03** Gotra · veda · guru · disciples · hymns · ashram populated —
+      **9 of 20 rishis now carry at least one verified field** in `props`
+      (was 3: Atri, Bharadvaja, Gautama, Jamadagni, Kashyapa, Vasishtha,
+      Vishvamitra already had `veda` from earlier passes). Added this pass,
+      each independently fetched and quoted: Vyasa (`veda`: divided the one
+      Veda into four — Wilson Book III Ch. IV, "In the twenty-eighth Dvapara
+      age my son Vyasa separated the four portions of the Veda into four
+      Vedas"), Agastya (`veda`/`hymns`: RV 1.170, a genuine dialogue hymn
+      where he is directly named — "Agastya, brother, why dost thou neglect
+      us"; note the commonly-repeated "RV 1.165-191" range for Agastya
+      turned out **not** to hold hymn-by-hymn on inspection — 1.165, 1.166,
+      and 1.189 all name a different poet, "Mana's son, Mandarya," when
+      actually fetched, so the range was not used), Dadhichi
+      (`ashram_place_slug`: "on the other bank of the river Saraswati,"
+      Vana Parva Section C, correcting a secondary-source claim of
+      Naimisharanya that the primary text does not support).
+
+      The remaining 11 (Bhrigu, Brihaspati, Durvasa, Markandeya, Narada,
+      Shukracharya, Valmiki, Chyavana, the Four Kumaras, Sanatkumara) were
+      each individually checked and are not a padding gap: most are
+      narrative/Puranic figures, not one of the Rigveda's mandala-family
+      rishis, so `veda`/`hymns` genuinely does not apply to them (forcing an
+      attribution would invent a fact — confirmed for Narada specifically,
+      where Wilson's Vishnu Purana only adds him to the mind-born-sons list
+      in an editorial footnote, not the main text, so even `gotra` was left
+      unwritten). `gotra` is the hardest field across the board: it is a
+      Dharmashastra/Anukramani-tradition category more than a Purana/epic
+      one, and the two sources that state it cleanly (Rigveda Anukramani,
+      Brihaddevata) are both unregistered. `ashram_place_slug` is the most
+      tractable of the remaining fields and the best next target. `guru`
+      and `disciples` are better served by the existing `relations` system
+      (already substantially populated by KG-03's rishi work) than by a
+      redundant `props` string — RS-04's teaching-lineage tree is the right
+      home for that data, not a second copy in `props`
 - [ ] **RS-04** Teaching-lineage mini-tree on the detail screen
 - [x] **RS-05** Attributions labelled "according to the cited tradition"
 - [~] **AS-01** Expand astras; `nature` shown near the top — the ordering
