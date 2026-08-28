@@ -15,6 +15,33 @@ import 'festivals_screen.dart' show ruleLabel;
 const _accent = Color(0xFFE0762A);
 const _accentDeep = Color(0xFFA7430F);
 
+/// Festival slug -> `puja_vidhi.id` in the legacy `content.sqlite` corpus.
+///
+/// The two tables live in different databases with no foreign key between
+/// them (`festivals` is in `gyan.sqlite`, built from JSONL; `puja_vidhi` is
+/// in the older hand-written `content.sqlite`), so the link is made here by
+/// matching each festival's slug to the `puja_vidhi` row actually verified
+/// to describe that same occasion — checked by id against
+/// `assets/db/content.sqlite` directly, not guessed from the title text.
+const _pujaVidhiId = <String, int>{
+  'chaitra-navratri': 5,
+  'sharad-navratri': 5,
+  'ram-navami': 13,
+  'hanuman-jayanti': 20,
+  'ganesh-chaturthi': 6,
+  'janmashtami': 12,
+  'karva-chauth': 15,
+  'vat-savitri': 16,
+  'dhanteras': 7,
+  'diwali': 8,
+  'govardhan-puja': 9,
+  'bhai-dooj': 10,
+  'chhath': 17,
+  'makar-sankranti': 18,
+  'vasant-panchami': 19,
+  'holika-dahan': 14,
+};
+
 /// One festival: when it falls, what is done, and where that is recorded.
 class FestivalDetailScreen extends ConsumerWidget {
   final int festivalId;
@@ -81,6 +108,8 @@ class FestivalDetailScreen extends ConsumerWidget {
                       _DeityLink(entityId: f.deityEntityId!, hindi: hi),
                     if (f.storyNodeId != null)
                       _StoryLink(sceneId: f.storyNodeId!, hindi: hi),
+                    if (_pujaVidhiId[f.slug] != null)
+                      _PujaLink(pujaId: _pujaVidhiId[f.slug]!, hindi: hi),
                     const SizedBox(height: 14),
                     SourceChip(
                       sourceName: f.sourceName,
@@ -345,6 +374,30 @@ class _StoryLink extends StatelessWidget {
         onPressed: () => context.push('/gyan/scene/$sceneId'),
         icon: const Icon(Icons.auto_stories_rounded, size: 16),
         label: Text(hindi ? 'कथा पढ़ें' : 'Read the story'),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: _accentDeep,
+          side: BorderSide(color: _accent.withValues(alpha: 0.5)),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        ),
+      ),
+    );
+  }
+}
+
+class _PujaLink extends StatelessWidget {
+  final int pujaId;
+  final bool hindi;
+  const _PujaLink({required this.pujaId, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 18),
+      child: OutlinedButton.icon(
+        onPressed: () => context.push('/puja-detail?id=$pujaId'),
+        icon: const Icon(Icons.local_florist_rounded, size: 16),
+        label: Text(hindi ? 'पूजा विधि देखें' : 'See puja vidhi'),
         style: OutlinedButton.styleFrom(
           foregroundColor: _accentDeep,
           side: BorderSide(color: _accent.withValues(alpha: 0.5)),

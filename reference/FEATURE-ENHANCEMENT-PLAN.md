@@ -2027,7 +2027,27 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       the nested `scene/:sceneId` child route in
       `lib/app/router/app_router.dart`), gated on `f.storyNodeId != null`.
       `flutter analyze` clean, 350/350 tests pass
-- [ ] **FE-04** Festival to puja vidhi link
+- [x] **FE-04** Festival to puja vidhi link — `festivals` (in
+      `gyan.sqlite`, built from JSONL) and `puja_vidhi` (in the older,
+      hand-written `content.sqlite`) are separate databases with no
+      foreign key between them and no shared build pipeline, so this
+      could not reuse FE-03's `story_node_slug` pattern. Instead added a
+      small `_pujaVidhiId` slug -> id lookup in
+      `festival_detail_screen.dart`, checked one by one against the
+      actual `puja_vidhi` rows in `assets/db/content.sqlite` (id, title,
+      deity) rather than guessed from title text alone: 16 festivals
+      whose `puja_vidhi` row genuinely describes the same occasion —
+      chaitra-navratri & sharad-navratri -> Navaratri (5), ram-navami (13),
+      hanuman-jayanti (20), ganesh-chaturthi (6), janmashtami (12),
+      karva-chauth (15), vat-savitri (16), dhanteras (7), diwali ->
+      Lakshmi Puja (8), govardhan-puja (9), bhai-dooj (10), chhath ->
+      Chhath Puja (17), makar-sankranti (18), vasant-panchami ->
+      Saraswati Puja (19), holika-dahan (14). Added `_PujaLink`, styled
+      like `_DeityLink`/`_StoryLink`, routing to the existing
+      `/puja-detail?id=$pujaId` GoRoute (confirmed it already resolves
+      an id-only query via `ResultLoader<PujaVidhi>` in
+      `app_router.dart`, so no new route was needed).
+      `flutter analyze` clean, 350/350 tests pass
 - [x] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
 - [ ] **KM-02** Plain-language summary above the technical breakdown
 - [ ] **KM-03** Partial matches shown as partial, never folded into the total
