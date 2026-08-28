@@ -2230,23 +2230,30 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 ## Temples
 
 - [~] **TM-01** Detail page: hero, why visit, history, deity, architecture,
-      festivals, traditions, map, nearby, sources — **8/10 already true,
-      2 genuinely missing.** Read `temple_detail_screen.dart` in full:
-      hero✓ (`_Hero`), history✓ (founding era in About's Key Facts),
-      deity✓, architecture✓ (text field, About section), festivals✓
-      (now tappable into the real Festival Explorer, see TM-03), map✓
-      (`_openMap`/`hasMap`), nearby✓ (now by real coordinate, see TM-02),
-      sources✓ (`SourceChip`, `t.rankedSources`). "Why visit" and
-      "traditions" have no field anywhere — not in `temple_models.dart`,
-      not in the legacy `temples.data` JSON blob (checked every key: `id,
-      name, deity, location, link, significance, category, visited,
+      festivals, traditions, map, nearby, sources — **9/10 already true,
+      1 genuinely missing.** Read `temple_detail_screen.dart` in full:
+      hero✓ (`_Hero`), why visit✓ (the `significance` field IS this — it's
+      already rendered as "About the temple" prose, e.g. "One of the Char
+      Dham. Built on the legendary city of Lord Krishna..." — just not
+      labelled "why visit" in the doc's own words; re-checked and this
+      was a documentation miscount, not a missing field), history✓
+      (founding era in About's Key Facts), deity✓, architecture✓ (text
+      field, About section), festivals✓ (now tappable into the real
+      Festival Explorer, see TM-03), map✓ (`_openMap`/`hasMap`), nearby✓
+      (now by real coordinate, see TM-02), sources✓ (`SourceChip`,
+      `t.rankedSources`). "Traditions" (temple-specific worship customs —
+      e.g. how many times devotees circumambulate, when the sanctum doors
+      open — distinct from `visitInfo`'s practical rules like dress code
+      and footwear, and distinct from the festival list) has no field
+      anywhere: checked every key in the legacy `temples.data` JSON blob
+      (`id, name, deity, location, link, significance, category, visited,
       confidence, altNames, address, district, state, pincode, gps,
       foundingEra, architecture, timings, travel, visitInfo, links,
       circuits, nearbyTemples, bestSeason, weatherNote, festivals,
-      sources` — neither exists). Writing verified "why visit"/"tradition"
-      prose per temple, for 187 temples, is the same content-authoring
-      bar as DH-01/AK-01 and was left for a future session rather than
-      rushed.
+      sources`) — none of them is temple-specific custom/tradition prose.
+      Writing verified tradition prose per temple, for 187 temples, is the
+      same content-authoring bar as DH-01/AK-01 and was left for a future
+      session rather than rushed.
 - [x] **TM-02** Nearby-temples query by coordinate — replaced the
       hand-written `nearbyTemples` prose (present on some rows, absent on
       others, and never a link to anything) with a real query:
