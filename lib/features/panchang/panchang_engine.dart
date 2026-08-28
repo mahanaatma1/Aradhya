@@ -193,6 +193,25 @@ int _naksIdx(DateTime utc) {
   return (sid / (360 / 27)).floor();
 }
 
+/// The Moon's nakshatra (0=Ashwini..26=Revati) prevailing around sunrise
+/// (06:00 local) on [date]. Public wrapper on [_naksIdx] for FE-02: a
+/// nakshatra-anchored festival (Onam on Thiruvonam, for instance) has no
+/// tithi to key off, so it needs this rather than the tithi table
+/// festivalFor() otherwise uses.
+int nakshatraIndexOnDate(DateTime date, Duration tz) {
+  final refLocal = DateTime(date.year, date.month, date.day, 6);
+  return _naksIdx(refLocal.subtract(tz));
+}
+
+/// The Sun's sidereal rashi (0=Mesha..11=Meena) prevailing around sunrise on
+/// [date]. Public wrapper on [_sunRashiAt] -- the solar-month half of a
+/// nakshatra-in-solar-month rule (e.g. "Thiruvonam in the month the Sun is
+/// in Simha", Chingam in the Malayalam calendar).
+int solarRashiOnDate(DateTime date, Duration tz) {
+  final refLocal = DateTime(date.year, date.month, date.day, 6);
+  return _sunRashiAt(refLocal.subtract(tz));
+}
+
 int _yogaIdx(DateTime utc) {
   final d = dayNumber(utc);
   final a = ayanamsa(d);

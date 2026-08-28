@@ -25,6 +25,20 @@ const _amavasyaSpecial = <int, NamePair>{
   10: NamePair('Mauni Amavasya', 'मौनी अमावस्या'),
 };
 
+/// FE-02: festivals fixed by a nakshatra falling within a solar month
+/// (rashi), not by a tithi -- the shape `festivalFor`'s tithi table cannot
+/// express. Keyed by (rashi 0=Mesha..11=Meena, nakshatra 0=Ashwini..26=
+/// Revati). Onam is the one currently in the corpus (Thiruvonam in Chingam,
+/// i.e. nakshatra 21 Shravana in rashi 4 Simha); the table exists so the
+/// next one doesn't need new plumbing, only a new entry.
+const _nakshatraInRashi = <(int rashi, int nakshatra), NamePair>{
+  (4, 21): NamePair('Onam', 'ओणम'),
+};
+
+const _onamDesc = NamePair(
+    "Mahabali's yearly return to Kerala, on the Thiruvonam star of Chingam.",
+    'चिंगम मास के तिरुवोणम नक्षत्र पर महाबली का वार्षिक आगमन।');
+
 /// Recurring vrats that aren't Ekadashi/Purnima/Amavasya (those are named by
 /// month in [festivalFor]). Returns null for other tithis.
 FestivalHit? festivalForTithi(int tithiIdx) {
@@ -243,6 +257,23 @@ Map<int, FestivalHit> monthFestivals(int year, int month, Duration tz) {
     final f = festivalFor(tithi[d]!, pmonth[d]!, amonth[d]!,
         adhika: adhika[d]!);
     if (f != null) out[d] = f;
+  }
+  // FE-02: nakshatra-in-solar-month festivals (Onam, currently the only
+  // one) don't key off a tithi at all, so they need their own pass rather
+  // than fitting into festivalFor()'s tithi switch. These are all "major"
+  // by construction (see _nakshatraInRashi's doc), so they take the day
+  // over an already-placed minor vrat -- a fortnightly Pradosh should never
+  // silently crowd out Onam.
+  for (var d = 1; d <= days; d++) {
+    if (out[d]?.major == true) continue;
+    final date = DateTime(year, month, d);
+    final rashi = solarRashiOnDate(date, tz);
+    final naks = nakshatraIndexOnDate(date, tz);
+    final name = _nakshatraInRashi[(rashi, naks)];
+    if (name != null) {
+      out[d] = FestivalHit(name, true,
+          desc: name == const NamePair('Onam', 'ओणम') ? _onamDesc : null);
+    }
   }
   for (var d = 1; d < days; d++) {
     final a = tithi[d]!, b = tithi[d + 1]!;

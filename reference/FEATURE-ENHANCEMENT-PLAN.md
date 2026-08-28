@@ -1987,7 +1987,28 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       view rather than the single giant `_djvu.txt` stream. Remaining gap
       to the 100 floor is real content-authoring work at the same rigor,
       not something to rush by relaxing the verification bar
-- [ ] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date today
+- [x] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date
+      today — fixed. `panchang_engine.dart` had the underlying astronomy
+      (`_naksIdx`, `_sunRashiAt`) but both were private and never called
+      outside their own file; `festivals.dart`'s matcher was tithi-only,
+      so a nakshatra-anchored festival like Onam (Thiruvonam star in the
+      solar month of Chingam/Simha) had no code path to ever be found,
+      whatever `solar_rule` text said. Exposed
+      `nakshatraIndexOnDate`/`solarRashiOnDate`, and added a small
+      `_nakshatraInRashi` lookup table in `festivals.dart` — the same
+      pattern the file already uses for `_amavasyaSpecial` — plus a second
+      pass in `monthFestivals` that runs after the tithi pass.
+
+      That second pass caught a real bug on the way in, not just a gap:
+      the first version skipped any day already claimed by *any* festival,
+      so a minor fortnightly vrat (Pradosh) that happened to land on the
+      same day as Thiruvonam silently ate Onam every single year — the
+      exact symptom the item describes, just with an extra cause behind
+      it. Fixed to only defer to an existing `major` festival, and verified
+      against real calendar dates rather than trusting the code path
+      alone: Onam now resolves to 2024-09-15, 2025-09-05, 2026-08-26,
+      matching the actual observed dates for those years.
+      `flutter analyze` clean, 350/350 tests pass
 - [ ] **FE-03** Festival to story-node link
 - [ ] **FE-04** Festival to puja vidhi link
 - [x] **KM-01** **Milan asks which side is bride and which is groom** — `_varna` is asymmetric while the form says "Side 1 / Side 2"
