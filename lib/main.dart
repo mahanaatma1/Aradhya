@@ -131,11 +131,33 @@ class _LangFabOverlayState extends State<_LangFabOverlay> {
   }
 }
 
-class DivyaVaaniApp extends ConsumerWidget {
+class DivyaVaaniApp extends ConsumerStatefulWidget {
   const DivyaVaaniApp({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<DivyaVaaniApp> createState() => _DivyaVaaniAppState();
+}
+
+class _DivyaVaaniAppState extends ConsumerState<DivyaVaaniApp> {
+  @override
+  void initState() {
+    super.initState();
+    // A cold start from tapping a notification doesn't fire
+    // `onDidReceiveNotificationResponse` (that's only for a warm/backgrounded
+    // app) — the launch details carry the payload instead, and this is the
+    // first point the router exists to act on it. Runs after the first
+    // frame so it navigates on top of the already-resolved initial route
+    // (onboarding vs. home) rather than racing it.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final payload = ReminderService.instance.takePendingLaunchPayload();
+      if (payload != null && payload.isNotEmpty) {
+        appRouter.push(payload);
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final locale = ref.watch(localeProvider);
 
     return MaterialApp.router(

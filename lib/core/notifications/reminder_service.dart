@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 
+import '../../app/router/app_router.dart';
 import '../db/user_database.dart';
 
 /// Local, scheduled reminders for sadhana, journal and festivals.
@@ -23,6 +24,33 @@ class ReminderService {
   final _plugin = FlutterLocalNotificationsPlugin();
   bool _ready = false;
 
+  /// Set when the app was cold-started by tapping a notification —
+  /// `onDidReceiveNotificationResponse` does not fire for that case, so
+  /// `main()` reads this once the router exists and navigates itself.
+  String? _pendingLaunchPayload;
+
+  /// Consumes and returns the payload of the notification that cold-started
+  /// the app, if any. Null every other time (warm start, or no launch
+  /// notification) — deliberately one-shot so re-reading it after `main()`
+  /// has already navigated does not send the user back there again.
+  String? takePendingLaunchPayload() {
+    final p = _pendingLaunchPayload;
+    _pendingLaunchPayload = null;
+    return p;
+  }
+
+  static void _onTap(NotificationResponse response) {
+    final payload = response.payload;
+    if (payload == null || payload.isEmpty) return;
+    // Fires from a platform callback, outside any widget's BuildContext —
+    // the app-wide router instance is the only way to navigate from here.
+    try {
+      appRouter.push(payload);
+    } catch (e) {
+      debugPrint('ReminderService: tap navigation failed ($e)');
+    }
+  }
+
   static bool get _supported =>
       !kIsWeb &&
       (defaultTargetPlatform == TargetPlatform.android ||
@@ -32,7 +60,8 @@ class ReminderService {
   /// losing festival reminders. Bundling everything into one channel makes
   /// that an all-or-nothing choice.
   static const _channels = <String, (String, String)>{
-    'sadhana': ('Sadhana', 'Reminders for japa, breathing and daily practice'),
+    'sadhana': ('Sadhana', 'Reminders for breathing and daily practice'),
+    'japa': ('Japa', 'A nudge to complete today\'s mala'),
     'journal': ('Journal', 'A nudge to write your daily reflection'),
     'festival': ('Festivals', 'Upcoming vrats and festivals'),
     'mandir': ('Mandir', 'Offering windows at your home shrine'),
@@ -54,7 +83,19 @@ class ReminderService {
       // v22 moved these to named parameters.
       await _plugin.initialize(
         settings: const InitializationSettings(android: android, iOS: ios),
+        // A tapped reminder should land on the thing it was about — a
+        // journal nudge on the journal, a festival reminder on that
+        // festival — not just bring the app to whatever screen it was
+        // last on. `onDidReceiveNotificationResponse` covers the app
+        // already running or backgrounded; `_onLaunchPayload` (below)
+        // covers a cold start from a tap, which this callback does not
+        // fire for.
+        onDidReceiveNotificationResponse: _onTap,
       );
+      final launch = await _plugin.getNotificationAppLaunchDetails();
+      if (launch?.didNotificationLaunchApp ?? false) {
+        _pendingLaunchPayload = launch?.notificationResponse?.payload;
+      }
       _ready = true;
     } catch (e) {
       debugPrint('ReminderService: init failed ($e)');
@@ -122,6 +163,7 @@ class ReminderService {
     required String body,
     required int minuteOfDay,
     String weekdays = '1234567',
+    String? payload,
   }) async {
     if (!_supported) return;
     await init();
@@ -138,6 +180,7 @@ class ReminderService {
         // reminder does not need to fire to the second.
         androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
         matchDateTimeComponents: DateTimeComponents.time,
+        payload: payload ?? reminderRouteFor(kind, null),
       );
     } catch (e) {
       // Exact-alarm permission, OEM battery policies and Doze all fail here.
@@ -157,6 +200,7 @@ class ReminderService {
     required String title,
     required String body,
     required DateTime when,
+    String? payload,
   }) async {
     if (!_supported) return;
     await init();
@@ -172,6 +216,7 @@ class ReminderService {
         notificationDetails: _details(kind),
         androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
         // No matchDateTimeComponents: this must NOT repeat.
+        payload: payload ?? reminderRouteFor(kind, null),
       );
     } catch (e) {
       debugPrint('ReminderService: scheduleOnce failed ($e)');
@@ -210,17 +255,19 @@ class ReminderService {
       await cancelAll();
       for (final r in rows) {
         final kind = (r['kind'] as String?) ?? 'sadhana';
+        final refKey = r['ref_key'] as String?;
         if (kind == 'festival') {
-          // Festival rows carry their date in ref_key as 'slug@iso'. They fire
+          // Festival rows carry their date in ref_key as 'id@iso'. They fire
           // once, and a row whose date has passed is simply not re-armed.
-          final when = festivalReminderDate(r['ref_key'] as String?);
+          final when = festivalReminderDate(refKey);
           if (when != null) {
             await scheduleOnce(
               notifId: r['notif_id'] as int,
               kind: kind,
               title: _titleFor(kind, hindi),
-              body: _bodyFor(kind, r['ref_key'] as String?, hindi),
+              body: _bodyFor(kind, refKey, hindi),
               when: when,
+              payload: reminderRouteFor(kind, refKey),
             );
           }
           continue;
@@ -229,9 +276,10 @@ class ReminderService {
           notifId: r['notif_id'] as int,
           kind: kind,
           title: _titleFor(kind, hindi),
-          body: _bodyFor(kind, r['ref_key'] as String?, hindi),
+          body: _bodyFor(kind, refKey, hindi),
           minuteOfDay: (r['minute_of_day'] as int?) ?? 8 * 60,
           weekdays: (r['weekdays'] as String?) ?? '1234567',
+          payload: reminderRouteFor(kind, refKey),
         );
       }
       debugPrint('ReminderService: rescheduled ${rows.length} reminder(s)');
@@ -244,6 +292,7 @@ class ReminderService {
         'journal' => hi ? 'कर्म डायरी' : 'Karma Journal',
         'festival' => hi ? 'आगामी पर्व' : 'Upcoming festival',
         'mandir' => hi ? 'मंदिर' : 'Mandir',
+        'japa' => hi ? 'जप' : 'Japa',
         _ => hi ? 'साधना' : 'Sadhana',
       };
 
@@ -256,6 +305,9 @@ class ReminderService {
         'mandir' => hi
             ? 'अर्पण का समय खुला है।'
             : 'The offering window is open.',
+        'japa' => hi
+            ? 'आज की माला अभी पूरी नहीं हुई।'
+            : 'Today\'s mala is still waiting.',
         _ => hi
             ? 'आज की साधना का समय।'
             : 'Time for today\'s practice.',
@@ -283,3 +335,19 @@ String festivalReminderSlug(String refKey) {
   final at = refKey.indexOf('@');
   return at < 0 ? refKey : refKey.substring(0, at);
 }
+
+/// Where tapping a reminder of this [kind] should land. [refKey] carries the
+/// festival id (`'42@2026-...'`) for festival reminders; every other kind
+/// ignores it and goes to its one fixed screen. A top-level function (rather
+/// than a private method on [ReminderService]) so it's directly testable —
+/// this is the part most worth locking in, since a wrong route here fails
+/// silently: the notification still fires, it just lands somewhere else.
+String reminderRouteFor(String kind, String? refKey) => switch (kind) {
+      'journal' => '/journal',
+      'festival' => refKey == null
+          ? '/festivals'
+          : '/festivals/${festivalReminderSlug(refKey)}',
+      'mandir' => '/mandir',
+      'japa' => '/japa',
+      _ => '/sadhana',
+    };

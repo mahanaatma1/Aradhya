@@ -79,6 +79,7 @@ class FestivalReminders extends StateNotifier<Set<int>> {
             ? '${f.title(true)} कल है।'
             : '${f.title(false)} is tomorrow.',
         when: when,
+        payload: '/festivals/${f.id}',
       );
     } catch (_) {
       return false;

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
+import '../../core/notifications/reminder_tile.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/japa.dart';
 import '../../core/user/user_prefs.dart';
@@ -140,6 +141,18 @@ class JapaScreen extends ConsumerWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: scheme.onSurface.withValues(alpha: 0.55), fontSize: 13),
+          ),
+          const SizedBox(height: 20),
+          ReminderTile(
+            kind: 'japa',
+            labelEn: 'Remind me to chant',
+            labelHi: 'जप का स्मरण',
+            titleEn: 'Japa',
+            titleHi: 'जप',
+            bodyEn: "Today's mala is still waiting.",
+            bodyHi: 'आज की माला अभी पूरी नहीं हुई।',
+            // Morning by default — matches the sadhana reminder's default.
+            defaultMinuteOfDay: 6 * 60,
           ),
         ],
       ),
