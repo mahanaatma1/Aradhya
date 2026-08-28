@@ -6,10 +6,157 @@ import '../../app/theme/app_theme.dart';
 import '../../core/notifications/reminder_tile.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/streak.dart';
+import '../../core/user/user_prefs.dart';
 import '../../shared/currency_icons.dart';
 import '../../shared/reference_art.dart';
 import 'mandir_models.dart';
 import 'mandir_providers.dart';
+
+/// Every deity the Mandir can show, in the same order the onboarding picker
+/// uses, plus the ones onboarding never offered but art already exists for
+/// (Kartikeya, Ayyappa, Dattatreya, Meenakshi) — the shrine should let
+/// someone worship any deity the app actually has art for, not only the
+/// eight offered at first run.
+const _mandirDeities = <(String, String)>[
+  ('Ganesha', 'गणेश'),
+  ('Krishna', 'कृष्ण'),
+  ('Shiva', 'शिव'),
+  ('Durga', 'दुर्गा'),
+  ('Hanuman', 'हनुमान'),
+  ('Lakshmi', 'लक्ष्मी'),
+  ('Rama', 'राम'),
+  ('Saraswati', 'सरस्वती'),
+  ('Kartikeya', 'कार्तिकेय'),
+  ('Ayyappa', 'अय्यप्पा'),
+  ('Dattatreya', 'दत्तात्रेय'),
+  ('Meenakshi', 'मीनाक्षी'),
+];
+
+Future<void> _pickDeity(BuildContext context, WidgetRef ref) async {
+  final hi = ref.read(isHindiProvider);
+  final current = ref.read(ishtaDeityProvider);
+  final chosen = await showModalBottomSheet<String>(
+    context: context,
+    backgroundColor: const Color(0xFF2A1206),
+    shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
+    builder: (ctx) => _DeityPickerSheet(hindi: hi, current: current),
+  );
+  if (chosen == null || chosen == current) return;
+  final p = ref.read(sharedPrefsProvider);
+  await p.setString(PrefKeys.ishtaDeity, chosen);
+  ref.read(ishtaDeityProvider.notifier).state = chosen;
+}
+
+class _DeityPickerSheet extends StatelessWidget {
+  final bool hindi;
+  final String current;
+  const _DeityPickerSheet({required this.hindi, required this.current});
+
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 18, 20, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(hindi ? 'देवता चुनें' : 'Choose a deity',
+                style: const TextStyle(
+                    fontFamily: AppFonts.display,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 19,
+                    color: Color(0xFFFCEFE2))),
+            const SizedBox(height: 4),
+            Text(
+                hindi
+                    ? 'आपकी शरण अपडेट होगी'
+                    : 'This updates your Ishta Devata',
+                style: const TextStyle(
+                    fontSize: 12.5, color: Color(0xFFC9A98E))),
+            const SizedBox(height: 18),
+            GridView.count(
+              crossAxisCount: 4,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              mainAxisSpacing: 14,
+              crossAxisSpacing: 10,
+              children: [
+                for (final (en, hiName) in _mandirDeities)
+                  _DeityTile(
+                    nameEn: en,
+                    nameHi: hiName,
+                    hindi: hindi,
+                    selected: en == current,
+                    onTap: () => Navigator.of(context).pop(en),
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _DeityTile extends StatelessWidget {
+  final String nameEn;
+  final String nameHi;
+  final bool hindi;
+  final bool selected;
+  final VoidCallback onTap;
+  const _DeityTile({
+    required this.nameEn,
+    required this.nameHi,
+    required this.hindi,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final avatar = deityAvatar(nameEn);
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
+      onTap: onTap,
+      child: Column(
+        children: [
+          Container(
+            width: 58,
+            height: 58,
+            padding: const EdgeInsets.all(3),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.white.withValues(alpha: 0.06),
+              border: Border.all(
+                color: selected
+                    ? const Color(0xFFE6C34A)
+                    : Colors.white.withValues(alpha: 0.14),
+                width: selected ? 2 : 1,
+              ),
+            ),
+            child: ClipOval(
+              child: avatar != null
+                  ? Image.asset(avatar, fit: BoxFit.cover,
+                      errorBuilder: (_, _, _) => const Icon(
+                          Icons.temple_hindu_rounded,
+                          color: Color(0xFFE6C34A)))
+                  : const Icon(Icons.temple_hindu_rounded,
+                      color: Color(0xFFE6C34A)),
+            ),
+          ),
+          const SizedBox(height: 5),
+          Text(hindi ? nameHi : nameEn,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 10.5, color: Color(0xFFFCEFE2))),
+        ],
+      ),
+    );
+  }
+}
 
 /// The home shrine.
 ///
@@ -98,9 +245,18 @@ class _MandirScreenState extends ConsumerState<MandirScreen>
                   alignment: Alignment.center,
                   children: [
                     _Halo(controller: _flame),
-                    _Idol(deity: deity, controller: _flame),
+                    GestureDetector(
+                      onTap: () => _pickDeity(context, ref),
+                      child: _Idol(deity: deity, controller: _flame),
+                    ),
                     if (_flying != null)
                       _FlyingOffering(offering: _flying!, controller: _offer),
+                    Positioned(
+                      top: 4,
+                      right: 4,
+                      child: _ChangeDeityButton(
+                          hindi: hi, onTap: () => _pickDeity(context, ref)),
+                    ),
                     Positioned(
                       bottom: 6,
                       left: 20,
@@ -201,6 +357,43 @@ class _TopBar extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Small pill in the shrine's corner making the deity swap discoverable —
+/// tapping the idol itself does the same thing, but that alone is not
+/// obvious without a visible affordance.
+class _ChangeDeityButton extends StatelessWidget {
+  final bool hindi;
+  final VoidCallback onTap;
+  const _ChangeDeityButton({required this.hindi, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.white.withValues(alpha: 0.1),
+      borderRadius: BorderRadius.circular(999),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(999),
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.swap_horiz_rounded,
+                  size: 14, color: Color(0xFFE6C34A)),
+              const SizedBox(width: 5),
+              Text(hindi ? 'देवता बदलें' : 'Change deity',
+                  style: const TextStyle(
+                      fontSize: 11.5,
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFFFCEFE2))),
+            ],
+          ),
+        ),
       ),
     );
   }
