@@ -8,6 +8,7 @@ import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/async_view.dart';
 import 'entity_models.dart';
 import 'entity_providers.dart';
+import 'symbol_motifs.dart';
 
 /// One list screen for every entity encyclopedia — Rishis, Astras, Symbols.
 ///
@@ -292,9 +293,11 @@ class _SymbolGrid extends StatelessWidget {
                                 fontSize: 46,
                                 height: 1,
                                 color: scheme.primary))
-                        : Icon(Icons.auto_awesome_rounded,
-                            size: 34,
-                            color: accent.withValues(alpha: 0.7)),
+                        : SymbolMotif.covered.contains(e.slug)
+                            ? SymbolMotif(slug: e.slug, color: scheme.primary)
+                            : Icon(Icons.auto_awesome_rounded,
+                                size: 34,
+                                color: accent.withValues(alpha: 0.7)),
                   ),
                 ),
                 const SizedBox(height: 8),

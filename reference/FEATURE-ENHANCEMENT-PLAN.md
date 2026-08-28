@@ -1578,8 +1578,36 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       `_InterpretationPanel` widget below the facts card, with its own
       "Symbolic meaning" heading, plus a separate `meaning_varies_by` panel
       when traditions disagree. Was unchecked despite being done
-- [ ] **SB-01** Expand symbols — 12 today; mudras and yantras absent
-- [ ] **SB-02** Drawn motif where no Unicode glyph exists
+- [ ] **SB-01** Expand symbols — 12 today; mudras and yantras absent —
+      **attempted, not done.** Mudras need `gopinatha-rao-iconography`
+      (the registered source for iconographic facts), and its full text
+      turns out to not be reachable through any working fetch this session
+      — the Internet Archive scans return only catalog metadata to a
+      fetch, not page text, and no OCR'd mirror was found. Wilson's Vishnu
+      Purana, which does work, is a narrative text and does not use mudra
+      terminology systematically, so it cannot substitute. Named yantras
+      (Sri Yantra etc.) beyond the single generic "Yantra" entity are in
+      the same position: their canonical descriptions are Tantric-text
+      material, mostly outside this corpus's registered sources. Real new
+      content, not a wiring gap — needs either a working Gopinatha Rao
+      mirror or a different registered source before it can proceed
+      honestly
+- [x] **SB-02** Drawn motif where no Unicode glyph exists — new
+      `symbol_motifs.dart`, a `SymbolMotif` widget parallel to the existing
+      `GyanMotif` (same hand-drawn vector-path approach: no asset, no
+      licence, inherits the caller's colour, crisp at any size) but keyed
+      by symbol slug instead of module id. Draws the 7 of 12 symbols that
+      had no Unicode glyph and were falling back to a generic sparkle icon
+      — Damaru, Kalash, Padma, Rudraksha, Shankha, Swastika, Tilaka — each
+      a real drawn form (the hourglass drum, the Amrita pot with its
+      leaf-spray, eight lotus petals, a strung mala, a spiralling conch,
+      a proportioned hooked cross, the Vaishnava tilaka's vertical U).
+      Wired into both places a symbol is "the mark itself as content":
+      `entity_list_screen.dart`'s `_SymbolGrid` (was the sparkle icon) and
+      `entity_detail_screen.dart`'s header watermark (was simply absent
+      for these 7). `knowledge_graph_screen.dart`'s node fallback — the
+      entity's title text — was left alone; that already reads fine and
+      isn't the "anonymous mark" problem this item targets
 - [ ] **VD-01** Expand vidya topics **only where they pass the evidence bar** — 34 excellent beats 50 padded
 
 ## Narrative

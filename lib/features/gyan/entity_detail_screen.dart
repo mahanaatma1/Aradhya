@@ -11,6 +11,7 @@ import '../../shared/widgets/source_chip.dart';
 import '../related/related_rail.dart';
 import 'entity_models.dart';
 import 'entity_providers.dart';
+import 'symbol_motifs.dart';
 
 /// One detail screen for every entity kind.
 ///
@@ -106,6 +107,16 @@ class _Body extends ConsumerWidget {
                           height: 1,
                           color: Colors.white.withValues(alpha: 0.18),
                         ),
+                      ),
+                    )
+                  else if (SymbolMotif.covered.contains(entity.slug))
+                    Positioned(
+                      right: 18,
+                      bottom: 6,
+                      child: SymbolMotif(
+                        slug: entity.slug,
+                        color: Colors.white.withValues(alpha: 0.18),
+                        size: 96,
                       ),
                     ),
                   Positioned(
