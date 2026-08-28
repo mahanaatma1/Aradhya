@@ -2201,7 +2201,31 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       stop-words-only query -> not-sure). Verified the logic and its tests
       hold; no change needed.
       `flutter analyze` clean, 350/350 tests pass
-- [ ] **JN-01** Knowledge Journeys 10 to 18–20 paths
+- [x] **JN-01** Knowledge Journeys 10 to 18–20 paths — **18/18, floor of
+      the target range reached.** Unlike DH-01/AK-01, existing journeys are
+      curation, not new prose: each step is a title + one-line blurb
+      pointing at content already shipping (an entity, a scene, a vidya
+      topic), and the existing files say so outright ("Curation only —
+      every step points at content already shipping"). That made this
+      genuinely completable in one pass rather than a multi-session
+      authoring project. Added 8 new journeys (`content/data/paths/
+      avatars.jsonl`, `sages.jsonl`, `weapons.jsonl`, `symbols.jsonl`,
+      `adversaries.jsonl`, `yoga_limbs.jsonl`, `sound_grammar.jsonl`,
+      `timekeepers.jsonl`), each 4-7 steps built from entity/vidya-topic
+      short descriptions already verified elsewhere in the graph — no new
+      facts, only new sequencing and one-line blurbs written from what was
+      already there. "Seven Avatars" (not "Ten") is deliberately scoped
+      to the 7 entities actually registered under `kind='avatar'` — Krishna,
+      Rama and Buddha are separate `deity`/`human` entities elsewhere in
+      the graph and were left out of the title rather than claim ten when
+      only seven steps are real. A standalone geometry journey (the
+      diagonal rule, root-two approximation — only 2 vidya topics, no
+      supporting entities) was left unbuilt rather than pad it to a
+      believable length. `py -m content.tools.validate`: 0 errors.
+      `py -m content.tools.build`: learning_paths 10 -> 18, path_steps
+      49 -> 87, "nothing lost". No Dart changes needed — the journeys
+      screen already reads `learning_paths` dynamically. 350/350 tests
+      pass
 
 ## Temples
 
