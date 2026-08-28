@@ -42,7 +42,7 @@ class JournalScreen extends ConsumerWidget {
           _MoodStrip(hindi: hi),
           const SizedBox(height: 20),
           if (entries.isNotEmpty) ...[
-            _Heatmap(byDay: ref.read(journalProvider.notifier).byDay),
+            _Heatmap(hindi: hi),
             const SizedBox(height: 18),
             Text(
               hi ? 'आपकी प्रविष्टियाँ' : 'YOUR ENTRIES',
@@ -321,47 +321,189 @@ class _MoodPainter extends CustomPainter {
       old.mood != mood || old.color != color;
 }
 
-/// Twelve-week grid, matching the japa heatmap so the app reads as one system.
-class _Heatmap extends StatelessWidget {
-  final Map<String, int> byDay;
-  const _Heatmap({required this.byDay});
+/// GitHub-style contribution grid: a year of weeks, horizontally scrollable
+/// (opens already scrolled to today, most recent on the right) and each day
+/// tappable to see what was actually written that day — matching how GitHub's
+/// own graph opens a day's commits, not just a colour.
+class _Heatmap extends ConsumerStatefulWidget {
+  final bool hindi;
+  const _Heatmap({required this.hindi});
+
+  @override
+  ConsumerState<_Heatmap> createState() => _HeatmapState();
+}
+
+class _HeatmapState extends ConsumerState<_Heatmap> {
+  final _controller = ScrollController();
+  static const _weeks = 52;
+  static const _cell = 13.0;
+  static const _gap = 3.0;
+
+  @override
+  void initState() {
+    super.initState();
+    // Opens scrolled to the current week, same as GitHub's graph — the
+    // reader lands on "now" and scrolls back into history, not the other
+    // way around.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_controller.hasClients) {
+        _controller.jumpTo(_controller.position.maxScrollExtent);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
+    final hi = widget.hindi;
     final scheme = Theme.of(context).colorScheme;
+    ref.watch(journalProvider); // rebuild this grid when entries change
+    final byDay = ref.read(journalProvider.notifier).byDay;
     final today = DateTime.now();
-    const weeks = 12;
+    // Start on the Sunday of the week containing (today - (_weeks-1) weeks),
+    // same alignment the japa heatmap uses, so both read as one system.
+    final start = DateTime(today.year, today.month, today.day)
+        .subtract(Duration(days: today.weekday % 7 + (_weeks - 1) * 7));
 
-    return SizedBox(
-      height: 92,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          for (var w = weeks - 1; w >= 0; w--)
-            Expanded(
-              child: Column(
+    Color cell(int n) => n == 0
+        ? scheme.outline.withValues(alpha: 0.12)
+        : const Color(0xFF25533F)
+            .withValues(alpha: (0.35 + 0.2 * n).clamp(0.35, 1.0));
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          height: 7 * (_cell + _gap),
+          child: Scrollbar(
+            controller: _controller,
+            child: SingleChildScrollView(
+              controller: _controller,
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  for (var d = 0; d < 7; d++)
-                    Builder(builder: (_) {
-                      final date = today.subtract(
-                          Duration(days: w * 7 + (6 - d)));
-                      final n = byDay[dayStamp(date)] ?? 0;
-                      return Container(
-                        margin: const EdgeInsets.all(1.5),
-                        height: 10,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(2.5),
-                          color: n == 0
-                              ? scheme.outline.withValues(alpha: 0.12)
-                              : const Color(0xFF25533F).withValues(
-                                  alpha: (0.35 + 0.2 * n).clamp(0.35, 1.0)),
-                        ),
-                      );
-                    }),
+                  for (var w = 0; w < _weeks; w++)
+                    Padding(
+                      padding: const EdgeInsets.only(right: _gap),
+                      child: Column(
+                        children: [
+                          for (var d = 0; d < 7; d++)
+                            Builder(builder: (_) {
+                              final date =
+                                  start.add(Duration(days: w * 7 + d));
+                              final future = date.isAfter(today);
+                              final stamp = dayStamp(date);
+                              final n = byDay[stamp] ?? 0;
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: _gap),
+                                child: InkWell(
+                                  borderRadius: BorderRadius.circular(3),
+                                  onTap: future || n == 0
+                                      ? null
+                                      : () =>
+                                          _showDay(context, stamp, date, hi),
+                                  child: Container(
+                                    width: _cell,
+                                    height: _cell,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(3),
+                                      color: future
+                                          ? Colors.transparent
+                                          : cell(n),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }),
+                        ],
+                      ),
+                    ),
                 ],
               ),
             ),
-        ],
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          hi
+              ? 'किसी भी लिखे हुए दिन को छुएँ · पीछे स्क्रॉल करके पूरा वर्ष देखें'
+              : 'Tap any written day · scroll back for the full year',
+          style: TextStyle(
+              fontSize: 11, color: scheme.onSurface.withValues(alpha: 0.5)),
+        ),
+      ],
+    );
+  }
+
+  void _showDay(BuildContext context, String stamp, DateTime date, bool hi) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (ctx) => _DayEntriesSheet(stamp: stamp, date: date, hindi: hi),
+    );
+  }
+}
+
+/// What a tapped heatmap day shows — every entry written that day, read
+/// rather than re-derived, so it can never disagree with the row it was
+/// tapped from.
+class _DayEntriesSheet extends ConsumerWidget {
+  final String stamp;
+  final DateTime date;
+  final bool hindi;
+  const _DayEntriesSheet(
+      {required this.stamp, required this.date, required this.hindi});
+
+  static const _months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final scheme = Theme.of(context).colorScheme;
+    ref.watch(journalProvider); // rebuild this sheet when entries change
+    final entries = ref.read(journalProvider.notifier).forDay(stamp);
+    final label = '${date.day} ${_months[date.month - 1]} ${date.year}';
+
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(label,
+                style: const TextStyle(
+                    fontFamily: AppFonts.display,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18)),
+            const SizedBox(height: 4),
+            Text(
+                hindi
+                    ? '${entries.length} प्रविष्टि'
+                    : '${entries.length} ${entries.length == 1 ? 'entry' : 'entries'}',
+                style: TextStyle(
+                    fontSize: 12.5,
+                    color: scheme.onSurface.withValues(alpha: 0.55))),
+            const SizedBox(height: 14),
+            Flexible(
+              child: ListView.separated(
+                shrinkWrap: true,
+                itemCount: entries.length,
+                separatorBuilder: (_, _) => const SizedBox(height: 10),
+                itemBuilder: (context, i) =>
+                    _EntryRow(entry: entries[i], hindi: hindi),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

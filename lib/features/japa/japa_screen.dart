@@ -132,7 +132,7 @@ class JapaScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 12),
-          _Heatmap(history: japa.history),
+          _Heatmap(history: japa.history, hindi: hi),
           const SizedBox(height: 8),
           Text(
             hi
@@ -413,94 +413,226 @@ class _MilestoneCard extends StatelessWidget {
   }
 }
 
-/// A GitHub-style calendar heatmap of the last ~18 weeks of japa activity.
-class _Heatmap extends StatelessWidget {
+/// GitHub-style calendar heatmap: a year of weeks, horizontally scrollable
+/// (opens already scrolled to today) and each day tappable to see the exact
+/// count, matching the same treatment given to the Karma Journal's heatmap.
+class _Heatmap extends StatefulWidget {
   final Map<String, int> history;
-  const _Heatmap({required this.history});
+  final bool hindi;
+  const _Heatmap({required this.history, required this.hindi});
 
-  static const _weeks = 18;
+  @override
+  State<_Heatmap> createState() => _HeatmapState();
+}
+
+class _HeatmapState extends State<_Heatmap> {
+  final _controller = ScrollController();
+  static const _weeks = 52;
+  static const _cell = 13.0;
+  static const _gap = 3.0;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_controller.hasClients) {
+        _controller.jumpTo(_controller.position.maxScrollExtent);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  Color _cellColor(BuildContext context, int count) {
+    if (count <= 0) {
+      return Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.06);
+    }
+    final t = (count / 108).clamp(0.15, 1.0);
+    return Color.lerp(
+        AppColors.gold.withValues(alpha: 0.35), AppColors.terracotta, t)!;
+  }
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
+    final hi = widget.hindi;
+    final history = widget.history;
     final today = DateTime.now();
-    // Start on the Sunday of the week containing (today - 17 weeks).
     final start = DateTime(today.year, today.month, today.day)
         .subtract(Duration(days: today.weekday % 7 + (_weeks - 1) * 7));
 
-    Color cell(int count) {
-      if (count <= 0) return scheme.onSurface.withValues(alpha: 0.06);
-      final t = (count / 108).clamp(0.15, 1.0);
-      return Color.lerp(
-          AppColors.gold.withValues(alpha: 0.35), AppColors.terracotta, t)!;
-    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          height: 7 * (_cell + _gap),
+          child: Scrollbar(
+            controller: _controller,
+            child: SingleChildScrollView(
+              controller: _controller,
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  for (var w = 0; w < _weeks; w++)
+                    Padding(
+                      padding: const EdgeInsets.only(right: _gap),
+                      child: Column(
+                        children: [
+                          for (var d = 0; d < 7; d++)
+                            Builder(builder: (_) {
+                              final date =
+                                  start.add(Duration(days: w * 7 + d));
+                              final future = date.isAfter(today);
+                              final count = history[dayStamp(date)] ?? 0;
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: _gap),
+                                child: InkWell(
+                                  borderRadius: BorderRadius.circular(3),
+                                  onTap: future || count == 0
+                                      ? null
+                                      : () => _showDay(
+                                          context, date, count, hi),
+                                  child: Container(
+                                    width: _cell,
+                                    height: _cell,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(3),
+                                      color: future
+                                          ? Colors.transparent
+                                          : _cellColor(context, count),
+                                    ),
+                                  ),
+                                ),
+                              );
+                            }),
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
+        Row(
+          children: [
+            Expanded(
+              child: Text(
+                hi
+                    ? 'किसी भी दिन को छुएँ · पीछे स्क्रॉल करके पूरा वर्ष देखें'
+                    : 'Tap any day · scroll back for the full year',
+                style: TextStyle(
+                    fontSize: 11,
+                    color: scheme.onSurface.withValues(alpha: 0.5)),
+              ),
+            ),
+            Text('Less',
+                style: TextStyle(
+                    fontSize: 11,
+                    color: scheme.onSurface.withValues(alpha: 0.5))),
+            const SizedBox(width: 6),
+            for (final c in [0, 20, 60, 108]) ...[
+              Container(
+                width: 12,
+                height: 12,
+                margin: const EdgeInsets.symmetric(horizontal: 1.5),
+                decoration: BoxDecoration(
+                  color: _cellColor(context, c),
+                  borderRadius: BorderRadius.circular(3),
+                ),
+              ),
+            ],
+            const SizedBox(width: 6),
+            Text('More',
+                style: TextStyle(
+                    fontSize: 11,
+                    color: scheme.onSurface.withValues(alpha: 0.5))),
+          ],
+        ),
+      ],
+    );
+  }
 
-    return LayoutBuilder(builder: (context, box) {
-      const gap = 3.0;
-      final size = ((box.maxWidth - gap * (_weeks - 1)) / _weeks)
-          .clamp(8.0, 20.0);
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              for (var w = 0; w < _weeks; w++) ...[
-                if (w > 0) const SizedBox(width: gap),
-                Column(
-                  children: [
-                    for (var d = 0; d < 7; d++) ...[
-                      if (d > 0) const SizedBox(height: gap),
-                      Builder(builder: (_) {
-                        final day = start.add(Duration(days: w * 7 + d));
-                        final future = day.isAfter(today);
-                        final count = history[dayStamp(day)] ?? 0;
-                        return Container(
-                          width: size,
-                          height: size,
-                          decoration: BoxDecoration(
-                            color: future
-                                ? Colors.transparent
-                                : cell(count),
-                            borderRadius: BorderRadius.circular(3),
-                          ),
-                        );
-                      }),
-                    ],
-                  ],
+  void _showDay(BuildContext context, DateTime date, int count, bool hi) {
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => _DayCountSheet(date: date, count: count, hindi: hi),
+    );
+  }
+}
+
+/// What a tapped heatmap day shows — the exact chant count and how many
+/// full malas that day's japa amounts to, read straight from the same
+/// history map the grid was coloured from, so it can never disagree with
+/// the cell that was tapped.
+class _DayCountSheet extends StatelessWidget {
+  final DateTime date;
+  final int count;
+  final bool hindi;
+  const _DayCountSheet(
+      {required this.date, required this.count, required this.hindi});
+
+  static const _months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final label = '${date.day} ${_months[date.month - 1]} ${date.year}';
+    final malas = count ~/ JapaController.mala;
+    final beads = count % JapaController.mala;
+
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 18, 20, 24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(label,
+                style: const TextStyle(
+                    fontFamily: AppFonts.display,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 18)),
+            const SizedBox(height: 10),
+            Row(
+              children: [
+                Icon(Icons.spa_rounded, size: 18, color: AppColors.terracotta),
+                const SizedBox(width: 8),
+                Text(
+                  hindi ? '$count जप' : '$count chants',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: scheme.onSurface),
                 ),
               ],
+            ),
+            if (malas > 0 || beads > 0) ...[
+              const SizedBox(height: 4),
+              Text(
+                hindi
+                    ? (malas > 0
+                        ? '$malas माला${beads > 0 ? ' + $beads मनके' : ''}'
+                        : '$beads मनके')
+                    : (malas > 0
+                        ? '$malas mala${malas == 1 ? '' : 's'}${beads > 0 ? ' + $beads beads' : ''}'
+                        : '$beads beads'),
+                style: TextStyle(
+                    fontSize: 12.5,
+                    color: scheme.onSurface.withValues(alpha: 0.6)),
+              ),
             ],
-          ),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text('Less',
-                  style: TextStyle(
-                      fontSize: 11,
-                      color: scheme.onSurface.withValues(alpha: 0.5))),
-              const SizedBox(width: 6),
-              for (final c in [0, 20, 60, 108]) ...[
-                Container(
-                  width: 12,
-                  height: 12,
-                  margin: const EdgeInsets.symmetric(horizontal: 1.5),
-                  decoration: BoxDecoration(
-                    color: cell(c),
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                ),
-              ],
-              const SizedBox(width: 6),
-              Text('More',
-                  style: TextStyle(
-                      fontSize: 11,
-                      color: scheme.onSurface.withValues(alpha: 0.5))),
-            ],
-          ),
-        ],
-      );
-    });
+          ],
+        ),
+      ),
+    );
   }
 }

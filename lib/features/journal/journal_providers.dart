@@ -128,6 +128,12 @@ class JournalController extends StateNotifier<List<JournalEntry>> {
     }
     return out;
   }
+
+  /// Every entry written on [stamp] (`YYYY-MM-DD`), oldest first — what a
+  /// tapped heatmap cell shows. Entries are already loaded in [state], so
+  /// this is a plain filter rather than a second query.
+  List<JournalEntry> forDay(String stamp) =>
+      state.where((e) => e.dayStamp == stamp).toList().reversed.toList();
 }
 
 final journalProvider =
