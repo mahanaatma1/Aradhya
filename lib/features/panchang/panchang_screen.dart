@@ -8,6 +8,7 @@ import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/stitched_border.dart';
 import 'panchang_engine.dart';
+import 'panchang_explain.dart';
 import 'panchang_providers.dart';
 
 class PanchangScreen extends ConsumerWidget {
@@ -142,9 +143,18 @@ class PanchangScreen extends ConsumerWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _HeaderBit(label: hi ? 'मास' : 'Month', value: p.month(hi)),
-                _HeaderBit(label: hi ? 'पक्ष' : 'Paksha', value: p.paksha(hi)),
-                _HeaderBit(label: hi ? 'वार' : 'Vara', value: p.vara(hi)),
+                _HeaderBit(
+                    label: hi ? 'मास' : 'Month',
+                    value: p.month(hi),
+                    onTap: () => showPanchangExplanation(context, ref, 'month')),
+                _HeaderBit(
+                    label: hi ? 'पक्ष' : 'Paksha',
+                    value: p.paksha(hi),
+                    onTap: () => showPanchangExplanation(context, ref, 'paksha')),
+                _HeaderBit(
+                    label: hi ? 'वार' : 'Vara',
+                    value: p.vara(hi),
+                    onTap: () => showPanchangExplanation(context, ref, 'vara')),
               ],
             ),
           ),
@@ -152,15 +162,36 @@ class PanchangScreen extends ConsumerWidget {
 
           // main attributes grid
           Row(children: [
-            Expanded(child: _ElementCard(label: hi ? 'तिथि' : 'Tithi', e: p.tithi, hi: hi)),
+            Expanded(
+                child: _ElementCard(
+                    label: hi ? 'तिथि' : 'Tithi',
+                    e: p.tithi,
+                    hi: hi,
+                    onTap: () => showPanchangExplanation(context, ref, 'tithi'))),
             const SizedBox(width: 12),
-            Expanded(child: _ElementCard(label: hi ? 'नक्षत्र' : 'Nakshatra', e: p.nakshatra, hi: hi)),
+            Expanded(
+                child: _ElementCard(
+                    label: hi ? 'नक्षत्र' : 'Nakshatra',
+                    e: p.nakshatra,
+                    hi: hi,
+                    onTap: () =>
+                        showPanchangExplanation(context, ref, 'nakshatra'))),
           ]),
           const SizedBox(height: 12),
           Row(children: [
-            Expanded(child: _ElementCard(label: hi ? 'योग' : 'Yoga', e: p.yoga, hi: hi)),
+            Expanded(
+                child: _ElementCard(
+                    label: hi ? 'योग' : 'Yoga',
+                    e: p.yoga,
+                    hi: hi,
+                    onTap: () => showPanchangExplanation(context, ref, 'yoga'))),
             const SizedBox(width: 12),
-            Expanded(child: _ElementCard(label: hi ? 'करण' : 'Karana', e: p.karana, hi: hi)),
+            Expanded(
+                child: _ElementCard(
+                    label: hi ? 'करण' : 'Karana',
+                    e: p.karana,
+                    hi: hi,
+                    onTap: () => showPanchangExplanation(context, ref, 'karana'))),
           ]),
           const SizedBox(height: 14),
 
@@ -198,7 +229,10 @@ class PanchangScreen extends ConsumerWidget {
               label: hi ? 'शुभ मुहूर्त' : 'Auspicious Muhurat',
             ),
             for (final m in p.muhurats.where((m) => m.auspicious))
-              _MuhuratRow(m: m, hi: hi),
+              _MuhuratRow(
+                  m: m,
+                  hi: hi,
+                  onTap: () => showPanchangExplanation(context, ref, 'muhurat')),
           ],
 
           // Inauspicious periods
@@ -209,7 +243,10 @@ class PanchangScreen extends ConsumerWidget {
               label: hi ? 'अशुभ काल' : 'Inauspicious',
             ),
             for (final m in p.muhurats.where((m) => !m.auspicious))
-              _MuhuratRow(m: m, hi: hi),
+              _MuhuratRow(
+                  m: m,
+                  hi: hi,
+                  onTap: () => showPanchangExplanation(context, ref, 'muhurat')),
           ],
         ],
       ),
@@ -247,39 +284,51 @@ class _MuhuratHeader extends StatelessWidget {
 class _MuhuratRow extends StatelessWidget {
   final Muhurat m;
   final bool hi;
-  const _MuhuratRow({required this.m, required this.hi});
+  final VoidCallback? onTap;
+  const _MuhuratRow({required this.m, required this.hi, this.onTap});
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(16),
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: scheme.surface,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: scheme.outline.withValues(alpha: 0.2)),
       ),
-      child: Row(
-        children: [
-          Expanded(
-            child: Text(
-              m.name(hi),
-              style: const TextStyle(
-                fontFamily: AppFonts.display,
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Expanded(
+                child: Text(
+                  m.name(hi),
+                  style: const TextStyle(
+                    fontFamily: AppFonts.display,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18,
+                  ),
+                ),
               ),
-            ),
+              Text(
+                '${DateFormat('h:mm a').format(m.start)} – ${DateFormat('h:mm a').format(m.end)}',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: scheme.onSurface.withValues(alpha: 0.6),
+                ),
+              ),
+              if (onTap != null) ...[
+                const SizedBox(width: 6),
+                Icon(Icons.info_outline_rounded,
+                    size: 15, color: scheme.onSurface.withValues(alpha: 0.35)),
+              ],
+            ],
           ),
-          Text(
-            '${DateFormat('h:mm a').format(m.start)} – ${DateFormat('h:mm a').format(m.end)}',
-            style: TextStyle(
-              fontSize: 13,
-              color: scheme.onSurface.withValues(alpha: 0.6),
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -288,11 +337,13 @@ class _MuhuratRow extends StatelessWidget {
 class _HeaderBit extends StatelessWidget {
   final String label;
   final String value;
-  const _HeaderBit({required this.label, required this.value});
+  final VoidCallback? onTap;
+  const _HeaderBit({required this.label, required this.value, this.onTap});
   @override
   Widget build(BuildContext context) {
     const on = Color(0xFFFDEEDE);
-    return Column(
+    final col = Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Text(label.toUpperCase(),
             style: TextStyle(
@@ -309,6 +360,12 @@ class _HeaderBit extends StatelessWidget {
                 color: on)),
       ],
     );
+    if (onTap == null) return col;
+    return InkWell(
+      borderRadius: BorderRadius.circular(10),
+      onTap: onTap,
+      child: Padding(padding: const EdgeInsets.all(6), child: col),
+    );
   }
 }
 
@@ -316,7 +373,9 @@ class _ElementCard extends StatelessWidget {
   final String label;
   final PElement e;
   final bool hi;
-  const _ElementCard({required this.label, required this.e, required this.hi});
+  final VoidCallback? onTap;
+  const _ElementCard(
+      {required this.label, required this.e, required this.hi, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -325,13 +384,17 @@ class _ElementCard extends StatelessWidget {
         ? null
         : '${hi ? 'तक ' : 'until '}${DateFormat('h:mm a').format(e.endTime!)}';
     return Container(
-      padding: const EdgeInsets.all(16),
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         color: scheme.surface,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(color: scheme.outline.withValues(alpha: 0.2)),
       ),
-      child: Column(
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(label.toUpperCase(),
@@ -362,7 +425,9 @@ class _ElementCard extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 12, color: scheme.onSurface.withValues(alpha: 0.6))),
           ],
-        ],
+            ],
+          ),
+        ),
       ),
     );
   }

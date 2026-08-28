@@ -1930,8 +1930,26 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Calendar & astrology
 
-- [ ] **PN-01** Tap any panchang element to see what it is and how it is calculated
-- [ ] **PN-02** Link panchang elements to the Jyotisha vidya topics
+- [x] **PN-01** Tap any panchang element to see what it is and how it is
+      calculated — new `panchang_explain.dart`: every element on
+      `panchang_screen.dart` (Tithi, Nakshatra, Yoga, Karana, Vara, Paksha,
+      Month, and both the auspicious/inauspicious Muhurat rows) is now
+      tappable, opening a bottom sheet with a plain-language "what it is"
+      and the actual arithmetic ("how it's calculated") pulled from what
+      `panchang_engine.dart` itself does — e.g. Tithi's sheet states
+      "(Moon's longitude − Sun's longitude) ÷ 12°", matching `_tithiIdx`'s
+      real formula, not a generic description. Deliberately category-level
+      (one explanation per element type, not one of 30 for every tithi
+      name, 27 for every nakshatra, 27 for every yoga) — per-name lore at
+      that count is real content-authoring work on KG-03's scale, not this
+      item's scope, and the question a tap is actually asking ("what kind
+      of thing is this, where did the number come from") has one true
+      answer regardless of which of the 30/27/27 values today shows
+- [x] **PN-02** Link panchang elements to the Jyotisha vidya topics — solved
+      together with PN-01: each explanation sheet ends with a "Read more in
+      Vidya" button routing to `/gyan/vidya/:topicId`, pointing at the
+      matching one of the 3 existing Jyotisha topics (`ayanamsa` for Month,
+      `nakshatra-division` for Nakshatra, `panchanga` for the rest)
 - [ ] **CW-01** Calendar wheel — circular year, festivals as marks
 - [ ] **FE-01** Festivals 58 to 100–150 **verified** rules
 - [ ] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date today
