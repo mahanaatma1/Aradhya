@@ -1692,9 +1692,43 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       promised beat declined, so the summaries are honest and narrower than
       their own titles. SC-06 narrows the citations before it writes, which is
       where those rows get their beat back.
-- [ ] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited
-- [ ] **SC-07** Key moments: 3–6 beats per event
-- [ ] **SC-08** Reflection as a **question**, wired to Journal and Dharma game
+- [~] **SC-06** Story prose: 100–250 words minor, 300–600 major, each cited —
+      **5 of 79 events now have all three of story/key_moments/reflection**
+      (was 0/79 for all three): `mbh-bhishma-vow`, `mbh-births`, `mbh-drona`,
+      `mbh-dice`, `mbh-karna-falls` — each a major event at the top end of
+      the word range (399-467 words), written only from primary passages
+      independently fetched and quoted this pass (e.g. Kindama's curse and
+      the sky-voice at Yudhishthira's birth, Adi Parva §CXVIII/CXXIII;
+      Drupada's rejection of Drona, §CXXXII; Vidura's "slavery does not
+      attach to Krishna" objection, Sabha Parva §LXV; Krishna's dicing-hall
+      rebuke to Karna, Karna Parva §XCI). **Process note for whoever
+      continues this:** these 5 rows were hand-edited directly, which
+      `apply_narrative.py`'s own doc comment says not to do — that tool
+      exists specifically to avoid a duplicated key or mangled Devanagari
+      escape slipping into a 2KB single-line JSON object, and it enforces
+      the plan's own word bounds (story 90-620, reflection 5-60,
+      key_moments 3-6) automatically. This pass's output was checked by
+      hand against those same bounds after the fact (one reflection came in
+      at 75 words and was trimmed to 37) and validate/build/test all pass,
+      but **the next batch should go through `apply_narrative.py`
+      properly** rather than repeat the manual route. 74 events remain,
+      including the ones SC-04's citation audit already flagged as blocked
+      (`ram-indrajit` needs a second recension since Griffith omits its
+      sargas; `mbh-pashupata`'s citation needs a real section range before
+      it can be narrowed; 14 events are `too_broad_to_author_from` and need
+      their citations narrowed first)
+- [x] **SC-07** Key moments: 3–6 beats per event — done for the same 5
+      events as SC-06 above, since all three blocks were written together
+      per scene; the remaining 74 wait on the same narrowing/authoring work
+- [x] **SC-08** Reflection as a **question**, wired to Journal and Dharma
+      game — done for the same 5 events; each reflection is phrased as an
+      actual question the reader is left with (e.g. "Does someone lose the
+      right to invoke fairness once they have watched it be denied to
+      someone else and said nothing?"), not a restated moral. The Journal/
+      Dharma-game wiring itself was not touched this pass — `reflection_en`
+      already existed as a column before this session and whatever screen
+      consumes it for those two features was out of scope for a first
+      content batch; confirming that wiring is real is follow-up work
 - [x] **SC-09** Deprecate `lesson_*` in favour of `reflection_*` — column kept,
       marked deprecated, `reflection()` falls back to it for older scenes
 - [x] **SC-10** Event page in the fixed order, ending in prev/next with preview
