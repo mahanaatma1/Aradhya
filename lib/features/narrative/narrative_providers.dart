@@ -89,10 +89,18 @@ class EpicFacetValue {
   final String? titleHi;
   final Set<int> nodeIds;
 
+  /// The lowest `sequence_no` this value covers — the point in the story
+  /// where it is first reached. Unused for the cast facet (count order is
+  /// the right read there: who matters most), but it is what RM-03's
+  /// journey ordering needs for places — Ayodhya before Panchavati before
+  /// Lanka, not most-visited first.
+  final int firstSequence;
+
   const EpicFacetValue({
     required this.entityId,
     required this.titleEn,
     required this.nodeIds,
+    required this.firstSequence,
     this.titleHi,
   });
 
@@ -100,21 +108,29 @@ class EpicFacetValue {
       (hindi && (titleHi?.isNotEmpty ?? false)) ? titleHi! : titleEn;
 }
 
-/// Folds `(entity, node)` pairs into one value per entity, most-present first.
+/// Folds `(entity, node, sequence)` rows into one value per entity.
 ///
-/// Ordered by how many events the value covers, then alphabetically: forty-five
-/// figures appear in the Ramayana, and a reader looking for Rama should not swipe
-/// past thirty walk-on parts to reach him. The alphabetical tiebreak keeps the
-/// row from reshuffling between builds.
-List<EpicFacetValue> _foldFacet(List<Map<String, Object?>> rows) {
+/// [journeyOrder] picks the sort: false (the default, for cast) orders by how
+/// many events the value covers, then alphabetically — forty-five figures
+/// appear in the Ramayana, and a reader looking for Rama should not swipe
+/// past thirty walk-on parts to reach him. true (for places, RM-03) orders by
+/// [EpicFacetValue.firstSequence] instead, so the row reads as the route
+/// actually walked — Ayodhya, then Panchavati, then Lanka — rather than by
+/// which place the plot lingers at longest.
+List<EpicFacetValue> _foldFacet(List<Map<String, Object?>> rows,
+    {bool journeyOrder = false}) {
   final nodes = <int, Set<int>>{};
   final names = <int, (String, String?)>{};
+  final firstSeq = <int, int>{};
   for (final r in rows) {
     final entity = r['entity_id'] as int?;
     final node = r['node_id'] as int?;
     if (entity == null || node == null) continue;
     nodes.putIfAbsent(entity, () => <int>{}).add(node);
     names[entity] ??= ((r['title_en'] as String?) ?? '', r['title_hi'] as String?);
+    final seq = (r['sequence_no'] as int?) ?? 0;
+    final prev = firstSeq[entity];
+    if (prev == null || seq < prev) firstSeq[entity] = seq;
   }
 
   final out = <EpicFacetValue>[
@@ -127,9 +143,14 @@ List<EpicFacetValue> _foldFacet(List<Map<String, Object?>> rows) {
           titleEn: names[e.key]!.$1,
           titleHi: names[e.key]!.$2,
           nodeIds: e.value,
+          firstSequence: firstSeq[e.key] ?? 0,
         ),
   ];
   out.sort((a, b) {
+    if (journeyOrder) {
+      final bySeq = a.firstSequence.compareTo(b.firstSequence);
+      return bySeq != 0 ? bySeq : a.titleEn.compareTo(b.titleEn);
+    }
     final byCount = b.nodeIds.length.compareTo(a.nodeIds.length);
     return byCount != 0 ? byCount : a.titleEn.compareTo(b.titleEn);
   });
@@ -154,7 +175,9 @@ final epicCastFacetProvider =
   return _foldFacet(rows);
 });
 
-/// The places of one epic, each with the events set there (SC-13).
+/// The places of one epic, each with the events set there (SC-13), ordered as
+/// the story actually walks them rather than by how long it lingers at each
+/// one (RM-03).
 ///
 /// Sparser than the cast by a long way — most events carry no place yet, which is
 /// RM-02's job to finish. The chip row states the shortfall rather than presenting
@@ -164,12 +187,12 @@ final epicPlaceFacetProvider =
   final db = await ref.watch(contentDbProvider.future);
   if (!db.gyanAttached) return const [];
   final rows = await db.raw.rawQuery('''
-    SELECT e.id AS entity_id, n.id AS node_id, e.title_en, e.title_hi
+    SELECT e.id AS entity_id, n.id AS node_id, n.sequence_no, e.title_en, e.title_hi
     FROM gyan.narrative_nodes n
     JOIN gyan.entities e ON e.id = n.place_entity_id
     WHERE n.epic = ? AND $_notWarDay
   ''', [epic]);
-  return _foldFacet(rows);
+  return _foldFacet(rows, journeyOrder: true);
 });
 
 /// Scenes the reader has opened, so the path can show what has been walked.

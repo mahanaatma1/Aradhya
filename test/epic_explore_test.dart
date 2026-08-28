@@ -45,7 +45,12 @@ NarrativeNode _arcless(int id, int book) =>
     NarrativeNode.fromRow(_row(id, {'book_no': book}));
 
 EpicFacetValue _facetValue(int id, String en, String? hi, Set<int> nodes) =>
-    EpicFacetValue(entityId: id, titleEn: en, titleHi: hi, nodeIds: nodes);
+    EpicFacetValue(
+        entityId: id,
+        titleEn: en,
+        titleHi: hi,
+        nodeIds: nodes,
+        firstSequence: 0);
 
 /// Two kandas, three arcs, five events — small enough to count by hand.
 final _five = [

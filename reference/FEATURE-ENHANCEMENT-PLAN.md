@@ -1808,10 +1808,22 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       form ("बाल कांड") while `epics.jsonl` used the standard compound form
       ("बालकांड"); fixed in the JSONL to match the compound spelling,
       rebuilt (`content.tools.build`), no errors introduced
-- [ ] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka — SC-13's
-      Places axis is the filter half of this; what is still missing is the
-      *journey*, places in narrative order rather than by count, which needs RM-02
-      finished first or the route has nineteen gaps in it
+- [x] **RM-03** Location-journey filter: Ayodhya to Mithila to Lanka —
+      `_foldFacet` in `narrative_providers.dart` takes a `journeyOrder` flag;
+      `epicPlaceFacetProvider` now sets it and selects `sequence_no` in its
+      query, so the Places chip row sorts by each place's first appearance
+      in the story instead of by how many events happen there. The cast
+      facet is untouched — count order is the right read for "who matters
+      most" — so this is a places-only change threaded through the same
+      folding function rather than a parallel one. Verified against the
+      live database, not just plausible-looking code: Ramayana renders
+      Ayodhya → Mithila → Panchavati → Kishkindha → Lanka, and Mahabharata
+      renders Hastinapura → Indraprastha → Kurukshetra → Dvaraka →
+      Himalaya — both the actual routes, in order. The existing gap note
+      (SC-13) still states honestly what's unplaced; RM-02's remaining
+      gaps (12/32 Ramayana, 10/29 Mahabharata) mean the route has real
+      missing stops today, same as before, but the stops it does show are
+      now in the right order rather than shuffled by a count
 - [-] **MB-02** ~~Optional parva rail beside the arc chips~~ — superseded by
       SC-13: the parvas are the section axis of the Explore row, on both epics,
       which is the same affordance without a second rail
