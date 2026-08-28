@@ -2292,12 +2292,27 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       navigating via a new `/sources` route. `flutter analyze` clean,
       350/350 tests pass
 - [~] **TA-01** Find and verify a public-domain source for temple
-      architecture — **still none confirmed.** Not attempted this
-      session: a real source search plus TA-02 through TA-05 (terminology,
-      diagrams as drawn paths, a new module) is a multi-step research and
-      content chain in its own right, not a quick addition alongside the
-      rest of this section, so it was left honestly open rather than
-      rushed.
+      architecture — **a candidate found, not yet verified.** James
+      Fergusson's *History of Indian and Eastern Architecture* (1876;
+      revised 2-vol. edition 1910 by James Burgess) is a strong fit on
+      licence: author d. 1886, so squarely pre-1929/public-domain by the
+      same rule the app's other 11 primary sources already use, and it's
+      hosted on Project Gutenberg (ebooks/61178, plain text + HTML) as
+      well as several archive.org scans — Gutenberg only lists confirmed
+      public-domain texts, which is a second, independent confirmation
+      beyond the death-date rule. Its table of contents has a "Dravidian
+      style" and a "Northern or Indo-Aryan style" section (Book IV
+      onward, ~600+ pages in), which are the era's names for Dravida and
+      Nagara — a real match, not a guess. NOT yet verified: a first fetch
+      only reached the front matter/introduction: the actual Dravida/
+      Nagara chapters, and whether they use (or gloss) shikhara, vimana,
+      gopuram, mandapa, garbhagriha, prakara by name, still need to be
+      read and quoted directly, the same discipline KJ-01/JN-01 held to.
+      Next session: fetch Book IV onward specifically (page-ranged, not
+      the whole multi-hundred-page file at once — the same lesson learned
+      from `gupte-hindu-holidays` failing on giant single fetches), quote
+      the actual passages, and only then register it as a source and
+      start TA-02.
 - [ ] **TA-02** Nagara · Dravida · Vesara
 - [ ] **TA-03** Parts: garbhagriha · mandapa · shikhara/vimana · gopuram · prakara
 - [ ] **TA-04** Diagrams as drawn paths, consistent with the motif system
