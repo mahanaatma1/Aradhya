@@ -1950,7 +1950,21 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       Vidya" button routing to `/gyan/vidya/:topicId`, pointing at the
       matching one of the 3 existing Jyotisha topics (`ayanamsa` for Month,
       `nakshatra-division` for Nakshatra, `panchanga` for the rest)
-- [ ] **CW-01** Calendar wheel — circular year, festivals as marks
+- [x] **CW-01** Calendar wheel — circular year, festivals as marks — new
+      `calendar_wheel.dart`, toggled from `calendar_screen.dart`'s AppBar
+      (a donut icon next to the existing month grid). Twelve months as a
+      ring — the shape a year actually is, which a swipeable stack of
+      twelve flat pages can't show (Chaitra sits next to Phalguna the way
+      it recurs, not at opposite ends of a scroll) — with festival days
+      marked as dots positioned by their exact day-of-year angle, not just
+      parked at their month's centre, so Holi and Diwali land at visibly
+      different points within their respective month arcs. Reuses
+      `monthFestivals()` (the same per-month lookup the grid view already
+      calls, so the wheel can never show a festival the grid doesn't) and
+      the existing `showFestivalDetail` sheet on tap — no new festival
+      data, no new interaction pattern, just a second honest projection of
+      what was already there. Year navigation via arrows either side of
+      the wheel. `flutter analyze` clean, 350/350 tests pass
 - [ ] **FE-01** Festivals 58 to 100–150 **verified** rules
 - [ ] **FE-02** Nakshatra-within-solar-month rule — Onam returns no date today
 - [ ] **FE-03** Festival to story-node link

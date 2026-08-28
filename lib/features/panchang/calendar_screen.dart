@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
+import 'calendar_wheel.dart';
 import 'festivals.dart';
 import '../../shared/widgets/stitched_border.dart';
 import 'panchang_engine.dart' show lunarMonth;
@@ -64,6 +65,7 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
   late final int _initial = _indexForMonth(DateTime.now());
   late final PageController _pc = PageController(initialPage: _initial);
   late int _index = _initial;
+  bool _wheelView = false;
 
   @override
   void dispose() {
@@ -140,6 +142,15 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
         title: Text(hi ? 'हिंदू पंचांग' : 'Hindu Panchang'),
         actions: [
           IconButton(
+            tooltip: _wheelView
+                ? (hi ? 'माह दृश्य' : 'Month view')
+                : (hi ? 'वर्ष चक्र' : 'Year wheel'),
+            icon: Icon(_wheelView
+                ? Icons.calendar_view_month_rounded
+                : Icons.donut_large_rounded),
+            onPressed: () => setState(() => _wheelView = !_wheelView),
+          ),
+          IconButton(
             tooltip: hi ? 'सभी पर्व' : 'All festivals',
             icon: const Icon(Icons.celebration_outlined),
             onPressed: () => context.push('/festivals'),
@@ -158,7 +169,38 @@ class _CalendarScreenState extends ConsumerState<CalendarScreen> {
           ),
         ],
       ),
-      body: Column(
+      body: _wheelView
+          ? Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
+                  child: Row(
+                    children: [
+                      _ArrowBtn(
+                        icon: Icons.chevron_left_rounded,
+                        enabled: month.year > _minYear,
+                        onTap: () => _go(
+                            _indexForMonth(DateTime(month.year - 1, month.month))),
+                      ),
+                      const Spacer(),
+                      _ArrowBtn(
+                        icon: Icons.chevron_right_rounded,
+                        enabled: month.year < _maxYear,
+                        onTap: () => _go(
+                            _indexForMonth(DateTime(month.year + 1, month.month))),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(24),
+                    child: CalendarWheel(year: month.year, hi: hi),
+                  ),
+                ),
+              ],
+            )
+          : Column(
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 8, 12, 4),
