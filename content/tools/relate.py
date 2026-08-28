@@ -233,6 +233,60 @@ class Relator:
                 subtitle_en=ekind, subtitle_hi=ekind,
                 route=f"/gyan/entity/{eid}")
 
+    def link_temples_to_festivals(self, legacy: sqlite3.Connection) -> None:
+        """Temple to the festivals kept for its deity (TM-03).
+
+        `link_festivals` already connects a gyan `entities` row to the
+        festivals curated for it via `festivals.deity_entity_id` -- a
+        temple has no such id, so it never got the same edge. Each temple
+        already renders its OWN hand-written festival list (`data.festivals`
+        in the legacy JSON) as plain text with no link anywhere in the app;
+        this rule gives the temple a route into the real Festival Explorer
+        for the same occasion, via the temple's `deity_en` matched against
+        the SAME primary-alias tokens `link_legacy_by_deity` already uses.
+        """
+        tables = {r[0] for r in legacy.execute(
+            "select name from sqlite_master where type='table'")}
+        if "temples" not in tables:
+            return
+
+        # entity primary-alias token -> entity id, restricted the same way
+        # link_entities restricts alias matching: primary/epithet only.
+        alias_to_entity: dict[str, int] = {}
+        for eid, in self.db.execute("select id from entities"):
+            for (alias, akind) in self.db.execute(
+                    "select alias, alias_kind from entity_aliases "
+                    "where entity_id=?", (eid,)):
+                if akind not in ("primary", "epithet"):
+                    continue
+                f = fold(alias)
+                if len(f) >= 4 and f not in AMBIGUOUS_DEITY_TOKENS:
+                    alias_to_entity[f] = eid
+
+        by_category = {"major": 0.86, "jayanti": 0.83,
+                       "vrat": 0.78, "regional": 0.76}
+        festivals_by_entity: dict[int, list[tuple]] = defaultdict(list)
+        for fid, ften, fthi, fcat, eid in self.db.execute(
+                "select id, title_en, title_hi, category, deity_entity_id "
+                "from festivals where deity_entity_id is not null"):
+            festivals_by_entity[eid].append((fid, ften, fthi, fcat))
+
+        for tid, deity in legacy.execute(
+                "select id, deity_en from temples"):
+            eids = {alias_to_entity[t] for t in self.deity_tokens(deity)
+                    if t in alias_to_entity}
+            for eid in eids:
+                for fid, ften, fthi, fcat in festivals_by_entity.get(eid, []):
+                    w = by_category.get(fcat or "", 0.80)
+                    self.add(
+                        ("content", "temples", tid), ("gyan", "festivals", fid),
+                        dst_kind="festival", reason="temple_deity_festival",
+                        weight=w,
+                        title_en=ften or "", title_hi=fthi,
+                        subtitle_en=fcat or "festival",
+                        subtitle_hi=fcat or "festival",
+                        route=f"/festivals/{fid}")
+
     def link_narrative_cast(self) -> None:
         """Entity to the scenes they appear in (NR-03's "Appears in" rail).
 
@@ -599,6 +653,7 @@ def build_into(db: sqlite3.Connection) -> dict:
             r.link_stories_by_emotion(legacy)
             r.link_entities(legacy)
             r.link_festivals()
+            r.link_temples_to_festivals(legacy)
             r.link_narrative_cast()
             r.link_verses(legacy)
             r.link_quiz_riddle_trivia(legacy)

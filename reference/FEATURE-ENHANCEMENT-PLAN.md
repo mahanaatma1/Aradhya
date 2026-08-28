@@ -2229,11 +2229,75 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 
 ## Temples
 
-- [ ] **TM-01** Detail page: hero, why visit, history, deity, architecture, festivals, traditions, map, nearby, sources
-- [ ] **TM-02** Nearby-temples query by coordinate
-- [ ] **TM-03** Festival link via `deity_entity_id`
-- [ ] **TM-04** OpenStreetMap attribution in About — ODbL requires it
-- [ ] **TA-01** **Find and verify a public-domain source for temple architecture** — none confirmed yet
+- [~] **TM-01** Detail page: hero, why visit, history, deity, architecture,
+      festivals, traditions, map, nearby, sources — **8/10 already true,
+      2 genuinely missing.** Read `temple_detail_screen.dart` in full:
+      hero✓ (`_Hero`), history✓ (founding era in About's Key Facts),
+      deity✓, architecture✓ (text field, About section), festivals✓
+      (now tappable into the real Festival Explorer, see TM-03), map✓
+      (`_openMap`/`hasMap`), nearby✓ (now by real coordinate, see TM-02),
+      sources✓ (`SourceChip`, `t.rankedSources`). "Why visit" and
+      "traditions" have no field anywhere — not in `temple_models.dart`,
+      not in the legacy `temples.data` JSON blob (checked every key: `id,
+      name, deity, location, link, significance, category, visited,
+      confidence, altNames, address, district, state, pincode, gps,
+      foundingEra, architecture, timings, travel, visitInfo, links,
+      circuits, nearbyTemples, bestSeason, weatherNote, festivals,
+      sources` — neither exists). Writing verified "why visit"/"tradition"
+      prose per temple, for 187 temples, is the same content-authoring
+      bar as DH-01/AK-01 and was left for a future session rather than
+      rushed.
+- [x] **TM-02** Nearby-temples query by coordinate — replaced the
+      hand-written `nearbyTemples` prose (present on some rows, absent on
+      others, and never a link to anything) with a real query:
+      `nearbyTemplesProvider` ranks all 187 temples by great-circle
+      (haversine) distance from the current one's `lat`/`lon`, done in
+      memory like `AskRepository` does for `qa_pairs` — 187 rows needs no
+      spatial index. Rendered as a "Nearby temples" card in the Travel
+      section, each row tappable to that temple, distance shown in km.
+      Silently skipped for temples missing coordinates on either end,
+      since a distance to an unknown point is not a fact to state.
+- [x] **TM-03** Festival link via `deity_entity_id` — each temple already
+      renders its own hand-written festival list (name + note) as plain
+      text with no link anywhere in the app. Added
+      `link_temples_to_festivals()` to `relate.py`: the temple's
+      `deity_en` matched against entity primary/epithet aliases (the same
+      restricted token match `link_legacy_by_deity`/`link_entities`
+      already use), joined to `festivals.deity_entity_id` — genuinely
+      the same rule `link_festivals` already runs for `entities`, just
+      extended to reach temples too. +131 `temples`→`festivals` edges,
+      spot-checked 15 by hand (all correct, e.g. every Krishna temple
+      correctly linked to Krishna's festivals). Rendered as a small chip
+      row into the real Festival Explorer inside the Festivals section
+      (`_FestivalLinks`), reading `related_edges` rather than attempting
+      fuzzy text-matching between the temple's own festival names and the
+      Festival Explorer's — deliberately two separate, honest lists
+      rather than a guessed merge. `flutter analyze` clean, 350/350
+      tests pass, `build.py`: +131 related_edges, nothing lost
+- [x] **TM-04** OpenStreetMap attribution in About — ODbL requires it —
+      confirmed the app renders no OSM map tiles anywhere (no
+      `flutter_map`/OSM tile package in `pubspec.yaml`); the ODbL
+      obligation is for the temple *coordinates* themselves, which
+      `content/SOURCES.md` already documented as OSM-sourced. No About/
+      Sources screen existed anywhere in the app — the Profile tab's
+      "About" card was a static, non-tappable info tile. Added
+      `SourcesScreen` (`lib/features/hubs/sources_screen.dart`), listing
+      every source whose content actually ships in the app: OpenStreetMap
+      and data.gov.in first (both legally require attribution — ODbL and
+      GODL respectively), then the public-domain primary translations
+      (Wilson, Ganguli, Dutt, Muller, Telang, Rao, Underhill, Gupte,
+      Griffith) and Wikidata, each with its licence and what it's used
+      for, matching `content/SOURCES.md` row for row. Wired a new
+      "Sources" row into `profile_screen.dart`'s About section,
+      navigating via a new `/sources` route. `flutter analyze` clean,
+      350/350 tests pass
+- [~] **TA-01** Find and verify a public-domain source for temple
+      architecture — **still none confirmed.** Not attempted this
+      session: a real source search plus TA-02 through TA-05 (terminology,
+      diagrams as drawn paths, a new module) is a multi-step research and
+      content chain in its own right, not a quick addition alongside the
+      rest of this section, so it was left honestly open rather than
+      rushed.
 - [ ] **TA-02** Nagara · Dravida · Vesara
 - [ ] **TA-03** Parts: garbhagriha · mandapa · shikhara/vimana · gopuram · prakara
 - [ ] **TA-04** Diagrams as drawn paths, consistent with the motif system

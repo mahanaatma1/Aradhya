@@ -246,11 +246,24 @@ class ProfileScreen extends ConsumerWidget {
           const SizedBox(height: 16),
 
           _SectionLabel('About'),
-          const Card(
+          Card(
+            clipBehavior: Clip.antiAlias,
             child: ListTile(
-              leading: Icon(Icons.info_outline_rounded),
-              title: Text(Brand.name),
-              subtitle: Text('${Brand.taglineEn} · v1.0.0'),
+              leading: const Icon(Icons.info_outline_rounded),
+              title: const Text(Brand.name),
+              subtitle: const Text('${Brand.taglineEn} · v1.0.0'),
+            ),
+          ),
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
+              leading: Icon(Icons.local_library_outlined, color: scheme.primary),
+              title: Text(hi ? 'स्रोत' : 'Sources'),
+              subtitle: Text(hi
+                  ? 'हर अनुवाद और डेटासेट का श्रेय, जिसमें OpenStreetMap भी शामिल है'
+                  : 'Credit for every translation and dataset, including OpenStreetMap'),
+              trailing: const Icon(Icons.chevron_right_rounded),
+              onTap: () => context.push('/sources'),
             ),
           ),
         ],

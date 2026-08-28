@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'package:go_router/go_router.dart';
+
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/visited.dart';
@@ -8,6 +10,7 @@ import '../../shared/widgets/source_chip.dart';
 import '../related/related_rail.dart';
 import 'temple_map.dart';
 import 'temple_models.dart';
+import 'temple_providers.dart';
 import 'visit_sheet.dart';
 import 'temple_style.dart';
 
@@ -367,6 +370,8 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
                     '${t.lat!.toStringAsFixed(4)}, ${t.lon!.toStringAsFixed(4)}'
                   ),
               ]),
+            if (t.lat != null && t.lon != null)
+              _NearbyTemples(templeId: t.id, hi: hi),
           ],
         ),
       ));
@@ -408,6 +413,7 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
                   ],
                 ),
               ),
+            _FestivalLinks(templeId: t.id, hi: hi),
           ],
         ),
       ));
@@ -988,6 +994,111 @@ class _LinksCard extends StatelessWidget {
       decoration: _cardDeco(context),
       child: Column(
           crossAxisAlignment: CrossAxisAlignment.start, children: children),
+    );
+  }
+}
+
+/// TM-02: real nearby temples ranked by coordinate distance, replacing the
+/// hand-written `nearbyTemples` prose some rows carry (which names things,
+/// but never links to them, and is absent where nobody wrote it).
+class _NearbyTemples extends ConsumerWidget {
+  final int templeId;
+  final bool hi;
+  const _NearbyTemples({required this.templeId, required this.hi});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final nearby =
+        ref.watch(nearbyTemplesProvider(templeId)).valueOrNull ?? const [];
+    if (nearby.isEmpty) return const SizedBox.shrink();
+    final scheme = Theme.of(context).colorScheme;
+
+    return Container(
+      margin: const EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.fromLTRB(18, 16, 18, 6),
+      decoration: _cardDeco(context),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(hi ? 'निकटवर्ती मंदिर' : 'Nearby temples',
+              style: const TextStyle(
+                  fontFamily: AppFonts.display,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 18)),
+          const SizedBox(height: 6),
+          for (final (temple, km) in nearby) ...[
+            Divider(color: scheme.outline.withValues(alpha: 0.14)),
+            InkWell(
+              onTap: () => context.push('/temple?id=${temple.id}'),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(temple.name(hi),
+                          style: const TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.w600)),
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                        hi
+                            ? '${km.toStringAsFixed(km < 10 ? 1 : 0)} किमी'
+                            : '${km.toStringAsFixed(km < 10 ? 1 : 0)} km',
+                        style: TextStyle(
+                            fontSize: 13,
+                            color: scheme.onSurface.withValues(alpha: 0.55))),
+                    const SizedBox(width: 4),
+                    Icon(Icons.chevron_right_rounded,
+                        size: 18, color: scheme.onSurface.withValues(alpha: 0.4)),
+                  ],
+                ),
+              ),
+            ),
+          ],
+          const SizedBox(height: 6),
+        ],
+      ),
+    );
+  }
+}
+
+/// TM-03: the temple's own hand-written festival list above is plain text
+/// with no link anywhere in the app. This adds a small chip row into the
+/// real Festival Explorer, driven by the build-time `link_temples_to_
+/// festivals` rule (temple deity matched to `festivals.deity_entity_id`)
+/// rather than fuzzy-matching the two independently-written festival name
+/// lists against each other. Renders nothing when no link was found.
+class _FestivalLinks extends ConsumerWidget {
+  final int templeId;
+  final bool hi;
+  const _FestivalLinks({required this.templeId, required this.hi});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final items = ref
+            .watch(relatedProvider(
+                (src: 'content', table: 'temples', id: templeId)))
+            .valueOrNull ??
+        const [];
+    final festivals = items.where((it) => it.dstKind == 'festival').toList();
+    if (festivals.isEmpty) return const SizedBox.shrink();
+    final scheme = Theme.of(context).colorScheme;
+
+    return Padding(
+      padding: const EdgeInsets.only(top: 4, bottom: 8),
+      child: Wrap(
+        spacing: 8,
+        runSpacing: 8,
+        children: [
+          for (final f in festivals)
+            ActionChip(
+              avatar: Icon(Icons.calendar_month_rounded,
+                  size: 15, color: scheme.secondary),
+              label: Text(f.title(hi)),
+              onPressed: () => context.push(f.route),
+            ),
+        ],
+      ),
     );
   }
 }

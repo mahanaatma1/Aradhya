@@ -32,6 +32,7 @@ import '../../features/journey/journey_detail_screen.dart';
 import '../../features/journey/journey_list_screen.dart';
 import '../../features/hubs/jyotish_hub_screen.dart';
 import '../../features/hubs/profile_screen.dart';
+import '../../features/hubs/sources_screen.dart';
 import '../../features/astrology/ashtakoot.dart';
 import '../../features/astrology/birth_form_screen.dart';
 import '../../features/astrology/kundli_screen.dart';
@@ -471,6 +472,9 @@ final appRouter = GoRouter(
 
     // Bookmarks
     GoRoute(path: '/bookmarks', builder: (c, s) => const BookmarksScreen()),
+
+    // Sources — the OSM/ODbL and other licence attributions (TM-04).
+    GoRoute(path: '/sources', builder: (c, s) => const SourcesScreen()),
 
     // Yatra — temple detail (the directory lives in the Yatra tab)
     GoRoute(
