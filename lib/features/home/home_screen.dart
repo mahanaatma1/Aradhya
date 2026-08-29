@@ -7,7 +7,10 @@ import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../gyan/gyan_home_section.dart';
 import '../mandir/mandir_models.dart';
+import '../sadhana/sadhana_models.dart' show kPractices;
+import '../sadhana/sadhana_providers.dart' show practicesDoneTodayProvider;
 import '../../core/providers/app_providers.dart';
+import '../../core/user/reading_progress.dart';
 import '../../core/user/streak.dart';
 import '../../shared/currency_icons.dart';
 import '../../shared/reference_art.dart';
@@ -119,6 +122,12 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               child: _MandirCard(hi: hi),
             ),
 
+            // Sadhana — today's practice, one tap from the daily view.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+              child: _SadhanaCard(hi: hi),
+            ),
+
             // Engage & Learn — Quiz · Japa · Breathing · Riddles.
             _SectionTitle(hi ? 'अभ्यास और ज्ञान' : 'Engage & Learn'),
             Padding(
@@ -174,6 +183,16 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
 
             // Explore Gyan — entry point to the 14 knowledge modules.
             const GyanHomeSection(),
+
+            // Continue reading — the single most direct path back into the
+            // exact verse someone left off at, rather than making them
+            // re-navigate scripture -> book -> page. Absent entirely until
+            // at least one book has been opened, so a first-run Home never
+            // shows a hollow "0% read" card.
+            const Padding(
+              padding: EdgeInsets.fromLTRB(16, 4, 16, 4),
+              child: _ContinueReadingCard(),
+            ),
 
             // Scriptures — one per row, each opening its chapters directly.
             _SectionTitle(hi ? 'ग्रंथ' : 'Scriptures'),
@@ -1673,6 +1692,181 @@ class _MandirCard extends StatelessWidget {
               ),
             ),
             const Icon(Icons.chevron_right_rounded, color: Color(0xFFE6C34A)),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Resumes at the exact verse someone left off at — the book title, a
+/// progress bar, and a tap straight into `/scriptures/book/:id?v=:index`,
+/// rather than making a returning reader retrace scripture -> book -> page
+/// on their own. Reads the same `readingProgressProvider` the You tab's
+/// `YourReadingSection` already aggregates from; this just surfaces its
+/// single most useful row (the most recently read book) at the top of Home,
+/// where a returning reader actually looks first.
+class _ContinueReadingCard extends ConsumerWidget {
+  const _ContinueReadingCard();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final hi = ref.watch(isHindiProvider);
+    final progress = ref.watch(readingProgressProvider);
+    if (progress.isEmpty) return const SizedBox.shrink();
+    final recent = ref.read(readingProgressProvider.notifier).mostRecent;
+    if (recent == null) return const SizedBox.shrink();
+
+    final book = ref.watch(scriptureBookProvider(recent.bookId)).valueOrNull;
+    // The card names the book, so it stays hidden until that title has
+    // actually loaded rather than showing "Continue reading" with nothing
+    // to continue.
+    if (book == null) return const SizedBox.shrink();
+
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: () => context.push(
+          '/scriptures/book/${recent.bookId}?v=${recent.lastSectionIdx}'),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF7A4A1E), Color(0xFF4A2A10)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.16),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: const Icon(Icons.menu_book_rounded,
+                  color: Color(0xFFE6C34A), size: 22),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(hi ? 'पढ़ना जारी रखें' : 'Continue reading',
+                      style: const TextStyle(
+                          fontSize: 10.5,
+                          letterSpacing: 1.2,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xFFE6C34A))),
+                  const SizedBox(height: 2),
+                  Text(book.title(hi),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                          fontFamily: AppFonts.display,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 17,
+                          color: Color(0xFFFCEFE2))),
+                  if (recent.sectionsTotal > 0) ...[
+                    const SizedBox(height: 8),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(3),
+                      child: LinearProgressIndicator(
+                        value: recent.fraction,
+                        minHeight: 4,
+                        backgroundColor: Colors.white.withValues(alpha: 0.15),
+                        color: const Color(0xFFE6C34A),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      hi
+                          ? '${recent.percent}% पूर्ण'
+                          : '${recent.percent}% complete',
+                      style: TextStyle(
+                          fontSize: 11.5,
+                          color: const Color(0xFFFCEFE2).withValues(alpha: 0.75)),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+            const SizedBox(width: 4),
+            const Icon(Icons.chevron_right_rounded, color: Color(0xFFE6C34A)),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Home entry to the Sadhana hub. Says how many of today's practices are
+/// done, because that is the one number a daily-practice tracker should lead
+/// with — not a streak, which frames the whole thing as a score to protect.
+class _SadhanaCard extends ConsumerWidget {
+  final bool hi;
+  const _SadhanaCard({required this.hi});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final done = ref.watch(practicesDoneTodayProvider).valueOrNull ?? 0;
+    final total = kPractices.length;
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: () => context.push('/sadhana'),
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF2F5D6B), Color(0xFF16323C)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 46,
+              height: 46,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.16),
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: const Icon(Icons.self_improvement_rounded,
+                  color: Color(0xFF8FDDDF), size: 24),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(hi ? 'साधना' : 'Sadhana',
+                      style: const TextStyle(
+                          fontFamily: AppFonts.display,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 19,
+                          color: Color(0xFFFCEFE2))),
+                  const SizedBox(height: 3),
+                  Text(
+                    done > 0
+                        ? (hi
+                            ? 'आज $total में से $done अभ्यास पूर्ण'
+                            : '$done of $total practices done today')
+                        : (hi ? 'आज का अभ्यास शुरू करें' : 'Begin today\'s practice'),
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      color: done > 0
+                          ? const Color(0xFF8FDDDF)
+                          : const Color(0xFFFCEFE2).withValues(alpha: 0.8),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: Color(0xFF8FDDDF)),
           ],
         ),
       ),
