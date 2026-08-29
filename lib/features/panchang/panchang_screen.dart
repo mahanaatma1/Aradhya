@@ -7,6 +7,7 @@ import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../shared/widgets/stitched_border.dart';
+import 'festivals.dart' show festivalOnDay;
 import 'panchang_engine.dart';
 import 'panchang_explain.dart';
 import 'panchang_providers.dart';
@@ -97,6 +98,19 @@ class PanchangScreen extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 14),
+
+          // Today's festival — closes the Panchang -> Festival step of the
+          // "Today -> Panchang -> Festival -> Puja Vidhi -> Mantra -> Temple"
+          // chain. Only shown for the day actually being viewed (not a
+          // 20-day lookahead like Home's banner): a panchang for a chosen
+          // date should say what falls ON that date, not what's coming up
+          // after it. Routes into the Festival Explorer, same as Home's
+          // banner, rather than guessing a link into puja/mantra content —
+          // festivals.dart here is the pure computational engine and
+          // carries no id into the SQL-backed Festival Explorer's own
+          // festival rows (FE-03/FE-04's deity/puja links live there, not
+          // here), so the Explorer is the correct, honest handoff point.
+          _TodaysFestivalBanner(date: date, hindi: hi),
 
           // Named Ekadashi banner (only on Ekadashi tithi)
           if (p.ekadashi != null) ...[
@@ -249,6 +263,74 @@ class PanchangScreen extends ConsumerWidget {
                   onTap: () => showPanchangExplanation(context, ref, 'muhurat')),
           ],
         ],
+      ),
+    );
+  }
+}
+
+/// Shows what `festivals.dart`'s own computation says falls on the date
+/// currently being viewed, if anything. Silent when the day carries none —
+/// most days genuinely have no named festival, and a banner every day would
+/// train a reader to stop looking at it.
+class _TodaysFestivalBanner extends StatelessWidget {
+  final DateTime date;
+  final bool hindi;
+  const _TodaysFestivalBanner({required this.date, required this.hindi});
+
+  @override
+  Widget build(BuildContext context) {
+    final hit = festivalOnDay(date, DateTime.now().timeZoneOffset);
+    if (hit == null) return const SizedBox.shrink();
+    final scheme = Theme.of(context).colorScheme;
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 14),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
+        onTap: () => context.push('/festivals'),
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+              AppColors.terracotta.withValues(alpha: 0.18),
+              AppColors.gold.withValues(alpha: 0.10),
+            ]),
+            borderRadius: BorderRadius.circular(16),
+            border:
+                Border.all(color: AppColors.terracotta.withValues(alpha: 0.3)),
+          ),
+          child: Row(
+            children: [
+              const Text('🪔', style: TextStyle(fontSize: 22)),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      hindi ? 'आज का पर्व' : "Today's Festival",
+                      style: TextStyle(
+                          fontSize: 10.5,
+                          letterSpacing: 1,
+                          fontWeight: FontWeight.w700,
+                          color: scheme.onSurface.withValues(alpha: 0.55)),
+                    ),
+                    Text(
+                      hit.name.call(hindi),
+                      style: const TextStyle(
+                          fontFamily: AppFonts.display,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(Icons.chevron_right_rounded,
+                  color: scheme.onSurface.withValues(alpha: 0.4)),
+            ],
+          ),
+        ),
       ),
     );
   }
