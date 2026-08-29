@@ -8,7 +8,7 @@ import '../../core/providers/app_providers.dart';
 import '../../core/user/bookmarks.dart';
 import '../../shared/widgets/async_view.dart';
 import '../../shared/widgets/source_chip.dart';
-import '../related/related_rail.dart';
+import 'entity_related_sections.dart';
 import 'entity_models.dart';
 import 'entity_providers.dart';
 import 'symbol_motifs.dart';
@@ -256,8 +256,7 @@ class _Body extends ConsumerWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: RelatedRail(
-              src: 'gyan', table: 'entities', id: entity.id),
+          child: EntityRelatedSections(entityId: entity.id),
         ),
         const SliverToBoxAdapter(child: SizedBox(height: 28)),
       ],
