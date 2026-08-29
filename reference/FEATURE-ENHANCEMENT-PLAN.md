@@ -1209,19 +1209,25 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 (`RD-03: related rail into the reader`). Status key: `[ ]` not started ·
 `[x]` done · `[~]` in progress · `[!]` blocked · `[-]` dropped, with a reason.
 
+Re-counted directly against the doc's own checkboxes (2026-08-29) — `[x]`
+counted as done, `[~]`/`[!]`/`[ ]` all counted as not-yet-done, since a
+partial or blocked item is not something ships. Several section totals grew
+since this table was first written (new IDs added as work progressed, e.g.
+NR-04); those are reflected here rather than the stale original counts.
+
 | Area | Done | Total |
 |---|---|---|
 | Quick wins | 6 | 6 |
-| Reader & Search | 1 | 11 |
-| Knowledge system | 4 | 27 |
-| Narrative | 0 | 8 |
-| Practice & personal | 4 | 12 |
-| Calendar & astrology | 1 | 13 |
-| Discovery & play | 0 | 11 |
-| Temples | 0 | 9 |
-| Cross-cutting | 3 | 16 |
-| Release gate | 0 | 17 |
-| **Total** | **19** | **130** |
+| Reader & Search | 10 | 11 |
+| Knowledge system | 20 | 31 |
+| Narrative | 19 | 23 |
+| Practice & personal | 19 | 20 |
+| Calendar & astrology | 12 | 13 |
+| Discovery & play | 5 | 7 |
+| Temples | 3 | 9 |
+| Cross-cutting | 7 | 17 |
+| Release gate | 5 | 16 |
+| **Total** | **106** | **153** |
 
 ## Quick wins — do these first
 
