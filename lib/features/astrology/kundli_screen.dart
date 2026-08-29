@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
+import 'package:share_plus/share_plus.dart';
 
+import '../../app/brand.dart';
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
@@ -52,6 +54,11 @@ class _KundliScreenState extends ConsumerState<KundliScreen> {
         appBar: AppBar(
           title: Text(birth.name, style: const TextStyle(fontSize: 18)),
           actions: [
+            IconButton(
+              tooltip: hi ? 'साझा करें' : 'Share',
+              icon: const Icon(Icons.ios_share_rounded),
+              onPressed: () => _shareSummary(chart, birth, hi),
+            ),
             TextButton(
               onPressed: () => context.pushReplacement('/astrology'),
               child: Text(hi ? 'संपादित करें' : 'Edit'),
@@ -89,6 +96,39 @@ class _KundliScreenState extends ConsumerState<KundliScreen> {
       ),
     );
   }
+}
+
+/// Shares a plain-text summary of the chart — Lagna, Moon sign/nakshatra,
+/// and any auspicious yogas found. Deliberately text, not a rendered image
+/// like Milan's share card: Milan's card is one fixed-size result screen,
+/// while a Kundli has five tabs of detail, and a screenshot of one tab would
+/// misrepresent the chart as smaller than it is. A text summary can carry
+/// the headline facts without pretending to be the whole reading, and it
+/// ends with the same "not a substitute for an astrologer" framing Milan's
+/// disclaimer already established for this feature area.
+Future<void> _shareSummary(BirthChart chart, BirthDetails birth, bool hi) async {
+  final moon = chart.byKey('moon');
+  final yogas = detectYogas(chart);
+  final lines = <String>[
+    hi ? '${birth.name} की कुंडली' : "${birth.name}'s Kundli",
+    '',
+    '${hi ? 'लग्न' : 'Lagna'}: ${signNames[chart.lagnaRashi](hi)}',
+    '${hi ? 'चंद्र राशि' : 'Moon Sign'}: ${signNames[moon.graha.rashi](hi)}',
+    '${hi ? 'नक्षत्र' : 'Nakshatra'}: ${nakshatraNames[moon.graha.nakshatra](hi)}',
+  ];
+  if (yogas.isNotEmpty) {
+    lines.add('');
+    lines.add(hi ? 'शुभ योग:' : 'Auspicious yogas:');
+    for (final y in yogas.take(5)) {
+      lines.add('• ${yogaTitle(y.type, hi)}');
+    }
+  }
+  lines.add('');
+  lines.add(hi
+      ? '${Brand.nameHi} पर बनाई गई कुंडली — पारंपरिक ज्योतिष पर आधारित, किसी ज्योतिषी की सलाह का विकल्प नहीं।'
+      : "Generated with ${Brand.name} — a traditional astrological reading, not a substitute for an astrologer's advice.");
+
+  await SharePlus.instance.share(ShareParams(text: lines.join('\n')));
 }
 
 // ---------------- shared bits ----------------
