@@ -33,6 +33,8 @@ from content.tools.common import (  # noqa: E402
     REPO_ROOT, SOURCES_DIR, excluded_domains, fold, read_jsonl, registry_slugs,
 )
 
+CURATION_DIR = CONTENT_DIR / "curation"
+
 # ---------------------------------------------------------------------------
 # Module map: data subdir -> (json schema id, gyan table)
 # ---------------------------------------------------------------------------
@@ -74,6 +76,7 @@ REL_INVERSE: dict[str, str] = {
     "related_to": "related_to", "symbol_of": "has_symbol",
     "has_symbol": "symbol_of", "associated_with": "associated_with",
     "part_of": "has_part", "has_part": "part_of",
+    "member_of": "has_member", "has_member": "member_of",
 }
 LINEAGE_RELS = {"father_of", "mother_of", "spouse_of", "sibling_of", "child_of",
                 "parent_of", "guru_of", "disciple_of"}
@@ -638,6 +641,34 @@ def check_routes(rows: list[Row], rep: Report) -> None:
                         file=r.rel, line=r.line, module=r.module)
 
 
+def check_curation_gate(rep: Report) -> None:
+    """CM-03: the curation folder gate must stay physical, not just a habit.
+
+    `extract.py`'s `load_curation()` reads `curation/approved/` only, so a
+    file left at the top level of `curation/` (outside any of the three
+    subfolders) is silently invisible to `--promote` -- which reads as "my
+    edit didn't take" rather than the actual cause, a file in the wrong
+    place. Catching that here turns a confusing no-op into a named error.
+    """
+    if not CURATION_DIR.is_dir():
+        return
+    required = {"inbox", "approved", "rejected"}
+    present = {p.name for p in CURATION_DIR.iterdir() if p.is_dir()}
+    missing = required - present
+    if missing:
+        rep.add("error", "curation-gate-missing",
+                f"content/curation/ is missing {sorted(missing)} -- "
+                "the inbox/approved/rejected gate must exist for "
+                "extract.py --promote to enforce it")
+    stray = [p.name for p in CURATION_DIR.glob("*.jsonl") if p.is_file()]
+    if stray:
+        rep.add("error", "curation-gate-bypassed",
+                f"content/curation/ has file(s) outside inbox/approved/"
+                f"rejected: {stray} -- these are invisible to "
+                "extract.py --promote (which reads approved/ only); move "
+                "each into the right subfolder")
+
+
 def check_index_version(rep: Report) -> None:
     """14. gyan.indexed_content_version must match content.sqlite (Risk 2)."""
     if not GYAN_DB.exists():
@@ -742,6 +773,8 @@ def run(strict: bool = False, skip_index_check: bool = False) -> Report:
         check_verification(rows, rep, strict)
         check_routes(rows, rep)
         check_assets(rows, rep, strict)
+
+    check_curation_gate(rep)
 
     if not skip_index_check:
         check_index_version(rep)

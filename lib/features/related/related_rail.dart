@@ -188,14 +188,46 @@ class _RelatedCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: 30,
-                height: 30,
-                decoration: BoxDecoration(
-                  gradient: style.linear,
-                  borderRadius: BorderRadius.circular(9),
-                ),
-                child: Icon(ks.icon, size: 16, color: Colors.white),
+              Row(
+                children: [
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      gradient: style.linear,
+                      borderRadius: BorderRadius.circular(9),
+                    ),
+                    child: Icon(ks.icon, size: 16, color: Colors.white),
+                  ),
+                  // NR-04: names the specific relation ("Guru", "Wields")
+                  // when the edge carries one, instead of leaving every card
+                  // to read as a generic "related entity". Absent for most
+                  // edges (deity-name matches, verse mentions, …), which is
+                  // correct — those aren't a named relation to state.
+                  if (item.relationLabel(hindi) != null) ...[
+                    const SizedBox(width: 6),
+                    Flexible(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 3),
+                        decoration: BoxDecoration(
+                          color: style.gradient.last.withValues(alpha: 0.14),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: Text(
+                          item.relationLabel(hindi)!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 9.5,
+                            fontWeight: FontWeight.w700,
+                            color: style.gradient.last,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ),
               const SizedBox(height: 8),
               Expanded(

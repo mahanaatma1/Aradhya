@@ -90,7 +90,16 @@ CREATE TABLE entities (
   primary_source_url    TEXT,
   last_verified_at      TEXT,
   verification_status   TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  -- CM-01/CM-02: what kind of statement this row's substance is, and how
+  -- trustworthy its source is. Nullable — additive on existing rows, no
+  -- backfill required. See "Claim classification" / "Confidence model" in
+  -- the plan doc for the full rationale.
+  claim_type             TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality          TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_entities_kind ON entities(kind, importance);
 CREATE INDEX ix_entities_cat  ON entities(kind, category);
@@ -117,6 +126,10 @@ CREATE INDEX ix_alias_fold   ON entity_aliases(alias_fold);
 --   epic    : wields wielded_by killed_by incarnation_of mount_of consort_of
 --   text    : authored appears_in mentioned_in
 --   place   : located_in ruled_by worshipped_at
+--   dynasty : member_of has_member -- a person to the `kind='dynasty'`
+--             entity they belong to. NOT the same as ruled_by (place -> its
+--             ruler): a dynasty entity is a lineage, not a place, and someone
+--             can be a member without ever having reigned.
 --   generic : related_to symbol_of associated_with part_of
 -- build.py materialises inverse pairs so every query is single-direction.
 CREATE TABLE relations (
@@ -155,7 +168,12 @@ CREATE TABLE cosmology_nodes (
   primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at     TEXT,
   verification_status  TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_cosmo_track ON cosmology_nodes(track, order_no);
 
@@ -211,6 +229,14 @@ CREATE TABLE narrative_nodes (
   prev_node_id         INTEGER,       next_node_id INTEGER,
   -- --------------------------------------------------------------------
 
+  -- NR-01: sequence_no orders the narrative telling, not real-world time --
+  -- a Ramayana scene comes before another because the poem tells it first,
+  -- not because it happened first by any dateable calendar. 'traditional' is
+  -- the default because that is what every node authored so far actually is:
+  -- an ordering handed down by the text, not derived from an external date.
+  chronology_confidence TEXT NOT NULL DEFAULT 'traditional'
+      CHECK (chronology_confidence IN ('traditional','disputed','confirmed')),
+
   place_entity_id      INTEGER REFERENCES entities(id),
   scripture_section_id INTEGER,       -- soft link into main.scripture_sections (no FK: other DB)
   image_asset          TEXT,
@@ -218,7 +244,12 @@ CREATE TABLE narrative_nodes (
   primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at     TEXT,
   verification_status  TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_narr_seq ON narrative_nodes(epic, recension, sequence_no);
 -- Story mode groups by section then arc; the timeline still uses ix_narr_seq.
@@ -247,7 +278,12 @@ CREATE TABLE dharma_scenarios (
   primary_source_name TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at    TEXT,
   verification_status TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type           TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality       TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 
 -- No 'correct' answer: choices carry a guna, never a score. (§4.11)
@@ -279,7 +315,12 @@ CREATE TABLE vidya_topics (
   primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at     TEXT,
   verification_status  TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_vidya_discipline ON vidya_topics(discipline);
 
@@ -307,7 +348,12 @@ CREATE TABLE festivals (
   primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at     TEXT,
   verification_status  TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_fest_month ON festivals(lunar_month, paksha, tithi);
 
@@ -329,7 +375,12 @@ CREATE TABLE qa_pairs (
   primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at     TEXT,
   verification_status  TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_qa_fold ON qa_pairs(question_fold);
 
@@ -345,7 +396,12 @@ CREATE TABLE journal_prompts (
   primary_source_name TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at    TEXT,
   verification_status TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type           TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality       TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_prompt_theme ON journal_prompts(theme);
 
@@ -364,7 +420,12 @@ CREATE TABLE learning_paths (
   primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
   last_verified_at     TEXT,
   verification_status  TEXT NOT NULL DEFAULT 'unverified'
-      CHECK (verification_status IN ('unverified','verified','disputed'))
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
 );
 CREATE INDEX ix_paths_level ON learning_paths(level, order_no);
 

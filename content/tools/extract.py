@@ -47,6 +47,10 @@ from content.tools.common import (  # noqa: E402
 )
 
 CURATION_DIR = CONTENT_DIR / "curation"
+# CM-03: the gate is physical, not procedural. AI output lands in inbox/ and
+# is NEVER read here; a human moves a file to approved/ (or rejected/, with a
+# reason) after checking it against the cited source. Only approved/ is read.
+CURATION_APPROVED_DIR = CURATION_DIR / "approved"
 
 
 def load_staged() -> dict[str, dict]:
@@ -63,10 +67,17 @@ def load_staged() -> dict[str, dict]:
 
 
 def load_curation() -> dict[str, dict]:
+    """CM-03: reads `curation/approved/` only.
+
+    `curation/inbox/` (AI-generated candidates, never built from) and
+    `curation/rejected/` (kept with a reason, so a bad row is not
+    regenerated) are never read here — the folder itself is the enforcement,
+    not a convention someone has to remember.
+    """
     out: dict[str, dict] = {}
-    if not CURATION_DIR.is_dir():
+    if not CURATION_APPROVED_DIR.is_dir():
         return out
-    for path in sorted(CURATION_DIR.glob("*.jsonl")):
+    for path in sorted(CURATION_APPROVED_DIR.glob("*.jsonl")):
         for _line, obj in read_jsonl(path):
             slug = obj.get("slug")
             if slug:

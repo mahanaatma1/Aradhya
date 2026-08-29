@@ -62,6 +62,73 @@ def _git_sha() -> str:
         return "nogit"
 
 
+# ---------------------------------------------------------------------------
+# CM-04: build snapshots and rollback
+# ---------------------------------------------------------------------------
+
+BUILDS_DIR = REPO_ROOT / "content" / "builds"
+BUILDS_CURRENT_FILE = BUILDS_DIR / "CURRENT"
+
+
+def _sha256(path: Path) -> str:
+    import hashlib
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def write_build_snapshot(version: str) -> Path | None:
+    """Retains this build's artifacts so a bad release is one command to undo.
+
+    Windows filesystems don't reliably support symlinks without elevated
+    permissions or developer mode, so `current -> previous` (as the plan doc
+    phrases it) is a plain pointer FILE, `content/builds/CURRENT`, holding the
+    trusted snapshot's directory name -- readable and rewritable everywhere,
+    same intent, no platform-specific link handling. `rollback.py` reads it
+    to find "the last one that worked" and restore from it.
+
+    Best-effort: a snapshot failure must never fail the build itself -- the
+    thing being protected against is a BAD build silently becoming the new
+    normal, not the build tool crashing because a copy failed.
+    """
+    try:
+        stamp = f"{datetime.now(timezone.utc):%Y-%m-%d}_{_git_sha()}"
+        out_dir = BUILDS_DIR / stamp
+        out_dir.mkdir(parents=True, exist_ok=True)
+
+        manifest_path = REPO_ROOT / "assets" / "manifest.json"
+        snapshot_path = CONTENT_DIR / "build" / "content_snapshot.json"
+        report_path = CONTENT_DIR / "build" / "report.html"
+
+        copied: dict[str, str] = {}
+        for name, src in (
+            ("gyan.sqlite", GYAN_DB),
+            ("manifest.json", manifest_path),
+            ("content_snapshot.json", snapshot_path),
+            ("report.html", report_path),
+        ):
+            if src.exists():
+                dst = out_dir / name
+                shutil.copy2(src, dst)
+                copied[name] = _sha256(dst)
+
+        (out_dir / "checksums.json").write_text(
+            json.dumps({"version": version, "sha256": copied}, indent=2),
+            encoding="utf-8")
+
+        # Overwritten every build: this file always names the MOST RECENT
+        # retained snapshot, which is what a rollback restores FROM (i.e. the
+        # build being replaced, not the one being rolled back to -- rollback.py
+        # lists content/builds/ and asks which one to restore).
+        BUILDS_CURRENT_FILE.write_text(stamp, encoding="utf-8")
+        return out_dir
+    except Exception as e:                                     # noqa: BLE001
+        print(f"  build snapshot skipped ({type(e).__name__}: {e})")
+        return None
+
+
 def _jstr(v: Any) -> str | None:
     """Serialise a list/dict column, or None when empty -- never '[]' noise."""
     if v is None or v == [] or v == {}:
@@ -82,6 +149,50 @@ def _status(row: dict) -> str:
     if en == "verified" and hi == "verified":
         return "verified"
     return "unverified"
+
+
+_CLAIM_TYPES = {
+    "traditional", "textual", "historical", "archaeological",
+    "modern_interpretation", "scientific",
+}
+_SOURCE_QUALITIES = {"primary", "secondary", "reference"}
+
+
+def _claim_type(row: dict) -> str | None:
+    """CM-01: what kind of statement this row's substance is.
+
+    Optional on every content JSONL row -- most existing rows have not been
+    classified yet, and this must not force authors to guess a value just to
+    pass validation. An unrecognised value is dropped (None) rather than
+    inserted, so a typo shows as absent data rather than a silently-wrong tag.
+    """
+    v = row.get("claim_type")
+    return v if v in _CLAIM_TYPES else None
+
+
+def _source_quality(row: dict) -> str | None:
+    """CM-02: how trustworthy the row's own primary source is.
+
+    Same optionality as `_claim_type` -- inferring this from `sources[].
+    is_primary` would be a reasonable default for many rows, but this session
+    is adding the column and its plumbing, not auto-classifying the existing
+    corpus; that backfill is real content-review work left for later.
+    """
+    v = row.get("source_quality")
+    return v if v in _SOURCE_QUALITIES else None
+
+
+def _chronology(row: dict) -> str:
+    """NR-01: is sequence_no a narrative order or a historical one.
+
+    Optional and absent on every row authored so far, so it defaults to
+    'traditional' -- the ordering the text itself hands down, which is what
+    sequence_no has always meant here (§4.8). A future row can set it to
+    'confirmed' only once it is backed by an actual date, or 'disputed' where
+    tellings disagree on the order.
+    """
+    v = row.get("chronology_confidence")
+    return v if v in ("traditional", "disputed", "confirmed") else "traditional"
 
 
 # ---------------------------------------------------------------------------
@@ -197,14 +308,16 @@ class Builder:
                     short_description_en, short_description_hi,
                     long_description_en, long_description_hi,
                     region, tradition, tags, props, image_asset, glyph,
-                    importance, wikidata_qid, verification_status)
-                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    importance, wikidata_qid, verification_status,
+                    claim_type, source_quality)
+                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (o["slug"], o["kind"], t.get("en"), t.get("hi"), t.get("sa"),
                  t.get("iast"), o.get("category"),
                  sd.get("en"), sd.get("hi"), ld.get("en"), ld.get("hi"),
                  o.get("region"), o.get("tradition"), _jstr(o.get("tags")),
                  _jstr(o.get("props")), o.get("image_asset"), o.get("glyph"),
-                 o.get("importance", 3), o.get("wikidata_qid"), _status(o)))
+                 o.get("importance", 3), o.get("wikidata_qid"), _status(o),
+                 _claim_type(o), _source_quality(o)))
             eid = cur.lastrowid
             self.entity_ids[o["slug"]] = eid
 
@@ -364,14 +477,14 @@ class Builder:
                     short_description_en, short_description_hi,
                     long_description_en, long_description_hi,
                     lesson_en, lesson_hi, place_entity_id, image_asset,
-                    tags, region, verification_status,
+                    tags, region, verification_status, chronology_confidence,
                     arc_slug, arc_title_en, arc_title_hi, arc_no,
                     quick_summary_en, quick_summary_hi,
                     story_en, story_hi,
                     key_moments_en, key_moments_hi,
                     reflection_en, reflection_hi,
                     themes, illustration_asset)
-                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
+                   values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,
                            ?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (o["slug"], o["epic"], o["recension"], bl.get("en"), bl.get("hi"),
                  o.get("book_no"), o["sequence_no"], t.get("en"), t.get("hi"),
@@ -379,7 +492,7 @@ class Builder:
                  lesson.get("en"), lesson.get("hi"),
                  self.entity_ids.get(o.get("place_entity_slug") or ""),
                  o.get("image_asset"), _jstr(o.get("tags")), o.get("region"),
-                 _status(o),
+                 _status(o), _chronology(o),
                  # ---- Story Cards (SC-01). All optional: an event written
                  # before this migration simply carries nulls here.
                  arc.get("slug"), arc.get("title_en"), arc.get("title_hi"),
@@ -569,8 +682,10 @@ class Builder:
         name, ref, url, lv = self.link_sources(table, item_id, row)
         self.db.execute(
             f"""update {table} set primary_source_name=?, primary_source_ref=?,
-                primary_source_url=?, last_verified_at=? where id=?""",
-            (name, ref, url, lv, item_id))
+                primary_source_url=?, last_verified_at=?,
+                claim_type=?, source_quality=? where id=?""",
+            (name, ref, url, lv, _claim_type(row), _source_quality(row),
+             item_id))
 
 
 # ---------------------------------------------------------------------------
@@ -863,6 +978,10 @@ def main(argv: list[str] | None = None) -> int:
     except Exception as e:                                   # noqa: BLE001
         print(f"  content diff skipped ({type(e).__name__})")
     print(f"  SOURCES.md               regenerated")
+
+    snap_dir = write_build_snapshot(version)
+    if snap_dir:
+        print(f"  build snapshot            {snap_dir.relative_to(REPO_ROOT)}")
     return 0
 
 

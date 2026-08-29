@@ -1463,6 +1463,22 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       but the excerpt alone doesn't name him, so confidence medium, not
       high). Rebuilt again: +6 relations, +3 related_edges, both directions
       confirmed. `flutter test`: 350/350 pass throughout both rebuilds.
+- [x] **NR-04** Surface `RelatedItem.reason` on `_RelatedCard`, named by
+      FT-01 above as the real follow-up its own filter work exposed. Added
+      `RelatedItem.relationLabel(hi)`, matching the `relation:<rel_type>`
+      shape of `reason` against a bilingual label table covering the
+      legible half of `validate.py`'s `REL_INVERSE` vocabulary (guru_of,
+      disciple_of, wields, killed_by, member_of, and 18 more) — deliberately
+      returns null, and the card stays silent, for reasons that are match-
+      mechanism internals a reader shouldn't see verbatim (`deity:krishna`,
+      `alias:vishnu`, `named_in_verse`) or generic types that add nothing
+      over the card's own kind glyph (`related_to`, `associated_with`).
+      Rendered as a small tag beside the kind icon in `_RelatedCard`, shown
+      only when a label exists. Verified against real data: Vasishtha's
+      card on Rama's page reads "Guru", Rama's card on Vasishtha's page
+      reads "Disciple" — both from the actual `relation:guru_of`/
+      `relation:disciple_of` edges KG-03/FT-01's work produced.
+      `flutter analyze` clean, 360/360 tests pass
 - [ ] **FT-02** Recursive layout to depth 3 — **not implemented, and should
       not be without a design decision first.** `_Tree`'s own doc comment
       states this is deliberate: "Deliberately not a full recursive
@@ -2337,10 +2353,60 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
 - [ ] **TY-03** Confirm and record font licences in About
 - [!] **AU-01** Audio — **deferred by decision.** Mantra, aarti, Gita recitation and Sanskrit Pronunciation all blocked
 - [ ] **MA-01** **Sanskrit reader needed** before word-by-word mantra analysis
-- [ ] **CM-01** Add `claim_type` to every content table
-- [ ] **CM-02** Add `source_quality` and `confidence`
-- [ ] **CM-03** `curation/inbox|approved|rejected`; promote reads `approved/` only
-- [ ] **CM-04** Build snapshots in `content/builds/<date>_<sha>/` with rollback
+- [x] **CM-01** Add `claim_type` to every content table — added a nullable
+      `claim_type TEXT CHECK (... OR claim_type IS NULL)` column, matching
+      the 6-value vocabulary from "Claim classification" above, to all 9
+      content tables (`entities`, `cosmology_nodes`, `narrative_nodes`,
+      `dharma_scenarios`, `vidya_topics`, `festivals`, `qa_pairs`,
+      `journal_prompts`, `learning_paths`) — deliberately excluding pure
+      junction/index tables (`entity_aliases`, `item_sources`,
+      `related_edges`, `search_*`, `meta`), which carry no independent claim
+      of their own. Nullable so existing rows need no backfill; a new
+      `_claim_type(row)` helper in `build.py` reads an optional top-level
+      `claim_type` field from JSONL and drops unrecognised values to `None`
+      rather than inserting a typo silently. `validate`/`build`/`flutter
+      test` all pass (360/360), "nothing lost"
+- [x] **CM-02** Add `source_quality` and `confidence` — `confidence` already
+      existed on `relations` and `qa_pairs` from earlier work; added
+      `source_quality TEXT` (primary/secondary/reference) alongside
+      `claim_type` on the same 9 tables in the same pass, wired through the
+      same `_stamp()` chokepoint in `build.py` that already sets
+      `primary_source_*`/`last_verified_at` for 8 of the 9 (entities' own
+      insert sets it directly). Backfilling real values across the existing
+      corpus is content-review work, out of scope here — this session adds
+      the column and its plumbing, not an auto-classification pass
+- [x] **CM-03** `curation/inbox|approved|rejected`; promote reads `approved/`
+      only — `content/curation/` held 4 files flat with no subfolder gate;
+      created the three subfolders, moved the 4 existing (already-published)
+      files into `approved/`, and changed `extract.py`'s `load_curation()`
+      to glob `curation/approved/*.jsonl` exclusively — `inbox/` and
+      `rejected/` are now structurally unreachable from `--promote`, not
+      just conventionally off-limits. Added `validate.py`'s
+      `check_curation_gate`: errors if the three subfolders are missing, or
+      if a `.jsonl` file is left at `curation/`'s top level (which would be
+      silently invisible to promote — verified this actually fires by
+      creating a stray file and confirming the error, then removing it).
+      Documented the workflow in `content/curation/README.md`. `extract.py
+      --todo`/`--audit` both run clean against the new layout
+- [x] **CM-04** Build snapshots in `content/builds/<date>_<sha>/` with
+      rollback — new `write_build_snapshot()` in `build.py`, called at the
+      end of every successful build: copies `gyan.sqlite`, `manifest.json`,
+      `content_snapshot.json` and `report.html` into
+      `content/builds/<date>_<sha>/`, plus a `checksums.json` (sha256 per
+      file). `current -> previous` from the plan's own phrasing is a plain
+      pointer FILE here (`content/builds/CURRENT`) rather than a symlink —
+      Windows filesystems don't reliably support symlinks without elevated
+      permissions, and a text file holding the snapshot's directory name
+      does the same job everywhere. New `content/tools/rollback.py`
+      (`--list`, `<stamp>`, `--previous`) restores the matched set of files
+      together (never a single file alone, since a `gyan.sqlite` paired
+      with the wrong `manifest.json` is its own kind of broken build) and
+      **refuses to restore a snapshot that fails its own checksum** —
+      verified both paths directly: a real restore succeeds and reports
+      what it restored; a deliberately-corrupted snapshot is correctly
+      rejected before touching anything live. `content/builds/` added to
+      `.gitignore` — each snapshot carries a full DB copy, a local/CI
+      rollback aid, not something to version
 - [x] **CM-05** `content_diff.py` fails the build on any content loss
 - [x] **CM-06** `test/content_integrity_test.dart` floors
 - [x] **CM-07** `ARCHITECTURE-GUARDRAILS.md`
@@ -2367,12 +2433,47 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       Meaning drops from 100% coverage to roughly 3–15% English and 0% Hindi
       until commissioned translation fills it back in — which is what makes
       RD-02's Meaning empty state load-bearing rather than defensive
-- [ ] **RG-02** `meta.data_source` no longer says "DEV FIXTURE"
-- [ ] **RG-03** Zero manifest rows with `replace_before_ship: true`
-- [ ] **RG-04** `reference/ishvarvaani-apk/` out of the shipped tree
-- [ ] **RG-05** `build.py --strict` passes — 335 unverified rows today
-- [ ] **RG-06** `SOURCES.md` attribution rendered in About
-- [ ] **RG-07** `indexed_content_version` matches after any content swap
+- [ ] **RG-02** `meta.data_source` no longer says "DEV FIXTURE" — **genuinely
+      blocked on RG-01**, not a code fix: `meta.data_source` is set inside
+      `content.sqlite` itself (the legacy Ishvarvaani fixture), and flipping
+      the string without the underlying data actually being re-sourced would
+      misrepresent the data's real provenance — exactly what the "don't
+      compromise" discipline forbids. Confirmed by reading the value
+      directly (`DEV FIXTURE (Ishvarvaani) - replace before store
+      submission`) and finding no writer for it anywhere in `content/tools/`
+- [x] **RG-03** Zero manifest rows with `replace_before_ship: true` —
+      **already true.** Checked directly: `assets/manifest.json` has 44
+      `replace_before_ship` keys, all `false`. No code or content change
+      needed; the plan's own status line was stale
+- [x] **RG-04** `reference/ishvarvaani-apk/` out of the shipped tree —
+      **already true independent of the folder's presence**, confirmed by
+      checking `pubspec.yaml`'s `flutter.assets` list directly: the folder
+      was never referenced there, so nothing under `reference/` was ever
+      bundled into an actual app build regardless of what sat in the git
+      repo. The 156 MB folder (a third party's compiled APK, git-tracked)
+      was still sitting in the repo for hygiene/legal reasons; removed with
+      the user's explicit confirmation (`git rm`)
+- [ ] **RG-05** `build.py --strict` passes — **2,552 validation errors
+      today** (re-measured this session; the 335 figure is stale), every
+      one an `unverified` status on a real content row — this is a content-
+      verification backlog, not a code task, and belongs with FE-01/DH-01/
+      AK-01/KG-03/KG-04 rather than the code batch it was first grouped
+      into. Left undone
+- [x] **RG-06** `SOURCES.md` attribution rendered in About — **done in an
+      earlier session**, tick was stale here: `SourcesScreen`
+      (`lib/features/hubs/sources_screen.dart`) lists every source whose
+      content actually ships, OpenStreetMap and data.gov.in first (both
+      legally require attribution), routed from a new "Sources" row in the
+      Profile tab's About section via `/sources`
+- [x] **RG-07** `indexed_content_version` matches after any content swap —
+      **already fully implemented**, confirmed by reading the whole chain:
+      `build.py` writes `indexed_content_version` into `gyan.meta`,
+      `validate.py`'s `check_index_version` compares it against
+      `content.sqlite`'s `content_version` and errors on `stale-index` if
+      they disagree, and `content_database.dart`'s `isSearchIndexStale()`
+      reads both live and would warn the UI rather than crash. Re-ran
+      `validate.py` against the current build — no mismatch reported. No
+      change needed
 - [ ] **RG-08** Privacy policy states journal, progress and interests stay on device
 - [ ] **RG-09** **Run the app on a real device** — never yet done
 - [ ] **RG-10** Offline verification with radios off
