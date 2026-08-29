@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../app/brand.dart';
 import '../../app/theme/app_theme.dart';
@@ -241,6 +242,26 @@ class ProfileScreen extends ConsumerWidget {
                       : 'Personalization reset.'),
                 ));
               },
+            ),
+          ),
+          // RG-08: the store listings link here, and a reader should be able
+          // to reach the same page from inside the app without hunting for
+          // it in a store description. Points at the live policy on
+          // aradhya.app, which states plainly what stays on-device (journal,
+          // bookmarks, streaks, japa counts) — see website/src/pages/
+          // Privacy.jsx for the actual text this links to.
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: ListTile(
+              leading:
+                  Icon(Icons.privacy_tip_outlined, color: scheme.primary),
+              title: Text(hi ? 'गोपनीयता नीति' : 'Privacy Policy'),
+              subtitle: Text(hi
+                  ? 'आपकी डायरी, प्रगति और रुचियाँ इसी उपकरण पर रहती हैं'
+                  : 'Your journal, progress and interests stay on this device'),
+              trailing: const Icon(Icons.open_in_new_rounded, size: 18),
+              onTap: () => launchUrl(Uri.parse('https://aradhya.app/privacy'),
+                  mode: LaunchMode.externalApplication),
             ),
           ),
           const SizedBox(height: 16),

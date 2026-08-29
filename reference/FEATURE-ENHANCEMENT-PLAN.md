@@ -2474,7 +2474,20 @@ Tick as you go: `- [ ]` becomes `- [x]`. IDs are stable — quote them in commit
       reads both live and would warn the UI rather than crash. Re-ran
       `validate.py` against the current build — no mismatch reported. No
       change needed
-- [ ] **RG-08** Privacy policy states journal, progress and interests stay on device
+- [x] **RG-08** Privacy policy states journal, progress and interests stay on
+      device — `website/src/pages/Privacy.jsx` already existed with real,
+      specific text (not a vague "we don't collect data" placeholder):
+      "Your bookmarks, streaks, japa counts and journal entries are written
+      to a database on your own device," "no analytics library, no crash
+      reporter... no code that makes a network request." The plan's tick
+      was stale, not the policy. What was genuinely missing: the app itself
+      had a "Privacy" section in the Profile tab but no link to this page
+      anywhere — a store listing links to a privacy policy from *outside*
+      the app, but a reader inside the app had no way to reach the same
+      page. Added a "Privacy Policy" row linking to the live
+      `https://aradhya.app/privacy`, opened externally, right below the
+      existing "Reset personalization" row. `flutter analyze` clean,
+      360/360 tests pass
 - [ ] **RG-09** **Run the app on a real device** — never yet done
 - [ ] **RG-10** Offline verification with radios off
 - [ ] **RG-11** Fresh install
