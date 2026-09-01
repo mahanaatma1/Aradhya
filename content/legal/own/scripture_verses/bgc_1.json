@@ -1,0 +1,386 @@
+{
+ "slug": "bgc_1",
+ "title_en": "Arjuna Vishada Yoga",
+ "title_hi": "अर्जुन विषाद योग",
+ "book_id": 1,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the corresponding scripture_sections rows of the Ishvarvaani fixture (release gate RG-01). Sanskrit and transliteration are carried over from the PD source at build time and are not restated here.",
+ "rows": [
+  {
+   "id": 1,
+   "number": "1.1",
+   "body_en": "Dhritarashtra said: Sanjaya, on that field of dharma at Kurukshetra my own men and the sons of Pandu stood massed against each other, hungry for the fight. What did they do there?",
+   "body_hi": "धृतराष्ट्र ने पूछा — संजय! कुरुक्षेत्र की उस धर्मभूमि पर मेरे अपने लोग और पाण्डु के पुत्र लड़ने को आतुर होकर आ जुटे थे। वहाँ उन्होंने क्या किया?",
+   "commentary_en": "The Gita opens not with a teaching but with a blind king's question, and every word of it gives him away. He calls the ground dharma-kshetra, a field of righteousness, then in the same breath splits the gathering into 'my own men' and 'the sons of Pandu' — the very partiality that made the war unavoidable. Sanjaya has been given sight that reaches across distance; Dhritarashtra has to borrow it. And notice what he asks: not what was right, but what was done. A man who cannot see is enquiring after an outcome he himself helped shape. Everything that follows sits inside that frame — dharma named aloud, and abandoned in the same sentence.",
+   "commentary_hi": "गीता का आरम्भ किसी उपदेश से नहीं, एक अंधे राजा के प्रश्न से होता है — और उस प्रश्न का प्रत्येक शब्द उसे उजागर कर देता है। वह भूमि को धर्मक्षेत्र कहता है, फिर उसी साँस में सभा को 'मेरे अपने लोग' और 'पाण्डु के पुत्र' में बाँट देता है; यही पक्षपात युद्ध को अटल बना चुका था। संजय को दूर तक पहुँचने वाली दृष्टि मिली है, धृतराष्ट्र को वही दृष्टि माँगनी पड़ती है। और देखिए वह क्या पूछता है — क्या उचित था, यह नहीं; क्या हुआ, यह। जो देख नहीं सकता, वह उस परिणाम का समाचार ले रहा है जिसे गढ़ने में उसका ही हाथ रहा। आगे का सब कुछ इसी ढाँचे के भीतर खुलता है: धर्म का नाम, और उसी वाक्य में उसका परित्याग।"
+  },
+  {
+   "id": 2,
+   "number": "1.2",
+   "body_en": "Sanjaya said: The sight of the Pandava ranks standing in order took king Duryodhana across to his teacher, and he said this.",
+   "body_hi": "संजय ने कहा — राजा दुर्योधन ने पाण्डवों की सेना को व्यूह में खड़ी देखा, तब वह अपने आचार्य के पास जाकर यह वचन बोला।",
+   "commentary_en": "Notice what unsettles Duryodhana: not the size of the enemy but the order of it. A vyuha is a thought made visible — it means someone on the other side is thinking clearly. And notice where his feet carry him: to Drona, the teacher who trained both sides. Sanjaya's verb is exact. Duryodhana approached; the king walks to the guru, not the guru to the king. Beneath the armour this is a man seeking reassurance from the one person whose loyalty he has cause to doubt.",
+   "commentary_hi": "ध्यान दें, दुर्योधन को किस बात ने विचलित किया — शत्रु की संख्या ने नहीं, उसकी व्यवस्था ने। व्यूह दृश्य बना हुआ विचार है; इसका अर्थ है कि दूसरी ओर कोई स्पष्ट सोच रहा है। और देखें, उसके पैर उसे कहाँ ले जाते हैं — द्रोण के पास, उस आचार्य के पास जिसने दोनों पक्षों को गढ़ा। संजय की क्रिया सटीक है: दुर्योधन स्वयं चलकर पास गया — राजा गुरु के पास जाता है, गुरु राजा के पास नहीं। कवच के नीचे यह वह व्यक्ति है जो ठीक उसी से आश्वासन खोज रहा है जिसकी निष्ठा पर सन्देह करने का उसे कारण है।"
+  },
+  {
+   "id": 3,
+   "number": "1.3",
+   "body_en": "Look, teacher, at this great host of Pandu's sons, drawn into formation by your own gifted pupil, the son of Drupada.",
+   "body_hi": "आचार्य! देखिए — पाण्डुपुत्रों का यह कितना बड़ा दल, जिसे व्यूह में सजाया है आपके ही मेधावी शिष्य द्रुपद-पुत्र ने।",
+   "commentary_en": "This is not information; it is a barb dressed as a report. Dhrishtadyumna was born for one purpose — to kill Drona — and it was Drona who taught him the craft he is now using. Duryodhana knows this, and makes the teacher look at his own handiwork arrayed against him. The word he chooses for 'gifted' is dhimata, praise with a blade inside it: your student learned well, so what does that make you? Under the flattery lies the question he dare not ask directly — will you fight the boy you trained, or won't you?",
+   "commentary_hi": "यह सूचना नहीं, समाचार के वेश में चुभोया गया काँटा है। धृष्टद्युम्न का जन्म एक ही प्रयोजन से हुआ था — द्रोण के वध के लिए — और जो कौशल वह अब चला रहा है, वह द्रोण ने ही उसे सिखाया। दुर्योधन यह जानता है, और आचार्य को उनकी ही गढ़ी हुई रचना अपने विरुद्ध खड़ी दिखाता है। 'मेधावी' के लिए वह जो शब्द चुनता है — धीमता — वह भीतर धार छिपाए प्रशंसा है: आपका शिष्य अच्छा सीखा, तो इससे आप क्या ठहरते हैं? इस चापलूसी के नीचे वही प्रश्न दबा है जिसे वह सीधे पूछने का साहस नहीं करता — जिस बालक को आपने गढ़ा, उससे लड़ेंगे या नहीं?"
+  },
+  {
+   "id": 4,
+   "number": "1.4",
+   "body_en": "In their ranks are bowmen of the first order, men who can hold the field against Bhima or Arjuna: Yuyudhana, Virata, and Drupada on his great chariot.",
+   "body_hi": "इनकी पंक्तियों में प्रथम श्रेणी के धनुर्धर हैं, जो भीम या अर्जुन के सामने रणभूमि में टिक सकते हैं — युयुधान, विराट और अपने महारथ पर द्रुपद।",
+   "commentary_en": "Duryodhana begins to count, and the counting itself is a symptom. A commander sure of his ground does not recite the enemy's roll to his own teacher on the morning of battle. He measures them against Bhima and Arjuna because those two are the yardstick he cannot get out of his head. Virata and Drupada are named for a reason as well: both are fathers-in-law to the Pandavas. What he is really listing is how thoroughly the other side is bound together, and how much of that binding he caused.",
+   "commentary_hi": "दुर्योधन गिनना शुरू करता है, और यह गिनना ही एक लक्षण है। अपनी भूमि पर स्थिर सेनापति युद्ध के प्रभात में अपने ही आचार्य के सामने शत्रु की नामावली नहीं दोहराता। वह उन्हें भीम और अर्जुन के मापदण्ड पर तौलता है, क्योंकि ये दो ही वह पैमाना हैं जो उसके मन से नहीं उतरते। विराट और द्रुपद का नाम भी कारण से आता है — दोनों पाण्डवों के श्वसुर हैं। वह वस्तुतः यही गिना रहा है कि दूसरा पक्ष कितनी गहराई से एक-दूसरे से बँधा है, और उस बन्धन में कितना हाथ उसका ही है।"
+  },
+  {
+   "id": 5,
+   "number": "1.5",
+   "body_en": "Dhrishtaketu too, and Chekitana, and Kashi's powerful lord; Purujit, Kuntibhoja, and Shaibya, a bull among men.",
+   "body_hi": "धृष्टकेतु और चेकितान, काशी के पराक्रमी स्वामी; पुरुजित्, कुन्तिभोज तथा नरों में वृषभ-सदृश शैब्य।",
+   "commentary_en": "The list keeps widening, and with it the map. Kashi, Chedi, the Kunti lands, the Shibi country — these are kingdoms from every direction, and each name is a house that weighed the two claims and chose against Hastinapura. That is the quiet arithmetic Duryodhana is performing aloud without meaning to. Kuntibhoja is worth pausing on: he is the king who raised Kunti, which makes even the Pandavas' maternal line part of the array facing him. Rulers do not send armies across a subcontinent for a cause they think unjust.",
+   "commentary_hi": "सूची चौड़ी होती जाती है, और उसके साथ नक्शा भी। काशी, चेदि, कुन्ति-प्रदेश, शिबि-देश — ये हर दिशा के राज्य हैं, और प्रत्येक नाम एक ऐसा घर है जिसने दोनों दावों को तौलकर हस्तिनापुर के विरुद्ध चुना। यही वह मौन गणित है जिसे दुर्योधन अनजाने ही ऊँचे स्वर में कर रहा है। कुन्तिभोज पर ठहरना चाहिए — वही राजा जिसने कुन्ती का पालन किया; अर्थात् पाण्डवों का मातृपक्ष भी उसके सामने खड़ी पंक्ति का अंग है। जिस पक्ष को राजा अन्यायी समझते हैं, उसके लिए वे उपमहाद्वीप पार सेनाएँ नहीं भेजते।"
+  },
+  {
+   "id": 6,
+   "number": "1.6",
+   "body_en": "Bold Yudhamanyu, strong Uttamauja, Subhadra's son, and Draupadi's sons — not one of them less than a great chariot-fighter.",
+   "body_hi": "साहसी युधामन्यु, बलवान् उत्तमौजा, सुभद्रा का पुत्र और द्रौपदी के पुत्र — इनमें कोई भी महारथी से कम नहीं।",
+   "commentary_en": "The roll ends on the young. Abhimanyu is a boy; the sons of Draupadi are boys. Duryodhana calls them maharathas — great chariot-fighters — and the compliment is unwittingly terrible, because it tells us how completely the war has drawn in a whole generation that had no part in the quarrel. Before nightfall on the eighteenth day every name in this line will be dead. That is worth holding in mind when Arjuna, forty verses later, begins to grieve for a future he can only half see. He is not being weak. He is being accurate.",
+   "commentary_hi": "नामावली युवाओं पर समाप्त होती है। अभिमन्यु बालक है; द्रौपदी के पुत्र बालक हैं। दुर्योधन उन्हें महारथी कहता है, और यह प्रशंसा अनजाने में भयावह है — क्योंकि यह बताती है कि इस युद्ध ने उस पूरी पीढ़ी को कितनी पूर्णता से खींच लिया है जिसका इस झगड़े में कोई भाग नहीं था। अठारहवें दिन की सन्ध्या से पहले इस पंक्ति का हर नाम मिट जाएगा। यह स्मरण रखने योग्य है, जब चालीस श्लोक आगे अर्जुन उस भविष्य के लिए शोक करने लगता है जिसे वह आधा ही देख पाता है। वह दुर्बल नहीं हो रहा। वह सही आँक रहा है।"
+  },
+  {
+   "id": 7,
+   "number": "1.7",
+   "body_en": "Now learn who stands out on our own side, best of the twice-born. I will name the captains of my army so that you know them.",
+   "body_hi": "हे द्विजश्रेष्ठ! अब जान लीजिए कि हमारे पक्ष में कौन-कौन प्रमुख हैं। अपनी सेना के नायकों को मैं आपके परिचय के लिए गिनाता हूँ।",
+   "commentary_en": "He turns from their side to his, and the turn is defensive: having talked himself into fear, he must now talk himself out of it. But the phrasing betrays him twice over. He says 'my army', not 'ours' — the army Bhishma commands and Drona serves in belongs, in his mouth, to him alone. And he offers to name its captains to Drona, who has known these men for a lifetime. Nobody needs this introduction. The recital is not for Drona's benefit; it is a man steadying himself by saying strong names out loud.",
+   "commentary_hi": "वह उनके पक्ष से हटकर अपने पक्ष पर आता है, और यह मुड़ना बचाव है — भय की बात करते-करते जो मन बैठ गया, उसे अब बातों से ही उठाना है। पर उसकी भाषा दो बार उसे पकड़ा देती है। वह कहता है 'मेरी सेना', 'हमारी' नहीं — जिस सेना का सेनापति भीष्म है और जिसमें द्रोण सेवा दे रहे हैं, वह उसके मुँह में केवल उसकी है। और वह द्रोण को उसके नायकों का परिचय देने चलता है, जो इन सबको जीवन भर से जानते हैं। इस परिचय की किसी को आवश्यकता नहीं। यह पाठ द्रोण के लिए नहीं है; यह वह व्यक्ति है जो बलवान नाम ऊँचे स्वर में बोलकर स्वयं को थाम रहा है।"
+  },
+  {
+   "id": 8,
+   "number": "1.8",
+   "body_en": "Yourself, and Bhishma, and Karna, and Kripa who wins wherever he fights; Ashvatthama, Vikarna, and the son of Somadatta too.",
+   "body_hi": "स्वयं आप, भीष्म, कर्ण और जहाँ लड़ें वहीं विजयी होने वाले कृपाचार्य; अश्वत्थामा, विकर्ण और सोमदत्त का पुत्र भी।",
+   "commentary_en": "He puts Drona first and Bhishma second — flattery to the man in front of him, and a small insult to the commander who is not. Then Karna, whom Bhishma has refused to fight alongside, so that the first three names in his own list already contain a quarrel. Vikarna is the strangest inclusion: Duryodhana's own brother, the one man in that hall who stood up and said the dicing was wrong. Duryodhana counts him as a strength. He cannot tell the difference between a man who obeys and a man who agrees.",
+   "commentary_hi": "वह द्रोण को पहले और भीष्म को दूसरे स्थान पर रखता है — सामने खड़े व्यक्ति की चापलूसी, और अनुपस्थित सेनापति का छोटा अपमान। फिर कर्ण, जिसके साथ खड़े होने से भीष्म ने इनकार किया है; अर्थात् उसकी सूची के पहले तीन नामों में ही कलह भरी है। विकर्ण का समावेश सबसे विचित्र है — दुर्योधन का ही भाई, उस सभा का एकमात्र पुरुष जो उठकर बोला कि द्यूत अन्याय था। दुर्योधन उसे अपना बल गिनता है। वह उस व्यक्ति में और इस व्यक्ति में भेद नहीं कर पाता — जो आज्ञा मानता है, और जो सहमत होता है।"
+  },
+  {
+   "id": 9,
+   "number": "1.9",
+   "body_en": "And many other brave men besides, ready to lay down their lives for me, carrying weapons of every kind, all of them practised in war.",
+   "body_hi": "और भी बहुत से शूरवीर हैं, जो मेरे लिए प्राण त्यागने को तैयार हैं, नाना प्रकार के शस्त्र चलाने वाले, सब युद्ध में निपुण।",
+   "commentary_en": "Three words carry the whole verse: mad-arthe, 'for my sake'. He does not say for the throne, for the Kurus, for dharma, or for any cause a man might reasonably die for — only for him. Where the Pandava list was made of alliances, this one is made of dependents. And where he could name the great on his side, the rest become a crowd: many others, weapons of every kind. Numbers are what you offer when you cannot offer a reason. Duryodhana has an army and no argument, and some part of him knows it.",
+   "commentary_hi": "तीन शब्द पूरे श्लोक का भार उठाते हैं — मदर्थे, 'मेरे लिए'। वह सिंहासन के लिए नहीं कहता, कुरुवंश के लिए नहीं, धर्म के लिए नहीं, न किसी ऐसे हेतु के लिए जिसके लिए कोई मनुष्य उचित रूप से मर सके — केवल अपने लिए। पाण्डवों की सूची सन्धियों से बनी थी; यह सूची आश्रितों से बनी है। और जहाँ अपने पक्ष के बड़े नाम वह गिना सका, वहाँ शेष भीड़ बन जाते हैं — और भी बहुत से, नाना प्रकार के शस्त्र। संख्या वही देता है जिसके पास कारण नहीं होता। दुर्योधन के पास सेना है, तर्क नहीं — और उसका कोई हिस्सा यह जानता है।"
+  },
+  {
+   "id": 10,
+   "number": "1.10",
+   "body_en": "Our force, with Bhishma to guard it, is past measuring; theirs, with Bhima to guard it, can be measured.",
+   "body_hi": "भीष्म से रक्षित हमारा यह बल अपार है; और भीम से रक्षित इनका बल गिना जा सकता है।",
+   "commentary_en": "The most slippery line in the chapter. Aparyaptam ought to mean 'insufficient' and paryaptam 'sufficient', which would make Duryodhana say the opposite of what he intends — our side is not enough, theirs is. Commentators have argued the point for centuries, and the honest position is that both readings live in the words at once, which is exactly right for a man boasting while afraid. He also pairs Bhishma against Bhima, elder against strength, and hears the near-echo of the two names without noticing what it costs him: he is trusting an old man bound by a vow against a young man driven by a grudge.",
+   "commentary_hi": "अध्याय की सबसे फिसलनी पंक्ति। 'अपर्याप्तम्' का अर्थ होना चाहिए 'अपर्याप्त' और 'पर्याप्त' का 'यथेष्ट' — जिससे दुर्योधन वही कह बैठता है जो वह कहना नहीं चाहता: हमारा पक्ष कम है, इनका पूरा। शताब्दियों से टीकाकार इस पर विवाद करते आए हैं, और ईमानदार स्थिति यही है कि दोनों अर्थ एक ही साथ इन शब्दों में बसे हैं — डरते हुए डींग मारने वाले के लिए यह ठीक उपयुक्त है। वह भीष्म को भीम के सामने रखता है, वृद्धत्व को बल के सामने, और दोनों नामों की निकट-प्रतिध्वनि सुनकर भी नहीं देखता कि उसे इसका क्या मूल्य देना है — वह प्रतिज्ञा से बँधे वृद्ध पर भरोसा कर रहा है, उस युवक के विरुद्ध जिसे बैर चला रहा है।"
+  },
+  {
+   "id": 11,
+   "number": "1.11",
+   "body_en": "So hold each of you the place assigned to you at every approach, and guard Bhishma above all else.",
+   "body_hi": "इसलिए आप सब अपने-अपने नियत मोर्चों पर डटे रहकर सबसे पहले भीष्म की रक्षा करें।",
+   "commentary_en": "The boast collapses into an order, and the order gives the game away. A moment ago his strength was beyond measuring; now every commander must be posted to keep one old man alive. Duryodhana has understood something true — that his army is not a coalition but a structure resting on a single pillar — and he has drawn the wrong conclusion from it. You cannot make a fragile thing strong by surrounding it. Eighteen days later Bhishma will fall exactly as feared, and the force built around him will keep fighting only because it has nowhere to go.",
+   "commentary_hi": "डींग आदेश में ढह जाती है, और आदेश भेद खोल देता है। अभी क्षण भर पहले उसका बल अपार था; अब प्रत्येक नायक को एक वृद्ध को जीवित रखने के लिए तैनात होना है। दुर्योधन ने एक सच समझा है — कि उसकी सेना गठबन्धन नहीं, एक ही खम्भे पर टिका ढाँचा है — और उससे निष्कर्ष उल्टा निकाला है। किसी भंगुर वस्तु को घेरकर सबल नहीं किया जा सकता। अठारह दिन बाद भीष्म ठीक उसी भय के अनुसार गिरेंगे, और उनके चारों ओर खड़ी की गई शक्ति लड़ती रहेगी — केवल इसलिए कि उसके पास जाने की कोई जगह नहीं।"
+  },
+  {
+   "id": 12,
+   "number": "1.12",
+   "body_en": "To lift his spirits the aged Kuru, the grandsire, glorious in his might, roared like a lion and blew his conch aloud.",
+   "body_hi": "उसका उत्साह बढ़ाने के लिए कुरुवृद्ध प्रतापी पितामह ने सिंह के समान गरजकर ऊँचे स्वर में शंख बजाया।",
+   "commentary_en": "Bhishma has heard everything — the fear, the flattery, the order to keep him alive — and answers none of it. He simply makes a sound. Sanjaya says it was to lift Duryodhana's spirits, and that is the whole tragedy of Bhishma in one line: he cannot approve of this war, he has said so, and he will still fight it to the end because a vow made long ago has outlived every reason for keeping it. The lion's roar is not conviction. It is duty performing conviction for a frightened nephew, and it opens the battle.",
+   "commentary_hi": "भीष्म ने सब सुना है — भय, चापलूसी, और अपने को जीवित रखने का आदेश — और किसी का उत्तर नहीं देते। वे केवल एक नाद करते हैं। संजय कहता है कि यह दुर्योधन का उत्साह बढ़ाने के लिए था, और भीष्म की सारी त्रासदी इसी एक पंक्ति में है: वे इस युद्ध को उचित नहीं मानते, यह उन्होंने कह दिया है, और फिर भी अन्त तक लड़ेंगे — क्योंकि बहुत पहले ली गई एक प्रतिज्ञा उसे निभाने के हर कारण से अधिक जी गई है। सिंह की गर्जना निष्ठा नहीं है। वह कर्तव्य है, जो एक डरे हुए भतीजे के लिए निष्ठा का अभिनय कर रहा है — और इसी से युद्ध आरम्भ होता है।"
+  },
+  {
+   "id": 13,
+   "number": "1.13",
+   "body_en": "Conches broke out then, and war-drums with them, cymbals, tabor and cow-horn, all struck in the same instant; the sound they made was sheer uproar.",
+   "body_hi": "तब शंख गूँज उठे, उनके साथ रणभेरी, झाँझ, ढोल और गोमुख — सब एक ही क्षण में बज पड़े; उनका शब्द निपट कोलाहल था।",
+   "commentary_en": "The Kaurava side answers Bhishma with noise, and an avalanche of it. Notice what the sound is for: it is made to be heard, to fill the space where thinking would otherwise happen. The Sanskrit tumula is the ancestor of our word tumult, and the line is built so that the wall of sound arrives before anyone has moved a step. Nothing has actually happened yet. Two armies are standing still, making the loudest noise they can manage, each hoping the other will lose its nerve first.",
+   "commentary_hi": "कौरव पक्ष भीष्म को नाद से उत्तर देता है — और उसकी बाढ़ से। ध्यान दें कि यह शब्द किस काम आता है: वह सुनाई देने के लिए रचा गया है, उस रिक्त स्थान को भरने के लिए जहाँ अन्यथा विचार उठता। संस्कृत का 'तुमुल' हमारे कोलाहल का पूर्वज है, और पंक्ति इस तरह गढ़ी गई है कि किसी के एक कदम चलने से पहले ध्वनि की दीवार आ पहुँचती है। वस्तुतः अभी कुछ हुआ ही नहीं। दो सेनाएँ स्थिर खड़ी हैं, अपनी सामर्थ्य भर सबसे ऊँचा नाद करती हुईं — दोनों यही आशा करती हैं कि साहस पहले दूसरे का टूटे।"
+  },
+  {
+   "id": 14,
+   "number": "1.14",
+   "body_en": "White horses drew the great chariot they were standing in, Madhava and the son of Pandu, and the conches they sounded were of another order.",
+   "body_hi": "जिस विशाल रथ पर वे दोनों खड़े थे, उसे श्वेत अश्व खींच रहे थे — माधव और पाण्डुपुत्र; और जो शंख उन्होंने बजाए, वे किसी और ही कोटि के थे।",
+   "commentary_en": "Against that whole orchestra, two conches. The contrast is the point, and the poet builds it deliberately: one chariot, two men, white horses, and a sound he calls divya — of another order rather than merely louder. Notice also who is standing where. On the far side a king had his grandsire blow for him; here the driver and the archer answer with their own breath, from the same chariot, at the same moment. The war's two sides are being characterised entirely through sound, and the characterisation will hold for eighteen days.",
+   "commentary_hi": "उस पूरे वाद्यवृन्द के सामने दो शंख। यही विरोध अभिप्राय है, और कवि उसे जान-बूझकर गढ़ता है: एक रथ, दो पुरुष, श्वेत अश्व, और एक ध्वनि जिसे वह 'दिव्य' कहता है — अधिक ऊँची नहीं, किसी और कोटि की। यह भी देखें कि कौन कहाँ खड़ा है। उस ओर एक राजा ने अपने पितामह से बजवाया; यहाँ सारथी और धनुर्धर अपनी ही श्वास से उत्तर देते हैं, एक ही रथ से, एक ही क्षण में। युद्ध के दोनों पक्षों का चरित्र पूर्णतः ध्वनि से खींचा जा रहा है, और वह चरित्र अठारह दिन टिकेगा।"
+  },
+  {
+   "id": 15,
+   "number": "1.15",
+   "body_en": "Panchajanya went to Hrishikesha, Devadatta to Dhananjaya, and the great conch Paundra to Vrikodara, whose deeds are a horror.",
+   "body_hi": "पाञ्चजन्य हृषीकेश के हाथ, देवदत्त धनंजय के, और महाशंख पौण्ड्र उस वृकोदर के, जिसके कर्म रोंगटे खड़े कर देते हैं।",
+   "commentary_en": "Every conch has a name here, and several of the men have three apiece. That is not ornament. Panchajanya was taken from a demon Krishna killed; Devadatta came as a gift from the gods; Paundra simply booms. Naming a weapon is how this epic tells you a thing has a history — these are not implements picked up on the morning of battle but objects with pasts, carried by men with pasts. Set it beside Duryodhana's roll-call a few verses back, where the men were counted and nothing whatever was named.",
+   "commentary_hi": "यहाँ प्रत्येक शंख का नाम है, और कई पुरुषों के तीन-तीन नाम। यह अलंकार नहीं है। पाञ्चजन्य उस असुर से लिया गया था जिसे कृष्ण ने मारा; देवदत्त देवताओं की भेंट था; पौण्ड्र केवल गरजता है। शस्त्र का नाम लेना इस महाकाव्य की वह रीति है जिससे वह बताता है कि किसी वस्तु का इतिहास है — ये युद्ध के प्रभात में उठा लिए गए उपकरण नहीं, अतीत रखने वाली वस्तुएँ हैं, और उन्हें उठाने वालों का भी अतीत है। इसे कुछ श्लोक पीछे दुर्योधन की नामावली के साथ रखिए, जहाँ पुरुष गिने गए थे और नाम किसी वस्तु का नहीं आया।"
+  },
+  {
+   "id": 16,
+   "number": "1.16",
+   "body_en": "To Kunti's son the king Yudhishthira belonged Anantavijaya; Sughosha went to Nakula and Manipushpaka to Sahadeva.",
+   "body_hi": "कुन्तीपुत्र राजा युधिष्ठिर का शंख था अनन्तविजय; सुघोष नकुल के हाथ आया और मणिपुष्पक सहदेव के।",
+   "commentary_en": "Anantavijaya means endless victory, and the name sits oddly on the one brother who did not want this war and who will spend the rest of the epic unable to take any pleasure in having won it. The poet hands him a conch that promises exactly what the man himself doubts. Notice too that he is called king here, plainly and without irony: whatever the dice game cost him, the verse gives the title back before the fighting starts.",
+   "commentary_hi": "अनन्तविजय का अर्थ है अन्तहीन विजय — और यह नाम उस एक भाई पर विचित्र बैठता है जो इस युद्ध को चाहता ही नहीं था, और जो शेष महाकाव्य में जीत का कोई सुख नहीं ले सकेगा। कवि उसे ठीक वही शंख थमाता है जो उसका अपना सन्देह है। यह भी देखें कि यहाँ उसे सीधे 'राजा' कहा गया है, बिना किसी व्यंग्य के: द्यूत ने उससे जो छीना, उससे पहले ही यह श्लोक वह पद लौटा देता है।"
+  },
+  {
+   "id": 17,
+   "number": "1.17",
+   "body_en": "The lord of Kashi, that finest of bowmen, and Shikhandi the great chariot-fighter; Dhrishtadyumna, Virata, and Satyaki whom none has beaten.",
+   "body_hi": "काशी के अधिपति, वह श्रेष्ठ धनुर्धर, और महारथी शिखण्डी; धृष्टद्युम्न, विराट तथा कभी न हारा हुआ सात्यकि।",
+   "commentary_en": "Two of these names are fates rather than men. Shikhandi is the one through whom Bhishma will fall, and Dhrishtadyumna the one through whom Drona will; the verse drops both into a list of conch-blowers quite calmly, as though it were only an introduction. Six verses ago Duryodhana was ordering his commanders to ring Bhishma and keep him alive. The instrument of Bhishma's death is standing in the opposite line, blowing a conch, and nobody in the poem remarks on it.",
+   "commentary_hi": "इनमें दो नाम पुरुष नहीं, नियति हैं। शिखण्डी वह है जिसके द्वारा भीष्म गिरेंगे, और धृष्टद्युम्न वह जिसके द्वारा द्रोण; श्लोक दोनों को शंख बजाने वालों की सूची में बड़ी शान्ति से रख देता है, मानो यह केवल परिचय हो। छह श्लोक पहले दुर्योधन अपने नायकों को आदेश दे रहा था कि भीष्म को घेरकर जीवित रखें। भीष्म की मृत्यु का साधन सामने की पंक्ति में खड़ा शंख बजा रहा है, और काव्य में कोई इस पर टिप्पणी नहीं करता।"
+  },
+  {
+   "id": 18,
+   "number": "1.18",
+   "body_en": "Drupada and Draupadi's sons, and Subhadra's strong-armed boy — each of them, lord of the earth, sounded his own conch, one after another.",
+   "body_hi": "द्रुपद और द्रौपदी के पुत्र, तथा सुभद्रा का बलिष्ठ बाहुओं वाला बालक — हे पृथ्वीपति! सबने अपना-अपना शंख बजाया, एक के बाद एक।",
+   "commentary_en": "Prithak prithak: separately, each on his own. Sanjaya is still speaking to Dhritarashtra, and he calls him lord of the earth while describing the earth arrayed against his sons. The detail he chooses to report is the sequence — not one blast but many, distinct, each man announcing himself by name. An army that sounds off one at a time is an army made of people who chose to be there. Duryodhana's side produced a single undifferentiated wall of noise; this side is audibly a collection of persons.",
+   "commentary_hi": "'पृथक् पृथक्' — अलग-अलग, प्रत्येक अपने से। संजय अब भी धृतराष्ट्र से बोल रहा है, और उसे 'पृथ्वीपति' कहते हुए उसी पृथ्वी का वर्णन करता है जो उसके पुत्रों के विरुद्ध खड़ी है। वह जो ब्योरा चुनता है, वह क्रम है — एक नाद नहीं, अनेक, पृथक्, प्रत्येक पुरुष अपना नाम घोषित करता हुआ। जो सेना एक-एक कर बोलती है, वह उन लोगों की बनी है जिन्होंने वहाँ होना चुना। दुर्योधन के पक्ष ने एक अभेद्य शब्द-दीवार खड़ी की थी; यह पक्ष सुनने में व्यक्तियों का समुच्चय है।"
+  },
+  {
+   "id": 19,
+   "number": "1.19",
+   "body_en": "That sound tore open the hearts of Dhritarashtra's men, and the tumult set sky and earth ringing.",
+   "body_hi": "उस नाद ने धृतराष्ट्र-पक्ष के हृदय चीर डाले, और वह कोलाहल आकाश तथा पृथ्वी को गुँजा गया।",
+   "commentary_en": "The verb is vyadarayat — tore, split open. Sound cannot do that, and the poet knows it perfectly well; what splits is confidence. This is the first casualty report of the war and it is a psychological one, filed before a single arrow has flown. Sanjaya is also, with some courage, telling a blind king to his face that his side flinched. Hearts on one side of the line, sky and earth on the other: the same noise measured once in men and once in the world.",
+   "commentary_hi": "क्रिया है 'व्यदारयत्' — चीर दिया, फाड़ दिया। ध्वनि यह नहीं कर सकती, और कवि यह भली भाँति जानता है; जो चिरता है, वह आत्मविश्वास है। यह युद्ध की पहली क्षति-सूचना है, और वह मानसिक है — एक भी बाण चलने से पहले दर्ज। संजय कुछ साहस के साथ एक अंधे राजा से उसके मुँह पर यह भी कह रहा है कि उसका पक्ष डगमगा गया। पंक्ति के एक ओर हृदय, दूसरी ओर आकाश और पृथ्वी: वही एक नाद, एक बार मनुष्यों में नापा गया और एक बार संसार में।"
+  },
+  {
+   "id": 20,
+   "number": "1.20",
+   "body_en": "Then, as the exchange of missiles was beginning, the Pandava whose banner bears the ape looked at Dhritarashtra's men holding their places, and raised his bow.",
+   "body_hi": "तब जब शस्त्रों का आदान-प्रदान आरम्भ हो चला था, वानर-ध्वज वाले पाण्डव ने धृतराष्ट्र-पक्ष को अपने-अपने स्थानों पर डटा देखा और धनुष उठाया।",
+   "commentary_en": "Arjuna is identified by his flag rather than his name — kapi-dhvaja, ape-bannered — as though the emblem were doing the looking. And note the timing the verse insists on: weapons have already begun to fly. He raises the bow. Everything is proceeding in order; the trained body is doing what forty years have prepared it to do. What comes in the next verse is therefore not hesitation before an act but a break in the middle of one, which is a far stranger thing and much harder to explain away.",
+   "commentary_hi": "अर्जुन की पहचान उसके नाम से नहीं, ध्वजा से दी गई है — कपिध्वज, वानर-चिह्न वाला — मानो देखने का काम चिह्न कर रहा हो। और श्लोक जिस समय पर आग्रह करता है, उसे देखें: शस्त्र चलने लग चुके हैं। वह धनुष उठाता है। सब कुछ क्रम से चल रहा है; प्रशिक्षित शरीर वही कर रहा है जिसके लिए चालीस वर्ष ने उसे गढ़ा। इसलिए अगले श्लोक में जो आता है, वह कर्म से पहले का संकोच नहीं, कर्म के बीचोंबीच पड़ी दरार है — और यह कहीं अधिक विचित्र तथा कहीं कठिन बात है।"
+  },
+  {
+   "id": 21,
+   "number": "1.21",
+   "body_en": "Arjuna said: — and then, lord of the earth, these were his words to Hrishikesha: Achyuta, take my chariot to where the two armies face each other, and hold it there.",
+   "body_hi": "अर्जुन ने कहा — और तब, हे पृथ्वीपति, हृषीकेश से उसके शब्द ये थे: अच्युत! मेरा रथ वहाँ ले चलिए जहाँ दोनों सेनाएँ आमने-सामने हैं, और उसे वहीं रोक दीजिए।",
+   "commentary_en": "The first words Arjuna speaks in the Gita are an instruction given to God, and they concern positioning. He wants the middle — not his own line, not theirs, the gap between the two. He also addresses Krishna as Achyuta, the one who does not fall, at the precise moment he himself is about to. Whatever he believes he is asking for, what he will actually get is the one vantage point from which both armies become visible as a single field of relatives, and the sight of it is going to undo him.",
+   "commentary_hi": "गीता में अर्जुन के पहले शब्द ईश्वर को दिया गया आदेश हैं, और वे स्थान-निर्धारण के विषय में हैं। उसे मध्य चाहिए — अपनी पंक्ति नहीं, उनकी नहीं, दोनों के बीच का अन्तराल। और वह कृष्ण को 'अच्युत' कहकर पुकारता है, वह जो गिरता नहीं — ठीक उस क्षण जब वह स्वयं गिरने को है। वह जो माँगता समझ रहा है, सो जाने; उसे वस्तुतः वही एक दृष्टि-बिन्दु मिलेगा जहाँ से दोनों सेनाएँ एक ही सम्बन्धी-क्षेत्र बनकर दिखती हैं — और वह दृश्य उसे तोड़ देगा।"
+  },
+  {
+   "id": 22,
+   "number": "1.22",
+   "body_en": "Long enough for me to look at these men who stand here wanting a fight, and to see with whom I have to contend in this undertaking.",
+   "body_hi": "जब तक मैं इन लड़ने की इच्छा से खड़े लोगों को देख लूँ, और जान लूँ कि इस आयोजन में मुझे किनसे भिड़ना है।",
+   "commentary_en": "He asks for time to look. Not to plan, not to count — to look; the verb nirikse is one of steady attention. A soldier wanting a tactical survey studies formations, but Arjuna is about to study faces. He frames it as a professional's question, whom am I fighting, and the honest answer is already lodged in the word he chooses for the enemy: etan, these, standing there, wanting. He has not yet permitted himself the word he will use six verses from now — svajanam, my own people.",
+   "commentary_hi": "वह देखने के लिए समय माँगता है। योजना बनाने के लिए नहीं, गिनने के लिए नहीं — देखने के लिए; 'निरीक्षे' स्थिर ध्यान की क्रिया है। रणनीतिक सर्वेक्षण चाहने वाला सैनिक व्यूह पढ़ता है, पर अर्जुन चेहरे पढ़ने जा रहा है। वह इसे एक पेशेवर के प्रश्न की तरह रखता है — मुझे किनसे लड़ना है — और ईमानदार उत्तर उसी शब्द में धरा है जो वह शत्रु के लिए चुनता है: 'एतान्', ये, वहाँ खड़े, चाहते हुए। जिस शब्द को वह छह श्लोक बाद बोलेगा, उसकी अनुमति उसने अभी स्वयं को नहीं दी — 'स्वजनम्', मेरे अपने लोग।"
+  },
+  {
+   "id": 23,
+   "number": "1.23",
+   "body_en": "Let me see those who have come together here to fight, wanting to do a good turn in war for the ill-minded son of Dhritarashtra.",
+   "body_hi": "मैं उन्हें देख लूँ जो यहाँ लड़ने को जुटे हैं — वे, जो दुर्बुद्धि धृतराष्ट्र-पुत्र का भला करने निकले हैं, रण में।",
+   "commentary_en": "This is Arjuna at his most certain, and it is his last such moment for eighteen chapters. He has a villain — durbuddhi, of corrupted understanding — and a category that covers everyone else: people doing Duryodhana a favour. With those two pieces in place the war is clean. Sanjaya, remember, is saying this aloud to Duryodhana's father. Within five verses the category will collapse, because the men obliging Duryodhana turn out to be Arjuna's teachers and cousins, and nobody can hold a moral cartoon and a family in the same eye.",
+   "commentary_hi": "यह अर्जुन का सर्वाधिक निश्चय वाला क्षण है, और अठारह अध्यायों तक अन्तिम भी। उसके पास एक खलनायक है — दुर्बुद्धि, भ्रष्ट समझ वाला — और एक कोटि जो शेष सबको ढक लेती है: दुर्योधन का भला करने आए लोग। ये दो टुकड़े जुड़ जाएँ तो युद्ध निर्मल हो जाता है। स्मरण रहे, संजय यह दुर्योधन के पिता से कह रहा है। पाँच श्लोक के भीतर वह कोटि ढह जाएगी, क्योंकि दुर्योधन का प्रिय करने वाले वही निकलेंगे — अर्जुन के आचार्य और भाई; और कोई भी एक ही आँख में नैतिक चित्रकथा और परिवार, दोनों नहीं थाम सकता।"
+  },
+  {
+   "id": 24,
+   "number": "1.24",
+   "body_en": "Sanjaya said: Gudakesha having asked in this way, Bharata, Hrishikesha took that best of chariots to where the armies faced each other and stopped it there.",
+   "body_hi": "संजय ने कहा — हे भारत! गुडाकेश के इस प्रकार माँगने पर हृषीकेश उस श्रेष्ठ रथ को वहाँ ले गए जहाँ दोनों सेनाएँ आमने-सामने थीं, और उसे वहीं रोक दिया।",
+   "commentary_en": "Krishna obeys without a word. He does not warn Arjuna what will be visible from there, does not argue, does not stall — the god in the chariot takes an instruction from the man holding the bow and carries it out precisely. It is the quietest verse in the chapter and one of the strangest in the poem. Everything the Gita will later say about acting without clutching at the fruit of the act is performed here first, in a driver's silence, long before it is ever stated as a teaching.",
+   "commentary_hi": "कृष्ण एक शब्द बोले बिना आज्ञा मानते हैं। वे अर्जुन को चेताते नहीं कि वहाँ से क्या दिखेगा, तर्क नहीं करते, टालते नहीं — रथ में बैठा ईश्वर धनुष थामे मनुष्य से निर्देश लेता है और उसे ठीक-ठीक पूरा करता है। यह अध्याय का सबसे शान्त श्लोक है और काव्य के सबसे विचित्र श्लोकों में एक। फल पर पकड़ बिना कर्म करने की जो बात गीता आगे कहेगी, वह सब यहाँ पहले ही घटित हो जाती है — एक सारथी के मौन में, उपदेश बनकर कहे जाने से बहुत पहले।"
+  },
+  {
+   "id": 25,
+   "number": "1.25",
+   "body_en": "In front of Bhishma, of Drona, of all those rulers of the earth, he said: Partha, look at the Kurus gathered here.",
+   "body_hi": "भीष्म के सम्मुख, द्रोण के सम्मुख, उन समस्त भूपालों के सम्मुख उसने कहा — पार्थ! यहाँ जुटे कुरुओं को देखो।",
+   "commentary_en": "Krishna says almost nothing, and every word of it is an invitation. He does not say the enemy, or the wicked, or Duryodhana's men; he says Kurus — the family name, the one word that covers both armies at once, Arjuna's own side included. And he has halted the chariot in front of Bhishma and Drona specifically, the grandsire and the teacher. Whatever Arjuna asked to see, what he is being shown is his family under its own name. The collapse that follows is not an accident of where the chariot stopped. It was arranged.",
+   "commentary_hi": "कृष्ण लगभग कुछ नहीं कहते, और जो कहते हैं वह पूरा निमन्त्रण है। वे 'शत्रु' नहीं कहते, 'दुष्ट' नहीं, 'दुर्योधन के लोग' नहीं; वे कहते हैं 'कुरु' — कुल का नाम, वह एक शब्द जो दोनों सेनाओं को एक साथ ढक लेता है, अर्जुन के अपने पक्ष को भी। और उन्होंने रथ ठीक भीष्म तथा द्रोण के सामने रोका है — पितामह और आचार्य के। अर्जुन ने देखने को जो माँगा हो, दिखाया उसे अपना कुल जा रहा है, उसके अपने नाम से। आगे जो टूटन आती है, वह रथ के ठहरने के स्थान का संयोग नहीं। वह रचा गया था।"
+  },
+  {
+   "id": 26,
+   "number": "1.26",
+   "body_en": "And Partha saw them posted there: fathers, grandfathers, teachers, mother's brothers, brothers, sons, grandsons, friends too.",
+   "body_hi": "और पार्थ ने उन्हें वहाँ तैनात देखा — पिता, पितामह, आचार्य, मामा, भाई, पुत्र, पौत्र, मित्र भी।",
+   "commentary_en": "The verse drops names altogether and gives relations instead, eight of them in one breathless line. That single grammatical decision is the whole of Arjuna's crisis. A moment ago these people were formations; now every one of them is a word that describes a tie to him. Notice the order — it climbs down the generations, fathers to grandsons, and then ends on friends, the one bond nobody is born into. He is looking at the very field he surveyed four verses ago and seeing something else entirely in it.",
+   "commentary_hi": "श्लोक नाम पूरी तरह छोड़ देता है और उनकी जगह सम्बन्ध रख देता है — आठ सम्बन्ध, एक ही साँस की पंक्ति में। व्याकरण का यह एक निर्णय अर्जुन का सम्पूर्ण संकट है। कुछ क्षण पहले ये लोग व्यूह थे; अब इनमें से हर एक वह शब्द है जो उससे किसी बन्धन को बताता है। क्रम देखें — वह पीढ़ियों में नीचे उतरता है, पिता से पौत्र तक, और अन्त में मित्र पर रुकता है, वह एक नाता जिसमें कोई जन्म से नहीं बँधता। वह उसी भूमि को देख रहा है जिसका सर्वेक्षण उसने चार श्लोक पहले किया था, और उसमें कुछ सर्वथा दूसरा देख रहा है।"
+  },
+  {
+   "id": 27,
+   "number": "1.27",
+   "body_en": "Fathers-in-law, well-wishers — in the one army and in the other alike. Kunti's son took in the whole of that kindred standing there,",
+   "body_hi": "श्वसुर, शुभचिन्तक — एक सेना में भी, दूसरी में भी। कुन्तीपुत्र ने वहाँ खड़े उस समूचे कुटुम्ब को भाँप लिया,",
+   "commentary_en": "Ubhayor api — in both, in either, on each of them. This is the phrase that finishes him. It is not that the enemy turns out to be family; it is that the family is distributed across the line, so the line itself stops meaning anything. There is no arrangement of these people into us and them. And the verse breaks off unfinished, its main verb postponed into the next one: the syntax gives way at precisely the point where the man does.",
+   "commentary_hi": "'उभयोरपि' — दोनों में, किसी में भी, हर एक में। यही वाक्यांश उसे समाप्त करता है। बात यह नहीं कि शत्रु कुटुम्ब निकल आता है; बात यह है कि कुटुम्ब पंक्ति के आर-पार बँटा हुआ है, इसलिए पंक्ति का ही अर्थ मिट जाता है। इन लोगों को 'हम' और 'वे' में बाँटने का कोई ढंग नहीं बचता। और श्लोक अधूरा टूट जाता है, उसकी मुख्य क्रिया अगले पर टल जाती है: वाक्य-रचना ठीक उसी बिन्दु पर ढहती है जहाँ मनुष्य ढहता है।"
+  },
+  {
+   "id": 28,
+   "number": "1.28",
+   "body_en": "Arjuna said: — overtaken by an immense pity, sinking, he said this: Krishna, now that I see my own people come here spoiling for a fight,",
+   "body_hi": "अर्जुन ने कहा — अपार करुणा से आ घिरा, धँसता हुआ, उसने यह कहा: कृष्ण! अब जब अपने ही लोगों को यहाँ लड़ने पर तुला आया देखता हूँ,",
+   "commentary_en": "Two words carry the verse. Avishta means entered, occupied, taken over from outside — pity arrives at Arjuna the way a god or a fever does, and he has no say in it. And vishidan, sinking, is the participle that gives the chapter its title, Vishada. Then comes svajanam: my own people. It is the word he would not permit himself six verses ago and cannot now get around. The distance travelled since he raised his bow is exactly the distance between these men and my own.",
+   "commentary_hi": "दो शब्द इस श्लोक को उठाए हुए हैं। 'आविष्ट' का अर्थ है भीतर घुसा हुआ, अधिकृत, बाहर से आकर छा गया — करुणा अर्जुन पर उसी तरह उतरती है जैसे कोई देवता या ज्वर, और उसमें उसका मत नहीं चलता। और 'विषीदन्', धँसता हुआ, वही कृदन्त है जिससे अध्याय को नाम मिलता है — विषाद। फिर आता है 'स्वजनम्': अपने लोग। यही वह शब्द है जिसकी अनुमति उसने छह श्लोक पहले स्वयं को नहीं दी थी और जिसे अब वह टाल नहीं पाता। धनुष उठाने से अब तक की सारी दूरी ठीक इतनी ही है — 'ये लोग' से 'अपने लोग' तक।"
+  },
+  {
+   "id": 29,
+   "number": "1.29",
+   "body_en": "My limbs are giving way, my mouth is going dry, a trembling runs through me and the hair on my body rises.",
+   "body_hi": "मेरे अंग ढल रहे हैं, मुँह सूखने लगा है, देह में कँपकँपी दौड़ती है और रोम उठ आए हैं।",
+   "commentary_en": "The finest archer of the age files a symptom report. Every item in it is involuntary — limbs, mouth, tremor, gooseflesh — and every one belongs to a body that has stopped taking instructions. It is worth noticing where the Gita chooses to begin its enquiry into action: in a catalogue of things happening to a man rather than things done by him. Whatever the poem will later say about a self that is not the body, it concedes at the outset that the body is where the trouble surfaces.",
+   "commentary_hi": "युग का श्रेष्ठतम धनुर्धर लक्षणों की सूची प्रस्तुत करता है। उसमें हर वस्तु अनिच्छित है — अंग, मुख, कम्प, रोमाञ्च — और हर एक उस देह की है जिसने निर्देश लेना बन्द कर दिया है। यह देखने योग्य है कि गीता कर्म की अपनी जाँच कहाँ से आरम्भ करती है: उन बातों की तालिका से जो एक मनुष्य पर घट रही हैं, उन बातों से नहीं जो वह कर रहा है। देह से भिन्न आत्मा के विषय में काव्य आगे जो कहे, आरम्भ में वह यह मान लेता है कि संकट देह पर ही उभरता है।"
+  },
+  {
+   "id": 30,
+   "number": "1.30",
+   "body_en": "Gandiva is sliding out of my hand, my skin is on fire, I cannot keep my footing, and my mind seems to be going round and round.",
+   "body_hi": "गाण्डीव हाथ से सरक रहा है, त्वचा जल उठी है, पैर जमते नहीं, और मन गोल-गोल घूमता जान पड़ता है।",
+   "commentary_en": "The bow has a name. It was a gift, and it is the instrument of everything Arjuna is. It slips. The verse puts that first, ahead of the burning skin and the failing legs, because losing hold of Gandiva is not a symptom but an identity coming loose in the hand. Iva, as if, attached to the turning mind is the single hedge he allows himself: he can report the body plainly, but what is happening to his thinking he can only approximate. Nobody describes their own mind from outside without that word.",
+   "commentary_hi": "धनुष का नाम है। वह भेंट में मिला था, और अर्जुन जो कुछ है, उसका साधन वही है। वह सरक रहा है। श्लोक इसे सबसे पहले रखता है — जलती त्वचा और डगमगाते पैरों से भी पहले — क्योंकि गाण्डीव की पकड़ छूटना लक्षण नहीं, हाथ में एक पहचान का ढीला पड़ जाना है। घूमते मन पर लगा 'इव', मानो, उसकी एक ही छूट है: देह की सूचना वह सीधे दे सकता है, पर अपने सोचने पर क्या बीत रहा है, उसे वह केवल अनुमान से कह पाता है। अपने ही मन को बाहर से बताते समय कोई इस शब्द के बिना नहीं कह पाता।"
+  },
+  {
+   "id": 31,
+   "number": "1.31",
+   "body_en": "The signs I am reading are all turned the wrong way round, Keshava. I keep looking, and I can find no good in killing my own people in a fight.",
+   "body_hi": "जो शकुन मैं पढ़ रहा हूँ, केशव, वे सब उलटे पड़े हैं। मैं देखता ही जाता हूँ, और अपने लोगों को लड़ाई में मारने में कोई भला नहीं पाता।",
+   "commentary_en": "He has moved from the body to argument, and the argument comes in two registers at once: omens, which are read, and shreyas, the good, which is reasoned about. Note the verb he repeats — pashyami, anupashyami, I see, I go on seeing. He is still trying to settle the question by looking, which is exactly what he asked for when he wanted the chariot halted. Krishna's reply, all eighteen chapters of it, amounts to the claim that this is not a question sight can settle.",
+   "commentary_hi": "वह देह से तर्क पर आ गया है, और तर्क एक साथ दो स्वरों में आता है: शकुन, जो पढ़े जाते हैं, और 'श्रेयस्', भला, जिस पर विचार होता है। जिस क्रिया को वह दोहराता है, उसे देखें — पश्यामि, अनुपश्यामि; मैं देखता हूँ, मैं देखता ही जाता हूँ। वह प्रश्न को अब भी देखकर सुलझाना चाहता है — और रथ रुकवाते समय उसने माँगा भी यही था। कृष्ण का उत्तर, पूरे अठारह अध्याय, इसी बात पर आ टिकता है कि यह प्रश्न देखने से सुलझने वाला नहीं है।"
+  },
+  {
+   "id": 32,
+   "number": "1.32",
+   "body_en": "I have no appetite for a win, Krishna, nor for a kingdom, nor for comforts. What use is a kingdom to us, Govinda? What use are enjoyments, or being alive?",
+   "body_hi": "मुझे जीत की भूख नहीं, कृष्ण, न राज्य की, न सुखों की। हमें राज्य किस काम का, गोविन्द? भोग किस काम के, या जीवित रहना ही?",
+   "commentary_en": "This is renunciation of the wrong kind. Everything Arjuna surrenders here he surrenders because it has stopped tasting of anything; the disgust is real, but it is grief dressed in the clothes of detachment. The Gita will spend chapters prising the two apart, and its verdict is that a man who withdraws because he cannot bear the cost has not given up the fruit of his action at all — he has only changed which fruit he is after. Notice too that the whole speech is still organised around what Arjuna wants.",
+   "commentary_hi": "यह गलत प्रकार का त्याग है। अर्जुन यहाँ जो कुछ छोड़ता है, वह इसलिए छोड़ता है कि उसका स्वाद जाता रहा; वितृष्णा सच्ची है, पर वह वैराग्य के वस्त्र पहने शोक है। गीता आगे कई अध्याय इन दोनों को अलगाने में लगाएगी, और उसका निर्णय यह है कि जो मूल्य न चुका पाने के कारण हट जाता है, उसने कर्मफल छोड़ा ही नहीं — उसने केवल यह बदल लिया कि उसे कौन सा फल चाहिए। यह भी देखें कि सारा कथन अब भी इसी के चारों ओर बँधा है कि अर्जुन क्या चाहता है।"
+  },
+  {
+   "id": 33,
+   "number": "1.33",
+   "body_en": "The very people for whose sake we wanted a kingdom, enjoyments, comfort — they are the ones dug in here for the fighting, prepared to let go of wealth and of life.",
+   "body_hi": "जिनके लिए हमने राज्य चाहा, भोग चाहे, सुख चाहा — वही यहाँ लड़ाई के लिए जमे हैं, धन और जीवन दोनों छोड़ने को तैयार।",
+   "commentary_en": "The argument is genuinely good, and it is the strongest thing Arjuna says anywhere in the chapter: a victory whose purpose is the family cannot be purchased by destroying the family. That is means-end reasoning of the cleanest sort. What Krishna does with it is not to refute it but to expose what it takes for granted — that Arjuna is the one dispensing life and death here, that the war is his to grant or withhold. Remove that assumption and the argument has nothing left to stand on.",
+   "commentary_hi": "तर्क वास्तव में अच्छा है, और पूरे अध्याय में अर्जुन जो कहता है उसमें सबसे सबल यही है: जिस विजय का प्रयोजन कुल है, वह कुल के नाश से खरीदी नहीं जा सकती। यह साधन-साध्य का सर्वाधिक स्वच्छ विचार है। कृष्ण इसका खण्डन नहीं करते; वे यह उघाड़ते हैं कि यह तर्क क्या मान बैठा है — कि जीवन और मृत्यु यहाँ अर्जुन बाँट रहा है, कि युद्ध देना या रोक लेना उसके हाथ है। यह मान्यता हटा दें, तो तर्क के नीचे कुछ नहीं बचता।"
+  },
+  {
+   "id": 34,
+   "number": "1.34",
+   "body_en": "Teachers, fathers, sons, grandfathers as well; mother's brothers, fathers-in-law, grandsons, wives' brothers, and connections besides.",
+   "body_hi": "आचार्य, पिता, पुत्र, पितामह भी; मामा, श्वसुर, पौत्र, साले, और इनके अतिरिक्त दूसरे नाते।",
+   "commentary_en": "The list returns, longer this time, and now Arjuna is compiling it himself rather than merely having it put in front of him. Repetition is doing the work of argument: he cannot state his case except by naming the ties over again, and each naming makes the case feel more conclusive to him. It is precisely how grief reasons. He even adds a catch-all at the end — sambandhinah, connections — as though the point were not yet sufficiently made.",
+   "commentary_hi": "सूची लौट आती है, इस बार लम्बी, और अब उसे अर्जुन स्वयं गिन रहा है, केवल सामने रखी हुई नहीं पा रहा। दोहराव तर्क का काम कर रहा है: वह अपनी बात नातों को फिर-फिर नाम देकर ही कह सकता है, और हर बार नाम लेने से बात उसे और निर्णायक लगने लगती है। शोक ठीक इसी तरह तर्क करता है। वह अन्त में एक समेटने वाला शब्द भी जोड़ देता है — 'सम्बन्धिनः', नाते — मानो बात अभी पूरी तरह कही न गई हो।"
+  },
+  {
+   "id": 35,
+   "number": "1.35",
+   "body_en": "I do not want to kill them, Madhusudana, even were they to kill me — not for the rule of all three worlds, so how for the earth?",
+   "body_hi": "इन्हें मारना मैं नहीं चाहता, मधुसूदन, चाहे ये मुझे मार डालें — तीनों लोकों के शासन के लिए भी नहीं, फिर पृथ्वी के लिए कैसे?",
+   "commentary_en": "He calls Krishna Madhusudana, the slayer of Madhu, in the act of announcing that he will not slay. The epithet is not picked at random: the very thing he is refusing to be is standing in the chariot beside him, holding the reins. And the offer he turns down is deliberately preposterous — three worlds, not merely this one — which tells you he is bargaining against a price nobody has named. The honest form of what he means is not that the payment is too small. It is that he cannot make himself do it.",
+   "commentary_hi": "वह कृष्ण को 'मधुसूदन' कहकर पुकारता है, मधु का वध करने वाला — ठीक उसी क्षण जब वह घोषित कर रहा है कि वह वध नहीं करेगा। यह विशेषण अनायास नहीं चुना गया: जो होने से वह इनकार कर रहा है, वही उसके साथ रथ में खड़ा है, रस्सियाँ थामे। और जिस प्रस्ताव को वह ठुकराता है, वह जान-बूझकर असंगत है — तीन लोक, केवल यह एक नहीं — इससे पता चलता है कि वह उस मूल्य से मोल-भाव कर रहा है जिसे किसी ने रखा ही नहीं। उसका आशय ईमानदारी से यह नहीं है कि दाम कम है। यह है कि वह स्वयं से यह करा नहीं पाता।"
+  },
+  {
+   "id": 36,
+   "number": "1.36",
+   "body_en": "What contentment would be left to us in wiping out Dhritarashtra's men, Janardana? Kill these aggressors and nothing but guilt would come to lodge in us.",
+   "body_hi": "धृतराष्ट्र के पुत्रों को मिटाकर हमें कौन सा सन्तोष बचेगा, जनार्दन? इन आक्रमणकारियों को मारकर हममें पाप के सिवा कुछ आ बसेगा नहीं।",
+   "commentary_en": "Watch the word atatayinah — aggressors, men who struck first. Arjuna reaches for the exact legal category that licenses killing them, and then says that killing them would be sin. He is arguing against his own precedent, and he must half know it, because the term is technical and he is the one who chose it. Sin, he says, would ashrayet: take shelter, come to reside. Not a punishment arriving from outside, then, but something moving in.",
+   "commentary_hi": "'आततायिनः' शब्द पर ध्यान दें — आक्रमणकारी, वे जिन्होंने पहले प्रहार किया। अर्जुन ठीक उसी विधिक कोटि तक पहुँचता है जो उन्हें मारने की छूट देती है, और तब कहता है कि उन्हें मारना पाप होगा। वह अपनी ही नज़ीर के विरुद्ध तर्क कर रहा है, और यह उसे आधा जानना भी होगा, क्योंकि पद पारिभाषिक है और चुनने वाला वही है। पाप, वह कहता है, 'आश्रयेत्' — शरण लेगा, आ बसेगा। तो यह बाहर से आने वाला दण्ड नहीं, कुछ भीतर आ बसने वाला है।"
+  },
+  {
+   "id": 37,
+   "number": "1.37",
+   "body_en": "So we are in no position to kill Dhritarashtra's men, who are kin of ours. How would killing our own people leave us happy, Madhava?",
+   "body_hi": "इसलिए धृतराष्ट्र-पुत्रों को मारने की स्थिति में हम नहीं, जो हमारे ही नाते हैं। अपने लोगों को मारकर हम सुखी कैसे रह लेंगे, माधव?",
+   "commentary_en": "Na arhah: we are not entitled, not qualified, not fit. Arjuna has shifted the ground from what is profitable to what he has standing to do, which is a better argument and a more dangerous one, since it makes the objection turn on his own fitness rather than on any outcome. And then he ends on happiness. That is the crack running through it — he has spent five verses claiming to have lost all appetite for reward, and the reward he cannot let go of is peace of mind.",
+   "commentary_hi": "'न अर्हाः': हम अधिकारी नहीं, पात्र नहीं, योग्य नहीं। अर्जुन ने भूमि बदल दी है — लाभ से हटकर उस बात पर, जिसे करने का हक़ उसके पास है; यह अधिक अच्छा तर्क है और अधिक ख़तरनाक भी, क्योंकि इससे आपत्ति किसी परिणाम पर नहीं, उसकी अपनी पात्रता पर टिक जाती है। और फिर वह सुख पर आकर रुकता है। यही उसमें पड़ी दरार है — पाँच श्लोक वह यह कहता रहा कि फल की सारी भूख जा चुकी है, और जो फल वह छोड़ नहीं पाता, वह मन की शान्ति है।"
+  },
+  {
+   "id": 38,
+   "number": "1.38",
+   "body_en": "Even if these men, whose judgement greed has wrecked, cannot see the wrong that comes of wrecking a family, or the crime in betraying friends —",
+   "body_hi": "यदि ये लोग, जिनका विवेक लोभ ने चौपट कर दिया है, कुल के उजड़ने से आने वाले दोष को नहीं देख पाते, न मित्रों से विश्वासघात के अपराध को —",
+   "commentary_en": "Lobha-upahata-chetasah: consciousness struck down by greed. Arjuna grants his opponents an excuse — they cannot see — which is more generous than anything Duryodhana managed to say about him. But look at what the excuse establishes. If their blindness is what makes them culpable, then sight is what makes Arjuna responsible, and he is about to say so outright in the next breath. He is building the trap he will spend the whole of the next chapter inside.",
+   "commentary_hi": "'लोभोपहतचेतसः': लोभ से मारी गई चेतना। अर्जुन अपने विपक्षियों को एक बहाना दे देता है — वे देख नहीं पाते — और यह उससे कहीं उदार है जो दुर्योधन उसके विषय में कह सका। पर देखें कि यह बहाना क्या ठहरा देता है। यदि उनका न देख पाना ही उन्हें दोषी बनाता है, तो अर्जुन को उत्तरदायी उसका देख पाना बनाएगा — और अगली ही साँस में वह यह कहने जा रहा है। वह वही जाल बुन रहा है जिसके भीतर उसका पूरा अगला अध्याय बीतेगा।"
+  },
+  {
+   "id": 39,
+   "number": "1.39",
+   "body_en": "— how are we, who do see the wrong that comes of wrecking a family, to fall short of knowing enough to turn back from this sin, Janardana?",
+   "body_hi": "— तो हम, जो कुल के उजड़ने से आने वाले दोष को देख रहे हैं, इस पाप से लौट आने भर का ज्ञान न रखें, यह कैसे हो, जनार्दन?",
+   "commentary_en": "The verse turns on a single contrast: na pashyanti against prapashyadbhih, they do not see against we who see clearly. Arjuna's claim has become epistemic — knowledge obliges. It is a real principle and the Gita never denies it; what the poem denies is that Arjuna currently holds the knowledge he believes he holds. He thinks he is seeing the situation. The eleventh chapter will show him what seeing actually costs, and he will beg for it to stop.",
+   "commentary_hi": "श्लोक एक ही विरोध पर घूमता है: 'न पश्यन्ति' के सामने 'प्रपश्यद्भिः' — वे नहीं देखते, हम स्पष्ट देख रहे हैं। अर्जुन का दावा अब ज्ञान का दावा है — जानना बाँधता है। यह सच्चा सिद्धान्त है और गीता इसका खण्डन कभी नहीं करती; काव्य जिसका खण्डन करता है वह यह है कि अर्जुन के पास इस समय वही ज्ञान है जो वह अपने पास मानता है। वह समझता है कि वह स्थिति देख रहा है। ग्यारहवाँ अध्याय उसे दिखाएगा कि देखने का दाम क्या है, और वह उसे रोक देने की प्रार्थना करेगा।"
+  },
+  {
+   "id": 40,
+   "number": "1.40",
+   "body_en": "When a family is wrecked, its age-old observances perish along with it, and once those observances are gone, lawlessness swamps whatever family is left.",
+   "body_hi": "कुल उजड़ता है तो उसके पुरातन आचार भी उसके साथ मिट जाते हैं, और वे आचार मिट जाने पर बचे-खुचे कुल को अधर्म डुबो लेता है।",
+   "commentary_en": "Here begins the most formal stretch of Arjuna's speech: five verses of consequence following consequence. He has stopped talking about his own hands and started reasoning about the order of things, and his vocabulary shifts with him — kula-dharma, sanatana, adharma. The argument is impersonal, and that is what it is for: it lets him state a private inability as a public law. It is also, on its own terms, sound, which is exactly why Krishna declines to answer it on its own terms.",
+   "commentary_hi": "यहाँ से अर्जुन के कथन का सर्वाधिक औपचारिक भाग आरम्भ होता है: पाँच श्लोक, एक परिणाम के पीछे दूसरा परिणाम। वह अपने हाथों की बात छोड़कर व्यवस्था के विषय में विचार करने लगा है, और उसके साथ उसकी शब्दावली बदल जाती है — कुलधर्म, सनातन, अधर्म। तर्क निर्वैयक्तिक है, और उसका प्रयोजन यही है: इससे वह अपनी निजी असमर्थता को सार्वजनिक नियम की तरह रख पाता है। अपनी शर्तों पर तर्क ठीक भी है — और इसीलिए कृष्ण उसका उत्तर उसकी शर्तों पर देने से इनकार कर देते हैं।"
+  },
+  {
+   "id": 41,
+   "number": "1.41",
+   "body_en": "Where lawlessness has the upper hand, Krishna, the women of a family are spoiled, and once the women are spoiled, Varshneya, the orders run together.",
+   "body_hi": "जहाँ अधर्म का हाथ ऊपर हो, कृष्ण, वहाँ कुल की स्त्रियाँ बिगड़ जाती हैं, और स्त्रियाँ बिगड़ जाएँ तो, वार्ष्णेय, वर्ण घुल-मिल जाते हैं।",
+   "commentary_en": "This is Arjuna reciting the received social doctrine of his time, and it should be read as exactly that: a man reaching for the most orthodox argument within reach because he needs an argument, any argument at all. The Gita's own teaching does not rest here. Within a single chapter Krishna has moved the entire discussion onto the self, and nothing in the remaining seventeen returns to this line of reasoning. What the verse records is the shape of Arjuna's desperation, not the position of the poem.",
+   "commentary_hi": "यह अर्जुन अपने युग का प्रचलित सामाजिक मत दोहरा रहा है, और इसे ठीक वैसा ही पढ़ा जाना चाहिए: एक मनुष्य पहुँच के भीतर पड़े सबसे रूढ़ तर्क को थाम रहा है, क्योंकि उसे तर्क चाहिए — कोई भी तर्क। गीता का अपना उपदेश यहाँ नहीं ठहरता। एक ही अध्याय के भीतर कृष्ण सारी चर्चा को आत्मा पर ले जाते हैं, और शेष सत्रह में कहीं भी यह विचार-रेखा लौटकर नहीं आती। श्लोक जो दर्ज करता है वह अर्जुन की व्याकुलता का आकार है, काव्य का पक्ष नहीं।"
+  },
+  {
+   "id": 42,
+   "number": "1.42",
+   "body_en": "That running together leads nowhere but to hell, for the wreckers of a family and for the family alike; and their ancestors drop, cut off from the offerings of rice and water.",
+   "body_hi": "वह घुल-मिल जाना नरक के सिवा कहीं नहीं ले जाता — कुल के उजाड़ने वालों को भी, कुल को भी; और उनके पितर पिण्ड तथा जल की क्रियाओं से कटकर गिर पड़ते हैं।",
+   "commentary_en": "The dead depend on the living. That is the assumption doing all the work here: the rites hold the ancestors in place, the rites require descendants, and so wrecking a family reaches backwards in time and unseats generations already gone. Arjuna's horror is not only at the deaths in front of him but at a rupture travelling the wrong way along the line. Notice how far he has come from his dry mouth and shaking hands — from his own body to the fate of people who died before he was born.",
+   "commentary_hi": "मरे हुए जीवितों पर निर्भर हैं। यहाँ सारा काम यही मान्यता कर रही है: क्रियाएँ पितरों को अपने स्थान पर थामे रखती हैं, क्रियाओं के लिए वंशज चाहिए, और इस तरह कुल का उजड़ना समय में पीछे तक पहुँचकर बीत चुकी पीढ़ियों को भी उनके स्थान से हिला देता है। अर्जुन का त्रास केवल सामने पड़ी मृत्युओं का नहीं, उस दरार का है जो वंश-रेखा पर उलटी दिशा में चल रही है। देखें वह अपने सूखे मुँह और काँपते हाथों से कितनी दूर आ गया है — अपनी देह से उन लोगों की गति तक, जो उसके जन्म से पहले मर चुके।"
+  },
+  {
+   "id": 43,
+   "number": "1.43",
+   "body_en": "By these wrongs of a family's wreckers, which run the orders together, the observances of birth and the abiding observances of the family are torn up by the root.",
+   "body_hi": "कुल उजाड़ने वालों के इन दोषों से, जो वर्णों को घोल देते हैं, जाति के आचार और कुल के टिकाऊ आचार जड़ से उखड़ जाते हैं।",
+   "commentary_en": "Utsadyante — uprooted, pulled up by the root. The metaphor earns its place after four verses of legal reasoning: Arjuna is imagining a structure that does not simply break but loses its footing in the ground, so that nothing can be planted there again. He also names himself in this verse without intending to. Kula-ghnanam, the wreckers of the family, is the party whose wrongs he is cataloguing — and he is one of them.",
+   "commentary_hi": "'उत्साद्यन्ते' — उखाड़ दिए जाते हैं, जड़ से खींच लिए जाते हैं। चार श्लोक के विधिक तर्क के बाद यह रूपक अपनी जगह कमा लेता है: अर्जुन ऐसी रचना की कल्पना कर रहा है जो केवल टूटती नहीं, भूमि में अपनी पकड़ खो देती है — जिससे वहाँ फिर कुछ रोपा न जा सके। इस श्लोक में वह अनजाने अपना नाम भी ले लेता है। 'कुलघ्नानाम्', कुल उजाड़ने वाले, वही पक्ष है जिसके दोष वह गिना रहा है — और उनमें एक वह है।"
+  },
+  {
+   "id": 44,
+   "number": "1.44",
+   "body_en": "For men whose family observances have been torn up, Janardana, the dwelling is in hell, and for no settled term — so we have heard it handed down.",
+   "body_hi": "जिन मनुष्यों के कुल-आचार उखड़ चुके, जनार्दन, उनका बसेरा नरक में होता है, और वह किसी नियत अवधि तक नहीं — ऐसा हमने परम्परा से सुना है।",
+   "commentary_en": "Anushushruma: we have heard, by tradition. Arjuna closes the formal argument by resting it on authority rather than on anything he has seen — a considerable admission from the man who has just spent nine verses insisting that seeing obliges. And aniyatam, for no settled term, is the detail he leaves ringing: not a sentence with an end to it but an indefinite residence. He has argued himself into a hell without a term, and with that the argument is finished.",
+   "commentary_hi": "'अनुशुश्रुम': हमने सुना है, परम्परा से। अर्जुन औपचारिक तर्क को अन्त में किसी देखी हुई बात पर नहीं, प्रमाण-परम्परा पर टिका देता है — उस मनुष्य के लिए यह बड़ी स्वीकारोक्ति है जो नौ श्लोक यह कहता रहा कि देखना बाँधता है। और 'अनियतम्', किसी नियत अवधि तक नहीं, वही ब्योरा है जो गूँजता छोड़ जाता है: अन्त रखने वाला दण्ड नहीं, अनिश्चित काल का बसेरा। उसने तर्क करते-करते अपने को अवधि-रहित नरक में पहुँचा दिया है, और इसी के साथ तर्क समाप्त है।"
+  },
+  {
+   "id": 45,
+   "number": "1.45",
+   "body_en": "Oh — that we should have settled on so great a sin; that greed for a kingdom's comfort should have us poised over killing our own people.",
+   "body_hi": "हाय! इतने बड़े पाप पर हमने मन बाँध लिया; राज्य-सुख के लोभ से हम अपने ही लोगों को मारने पर तने खड़े हैं।",
+   "commentary_en": "Aho bata is a cry rather than a word: the argument has run out and what is left is dismay. Look at who is guilty now. Seven verses ago greed had wrecked the judgement of the other side; here it is we who are moved by greed for a kingdom's comfort. That reversal is the most honest thing Arjuna says in the chapter, and it is also the moment he becomes unable to act — a man who can no longer tell his own case from his enemy's has no side left to fight on.",
+   "commentary_hi": "'अहो बत' शब्द नहीं, पुकार है: तर्क चुक गया और जो बचा वह विषाद है। देखें, दोषी अब कौन है। सात श्लोक पहले लोभ ने दूसरे पक्ष का विवेक चौपट किया था; यहाँ लोभ से चल रहे 'हम' हैं, राज्य-सुख के लोभ से। यह पलटाव अध्याय में अर्जुन की सबसे ईमानदार बात है, और वही क्षण है जब वह कर्म करने में असमर्थ हो जाता है — जो मनुष्य अपने पक्ष को शत्रु के पक्ष से अलग न कर सके, उसके पास लड़ने के लिए कोई पक्ष नहीं बचता।"
+  },
+  {
+   "id": 46,
+   "number": "1.46",
+   "body_en": "Let Dhritarashtra's men come at me with weapons in hand and cut me down in the fighting, while I stand there holding none and lifting no hand against them: I would find that the safer of the two.",
+   "body_hi": "यदि धृतराष्ट्र के पुत्र हाथ में शस्त्र लेकर मुझे लड़ाई में मार डालें, जब मैं शस्त्र-रहित खड़ा हूँ और कोई प्रतिकार नहीं करता — तो वह मेरे लिए अधिक भला बैठेगा।",
+   "commentary_en": "Kshemataram: safer, more conducive to well-being. Arjuna has arrived at his own death and calls it the safer option, which is a precise measurement of how the calculation looks from inside grief. He is not asking to die. He is asking for a way the killing can happen without his participation in it. And notice that even here the reasoning stays about him — better for me — and that what he wants is not to stop the war but to be absent from it.",
+   "commentary_hi": "'क्षेमतरम्': अधिक सुरक्षित, कल्याण के अधिक अनुकूल। अर्जुन अपनी ही मृत्यु तक आ पहुँचा है और उसे अधिक सुरक्षित विकल्प कहता है — शोक के भीतर से गणना कैसी दिखती है, इसका यह ठीक-ठीक माप है। वह मरना नहीं माँग रहा। वह यह माँग रहा है कि मारकाट उसकी सहभागिता के बिना हो जाए। और देखें कि यहाँ भी विचार उसी के चारों ओर है — 'मेरे लिए भला' — और वह युद्ध रोकना नहीं, उसमें से अनुपस्थित होना चाहता है।"
+  },
+  {
+   "id": 47,
+   "number": "1.47",
+   "body_en": "Sanjaya said: Having spoken in this way, right there in the fighting, Arjuna let go of bow and arrow together, sat down on the floor of his chariot, and his mind shook with grief.",
+   "body_hi": "संजय ने कहा — इस प्रकार कहकर, वहीं लड़ाई के बीच, अर्जुन ने धनुष और बाण दोनों छोड़ दिए, अपने रथ के फ़र्श पर बैठ गया, और उसका मन शोक से हिल उठा।",
+   "commentary_en": "He sits down. After twenty verses of argument the chapter closes on a physical act, and it is the act of a man leaving his post in the middle of a battlefield with missiles already in the air. Visrijya — released, let go: the bow that was sliding out of his hand seventeen verses ago is now put down deliberately. Sanjaya's final word is samvigna, shaken, agitated. Nothing has been settled and nothing has been answered. The Gita starts from here, with a man sitting in his chariot who will not get up.",
+   "commentary_hi": "वह बैठ जाता है। बीस श्लोक के तर्क के बाद अध्याय एक शारीरिक कर्म पर बन्द होता है, और वह उस मनुष्य का कर्म है जो युद्धभूमि के बीच अपना स्थान छोड़ रहा है, जब शस्त्र हवा में हैं। 'विसृज्य' — छोड़ दिया, हाथ खोल दिया: जो धनुष सत्रह श्लोक पहले हाथ से सरक रहा था, वह अब जान-बूझकर रख दिया गया है। संजय का अन्तिम शब्द है 'संविग्न' — हिला हुआ, विचलित। कुछ तय नहीं हुआ और किसी बात का उत्तर नहीं मिला। गीता यहीं से आरम्भ होती है — अपने रथ में बैठे उस मनुष्य से, जो उठेगा नहीं।"
+  }
+ ]
+}

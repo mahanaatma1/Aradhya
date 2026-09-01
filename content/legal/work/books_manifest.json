@@ -1,0 +1,1302 @@
+[
+ {
+  "book_id": 1,
+  "slug": "bgc_1",
+  "title_en": "Arjuna Vishada Yoga",
+  "scripture_id": 1,
+  "order_no": 1,
+  "verses": 47,
+  "first_id": 1,
+  "last_id": 47
+ },
+ {
+  "book_id": 2,
+  "slug": "bgc_2",
+  "title_en": "Sankhya Yoga",
+  "scripture_id": 1,
+  "order_no": 2,
+  "verses": 72,
+  "first_id": 48,
+  "last_id": 119
+ },
+ {
+  "book_id": 3,
+  "slug": "bgc_3",
+  "title_en": "Karma Yoga",
+  "scripture_id": 1,
+  "order_no": 3,
+  "verses": 43,
+  "first_id": 120,
+  "last_id": 162
+ },
+ {
+  "book_id": 4,
+  "slug": "bgc_4",
+  "title_en": "Jnana Karma Sanyasa Yoga",
+  "scripture_id": 1,
+  "order_no": 4,
+  "verses": 42,
+  "first_id": 163,
+  "last_id": 204
+ },
+ {
+  "book_id": 5,
+  "slug": "bgc_5",
+  "title_en": "Karma Sanyasa Yoga",
+  "scripture_id": 1,
+  "order_no": 5,
+  "verses": 29,
+  "first_id": 205,
+  "last_id": 233
+ },
+ {
+  "book_id": 6,
+  "slug": "bgc_6",
+  "title_en": "Dhyana Yoga",
+  "scripture_id": 1,
+  "order_no": 6,
+  "verses": 47,
+  "first_id": 234,
+  "last_id": 280
+ },
+ {
+  "book_id": 7,
+  "slug": "bgc_7",
+  "title_en": "Jnana Vijnana Yoga",
+  "scripture_id": 1,
+  "order_no": 7,
+  "verses": 30,
+  "first_id": 281,
+  "last_id": 310
+ },
+ {
+  "book_id": 8,
+  "slug": "bgc_8",
+  "title_en": "Akshara Brahma Yoga",
+  "scripture_id": 1,
+  "order_no": 8,
+  "verses": 28,
+  "first_id": 311,
+  "last_id": 338
+ },
+ {
+  "book_id": 9,
+  "slug": "bgc_9",
+  "title_en": "Raja Vidya Raja Guhya Yoga",
+  "scripture_id": 1,
+  "order_no": 9,
+  "verses": 34,
+  "first_id": 339,
+  "last_id": 372
+ },
+ {
+  "book_id": 10,
+  "slug": "bgc_10",
+  "title_en": "Vibhuti Yoga",
+  "scripture_id": 1,
+  "order_no": 10,
+  "verses": 42,
+  "first_id": 373,
+  "last_id": 414
+ },
+ {
+  "book_id": 11,
+  "slug": "bgc_11",
+  "title_en": "Vishwaroopa Darshana Yoga",
+  "scripture_id": 1,
+  "order_no": 11,
+  "verses": 55,
+  "first_id": 415,
+  "last_id": 469
+ },
+ {
+  "book_id": 12,
+  "slug": "bgc_12",
+  "title_en": "Bhakti Yoga",
+  "scripture_id": 1,
+  "order_no": 12,
+  "verses": 20,
+  "first_id": 470,
+  "last_id": 489
+ },
+ {
+  "book_id": 13,
+  "slug": "bgc_13",
+  "title_en": "Kshetra Kshetrajna Vibhaga Yoga",
+  "scripture_id": 1,
+  "order_no": 13,
+  "verses": 35,
+  "first_id": 490,
+  "last_id": 524
+ },
+ {
+  "book_id": 14,
+  "slug": "bgc_14",
+  "title_en": "Gunatraya Vibhaga Yoga",
+  "scripture_id": 1,
+  "order_no": 14,
+  "verses": 27,
+  "first_id": 525,
+  "last_id": 551
+ },
+ {
+  "book_id": 15,
+  "slug": "bgc_15",
+  "title_en": "Purushottama Yoga",
+  "scripture_id": 1,
+  "order_no": 15,
+  "verses": 20,
+  "first_id": 552,
+  "last_id": 571
+ },
+ {
+  "book_id": 16,
+  "slug": "bgc_16",
+  "title_en": "Daivasura Sampad Vibhaga Yoga",
+  "scripture_id": 1,
+  "order_no": 16,
+  "verses": 24,
+  "first_id": 572,
+  "last_id": 595
+ },
+ {
+  "book_id": 17,
+  "slug": "bgc_17",
+  "title_en": "Shraddhatraya Vibhaga Yoga",
+  "scripture_id": 1,
+  "order_no": 17,
+  "verses": 28,
+  "first_id": 596,
+  "last_id": 623
+ },
+ {
+  "book_id": 18,
+  "slug": "bgc_18",
+  "title_en": "Moksha Sanyasa Yoga",
+  "scripture_id": 1,
+  "order_no": 18,
+  "verses": 78,
+  "first_id": 624,
+  "last_id": 701
+ },
+ {
+  "book_id": 25,
+  "slug": "adhyatma",
+  "title_en": "Adhyatma Upanishad",
+  "scripture_id": 2,
+  "order_no": 1,
+  "verses": 70,
+  "first_id": 20837,
+  "last_id": 20906
+ },
+ {
+  "book_id": 26,
+  "slug": "advayataraka",
+  "title_en": "Advayataraka Upanishad",
+  "scripture_id": 2,
+  "order_no": 2,
+  "verses": 19,
+  "first_id": 20907,
+  "last_id": 20925
+ },
+ {
+  "book_id": 27,
+  "slug": "aitareya",
+  "title_en": "Aitareya Upanishad",
+  "scripture_id": 2,
+  "order_no": 3,
+  "verses": 24,
+  "first_id": 20926,
+  "last_id": 20949
+ },
+ {
+  "book_id": 28,
+  "slug": "akshamalika",
+  "title_en": "Akshamalika Upanishad",
+  "scripture_id": 2,
+  "order_no": 4,
+  "verses": 17,
+  "first_id": 20950,
+  "last_id": 20966
+ },
+ {
+  "book_id": 29,
+  "slug": "akshi",
+  "title_en": "Akshi Upanishad",
+  "scripture_id": 2,
+  "order_no": 5,
+  "verses": 50,
+  "first_id": 20967,
+  "last_id": 21016
+ },
+ {
+  "book_id": 30,
+  "slug": "amritabindu",
+  "title_en": "Amritabindu Upanishad",
+  "scripture_id": 2,
+  "order_no": 6,
+  "verses": 22,
+  "first_id": 21017,
+  "last_id": 21038
+ },
+ {
+  "book_id": 31,
+  "slug": "amritanada",
+  "title_en": "Amritanada Upanishad",
+  "scripture_id": 2,
+  "order_no": 7,
+  "verses": 39,
+  "first_id": 21039,
+  "last_id": 21077
+ },
+ {
+  "book_id": 32,
+  "slug": "aruneya",
+  "title_en": "Aruneya Upanishad",
+  "scripture_id": 2,
+  "order_no": 8,
+  "verses": 6,
+  "first_id": 21078,
+  "last_id": 21083
+ },
+ {
+  "book_id": 33,
+  "slug": "atharvashikha",
+  "title_en": "Atharvashikha Upanishad",
+  "scripture_id": 2,
+  "order_no": 9,
+  "verses": 9,
+  "first_id": 21084,
+  "last_id": 21092
+ },
+ {
+  "book_id": 34,
+  "slug": "atharvasiras",
+  "title_en": "Atharvasiras Upanishad",
+  "scripture_id": 2,
+  "order_no": 10,
+  "verses": 34,
+  "first_id": 21093,
+  "last_id": 21126
+ },
+ {
+  "book_id": 35,
+  "slug": "atma",
+  "title_en": "Atma Upanishad",
+  "scripture_id": 2,
+  "order_no": 11,
+  "verses": 31,
+  "first_id": 21127,
+  "last_id": 21157
+ },
+ {
+  "book_id": 36,
+  "slug": "atmabodha",
+  "title_en": "Atmabodha Upanishad",
+  "scripture_id": 2,
+  "order_no": 12,
+  "verses": 39,
+  "first_id": 21158,
+  "last_id": 21196
+ },
+ {
+  "book_id": 37,
+  "slug": "avadhuta",
+  "title_en": "Avadhuta Upanishad",
+  "scripture_id": 2,
+  "order_no": 13,
+  "verses": 34,
+  "first_id": 21197,
+  "last_id": 21230
+ },
+ {
+  "book_id": 38,
+  "slug": "avyakta",
+  "title_en": "Avyakta Upanishad",
+  "scripture_id": 2,
+  "order_no": 14,
+  "verses": 23,
+  "first_id": 21231,
+  "last_id": 21253
+ },
+ {
+  "book_id": 39,
+  "slug": "bahvricha",
+  "title_en": "Bahvricha Upanishad",
+  "scripture_id": 2,
+  "order_no": 15,
+  "verses": 9,
+  "first_id": 21254,
+  "last_id": 21262
+ },
+ {
+  "book_id": 40,
+  "slug": "bhasmajabala",
+  "title_en": "Bhasmajabala Upanishad",
+  "scripture_id": 2,
+  "order_no": 16,
+  "verses": 24,
+  "first_id": 21263,
+  "last_id": 21286
+ },
+ {
+  "book_id": 41,
+  "slug": "bhavana",
+  "title_en": "Bhavana Upanishad",
+  "scripture_id": 2,
+  "order_no": 17,
+  "verses": 9,
+  "first_id": 21287,
+  "last_id": 21295
+ },
+ {
+  "book_id": 42,
+  "slug": "bhikshuka",
+  "title_en": "Bhikshuka Upanishad",
+  "scripture_id": 2,
+  "order_no": 18,
+  "verses": 5,
+  "first_id": 21296,
+  "last_id": 21300
+ },
+ {
+  "book_id": 43,
+  "slug": "brahma",
+  "title_en": "Brahma Upanishad",
+  "scripture_id": 2,
+  "order_no": 19,
+  "verses": 30,
+  "first_id": 21301,
+  "last_id": 21330
+ },
+ {
+  "book_id": 44,
+  "slug": "brahmavidya",
+  "title_en": "Brahmavidya Upanishad",
+  "scripture_id": 2,
+  "order_no": 20,
+  "verses": 110,
+  "first_id": 21331,
+  "last_id": 21440
+ },
+ {
+  "book_id": 45,
+  "slug": "brihadarankya",
+  "title_en": "Brihadarankya Upanishad",
+  "scripture_id": 2,
+  "order_no": 21,
+  "verses": 151,
+  "first_id": 21441,
+  "last_id": 21591
+ },
+ {
+  "book_id": 46,
+  "slug": "brihajjabala",
+  "title_en": "Brihajjabala Upanishad",
+  "scripture_id": 2,
+  "order_no": 22,
+  "verses": 103,
+  "first_id": 21592,
+  "last_id": 21694
+ },
+ {
+  "book_id": 47,
+  "slug": "brihatsanyasa",
+  "title_en": "Brihatsanyasa Upanishad",
+  "scripture_id": 2,
+  "order_no": 23,
+  "verses": 120,
+  "first_id": 21695,
+  "last_id": 21814
+ },
+ {
+  "book_id": 48,
+  "slug": "chandogya_upanishad",
+  "title_en": "Chandogya Upanishad Upanishad",
+  "scripture_id": 2,
+  "order_no": 24,
+  "verses": 86,
+  "first_id": 21815,
+  "last_id": 21900
+ },
+ {
+  "book_id": 49,
+  "slug": "dakshinamurti",
+  "title_en": "Dakshinamurti Upanishad",
+  "scripture_id": 2,
+  "order_no": 25,
+  "verses": 22,
+  "first_id": 21901,
+  "last_id": 21922
+ },
+ {
+  "book_id": 50,
+  "slug": "darshana",
+  "title_en": "Darshana Upanishad",
+  "scripture_id": 2,
+  "order_no": 26,
+  "verses": 224,
+  "first_id": 21923,
+  "last_id": 22146
+ },
+ {
+  "book_id": 51,
+  "slug": "dattareya",
+  "title_en": "Dattareya Upanishad",
+  "scripture_id": 2,
+  "order_no": 27,
+  "verses": 12,
+  "first_id": 22147,
+  "last_id": 22158
+ },
+ {
+  "book_id": 52,
+  "slug": "devi",
+  "title_en": "Devi Upanishad",
+  "scripture_id": 2,
+  "order_no": 28,
+  "verses": 24,
+  "first_id": 22159,
+  "last_id": 22182
+ },
+ {
+  "book_id": 53,
+  "slug": "dhyanabindu",
+  "title_en": "Dhyanabindu Upanishad",
+  "scripture_id": 2,
+  "order_no": 29,
+  "verses": 124,
+  "first_id": 22183,
+  "last_id": 22306
+ },
+ {
+  "book_id": 54,
+  "slug": "ekakshara",
+  "title_en": "Ekakshara Upanishad",
+  "scripture_id": 2,
+  "order_no": 30,
+  "verses": 13,
+  "first_id": 22307,
+  "last_id": 22319
+ },
+ {
+  "book_id": 55,
+  "slug": "ganapati",
+  "title_en": "Ganapati Upanishad",
+  "scripture_id": 2,
+  "order_no": 31,
+  "verses": 14,
+  "first_id": 22320,
+  "last_id": 22333
+ },
+ {
+  "book_id": 56,
+  "slug": "garbha",
+  "title_en": "Garbha Upanishad",
+  "scripture_id": 2,
+  "order_no": 32,
+  "verses": 18,
+  "first_id": 22334,
+  "last_id": 22351
+ },
+ {
+  "book_id": 57,
+  "slug": "garuda",
+  "title_en": "Garuda Upanishad",
+  "scripture_id": 2,
+  "order_no": 33,
+  "verses": 25,
+  "first_id": 22352,
+  "last_id": 22376
+ },
+ {
+  "book_id": 58,
+  "slug": "gopalatapani",
+  "title_en": "Gopalatapani Upanishad",
+  "scripture_id": 2,
+  "order_no": 34,
+  "verses": 105,
+  "first_id": 22377,
+  "last_id": 22481
+ },
+ {
+  "book_id": 59,
+  "slug": "hamsa",
+  "title_en": "Hamsa Upanishad",
+  "scripture_id": 2,
+  "order_no": 35,
+  "verses": 27,
+  "first_id": 22482,
+  "last_id": 22508
+ },
+ {
+  "book_id": 60,
+  "slug": "hayagriva",
+  "title_en": "Hayagriva Upanishad",
+  "scripture_id": 2,
+  "order_no": 36,
+  "verses": 16,
+  "first_id": 22509,
+  "last_id": 22524
+ },
+ {
+  "book_id": 61,
+  "slug": "jabala",
+  "title_en": "Jabala Upanishad",
+  "scripture_id": 2,
+  "order_no": 37,
+  "verses": 23,
+  "first_id": 22525,
+  "last_id": 22547
+ },
+ {
+  "book_id": 62,
+  "slug": "jabali",
+  "title_en": "Jabali Upanishad",
+  "scripture_id": 2,
+  "order_no": 38,
+  "verses": 8,
+  "first_id": 22548,
+  "last_id": 22555
+ },
+ {
+  "book_id": 63,
+  "slug": "kaivalya",
+  "title_en": "Kaivalya Upanishad",
+  "scripture_id": 2,
+  "order_no": 39,
+  "verses": 26,
+  "first_id": 22556,
+  "last_id": 22581
+ },
+ {
+  "book_id": 64,
+  "slug": "kalagnirudra",
+  "title_en": "Kalagnirudra Upanishad",
+  "scripture_id": 2,
+  "order_no": 40,
+  "verses": 5,
+  "first_id": 22582,
+  "last_id": 22586
+ },
+ {
+  "book_id": 65,
+  "slug": "kalisantarana",
+  "title_en": "Kalisantarana Upanishad",
+  "scripture_id": 2,
+  "order_no": 41,
+  "verses": 3,
+  "first_id": 22587,
+  "last_id": 22589
+ },
+ {
+  "book_id": 66,
+  "slug": "katha",
+  "title_en": "Katha Upanishad",
+  "scripture_id": 2,
+  "order_no": 42,
+  "verses": 48,
+  "first_id": 22590,
+  "last_id": 22637
+ },
+ {
+  "book_id": 67,
+  "slug": "kathashruti",
+  "title_en": "Kathashruti Upanishad",
+  "scripture_id": 2,
+  "order_no": 43,
+  "verses": 48,
+  "first_id": 22638,
+  "last_id": 22685
+ },
+ {
+  "book_id": 68,
+  "slug": "kaushitaki",
+  "title_en": "Kaushitaki Upanishad",
+  "scripture_id": 2,
+  "order_no": 44,
+  "verses": 51,
+  "first_id": 22686,
+  "last_id": 22736
+ },
+ {
+  "book_id": 69,
+  "slug": "kena",
+  "title_en": "Kena Upanishad",
+  "scripture_id": 2,
+  "order_no": 45,
+  "verses": 35,
+  "first_id": 22737,
+  "last_id": 22771
+ },
+ {
+  "book_id": 70,
+  "slug": "krishna",
+  "title_en": "Krishna Upanishad",
+  "scripture_id": 2,
+  "order_no": 46,
+  "verses": 26,
+  "first_id": 22772,
+  "last_id": 22797
+ },
+ {
+  "book_id": 71,
+  "slug": "kshurika",
+  "title_en": "Kshurika Upanishad",
+  "scripture_id": 2,
+  "order_no": 47,
+  "verses": 25,
+  "first_id": 22798,
+  "last_id": 22822
+ },
+ {
+  "book_id": 72,
+  "slug": "kundika",
+  "title_en": "Kundika Upanishad",
+  "scripture_id": 2,
+  "order_no": 48,
+  "verses": 30,
+  "first_id": 22823,
+  "last_id": 22852
+ },
+ {
+  "book_id": 73,
+  "slug": "maha",
+  "title_en": "Maha Upanishad",
+  "scripture_id": 2,
+  "order_no": 49,
+  "verses": 528,
+  "first_id": 22853,
+  "last_id": 23380
+ },
+ {
+  "book_id": 74,
+  "slug": "mahanarayana",
+  "title_en": "Mahanarayana Upanishad",
+  "scripture_id": 2,
+  "order_no": 50,
+  "verses": 296,
+  "first_id": 23381,
+  "last_id": 23676
+ },
+ {
+  "book_id": 75,
+  "slug": "mahavakya",
+  "title_en": "Mahavakya Upanishad",
+  "scripture_id": 2,
+  "order_no": 51,
+  "verses": 11,
+  "first_id": 23677,
+  "last_id": 23687
+ },
+ {
+  "book_id": 76,
+  "slug": "maitrayaniya",
+  "title_en": "Maitrayaniya Upanishad",
+  "scripture_id": 2,
+  "order_no": 52,
+  "verses": 94,
+  "first_id": 23688,
+  "last_id": 23781
+ },
+ {
+  "book_id": 77,
+  "slug": "maitreya",
+  "title_en": "Maitreya Upanishad",
+  "scripture_id": 2,
+  "order_no": 53,
+  "verses": 69,
+  "first_id": 23782,
+  "last_id": 23850
+ },
+ {
+  "book_id": 78,
+  "slug": "mandalabrahmana",
+  "title_en": "Mandalabrahmana Upanishad",
+  "scripture_id": 2,
+  "order_no": 54,
+  "verses": 89,
+  "first_id": 23851,
+  "last_id": 23939
+ },
+ {
+  "book_id": 79,
+  "slug": "mandukya",
+  "title_en": "Mandukya Upanishad",
+  "scripture_id": 2,
+  "order_no": 55,
+  "verses": 12,
+  "first_id": 23940,
+  "last_id": 23951
+ },
+ {
+  "book_id": 80,
+  "slug": "mantrika",
+  "title_en": "Mantrika Upanishad",
+  "scripture_id": 2,
+  "order_no": 56,
+  "verses": 21,
+  "first_id": 23952,
+  "last_id": 23972
+ },
+ {
+  "book_id": 81,
+  "slug": "mudgala",
+  "title_en": "Mudgala Upanishad",
+  "scripture_id": 2,
+  "order_no": 57,
+  "verses": 9,
+  "first_id": 23973,
+  "last_id": 23981
+ },
+ {
+  "book_id": 82,
+  "slug": "muktika",
+  "title_en": "Muktika Upanishad",
+  "scripture_id": 2,
+  "order_no": 58,
+  "verses": 131,
+  "first_id": 23982,
+  "last_id": 24112
+ },
+ {
+  "book_id": 83,
+  "slug": "mundaka",
+  "title_en": "Mundaka Upanishad",
+  "scripture_id": 2,
+  "order_no": 59,
+  "verses": 35,
+  "first_id": 24113,
+  "last_id": 24147
+ },
+ {
+  "book_id": 84,
+  "slug": "nadabindu",
+  "title_en": "Nadabindu Upanishad",
+  "scripture_id": 2,
+  "order_no": 60,
+  "verses": 56,
+  "first_id": 24148,
+  "last_id": 24203
+ },
+ {
+  "book_id": 85,
+  "slug": "naradparivrajaka",
+  "title_en": "Naradparivrajaka Upanishad",
+  "scripture_id": 2,
+  "order_no": 61,
+  "verses": 299,
+  "first_id": 24204,
+  "last_id": 24502
+ },
+ {
+  "book_id": 86,
+  "slug": "narayana",
+  "title_en": "Narayana Upanishad",
+  "scripture_id": 2,
+  "order_no": 62,
+  "verses": 5,
+  "first_id": 24503,
+  "last_id": 24507
+ },
+ {
+  "book_id": 87,
+  "slug": "niralamba",
+  "title_en": "Niralamba Upanishad",
+  "scripture_id": 2,
+  "order_no": 63,
+  "verses": 4,
+  "first_id": 24508,
+  "last_id": 24511
+ },
+ {
+  "book_id": 88,
+  "slug": "nirvana",
+  "title_en": "Nirvana Upanishad",
+  "scripture_id": 2,
+  "order_no": 64,
+  "verses": 48,
+  "first_id": 24512,
+  "last_id": 24559
+ },
+ {
+  "book_id": 89,
+  "slug": "nrisimhatapaniya",
+  "title_en": "Nrisimhatapaniya Upanishad",
+  "scripture_id": 2,
+  "order_no": 65,
+  "verses": 67,
+  "first_id": 24560,
+  "last_id": 24626
+ },
+ {
+  "book_id": 90,
+  "slug": "paingala",
+  "title_en": "Paingala Upanishad",
+  "scripture_id": 2,
+  "order_no": 66,
+  "verses": 44,
+  "first_id": 24627,
+  "last_id": 24670
+ },
+ {
+  "book_id": 91,
+  "slug": "panchabrahma",
+  "title_en": "Panchabrahma Upanishad",
+  "scripture_id": 2,
+  "order_no": 67,
+  "verses": 36,
+  "first_id": 24671,
+  "last_id": 24706
+ },
+ {
+  "book_id": 92,
+  "slug": "parabrahma",
+  "title_en": "Parabrahma Upanishad",
+  "scripture_id": 2,
+  "order_no": 68,
+  "verses": 28,
+  "first_id": 24707,
+  "last_id": 24734
+ },
+ {
+  "book_id": 93,
+  "slug": "paramhansa",
+  "title_en": "Paramhansa Upanishad",
+  "scripture_id": 2,
+  "order_no": 69,
+  "verses": 9,
+  "first_id": 24735,
+  "last_id": 24743
+ },
+ {
+  "book_id": 94,
+  "slug": "paramhansaparivrajaka",
+  "title_en": "Paramhansaparivrajaka Upanishad",
+  "scripture_id": 2,
+  "order_no": 70,
+  "verses": 19,
+  "first_id": 24744,
+  "last_id": 24762
+ },
+ {
+  "book_id": 95,
+  "slug": "pashupatabrahmana",
+  "title_en": "Pashupatabrahmana Upanishad",
+  "scripture_id": 2,
+  "order_no": 71,
+  "verses": 55,
+  "first_id": 24763,
+  "last_id": 24817
+ },
+ {
+  "book_id": 96,
+  "slug": "pranagnihotra",
+  "title_en": "Pranagnihotra Upanishad",
+  "scripture_id": 2,
+  "order_no": 72,
+  "verses": 46,
+  "first_id": 24818,
+  "last_id": 24863
+ },
+ {
+  "book_id": 97,
+  "slug": "prashna",
+  "title_en": "Prashna Upanishad",
+  "scripture_id": 2,
+  "order_no": 73,
+  "verses": 67,
+  "first_id": 24864,
+  "last_id": 24930
+ },
+ {
+  "book_id": 98,
+  "slug": "ramarahasya",
+  "title_en": "Ramarahasya Upanishad",
+  "scripture_id": 2,
+  "order_no": 74,
+  "verses": 162,
+  "first_id": 24931,
+  "last_id": 25092
+ },
+ {
+  "book_id": 99,
+  "slug": "ramatapaniya",
+  "title_en": "Ramatapaniya Upanishad",
+  "scripture_id": 2,
+  "order_no": 75,
+  "verses": 151,
+  "first_id": 25093,
+  "last_id": 25243
+ },
+ {
+  "book_id": 100,
+  "slug": "rudrahridaya",
+  "title_en": "Rudrahridaya Upanishad",
+  "scripture_id": 2,
+  "order_no": 76,
+  "verses": 52,
+  "first_id": 25244,
+  "last_id": 25295
+ },
+ {
+  "book_id": 101,
+  "slug": "rudraksha",
+  "title_en": "Rudraksha Upanishad",
+  "scripture_id": 2,
+  "order_no": 77,
+  "verses": 64,
+  "first_id": 25296,
+  "last_id": 25359
+ },
+ {
+  "book_id": 102,
+  "slug": "saraswatirahasya",
+  "title_en": "Saraswatirahasya Upanishad",
+  "scripture_id": 2,
+  "order_no": 78,
+  "verses": 48,
+  "first_id": 25360,
+  "last_id": 25407
+ },
+ {
+  "book_id": 103,
+  "slug": "sariraka",
+  "title_en": "Sariraka Upanishad",
+  "scripture_id": 2,
+  "order_no": 79,
+  "verses": 24,
+  "first_id": 25408,
+  "last_id": 25431
+ },
+ {
+  "book_id": 104,
+  "slug": "sarvasara",
+  "title_en": "Sarvasara Upanishad",
+  "scripture_id": 2,
+  "order_no": 80,
+  "verses": 5,
+  "first_id": 25432,
+  "last_id": 25436
+ },
+ {
+  "book_id": 105,
+  "slug": "saubhagyalakshmi",
+  "title_en": "Saubhagyalakshmi Upanishad",
+  "scripture_id": 2,
+  "order_no": 81,
+  "verses": 38,
+  "first_id": 25437,
+  "last_id": 25474
+ },
+ {
+  "book_id": 106,
+  "slug": "savitri",
+  "title_en": "Savitri Upanishad",
+  "scripture_id": 2,
+  "order_no": 82,
+  "verses": 14,
+  "first_id": 25475,
+  "last_id": 25488
+ },
+ {
+  "book_id": 107,
+  "slug": "shandilya",
+  "title_en": "Shandilya Upanishad",
+  "scripture_id": 2,
+  "order_no": 83,
+  "verses": 199,
+  "first_id": 25489,
+  "last_id": 25687
+ },
+ {
+  "book_id": 108,
+  "slug": "sharabha",
+  "title_en": "Sharabha Upanishad",
+  "scripture_id": 2,
+  "order_no": 84,
+  "verses": 21,
+  "first_id": 25688,
+  "last_id": 25708
+ },
+ {
+  "book_id": 109,
+  "slug": "shatyayaniya",
+  "title_en": "Shatyayaniya Upanishad",
+  "scripture_id": 2,
+  "order_no": 85,
+  "verses": 44,
+  "first_id": 25709,
+  "last_id": 25752
+ },
+ {
+  "book_id": 110,
+  "slug": "shukarahasya",
+  "title_en": "Shukarahasya Upanishad",
+  "scripture_id": 2,
+  "order_no": 86,
+  "verses": 49,
+  "first_id": 25753,
+  "last_id": 25801
+ },
+ {
+  "book_id": 111,
+  "slug": "shvetashvatara",
+  "title_en": "Shvetashvatara Upanishad",
+  "scripture_id": 2,
+  "order_no": 87,
+  "verses": 113,
+  "first_id": 25802,
+  "last_id": 25914
+ },
+ {
+  "book_id": 112,
+  "slug": "sita",
+  "title_en": "Sita Upanishad",
+  "scripture_id": 2,
+  "order_no": 88,
+  "verses": 18,
+  "first_id": 25915,
+  "last_id": 25932
+ },
+ {
+  "book_id": 113,
+  "slug": "skanda",
+  "title_en": "Skanda Upanishad",
+  "scripture_id": 2,
+  "order_no": 89,
+  "verses": 15,
+  "first_id": 25933,
+  "last_id": 25947
+ },
+ {
+  "book_id": 114,
+  "slug": "subala",
+  "title_en": "Subala Upanishad",
+  "scripture_id": 2,
+  "order_no": 90,
+  "verses": 64,
+  "first_id": 25948,
+  "last_id": 26011
+ },
+ {
+  "book_id": 115,
+  "slug": "surya",
+  "title_en": "Surya Upanishad",
+  "scripture_id": 2,
+  "order_no": 91,
+  "verses": 11,
+  "first_id": 26012,
+  "last_id": 26022
+ },
+ {
+  "book_id": 116,
+  "slug": "taittiriya",
+  "title_en": "Taittiriya Upanishad",
+  "scripture_id": 2,
+  "order_no": 92,
+  "verses": 21,
+  "first_id": 26023,
+  "last_id": 26043
+ },
+ {
+  "book_id": 117,
+  "slug": "tarasara",
+  "title_en": "Tarasara Upanishad",
+  "scripture_id": 2,
+  "order_no": 93,
+  "verses": 18,
+  "first_id": 26044,
+  "last_id": 26061
+ },
+ {
+  "book_id": 118,
+  "slug": "tejobindu",
+  "title_en": "Tejobindu Upanishad",
+  "scripture_id": 2,
+  "order_no": 94,
+  "verses": 465,
+  "first_id": 26062,
+  "last_id": 26526
+ },
+ {
+  "book_id": 119,
+  "slug": "tripura",
+  "title_en": "Tripura Upanishad",
+  "scripture_id": 2,
+  "order_no": 95,
+  "verses": 16,
+  "first_id": 26527,
+  "last_id": 26542
+ },
+ {
+  "book_id": 120,
+  "slug": "tripuratapini",
+  "title_en": "Tripuratapini Upanishad",
+  "scripture_id": 2,
+  "order_no": 96,
+  "verses": 61,
+  "first_id": 26543,
+  "last_id": 26603
+ },
+ {
+  "book_id": 121,
+  "slug": "trisikhibrahmana",
+  "title_en": "Trisikhibrahmana Upanishad",
+  "scripture_id": 2,
+  "order_no": 97,
+  "verses": 171,
+  "first_id": 26604,
+  "last_id": 26774
+ },
+ {
+  "book_id": 122,
+  "slug": "turiyatitavadhuta",
+  "title_en": "Turiyatitavadhuta Upanishad",
+  "scripture_id": 2,
+  "order_no": 98,
+  "verses": 4,
+  "first_id": 26775,
+  "last_id": 26778
+ },
+ {
+  "book_id": 123,
+  "slug": "vajrasuchika",
+  "title_en": "Vajrasuchika Upanishad",
+  "scripture_id": 2,
+  "order_no": 99,
+  "verses": 9,
+  "first_id": 26779,
+  "last_id": 26787
+ },
+ {
+  "book_id": 124,
+  "slug": "varaha",
+  "title_en": "Varaha Upanishad",
+  "scripture_id": 2,
+  "order_no": 100,
+  "verses": 260,
+  "first_id": 26788,
+  "last_id": 27047
+ },
+ {
+  "book_id": 125,
+  "slug": "vasudeva",
+  "title_en": "Vasudeva Upanishad",
+  "scripture_id": 2,
+  "order_no": 101,
+  "verses": 10,
+  "first_id": 27048,
+  "last_id": 27057
+ },
+ {
+  "book_id": 126,
+  "slug": "yajnavalkya",
+  "title_en": "Yajnavalkya Upanishad",
+  "scripture_id": 2,
+  "order_no": 102,
+  "verses": 34,
+  "first_id": 27058,
+  "last_id": 27091
+ },
+ {
+  "book_id": 127,
+  "slug": "yogachudamani",
+  "title_en": "Yogachudamani Upanishad",
+  "scripture_id": 2,
+  "order_no": 103,
+  "verses": 123,
+  "first_id": 27092,
+  "last_id": 27214
+ },
+ {
+  "book_id": 128,
+  "slug": "yogakundalini",
+  "title_en": "Yogakundalini Upanishad",
+  "scripture_id": 2,
+  "order_no": 104,
+  "verses": 164,
+  "first_id": 27215,
+  "last_id": 27378
+ },
+ {
+  "book_id": 129,
+  "slug": "yogashikha",
+  "title_en": "Yogashikha Upanishad",
+  "scripture_id": 2,
+  "order_no": 105,
+  "verses": 380,
+  "first_id": 27379,
+  "last_id": 27758
+ },
+ {
+  "book_id": 130,
+  "slug": "yogatatva",
+  "title_en": "Yogatatva Upanishad",
+  "scripture_id": 2,
+  "order_no": 106,
+  "verses": 132,
+  "first_id": 27759,
+  "last_id": 27890
+ },
+ {
+  "book_id": 19,
+  "slug": "balakanda",
+  "title_en": "Bala Kanda",
+  "scripture_id": 3,
+  "order_no": 1,
+  "verses": 2265,
+  "first_id": 702,
+  "last_id": 2966
+ },
+ {
+  "book_id": 20,
+  "slug": "ayodhaya",
+  "title_en": "Ayodhya Kanda",
+  "scripture_id": 3,
+  "order_no": 2,
+  "verses": 4302,
+  "first_id": 2967,
+  "last_id": 7268
+ },
+ {
+  "book_id": 21,
+  "slug": "aranya",
+  "title_en": "Aranya Kanda",
+  "scripture_id": 3,
+  "order_no": 3,
+  "verses": 2449,
+  "first_id": 7269,
+  "last_id": 9717
+ },
+ {
+  "book_id": 22,
+  "slug": "kishkinda",
+  "title_en": "Kishkindha Kanda",
+  "scripture_id": 3,
+  "order_no": 4,
+  "verses": 2467,
+  "first_id": 9718,
+  "last_id": 12184
+ },
+ {
+  "book_id": 23,
+  "slug": "sundara",
+  "title_en": "Sundara Kanda",
+  "scripture_id": 3,
+  "order_no": 5,
+  "verses": 2825,
+  "first_id": 12185,
+  "last_id": 15009
+ },
+ {
+  "book_id": 24,
+  "slug": "yuddha",
+  "title_en": "Yuddha Kanda",
+  "scripture_id": 3,
+  "order_no": 6,
+  "verses": 5827,
+  "first_id": 15010,
+  "last_id": 20836
+ }
+]

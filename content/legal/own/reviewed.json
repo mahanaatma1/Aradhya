@@ -1,0 +1,24 @@
+{
+ "note": "Verdicts on strings the distinctness checker cannot score. A line with fewer than four expressive words is almost entirely proper nouns and compelled vocabulary, and on those no metric can tell independent convergence from copying -- so each one gets read and dispositioned here by hand. `check` fails a book if any of its merger items is missing from this file, which keeps the unscoreable bucket from becoming a silent pass.",
+ "test": "Would a second translator, working only from the public-domain Sanskrit and never having seen the fixture, arrive at substantially the same words? Where the answer is yes, the overlap is subject matter -- merger, or scenes a faire -- and carries no protectable expression. Where the answer is no, the line was rewritten instead of dispositioned.",
+ "merger": {
+  "bgc_1/1.1/body_en": "mamakah pandavash ca eva -- 'my own men and the sons of Pandu'. A possessive and a patronymic; the shared run is the cast of the verse.",
+  "bgc_1/1.2/body_hi": "Names plus Hindi case particles: raja Duryodhana, the Pandavas. No alternative wording exists for either name.",
+  "bgc_1/1.3/body_en": "drupada-putrena -- 'the son of Drupada'. One patronymic, one English form.",
+  "bgc_1/1.5/body_en": "Roll-call verse: Purujit, Kuntibhoja, Shaibya. A list of names is the same list in any translation.",
+  "bgc_1/1.5/body_hi": "Same roll-call in Devanagari; longest shared run is 1 word.",
+  "bgc_1/1.6/body_en": "Yudhamanyu, Uttamauja, Subhadra's son, Draupadi's sons -- names and one relational term.",
+  "bgc_1/1.8/body_en": "Seven consecutive names in the order the Sanskrit gives them: Ashvatthama, Vikarna, Somadatta's son. Word order is fixed by the source, not chosen.",
+  "bgc_1/1.15/body_hi": "Conch names -- Panchajanya, Devadatta, Paundra. Longest shared run is 1 word.",
+  "bgc_1/1.16/body_en": "Anantavijaya, Sughosha, Manipushpaka, and the brothers who sound them. Proper nouns only.",
+  "bgc_1/1.16/body_hi": "As above in Devanagari.",
+  "bgc_1/1.17/body_en": "Shikhandi, Dhrishtadyumna, Virata, Satyaki -- a name list with 'maharatha' rendered by its compelled gloss.",
+  "bgc_1/1.25/body_en": "bhishma-drona-pramukhatah -- 'in front of Bhishma and Drona'. Two names and a preposition.",
+  "bgc_1/1.26/body_en": "Eight kinship terms. Each has one ordinary English equivalent and the Sanskrit fixes their sequence.",
+  "bgc_1/1.26/body_hi": "The same eight kinship terms in Devanagari, in the source's order; run of 7 is that list and nothing else.",
+  "bgc_1/1.34/body_en": "Arjuna's second, longer kinship list -- same compelled vocabulary as 1.26.",
+  "bgc_1/1.34/body_hi": "As above in Devanagari.",
+  "bgc_1/1.35/body_en": "hantum / api / trailokya -- 'kill', 'even', 'three worlds'. The verb, the particle and the numeral of the verse.",
+  "bgc_1/1.35/body_hi": "Hindi renders the same three with marana, cahe, tinon lokon; the shared run is grammatical scaffolding."
+ }
+}
