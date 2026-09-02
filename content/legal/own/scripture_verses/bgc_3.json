@@ -1,0 +1,354 @@
+{
+ "slug": "bgc_3",
+ "title_en": "Karma Yoga",
+ "title_hi": "कर्म योग",
+ "book_id": 3,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 120,
+   "number": "3.1",
+   "body_en": "Arjuna said: If you hold understanding to be the better of the two, Janardana, above work — then why do you harness me to this ghastly work, Keshava?",
+   "body_hi": "अर्जुन ने कहा — यदि आप दोनों में बुद्धि को श्रेष्ठ मानते हैं, जनार्दन, कर्म से ऊपर — तो फिर मुझे इस भयावह काम में क्यों जोत रहे हैं, केशव?",
+   "commentary_en": "Arjuna has been listening, and he has caught something real: chapter two did rank understanding above work, at 2.49, and then ended by sending him to fight. He is not being obtuse. Note niyojayasi, the causative — you cause me to be yoked — which is the same grammar the chapter will turn back on him in 3.5, where it is nature that does the yoking and nobody is exempt. Ghore, ghastly: the adjective is his, not the poem's.",
+   "commentary_hi": "अर्जुन सुनता रहा है, और उसने कोई सच्ची बात पकड़ी है: दूसरे अध्याय ने 2.49 में बुद्धि को कर्म से ऊपर रखा ही था, और फिर अन्त में उसे लड़ने भेज दिया। वह जान-बूझकर अड़ नहीं रहा। 'नियोजयसि' देखें, प्रेरणार्थक क्रिया — आप मुझे जुतवाते हैं — और यही व्याकरण अध्याय 3.5 में उसी पर लौटाएगा, जहाँ जोतने वाली प्रकृति है और कोई छूटा हुआ नहीं। 'घोरे', भयावह: यह विशेषण उसका है, काव्य का नहीं।"
+  },
+  {
+   "id": 121,
+   "number": "3.2",
+   "body_en": "You seem to be muddling my understanding with speech that seems to run both ways. Settle on one thing and say it, the thing by which I would get the good.",
+   "body_hi": "आप ऐसी बात से मेरी बुद्धि को उलझा-सा रहे हैं जो दोनों ओर चलती-सी है। एक बात तय करके कह दीजिए, वही जिससे मुझे कल्याण मिले।",
+   "commentary_en": "Twice in one line Arjuna says iva, as if — as if mixed, as if confusing me. He is accusing his teacher of double-talk and softening it as he goes, which is exactly how a person speaks to someone they need. Ekam vada: tell me one thing. It is a reasonable request and the chapter never grants it; what he gets instead is a distinction between two roads, which is one more thing than he asked for.",
+   "commentary_hi": "एक ही पंक्ति में दो बार अर्जुन 'इव' कहता है, मानो — मानो मिली-जुली, मानो मुझे उलझा रही। वह अपने गुरु पर दोहरी बात कहने का आरोप लगा रहा है और साथ-साथ उसे नरम भी करता जा रहा है, और मनुष्य ठीक इसी तरह उससे बोलता है जिसकी उसे आवश्यकता है। 'एकं वद': एक बात कह दीजिए। माँग उचित है और अध्याय उसे कभी पूरा नहीं करता; उसे इसकी जगह दो राहों का भेद मिलता है, जो माँगी हुई से एक अधिक है।"
+  },
+  {
+   "id": 122,
+   "number": "3.3",
+   "body_en": "The Blessed One said: In this world a footing of two kinds was set out by me long ago, faultless one — by the yoga of knowledge for the Sankhyas, by the yoga of work for the yogins.",
+   "body_hi": "भगवान् ने कहा — इस लोक में दो प्रकार की निष्ठा मैंने बहुत पहले कह दी थी, अनघ — सांख्यों के लिए ज्ञानयोग से, योगियों के लिए कर्मयोग से।",
+   "commentary_en": "Nishtha is a standing-place, a footing, from the same root as the sthita of 2.54 — not two doctrines but two ways of putting your weight down. Note pura prokta maya, said by me long ago: Krishna claims prior authority for a distinction that nothing in chapter two stated in these words, which is a teacher's move rather than an argument. And anagha, faultless one, addressed to a man who has just accused him of talking in circles.",
+   "commentary_hi": "'निष्ठा' खड़े होने की जगह है, टेक, उसी धातु से जिससे 2.54 का 'स्थित' — दो सिद्धान्त नहीं, अपना भार टिकाने के दो ढंग। 'पुरा प्रोक्ता मया' देखें, बहुत पहले मेरे कही हुई: कृष्ण उस भेद के लिए पुरानी प्रामाणिकता का दावा करते हैं जिसे दूसरे अध्याय ने इन शब्दों में कहा ही नहीं था, और यह तर्क नहीं, गुरु की चाल है। और 'अनघ', निर्दोष, उस मनुष्य को सम्बोधन जिसने अभी-अभी उन पर घुमा-फिराकर बोलने का आरोप लगाया है।"
+  },
+  {
+   "id": 123,
+   "number": "3.4",
+   "body_en": "A person does not arrive at freedom from work by never beginning any; nor does he get all the way to the goal merely by putting work down.",
+   "body_hi": "कोई पुरुष कर्म आरम्भ ही न करके कर्महीनता तक नहीं पहुँचता; और न केवल कर्म रख देने भर से सिद्धि तक चला आता है।",
+   "commentary_en": "The verse separates two things that sound identical: not doing anything, and being free of doing. Anarambha is non-beginning and sannyasana is setting down, and neither reaches naishkarmya, which the chapter treats as a condition rather than a behaviour. This is the correction Arjuna needed and did not ask for. He proposed in 1.46 to sit down and not fight, and he heard chapter two's praise of understanding as licence for it.",
+   "commentary_hi": "श्लोक उन दो बातों को अलग करता है जो सुनने में एक-सी हैं: कुछ न करना, और करने से मुक्त होना। 'अनारम्भ' आरम्भ न करना है और 'संन्यसन' रख देना, और इनमें से कोई 'नैष्कर्म्य' तक नहीं पहुँचता, जिसे अध्याय आचरण के बजाय एक अवस्था मानता है। यही वह सुधार है जिसकी अर्जुन को आवश्यकता थी और जो उसने माँगा नहीं था। उसने 1.46 में बैठ जाने और न लड़ने का प्रस्ताव रखा था, और दूसरे अध्याय की बुद्धि-प्रशंसा उसने उसी की छूट की तरह सुनी।"
+  },
+  {
+   "id": 124,
+   "number": "3.5",
+   "body_en": "Nobody, in fact, stays for so much as an instant without doing something. Every one of us is made to work, with no say in it, by the strands nature is born with.",
+   "body_hi": "सच तो यह है कि कोई एक क्षण भर भी बिना कुछ किए नहीं ठहरता। हम सब से काम करवाया जाता है, बिना हमारी चली, प्रकृति के साथ जन्मे गुणों द्वारा।",
+   "commentary_en": "The proof of the verse before it, and it is a strange kind of proof: Krishna defends work by denying that anyone has the option of avoiding it. Avashah, without control, is the word — and karyate is a causative, the same construction Arjuna used against him in 3.1. You are being yoked either way. Note that the freedom on offer in this chapter is never freedom from acting; it is only ever freedom in it.",
+   "commentary_hi": "यह अपने से पहले वाले श्लोक का प्रमाण है, और विचित्र प्रकार का प्रमाण है: कृष्ण कर्म का पक्ष यह कहकर लेते हैं कि उससे बचने का विकल्प किसी के पास है ही नहीं। शब्द 'अवशः' है, बिना वश के — और 'कार्यते' प्रेरणार्थक है, वही रचना जो अर्जुन ने 3.1 में उन्हीं पर चलाई थी। जुतना दोनों ओर से है। ध्यान दें कि इस अध्याय में जो स्वतन्त्रता दी जा रही है, वह कभी कर्म से स्वतन्त्रता नहीं है; वह सदा कर्म के भीतर की स्वतन्त्रता है।"
+  },
+  {
+   "id": 125,
+   "number": "3.6",
+   "body_en": "The man who holds the working organs still and then sits going over the objects of sense in his mind — that one has fooled himself, and is called a fraud.",
+   "body_hi": "जो मनुष्य कर्म की इन्द्रियों को थामकर बैठ जाता है और मन में विषयों को दोहराता रहता है — वह स्वयं को ठग चुका है, और मिथ्याचारी कहा जाता है।",
+   "commentary_en": "Mithyachara is the hardest word Krishna uses in the whole chapter, and it is aimed at a posture rather than at a crime. The man is doing nothing wrong; he is doing nothing at all, and thinking about everything. Note smaran, remembering, going over — the verb of dwelling from 2.62, where the same movement produced anger. The verse also draws the line the tortoise of 2.58 could be misread across: the difference is where the mind is, not where the hands are.",
+   "commentary_hi": "'मिथ्याचार' पूरे अध्याय का सबसे कठोर शब्द है, और वह किसी अपराध पर नहीं, एक मुद्रा पर लक्ष्य किया गया है। वह मनुष्य कुछ बुरा नहीं कर रहा; वह कुछ कर ही नहीं रहा, और सब कुछ सोच रहा है। 'स्मरन्' देखें, याद करते हुए, दोहराते हुए — 2.62 की वही टिके रहने वाली क्रिया, जहाँ यही गति क्रोध तक पहुँची थी। श्लोक वह रेखा भी खींच देता है जिसके पार 2.58 का कछुआ ग़लत पढ़ा जा सकता था: भेद इसमें है कि मन कहाँ है, इसमें नहीं कि हाथ कहाँ हैं।"
+  },
+  {
+   "id": 126,
+   "number": "3.7",
+   "body_en": "But the one who reins the senses in with his mind, Arjuna, and then sets the working organs to the yoga of work, unstuck to it — that man is the finer of the two.",
+   "body_hi": "पर जो मन से इन्द्रियों को साध लेता है, अर्जुन, और फिर कर्म की इन्द्रियों को कर्मयोग में लगा देता है, बिना उससे चिपके — वह मनुष्य दोनों में श्रेष्ठ है।",
+   "commentary_en": "The negative portrait turned right way round, and the parts are the same parts. Both men restrain something; the fraud restrains his hands and lets his mind run, this one restrains his mind and lets his hands work. Vishishyate is a comparative — he is the more distinguished — and the comparison is with the man in the verse above, not with the world. Asaktah, not stuck: the single condition the whole chapter will keep returning to.",
+   "commentary_hi": "वही नकारात्मक चित्र सीधा करके रखा हुआ, और अंग वही अंग हैं। दोनों मनुष्य कुछ न कुछ रोकते हैं; मिथ्याचारी हाथ रोकता है और मन को दौड़ने देता है, यह मन रोकता है और हाथों को काम करने देता है। 'विशिष्यते' तुलनावाचक है — वह अधिक श्रेष्ठ है — और तुलना ऊपर वाले श्लोक के मनुष्य से है, संसार से नहीं। 'असक्तः', बिना चिपके: वही एक शर्त जिस पर पूरा अध्याय बार-बार लौटेगा।"
+  },
+  {
+   "id": 127,
+   "number": "3.8",
+   "body_en": "Do the work that has fallen to you; work is the better of the two, better than no work. Not even the passage of your body would come off if you did nothing.",
+   "body_hi": "जो काम तुम्हारे हिस्से आया है, वह करो; कर्म ही दोनों में अच्छा है, अकर्म से अच्छा। कुछ न करते तो तुम्हारी देह की यात्रा भी न चल पाती।",
+   "commentary_en": "After five verses of argument the poem drops to the plainest fact available: you have to eat. Sharira-yatra is the body's journey, its going along, and a man who does nothing cannot even keep that up. Note niyatam, the work that is fixed or allotted — the first appearance of the idea that the work in question is not chosen but assigned, which 3.35 will turn into the chapter's most difficult claim.",
+   "commentary_hi": "पाँच श्लोक के तर्क के बाद काव्य उपलब्ध सबसे सीधी बात पर उतर आता है: खाना तो पड़ेगा। 'शरीरयात्रा' देह की यात्रा है, उसका चलते जाना, और जो मनुष्य कुछ नहीं करता वह उसे भी नहीं चला सकता। 'नियतम्' देखें, वह काम जो तय है या बँटा हुआ — यह उस विचार की पहली झलक है कि प्रश्न का कर्म चुना हुआ नहीं, सौंपा हुआ है, और 3.35 उसी को अध्याय का सबसे कठिन दावा बना देगा।"
+  },
+  {
+   "id": 128,
+   "number": "3.9",
+   "body_en": "Work done for anything but the offering is what ties this world down. Do your work for that, Kaunteya, with the clinging let go of.",
+   "body_hi": "यज्ञ के अतिरिक्त किसी और के लिए किया गया कर्म ही इस लोक को बाँधता है। अपना कर्म उसी के लिए करो, कौन्तेय, चिपकाव छोड़कर।",
+   "commentary_en": "Here is the answer to the question chapter two left standing: if nobody can stop working, and work binds, then how does anyone get out? Not by changing what you do but by changing what it is for. Yajna is offering, the giving away of the thing rather than the keeping of it. Mukta-sangah, with the sticking released — the same asakti of 3.7, restated as something you do rather than something you are.",
+   "commentary_hi": "यहाँ उस प्रश्न का उत्तर है जिसे दूसरा अध्याय खड़ा छोड़ गया था: यदि कोई कर्म रोक नहीं सकता, और कर्म बाँधता है, तो निकलेगा कौन कैसे? यह बदलकर नहीं कि तुम क्या करते हो, बल्कि यह बदलकर कि वह किसके लिए है। 'यज्ञ' अर्पण है, वस्तु को रख लेने के बजाय दे देना। 'मुक्तसंगः', चिपकाव खुला हुआ — 3.7 की वही असक्ति, इस बार जो तुम हो उसके बजाय जो तुम करते हो, उस रूप में कही हुई।"
+  },
+  {
+   "id": 129,
+   "number": "3.10",
+   "body_en": "Long ago the Lord of creatures brought creatures forth together with the offering, and said: by this, go on bringing forth. Let this be the cow that milks you what you ask for.",
+   "body_hi": "बहुत पहले प्रजापति ने प्रजा को यज्ञ के साथ रचा, और कहा — इसी से आगे रचते जाओ। यही तुम्हारी वह गाय हो जो माँगा हुआ दूध दे।",
+   "commentary_en": "Note saha, together with: the offering is not something added to creatures afterwards, it comes into existence in the same act they do. The chapter is arguing that exchange is built into the world rather than imposed on it. Kama-dhuk is a milch cow, and the image is domestic and unembarrassed — the sacred order is described here as something that produces, the way a household animal produces, on being kept.",
+   "commentary_hi": "'सह' देखें, साथ-साथ: यज्ञ प्रजा में बाद में जोड़ी गई कोई वस्तु नहीं, वह उसी क्रिया में अस्तित्व में आता है जिसमें वे। अध्याय यह तर्क रख रहा है कि लेन-देन संसार पर थोपा हुआ नहीं, उसमें गढ़ा हुआ है। 'कामधुक्' दुधारू गाय है, और चित्र घरेलू है और बिना संकोच का — पवित्र व्यवस्था को यहाँ ऐसी वस्तु की तरह रखा गया है जो पालने पर उपजाती है, जैसे घर का पशु उपजाता है।"
+  },
+  {
+   "id": 130,
+   "number": "3.11",
+   "body_en": "Bring the gods along by this, and let those gods bring you along. Bringing each other along, you will get the highest good.",
+   "body_hi": "इससे देवों को बढ़ाओ, और वे देव तुम्हें बढ़ाएँ। एक-दूसरे को बढ़ाते हुए तुम परम कल्याण पा जाओगे।",
+   "commentary_en": "Bhavayata is causative from the verb to be: cause them to be, foster, keep going. The same word is used in both directions and the verse turns on parasparam, one another. What is described is not worship in the sense of a subject facing a power, but a circuit — and shreyas, the good, which is the exact word Arjuna asked for in 3.2, arrives only as a property of the circuit, never of either party alone.",
+   "commentary_hi": "'भावयत' 'होना' क्रिया से प्रेरणार्थक है: उन्हें होने दो, बढ़ाओ, चलाए रखो। वही शब्द दोनों दिशाओं में बरता गया है और श्लोक 'परस्परम्', एक-दूसरे को, पर घूमता है। जिसका वर्णन है वह किसी शक्ति के सामने खड़े उपासक वाली पूजा नहीं, एक परिपथ है — और 'श्रेयस्', कल्याण, जो ठीक वही शब्द है जो अर्जुन ने 3.2 में माँगा था, केवल उस परिपथ के गुण की तरह आता है, कभी अकेले किसी पक्ष के गुण की तरह नहीं।"
+  },
+  {
+   "id": 131,
+   "number": "3.12",
+   "body_en": "Fed by the offering, the gods will hand you the enjoyments you asked for. A man who takes what they hand over and gives none of it back is nothing but a thief.",
+   "body_hi": "यज्ञ से पुष्ट होकर देव तुम्हें वे भोग दे देंगे जो तुमने माँगे। जो मनुष्य उनका दिया लेकर उन्हें कुछ लौटाता नहीं, वह चोर के सिवा कुछ नहीं।",
+   "commentary_en": "Stena eva sah: a thief, simply. The chapter has been building a cosmology and it lands on a word from the criminal law, with eva doing the work of a full stop. Note that the theft is not of something withheld from the gods but of the gods' own gift consumed alone — the offence is in the direction of the traffic. Everything in the previous two verses was reciprocal; this describes the same arrangement with one arrow removed.",
+   "commentary_hi": "'स्तेन एव सः': चोर, बस। अध्याय एक सृष्टि-दर्शन गढ़ता आ रहा था और वह दण्ड-विधान के एक शब्द पर आ गिरता है, जहाँ 'एव' पूर्ण विराम का काम कर रहा है। ध्यान दें कि चोरी देवों से रोकी गई किसी वस्तु की नहीं, देवों के अपने दिए को अकेले भोग लेने की है — अपराध आवाजाही की दिशा में है। पिछले दो श्लोकों में सब कुछ आदान-प्रदान था; यह उसी व्यवस्था का वर्णन है, बस एक तीर हटाकर।"
+  },
+  {
+   "id": 132,
+   "number": "3.13",
+   "body_en": "Good people, who eat what the offering leaves behind, are let go of every stain. But those who cook for their own sake alone, the bad ones, are eating filth.",
+   "body_hi": "जो भले लोग यज्ञ का बचा हुआ खाते हैं, वे हर दाग़ से छूट जाते हैं। पर जो केवल अपने लिए पकाते हैं, वे बुरे लोग, गन्दगी खा रहे हैं।",
+   "commentary_en": "The abstraction of the last four verses collapses into a kitchen. Pachanti is simply cooking, and atma-karanat is for one's own sake — the whole cosmic argument is now a question of who else is at the table. Yajna-shishta, what the offering has left, is a leftover, and the verse makes eating a leftover the clean act and eating a fresh private meal the fouled one. Few images in the poem invert an intuition this quickly.",
+   "commentary_hi": "पिछले चार श्लोकों की सारी अमूर्तता रसोई में ढह जाती है। 'पचन्ति' सीधे-सीधे पकाना है, और 'आत्मकारणात्' अपने ही लिए — पूरा ब्रह्माण्डीय तर्क अब इस प्रश्न पर आ गया है कि पंगत में और कौन बैठा है। 'यज्ञशिष्ट', यज्ञ का छोड़ा हुआ, बचा हुआ भोजन है, और श्लोक बचा हुआ खाने को शुद्ध कर्म और ताज़ा निजी भोजन खाने को मलिन कर्म बना देता है। काव्य में कम ही चित्र किसी सहज बोध को इतनी तेज़ी से उलटते हैं।"
+  },
+  {
+   "id": 133,
+   "number": "3.14",
+   "body_en": "Beings come out of food; food comes out of the rain; the rain comes out of the offering; and the offering comes out of work.",
+   "body_hi": "जीव अन्न से होते हैं; अन्न मेघ से होता है; मेघ यज्ञ से होता है; और यज्ञ कर्म से होता है।",
+   "commentary_en": "Four links, each one taking up the word the last put down — the same construction as the chain of ruin at 2.62, run in the opposite direction. The one at 2.62 ended in a man's destruction; this one ends in karma, which is where the chapter needs it to end. Note that the sequence is not an argument. It is a shape, and the shape is what does the persuading.",
+   "commentary_hi": "चार कड़ियाँ, हर एक वही शब्द उठाती है जिसे पिछली ने रखा था — वही रचना जो 2.62 की विनाश-शृंखला की थी, उलटी दिशा में चलाई हुई। 2.62 वाली मनुष्य के नष्ट होने पर समाप्त होती थी; यह कर्म पर समाप्त होती है, और अध्याय को उसे वहीं समाप्त करना है। ध्यान दें कि यह क्रम तर्क नहीं है। यह एक आकार है, और मनाने का काम आकार ही कर रहा है।"
+  },
+  {
+   "id": 134,
+   "number": "3.15",
+   "body_en": "Know that work comes up out of Brahman, and Brahman up out of what does not wear away. So the Brahman that reaches everywhere has its standing-place, always, in the offering.",
+   "body_hi": "जान लो कि कर्म ब्रह्म से उठता है, और ब्रह्म उससे जो क्षीण नहीं होता। सो सर्वत्र पहुँचा हुआ ब्रह्म सदा यज्ञ में ही अपना ठहराव पाता है।",
+   "commentary_en": "The chain of the last verse is extended by two links past anything a farmer could check, and the effect is to place the offering at the point where the whole series comes to rest. Pratishthita, established, standing — the same word given to settled wisdom at 2.57 and to the unmoving sea at 2.70. What was a description of a person is here a description of the world, and the two are meant to be recognised as one word.",
+   "commentary_hi": "पिछले श्लोक की शृंखला दो कड़ियाँ आगे बढ़ा दी गई है, इतनी आगे कि कोई किसान उसे जाँच नहीं सकता, और इसका फल यह है कि यज्ञ ठीक उस बिन्दु पर बैठ जाता है जहाँ पूरा क्रम आकर ठहरता है। 'प्रतिष्ठित', जमा हुआ, खड़ा — वही शब्द जो 2.57 में ठहरी बुद्धि को और 2.70 में अचल समुद्र को दिया गया था। जो किसी व्यक्ति का वर्णन था, वह यहाँ संसार का वर्णन है, और दोनों को एक ही शब्द के रूप में पहचाना जाना है।"
+  },
+  {
+   "id": 135,
+   "number": "3.16",
+   "body_en": "The man who does not keep this turning wheel turning here — his years are foul, his pleasure ground is the senses, and he lives, Partha, for nothing.",
+   "body_hi": "जो मनुष्य यहाँ इस घूमते चक्र को घूमता नहीं रखता — उसकी आयु मैली है, उसका बाग़ इन्द्रियाँ हैं, और वह जीता है, पार्थ, व्यर्थ।",
+   "commentary_en": "Indriya-arama is a lovely and contemptuous compound: an arama is a pleasure garden, a place laid out to be strolled in, and this man has made one of his own senses. Note that the charge is not wickedness but waste — mogham jivati, he lives to no purpose, which is a heavier sentence in a poem that has just spent six verses showing what everything is for. The wheel is not stopped by him. He is simply not on it.",
+   "commentary_hi": "'इन्द्रियाराम' सुन्दर और तिरस्कारपूर्ण समास है: 'आराम' मनोरंजन का बाग़ है, टहलने के लिए सजाई गई जगह, और इस मनुष्य ने अपनी ही इन्द्रियों का एक बाग़ बना लिया है। ध्यान दें कि आरोप दुष्टता का नहीं, बरबादी का है — 'मोघं जीवति', वह किसी प्रयोजन के बिना जीता है, और उस काव्य में यह भारी दण्ड है जिसने अभी-अभी छह श्लोक यह दिखाने में लगाए हैं कि हर वस्तु किसलिए है। चक्र उससे रुकता नहीं। वह बस उस पर है ही नहीं।"
+  },
+  {
+   "id": 136,
+   "number": "3.17",
+   "body_en": "But the man who takes his delight in the self and nothing else, who is filled by the self and satisfied in the self alone — for him there is nothing that has to be done.",
+   "body_hi": "पर जो मनुष्य आत्मा में ही रमता है, आत्मा से ही भरा है और आत्मा में ही तृप्त — उसके लिए कुछ ऐसा नहीं जो करना ही पड़े।",
+   "commentary_en": "Three compounds in a row, all built on atman, and the repetition is the point: rati, tripti, santosha — delight, fullness, contentment — with the same term standing where the object should be each time. It restates 2.55 almost exactly. And having spent sixteen verses arguing that nobody may stop, the chapter now names the one man who need not go on, immediately before telling Arjuna that he is not that man.",
+   "commentary_hi": "लगातार तीन समास, तीनों 'आत्मन्' पर गढ़े हुए, और दोहराव ही बात है: 'रति', 'तृप्ति', 'सन्तोष' — रमना, भरना, सन्तुष्ट होना — और हर बार वही एक पद वहाँ खड़ा है जहाँ कर्म-पद होना चाहिए था। यह 2.55 को लगभग हूबहू दोहरा देता है। और सोलह श्लोक यह तर्क करने में लगाकर कि कोई रुक नहीं सकता, अध्याय अब उस एक मनुष्य का नाम लेता है जिसे चलते रहने की आवश्यकता नहीं — ठीक उससे पहले कि वह अर्जुन से कहे कि वह मनुष्य वह नहीं है।"
+  },
+  {
+   "id": 137,
+   "number": "3.18",
+   "body_en": "Nothing turns on what he has done, and nothing here on what he has left undone; nor has he, among all the beings there are, anyone he must lean on for anything.",
+   "body_hi": "उसके किए पर कुछ नहीं टिकता, और यहाँ उसके न किए पर भी कुछ नहीं; और न ही जितने प्राणी हैं उनमें कोई ऐसा है जिस पर उसे किसी काम के लिए टेक लगानी पड़े।",
+   "commentary_en": "Artha is purpose, object, thing-at-stake, and the verse removes it from both sides at once — this man gains nothing by acting and loses nothing by not. That is what freedom from work turns out to mean, and note that it is defined entirely by subtraction. Vyapashraya is leaning on something, taking support from it; the last clause quietly separates independence from isolation, since the leaning removed is for purposes, not for company.",
+   "commentary_hi": "'अर्थ' प्रयोजन है, वस्तु, दाँव पर लगी बात, और श्लोक उसे दोनों ओर से एक साथ हटा देता है — यह मनुष्य करके कुछ पाता नहीं और न करके कुछ खोता नहीं। कर्म से मुक्ति का अर्थ अन्ततः यही निकलता है, और ध्यान दें कि उसकी परिभाषा पूरी तरह घटाव से बनी है। 'व्यपाश्रय' किसी पर टेक लगाना है, उससे सहारा लेना; अन्तिम वाक्यांश चुपचाप स्वतन्त्रता को अकेलेपन से अलग कर देता है, क्योंकि जो टेक हटी है वह प्रयोजनों की है, संगत की नहीं।"
+  },
+  {
+   "id": 138,
+   "number": "3.19",
+   "body_en": "So then: unstuck, do without pause the work that has to be done. Doing his work unstuck, a man reaches the highest.",
+   "body_hi": "सो फिर: बिना चिपके, वह काम बिना रुके करते रहो जो करना है। बिना चिपके अपना काम करता हुआ मनुष्य परम को पा जाता है।",
+   "commentary_en": "The chapter's thesis, and it arrives as a therefore — everything from 3.4 has been leading here. Two words carry it: asaktah, unstuck, and satatam, without a break. Note that the first is a condition of the mind and the second a demand on the hands, and the sentence asks for both at once, which is precisely what distinguishes it from the fraud of 3.6 and the man who simply stops of 3.4.",
+   "commentary_hi": "अध्याय का प्रतिपाद्य, और वह 'इसलिए' बनकर आता है — 3.4 से सब कुछ यहीं की ओर आ रहा था। उसे दो शब्द उठाए हुए हैं: 'असक्तः', बिना चिपके, और 'सततम्', बिना रुके। ध्यान दें कि पहला मन की शर्त है और दूसरा हाथों से माँग, और वाक्य दोनों एक साथ माँगता है — और ठीक यही उसे 3.6 के मिथ्याचारी से और 3.4 के उस मनुष्य से अलग करता है जो बस रुक जाता है।"
+  },
+  {
+   "id": 139,
+   "number": "3.20",
+   "body_en": "It was by work and nothing else that Janaka and men like him arrived. And if you look only to the holding-together of the world, you ought to act on that alone.",
+   "body_hi": "कर्म से ही, और किसी से नहीं, जनक और उन जैसे लोग पहुँचे थे। और यदि तुम केवल लोक के बँधे रहने की ओर देखो, तो उतने भर से तुम्हें कर्म करना चाहिए।",
+   "commentary_en": "A king is produced as evidence, which is not an accident — Janaka is the standard example of a man who ruled and was free, and Arjuna is being offered a precedent in his own line of work. Then loka-sangraha: the gathering or holding together of the world. Note the shift it performs. Up to here every reason to act was the actor's; from here the chapter argues from what the watching world will do next.",
+   "commentary_hi": "प्रमाण के रूप में एक राजा पेश किया गया है, और यह संयोग नहीं — जनक उस मनुष्य का प्रचलित उदाहरण हैं जिसने राज्य किया और मुक्त रहा, और अर्जुन को उसी के अपने पेशे में एक नज़ीर दी जा रही है। फिर 'लोकसंग्रह': लोक का जुड़ा रहना, बँधा रहना। जो पलटा वह करता है, उसे देखें। यहाँ तक कर्म का हर कारण कर्ता का अपना था; यहाँ से अध्याय इस बात से तर्क करता है कि देखता हुआ संसार आगे क्या करेगा।"
+  },
+  {
+   "id": 140,
+   "number": "3.21",
+   "body_en": "Whatever the finest man does, the rest of the people do that. Whatever he takes for his measure, the world goes along behind it.",
+   "body_hi": "श्रेष्ठ मनुष्य जो-जो करता है, बाक़ी लोग वही करते हैं। वह जिसे अपना नाप मान लेता है, संसार उसी के पीछे चल पड़ता है।",
+   "commentary_en": "Pramana is a measure, a standard, the thing you check other things against — and the verse says a man becomes one by conduct rather than by pronouncement. Note the doubled yad yad, whatever-whatever: no distinction is drawn between his good acts and his bad ones, and none between what he means to teach and what he merely does. The mechanism described is imitation, and imitation does not read intentions.",
+   "commentary_hi": "'प्रमाण' नाप है, मानक, वह वस्तु जिससे और वस्तुएँ जाँची जाती हैं — और श्लोक कहता है कि मनुष्य घोषणा से नहीं, आचरण से वह बनता है। दोहरा 'यद्यद्' देखें, जो-जो: उसके अच्छे और बुरे कर्मों के बीच कोई भेद नहीं खींचा गया, और न उसमें जो वह सिखाना चाहता है और जो वह बस कर देता है। जिस तन्त्र का वर्णन है वह अनुकरण है, और अनुकरण नीयत नहीं पढ़ता।"
+  },
+  {
+   "id": 141,
+   "number": "3.22",
+   "body_en": "There is nothing at all in the three worlds that I have to do, Partha, nothing I have not got that I need to get — and I go on working anyway.",
+   "body_hi": "तीनों लोकों में ऐसा कुछ भी नहीं जो मुझे करना ही हो, पार्थ, कुछ भी ऐसा नहीं जो मेरे पास न हो और पाना हो — और मैं फिर भी काम में लगा रहता हूँ।",
+   "commentary_en": "Krishna answers the man in 3.17 with himself: here is the one being who genuinely has nothing to do, and he does not stop. The argument has changed shape. From 3.4 to 3.20 he reasoned; from here he simply points at his own conduct, having just explained in 3.21 that conduct is what people follow. Note varta eva cha karmani, and I am in work — a present tense with no beginning and no purpose attached to it.",
+   "commentary_hi": "कृष्ण 3.17 के मनुष्य का उत्तर स्वयं से देते हैं: यह रहा वह एकमात्र सत्ता जिसे सचमुच कुछ नहीं करना है, और वह रुकता नहीं। तर्क का आकार बदल गया है। 3.4 से 3.20 तक वे तर्क कर रहे थे; यहाँ से वे बस अपने आचरण की ओर उँगली उठा देते हैं, ठीक 3.21 में यह समझा चुकने के बाद कि लोग आचरण के ही पीछे चलते हैं। 'वर्त एव च कर्मणि' देखें, और मैं कर्म में हूँ — ऐसा वर्तमान काल जिसका न आरम्भ है, न उससे जुड़ा कोई प्रयोजन।"
+  },
+  {
+   "id": 142,
+   "number": "3.23",
+   "body_en": "Because if I did not keep at work — if I ever slackened — men would come down my track, Partha, from every direction.",
+   "body_hi": "क्योंकि यदि मैं काम में लगा न रहूँ — यदि कभी ढीला पड़ जाऊँ — तो मनुष्य मेरी ही लीक पर उतर आएँगे, पार्थ, हर ओर से।",
+   "commentary_en": "Vartma is a track, the rut a wheel leaves, and the image makes following into something closer to a landscape feature than a decision — a groove other people fall into. Atandritah is untiring, from tandri, drowsiness: what Krishna rules out for himself is not failure but slackening. Note that the danger he names is not that people would stop working. It is that they would do exactly what he did.",
+   "commentary_hi": "'वर्त्म' लीक है, पहिये की छोड़ी हुई लकीर, और चित्र अनुसरण को निर्णय के बजाय भूमि के किसी बने हुए चिह्न जैसा बना देता है — वह खाँचा जिसमें और लोग गिर पड़ते हैं। 'अतन्द्रित' अथक है, 'तन्द्रा' से, ऊँघ: कृष्ण अपने लिए जिसे रोकते हैं वह असफलता नहीं, ढील है। ध्यान दें कि जिस ख़तरे का वे नाम लेते हैं वह यह नहीं कि लोग काम करना छोड़ देंगे। वह यह है कि लोग ठीक वही करेंगे जो उन्होंने किया।"
+  },
+  {
+   "id": 143,
+   "number": "3.24",
+   "body_en": "These worlds would sink if I did not do my work; I would be the one who made the great jumbling, and I would have wrecked these creatures.",
+   "body_hi": "ये लोक धँस जाते यदि मैं अपना काम न करता; उस बड़ी खिचड़ी का बनाने वाला मैं होता, और इन प्रजाओं को मैंने ही चौपट किया होता।",
+   "commentary_en": "Sankara, the jumbling together of what should stay distinct, is Arjuna's own word — it is the horror he built his refusal on in 1.41, where the collapse of families produced it. Krishna picks the word up and applies it to himself, and the effect is to answer Arjuna in his own vocabulary: the thing you dread is caused by stopping, not by fighting. Utsideyuh is the verb for sinking or subsiding, a floor giving way.",
+   "commentary_hi": "'सङ्कर', उन वस्तुओं का घुल-मिल जाना जिन्हें अलग रहना चाहिए, अर्जुन का ही शब्द है — वही आतंक जिस पर उसने 1.41 में अपना इनकार खड़ा किया था, जहाँ कुलों के ढहने से वह उपजता था। कृष्ण वह शब्द उठाकर स्वयं पर लगा लेते हैं, और इसका फल यह है कि अर्जुन को उसी की शब्दावली में उत्तर मिल जाता है: जिससे तुम डरते हो, वह रुकने से आता है, लड़ने से नहीं। 'उत्सीदेयुः' धँसने या बैठ जाने की क्रिया है, फ़र्श का साथ छोड़ देना।"
+  },
+  {
+   "id": 144,
+   "number": "3.25",
+   "body_en": "As people who do not know work while stuck to the work, Bharata, so should the one who knows work — unstuck, and wanting the world held together.",
+   "body_hi": "जो नहीं जानते वे जैसे कर्म से चिपके हुए काम करते हैं, भारत, वैसे ही जो जानता है वह भी करे — बिना चिपके, और यह चाहते हुए कि लोक बँधा रहे।",
+   "commentary_en": "The instruction is that the wise man should look exactly like everyone else. Yatha and tatha hold the two halves in the same shape, and the only word that differs across the parallel is asaktah. Note what this rules out: any visible marker of attainment, any way of telling the two men apart from outside. The chapter has been building to this since it called the conspicuous abstainer of 3.6 a fraud.",
+   "commentary_hi": "निर्देश यह है कि ज्ञानी मनुष्य ठीक बाक़ी सबके जैसा दिखे। 'यथा' और 'तथा' दोनों अर्धों को एक ही आकार में थामे हुए हैं, और इस समानान्तर में केवल एक शब्द बदलता है, 'असक्तः'। ध्यान दें कि यह किसे बाहर कर देता है: उपलब्धि का कोई दिखने वाला चिह्न, बाहर से दोनों मनुष्यों को अलग पहचानने का कोई ढंग। अध्याय इसी की ओर तब से बढ़ रहा है जब उसने 3.6 के दिखावटी विरक्त को मिथ्याचारी कहा था।"
+  },
+  {
+   "id": 145,
+   "number": "3.26",
+   "body_en": "He should not go splitting the understanding of people who do not know and are stuck to their work. The one who knows, yoked, should work — and let them take pleasure in all of it.",
+   "body_hi": "जो नहीं जानते और अपने कर्म से चिपके हैं, उनकी बुद्धि को वह तोड़ने न बैठे। जो जानता है वह जुता हुआ काम करे — और उन्हें उस सबमें रस लेने दे।",
+   "commentary_en": "Buddhi-bheda is a splitting of the understanding, and the verse treats it as an injury a teacher can inflict. Joshayet is the interesting word: cause them to enjoy, let them find it agreeable. Not correct them, not enlighten them — leave the pleasure they take in their work intact. Note that this is a restraint placed on the knower rather than on the ignorant, and that the poem is quietly limiting who its own teaching is for.",
+   "commentary_hi": "'बुद्धिभेद' बुद्धि का टूटना है, और श्लोक उसे ऐसी चोट मानता है जो कोई गुरु पहुँचा सकता है। रोचक शब्द 'जोषयेत्' है: उन्हें रस लेने दे, उन्हें वह भाने दे। सुधारे नहीं, ज्ञान न दे — उनके काम में उन्हें जो रस मिलता है, उसे बना रहने दे। ध्यान दें कि यह रोक अज्ञानी पर नहीं, ज्ञानी पर लगाई गई है, और काव्य चुपचाप यह सीमित कर रहा है कि उसका अपना उपदेश किसके लिए है।"
+  },
+  {
+   "id": 146,
+   "number": "3.27",
+   "body_en": "Works are being carried out, all of them and in every way, by the strands that nature is made of. A man whose self is fogged by I-making thinks: I am the one doing it.",
+   "body_hi": "कर्म हो रहे हैं, सारे के सारे और हर तरह से, उन्हीं गुणों से जिनसे प्रकृति बनी है। जिस मनुष्य का मन अहंकार से धुँधला है, वह सोचता है — करने वाला मैं हूँ।",
+   "commentary_en": "Ahankara is literally the making of an I, and the verse places it exactly where a mistake of perception would go: not a moral failing but a misreading of who is moving. Kriyamanani is a passive participle, being done — the works are already under way and the ego arrives afterwards to claim them. This is the chapter's psychological centre, and everything from 3.4 has been clearing ground for it.",
+   "commentary_hi": "'अहंकार' शब्दशः एक 'मैं' का बनाया जाना है, और श्लोक उसे ठीक वहाँ रखता है जहाँ देखने की भूल रखी जाती है: नैतिक दोष नहीं, यह ग़लत पढ़ना कि हिल कौन रहा है। 'क्रियमाणानि' कर्मवाच्य कृदन्त है, किए जाते हुए — कर्म पहले से चल रहे हैं और अहंकार बाद में आकर उन पर दावा ठोकता है। यही अध्याय का मनोवैज्ञानिक केन्द्र है, और 3.4 से सब कुछ इसी के लिए ज़मीन साफ़ करता आ रहा है।"
+  },
+  {
+   "id": 147,
+   "number": "3.28",
+   "body_en": "But the man who knows how it truly stands, mighty-armed, with the strands on one side and the work on the other — thinking it is strands moving among strands, he does not get stuck.",
+   "body_hi": "पर जो मनुष्य जानता है कि बात असल में कैसी है, महाबाहो, एक ओर गुण और दूसरी ओर कर्म — यह मानकर कि गुण ही गुणों के बीच चल रहे हैं, वह चिपकता नहीं।",
+   "commentary_en": "Guna gunehsu vartante: strands turning among strands. It is a formula rather than an explanation, and its force is in what it leaves out — no agent appears anywhere in the sentence. Note vibhaga, the division or partition: what the knower knows is a boundary, the line between what nature is doing and what work is being done, and holding that line is all that keeps him from sticking.",
+   "commentary_hi": "'गुणा गुणेषु वर्तन्ते': गुण ही गुणों के बीच घूम रहे हैं। यह व्याख्या नहीं, एक सूत्र है, और उसका बल इसमें है कि वह क्या छोड़ देता है — पूरे वाक्य में कहीं कोई कर्ता आता ही नहीं। 'विभाग' देखें, बँटवारा या विभाजन: ज्ञानी जो जानता है वह एक सीमा है, वह रेखा जो प्रकृति के किए और हो रहे कर्म के बीच है, और उसी रेखा को थामे रहना उसे चिपकने से बचाता है।"
+  },
+  {
+   "id": 148,
+   "number": "3.29",
+   "body_en": "People thoroughly fogged by the strands of nature get stuck to the strands and their work. The one who sees it whole should not go shaking up those slow ones who see only a piece.",
+   "body_hi": "जो लोग प्रकृति के गुणों से पूरी तरह धुँधला गए हैं, वे गुणों और उनके कर्मों से चिपक जाते हैं। जो पूरा देखता है वह उन मन्द लोगों को न हिलाए जो एक टुकड़ा भर देखते हैं।",
+   "commentary_en": "The restraint of 3.26 restated, now with the reason attached: kritsna-vit against akritsna-vidah, the one who knows the whole against those who know a part. Mandan is a gentle word for them — slow, dull, not wicked. Note vichalayet, from the same root as the unmoving achala of 2.70: what the knower must not do to others is exactly what he has stopped doing to himself.",
+   "commentary_hi": "3.26 की रोक फिर से कही हुई, इस बार कारण जोड़कर: 'कृत्स्नवित्' के सामने 'अकृत्स्नविदः', पूरा जानने वाला और अंश जानने वाले। 'मन्दान्' उनके लिए नरम शब्द है — धीमे, मन्द, दुष्ट नहीं। 'विचालयेत्' देखें, उसी धातु से जिससे 2.70 का अचल: ज्ञानी को दूसरों के साथ जो नहीं करना है, वह ठीक वही है जो उसने अपने साथ करना बन्द कर दिया है।"
+  },
+  {
+   "id": 149,
+   "number": "3.30",
+   "body_en": "Set every one of your works down in me, with your mind on what is highest in you; become a man with nothing to hope for and nothing to call his own, and fight — with the fever gone out of you.",
+   "body_hi": "अपने एक-एक कर्म को मुझमें रख दो, अपना मन उस पर टिकाकर जो तुममें सबसे ऊँचा है; ऐसे मनुष्य हो जाओ जिसे कुछ आशा नहीं और जिसका कुछ अपना नहीं, और लड़ो — बुख़ार उतरा हुआ।",
+   "commentary_en": "Vigata-jvarah: with the fever gone. The chapter has diagnosed Arjuna twice already, but this is the word that fits what chapter one actually showed us — the trembling, the dry mouth, the burning skin, a man physically ill with his own situation. Note yudhyasva, fight, the first such imperative since 2.37, and that it arrives at the end of the line rather than the start. Everything before it is what makes it possible.",
+   "commentary_hi": "'विगतज्वरः': बुख़ार उतरा हुआ। अध्याय अर्जुन का निदान दो बार कर चुका है, पर पहले अध्याय ने जो सचमुच दिखाया था उस पर यही शब्द बैठता है — काँपना, मुँह सूखना, त्वचा का जलना, अपनी ही स्थिति से शरीर से बीमार पड़ा हुआ मनुष्य। 'युध्यस्व' देखें, लड़ो, 2.37 के बाद पहली ऐसी आज्ञा, और वह पंक्ति के आरम्भ में नहीं, अन्त में आती है। उससे पहले का सब कुछ वही है जो उसे सम्भव बनाता है।"
+  },
+  {
+   "id": 150,
+   "number": "3.31",
+   "body_en": "The people who keep to this view of mine, day after day, trusting it and not carping at it — they too are let go of their works.",
+   "body_hi": "जो लोग मेरे इस मत पर दिन-प्रतिदिन टिके रहते हैं, उस पर भरोसा रखते हुए और उसमें मीन-मेख निकाले बिना — वे भी अपने कर्मों से छूट जाते हैं।",
+   "commentary_en": "Api, too: the freedom just described for the man who understands is extended to the man who merely trusts and gets on with it. Anasuyantah is not begrudging, not finding fault — asuya is the particular sourness of resenting something good in another. Note that the two things asked for are practice and goodwill, and that neither of them is comprehension. It is the most accessible sentence in the chapter.",
+   "commentary_hi": "'अपि', भी: जो स्वतन्त्रता अभी समझने वाले मनुष्य के लिए बताई गई थी, वह उस मनुष्य तक बढ़ा दी जाती है जो बस भरोसा करके काम में लग जाता है। 'अनसूयन्तः' कुड़कुड़ाते नहीं, दोष नहीं ढूँढ़ते — 'असूया' दूसरे में किसी अच्छी बात से जलने की वह विशेष खटास है। ध्यान दें कि जो दो बातें माँगी गई हैं वे अभ्यास और सद्भाव हैं, और उनमें से कोई समझ नहीं है। अध्याय का सबसे सुलभ वाक्य यही है।"
+  },
+  {
+   "id": 151,
+   "number": "3.32",
+   "body_en": "But those who carp at it and do not keep to this view of mine — take them for men fogged about every kind of knowledge, out of their wits, and done for.",
+   "body_hi": "पर जो इसमें मीन-मेख निकालते हैं और मेरे इस मत पर टिकते नहीं — उन्हें हर तरह के ज्ञान में धुँधलाया हुआ जानो, बेसुध, और गए-बीते।",
+   "commentary_en": "The mirror of the verse before it, and much shorter — the whole positive case took a line and a half, and the refusal is dismissed in three words. Nashtan is the harshest of them, ruined, lost, finished. Note that the fault named is again asuya, the carping, rather than disbelief; the chapter has consistently treated a sour disposition as the real obstacle and mere ignorance as something workable.",
+   "commentary_hi": "अपने से पहले वाले श्लोक का दर्पण, और उससे कहीं छोटा — पूरा सकारात्मक पक्ष डेढ़ पंक्ति में कहा गया था, और इनकार तीन शब्दों में झाड़ दिया जाता है। इनमें सबसे कठोर 'नष्टान्' है, चौपट, खोए हुए, गए हुए। ध्यान दें कि जिस दोष का नाम है वह फिर 'असूया' है, कुड़कुड़ाना, अविश्वास नहीं; अध्याय लगातार खट्टे स्वभाव को असली अड़चन मानता आया है और निरे अज्ञान को ऐसी वस्तु जिस पर काम हो सकता है।"
+  },
+  {
+   "id": 152,
+   "number": "3.33",
+   "body_en": "Even a man with knowledge behaves in a way that matches the nature he has. Creatures go where their nature goes. What is holding them down going to do?",
+   "body_hi": "ज्ञान रखने वाला मनुष्य भी वैसा ही चलता है जैसी उसकी अपनी प्रकृति है। जीव वहीं जाते हैं जहाँ उनकी प्रकृति जाती है। दबाकर रखने से होगा क्या?",
+   "commentary_en": "Nigrahah kim karishyati is a real question, not a rhetorical flourish, and it undercuts three quarters of what the chapter has been recommending. Nigraha is the holding-down of 2.68, offered there as the description of a settled man. Here the poem turns and asks what good it is. Placed two verses after an order to fight, it is the most destabilising sentence in the chapter, and nothing softens it.",
+   "commentary_hi": "'निग्रहः किं करिष्यति' सच्चा प्रश्न है, अलंकार नहीं, और वह उस सबका तीन चौथाई काट देता है जिसकी अध्याय अब तक सिफ़ारिश करता आया है। 'निग्रह' 2.68 का दबाकर रखना है, जहाँ वह ठहरे हुए मनुष्य के वर्णन की तरह दिया गया था। यहाँ काव्य पलटकर पूछता है कि उससे लाभ क्या। लड़ने की आज्ञा के दो श्लोक बाद रखा हुआ, यह अध्याय का सबसे हिला देने वाला वाक्य है, और उसे कोई नरम नहीं करता।"
+  },
+  {
+   "id": 153,
+   "number": "3.34",
+   "body_en": "Liking and hating are already sitting there, in what each sense meets. Let no one fall under the power of those two: they are the pair that waylays him on the road.",
+   "body_hi": "राग और द्वेष पहले से वहीं बैठे हैं, हर इन्द्रिय जिससे मिलती है उसी में। कोई उन दोनों के वश में न आए: वही जोड़ी है जो उसे राह में घेरती है।",
+   "commentary_en": "Paripanthin is one who stands about on the road — a highwayman, the danger of a journey rather than of a place. The answer to 3.33 turns out to be positional: you cannot hold your nature down, but you can decline to be robbed at the one point where the robbery happens. Note vyavasthitau, already stationed, arranged in advance. The ambush is not an event. It is a permanent feature of the route.",
+   "commentary_hi": "'परिपन्थिन्' वह है जो राह पर खड़ा रहता है — बटमार, जगह का नहीं, यात्रा का ख़तरा। 3.33 का उत्तर स्थान का निकलता है: तुम अपनी प्रकृति को दबा नहीं सकते, पर ठीक उसी बिन्दु पर लुटने से इनकार कर सकते हो जहाँ लूट होती है। 'व्यवस्थितौ' देखें, पहले से तैनात, पहले से जमाए हुए। घात कोई घटना नहीं है। वह उस मार्ग का स्थायी लक्षण है।"
+  },
+  {
+   "id": 154,
+   "number": "3.35",
+   "body_en": "Your own dharma, done badly, beats another man's done well. To die inside your own is better; the other man's dharma is a thing to be afraid of.",
+   "body_hi": "अपना धर्म, बुरी तरह निभाया हुआ, दूसरे के अच्छी तरह निभाए धर्म से बेहतर है। अपने ही में मर जाना अच्छा; दूसरे का धर्म डरने की वस्तु है।",
+   "commentary_en": "Viguna is defective, missing a quality; svanushthita is carried out well. The verse gives the badly done thing the higher place and does not argue for it, which is why it is the hardest line in the chapter to sit with. Note that it is addressed to a man who is refusing his own dharma out of a preference for something gentler, and that the poem answers his preference not by disputing it but by calling it dangerous.",
+   "commentary_hi": "'विगुण' दोषपूर्ण है, जिसमें कोई गुण घट गया हो; 'स्वनुष्ठित' ठीक से निभाया हुआ। श्लोक बुरी तरह किए हुए को ऊँचा स्थान देता है और उसके पक्ष में तर्क नहीं करता, और इसीलिए अध्याय की यह पंक्ति सबसे कठिन है। ध्यान दें कि यह उस मनुष्य से कही जा रही है जो किसी कोमल वस्तु की चाह में अपना ही धर्म ठुकरा रहा है, और काव्य उसकी चाह का उत्तर उससे झगड़कर नहीं, उसे ख़तरनाक कहकर देता है।"
+  },
+  {
+   "id": 155,
+   "number": "3.36",
+   "body_en": "Arjuna said: Then what is it that sets a man on to do wrong, Varshneya — pushed into it even when he does not want it, as though something had hold of him?",
+   "body_hi": "अर्जुन ने कहा — तो फिर वह क्या है जो मनुष्य को ग़लत काम पर लगा देता है, वार्ष्णेय — न चाहते हुए भी उसमें धकेला हुआ, मानो किसी ने उसे पकड़ रखा हो?",
+   "commentary_en": "Arjuna's second question, and it is the same question as his first: niyojita, set to work, is the word he used against Krishna in 3.1. Then it was you who yoke me; now it is what yokes any of us. Note anichchhan api, even not wanting to — he is asking about compulsion from inside, which is the one thing 3.33's nature and 3.34's ambush have not yet been put together to explain.",
+   "commentary_hi": "अर्जुन का दूसरा प्रश्न, और वह उसके पहले प्रश्न जैसा ही है: 'नियोजित', काम पर लगाया हुआ, वही शब्द है जो उसने 3.1 में कृष्ण पर चलाया था। तब वह था, आप मुझे जोतते हैं; अब है, हममें से किसी को भी जोतता क्या है। 'अनिच्छन्नपि' देखें, न चाहते हुए भी — वह भीतर से आने वाली विवशता के बारे में पूछ रहा है, और 3.33 की प्रकृति और 3.34 की घात को अभी तक जोड़कर वही एक बात समझाई नहीं गई है।"
+  },
+  {
+   "id": 156,
+   "number": "3.37",
+   "body_en": "The Blessed One said: This is wanting; this is anger; it is thrown up by the strand of passion — an enormous eater, an enormous ruin. Know that for the enemy here.",
+   "body_hi": "भगवान् ने कहा — यह चाह है; यह क्रोध है; रजोगुण से उठा हुआ — भारी खाने वाला, भारी सत्यानाश। इसी को यहाँ का शत्रु जानो।",
+   "commentary_en": "Kama esha krodha esha: two names and one demonstrative, used twice, so the grammar itself refuses to make them separate things. Chapter two had wanting produce anger through a chain of five links; here they collapse into a single object. Mahashana, the great eater, sets up the unfillable fire two verses on. Note vairinam, the enemy, singular — the whole diffuse problem of the chapter has been given one body to strike at.",
+   "commentary_hi": "'काम एष क्रोध एष': दो नाम और एक ही संकेतवाचक, दो बार बरता हुआ, सो व्याकरण स्वयं उन्हें अलग वस्तु मानने से इनकार कर देता है। दूसरे अध्याय में चाह पाँच कड़ियों की शृंखला से क्रोध उपजाती थी; यहाँ वे एक ही वस्तु में सिमट जाते हैं। 'महाशन', बड़ा खाने वाला, दो श्लोक आगे की न भरने वाली आग की भूमिका बाँध देता है। 'वैरिणम्' देखें, शत्रु, एकवचन — अध्याय की पूरी बिखरी हुई समस्या को मारने के लिए एक देह दे दी गई है।"
+  },
+  {
+   "id": 157,
+   "number": "3.38",
+   "body_en": "Smoke wraps a fire; a smudge wraps a mirror; the caul wraps what is growing in the womb. This is wrapped up by that in the same way.",
+   "body_hi": "धुआँ आग को लपेट लेता है; मैल दर्पण को लपेट लेता है; झिल्ली गर्भ में बढ़ते हुए को लपेट लेती है। यह भी उससे उसी तरह लिपटा हुआ है।",
+   "commentary_en": "Three coverings, and they are graded. Smoke can be fanned off and comes from the fire itself; a smudge has to be wiped and comes from outside; the caul cannot be removed at all, because it is part of how the thing is being made. Note that the verse does not tell you which of the three the case in hand resembles. It gives you a range and leaves the placing to you, which is unusually generous for a poem this fond of conclusions.",
+   "commentary_hi": "तीन आवरण, और वे श्रेणीबद्ध हैं। धुआँ हवा से हटाया जा सकता है और आग से ही उठता है; मैल पोंछना पड़ता है और बाहर से आता है; झिल्ली हटाई ही नहीं जा सकती, क्योंकि वह उसी प्रक्रिया का अंग है जिससे वस्तु बन रही है। ध्यान दें कि श्लोक यह नहीं बताता कि सामने का मामला इन तीनों में किससे मिलता है। वह एक परास देकर रख देना तुम पर छोड़ देता है, और निष्कर्षों के इतने शौक़ीन काव्य के लिए यह असामान्य रूप से उदार है।"
+  },
+  {
+   "id": 158,
+   "number": "3.39",
+   "body_en": "Knowledge is wrapped up by this — the standing enemy of the one who knows, Kaunteya — which takes the shape of wanting and burns like a fire nothing fills.",
+   "body_hi": "ज्ञान इसी से लिपटा हुआ है — जो जानता है उसका जमा हुआ बैरी, कौन्तेय — जो चाह का रूप धरता है और ऐसी आग की तरह जलता है जिसे कुछ भरता नहीं।",
+   "commentary_en": "Nitya-vairin, the permanent enemy — not an episode but a standing condition, and specifically the enemy of the person who knows, which rules out knowledge as the cure. Dushpura is hard-to-fill, and putting it with anala, fire, gives the chapter its sharpest image: a hunger that consumes what is fed to it and is not reduced by having been fed. Note kama-rupena, in the form of wanting: the thing wears wanting the way a mask is worn.",
+   "commentary_hi": "'नित्यवैरिन्', स्थायी शत्रु — कोई प्रसंग नहीं, टिकी हुई अवस्था, और ख़ास तौर पर उसका शत्रु जो जानता है, जिससे ज्ञान इलाज की सूची से बाहर हो जाता है। 'दुष्पूर' कठिनाई से भरने वाला है, और उसे 'अनल', आग, के साथ रखने से अध्याय को उसका सबसे तीखा चित्र मिलता है: ऐसी भूख जो जो दिया जाए उसे चट कर जाती है और खा लेने से घटती नहीं। 'कामरूपेण' देखें, चाह के रूप में: वह वस्तु चाह को वैसे पहनती है जैसे मुखौटा पहना जाता है।"
+  },
+  {
+   "id": 159,
+   "number": "3.40",
+   "body_en": "Its standing-ground is said to be the senses, the mind, the understanding. Working through these, it wraps knowledge over and throws the one in the body into a fog.",
+   "body_hi": "इसका ठिकाना इन्द्रियाँ, मन और बुद्धि बताए गए हैं। इन्हीं के रास्ते वह ज्ञान को लपेट देता है और देह में रहने वाले को धुँधला कर देता है।",
+   "commentary_en": "Adhishthana is a standing-ground, a base of operations. Naming three of them turns the enemy from a feeling into something with territory, and the three named are exactly the three that 3.42 will rank in ascending order — so the ladder that ends in freedom is also the map of what has been occupied. Note dehinam, the one in the body: the word chapter two used whenever it wanted the self described from the outside.",
+   "commentary_hi": "'अधिष्ठान' खड़े होने की ज़मीन है, कार्रवाई का अड्डा। तीन का नाम ले देना शत्रु को भावना से बदलकर ऐसी वस्तु बना देता है जिसके पास क्षेत्र है, और जिन तीन का नाम है वे ठीक वही हैं जिन्हें 3.42 चढ़ते क्रम में रखेगा — सो जो सीढ़ी मुक्ति पर जाकर समाप्त होती है, वही अधिकृत भूमि का नक़्शा भी है। 'देहिनम्' देखें, देह में रहने वाला: दूसरा अध्याय यही शब्द तब बरतता था जब उसे आत्मा का वर्णन बाहर से करना होता था।"
+  },
+  {
+   "id": 160,
+   "number": "3.41",
+   "body_en": "So take the senses in hand first, bull of the Bharatas, and strike this foul thing down — it destroys knowledge and the seeing that comes after knowledge.",
+   "body_hi": "सो पहले इन्द्रियों को हाथ में लो, भरतर्षभ, और इस मलिन वस्तु को मार गिराओ — वह ज्ञान को भी नष्ट करती है और ज्ञान के बाद आने वाली दृष्टि को भी।",
+   "commentary_en": "Adau, first: the order of operations matters, and the senses come before the mind because they are the outermost of the three grounds just named. Prajahi is a strike, a beating down, and it is the same verb chapter two used at 2.55 for the letting-go of wants — the difference between abandoning and killing is a matter of how the same root is aimed. The battlefield vocabulary is not decoration here; the enemy has been given a body precisely so that it can be fought.",
+   "commentary_hi": "'आदौ', पहले: क्रम मायने रखता है, और इन्द्रियाँ मन से पहले आती हैं क्योंकि अभी गिनाए तीन अड्डों में वे सबसे बाहरी हैं। 'प्रजहि' प्रहार है, मार गिराना, और यही क्रिया दूसरे अध्याय ने 2.55 में चाहों को छोड़ देने के लिए बरती थी — छोड़ने और मारने का भेद इस बात का है कि वही धातु किस ओर ताकी गई है। युद्ध की शब्दावली यहाँ सजावट नहीं है; शत्रु को देह ही इसलिए दी गई थी कि उससे लड़ा जा सके।"
+  },
+  {
+   "id": 161,
+   "number": "3.42",
+   "body_en": "The senses, they say, stand high; higher than the senses, the mind; higher than the mind, understanding; and the one higher than understanding is he.",
+   "body_hi": "इन्द्रियाँ ऊँची कही जाती हैं; इन्द्रियों से ऊँचा मन; मन से ऊँची बुद्धि; और बुद्धि से जो ऊँचा है, वह वही है।",
+   "commentary_en": "Four rungs and the last one is not named. Sah, he, that — the sentence simply stops, and the thing at the top is indicated rather than described. Note that the ladder is climbed by comparison alone, each rung defined only as above the last, so the structure carries you upward without ever telling you what any level contains. It is the same refusal the poem made at 2.69, where the sage's night was given a shape and no content.",
+   "commentary_hi": "चार पायदान और अन्तिम का नाम नहीं लिया गया। 'सः', वह — वाक्य बस रुक जाता है, और सबसे ऊपर की वस्तु का वर्णन नहीं, संकेत भर होता है। ध्यान दें कि सीढ़ी केवल तुलना से चढ़ी जाती है, हर पायदान की परिभाषा इतनी ही है कि वह पिछले से ऊपर है, सो ढाँचा तुम्हें ऊपर ले जाता है और कभी नहीं बताता कि किसी तल में है क्या। यह वही इनकार है जो काव्य ने 2.69 में किया था, जहाँ मुनि की रात को आकार दिया गया था और अन्तर्वस्तु नहीं।"
+  },
+  {
+   "id": 162,
+   "number": "3.43",
+   "body_en": "So: knowing what stands higher than understanding, and propping yourself up by yourself, strike the enemy down, mighty-armed — the one that wears the shape of wanting and is so hard to get at.",
+   "body_hi": "सो: जो बुद्धि से ऊँचा है उसे जानकर, और स्वयं को स्वयं से सँभालकर, शत्रु को मार गिराओ, महाबाहो — उसी को जो चाह का रूप धरता है और जिस तक पहुँचना इतना कठिन है।",
+   "commentary_en": "Samstabhya atmanam atmana: steady the self by the self, with nothing outside brought in to do it — the same closed circuit as 2.55's being content in oneself by oneself, now put to work rather than described. Durasada is hard to approach, hard to get at, and it is the last word of the chapter about a chapter's worth of enemy. Note that a poem which began by refusing to let Arjuna sit still ends by handing him something to attack.",
+   "commentary_hi": "'संस्तभ्यात्मानमात्मना': स्वयं को स्वयं से थाम लेना, और उसके लिए बाहर से कुछ नहीं लाया गया — वही बन्द परिपथ जो 2.55 के स्वयं में स्वयं से तृप्त होने का था, इस बार वर्णन के बजाय काम पर लगा हुआ। 'दुरासद' वह है जिस तक पहुँचना कठिन हो, जिस पर चढ़ाई कठिन हो, और वह पूरे एक अध्याय भर के शत्रु पर अध्याय का अन्तिम शब्द है। ध्यान दें कि जो काव्य अर्जुन को चुपचाप बैठने न देने से आरम्भ हुआ था, वह उसे हमला करने के लिए कुछ थमाकर समाप्त होता है।"
+  }
+ ]
+}
