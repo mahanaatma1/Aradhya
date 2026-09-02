@@ -82,6 +82,7 @@ STOP_EN = {
     "yourself", "himself", "themselves", "into", "upon", "over", "out", "up",
     "down", "before", "after", "again", "very", "such", "same", "while",
     "addressed", "told", "answered", "asked", "replied", "am",
+    "having", "being", "even",
 }
 STOP_HI = {
     "के", "का", "की", "को", "में", "से", "पर", "और", "भी", "है", "हैं", "था",
@@ -101,6 +102,7 @@ STOP_HI = {
     "यहाँ", "यहां", "आपके", "आपका", "आपकी", "इच्छा", "इच्छुक", "चाहते",
     "चाहता", "चाहती", "चाहे", "चाहिए", "डालें", "डालना", "देते", "पाता",
     "पाते", "रखें", "लूँ", "सकता", "सकते", "गिना", "बीच", "भर", "ही",
+    "इसे", "किसे", "इसका", "इसके", "उसको", "जिसका", "जिसने",
 }
 # Renderings the subject matter compels. There is no second way to say that
 # someone is the son of Subhadra, that a maharatha is a great chariot-warrior,
@@ -133,6 +135,22 @@ FORCED_EN = {
     "kill", "kills", "killing", "killed", "slay", "slain", "destroy", "law",
     "wishers", "well", "three", "hundred", "thousand", "sitting", "sat",
     "grandsons", "brothers", "sisters", "wives", "connections", "kindred",
+    # The four elements of 2.23 and what each of them does. pavaka is fire and
+    # dahati is burns; there is no synonym that is not a distortion, and the
+    # list of stages in 2.13 -- kaumaram, yauvanam, jara -- is the same three
+    # words in any hand.
+    "cut", "cuts", "burn", "burns", "soak", "soaks", "wet", "dry", "dries",
+    "fire", "water", "waters", "wind", "childhood", "youth", "age", "another",
+    "spoken", "speak", "speaking",
+    # Birth and death, the two nouns chapter 2 is built on. jayate is born and
+    # mriyate is dies; a translator has no second word for either.
+    "born", "birth", "die", "dies", "death", "unborn",
+    # 2.29 is a list of four verbs -- pasyati, vadati, srnoti, veda -- and the
+    # inflections belong here for the same reason "spoke" and "saw" already do.
+    # jaya and bhuj are likewise one English word each.
+    "sees", "speaks", "hears", "hearing", "heard", "knows", "know",
+    "victory", "victorious", "win", "wins", "won", "conquer", "conquered",
+    "enjoy", "enjoys", "enjoyment", "enjoyments",
 }
 FORCED_HI = {
     "पुत्र", "पुत्रों", "पुत्रो", "पिता", "माता", "भाई", "पितामह", "पितरों",
@@ -152,6 +170,14 @@ FORCED_HI = {
     # Verbs the verse dictates: there is no second Hindi word for "to kill".
     "मारना", "मारने", "मारकर", "मार", "मारें", "वध", "हत्या", "तीन", "तीनों",
     "सौ", "सहस्र", "बैठ", "बैठा", "बैठे", "श्वशुरों", "साले", "नाते", "कुटुम्ब",
+    # More inflections of the same verb, plus two words Hindi simply keeps from
+    # the Sanskrit: avyaya and aja have no separate Hindi form to choose.
+    "मारता", "मारते", "मरवाता", "मरवाना", "अजन्मा", "अज", "अव्यय", "अविनाशी",
+    # The same compelled vocabulary as its English counterpart: the four
+    # elements and what each does to nothing, then birth and death.
+    "काटते", "काटता", "काटा", "जलाती", "जलाता", "जलाया", "भिगोता", "भिगोया",
+    "सुखाती", "सुखाता", "सुखाया", "आग", "जल", "वायु", "पवन",
+    "जन्म", "जन्मता", "जन्मा", "मरता", "मृत्यु",
 }
 FORCED_TERMS = FORCED_EN | FORCED_HI
 
@@ -186,6 +212,12 @@ PROPER = {
     "madhusudana", "varshneya", "partha", "kaunteya", "dhananjaya",
     "vrikodara", "drupada", "virata", "satyaki", "shikhandi", "dhrishtadyumna",
     "kashi", "bharata", "yadava", "vrishni",
+    # Vocative epithets and the glosses they compel. When the poem says
+    # parantapa it is naming the man it is speaking to, exactly as when it says
+    # Bharata; "scorcher of foes" is that name in English and there is no
+    # version of it to own. Same for arisudana and purusharshabha.
+    "parantapa", "scorcher", "foes", "foe", "arisudana", "enemies", "enemy",
+    "mahabaho", "purusharshabha", "bull", "rulers",
 }
 
 STOPWORDS = STOP_EN | STOP_HI | FORCED_TERMS | PROPER

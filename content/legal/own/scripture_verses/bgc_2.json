@@ -1,0 +1,586 @@
+{
+ "slug": "bgc_2",
+ "title_en": "Sankhya Yoga",
+ "title_hi": "सांख्य योग",
+ "book_id": 2,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 48,
+   "number": "2.1",
+   "body_en": "Sanjaya said: To him — taken over by pity, his troubled eyes brimming over, sinking — Madhusudana spoke these words.",
+   "body_hi": "संजय ने कहा — करुणा से आ घिरे उसको, जिसकी व्याकुल आँखें भर आई थीं, जो धँसता जा रहा था, मधुसूदन ने ये वचन कहे।",
+   "commentary_en": "Sanjaya describes Arjuna's eyes before Krishna says anything, and the description is closer to medical than moral: akula-ikshanam, eyes in disarray. The chapter that carries the Gita's hardest doctrine opens on a man who physically cannot see straight. Note too that the poem calls Krishna Madhusudana here, the slayer, at the moment he begins to speak rather than strike. Everything that follows for seventeen chapters is what this particular slayer does instead of killing.",
+   "commentary_hi": "कृष्ण के कुछ कहने से पहले संजय अर्जुन की आँखों का वर्णन करता है, और वह वर्णन नैतिक से अधिक चिकित्सकीय है: 'आकुलेक्षणम्', अस्त-व्यस्त आँखें। जो अध्याय गीता का कठिनतम सिद्धान्त उठाए हुए है, वह एक ऐसे मनुष्य पर खुलता है जो देह के स्तर पर ही सीधा देख नहीं पा रहा। यह भी देखें कि काव्य यहाँ कृष्ण को 'मधुसूदन' कहता है — वध करने वाला — ठीक उस क्षण जब वे प्रहार के बजाय बोलना आरम्भ करते हैं। आगे के सत्रह अध्याय वही हैं जो यह वध करने वाला मारने के स्थान पर करता है।"
+  },
+  {
+   "id": 49,
+   "number": "2.2",
+   "body_en": "The Blessed One said: Where has this squalor come upon you from, at so hard an hour — a thing no man of standing takes up, that opens no heaven and earns no good name, Arjuna?",
+   "body_hi": "भगवान् ने कहा — यह मैल तुझ पर कहाँ से आ बैठा, इस विषम घड़ी में — जिसे कोई प्रतिष्ठित पुरुष अपनाता नहीं, जो न स्वर्ग खोलता है, न कोई नाम कमाता है, अर्जुन?",
+   "commentary_en": "Krishna's first word to a man in collapse is a question about origin: kutas, from where. He does not touch the argument at all; he asks where the state came from, which assumes it came from somewhere and is therefore not simply who Arjuna is. And he calls it kashmalam — filth, stain, squalor — the harshest word in his vocabulary, spent in the opening sentence. Compassion here takes the form of refusing to treat the collapse as a position worth debating.",
+   "commentary_hi": "ढह चुके मनुष्य से कृष्ण का पहला शब्द उत्पत्ति का प्रश्न है: 'कुतः', कहाँ से। वे तर्क को छूते ही नहीं; वे पूछते हैं कि यह अवस्था कहाँ से आई — और इस प्रश्न में यह मान लिया गया है कि वह कहीं से आई है, अतः वह अर्जुन का स्वरूप नहीं है। और वे उसे 'कश्मलम्' कहते हैं — मैल, दाग, गन्दगी — उनकी शब्दावली का कठोरतम शब्द, पहले ही वाक्य में खर्च। यहाँ करुणा का रूप यही है कि इस टूटन को बहस के योग्य पक्ष मानने से इनकार कर दिया जाए।"
+  },
+  {
+   "id": 50,
+   "number": "2.3",
+   "body_en": "Do not let unmanliness take you, Partha; it does not sit on you. Shake off this cheap weakness of heart and get up, scorcher of foes.",
+   "body_hi": "क्लैब्य को अपने ऊपर मत आने दे, पार्थ; तुझ पर वह बैठता नहीं। हृदय की इस सस्ती दुर्बलता को झटककर उठ खड़ा हो, परन्तप।",
+   "commentary_en": "Three imperatives and no argument — and it does not work. Krishna will spend the next seventy verses making the case he declines to make here, which tells you something about the poem's method: exhortation is tried first, it fails, and the philosophy arrives only because the pep talk did not. Note the word kshudram, petty, small. He is not denying that Arjuna's grief is large. He is denying that it is grand.",
+   "commentary_hi": "तीन आदेश और कोई तर्क नहीं — और यह काम नहीं करता। कृष्ण अगले सत्तर श्लोक वही बात सिद्ध करने में लगाएँगे जिसे कहने से वे यहाँ इनकार कर रहे हैं, और इससे काव्य की रीति का पता चलता है: पहले ललकार आज़माई जाती है, वह चूकती है, और दर्शन इसीलिए आता है कि उत्साह-वर्धन नहीं चला। 'क्षुद्रम्' शब्द देखें — ओछा, छोटा। वे यह नहीं कह रहे कि अर्जुन का शोक बड़ा नहीं है। वे यह कह रहे हैं कि वह भव्य नहीं है।"
+  },
+  {
+   "id": 51,
+   "number": "2.4",
+   "body_en": "Arjuna said: How am I to send arrows back at Bhishma in the fighting, Madhusudana, and at Drona, when worship is what I owe them both, killer of enemies?",
+   "body_hi": "अर्जुन ने कहा — भीष्म पर लड़ाई में बाण कैसे लौटाऊँ, मधुसूदन, और द्रोण पर, जब इन दोनों के प्रति मुझ पर पूजा का ऋण है, अरिसूदन?",
+   "commentary_en": "The objection has narrowed and grown harder. It is no longer about family in general but about two named men and one specific act — arrows, aimed at people he is obliged to venerate. Pujarhau, worthy of worship, makes the problem ritual rather than sentimental, and ritual obligations do not bend to feeling. Note also the two epithets Arjuna picks for Krishna inside one verse, both of them about killing. He keeps naming his charioteer after the very thing he cannot bring himself to do.",
+   "commentary_hi": "आपत्ति सिकुड़कर और कठिन हो गई है। अब बात सामान्य कुटुम्ब की नहीं, दो नामित पुरुषों और एक निश्चित कर्म की है — बाण, उन लोगों पर तने जिनका आदर उस पर बाध्यता है। 'पूजार्हौ', पूजा के योग्य, समस्या को भावुक के बजाय कर्मकाण्डीय बना देता है, और कर्मकाण्ड की बाध्यताएँ भावना से मुड़तीं नहीं। यह भी देखें कि अर्जुन एक ही श्लोक में कृष्ण के लिए दो विशेषण चुनता है, दोनों वध के। वह अपने सारथी को उसी वस्तु के नाम से पुकारता जाता है जिसे वह स्वयं कर नहीं पाता।"
+  },
+  {
+   "id": 52,
+   "number": "2.5",
+   "body_en": "Better to live on what begging brings me here than to kill teachers of such weight. Kill them — even teachers, once they have wants of money and pleasure — and the enjoyments I take afterwards come smeared with blood.",
+   "body_hi": "इन महानुभाव गुरुओं को मारने से भला यहाँ भीख से मिली रोटी पर जीना है। इन्हें मार दूँ — गुरु भी, जब उनके भीतर धन और भोग की चाह है — तो आगे जो भोग मैं लूँगा, वे रुधिर से लिपटे आएँगे।",
+   "commentary_en": "The image carries the argument: rudhira-pradigdhan, smeared with blood, attached not to weapons but to food. Arjuna is imagining the rest of his life as a sequence of meals he will not be able to get down. Notice the concession buried in the middle of it, though — artha-kaman, wanting wealth and pleasure. He grants that his teachers have their own interests in this war, which damages his own case, and he says it anyway. He is arguing honestly, and losing.",
+   "commentary_hi": "चित्र ही तर्क को उठाए हुए है: 'रुधिरप्रदिग्धान्', रुधिर से लिपटे — और यह शस्त्रों से नहीं, भोजन से जुड़ा है। अर्जुन अपने शेष जीवन की कल्पना उन भोजनों की श्रृंखला के रूप में कर रहा है जो उससे निगले न जाएँगे। पर बीच में दबी स्वीकारोक्ति देखें — 'अर्थकामान्', धन और भोग चाहने वाले। वह मान लेता है कि इस युद्ध में उसके गुरुओं के भी अपने स्वार्थ हैं, जिससे उसका ही पक्ष कमज़ोर पड़ता है, और वह फिर भी यह कहता है। वह ईमानदारी से तर्क कर रहा है, और हार रहा है।"
+  },
+  {
+   "id": 53,
+   "number": "2.6",
+   "body_en": "Nor do we know which is the weightier thing for us — that we should win, or that they should win us. The very men we would not care to outlive are the ones drawn up in front of us.",
+   "body_hi": "और यह भी हम नहीं जानते कि हमारे लिए भारी कौन है — हम जीत जाएँ, या वे हमें जीत लें। जिनके बाद जीने की परवाह हमें नहीं, वही सामने पंक्ति बाँधे खड़े हैं।",
+   "commentary_en": "This is the low point of Arjuna's reasoning and the most honest sentence in it. Na vidmah — we do not know. He has stopped arguing towards a conclusion and admitted that he cannot locate one, and the reason is exact: winning and losing have become indistinguishable in value, because the same people are gone either way. A man who cannot rank victory above defeat has no basis for any action left. That vacuum, rather than the grief, is what Krishna answers.",
+   "commentary_hi": "यह अर्जुन के विचार का सबसे निचला बिन्दु है और उसमें सबसे ईमानदार वाक्य भी। 'न विद्मः' — हम नहीं जानते। वह किसी निष्कर्ष की ओर तर्क करना छोड़ चुका है और मान चुका है कि निष्कर्ष उसे मिल ही नहीं रहा; और कारण ठीक-ठीक यह है: जीत और हार का मूल्य एक-सा हो गया है, क्योंकि वही लोग दोनों दशाओं में चले जाते हैं। जो मनुष्य विजय को पराजय से ऊपर न रख सके, उसके पास किसी भी कर्म का आधार नहीं बचता। कृष्ण उत्तर शोक का नहीं, इस रिक्तता का देते हैं।"
+  },
+  {
+   "id": 54,
+   "number": "2.7",
+   "body_en": "My nature has been struck down by the fault of smallness, my understanding is confounded about what is right — so I am asking you. Tell me for certain which is the better course. I am your pupil; discipline me, I have come to you for shelter.",
+   "body_hi": "कार्पण्य के दोष ने मेरा स्वभाव मार दिया है, धर्म के विषय में चित्त मूढ़ पड़ गया है — इसीलिए तुझसे पूछता हूँ। निश्चयपूर्वक बता, भला कौन-सा मार्ग है। मैं तेरा शिष्य हूँ; मुझे अनुशासन दे, मैं तेरी शरण आ गया हूँ।",
+   "commentary_en": "This is the hinge the whole poem turns on. Four verses ago Arjuna was issuing orders about where to park the chariot; here he calls himself shishya, pupil, and prapanna, one who has come for shelter. The Gita could not begin until the man asked. Notice that he does not ask to be comforted or excused — he asks to be told, nishchitam, for certain. And dharma-sammudha-chetah concedes the real condition: not that he knows what is right and cannot do it, but that he no longer knows.",
+   "commentary_hi": "यही वह चूल है जिस पर सारा काव्य घूमता है। चार श्लोक पहले अर्जुन रथ कहाँ खड़ा करना है, इसका आदेश दे रहा था; यहाँ वह स्वयं को 'शिष्य' कहता है और 'प्रपन्न' — शरण आया हुआ। जब तक मनुष्य ने पूछा नहीं, गीता आरम्भ नहीं हो सकी। ध्यान दें, वह सान्त्वना या छूट नहीं माँगता — वह कहलवाना चाहता है, 'निश्चितम्', निश्चयपूर्वक। और 'धर्मसंमूढचेताः' असली अवस्था स्वीकार कर लेता है: बात यह नहीं कि वह उचित जानता है और कर नहीं पाता, बात यह है कि वह अब जानता ही नहीं।"
+  },
+  {
+   "id": 55,
+   "number": "2.8",
+   "body_en": "For I cannot see what would lift away this grief that dries up my senses — not if I came into an unrivalled and thriving kingdom on earth, and not if lordship over the gods came with it.",
+   "body_hi": "क्योंकि मुझे वह दिखता ही नहीं जो इन्द्रियों को सुखा देने वाले इस शोक को उठा ले जाए — न तब, जब पृथ्वी पर निष्कण्टक और फलता-फूलता राज्य मुझे मिल जाए, न तब, जब उसके साथ देवताओं का आधिपत्य भी आ जाए।",
+   "commentary_en": "Uchchhoshanam indriyanam, drying up the senses: grief rendered as dehydration, a body going arid. And the offer he refuses has escalated once more — the earth first, then the gods. Arjuna is establishing that his problem is not undersupplied but insoluble, that no quantity of any good thing reaches it. He is right, and it is the most important admission in the chapter: the trouble is not in his circumstances, so nothing rearranged among his circumstances will touch it.",
+   "commentary_hi": "'उच्छोषणम् इन्द्रियाणाम्', इन्द्रियों का सूख जाना: शोक को निर्जलीकरण की तरह रखा गया है, एक देह जो सूखती जा रही है। और जिस प्रस्ताव को वह ठुकराता है, वह एक बार फिर बढ़ गया है — पहले पृथ्वी, फिर देवता। अर्जुन यह स्थापित कर रहा है कि उसकी समस्या अभाव की नहीं, असाध्यता की है — किसी भी भली वस्तु की कोई भी मात्रा उस तक पहुँचती नहीं। वह ठीक कह रहा है, और अध्याय की सबसे महत्त्वपूर्ण स्वीकारोक्ति यही है: कष्ट उसकी परिस्थितियों में नहीं है, इसलिए परिस्थितियों की कोई भी नई सजावट उसे छू न सकेगी।"
+  },
+  {
+   "id": 56,
+   "number": "2.9",
+   "body_en": "Sanjaya said: Having spoken to Hrishikesha in this way, scorcher of foes, Gudakesha told Govinda: I will not fight — and went quiet.",
+   "body_hi": "संजय ने कहा — हृषीकेश से इस प्रकार कहकर, परन्तप, गुडाकेश ने गोविन्द से कहा — मैं लड़ूँगा नहीं — और चुप पड़ गया।",
+   "commentary_en": "Three words, and then nothing: na yotsye, I will not fight. Everything before this was reasoning; this is a refusal, flat and final, and Sanjaya marks what comes after it with tushnim babhuva, he became silent. The silence is the point. Arjuna has run out of argument and out of speech in the same breath, and the whole of the Gita's teaching is delivered into that gap. Note that he says it to Govinda — even now, he is addressing the person he is disobeying.",
+   "commentary_hi": "तीन शब्द, और उसके बाद कुछ नहीं: 'न योत्स्ये', मैं लड़ूँगा नहीं। इससे पहले सब तर्क था; यह इनकार है, सपाट और अन्तिम — और उसके बाद जो आता है, उसे संजय 'तूष्णीं बभूव' से अंकित करता है, वह चुप हो गया। मौन ही मुद्दा है। अर्जुन की तर्क और वाणी एक ही साँस में चुक जाती हैं, और गीता का सारा उपदेश उसी रिक्त स्थान में दिया जाता है। देखें कि वह यह गोविन्द से कहता है — अब भी वह उसी को सम्बोधित कर रहा है जिसकी वह अवज्ञा कर रहा है।"
+  },
+  {
+   "id": 57,
+   "number": "2.10",
+   "body_en": "To him, sinking there with an army on either hand, Hrishikesha said this, Bharata, as though on the edge of laughter.",
+   "body_hi": "उसी से — दोनों ओर सेना लिए, धँसते हुए उससे — हृषीकेश ने, हे भारत, यह कहा, मानो हँसी के कगार पर।",
+   "commentary_en": "Prahasann iva — as if smiling, on the verge of laughing. It is the strangest word in the Gita and translators have argued over it for centuries. Whatever it means, it is not mockery of a suffering man; it is the response of someone who can see that the catastrophe is not the one Arjuna thinks it is. Note the iva again, as if — the same hedge Arjuna reached for when describing his own turning mind. Sanjaya is reporting an expression he cannot quite put a name to.",
+   "commentary_hi": "'प्रहसन्निव' — मानो मुस्कराते हुए, हँसी के कगार पर। गीता में यह सबसे विचित्र शब्द है और अनुवादक सदियों से इस पर उलझे हैं। इसका अर्थ जो हो, वह किसी दुखी मनुष्य का उपहास नहीं है; यह उसकी प्रतिक्रिया है जो देख पा रहा है कि विपत्ति वह नहीं है जो अर्जुन समझ रहा है। 'इव' फिर देखें, मानो — वही छूट जिसे अर्जुन ने अपने घूमते मन का वर्णन करते समय थामा था। संजय एक ऐसा भाव बता रहा है जिसे वह ठीक-ठीक नाम नहीं दे पाता।"
+  },
+  {
+   "id": 58,
+   "number": "2.11",
+   "body_en": "The Blessed One said: You have been grieving over those who call for no grief, and talking learnedly on top of it. Neither for the breath that has gone nor for the breath that remains do the wise grieve.",
+   "body_hi": "भगवान् ने कहा — जो शोक के योग्य नहीं, उनके लिए तू शोक करता रहा, और ऊपर से ज्ञान की बातें भी कहता रहा। जो प्राण चले गए, उनके लिए भी नहीं और जो बचे हैं, उनके लिए भी नहीं — पण्डित शोक नहीं करते।",
+   "commentary_en": "The teaching opens by setting aside the whole of chapter one in half a line, and the dismissal is aimed at something quite specific: prajna-vadan, wise-sounding speech. Krishna's charge is not that Arjuna feels too much but that he has dressed the feeling up as knowledge. That distinction runs through the rest of the poem. Grief is permitted to be grief; what is not permitted is grief presenting itself as insight and handing down conclusions.",
+   "commentary_hi": "उपदेश आधी पंक्ति में पहला अध्याय पूरा किनारे रखकर आरम्भ होता है, और यह अस्वीकार एक निश्चित वस्तु पर तना है: 'प्रज्ञावादान्', ज्ञान-सा सुनाई देने वाला कथन। कृष्ण का आरोप यह नहीं कि अर्जुन बहुत अनुभव कर रहा है, बल्कि यह कि उसने अनुभव को ज्ञान के वस्त्र पहना दिए हैं। यही भेद शेष काव्य में चलता है। शोक को शोक होने की छूट है; छूट इस बात की नहीं है कि शोक स्वयं को अन्तर्दृष्टि बताकर निर्णय सुनाने लगे।"
+  },
+  {
+   "id": 59,
+   "number": "2.12",
+   "body_en": "Not I, not you, not these rulers of men: there is no past in which we were missing, and none of us will go missing from what comes after.",
+   "body_hi": "ऐसा कभी नहीं था जब मैं न रहा हूँ, न तू, न ये नरपति; और आगे भी ऐसा कोई समय नहीं आएगा जब हममें से कोई न हो।",
+   "commentary_en": "The argument begins with a claim about time rather than about souls. Krishna does not say the self is immortal; he says there was no when in which any of us was absent. And he puts himself at the head of the list — na tv evaham — which will matter enormously later, because the speaker turns out to be making a claim about himself of an altogether different order from the one he is making about Arjuna. For now it reads as reassurance. It is also a premise.",
+   "commentary_hi": "तर्क आत्मा के विषय में नहीं, समय के विषय में एक दावे से आरम्भ होता है। कृष्ण यह नहीं कहते कि आत्मा अमर है; वे कहते हैं कि ऐसा कोई 'कब' नहीं था जिसमें हममें से कोई अनुपस्थित रहा हो। और वे सूची के आगे स्वयं को रखते हैं — 'न त्वेवाहम्' — और आगे इसका बहुत महत्त्व होगा, क्योंकि बोलने वाला अपने विषय में जो दावा कर रहा है, वह अर्जुन के विषय में किए दावे से सर्वथा दूसरी कोटि का निकलता है। अभी यह सान्त्वना जैसा पढ़ा जाता है। यह एक पूर्वपक्ष भी है।"
+  },
+  {
+   "id": 60,
+   "number": "2.13",
+   "body_en": "Childhood, youth and age belong to the one who dwells in this body; the getting of another body belongs to him in just the same way. The steady man is not thrown by it.",
+   "body_hi": "जैसे इस देह में बसने वाला बालपन, जवानी और बुढ़ापे से गुज़रता है, वैसे ही उसे दूसरी देह मिल जाती है। धीर पुरुष इससे विचलित नहीं होता।",
+   "commentary_en": "The analogy does all the persuading, and it is chosen with care: nobody mourns the end of their own childhood as a bereavement, though the child is as thoroughly gone as any corpse. Krishna is not asking Arjuna to believe something new so much as to extend something he already accepts without noticing. Dhira, steady, is the word for a man who is not thrown — not one who feels nothing, but one who does not lose his footing in the middle of a change.",
+   "commentary_hi": "सारा मनाना उपमा कर रही है, और वह सावधानी से चुनी गई है: अपने बालपन के बीत जाने का शोक कोई मृत्यु की तरह नहीं करता, जबकि वह बालक किसी शव जितना ही पूरी तरह जा चुका है। कृष्ण अर्जुन से कोई नई बात मानने को नहीं कह रहे, इतना कह रहे हैं कि जिसे वह बिना ध्यान दिए पहले से स्वीकार करता है, उसे आगे बढ़ा ले। 'धीर', स्थिर, उस मनुष्य का शब्द है जो विचलित नहीं होता — वह नहीं जो कुछ अनुभव ही न करे, बल्कि वह जो परिवर्तन के बीच अपने पैर नहीं खोता।"
+  },
+  {
+   "id": 61,
+   "number": "2.14",
+   "body_en": "What the senses touch, Kaunteya, hands out cold and heat, comfort and hurt. These arrive and they leave, they do not stay: put up with them, Bharata.",
+   "body_hi": "इन्द्रियों का जो स्पर्श है, कौन्तेय, वह शीत और ताप, सुख और पीड़ा बाँटता है। ये आते हैं और चले जाते हैं, ठहरते नहीं: इन्हें सह जा, भारत।",
+   "commentary_en": "Titikshasva, endure — the first instruction in the poem that is neither stand up nor understand. It asks for patience with sensation rather than victory over it. Note that Krishna files cold and heat alongside comfort and hurt, putting a moral catastrophe in the same drawer as the weather; the flattening is deliberate and it begins the poem's account of evenness. Agama-apayinah, coming-and-going, is the entire reason offered. Nothing about them is denied except permanence.",
+   "commentary_hi": "'तितिक्षस्व', सह जा — काव्य का पहला निर्देश जो न 'उठ खड़ा हो' है, न 'समझ ले'। वह संवेदना पर विजय नहीं, उसके प्रति धैर्य माँगता है। देखें कि कृष्ण शीत और ताप को सुख और पीड़ा के साथ एक ही खाँचे में रखते हैं, एक नैतिक विपत्ति को मौसम के साथ; यह समतल करना जान-बूझकर है और यहीं से काव्य का समत्व-विवेचन आरम्भ होता है। 'आगमापायिनः', आना-जाना, दिया गया पूरा कारण है। उनके विषय में स्थायित्व के अतिरिक्त किसी बात का खण्डन नहीं किया गया।"
+  },
+  {
+   "id": 62,
+   "number": "2.15",
+   "body_en": "The man these do not shake, bull among men, who stays level in comfort and in hurt, that steady one becomes fit for what does not die.",
+   "body_hi": "जिस पुरुष को ये हिला नहीं पाते, पुरुषर्षभ, जो सुख में और पीड़ा में सम बना रहता है, वही धीर उसके योग्य हो जाता है जो मरता नहीं।",
+   "commentary_en": "Kalpate — becomes fit for, becomes suited to. Not achieves, not earns. Krishna is describing a qualification rather than a reward, and that is a different economy altogether: evenness does not purchase the deathless, it makes a man the kind of thing the deathless can happen to. Sama-dukkha-sukham, level in hurt and comfort, is offered as a description of a person rather than a technique. The poem has not yet said how anybody gets there.",
+   "commentary_hi": "'कल्पते' — योग्य हो जाता है, अनुकूल पड़ जाता है। पा लेता नहीं, कमा लेता नहीं। कृष्ण पुरस्कार का नहीं, पात्रता का वर्णन कर रहे हैं, और यह सर्वथा दूसरी अर्थव्यवस्था है: समत्व अमृत को खरीदता नहीं, वह मनुष्य को वह वस्तु बना देता है जिस पर अमृत घट सकता है। 'समदुःखसुखम्', पीड़ा और सुख में सम, एक व्यक्ति का वर्णन है, कोई विधि नहीं। काव्य ने अभी यह कहा ही नहीं कि वहाँ कोई पहुँचता कैसे है।"
+  },
+  {
+   "id": 63,
+   "number": "2.16",
+   "body_en": "What is not does not come into being; what is does not fall out of being. Those who see into things have found where the boundary between the two lies.",
+   "body_hi": "जो नहीं है, वह होने में आता नहीं; जो है, वह होने से गिरता नहीं। तत्त्व में पैठकर देखने वालों ने वह सीमा पा ली है जो इन दोनों के बीच है।",
+   "commentary_en": "The verse states the poem's whole ontology in eleven Sanskrit words, and it is worth noticing how little it claims. Not that the world is unreal, but that being and non-being do not convert into one another. Everything else follows: if the self is, it cannot stop being, and no arrow alters the census of what exists. Antah is boundary, limit — the tattva-darshinah have located the line, and the entirety of Arjuna's grief lies on one side of it.",
+   "commentary_hi": "श्लोक ग्यारह संस्कृत शब्दों में काव्य की पूरी सत्ता-मीमांसा रख देता है, और देखने योग्य यह है कि वह कितना कम दावा करता है। यह नहीं कि जगत् मिथ्या है, बल्कि यह कि सत् और असत् एक-दूसरे में बदलते नहीं। शेष सब इससे निकलता है: यदि आत्मा है, तो वह होना बन्द नहीं कर सकती, और जो है उसकी गणना कोई बाण बदलता नहीं। 'अन्तः' सीमा है, हद — 'तत्त्वदर्शिनः' ने वह रेखा पा ली है, और अर्जुन का सम्पूर्ण शोक उसके एक ही ओर पड़ा है।"
+  },
+  {
+   "id": 64,
+   "number": "2.17",
+   "body_en": "Know as beyond destroying that by which all of this is stretched out. Of this unspent thing, nobody is in a position to bring about the end.",
+   "body_hi": "जिससे यह सब तना हुआ है, उसे नष्ट होने से परे जान। इस अव्यय के अन्त को कर सकने की स्थिति में कोई नहीं है।",
+   "commentary_en": "Na kashchit kartum arhati — nobody is entitled to, nobody is competent to. It is the same construction Arjuna used in chapter one when he said we are not fit to kill, now turned back on him: he claimed he had no standing to destroy his family, and Krishna answers that he has no standing to destroy anything whatever. The refusal and the reassurance share a grammar. What was a moral disqualification has become a metaphysical one.",
+   "commentary_hi": "'न कश्चित् कर्तुमर्हति' — कोई अधिकारी नहीं, कोई समर्थ नहीं। यह वही रचना है जो अर्जुन ने पहले अध्याय में प्रयोग की थी जब उसने कहा कि हम मारने के योग्य नहीं — अब वही उस पर लौट आई है: उसने कहा था कि अपने कुल को नष्ट करने का हक़ उसके पास नहीं, और कृष्ण उत्तर देते हैं कि किसी भी वस्तु को नष्ट करने का हक़ उसके पास नहीं है। इनकार और आश्वासन एक ही व्याकरण साझा करते हैं। जो नैतिक अपात्रता थी, वह तात्त्विक अपात्रता बन गई है।"
+  },
+  {
+   "id": 65,
+   "number": "2.18",
+   "body_en": "These bodies are said to have an end; the one who wears them lasts, does not die, is beyond taking the measure of. So fight, Bharata.",
+   "body_hi": "इन देहों का अन्त कहा गया है; जो इन्हें पहनता है, वह टिकता है, मरता नहीं, नाप में आता नहीं। इसलिए लड़, भारत।",
+   "commentary_en": "Tasmad yudhyasva — therefore fight. It is the first time the conclusion surfaces, and it lands with a force that has troubled readers for two thousand years: does the indestructibility of the self license killing? The answer the poem develops over its remaining sixteen chapters is that it licenses nothing and excuses nothing; what it removes is the particular horror Arjuna named, that he would be annihilating people. Aprameyasya, beyond measuring, is the operative word. What cannot be measured cannot be subtracted from.",
+   "commentary_hi": "'तस्माद् युध्यस्व' — इसलिए लड़। निष्कर्ष पहली बार सतह पर आता है, और वह उस बल से आता है जिसने दो हज़ार वर्ष पाठकों को बेचैन रखा है: क्या आत्मा का अविनाशी होना वध की छूट देता है? शेष सोलह अध्यायों में काव्य जो उत्तर गढ़ता है, वह यह है कि इससे न कोई छूट मिलती है, न कोई बहाना; इससे केवल वह विशेष त्रास हटता है जिसे अर्जुन ने नाम दिया था — कि वह लोगों को मिटा देगा। 'अप्रमेयस्य', नाप से परे, वही काम करने वाला शब्द है। जो नापा न जा सके, उसमें से घटाया नहीं जा सकता।"
+  },
+  {
+   "id": 66,
+   "number": "2.19",
+   "body_en": "One who takes this for a killer, and one who takes it for something killed — neither of them knows. This does not kill, and it is not killed.",
+   "body_hi": "जो इसे मारने वाला मान लेता है, और जो इसे मारा गया मान लेता है — दोनों में से कोई नहीं जानता। यह मारता नहीं, और यह मारा जाता नहीं।",
+   "commentary_en": "Both are wrong, and the symmetry is the point. Arjuna's error is not that he underrates his own power but that he holds the wrong category at both ends of the act; he thinks of himself as an agent of annihilation and of them as its objects, and the verse dissolves both roles at once. Ubhau tau na vijanitah, neither of the two understands. Note that Krishna does not say the killing will not take place. He says nobody involved in it is what Arjuna takes them to be.",
+   "commentary_hi": "दोनों ग़लत हैं, और यही सन्तुलन मुद्दा है। अर्जुन की भूल यह नहीं कि वह अपनी शक्ति कम आँकता है, बल्कि यह कि वह कर्म के दोनों छोरों पर ग़लत कोटि थामे है; वह स्वयं को मिटाने वाला मानता है और उन्हें मिटाई जाने वाली वस्तु — और श्लोक दोनों भूमिकाएँ एक ही साथ घोल देता है। 'उभौ तौ न विजानीतः', दोनों में से कोई नहीं समझता। ध्यान दें, कृष्ण यह नहीं कहते कि मारकाट होगी नहीं। वे कहते हैं कि उसमें शामिल कोई भी वह नहीं है जो अर्जुन उसे समझ रहा है।"
+  },
+  {
+   "id": 67,
+   "number": "2.20",
+   "body_en": "It is not born and it does not ever die; it has not been and will not be over again. Unborn, lasting, perpetual, from of old — when the body is killed, this is not killed.",
+   "body_hi": "यह जन्मता नहीं और कभी मरता भी नहीं; यह हुआ नहीं और फिर से होगा भी नहीं। अजन्मा, नित्य, शाश्वत, आदि से चला आया — देह के मारे जाने पर यह मारा नहीं जाता।",
+   "commentary_en": "Six adjectives piled onto one subject, each closing a different door. The verse's real work happens in na bhutva bhavita va na bhuyah, which denies even the story of coming into existence and going out of it — the self has no history, and so cannot have an ending. Note the last clause, hanyamane sharire: while the body is being killed. Krishna is not denying the killing. He grants it in the same sentence, and locates it entirely on one side of the line drawn four verses ago.",
+   "commentary_hi": "एक ही विषय पर छह विशेषण लदे हैं, हर एक कोई दूसरा द्वार बन्द करता है। श्लोक का असली काम 'न भूत्वा भविता वा न भूयः' में होता है, जो होने में आने और होने से जाने की कथा तक का खण्डन कर देता है — आत्मा का कोई इतिहास नहीं, इसलिए उसका कोई अन्त भी नहीं हो सकता। अन्तिम वाक्यांश देखें, 'हन्यमाने शरीरे': जब देह मारी जा रही हो। कृष्ण मारकाट का खण्डन नहीं कर रहे। वे उसे उसी वाक्य में स्वीकार करते हैं, और उसे पूरी तरह उस रेखा के एक ओर रख देते हैं जो चार श्लोक पहले खींची गई थी।"
+  },
+  {
+   "id": 68,
+   "number": "2.21",
+   "body_en": "The man who has understood this as beyond destroying, lasting, unborn, unspent — whom does he get killed, Partha? Whom does he kill?",
+   "body_hi": "जिस पुरुष ने इसे नष्ट होने से परे, नित्य, अजन्मा, अव्यय जान लिया — वह किसे मरवाता है, पार्थ? किसे मारता है?",
+   "commentary_en": "The teaching arrives as two questions, which is how the Gita usually delivers its sharpest turns. And notice the pair of verbs: ghatayati and hanti, causes to be killed and kills. Arjuna is an archer who also commands an army, so both belong to him. The verse takes away the object of each. What it does not take away is the doing — Krishna nowhere says the arrows will stay in the quiver, only that the man who understands is not the annihilator he imagines he is becoming.",
+   "commentary_hi": "उपदेश दो प्रश्नों के रूप में आता है, और गीता अपने तीखे मोड़ अकसर इसी तरह देती है। और क्रियाओं की जोड़ी देखें: 'घातयति' और 'हन्ति', मरवाता है और मारता है। अर्जुन धनुर्धर है और सेना का नायक भी, सो दोनों उसी के हैं। श्लोक दोनों का कर्म-पद छीन लेता है। जो वह नहीं छीनता, वह करना है — कृष्ण कहीं नहीं कहते कि बाण तरकश में ही रह जाएँगे, इतना ही कहते हैं कि जो समझ गया है, वह वह मिटाने वाला नहीं है जो वह अपने को बनता समझ रहा है।"
+  },
+  {
+   "id": 69,
+   "number": "2.22",
+   "body_en": "As a man leaves clothes that have worn through and takes up others that are new, so the one who dwells in the body leaves worn bodies and enters others.",
+   "body_hi": "जैसे मनुष्य फट चुके कपड़े छोड़कर दूसरे नए ले लेता है, वैसे ही देह में बसने वाला घिसी देहें छोड़कर दूसरी में चला जाता है।",
+   "commentary_en": "The most domestic image in the Gita, and its ordinariness is precisely the argument. Changing clothes is not a loss, not a crisis, not an occasion for anything at all; it is a Tuesday. Krishna has taken the event Arjuna cannot bring himself to look at and set it in the register of household routine. Note jirnani, worn through, threadbare — the analogy quietly grants that bodies wear out, that age is real, that something does come to an end. It relocates the ending rather than denying it.",
+   "commentary_hi": "गीता का सबसे गृहस्थ चित्र, और उसका साधारण होना ही तर्क है। कपड़े बदलना कोई हानि नहीं, कोई संकट नहीं, किसी बात का अवसर नहीं; वह एक मंगलवार है। अर्जुन जिस घटना की ओर देख नहीं पाता, कृष्ण उसे घर के रोज़मर्रा के स्वर में रख देते हैं। 'जीर्णानि' देखें, फटा हुआ, घिसा हुआ — उपमा चुपचाप मान लेती है कि देहें घिसती हैं, कि आयु सच है, कि कुछ अन्त को आता है। वह अन्त का खण्डन नहीं करती, उसकी जगह बदल देती है।"
+  },
+  {
+   "id": 70,
+   "number": "2.23",
+   "body_en": "Weapons do not cut this; nor does fire burn it, nor water soak it, nor wind dry it.",
+   "body_hi": "इसे शस्त्र काटते नहीं; न आग इसे जलाती है, न जल भिगोता है, न वायु सुखाती है।",
+   "commentary_en": "Four elements, four denials, and the first of them is weapons. Krishna is answering the specific object in Arjuna's hand. The verse works by rhythm as much as by claim; it is built to be held in memory, and it is among the best-known lines in the poem. Worth noticing that all four verbs are ordinary and physical — cutting, burning, soaking, drying. The argument is not that the self is shielded from these forces but that it is not the sort of thing they apply to.",
+   "commentary_hi": "चार तत्त्व, चार निषेध — और उनमें पहला शस्त्र है। कृष्ण अर्जुन के हाथ में पड़ी उसी वस्तु का उत्तर दे रहे हैं। श्लोक दावे से जितना, लय से भी उतना ही काम करता है; वह स्मृति में थमने के लिए गढ़ा गया है, और काव्य की सर्वाधिक जानी पंक्तियों में है। देखने योग्य यह है कि चारों क्रियाएँ साधारण और भौतिक हैं — काटना, जलाना, भिगोना, सुखाना। तर्क यह नहीं कि आत्मा इन बलों से बचाई गई है, बल्कि यह कि वह उस प्रकार की वस्तु ही नहीं जिस पर ये लागू हों।"
+  },
+  {
+   "id": 71,
+   "number": "2.24",
+   "body_en": "This cannot be cut, cannot be burned, cannot be soaked, cannot be dried at all. Lasting, present throughout, planted, unmoving, from the beginning.",
+   "body_hi": "यह काटा नहीं जा सकता, जलाया नहीं जा सकता, भिगोया नहीं जा सकता, सुखाया तो जा ही नहीं सकता। नित्य, सर्वत्र उपस्थित, गड़ा हुआ, अचल, आदि से।",
+   "commentary_en": "The previous verse said what does not happen to it; this one turns each of those into a property of the thing itself. The grammar moves from verbs to adjectives, from events to nature, and the effect is to shift the claim from happenstance to necessity. Sthanu, a post or a tree-stump, is the odd item in the list — a homely image of fixity dropped in among abstractions. Krishna is describing something that does not move at all, to a man who cannot keep still.",
+   "commentary_hi": "पिछला श्लोक कहता था कि इस पर क्या नहीं घटता; यह उनमें से हर एक को उसी वस्तु का गुण बना देता है। व्याकरण क्रियाओं से विशेषणों की ओर जाता है, घटनाओं से स्वभाव की ओर, और इससे दावा संयोग से हटकर अनिवार्यता पर आ जाता है। 'स्थाणु', खूँटा या ठूँठ, सूची में विचित्र वस्तु है — अमूर्त शब्दों के बीच गिरा दृढ़ता का एक घरेलू चित्र। कृष्ण एक ऐसी वस्तु का वर्णन कर रहे हैं जो हिलती ही नहीं — उस मनुष्य से, जो स्थिर नहीं रह पाता।"
+  },
+  {
+   "id": 72,
+   "number": "2.25",
+   "body_en": "It is called unshown, past thinking, not liable to alteration. Knowing it for that, you have no standing to mourn.",
+   "body_hi": "इसे अव्यक्त कहा गया है, सोच से परे, बदलाव में न आने वाला। इसे ऐसा जानकर शोक करने का हक़ तेरे पास नहीं है।",
+   "commentary_en": "Three more negations, and this time they concern the limits of the mind rather than of the elements: avyakta, what does not come into view; achintya, what thought cannot get around; avikarya, what does not undergo alteration. Note uchyate, is called — Krishna marks this one as received description rather than his own assertion, the only place in the sequence he does so. Then the conclusion: not do not mourn, but you are not entitled to. Grief is being refused a licence, not a feeling.",
+   "commentary_hi": "तीन और निषेध, और इस बार वे तत्त्वों की नहीं, मन की सीमाओं से जुड़े हैं: 'अव्यक्त', जो दृष्टि में आता नहीं; 'अचिन्त्य', जिसके चारों ओर विचार घूम नहीं पाता; 'अविकार्य', जो विकार में पड़ता नहीं। 'उच्यते' देखें, कहा जाता है — कृष्ण इसे अपने कथन के बजाय परम्परा से मिला वर्णन बताकर अंकित करते हैं, और इस पूरी श्रृंखला में केवल यहीं ऐसा करते हैं। फिर निष्कर्ष: 'शोक न कर' नहीं, बल्कि 'तेरा हक़ नहीं है'। शोक से अनुमति छीनी जा रही है, अनुभव नहीं।"
+  },
+  {
+   "id": 73,
+   "number": "2.26",
+   "body_en": "And suppose you take it to be forever being born, or forever dying — even then, mighty-armed, you have no standing to grieve like this.",
+   "body_hi": "और मान ले कि तू इसे सदा जन्मता या सदा मरता हुआ मानता है — तब भी, महाबाहो, इस तरह शोक करने का हक़ तेरे पास नहीं है।",
+   "commentary_en": "Krishna concedes the opposite premise. Suppose the self is not permanent at all; suppose it is born and dies with nothing left over. The argument still goes through, because what is constantly beginning and ending is even less worth mourning than what never does. This is the poem at its most rigorous: it does not need you to accept its metaphysics in order to reach its conclusion. Tathapi, even then. Two incompatible pictures of death, one instruction.",
+   "commentary_hi": "कृष्ण उलटा पक्ष स्वीकार कर लेते हैं। मान लो आत्मा नित्य ही नहीं है; मान लो वह जन्मती और मरती है और पीछे कुछ बचता नहीं। तर्क तब भी चल जाता है, क्योंकि जो निरन्तर आरम्भ और अन्त में पड़ता है, वह उससे भी कम शोक योग्य है जो कभी नहीं पड़ता। काव्य यहाँ अपने कठोरतम रूप में है: निष्कर्ष तक पहुँचने के लिए उसे आपसे अपनी तत्त्व-मीमांसा मनवानी नहीं पड़ती। 'तथापि', तब भी। मृत्यु के दो असंगत चित्र, निर्देश एक।"
+  },
+  {
+   "id": 74,
+   "number": "2.27",
+   "body_en": "For whatever is born, death is fixed; and for whatever has died, birth is fixed. So over a matter that admits of no getting around, you have no standing to grieve.",
+   "body_hi": "जो जन्मता है, उसके लिए मृत्यु तय है; और जो मर चुका, उसके लिए जन्म तय है। सो जिस बात से बचा नहीं जा सकता, उस पर शोक करने का हक़ तेरे पास नहीं है।",
+   "commentary_en": "Dhruva, fixed, immovable — the word used for the pole star. Birth and death are described as each other's certainty, a closed circuit with nothing outside it. Then aparihārye 'rthe, in a matter that cannot be got around, and the argument shifts from metaphysics to something plainer and much harder to answer: grief over the unavoidable is grief spent on nothing. Note that Krishna does not say the grief is wrong. He says it has no object it could affect.",
+   "commentary_hi": "'ध्रुव', तय, अटल — वही शब्द जो ध्रुवतारे का है। जन्म और मृत्यु को एक-दूसरे की निश्चितता बताया गया है, एक बन्द वृत्त जिसके बाहर कुछ नहीं। फिर 'अपरिहार्येऽर्थे', जिस बात से बचा न जा सके — और तर्क तत्त्व-मीमांसा से हटकर कहीं अधिक सीधी और अधिक कठिन बात पर आ जाता है: जो टल ही नहीं सकता, उस पर किया शोक शून्य पर खर्च होता है। ध्यान दें, कृष्ण यह नहीं कहते कि शोक ग़लत है। वे कहते हैं कि उसका कोई ऐसा विषय नहीं जिस पर उसका असर पड़े।"
+  },
+  {
+   "id": 75,
+   "number": "2.28",
+   "body_en": "Beings start out unshown, are shown in the middle, Bharata, and finish unshown. What is there in that to set up a lament over?",
+   "body_hi": "प्राणी अव्यक्त से चलते हैं, बीच में व्यक्त होते हैं, भारत, और अव्यक्त में ही चुक जाते हैं। इसमें विलाप ठानने जैसा क्या है?",
+   "commentary_en": "A life described as an interval of visibility between two invisibilities. Avyakta bookends the verse and vyakta sits in the middle, so the sentence's own shape is a diagram of what it says. Paridevana is not quiet sorrow but lamentation, the noise made over a body. Krishna's question is a real question: given a shape like that, what exactly is the wailing about? He leaves it unanswered, and the silence does its own work.",
+   "commentary_hi": "जीवन को दो अदृश्यताओं के बीच दिखाई देने के अन्तराल की तरह रखा गया है। 'अव्यक्त' श्लोक के दोनों सिरों पर है और 'व्यक्त' बीच में बैठा है, सो वाक्य का आकार ही उसके कथन का नक्शा बन जाता है। 'परिदेवना' चुप्पा दुख नहीं, विलाप है — वह शोर जो देह के ऊपर मचाया जाता है। कृष्ण का प्रश्न वास्तव में प्रश्न है: ऐसे आकार को देखते हुए, विलाप ठीक किस बात पर है? वे उसे अनुत्तरित छोड़ देते हैं, और वह मौन अपना काम करता है।"
+  },
+  {
+   "id": 76,
+   "number": "2.29",
+   "body_en": "One man sees it and it is a marvel; another speaks of it and it is a marvel; another hears of it and it is a marvel — and even after the hearing, not one of them knows it.",
+   "body_hi": "कोई इसे देखता है और वह अचरज है; कोई इसकी बात करता है और वह अचरज है; कोई इसे सुनता है और वह अचरज है — और सुन लेने पर भी इनमें से एक भी इसे जानता नहीं।",
+   "commentary_en": "The metre changes here — the verse is in the longer trishtubh, and the shift is audible after twenty-eight shlokas of even measure. Ashcharyavat lands four times, and on the fourth it collapses: seeing, speaking and hearing all end in na cha eva kashchit, not one, nobody at all. Krishna has just spent seventeen verses explaining the self, and now says the explanation does not transmit. It is the most sceptical moment in the chapter, and the teacher aims it at his own teaching.",
+   "commentary_hi": "यहाँ छन्द बदल जाता है — श्लोक लम्बे त्रिष्टुभ में है, और अट्ठाईस समान श्लोकों के बाद यह बदलाव सुनाई देता है। 'आश्चर्यवत्' चार बार गिरता है, और चौथी बार वह ढह जाता है: देखना, कहना और सुनना — सब 'न चैव कश्चित्' पर जाकर रुकते हैं, एक भी नहीं, कोई नहीं। कृष्ण ने अभी सत्रह श्लोक आत्मा को समझाने में लगाए हैं, और अब कहते हैं कि समझाना हस्तान्तरित नहीं होता। यह अध्याय का सर्वाधिक सन्देहशील क्षण है, और गुरु उसे अपने ही उपदेश पर ताने हुए है।"
+  },
+  {
+   "id": 77,
+   "number": "2.30",
+   "body_en": "The one who dwells in the body can never be slain, and in the body of anyone at all, Bharata. So there is no being anywhere you have standing to grieve for.",
+   "body_hi": "देह में बसने वाला कभी वध्य नहीं, और किसी की भी देह में नहीं, भारत। सो कोई भी प्राणी ऐसा नहीं जिसके लिए शोक करने का हक़ तेरे पास हो।",
+   "commentary_en": "The teaching closes by widening. Until now the argument has been about Bhishma and Drona and the men drawn up in front of him; sarvasya, of everyone, and sarvani bhutani, all beings, carry it past this battlefield altogether. What began as consolation for one man's particular horror ends as a general claim about every death there has ever been. Note that this is the third time in six verses that Krishna says shochitum arhasi. He has stopped adding reasons. He is closing.",
+   "commentary_hi": "उपदेश फैलकर बन्द होता है। अब तक तर्क भीष्म और द्रोण और सामने पंक्ति बाँधे खड़े पुरुषों के विषय में था; 'सर्वस्य', सबका, और 'सर्वाणि भूतानि', सारे प्राणी, उसे इस रणभूमि से पूरा बाहर ले जाते हैं। जो एक मनुष्य के विशेष त्रास की सान्त्वना के रूप में आरम्भ हुआ था, वह अब तक हुई हर मृत्यु के विषय में सामान्य दावा बनकर समाप्त होता है। ध्यान दें, छह श्लोकों में यह तीसरी बार है जब कृष्ण 'शोचितुमर्हसि' कहते हैं। उन्होंने कारण जोड़ना बन्द कर दिया है। वे समाप्त कर रहे हैं।"
+  },
+  {
+   "id": 78,
+   "number": "2.31",
+   "body_en": "And looking to your own duty, you have no standing to shake. For a kshatriya there is nothing better to be had than a fight that duty asks for.",
+   "body_hi": "और अपने धर्म को देखते हुए भी काँपने का हक़ तेरे पास नहीं है। क्षत्रिय के लिए उस लड़ाई से भला कुछ नहीं जो धर्म माँगता है।",
+   "commentary_en": "The register changes completely. Everything from verse 11 to verse 30 was metaphysics; this is social role, and Krishna moves to it with no transition at all. Svadharma, one's own duty, is the word that will carry the rest of the poem. Note vikampitum, to tremble or waver — not do not refuse but do not shake, which describes Arjuna's body in chapter one rather than his argument. And the claim is bounded: dharmyad yuddhat, a fight that is dharmya. Not any fight.",
+   "commentary_hi": "स्वर पूरा बदल जाता है। ग्यारहवें से तीसवें श्लोक तक सब तत्त्व-मीमांसा थी; यह सामाजिक भूमिका है, और कृष्ण बिना किसी सन्धि के उस पर आ जाते हैं। 'स्वधर्म', अपना धर्म, वही शब्द है जो शेष काव्य को उठाए रहेगा। 'विकम्पितुम्' देखें, काँपना या डिगना — 'इनकार न कर' नहीं, 'काँप मत', और यह अर्जुन के तर्क का नहीं, पहले अध्याय की उसकी देह का वर्णन है। और दावा सीमित है: 'धर्म्याद् युद्धात्', वह लड़ाई जो धर्म्य है। कोई भी लड़ाई नहीं।"
+  },
+  {
+   "id": 79,
+   "number": "2.32",
+   "body_en": "Come upon unsought, a door to heaven left standing open: lucky are the kshatriyas, Partha, who get a fight of this kind.",
+   "body_hi": "बिना खोजे आ पड़ा, स्वर्ग का द्वार खुला छूटा हुआ: भाग्यवान हैं वे क्षत्रिय, पार्थ, जिन्हें इस तरह की लड़ाई मिल जाती है।",
+   "commentary_en": "The verse is uncomfortable and is meant to be heard as the voice of the warrior order rather than as the poem's final teaching — the Gita will spend chapter after chapter dismantling exactly this economy of act-for-reward. Note yadrichchhaya, by chance, unsought: the one thing Arjuna cannot honestly say about a war his family spent thirteen years arranging. And sukhinah, the lucky ones. It is close to the last argument from advantage Krishna will make.",
+   "commentary_hi": "श्लोक असुविधाजनक है और उसे काव्य के अन्तिम उपदेश के बजाय क्षत्रिय-व्यवस्था की आवाज़ के रूप में सुना जाना चाहिए — गीता अध्याय दर अध्याय ठीक इसी 'कर्म के बदले फल' की अर्थव्यवस्था को खोलती जाएगी। 'यदृच्छया' देखें, संयोग से, बिना खोजे: वही एक बात जो अर्जुन ईमानदारी से उस युद्ध के विषय में नहीं कह सकता जिसे उसके कुल ने तेरह वर्ष लगाकर जुटाया है। और 'सुखिनः', भाग्यवान। लाभ से किया गया तर्क कृष्ण अब लगभग अन्तिम बार कर रहे हैं।"
+  },
+  {
+   "id": 80,
+   "number": "2.33",
+   "body_en": "And if you will not take up this fight that duty asks for, then, with your own duty and your good name thrown away, what you come by is wrong.",
+   "body_hi": "और यदि तू धर्म की माँगी हुई इस लड़ाई को नहीं उठाएगा, तो अपना धर्म और अपना नाम फेंककर जो तुझे मिलेगा, वह पाप है।",
+   "commentary_en": "The argument turns from what he stands to gain to what he stands to lose, and notice the order: svadharma first, kirti second. Duty and reputation are treated as of a piece, which is how Arjuna's world actually works and which the poem will later prise apart. Papam avapsyasi, you will come by evil — the same construction used for coming by heaven two verses earlier. Krishna is offering symmetrical outcomes to the man who told him in 2.6 that he could no longer tell outcomes apart.",
+   "commentary_hi": "तर्क इस बात से मुड़ता है कि उसे क्या मिलेगा, इस बात पर कि वह क्या खोएगा — और क्रम देखें: पहले 'स्वधर्म', फिर 'कीर्ति'। धर्म और प्रतिष्ठा को एक ही कपड़े का माना गया है, और अर्जुन का संसार वास्तव में इसी तरह चलता है, जिसे काव्य आगे अलग-अलग खोलेगा। 'पापमवाप्स्यसि', तुझे पाप मिलेगा — वही रचना जो दो श्लोक पहले स्वर्ग मिलने के लिए बरती गई थी। कृष्ण उस मनुष्य के सामने सन्तुलित परिणाम रख रहे हैं जिसने 2.6 में कहा था कि उसे परिणामों में भेद ही नहीं दिखता।"
+  },
+  {
+   "id": 81,
+   "number": "2.34",
+   "body_en": "And people will tell of your disgrace, and it will not wear out. For a man who has been held in regard, disgrace weighs heavier than dying.",
+   "body_hi": "और लोग तेरी बदनामी सुनाएँगे, और वह घिसेगी नहीं। जिस मनुष्य को आदर मिला हो, उसके लिए बदनामी मरने से भारी पड़ती है।",
+   "commentary_en": "Avyayam, unspent — the same word used four verses earlier for the imperishable self, now fastened to a bad reputation. The reuse is deliberate and bleak: what turns out to outlast you is not what you were hoping for. And sambhavitasya, of one who has been esteemed, is precise about whom this argument works on. Krishna is not claiming disgrace is objectively worse than death; he is saying it is worse for this man, who has spent his life being the finest archer alive.",
+   "commentary_hi": "'अव्ययाम्', न चुकने वाली — वही शब्द जो चार श्लोक पहले अविनाशी आत्मा के लिए आया था, अब बदनामी से बाँध दिया गया है। यह दोहराव जान-बूझकर है और निर्मम है: जो आपके बाद टिकता है, वह वह नहीं निकलता जिसकी आपने आशा की थी। और 'सम्भावितस्य', जिसे आदर मिला हो, इस बात में सटीक है कि यह तर्क किस पर चलता है। कृष्ण यह दावा नहीं कर रहे कि बदनामी वस्तुतः मृत्यु से बुरी है; वे कह रहे हैं कि इस मनुष्य के लिए बुरी है, जिसने अपना जीवन जीवित श्रेष्ठतम धनुर्धर होने में बिताया है।"
+  },
+  {
+   "id": 82,
+   "number": "2.35",
+   "body_en": "The great chariot-warriors will take you for a man who left the field out of fear, and in the eyes that once rated you highly you will come to weigh nothing.",
+   "body_hi": "बड़े महारथी तुझे वह मानेंगे जो डर के कारण मैदान छोड़ गया, और जिन आँखों ने तुझे ऊँचा आँका था, उनमें तेरा भार कुछ न रहेगा।",
+   "commentary_en": "Laghavam, lightness — and there is no compliment anywhere in it. Arjuna will become light, weightless, a man of no consequence, in exactly the eyes whose opinion he cares about. Note the mechanism Krishna identifies: not that Arjuna is afraid, but that he will be taken for afraid, bhayad ranad uparatam. The poem is being precise about the gap between what a refusal is and what a refusal looks like, and about how little that gap protects anyone.",
+   "commentary_hi": "'लाघवम्', हल्कापन — और उसमें कहीं कोई प्रशंसा नहीं। अर्जुन हल्का हो जाएगा, भारहीन, बेमानी — ठीक उन आँखों में जिनकी राय की उसे परवाह है। कृष्ण जो तन्त्र पकड़ते हैं, उसे देखें: बात यह नहीं कि अर्जुन डरा हुआ है, बात यह है कि उसे डरा हुआ मान लिया जाएगा, 'भयाद् रणादुपरतम्'। काव्य इस अन्तर के विषय में सटीक है कि इनकार क्या है और इनकार कैसा दिखता है — और इस विषय में भी कि वह अन्तर किसी को कितना कम बचाता है।"
+  },
+  {
+   "id": 83,
+   "number": "2.36",
+   "body_en": "Those who wish you ill will say a great deal that ought not to be said, running down what you are capable of. What is there that hurts worse than that?",
+   "body_hi": "जो तेरा बुरा चाहते हैं, वे बहुत कुछ कहेंगे जो कहा नहीं जाना चाहिए, तेरी सामर्थ्य को नीचा दिखाते हुए। इससे बुरा चुभने वाला और क्या है?",
+   "commentary_en": "The insult Krishna picks out is specific: nindantas tava samarthyam, disparaging your competence. Not your courage, not your honour — your ability. For a man whose whole identity is skill with a bow, that is the exact place to press. And dukkhataram nu kim, what is more painful than this, is put as a rhetorical question with an obvious answer that Krishna is choosing not to hear: quite a number of things, including everything Arjuna described in chapter one.",
+   "commentary_hi": "कृष्ण जो अपमान चुनते हैं, वह निश्चित है: 'निन्दन्तस्तव सामर्थ्यम्', तेरी सामर्थ्य की निन्दा करते हुए। तेरा साहस नहीं, तेरा सम्मान नहीं — तेरी क्षमता। जिस मनुष्य की पूरी पहचान धनुष के कौशल में है, उसके लिए दबाने की ठीक जगह यही है। और 'दुःखतरं नु किम्', इससे अधिक पीड़ादायक क्या है, एक ऐसे आलंकारिक प्रश्न की तरह रखा गया है जिसका स्पष्ट उत्तर कृष्ण सुनना नहीं चुन रहे: बहुत-सी वस्तुएँ, जिनमें वह सब है जो अर्जुन ने पहले अध्याय में गिनाया था।"
+  },
+  {
+   "id": 84,
+   "number": "2.37",
+   "body_en": "Killed, you come into heaven; victorious, you have the earth to enjoy. So get up, Kaunteya, with your mind made up to fight.",
+   "body_hi": "मारा गया, तो स्वर्ग तेरा; जीत गया, तो पृथ्वी भोगने को तेरी। सो उठ खड़ा हो, कौन्तेय, मन बाँधकर लड़ने के लिए।",
+   "commentary_en": "The argument from advantage closes by making both outcomes wins, which is the exact inversion of 2.6, where Arjuna could not tell which outcome was worse. Krishna has answered the despair in its own currency. Uttishtha, get up — the same imperative as 2.3, returning now with reasons attached to it. And krita-nishchayah, having made the decision: Arjuna asked in 2.7 to be told nishchitam, for certain. The word comes back as something he must do rather than receive.",
+   "commentary_hi": "लाभ से किया तर्क दोनों परिणामों को जीत बनाकर बन्द होता है, और यह 2.6 का ठीक उलटा है, जहाँ अर्जुन बता नहीं पा रहा था कि कौन परिणाम बुरा है। कृष्ण ने निराशा का उत्तर उसी की मुद्रा में दिया है। 'उत्तिष्ठ', उठ खड़ा हो — वही आदेश जो 2.3 में था, अब कारणों के साथ लौटा हुआ। और 'कृतनिश्चयः', निश्चय कर लिए हुए: अर्जुन ने 2.7 में 'निश्चितम्' कहलवाने की माँग की थी। वही शब्द अब उसे मिलने वाली वस्तु के बजाय करने वाली वस्तु बनकर लौटता है।"
+  },
+  {
+   "id": 85,
+   "number": "2.38",
+   "body_en": "Make comfort and hurt one thing, gain and loss one thing, victory and defeat one thing; then yoke yourself to the fight, and no wrong will come to you.",
+   "body_hi": "सुख और पीड़ा को एक कर ले, लाभ और हानि को एक, जय और पराजय को एक; फिर स्वयं को लड़ाई से जोत दे, और तुझ पर पाप नहीं आएगा।",
+   "commentary_en": "Everything before this verse could be read as ordinary martial exhortation. Here the poem turns, because the instruction is no longer to want the good outcome but to stop sorting outcomes at all. Samam kritva, having made them equal: an act, something done, not a feeling that arrives. And note yujyasva, be yoked — the first appearance of the root that gives the next verse its subject and the whole poem its title. The reward argument was scaffolding. This is the building.",
+   "commentary_hi": "इस श्लोक से पहले का सब कुछ साधारण रणोत्साह की तरह पढ़ा जा सकता था। यहाँ काव्य मुड़ता है, क्योंकि निर्देश अब यह नहीं कि भला परिणाम चाहो, बल्कि यह कि परिणामों को छाँटना ही छोड़ दो। 'समं कृत्वा', उन्हें बराबर कर लेकर: एक कर्म, किया गया कुछ, कोई आ पड़ने वाली भावना नहीं। और 'युज्यस्व' देखें, जुत जा — उस धातु की पहली उपस्थिति जो अगले श्लोक को उसका विषय और पूरे काव्य को उसका नाम देती है। फल का तर्क ढाँचा था। भवन यह है।"
+  },
+  {
+   "id": 86,
+   "number": "2.39",
+   "body_en": "What has been set out for you so far is the understanding of Sankhya; now hear it as yoga. Held by that understanding, Partha, you will shed the bondage of action.",
+   "body_hi": "अब तक तेरे सामने जो रखा गया, वह सांख्य की बुद्धि है; अब उसे योग के रूप में सुन। उस बुद्धि से थमा हुआ, पार्थ, तू कर्म का बन्धन झाड़ देगा।",
+   "commentary_en": "Krishna names what he has been doing and announces a change of method. Sankhya here means the analysis just completed, the account of what is and is not destructible; yoga will mean a way of acting. That distinction organises the rest of the Gita. Karma-bandham, the bondage of action: the problem is stated for the first time not as death but as entanglement — that doing things ties a man to their results, and that this, rather than mortality, is what needs solving.",
+   "commentary_hi": "कृष्ण जो कर रहे थे उसे नाम देते हैं और विधि बदलने की घोषणा करते हैं। 'सांख्य' यहाँ अभी पूरा हुआ विश्लेषण है, वह लेखा कि क्या नष्ट होता है और क्या नहीं; 'योग' का अर्थ होगा कर्म करने की एक रीति। यही भेद शेष गीता को व्यवस्थित करता है। 'कर्मबन्धम्', कर्म का बन्धन: समस्या पहली बार मृत्यु के रूप में नहीं, उलझाव के रूप में रखी जाती है — कि करना मनुष्य को उसके फलों से बाँध देता है, और हल इसका चाहिए, मरणशीलता का नहीं।"
+  },
+  {
+   "id": 87,
+   "number": "2.40",
+   "body_en": "In this there is no start that goes to waste, and nothing runs backwards. Even a very little of this practice keeps a man safe from great fear.",
+   "body_hi": "इसमें कोई आरम्भ व्यर्थ नहीं जाता, और कुछ उलटा नहीं पड़ता। इस साधन का बहुत थोड़ा भी मनुष्य को बड़े भय से बचा लेता है।",
+   "commentary_en": "An unusual promise: partial credit. Abhikrama-nasha, the loss of an attempt once begun — Krishna says it does not happen here, which sets this path apart from ritual, where an imperfectly performed rite is void or worse. Pratyavaya is the technical term for that ritual backfire, and it is being explicitly ruled out. Svalpam api, even a very little. The verse is addressed to a man who has just been told to become equal-minded and must be wondering how far short of it he will fall.",
+   "commentary_hi": "एक असामान्य वचन: अधूरे का भी मान। 'अभिक्रमनाश', आरम्भ किए हुए प्रयत्न का नष्ट होना — कृष्ण कहते हैं कि यहाँ ऐसा होता नहीं, और यही इस मार्ग को कर्मकाण्ड से अलग करता है, जहाँ अधूरा किया अनुष्ठान निष्फल होता है या उससे भी बुरा। 'प्रत्यवाय' उस कर्मकाण्डीय उलटे असर का पारिभाषिक शब्द है, और उसे स्पष्ट रूप से बाहर किया जा रहा है। 'स्वल्पमपि', बहुत थोड़ा भी। श्लोक उस मनुष्य से कहा गया है जिसे अभी समबुद्धि होने को कहा गया है और जो अवश्य सोच रहा होगा कि वह उससे कितना पीछे रह जाएगा।"
+  },
+  {
+   "id": 88,
+   "number": "2.41",
+   "body_en": "Here the understanding that has resolve in it is one thing, son of Kuru. The understandings of the unresolved run out into branches without end.",
+   "body_hi": "यहाँ जिस बुद्धि में निश्चय है, वह एक ही है, कुरुनन्दन। जिनमें निश्चय नहीं, उनकी बुद्धियाँ अनन्त शाखाओं में फूट जाती हैं।",
+   "commentary_en": "Bahu-shakha, many-branched, and ananta, without end: the image is a tree that never stops dividing, which is a good picture of the state Arjuna was in when he stopped speaking. Vyavasaya is resolve, determination, the quality of having settled. Note that the contrast drawn is not between right and wrong understanding but between one and many. The fault of the unresolved mind is not error, it is proliferation — nothing need be wrong with any single branch.",
+   "commentary_hi": "'बहुशाखा', बहुत शाखाओं वाली, और 'अनन्त', अन्तहीन: चित्र एक ऐसे वृक्ष का है जो बँटना बन्द ही नहीं करता, और यह उस अवस्था का अच्छा चित्र है जिसमें अर्जुन बोलना बन्द करते समय था। 'व्यवसाय' निश्चय है, दृढ़ता, ठहर जाने का गुण। ध्यान दें, भेद ठीक और ग़लत बुद्धि के बीच नहीं, एक और अनेक के बीच खींचा गया है। अनिश्चित मन का दोष भूल नहीं, फैलाव है — किसी एक शाखा में कुछ ग़लत होना आवश्यक नहीं।"
+  },
+  {
+   "id": 89,
+   "number": "2.42",
+   "body_en": "The undiscerning speak a flowering sort of speech, Partha, taking their pleasure in the words of the Veda, insisting there is nothing besides —",
+   "body_hi": "अविवेकी एक फूली हुई तरह की वाणी बोलते हैं, पार्थ, वेद के वचनों में रस लेते हुए, यह अड़ते हुए कि इसके सिवा कुछ नहीं —",
+   "commentary_en": "Pushpitam, flowered, in blossom: a word for language that has put out ornament in place of fruit. The target is named exactly — veda-vada-ratah, those who delight in the words of scripture, and those who say na anyad asti, there is nothing else. The criticism is not of the Veda but of a way of reading it that takes the reward passages for the whole. Note that the sentence does not finish; it runs on into the next verse, and the overspill is itself part of what is being shown.",
+   "commentary_hi": "'पुष्पिताम्', फूली हुई, खिली हुई: उस भाषा का शब्द जिसने फल के स्थान पर अलंकार निकाल लिए हैं। निशाना ठीक-ठीक नामित है — 'वेदवादरताः', जो शास्त्र के वचनों में रमे हैं, और जो कहते हैं 'नान्यदस्ति', इसके अतिरिक्त कुछ नहीं। आलोचना वेद की नहीं, उसे पढ़ने की उस रीति की है जो फल-प्रकरणों को ही सब मान लेती है। ध्यान दें, वाक्य पूरा नहीं होता; वह अगले श्लोक में बह जाता है, और यह बह जाना ही दिखाई जा रही बात का हिस्सा है।"
+  },
+  {
+   "id": 90,
+   "number": "2.43",
+   "body_en": "— men made out of wanting, with heaven for their highest aim, speaking of what yields birth as the fruit of action, thick with particular rites, the whole of it pointed at getting pleasure and power.",
+   "body_hi": "— चाह से बने हुए मनुष्य, स्वर्ग को सबसे ऊँचा लक्ष्य मानने वाले, कर्म के फल के रूप में जन्म देने वाली बात कहने वाले, विशेष अनुष्ठानों से भरे, और यह सब भोग और ऐश्वर्य पाने पर ताना हुआ।",
+   "commentary_en": "Kriya-vishesha-bahulam, thick with specialised procedures: the complaint is about volume and detail, a religion of ever-finer technique aimed at ever-better outcomes. And janma-karma-phala-pradam carries the sting — what these rites yield is birth, another turn, which the chapter has just finished describing as the thing to be released from. Note kamatmanah, having desire for a self: not men who have wants but men who are constituted of them.",
+   "commentary_hi": "'क्रियाविशेषबहुलाम्', विशेष विधियों से ठसाठस: शिकायत मात्रा और बारीकी की है, एक ऐसा धर्म जो लगातार महीन होती तकनीक से लगातार बेहतर परिणामों पर ताना हुआ है। और 'जन्मकर्मफलप्रदाम्' में डंक है — ये अनुष्ठान जो देते हैं वह जन्म है, एक और चक्कर, जिसे अध्याय अभी उस वस्तु के रूप में बता चुका है जिससे छूटना है। 'कामात्मानः' देखें, जिनका आत्मा ही काम है: वे मनुष्य नहीं जिनमें चाहें हैं, बल्कि वे जो चाहों से ही बने हैं।"
+  },
+  {
+   "id": 91,
+   "number": "2.44",
+   "body_en": "For men fastened to pleasure and power, whose attention that kind of talk has carried off, the understanding that has resolve in it is not set down in samadhi.",
+   "body_hi": "जो मनुष्य भोग और ऐश्वर्य से चिपके हैं, जिनका ध्यान वैसी बात उठा ले गई है, उनकी वह बुद्धि जिसमें निश्चय हो, समाधि में बैठती नहीं।",
+   "commentary_en": "Apahrita-chetasam, their awareness stolen away: the flowering speech of the last two verses is described as a theft, and what it takes is attention. Note prasaktanam, stuck fast, attached in the adhesive sense. The verse completes a three-verse argument that never once claims the rites do not work — it says they work, and that what they produce is the very entanglement Arjuna needs releasing from. Resolve cannot be set down in a mind that has already been carried off.",
+   "commentary_hi": "'अपहृतचेतसाम्', जिनकी चेतना चुरा ली गई: पिछले दो श्लोकों की फूली वाणी को चोरी की तरह रखा गया है, और वह जो उठाती है, वह ध्यान है। 'प्रसक्तानाम्' देखें, कसकर चिपके, गोंद के अर्थ में लगे। श्लोक तीन श्लोकों के उस तर्क को पूरा करता है जो एक बार भी यह दावा नहीं करता कि अनुष्ठान काम नहीं करते — वह कहता है कि वे काम करते हैं, और जो वे उत्पन्न करते हैं वही उलझाव है जिससे अर्जुन को छूटना है। निश्चय उस मन में बैठ नहीं सकता जो पहले ही उठा लिया गया है।"
+  },
+  {
+   "id": 92,
+   "number": "2.45",
+   "body_en": "The Vedas have the three strands for their field; be free of the three strands, Arjuna. Free of the pairs, resting always in what is true, with no concern for getting and keeping, in possession of yourself.",
+   "body_hi": "वेदों का क्षेत्र तीन गुण हैं; तीनों गुणों से मुक्त हो जा, अर्जुन। द्वन्द्वों से मुक्त, सदा सत्त्व में ठहरा, पाने और बचाने की चिन्ता से रहित, अपने अधिकार में।",
+   "commentary_en": "Four negations in a row — nis, nir, nir, nir — and then a single positive: atmavan, having a self, self-possessed. The three gunas arrive here for the first time and will not be explained until chapter fourteen; Krishna uses the term long before defining it, as the poem often does. Niryoga-kshema is the sharpest phrase in the line: yoga-kshema is the ordinary business of acquiring and safeguarding, the entire content of a prudent life, and Arjuna is told to be without it.",
+   "commentary_hi": "लगातार चार निषेध — निस्, निर्, निर्, निर् — और फिर एक विधायक: 'आत्मवान्', आत्मा वाला, अपने अधिकार में। तीन गुण यहाँ पहली बार आते हैं और चौदहवें अध्याय तक समझाए नहीं जाएँगे; कृष्ण शब्द को परिभाषित करने से बहुत पहले बरतते हैं, जैसा काव्य बार-बार करता है। पंक्ति का तीखा पद 'निर्योगक्षेम' है: 'योगक्षेम' पाने और बचाने का साधारण कारोबार है, एक समझदार जीवन की पूरी अन्तर्वस्तु — और अर्जुन से कहा जा रहा है कि उसके बिना हो जा।"
+  },
+  {
+   "id": 93,
+   "number": "2.46",
+   "body_en": "Whatever use a water-tank is when there is flood water standing on every side — that is the use of all the Vedas to a brahmin who has understood.",
+   "body_hi": "जब चारों ओर बाढ़ का पानी खड़ा हो, तब तालाब का जितना काम है — उतना ही काम सारे वेदों का उस ब्राह्मण के लिए है जिसने जान लिया।",
+   "commentary_en": "The comparison is doing something careful. The tank is not condemned; it is simply redundant in a particular condition, and the condition is abundance rather than scarcity. Krishna is not saying scripture is worthless — he is saying it is a container, and that a man standing in water on all sides has no occasion to walk to one. Note vijanatah, of one who has understood: the redundancy is not general, it belongs to a state. To anyone not standing in the flood, the tank is still the water supply.",
+   "commentary_hi": "उपमा एक सावधान काम कर रही है। तालाब की निन्दा नहीं हो रही; वह एक विशेष दशा में केवल निरर्थक है, और वह दशा अभाव की नहीं, बहुतायत की है। कृष्ण यह नहीं कह रहे कि शास्त्र व्यर्थ है — वे कह रहे हैं कि वह एक पात्र है, और जो मनुष्य चारों ओर पानी में खड़ा है, उसके पास किसी पात्र तक चलकर जाने का अवसर नहीं। 'विजानतः' देखें, जिसने जान लिया: निरर्थकता सार्वत्रिक नहीं, वह एक अवस्था की है। जो बाढ़ में खड़ा नहीं, उसके लिए तालाब अब भी जल का स्रोत है।"
+  },
+  {
+   "id": 94,
+   "number": "2.47",
+   "body_en": "Your claim is on the doing, and at no time on the fruits. Do not become the one who acts for the fruit; and do not let not-acting be the thing you hold on to.",
+   "body_hi": "तेरा दावा करने पर है, फलों पर किसी भी समय नहीं। तू वह न बन जो फल के लिए करता है; और न करना भी वह न हो जिसे तू थामे रहे।",
+   "commentary_en": "The most quoted verse in the poem, and the second half is what usually gets dropped. Adhikara is a legal word — entitlement, jurisdiction, the standing to bring a claim. Arjuna has jurisdiction over what he does and none over what follows, which reframes results as another department's business rather than as things to be renounced. And the last clause shuts the escape: do not be attached to inaction. Not acting is not the way out, because it is one more thing to hold.",
+   "commentary_hi": "काव्य का सर्वाधिक उद्धृत श्लोक, और उसका उत्तरार्ध अकसर छूट जाता है। 'अधिकार' विधि का शब्द है — हक़, क्षेत्राधिकार, दावा उठाने की पात्रता। अर्जुन का क्षेत्राधिकार उस पर है जो वह करता है, और उस पर नहीं जो उसके बाद आता है — और इससे फल त्याग करने की वस्तु के बजाय किसी दूसरे विभाग का काम बन जाते हैं। और अन्तिम वाक्यांश भागने का रास्ता बन्द कर देता है: अकर्म से भी मत चिपक। न करना निकास नहीं है, क्योंकि वह थामने की एक और वस्तु है।"
+  },
+  {
+   "id": 95,
+   "number": "2.48",
+   "body_en": "Standing in yoga, do what there is to do, letting attachment go, Dhananjaya. Become the same in success and in failure. That sameness is what the word yoga means.",
+   "body_hi": "योग में खड़े होकर, जो करना है वह कर, आसक्ति को जाने दे, धनंजय। सिद्धि में और असिद्धि में एक-सा हो जा। वही एक-सापन है जिसे योग कहते हैं।",
+   "commentary_en": "Here the poem defines its central term, and the definition has nothing to do with posture or breath or withdrawal: samatvam yoga uchyate, evenness is what yoga means. Note the order of the instruction — kuru karmani, do the actions, comes first, and the letting go is a manner of doing rather than an alternative to it. Siddhi and asiddhi are the last pair on the list that opened in 2.38 with comfort and hurt. The chapter has been narrowing towards this sentence for ten verses.",
+   "commentary_hi": "यहाँ काव्य अपना केन्द्रीय शब्द परिभाषित करता है, और परिभाषा का आसन, श्वास या निवृत्ति से कोई लेना-देना नहीं: 'समत्वं योग उच्यते', समता ही योग का अर्थ है। निर्देश का क्रम देखें — 'कुरु कर्माणि', कर्म कर, पहले आता है, और छोड़ना करने का ढंग है, उसका विकल्प नहीं। 'सिद्धि' और 'असिद्धि' उस सूची का अन्तिम युग्म हैं जो 2.38 में सुख और पीड़ा से खुली थी। अध्याय दस श्लोकों से इसी वाक्य की ओर सिकुड़ रहा था।"
+  },
+  {
+   "id": 96,
+   "number": "2.49",
+   "body_en": "Action is by a long way the poorer thing beside the yoga of understanding, Dhananjaya. Look for your shelter in understanding. Those who act for the fruit are the stinted ones.",
+   "body_hi": "बुद्धि-योग के आगे कर्म बहुत दूर तक निचली वस्तु है, धनंजय। अपनी शरण बुद्धि में खोज। जो फल के लिए करते हैं, वे कंजूस हैं।",
+   "commentary_en": "Krishna calls them krpanah — mean, stinted, miserly — from the same root as the karpanya, the smallness, that Arjuna diagnosed in himself in 2.7. The word closes a circuit: Arjuna said his nature had been struck down by smallness, and Krishna now locates smallness precisely, in acting for results. And sharanam anvichchha, look for shelter, is the vocabulary Arjuna used of himself when he called himself prapanna. He asked a person for refuge; he is directed to it in a faculty.",
+   "commentary_hi": "कृष्ण उन्हें 'कृपणाः' कहते हैं — ओछे, कंजूस, कृपण — उसी धातु से जिससे वह 'कार्पण्य' है जिसे अर्जुन ने 2.7 में अपने भीतर पकड़ा था। शब्द एक वृत्त पूरा करता है: अर्जुन ने कहा था कि कार्पण्य ने उसका स्वभाव मार दिया है, और कृष्ण अब उस ओछेपन की ठीक जगह बताते हैं — फल के लिए करने में। और 'शरणमन्विच्छ', शरण खोज, वही शब्दावली है जो अर्जुन ने अपने लिए बरती थी जब उसने स्वयं को 'प्रपन्न' कहा। उसने शरण एक व्यक्ति से माँगी थी; उसे वह एक वृत्ति में दिखाई जा रही है।"
+  },
+  {
+   "id": 97,
+   "number": "2.50",
+   "body_en": "A man held by understanding leaves behind both the well-done and the badly-done. So yoke yourself to yoga: yoga is skill in what one does.",
+   "body_hi": "बुद्धि से थमा मनुष्य सुकृत और दुष्कृत, दोनों पीछे छोड़ जाता है। सो स्वयं को योग से जोत दे: योग कर्मों में कौशल है।",
+   "commentary_en": "Ubhe sukrita-dushkrite, both the well-done and the badly-done — and ubhe, both, is the word doing the work. This is not the promise of a clean record but of leaving the ledger altogether, which is a stranger and more radical claim. Then kaushalam, skill, dexterity: yoga defined a second time, two verses after the first, and defined now as competence rather than as evenness. The two definitions are one definition seen from outside and from inside.",
+   "commentary_hi": "'उभे सुकृतदुष्कृते', सुकृत और दुष्कृत दोनों — और काम 'उभे', दोनों, कर रहा है। यह साफ़ बही का वचन नहीं, बही को ही छोड़ देने का है, और यह अधिक विचित्र और अधिक मूलगामी दावा है। फिर 'कौशलम्', कुशलता, दक्षता: पहली परिभाषा के दो श्लोक बाद योग दूसरी बार परिभाषित होता है, और अब समता के बजाय सामर्थ्य के रूप में। दोनों परिभाषाएँ एक ही परिभाषा हैं, बाहर से और भीतर से देखी हुई।"
+  },
+  {
+   "id": 98,
+   "number": "2.51",
+   "body_en": "Held by understanding, the thoughtful let go of the fruit that action bears, and released from the bondage of birth they go to the place where nothing ails.",
+   "body_hi": "बुद्धि से थमे मनीषी कर्म से उपजे फल को जाने देते हैं, और जन्म के बन्धन से छूटकर उस पद में जाते हैं जहाँ कोई रोग नहीं।",
+   "commentary_en": "Anamayam, without disease: the goal named by a negative drawn from medicine rather than from theology. It is the third time this chapter has reached for a bodily word at a decisive moment, after the drying-up of the senses in 2.8 and the eyes in disarray in 2.1. Arjuna arrived as a set of physical symptoms, and the destination is described as their absence. Note janma-bandha, the bondage of birth, not of death. The poem never once treats dying as the problem.",
+   "commentary_hi": "'अनामयम्', रोग-रहित: लक्ष्य का नाम धर्मशास्त्र के बजाय चिकित्सा से लिए एक निषेध से रखा गया है। यह तीसरी बार है जब यह अध्याय किसी निर्णायक क्षण पर देह का शब्द उठाता है — 2.8 की इन्द्रियों के सूखने और 2.1 की अस्त-व्यस्त आँखों के बाद। अर्जुन शारीरिक लक्षणों के एक समुच्चय की तरह आया था, और गन्तव्य का वर्णन उनके अभाव के रूप में हुआ है। 'जन्मबन्ध' देखें, जन्म का बन्धन, मृत्यु का नहीं। काव्य मरने को एक बार भी समस्या नहीं मानता।"
+  },
+  {
+   "id": 99,
+   "number": "2.52",
+   "body_en": "When your understanding gets across the swamp of confusion, then you will be finished with both what is yet to be heard and what has been heard already.",
+   "body_hi": "जब तेरी बुद्धि मोह के दलदल के पार उतर जाएगी, तब तू उससे भी निपट चुकेगा जो सुनना बाकी है और उससे भी जो सुना जा चुका है।",
+   "commentary_en": "Kalilam is a thicket or a mire, ground a man cannot get through, and vyatitarishyati is to cross over water. Confusion is being described as terrain rather than as a mistake. Nirvedam is the odd word: indifference, being done with something. What Arjuna will be done with is shrotavyasya shrutasya cha, scripture heard and scripture still to be heard — the same relativising as the water-tank in 2.46, put now as a stage he passes through rather than a doctrine he must accept.",
+   "commentary_hi": "'कलिलम्' झाड़-झंखाड़ है या दलदल, वह ज़मीन जिससे मनुष्य पार नहीं हो पाता, और 'व्यतितरिष्यति' पानी के पार उतरना है। मोह को भूल के बजाय भूभाग की तरह रखा जा रहा है। विचित्र शब्द 'निर्वेदम्' है: उदासीनता, किसी बात से निपट चुकना। अर्जुन जिससे निपट चुकेगा, वह है 'श्रोतव्यस्य श्रुतस्य च', सुना हुआ शास्त्र और सुनने को बचा शास्त्र — 2.46 के तालाब वाला वही सापेक्षीकरण, अब एक ऐसे पड़ाव के रूप में रखा गया जिससे वह गुज़रेगा, किसी माने जाने वाले सिद्धान्त के रूप में नहीं।"
+  },
+  {
+   "id": 100,
+   "number": "2.53",
+   "body_en": "When your understanding, pulled about by what you have heard, comes to a stand without wavering, unmoved in samadhi, then you will come into yoga.",
+   "body_hi": "जब तेरी बुद्धि, सुनी हुई बातों से इधर-उधर खिंची हुई, बिना डिगे ठहर जाएगी, समाधि में अचल, तब तू योग में आ जाएगा।",
+   "commentary_en": "Shruti-vipratipanna, set at odds by what has been heard: Arjuna's trouble is named as textual, a mind pulled in different directions by authorities that disagree. That is an exact description of chapter one, where he argued from received doctrine on both sides and could not choose between them. Nishchala and achala, unwavering and unmoving, are the words that described the self in 2.24. What was said there of the imperishable is now said of a state a man can reach.",
+   "commentary_hi": "'श्रुतिविप्रतिपन्ना', सुनी हुई बातों से आपस में उलझी: अर्जुन की समस्या को पाठ की समस्या के रूप में नामित किया गया है, एक ऐसा मन जो असहमत प्रमाणों से अलग-अलग दिशाओं में खिंच रहा है। पहले अध्याय का यह ठीक-ठीक वर्णन है, जहाँ उसने दोनों पक्षों में परम्परा से तर्क किया और चुन नहीं पाया। 'निश्चला' और 'अचला', न डिगने वाली और न हिलने वाली, वही शब्द हैं जो 2.24 में आत्मा के लिए आए थे। जो वहाँ अविनाशी के विषय में कहा गया, वह अब उस अवस्था के विषय में कहा जा रहा है जहाँ मनुष्य पहुँच सकता है।"
+  },
+  {
+   "id": 101,
+   "number": "2.54",
+   "body_en": "Arjuna said: What is the speech of a man whose wisdom has settled, one standing in samadhi, Keshava? How does a settled mind talk, how does it sit, how does it walk about?",
+   "body_hi": "अर्जुन ने कहा — जिसकी प्रज्ञा ठहर गई है, जो समाधि में खड़ा है, उसकी भाषा क्या होती है, केशव? ठहरी हुई बुद्धि कैसे बोलती है, कैसे बैठती है, कैसे चलती है?",
+   "commentary_en": "Arjuna's only question in the chapter, and it is strikingly practical. He does not ask what such a man knows or feels; he asks what he says, how he sits, how he moves. Bhasha is speech, and asita and vrajet are sitting and going — he is asking for gait and posture. Note that the man who could not stand up in 1.30 wants to know how another kind of man carries himself. The question shapes everything that follows: the rest of the chapter answers with the description of a person rather than with doctrine.",
+   "commentary_hi": "अध्याय में अर्जुन का एकमात्र प्रश्न, और वह विलक्षण रूप से व्यावहारिक है। वह यह नहीं पूछता कि ऐसा मनुष्य क्या जानता या अनुभव करता है; वह पूछता है कि वह क्या कहता है, कैसे बैठता है, कैसे चलता है। 'भाषा' वाणी है, और 'आसीत' तथा 'व्रजेत' बैठना और चलना — वह चाल और मुद्रा माँग रहा है। ध्यान दें कि जो मनुष्य 1.30 में खड़ा नहीं हो पा रहा था, वह जानना चाहता है कि दूसरी तरह का मनुष्य स्वयं को कैसे उठाए रखता है। यह प्रश्न आगे सब कुछ गढ़ता है: शेष अध्याय सिद्धान्त से नहीं, एक व्यक्ति के वर्णन से उत्तर देता है।"
+  },
+  {
+   "id": 102,
+   "number": "2.55",
+   "body_en": "The Blessed One said: When a man lets go of every want that has got into his mind, Partha, and is content in himself by himself, then his wisdom is said to have settled.",
+   "body_hi": "भगवान् ने कहा — जब मनुष्य हर उस चाह को छोड़ देता है जो उसके मन में घुस आई है, पार्थ, और स्वयं में स्वयं से ही तृप्त रहता है, तब उसकी प्रज्ञा ठहरी हुई कही जाती है।",
+   "commentary_en": "Atmany evatmana tushtah — content in the self, by means of the self. The phrase is deliberately circular, and the circularity is the definition: a satisfaction with no external term, nothing outside itself that it leans on. Note manogatan, gone into the mind — the wants are described as intruders rather than as native to it. Prajahati is a strong verb, to abandon outright. Krishna answers a question about behaviour with an inner condition, then spends seventeen verses working back out to the behaviour.",
+   "commentary_hi": "'आत्मन्येवात्मना तुष्टः' — स्वयं में, स्वयं के द्वारा तृप्त। वाक्यांश जान-बूझकर वृत्ताकार है, और यही वृत्ताकारता परिभाषा है: ऐसी तृप्ति जिसका कोई बाहरी पद नहीं, जो अपने बाहर किसी पर टिकी नहीं। 'मनोगतान्' देखें, मन में घुसी हुई — चाहों को मन की अपनी वस्तु के बजाय घुसपैठियों की तरह रखा गया है। 'प्रजहाति' प्रबल क्रिया है, पूरी तरह छोड़ देना। कृष्ण आचरण के प्रश्न का उत्तर एक भीतरी अवस्था से देते हैं, और फिर सत्रह श्लोक उसी आचरण तक लौटने में लगाते हैं।"
+  },
+  {
+   "id": 103,
+   "number": "2.56",
+   "body_en": "Unshaken in mind where things hurt, without hankering where they are pleasant, with liking and fear and anger gone out of him — such a sage is said to be settled in mind.",
+   "body_hi": "जहाँ पीड़ा है वहाँ मन में अनुद्विग्न, जहाँ सुख है वहाँ लालसा से रहित, जिसमें से राग, भय और क्रोध निकल चुके — ऐसा मुनि स्थितधी कहा जाता है।",
+   "commentary_en": "Anudvigna-manah, a mind that does not shake: udvega is the word for agitation, the churn of disturbed water. And the three things listed as gone — raga, bhaya, krodha, liking, fear, anger — are exactly the three Arjuna displayed in chapter one, in that order: attachment to his kin, dread of what would follow, and the anger he could not raise. Krishna is describing the photographic negative of the man sitting in front of him. Muni, from the root meaning to be silent.",
+   "commentary_hi": "'अनुद्विग्नमनाः', वह मन जो हिलता नहीं: 'उद्वेग' क्षोभ का शब्द है, हिले हुए जल की हलचल। और जो तीन वस्तुएँ निकली हुई गिनाई गई हैं — राग, भय, क्रोध — ठीक वही तीन हैं जो अर्जुन ने पहले अध्याय में इसी क्रम में दिखाई थीं: अपनों से लगाव, आगे की आशंका, और वह क्रोध जो वह उठा नहीं पाया। कृष्ण सामने बैठे मनुष्य का उलटा चित्र खींच रहे हैं। 'मुनि', उस धातु से जिसका अर्थ चुप रहना है।"
+  },
+  {
+   "id": 104,
+   "number": "2.57",
+   "body_en": "The man unattached on every side, who on meeting this or that, welcome or unwelcome, neither greets it warmly nor loathes it — his wisdom stands firm.",
+   "body_hi": "जो हर ओर अनासक्त है, जो जो कुछ भी सामने आए — भला या बुरा — उसका न स्वागत करता है, न उससे घृणा — उसकी प्रज्ञा जमी हुई है।",
+   "commentary_en": "Anabhisneha: sneha is grease or oil, and by extension affection, so the compound is having no oil towards anything, nothing that makes things adhere. Note the two verbs held in a pair, nabhinandati na dveshti, neither welcomes nor detests. Krishna is careful never to describe this state as coldness — it is the absence of two movements, not the presence of a third. Pratishthita, standing firm, is the refrain that will close this verse and three more.",
+   "commentary_hi": "'अनभिस्नेह': 'स्नेह' चिकनाई या तेल है, और उसी से लगाव, सो समास का अर्थ है किसी की ओर कोई चिकनाहट न होना, कुछ ऐसा न होना जिससे वस्तुएँ चिपकें। दो क्रियाओं की जोड़ी देखें, 'नाभिनन्दति न द्वेष्टि', न स्वागत करता है, न घृणा। कृष्ण इस अवस्था को कभी ठंडेपन की तरह नहीं रखते — यह दो गतियों का अभाव है, किसी तीसरी की उपस्थिति नहीं। 'प्रतिष्ठिता', जमी हुई, वह टेक है जो इस श्लोक को और आगे तीन को बन्द करेगी।"
+  },
+  {
+   "id": 105,
+   "number": "2.58",
+   "body_en": "When he pulls the senses in from what the senses reach for, on every side, the way a tortoise pulls in its limbs — his wisdom stands firm.",
+   "body_hi": "जब वह इन्द्रियों को उनके विषयों से हर ओर से समेट लेता है, जैसे कछुआ अपने अंग समेट लेता है — उसकी प्रज्ञा जमी हुई है।",
+   "commentary_en": "The tortoise is the chapter's second household image after the change of clothes, and it does something the first could not: it makes withdrawal look like an ordinary capacity rather than an achievement. A tortoise does not struggle to pull its limbs in. Note sarvashah, on every side — the withdrawal is not selective. And the animal chosen is one that carries its own shelter, which answers Arjuna's request for refuge from a different direction than 2.49 did.",
+   "commentary_hi": "कपड़े बदलने के बाद कछुआ अध्याय का दूसरा घरेलू चित्र है, और वह वह करता है जो पहला नहीं कर सका: वह समेटने को उपलब्धि के बजाय एक साधारण क्षमता जैसा दिखा देता है। कछुआ अपने अंग समेटने के लिए जूझता नहीं। 'सर्वशः' देखें, हर ओर से — समेटना चुनिन्दा नहीं है। और चुना गया प्राणी वह है जो अपना आश्रय स्वयं ढोता है, और इससे अर्जुन की शरण की माँग का उत्तर 2.49 से अलग दिशा से आता है।"
+  },
+  {
+   "id": 106,
+   "number": "2.59",
+   "body_en": "For the one in the body who takes no food, the objects turn away — all but the taste for them. And that taste turns away too, in a man who has seen the higher thing.",
+   "body_hi": "जो देही आहार नहीं लेता, उससे विषय मुड़ जाते हैं — उनका स्वाद छोड़कर। और वह स्वाद भी उस मनुष्य से मुड़ जाता है जिसने उससे ऊँची वस्तु देख ली है।",
+   "commentary_en": "The verse corrects the one before it. A tortoise pulled in is not yet free, and a man who fasts still wants. Rasa is taste, flavour, relish, and Krishna concedes that abstinence leaves it untouched — the senses can be shut while the appetite stays open. What removes it is not more discipline but param drishtva, having seen the higher: a substitution rather than a suppression. The whole difference between this poem's yoga and plain renunciation sits in that one word.",
+   "commentary_hi": "श्लोक अपने से पहले वाले को सुधारता है। समेटा हुआ कछुआ अभी मुक्त नहीं, और उपवास करने वाले मनुष्य की चाह बनी रहती है। 'रस' स्वाद है, चाट, रुचि — और कृष्ण मान लेते हैं कि संयम उसे छूता ही नहीं: इन्द्रियाँ बन्द हो सकती हैं और भूख खुली रह सकती है। उसे हटाता अधिक अनुशासन नहीं, 'परं दृष्ट्वा' है, उससे ऊँचा देख लेना: दमन नहीं, प्रतिस्थापन। इस काव्य के योग और सादे त्याग का पूरा भेद इसी एक शब्द में बैठा है।"
+  },
+  {
+   "id": 107,
+   "number": "2.60",
+   "body_en": "Even for a man who is making the effort, Kaunteya, and who has discernment, the senses are marauding things and they carry the mind off by main force.",
+   "body_hi": "जो मनुष्य यत्न कर रहा है, कौन्तेय, और जिसके पास विवेक है, उसकी भी इन्द्रियाँ लूटमार करने वाली हैं और मन को ज़ोर लगाकर उठा ले जाती हैं।",
+   "commentary_en": "Yatatah, of one making the effort, and vipashchitah, of one who discerns: Krishna grants the man both diligence and understanding, and says he loses anyway. Pramathin is a strong word, marauding, and prasabham means by sheer force. This is the most honest sentence in the chapter's practical half, and it is placed immediately after a verse describing success — the poem refuses to let the portrait of the settled man be read as a method that works to order.",
+   "commentary_hi": "'यततः', यत्न करते हुए का, और 'विपश्चितः', विवेकी का: कृष्ण उस मनुष्य को परिश्रम और समझ दोनों दे देते हैं, और कहते हैं कि वह फिर भी हारता है। 'प्रमाथिन्' प्रबल शब्द है, लूटने वाला, और 'प्रसभम्' का अर्थ है निरे बल से। अध्याय के व्यावहारिक भाग का यह सबसे ईमानदार वाक्य है, और वह ठीक उस श्लोक के बाद रखा गया है जो सफलता का वर्णन करता है — काव्य स्थितप्रज्ञ के चित्र को माँगने पर काम करने वाली विधि की तरह पढ़े जाने से इनकार कर देता है।"
+  },
+  {
+   "id": 108,
+   "number": "2.61",
+   "body_en": "Holding all of them in, let him sit yoked, with me for what he is turned towards. For the man who has the senses in hand, his wisdom stands firm.",
+   "body_hi": "उन सबको रोककर, वह जुता हुआ बैठे, मुझे अपना लक्ष्य बनाकर। जिस मनुष्य के वश में इन्द्रियाँ हैं, उसकी प्रज्ञा जमी हुई है।",
+   "commentary_en": "Mat-parah, having me as the highest — the first time in the Gita that Krishna makes himself the object of the practice, and it arrives quietly, inside a subordinate phrase two words long. Everything up to this point could have been said by any teacher; this could not. Note asita, let him sit: Arjuna asked in 2.54 how such a man sits, and this is the answer, delivered as an instruction rather than as a portrait.",
+   "commentary_hi": "'मत्परः', मुझे परम मानकर — गीता में यह पहली बार है जब कृष्ण स्वयं को साधना का लक्ष्य बनाते हैं, और यह चुपचाप आता है, दो शब्दों के एक गौण पद के भीतर। यहाँ तक की हर बात कोई भी गुरु कह सकता था; यह नहीं कह सकता था। 'आसीत' देखें, वह बैठे: अर्जुन ने 2.54 में पूछा था कि ऐसा मनुष्य कैसे बैठता है, और उत्तर यही है — चित्र के रूप में नहीं, निर्देश के रूप में दिया हुआ।"
+  },
+  {
+   "id": 109,
+   "number": "2.62",
+   "body_en": "In a man who keeps turning objects over in his mind, attachment to them comes up. Out of attachment wanting is born, and out of wanting, anger.",
+   "body_hi": "जो मनुष्य विषयों को मन में उलटता-पलटता रहता है, उसमें उनसे लगाव उठ आता है। लगाव से चाह जन्मती है, और चाह से क्रोध।",
+   "commentary_en": "The chapter's causal chain begins, and it begins with something innocuous: dhyayatah, merely thinking about, dwelling on. No decision is taken anywhere in the sequence. Each term simply produces the next, which is why the poem places the intervention so early — by the time you arrive at anger there is nothing left to intervene in. Note that the root of dhyana, meditation, is the one used here for the process that ruins a man. Attention is the faculty either way.",
+   "commentary_hi": "अध्याय की कारण-शृंखला आरम्भ होती है, और वह किसी निर्दोष वस्तु से आरम्भ होती है: 'ध्यायतः', बस सोचते रहना, टिके रहना। इस पूरे क्रम में कहीं कोई निर्णय नहीं लिया जाता। हर पद बस अगले को जन्म देता है, और इसीलिए काव्य हस्तक्षेप इतनी जल्दी रखता है — क्रोध तक पहुँचते-पहुँचते हस्तक्षेप करने को कुछ बचता ही नहीं। ध्यान दें कि 'ध्यान' की वही धातु यहाँ उस प्रक्रिया के लिए बरती गई है जो मनुष्य को चौपट करती है। वृत्ति दोनों ओर एक ही है।"
+  },
+  {
+   "id": 110,
+   "number": "2.63",
+   "body_en": "Out of anger comes confusion; out of confusion, memory wanders; when memory goes, understanding is destroyed; and when understanding is destroyed, he is finished.",
+   "body_hi": "क्रोध से सम्मोह आता है; सम्मोह से स्मृति भटक जाती है; स्मृति गई तो बुद्धि नष्ट; और बुद्धि नष्ट हुई तो वह चुक गया।",
+   "commentary_en": "Five links, each one taking up the word the last put down, so the sentence's grammar is the mechanism it describes. Smriti-vibhrama is the most interesting term: what is lost is memory, not judgement. What the angry man forgets is who he is and what he was doing, and the poem treats that forgetting as the hinge on which the rest breaks. Pranashyati, he perishes, is given no object at all. There is nothing left to name.",
+   "commentary_hi": "पाँच कड़ियाँ, हर एक वही शब्द उठाती है जिसे पिछली ने रखा था, सो वाक्य का व्याकरण ही वह तन्त्र बन जाता है जिसका वह वर्णन कर रहा है। सबसे रोचक पद 'स्मृतिविभ्रम' है: जो खोता है वह स्मृति है, विवेक नहीं। क्रुद्ध मनुष्य यह भूलता है कि वह कौन है और क्या कर रहा था, और काव्य उसी भूलने को वह चूल मानता है जिस पर शेष सब टूटता है। 'प्रणश्यति', वह नष्ट हो जाता है, को कोई कर्म-पद दिया ही नहीं गया। नाम लेने को कुछ बचा नहीं।"
+  },
+  {
+   "id": 111,
+   "number": "2.64",
+   "body_en": "But a man who moves among objects with senses cut loose from liking and hating, senses under his own control, himself in order — he comes into clarity.",
+   "body_hi": "पर जो मनुष्य विषयों के बीच ऐसी इन्द्रियों से चलता है जो राग और द्वेष से खुली हुई हैं, इन्द्रियाँ अपने वश में, स्वयं व्यवस्थित — वह प्रसाद में आ जाता है।",
+   "commentary_en": "Charan, moving about, going among: the man described is not in retreat. He is out in the world of objects, and the difference lies in what his senses are joined to rather than in where his body is. Prasada is the word — clearness, brightness, the settling of disturbed water, and also the graciousness of a god. Note vidheyatma, having a self that takes instruction, set against atma-vashya, senses subject to that self. Two different relations, stacked one on the other.",
+   "commentary_hi": "'चरन्', घूमते हुए, बीच में जाते हुए: जिस मनुष्य का वर्णन है, वह पीछे हटा हुआ नहीं है। वह विषयों के संसार में बाहर है, और भेद इसमें है कि उसकी इन्द्रियाँ किससे जुड़ी हैं, इसमें नहीं कि उसकी देह कहाँ है। शब्द 'प्रसाद' है — निर्मलता, उजास, हिले हुए जल का बैठ जाना, और देवता की कृपा भी। 'विधेयात्मा' देखें, वह आत्मा जो निर्देश मानती है, और उसके सामने 'आत्मवश्य', उस आत्मा के अधीन इन्द्रियाँ। दो अलग सम्बन्ध, एक पर एक रखे हुए।"
+  },
+  {
+   "id": 112,
+   "number": "2.65",
+   "body_en": "In that clarity the loss of all his hurts comes about. For a man whose awareness has cleared, understanding quickly settles all round him.",
+   "body_hi": "उस प्रसाद में उसके सारे दुखों की हानि हो जाती है। जिसका चित्त प्रसन्न हो गया, उसकी बुद्धि जल्दी ही चारों ओर से ठहर जाती है।",
+   "commentary_en": "Hani, loss — the poem's ordinary word for what a man dreads, used here for the disappearance of suffering. Grief is what gets lost. And note the sequence: clarity comes first, and the end of pain follows from it, which is the reverse of the order Arjuna assumed in 2.8, where he wanted the grief taken away so that he could see. Krishna has put the two into the only order that works. Ashu, quickly, is the single word of encouragement in the whole passage.",
+   "commentary_hi": "'हानि' — वह साधारण शब्द जिससे मनुष्य डरता है, यहाँ दुख के मिट जाने के लिए बरता गया है। जो खोता है, वह शोक है। और क्रम देखें: प्रसाद पहले आता है और पीड़ा का अन्त उससे निकलता है, जो 2.8 में अर्जुन की मानी हुई व्यवस्था का उलटा है, जहाँ वह चाहता था कि शोक हटे ताकि वह देख सके। कृष्ण ने दोनों को उसी क्रम में रखा है जिसमें वे चलते हैं। 'आशु', जल्दी, इस पूरे प्रकरण का इकलौता ढाढ़स है।"
+  },
+  {
+   "id": 113,
+   "number": "2.66",
+   "body_en": "The unyoked man has no understanding, and no power of settled attention either. Without that attention there is no peace, and for a man with no peace, where would happiness come from?",
+   "body_hi": "जो जुता हुआ नहीं, उसके पास बुद्धि नहीं, और ठहरी हुई भावना भी नहीं। उस भावना के बिना शान्ति नहीं, और जिसके पास शान्ति नहीं, उसके पास सुख कहाँ से आएगा?",
+   "commentary_en": "Four negations forming a chain that runs the opposite way from 2.62 — a descent by subtraction rather than by generation. Bhavana is hard to render: the capacity to hold something in mind until it becomes real to you. And the last clause is a question, kutah sukham, from where happiness, which returns the chapter to where it began. Arjuna said in 2.8 that no kingdom would touch his grief. Krishna agrees with him, and names what would.",
+   "commentary_hi": "चार निषेध एक शृंखला बनाते हैं जो 2.62 से उलटी दिशा में चलती है — उत्पत्ति से नहीं, घटाव से उतरती हुई। 'भावना' का अनुवाद कठिन है: किसी बात को मन में तब तक थामे रहने की क्षमता कि वह आपके लिए सच हो जाए। और अन्तिम वाक्यांश प्रश्न है, 'कुतः सुखम्', सुख कहाँ से — और वह अध्याय को वहीं लौटा देता है जहाँ से वह चला था। अर्जुन ने 2.8 में कहा था कि कोई राज्य उसके शोक को छू नहीं सकेगा। कृष्ण उससे सहमत हैं, और बताते हैं कि क्या छू सकेगा।"
+  },
+  {
+   "id": 114,
+   "number": "2.67",
+   "body_en": "When the mind falls in behind the senses as they wander, that one thing sweeps his wisdom away — as the wind does a boat on water.",
+   "body_hi": "जब मन भटकती इन्द्रियों के पीछे लग जाता है, वही एक बात उसकी प्रज्ञा बहा ले जाती है — जैसे पानी पर नाव को वायु।",
+   "commentary_en": "The image is exact in a way that is easy to miss: a boat is not destroyed by wind, it is moved — taken somewhere it did not mean to go. Harati is the verb from 2.60, where the senses carried off the mind; here what goes is wisdom. The simile has no verb of its own in the Sanskrit, only wind and boat and water, and we have left it without one. Note anuvidhiyate, is made to follow along behind: the mind is not overpowered, it complies. The chapter's account of failure is consistently one of drift and consent rather than of defeat.",
+   "commentary_hi": "चित्र इस तरह सटीक है कि चूक जाना आसान है: वायु नाव को नष्ट नहीं करती, वह उसे हिला देती है — वहाँ ले जाती है जहाँ उसका जाना तय नहीं था। 'हरति' वही क्रिया है जो 2.60 से आई है, जहाँ इन्द्रियाँ मन को उठा ले जाती थीं; यहाँ जो जाता है वह प्रज्ञा है। संस्कृत में उपमा की अपनी कोई क्रिया नहीं, केवल वायु और नाव और जल हैं, और हमने भी उसे बिना क्रिया के रहने दिया है। 'अनुविधीयते' देखें, पीछे-पीछे चलाया जाना: मन पर बल नहीं पड़ता, वह मान लेता है। असफलता का इस अध्याय का लेखा लगातार बहाव और सहमति का है, पराजय का नहीं।"
+  },
+  {
+   "id": 115,
+   "number": "2.68",
+   "body_en": "So the man, mighty-armed, whose senses are held down on every side, away from what the senses reach for — his wisdom stands firm.",
+   "body_hi": "सो जिस मनुष्य की, महाबाहो, इन्द्रियाँ हर ओर से दबाकर रखी गई हैं, उनके विषयों से दूर — उसकी प्रज्ञा जमी हुई है।",
+   "commentary_en": "The verse repeats 2.58 almost exactly, with nigrihitani, held down, standing where the tortoise stood. The repetition is doing structural work: it closes the bracket opened before the digression on rasa and the causal chain of anger, so that the whole account of how a man fails sits framed inside one restated claim. Note that the tortoise has been dropped. What was an animal's easy reflex has become, by the end of the argument, a matter of holding down.",
+   "commentary_hi": "श्लोक 2.58 को लगभग हूबहू दोहराता है, बस कछुए की जगह 'निगृहीतानि', दबाकर रखी हुई, खड़ा है। यह दोहराव ढाँचे का काम कर रहा है: वह उस कोष्ठक को बन्द करता है जो रस की बात और क्रोध की कारण-शृंखला से पहले खुला था, ताकि मनुष्य कैसे चूकता है, इसका पूरा लेखा एक ही दोहराए गए दावे के भीतर मढ़ा रहे। ध्यान दें कि कछुआ छोड़ दिया गया है। जो एक प्राणी का सहज प्रतिवर्त था, वह तर्क के अन्त तक दबाकर रखने की बात बन गया है।"
+  },
+  {
+   "id": 116,
+   "number": "2.69",
+   "body_en": "What is night to all creatures, the man who holds himself in keeps watch through; and what the creatures keep watch through is night to the silent one who sees.",
+   "body_hi": "सब जीवों के लिए जो रात है, उसी में पहरा देता है वह जो स्वयं को रोके रखता है; और जीव जिसमें पहरा देते हैं, वह देखने वाले मौनी के लिए रात है।",
+   "commentary_en": "The verse is built as a chiasmus and it says nothing besides — the watcher's vigil and the world's vigil are one relation, inverted. No content is supplied for either state, which is unusual in a poem this willing to explain; the reader is handed a structure and no gloss. Samyami is from the same root as the holding-in of 2.61, and jagarti is the verb of keeping vigil rather than merely being conscious. Note pashyatah, of one who sees, attached to a verse about night. The Gita likes putting sight into darkness, as it did when Sanjaya described a pair of eyes that could not see straight.",
+   "commentary_hi": "श्लोक चियास्मस की तरह गढ़ा है और इसके अतिरिक्त कुछ कहता नहीं — पहरेदार का जागरण और संसार का जागरण एक ही सम्बन्ध हैं, उलटे हुए। दोनों में से किसी अवस्था की अन्तर्वस्तु नहीं दी गई, और समझाने को इतने तैयार काव्य में यह असामान्य है; पाठक को ढाँचा मिलता है, व्याख्या नहीं। 'संयमी' उसी धातु से है जिससे 2.61 का रोककर रखना, और 'जागर्ति' केवल होश में होने की नहीं, पहरा देने की क्रिया है। 'पश्यतः' देखें, देखने वाले का, और वह रात के श्लोक से जुड़ा है। गीता को अँधेरे में दृष्टि रखना भाता है, जैसा उसने तब किया था जब संजय ने उन आँखों का वर्णन किया जो सीधा नहीं देख पा रही थीं।"
+  },
+  {
+   "id": 117,
+   "number": "2.70",
+   "body_en": "As waters enter the sea, which fills and holds its level unmoved — so wants enter the man who reaches peace, all of them; and not the man who wants his wanting.",
+   "body_hi": "जैसे जल समुद्र में समाते जाते हैं, जो भरता जाता है और अपना तल अचल रखता है — वैसे ही चाहें उस मनुष्य में समाती हैं जो शान्ति पाता है, सारी की सारी; और उसमें नहीं जो अपनी चाह को चाहता है।",
+   "commentary_en": "The chapter's last image, and its finest. The sea is not described as refusing the rivers; it takes every one of them and does not rise. Achala-pratishtham, unmoving in its standing, is the phrase given to the self in 2.24 and to understanding in 2.53, arriving here at last as a picture. Note what the verse does not say: that the peaceful man has no desires. They enter him. Kama-kami, the wanter of wants, is the one left outside.",
+   "commentary_hi": "अध्याय का अन्तिम चित्र, और उसका श्रेष्ठतम। समुद्र को नदियों से इनकार करते हुए नहीं दिखाया गया; वह उन सबको लेता है और उठता नहीं। 'अचलप्रतिष्ठम्', अपने ठहराव में अचल, वही पद है जो 2.24 में आत्मा को और 2.53 में बुद्धि को दिया गया था, और यहाँ आकर वह चित्र बन जाता है। ध्यान दें कि श्लोक क्या नहीं कहता: यह नहीं कि शान्त मनुष्य में चाहें हैं ही नहीं। वे उसमें समाती हैं। 'कामकामी', चाह का चाहने वाला, वही है जो बाहर छूट जाता है।"
+  },
+  {
+   "id": 118,
+   "number": "2.71",
+   "body_en": "The man who has left all wanting behind and goes about without hankering, without mine and without I — he comes into peace.",
+   "body_hi": "जो मनुष्य सारी चाह पीछे छोड़ चुका और बिना लालसा के चलता है, बिना 'मेरा' के और बिना 'मैं' के — वह शान्ति में आ जाता है।",
+   "commentary_en": "Nirmamo nirahankarah: without mine-ness, without I-making. The two are given separately, and that matters — the sense of owning and the sense of being a self who owns are distinct attachments, and the verse pulls them apart. Note charati again, goes about, the same verb as 2.64. The peace being described is mobile; it belongs to a man walking around in the world, which is what Arjuna is going to have to do. Nothing here asks him to leave the field.",
+   "commentary_hi": "'निर्ममो निरहंकारः': ममता के बिना, अहंकार के बिना। दोनों अलग-अलग दिए गए हैं, और यह महत्त्व रखता है — अपना मानने का भाव और उस 'मैं' का भाव जो अपना मानता है, दो अलग आसक्तियाँ हैं, और श्लोक उन्हें अलग खींच देता है। 'चरति' फिर देखें, घूमता है, वही क्रिया जो 2.64 में थी। जिस शान्ति का वर्णन है, वह चलती-फिरती है; वह उस मनुष्य की है जो संसार में घूम रहा है, और अर्जुन को यही करना पड़ेगा। यहाँ उससे मैदान छोड़ने को कहीं नहीं कहा गया।"
+  },
+  {
+   "id": 119,
+   "number": "2.72",
+   "body_en": "This is the standing in brahman, Partha. Reaching it, a man is not confounded again. Established in it even at the last hour, he comes to the going-out in brahman.",
+   "body_hi": "यह ब्राह्मी स्थिति है, पार्थ। इसे पाकर मनुष्य फिर मूढ़ नहीं होता। अन्तिम घड़ी में भी इसमें ठहरकर वह ब्रह्म-निर्वाण को पा लेता है।",
+   "commentary_en": "Sthiti, a standing or a station, closes a chapter that opened on a man who could not stand. And nirvana in its literal sense: the going out of a flame, blown out. Note antakale api, even at the hour of the end — the verse allows for a whole life of failure and one successful moment, which is the most generous thing the chapter says. Vimuhyati, is confounded, is the verb from Arjuna's own diagnosis in 2.7. What he called his condition is named here as the thing that stops.",
+   "commentary_hi": "'स्थिति', ठहराव या पड़ाव, उस अध्याय को बन्द करती है जो एक ऐसे मनुष्य पर खुला था जो खड़ा नहीं हो पा रहा था। और 'निर्वाण' अपने शाब्दिक अर्थ में: दीये का बुझ जाना, फूँक दिया जाना। 'अन्तकालेऽपि' देखें, अन्त की घड़ी में भी — श्लोक पूरे जीवन की असफलता और एक सफल क्षण की गुंजाइश छोड़ता है, और अध्याय इससे उदार कुछ नहीं कहता। 'विमुह्यति', मूढ़ हो जाता है, वही क्रिया है जो 2.7 में अर्जुन के अपने निदान में थी। जिसे उसने अपनी अवस्था कहा था, उसी को यहाँ रुक जाने वाली वस्तु के रूप में नाम दिया गया है।"
+  }
+ ]
+}

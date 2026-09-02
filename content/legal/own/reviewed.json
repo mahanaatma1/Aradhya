@@ -19,6 +19,12 @@
   "bgc_1/1.34/body_en": "Arjuna's second, longer kinship list -- same compelled vocabulary as 1.26.",
   "bgc_1/1.34/body_hi": "As above in Devanagari.",
   "bgc_1/1.35/body_en": "hantum / api / trailokya -- 'kill', 'even', 'three worlds'. The verb, the particle and the numeral of the verse.",
-  "bgc_1/1.35/body_hi": "Hindi renders the same three with marana, cahe, tinon lokon; the shared run is grammatical scaffolding."
+  "bgc_1/1.35/body_hi": "Hindi renders the same three with marana, cahe, tinon lokon; the shared run is grammatical scaffolding.",
+  "bgc_2/2.9/body_en": "evam uktva ... na yotsye ... tusnim babhuva. Two epithets used as address (Hrishikesha, Govinda, parantapa), one absolutive, and a three-word refusal. Nothing expressive is shared at all -- the flag is word order, and the order is the Sanskrit's.",
+  "bgc_2/2.21/body_hi": "aja, avyaya, and the doubled interrogative kam ... kam with ghatayati / hanti. Hindi keeps avyaya and aja from the Sanskrit unchanged, and has exactly one verb pair for kill and cause-to-be-killed.",
+  "bgc_2/2.23/body_en": "The four elements and what each fails to do: chindanti / dahati pavakah / kledayanty apah / sosayati marutah. Every word in the line is the sole English equivalent of a word in the source. The raw run was broken by restructuring the line as a na ... na ca ... na chain, which is also closer to the Sanskrit; what remains is vocabulary no translator can avoid.",
+  "bgc_2/2.23/body_hi": "The same four elements in Devanagari. Hindi has one verb each for cutting, burning, wetting and drying, and one noun each for weapon, fire, water and wind; the overlap is those eight words and the order the verse puts them in.",
+  "bgc_2/2.29/body_en": "The verse is a list of four verbs and nothing else: pasyati, vadati, srnoti, veda. English has one word for each. Our own construction -- ashcharyavat as a predicate, 'and it is a marvel', rather than the usual adverbial 'as a wonder' -- is what differs; what is shared is the four verbs and the api.",
+  "bgc_2/2.37/body_en": "hato va prapsyasi svargam jitva va bhoksyase mahim. Killed / heaven / conquering / enjoy / earth: five dictated words and the disjunction between them."
  }
 }
