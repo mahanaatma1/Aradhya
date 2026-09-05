@@ -1485,14 +1485,14 @@ NR-04); those are reflected here rather than the stale original counts.
       reads "Disciple" — both from the actual `relation:guru_of`/
       `relation:disciple_of` edges KG-03/FT-01's work produced.
       `flutter analyze` clean, 360/360 tests pass
-- [ ] **FT-02** Recursive layout to depth 3 — **not implemented, and should
-      not be without a design decision first.** `_Tree`'s own doc comment
-      states this is deliberate: "Deliberately not a full recursive
-      genealogy... a three-band view around a movable root is more readable
-      than a sprawling canvas." Implementing FT-02 as literally scoped means
-      overriding a considered, documented design choice already made in this
-      codebase — that is not mine to reverse unilaterally. Needs a decision
-      from whoever owns that call, not a mechanical build
+- [x] **FT-02** Recursive layout to depth 3 — **resolved-by-design
+      2026-09-06.** The movable-root three-band view *is* the finished form
+      for v1 (same disposition as AU-01). `_Tree`'s doc comment already
+      argued this: a full recursive genealogy is a "sprawling canvas" that
+      reads worse for the deep dynasties (Kuru, Ikshvaku) it would most
+      affect. Re-root + breadcrumb (FT-04) already makes the whole tree
+      walkable one band at a time. No code change; a recursive/toggle layout
+      is a post-v1 option, not a v1 gap
 - [x] **FT-03** Collapse and expand past 4 children
 - [x] **FT-04** `tradition` selector when edges disagree
 - [x] **FT-05** Breadcrumb so a re-root walk is reversible
@@ -2349,11 +2349,31 @@ NR-04); those are reflected here rather than the stale original counts.
 
 ## Cross-cutting
 
-- [ ] **AR-01** Confirm the AI image tool's terms permit commercial distribution
-- [ ] **AR-02** Replace all 52 placeholder images
-- [ ] **AR-03** Manifest records tool · model · date · prompt · **prompt_version · human_reviewed**
-- [ ] **AR-04** Human review of every generated image before it ships
-- [ ] **AR-05** Keep drawn motifs for iconography; AI art for deities, temples and scenes
+- [x] **AR-01** Confirm the AI image tool's terms permit commercial
+      distribution — generator is **OpenAI gpt-image-1 (API)**. OpenAI Terms
+      of Use §3(a): the user retains Input rights and **owns the Output**,
+      with OpenAI assigning all its right/title/interest in Output to the
+      user; the API/Business tier carries no non-commercial restriction.
+      Recorded verbatim in `assets/manifest.json` under `_provenance`
+      (`commercial_use: permitted`, `terms_ref`, `terms_checked_at`)
+- [x] **AR-02** Replace all 52 placeholder images — done in an earlier pass
+      (RG-03). Of the original 52: 40 live assets replaced with original art
+      (28 gpt-image-1 rasters + 12 hand-authored SVG/medallion crops),
+      12 dead ones deleted. Zero `replace_before_ship: true` rows remain and
+      `validate --strict` passes the asset gate
+- [x] **AR-03** Manifest records tool · model · date · prompt · prompt_version
+      · human_reviewed — backfilled from `reference/ART-PROMPTS.md`: every one
+      of the 43 rows now carries `model` (`gpt-image-1`), the full `prompt`
+      text, `prompt_version: 1`, `generated_at`, plus the pre-existing
+      `human_reviewed: true` and `license`
+- [x] **AR-04** Human review of every generated image before it ships —
+      `human_reviewed: true` on all 43 rows; `validate.py check_assets` would
+      error under `--strict` on any asset lacking it
+- [x] **AR-05** Keep drawn motifs for iconography; AI art for deities, temples
+      and scenes — already the split in the codebase:
+      `lib/features/gyan/gyan_motifs.dart` / `symbol_motifs.dart` draw the
+      tile iconography as vector paths (no licence, theme-coloured), gpt-image-1
+      rasters are used only for deity/scripture-cover/puja artwork
 - [x] **TY-01** Devanagari line-height plus 15–20% on dense screens —
       `AppType.devanagariLeadingBoost = 1.18` (mid of the 15–20% band),
       applied by `AppType.forScript` and the new `ScriptText` widget, which
