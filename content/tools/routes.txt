@@ -66,6 +66,7 @@
 /scriptures/:scriptureId/book/:bookId
 /scriptures/book/:bookId
 /search
+/sources
 /splash
 /temple
 /temples

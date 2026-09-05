@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Aradhya">
+  <!--
+    The Aradhya lotus. Geometry ported from _LotusPainter in
+    lib/shared/widgets/app_logo.dart (512-unit grid, centre 256/300) so the
+    favicon, the launcher icon and the header logo are the same mark.
+    Keep in sync with src/components/art/Wordmark.jsx.
+  -->
+  <defs>
+    <linearGradient id="gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0" stop-color="#EFCB6A" />
+      <stop offset="1" stop-color="#B48B3E" />
+    </linearGradient>
+    <linearGradient id="terra" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0" stop-color="#B23A18" />
+      <stop offset="1" stop-color="#6E1F10" />
+    </linearGradient>
+    <linearGradient id="core" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="512">
+      <stop offset="0" stop-color="#9A2E12" />
+      <stop offset="1" stop-color="#6E1F10" />
+    </linearGradient>
+  </defs>
+
+  <!-- AppColors.kraft2 tile, radius 0.26 of the side -->
+  <rect width="512" height="512" rx="133.12" fill="#FBEFDD" />
+
+  <!-- gold back petals, fanned wide -->
+  <g fill="url(#gold)">
+    <path d="M256 300C174 193.3 223.2 106 256 106C288.8 106 338 193.3 256 300Z" transform="rotate(-66 256 300)" />
+    <path d="M256 300C174 193.3 223.2 106 256 106C288.8 106 338 193.3 256 300Z" transform="rotate(-33 256 300)" />
+    <path d="M256 300C174 193.3 223.2 106 256 106C288.8 106 338 193.3 256 300Z" />
+    <path d="M256 300C174 193.3 223.2 106 256 106C288.8 106 338 193.3 256 300Z" transform="rotate(33 256 300)" />
+    <path d="M256 300C174 193.3 223.2 106 256 106C288.8 106 338 193.3 256 300Z" transform="rotate(66 256 300)" />
+  </g>
+
+  <!-- terracotta front petals -->
+  <g fill="url(#terra)">
+    <path d="M256 300C186 202.1 228 122 256 122C284 122 326 202.1 256 300Z" transform="rotate(-42 256 300)" />
+    <path d="M256 300C186 202.1 228 122 256 122C284 122 326 202.1 256 300Z" transform="rotate(-14 256 300)" />
+    <path d="M256 300C186 202.1 228 122 256 122C284 122 326 202.1 256 300Z" transform="rotate(14 256 300)" />
+    <path d="M256 300C186 202.1 228 122 256 122C284 122 326 202.1 256 300Z" transform="rotate(42 256 300)" />
+  </g>
+
+  <!-- centre petal -->
+  <path d="M256 300C198 192.2 232.8 104 256 104C279.2 104 314 192.2 256 300Z" fill="url(#core)" />
+
+  <!-- gold base cradle -->
+  <path d="M106 306Q256 370 406 306Q256 334 106 306Z" fill="#C7A24E" />
+
+  <!-- the signature stitched seam -->
+  <rect x="56.32" y="56.32" width="399.36" height="399.36" rx="82.53" fill="none"
+        stroke="#A73015" stroke-opacity="0.38" stroke-width="7.17" stroke-dasharray="28.16 20.48" />
+</svg>

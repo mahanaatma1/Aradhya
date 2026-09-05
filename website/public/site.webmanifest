@@ -1,0 +1,12 @@
+{
+  "name": "Aradhya — Explore India's Spiritual Wisdom",
+  "short_name": "Aradhya",
+  "description": "Scriptures, epics, temples, festivals and daily practice — an offline-first spiritual companion.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF8F5",
+  "theme_color": "#A73015",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

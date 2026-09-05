@@ -128,8 +128,24 @@ fixed by shipping more features**.
 - [ ] **RG-01** `assets/db/content.sqlite` replaced with our own content — the
       Ishvarvaani dev fixture is gone
 - [ ] **RG-02** `meta.data_source` no longer says "DEV FIXTURE"
-- [ ] **RG-03** All 52 placeholder images replaced; zero manifest rows with
-      `replace_before_ship: true`
+- [x] **RG-03a** All 40 assets actually loaded by app code (`lib/`) replaced
+      with original AI-generated art / hand-authored SVG, verified byte-distinct
+      from the Ishvarvaani source files, and `assets/manifest.json` updated
+      (`license: ORIGINAL-AI-GENERATED`, `human_reviewed: true`,
+      `replace_before_ship: false`). See `reference/ART-PROMPTS.md` for the
+      per-asset prompt/status log.
+- [x] **RG-03b** 12 dead assets confirmed unused anywhere in `lib/` (currency,
+      hor, ladoo, offdiya, pan, pladoo, pother, quiz_badge, quote_bg,
+      streak_badge, vitual, and `assets/images/logo.png` — that logo file was
+      also still an Ishvarvaani copy, not our own) — deleted from
+      `assets/images/`, their `assets/manifest.json` rows removed, and their
+      dead constants (`quizBadge`, `streakBadge`, `ladooImage`,
+      `diyaOffImage`) removed from `lib/shared/reference_art.dart`.
+      `assets/icon/icon.png`, `icon_foreground.png`, `lotus.png` confirmed
+      original (no matching Ishvarvaani source found) and used only via
+      `pubspec.yaml`'s `flutter_launcher_icons` config — left as-is, no
+      action needed. Zero manifest rows with `replace_before_ship: true`
+      remain.
 - [ ] **RG-04** `reference/ishvarvaani-apk/base.apk` and the reference DBs are
       out of the shipped tree, and ideally out of git history
 - [ ] **RG-06** The generated `SOURCES.md` attribution block is rendered in the

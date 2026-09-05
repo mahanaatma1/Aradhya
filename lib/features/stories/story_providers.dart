@@ -64,3 +64,17 @@ final kathaDeityCountsProvider = FutureProvider<Map<String, int>>((ref) async {
 
 /// Below this, a deity is folded into "Other" rather than getting its own chip.
 const _minKathas = 2;
+
+/// Stories and kathas as one collection, stories first (ST-01).
+///
+/// A merge of the two lists, not a third table: each [Story] already carries
+/// [Story.kind], so the combined list can still be split, filtered or tagged
+/// by kind without a second query. Ordering keeps stories (already ordered by
+/// `id`, roughly narrative/curated order) ahead of kathas (already ordered by
+/// title) rather than interleaving them, since a shuffled combined order
+/// would make "browse everything" read as random rather than categorised.
+final allStoriesProvider = FutureProvider<List<Story>>((ref) async {
+  final stories = await ref.watch(storiesProvider.future);
+  final kathas = await ref.watch(kathasProvider.future);
+  return [...stories, ...kathas];
+});

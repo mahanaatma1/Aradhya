@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Search result pages are query-driven; the canonical content lives at /explore/:slug.
+Disallow: /search?
+
+Sitemap: https://aradhya.app/sitemap.xml

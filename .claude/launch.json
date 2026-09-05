@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aradhya-website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "website"],
+      "port": 5180
+    },
+    {
+      "name": "art-sheet",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-m", "http.server", "5181", "--directory", "assets/art"],
+      "port": 5181
+    }
+  ]
+}

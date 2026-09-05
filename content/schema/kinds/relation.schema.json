@@ -11,7 +11,8 @@
     "tradition": { "type": ["string", "null"] },
     "note": { "$ref": "aradhya:_common#/$defs/bilingual" },
     "confidence": { "enum": ["high", "medium", "low", "disputed"] },
-    "sources": { "$ref": "aradhya:_common#/$defs/sources" }
+    "sources": { "$ref": "aradhya:_common#/$defs/sources" },
+    "verification": { "$ref": "aradhya:_common#/$defs/verification" }
   },
   "required": ["src_slug", "rel_type", "dst_slug", "confidence", "sources"],
   "additionalProperties": false

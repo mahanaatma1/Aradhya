@@ -31,6 +31,66 @@ from content.tools import validate  # noqa: E402
 from content.tools.common import BUILD_DIR, GYAN_DB, REPO_ROOT  # noqa: E402
 
 
+# KG-03 and KG-04, as the plan states them: every P0 entity should carry at
+# least 3 relations, and at least 80% of P1 entities at least 2.
+#
+# The tier is `importance` (1 major .. 5 minor), which is what P0/P1 mean
+# everywhere else in the corpus: P0 is importance 1-2, P1 is importance 3.
+#
+# Degree is the row count in `relations` keyed on src_id, and that is the FULL
+# degree rather than half of it: build.py materialises the inverse of every
+# authored edge (build.py:289), so an entity that is only ever a destination in
+# the source JSONL still has its own outbound row. Counting both src_id and
+# dst_id here would double every relation.
+#
+# This lives in the report rather than in a notebook because it was previously
+# computed by hand, and the hand-written query used the threshold one BELOW the
+# one the goal states -- `>= 2` where the goal said 3, `>= 1` where it said 2.
+# That reported KG-04 at 63% against an 80% target, i.e. nearly met, when the
+# real figure for "2 or more" was 37%. A metric worth a target is worth a query
+# that runs on every report.
+KG_TIERS: tuple[tuple[str, tuple[int, ...], int, float], ...] = (
+    ("P0", (1, 2), 3, 1.00),
+    ("P1", (3,), 2, 0.80),
+)
+
+
+def kg_coverage(db: sqlite3.Connection) -> list[dict]:
+    """Relation-count coverage per importance tier."""
+    degree = dict(db.execute(
+        "select src_id, count(*) from relations group by src_id"))
+
+    out: list[dict] = []
+    for name, importances, need, target in KG_TIERS:
+        marks = ",".join("?" * len(importances))
+        rows = list(db.execute(
+            f"select id, slug, kind from entities where importance in ({marks})"
+            " order by kind, slug", importances))
+        total = len(rows)
+        met = [r for r in rows if degree.get(r[0], 0) >= need]
+        short = [r for r in rows if degree.get(r[0], 0) < need]
+
+        by_kind: dict[str, int] = defaultdict(int)
+        for _id, _slug, kind in short:
+            by_kind[kind] += 1
+
+        out.append({
+            "tier": name,
+            "need": need,
+            "target": target,
+            "total": total,
+            "met": len(met),
+            "pct": (len(met) / total) if total else 0.0,
+            "zero": sum(1 for r in rows if degree.get(r[0], 0) == 0),
+            "short_by_kind": dict(sorted(
+                by_kind.items(), key=lambda kv: -kv[1])),
+            # Named, so the gap is a work list rather than a number.
+            "short": [(slug, kind, degree.get(i, 0))
+                      for i, slug, kind in short],
+        })
+    return out
+
+
 def db_stats() -> dict:
     """Per-table coverage, straight from the built database."""
     if not GYAN_DB.exists():
@@ -102,6 +162,8 @@ def db_stats() -> dict:
                    group by a.alias_fold
                    having count(distinct e.id) > 1
                    limit 40""")]
+
+        out["kg_coverage"] = kg_coverage(db)
 
         out["search_by_kind"] = dict(db.execute(
             "select kind, count(*) from search_docs group by kind order by 2 desc"))
@@ -232,6 +294,33 @@ def render_html(rep: validate.Report, stats: dict) -> str:
           "real figure links to something.</div>")
         a("<div>" + " ".join(f"<code>{esc(s)}</code>" for s in orphans) + "</div>")
 
+    # ---- knowledge graph coverage ----
+    kg = stats.get("kg_coverage") or []
+    if kg:
+        a("<h2>Relation coverage "
+          "<span style='font-weight:400;font-size:13px;color:#6F4C37'>"
+          "(KG-03, KG-04)</span></h2>")
+        a("<table><tr><th>Tier</th><th>Goal</th><th class='n'>Met</th>"
+          "<th class='n'>Of</th><th class='n'>Coverage</th>"
+          "<th class='n'>No relations at all</th></tr>")
+        for t in kg:
+            hit = t["pct"] >= t["target"]
+            cls = "ok" if hit else "bad"
+            a(f"<tr><td>{esc(t['tier'])}</td>"
+              f"<td>{t['need']} or more, on {t['target']:.0%}</td>"
+              f"<td class='n'>{t['met']}</td>"
+              f"<td class='n'>{t['total']}</td>"
+              f"<td class='n {cls}'>{t['pct']:.0%}</td>"
+              f"<td class='n'>{t['zero']}</td></tr>")
+        a("</table>")
+        for t in kg:
+            if not t["short_by_kind"]:
+                continue
+            gaps = " · ".join(f"{esc(k)} {n}"
+                              for k, n in t["short_by_kind"].items())
+            a(f"<div class='sub'>{esc(t['tier'])} short of "
+              f"{t['need']}: {gaps}</div>")
+
     # ---- derived ----
     a("<h2>Search index</h2>")
     kinds = stats.get("search_by_kind") or {}
@@ -281,6 +370,11 @@ def main(argv: list[str] | None = None) -> int:
     dups = len(stats.get("dup_aliases") or [])
     orphans = len(stats.get("orphan_entities") or [])
     print("-" * 60)
+    for t in stats.get("kg_coverage") or []:
+        flag = "ok " if t["pct"] >= t["target"] else "GAP"
+        print(f"{flag} {t['tier']}: {t['met']}/{t['total']} ({t['pct']:.0%}) "
+              f"have {t['need']}+ relations · target {t['target']:.0%} · "
+              f"{t['zero']} have none")
     print(f"errors {len(rep.errors)} · warnings {len(rep.warnings)} · "
           f"duplicate epithets {dups} · unlinked entities {orphans}")
     print(f"wrote {out.relative_to(REPO_ROOT)}")

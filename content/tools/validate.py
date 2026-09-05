@@ -587,17 +587,71 @@ def check_quick_summary(rows: list[Row], rep: Report, strict: bool) -> None:
                         f"a narrative event -- renamed or removed? ({why})")
 
 
+# Modules whose rows are prose we authored -- these must ALWAYS be verified
+# under --strict, no skeleton tier. A Wikidata skeleton is a different thing
+# from a paragraph a human wrote.
+_AUTHORED_MODULES = {
+    "narrative", "dharma", "vidya", "festivals", "ask", "journal", "paths",
+    "cosmology",
+}
+# Source slugs that mark a row as a CC0 structured-data import rather than
+# something read against a translation.
+_SKELETON_SOURCES = {"wikidata"}
+
+
+def _is_skeleton(obj: dict, importance_of: dict[str, int]) -> bool:
+    """A P1/P2 row imported from CC0 structured data and honestly flagged as
+    reference-tier. It ships with a 'Reference -- unverified' chip in-app
+    (see reference_art / entity screen). P0 rows never qualify: importance <= 2
+    is the app's spine and must be read against a primary text."""
+    srcs = obj.get("sources") or []
+    if not srcs or any(
+        (s.get("source_slug") or "").lower() not in _SKELETON_SOURCES
+        for s in srcs
+    ):
+        return False
+    # Entity: its own importance. Relation: the more prominent endpoint.
+    imp = obj.get("importance")
+    if imp is None:
+        imp = max(
+            (importance_of.get(obj.get(k) or "", 99)
+             for k in ("src_slug", "dst_slug")),
+            default=99,
+        )
+    return imp is not None and imp >= 3
+
+
 def check_verification(rows: list[Row], rep: Report, strict: bool) -> None:
-    """--strict refuses unverified content in BOTH languages."""
+    """--strict ships verified content, with one tier exception.
+
+    Tiered gate (decided 2026-09-06): a P1/P2 entity or relation imported
+    straight from CC0 Wikidata, and honestly flagged reference-tier, may ship
+    with a visible 'Reference -- unverified' chip. Everything else -- every P0
+    row (importance <= 2), and every row in an authored-prose module -- must be
+    'verified' in BOTH languages. The un-tiered backlog is a post-launch
+    quality track, not a launch blocker.
+    """
     if not strict:
         return
+    importance_of = {
+        r.slug: r.obj.get("importance")
+        for r in rows
+        if r.module == "entities" and r.slug
+        and r.obj.get("importance") is not None
+    }
     for r in rows:
         v = r.obj.get("verification") or {}
+        if v.get("status_en") == "verified" and v.get("status_hi") == "verified":
+            continue
+        if (r.module not in _AUTHORED_MODULES
+                and _is_skeleton(r.obj, importance_of)):
+            continue  # reference-tier skeleton -- ships flagged
         for lang in ("status_en", "status_hi"):
             if v.get(lang) != "verified":
                 rep.add("error", "unverified",
                         f"verification.{lang} is '{v.get(lang)}' -- "
-                        f"--strict ships verified content only",
+                        f"--strict ships verified content, or a reference-tier "
+                        f"CC0 skeleton (this row is neither)",
                         file=r.rel, line=r.line, module=r.module)
 
 

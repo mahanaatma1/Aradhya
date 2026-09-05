@@ -1,0 +1,351 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   Design tokens — the mobile app's palette, verbatim.
+   Light = "sacred handcrafted journal" paper. Dark = the app's warm espresso
+   ground (never flat black). Values are RGB channels so Tailwind's `/opacity`
+   modifiers work against them.
+   Source: lib/app/theme/app_colors.dart · design/design-system.html
+   ========================================================================== */
+:root,
+:root[data-theme='light'] {
+  --paper: 253 248 245;
+  --paper-2: 247 236 220;
+  --paper-3: 251 239 221;
+  --card: 255 253 249;
+
+  --ink: 58 34 20;
+  --ink-soft: 111 76 55;
+  --ink-faint: 154 124 103;
+
+  --terra: 167 48 21;
+  --terra-dark: 110 31 16;
+  --gold: 180 139 62;
+  --gold-bright: 192 160 98;
+  --purple: 90 46 168;
+  --rose: 156 41 80;
+  --green: 37 83 63;
+
+  --line: 92 59 40;
+  --shadow-tint: 92 45 20;
+  --stitch: 167 48 21;
+  --grain-opacity: 0.5;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --paper: 26 17 12;
+  --paper-2: 35 23 15;
+  --paper-3: 39 26 17;
+  --card: 36 24 17;
+
+  --ink: 242 230 217;
+  --ink-soft: 205 178 156;
+  --ink-faint: 156 131 113;
+
+  --terra: 227 90 52;
+  --terra-dark: 178 58 26;
+  --gold: 212 175 55;
+  --gold-bright: 230 199 102;
+  --purple: 155 123 224;
+  --rose: 224 122 152;
+  --green: 95 174 138;
+
+  --line: 242 230 217;
+  --shadow-tint: 0 0 0;
+  --stitch: 227 90 52;
+  --grain-opacity: 0.22;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--line) / 0.16);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper font-body text-ink antialiased;
+    /* A whisper of parchment tooth. Generated, not an image request. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :lang(hi),
+  .deva {
+    @apply font-deva;
+  }
+
+  ::selection {
+    background: rgb(var(--terra) / 0.16);
+    color: rgb(var(--ink));
+  }
+
+  /* One consistent, visible focus ring everywhere — keyboard users first. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--terra) / 0.75);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(var(--paper-2));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--ink-faint) / 0.45);
+    border-radius: 99px;
+    border: 3px solid rgb(var(--paper-2));
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--ink-faint) / 0.7);
+  }
+}
+
+@layer components {
+  /* Page gutter + max width, used by every section. */
+  .shell {
+    @apply mx-auto w-full max-w-shell px-5 sm:px-7 lg:px-10;
+  }
+
+  .surface {
+    @apply rounded-lg border border-ink/[0.07] bg-card shadow-card;
+  }
+
+  /* The brand's signature: a dashed "stitched" seam inset from the edge.
+     Carried over from the app's handcrafted-journal motif. */
+  .stitch::after {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border-radius: inherit;
+    border: 1.4px dashed rgb(var(--stitch) / 0.34);
+    pointer-events: none;
+  }
+  .stitch-on-color::after {
+    border-color: rgb(255 250 240 / 0.55);
+  }
+
+  /* Small-caps eyebrow above section headings. */
+  .eyebrow {
+    @apply text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-terra;
+  }
+
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-ink/15 to-transparent;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink/10 bg-paper-2/70
+           px-3 py-1 text-xs font-medium text-ink-soft transition-colors duration-200;
+  }
+
+  /* Links inside prose: a gold underline that fills in on hover. */
+  .link-quiet {
+    @apply relative text-ink transition-colors duration-200 hover:text-terra;
+    background-image: linear-gradient(rgb(var(--gold) / 0.55), rgb(var(--gold) / 0.55));
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+  }
+
+  .skeleton {
+    @apply relative overflow-hidden rounded bg-ink/[0.06];
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full animate-shimmer;
+    background: linear-gradient(90deg, transparent, rgb(var(--card) / 0.6), transparent);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Horizontal rails fade at the edges instead of ending abruptly. */
+  .rail-mask {
+    mask-image: linear-gradient(to right, transparent, black 18px, black calc(100% - 24px), transparent);
+  }
+
+  /* Scroll-reveal: elements start shifted, the observer adds .is-in. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+      transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ============================================================================
+   The logo bloom.
+
+   Ported from the app's splash: lib/features/splash/splash_screen.dart drives
+   `bloom` 0 → 1 through _LotusPainter (lib/shared/widgets/app_logo.dart), and
+   the painter turns that into three things — petals fan out from a closed bud
+   with an overshoot, petals lengthen and widen, and the gold cradle grows in
+   over the second half. Same curves as Flutter's:
+
+     easeOutBack  → cubic-bezier(0.175, 0.885, 0.32, 1.275)   petal rotation
+     easeOut      → cubic-bezier(0, 0, 0.58, 1)               petal growth
+     easeOutCubic → cubic-bezier(0.215, 0.61, 0.355, 1)       tile scale
+
+   Rotation and growth need different easings on the same petal, so they live on
+   two nested <g> elements rather than one transform. Runs once, on mount — the
+   navbar is mounted for the life of the page, so it plays on arrival and on
+   refresh and never again on navigation.
+
+   The reduced-motion block at the end of this file collapses all of it to the
+   finished state.
+   ========================================================================== */
+.lotus-bloom {
+  --lotus-duration: 1800ms;
+}
+
+/* Petals swing out from a closed bud. The final angle is already on the parent
+   group, so this runs from -angle back to nothing — which means a client that
+   never runs the animation still shows an open flower. */
+.lotus-bloom .lotus-fan {
+  transform-box: view-box;
+  transform-origin: 256px 300px;
+  animation: lotus-fan var(--lotus-duration) cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+@keyframes lotus-fan {
+  from {
+    transform: rotate(var(--lotus-from, 0deg));
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* lenF/widF from the painter: 58% length and 80% width at the start. */
+.lotus-bloom .lotus-grow {
+  transform-box: view-box;
+  transform-origin: 256px 300px;
+  animation: lotus-grow var(--lotus-duration) cubic-bezier(0, 0, 0.58, 1) both;
+}
+@keyframes lotus-grow {
+  from {
+    transform: scale(0.8, 0.58);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+/* The cradle only exists for the back half of the run, and widens linearly. */
+.lotus-bloom .lotus-cradle {
+  transform-box: view-box;
+  transform-origin: 256px 300px;
+  animation: lotus-cradle calc(var(--lotus-duration) * 0.5) linear both;
+  animation-delay: calc(var(--lotus-duration) * 0.5);
+}
+@keyframes lotus-cradle {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* The tile: fades in over the first quarter, scales up across the whole run. */
+.lotus-tile-in {
+  --lotus-duration: 1800ms;
+  animation:
+    lotus-tile-fade calc(var(--lotus-duration) * 0.25) cubic-bezier(0, 0, 0.58, 1) both,
+    lotus-tile-scale var(--lotus-duration) cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+@keyframes lotus-tile-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lotus-tile-scale {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The wordmark rises in behind the bloom, as it does on the splash. */
+.lotus-word-in {
+  --lotus-duration: 1800ms;
+  animation: lotus-word calc(var(--lotus-duration) * 0.45) cubic-bezier(0, 0, 0.58, 1) both;
+  animation-delay: calc(var(--lotus-duration) * 0.5);
+}
+@keyframes lotus-word {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Honour the OS setting — no drifting mandalas, no reveal offsets. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    /* Zeroing the delay too, or the bloom's staggered parts (wordmark, cradle)
+       would hold their invisible start state for the delay's length before
+       snapping in — the one thing this media query exists to prevent. */
+    animation-delay: 0ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

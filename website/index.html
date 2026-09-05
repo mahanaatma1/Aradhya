@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <title>Aradhya — Explore India's Spiritual Wisdom</title>
+    <meta
+      name="description"
+      content="Scriptures, stories, temples, traditions and daily practices — thoughtfully brought together in one offline spiritual companion."
+    />
+    <link rel="canonical" href="https://aradhya.app/" />
+    <meta name="theme-color" content="#FDF8F5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1A110C" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Aradhya" />
+    <meta property="og:title" content="Aradhya — Explore India's Spiritual Wisdom" />
+    <meta
+      property="og:description"
+      content="Scriptures, stories, temples, traditions and daily practices — thoughtfully brought together in one offline spiritual companion."
+    />
+    <meta property="og:url" content="https://aradhya.app/" />
+    <meta property="og:image" content="https://aradhya.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Aradhya — Explore India's Spiritual Wisdom" />
+    <meta property="og:locale" content="en_IN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aradhya — Explore India's Spiritual Wisdom" />
+    <meta
+      name="twitter:description"
+      content="Scriptures, stories, temples, traditions and daily practices — in one offline spiritual companion."
+    />
+    <meta name="twitter:image" content="https://aradhya.app/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts: the three families the mobile app bundles. Weights are trimmed to
+         what the site actually renders so the first paint stays cheap. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500&display=swap"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Aradhya",
+        "alternateName": "आराध्य",
+        "url": "https://aradhya.app/",
+        "description": "An offline-first Indian spiritual knowledge and practice app — scriptures, epics, temples, festivals and daily sadhana.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://aradhya.app/search?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <script>
+      // Resolve the theme before first paint so there is no flash of the wrong ground.
+      (function () {
+        try {
+          var saved = localStorage.getItem('aradhya-theme');
+          var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      Aradhya is an offline-first Indian spiritual knowledge app covering scriptures, the Ramayana and
+      Mahabharata, deities, temples, festivals and daily practice. Please enable JavaScript to browse,
+      or find Aradhya on the Google Play Store and the App Store.
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

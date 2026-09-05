@@ -15,13 +15,13 @@
   "dharma_choices": 36,
   "vidya_topics": 18,
   "qa_pairs": 20,
-  "learning_paths": 10,
-  "path_steps": 49,
+  "learning_paths": 18,
+  "path_steps": 87,
   "journal_prompts": 150,
   "sources": 18,
-  "item_sources": 1023,
+  "item_sources": 1031,
   "search_docs": 33255,
-  "related_edges": 5181
+  "related_edges": 7422
  },
  "slugs": {
   "entities": [
@@ -757,14 +757,22 @@
   "learning_paths": [
    "a-daily-practice",
    "a-day-well-ordered",
+   "five-adversaries",
+   "five-sages",
+   "five-symbols",
+   "five-weapons",
+   "how-the-panchang-is-built",
    "how-the-world-begins",
    "mahabharata-in-seven",
    "meet-the-deities",
    "ramayana-in-six",
+   "seven-avatars",
+   "sound-and-grammar",
    "what-is-dharma",
    "who-is-devi",
    "who-is-shiva",
-   "who-is-vishnu"
+   "who-is-vishnu",
+   "yoga-before-the-poses"
   ]
  }
 }

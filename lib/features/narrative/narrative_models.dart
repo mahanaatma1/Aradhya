@@ -86,6 +86,12 @@ class NarrativeNode {
   final int? prevNodeId;
   final int? nextNodeId;
 
+  /// NR-01: whether [sequenceNo] is a narrative order or a historical one.
+  /// 'traditional' | 'disputed' | 'confirmed' -- see the column comment in
+  /// `gyan.sql`. Defaults to 'traditional', which every scene authored so far
+  /// actually is: an order the text hands down, not a dated event.
+  final String chronologyConfidence;
+
   const NarrativeNode({
     required this.id,
     required this.slug,
@@ -127,6 +133,7 @@ class NarrativeNode {
     this.illustrationAsset,
     this.prevNodeId,
     this.nextNodeId,
+    this.chronologyConfidence = 'traditional',
   });
 
   factory NarrativeNode.fromRow(Map<String, Object?> r) => NarrativeNode(
@@ -170,6 +177,8 @@ class NarrativeNode {
         illustrationAsset: r['illustration_asset'] as String?,
         prevNodeId: r['prev_node_id'] as int?,
         nextNodeId: r['next_node_id'] as int?,
+        chronologyConfidence:
+            (r['chronology_confidence'] as String?) ?? 'traditional',
       );
 
   String title(bool hi) =>

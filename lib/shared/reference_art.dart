@@ -64,12 +64,8 @@ const aartisImage = 'assets/images/aartis.jpg';
 const quizBg = 'assets/images/quiz_bg.jpg';
 
 /// Badge art for Home's Engage & Learn tiles.
-const quizBadge = 'assets/images/quiz_badge.png';
 const japaBadge = 'assets/images/japa_badge.png';
-const streakBadge = 'assets/images/streak_badge.png';
 
 /// Offering item art for the Mandir.
 const bhogImage = 'assets/images/bhog.png';
-const ladooImage = 'assets/images/ladoo.png';
 const diyaOnImage = 'assets/images/ondiya.png';
-const diyaOffImage = 'assets/images/offdiya.png';

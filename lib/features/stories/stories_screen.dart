@@ -24,12 +24,20 @@ class _StoriesScreenState extends ConsumerState<StoriesScreen> {
   late final String _emotion =
       widget.initialEmotion?.trim().toLowerCase() ?? 'all';
 
-  /// Which of the two collections is showing. Opening from a Home emotion tile
-  /// jumps straight to that emotion, so it stays on Stories.
-  bool _showKathas = false;
+  /// Which collection is showing (ST-01): both together by default, or one
+  /// kind isolated. Not a hard either/or — [_StoryCollection.all] is the
+  /// merged, categorised list; the underlying [Story.kind] tag is what makes
+  /// filtering back down to one kind possible without a second screen.
+  /// Opening from a Home emotion tile jumps straight to that emotion, and
+  /// emotion is a story-only concept (kathas carry no emotion tags), so that
+  /// path starts on stories-only rather than the merged view.
+  late _StoryCollection _collection =
+      widget.initialEmotion == null
+          ? _StoryCollection.all
+          : _StoryCollection.story;
 
   /// Selected deity chip, or null for all. `_otherKey` gathers every deity too
-  /// rare to earn its own chip.
+  /// rare to earn its own chip. Only meaningful when kathas are in view.
   String? _deity;
   static const _otherKey = '__other__';
 
@@ -39,11 +47,16 @@ class _StoriesScreenState extends ConsumerState<StoriesScreen> {
     final hi = Localizations.localeOf(context).languageCode == 'hi';
     final isAll = _emotion == 'all';
 
-    final title = _showKathas
-        ? (hi ? 'व्रत कथा' : 'Vrat Katha')
-        : (isAll
-            ? t.catKatha
-            : (hi ? EmotionStyle.of(_emotion).hi : EmotionStyle.of(_emotion).en));
+    final title = switch (_collection) {
+      _StoryCollection.katha => hi ? 'व्रत कथा' : 'Vrat Katha',
+      _StoryCollection.story when !isAll =>
+        hi ? EmotionStyle.of(_emotion).hi : EmotionStyle.of(_emotion).en,
+      _StoryCollection.story => hi ? 'कहानियाँ' : 'Stories',
+      _StoryCollection.all => hi ? 'कहानियाँ और कथाएँ' : 'Stories & Katha',
+    };
+
+    final showDeityChips =
+        isAll && _collection != _StoryCollection.story;
 
     return Scaffold(
       appBar: AppBar(title: Text(title)),
@@ -51,25 +64,30 @@ class _StoriesScreenState extends ConsumerState<StoriesScreen> {
         children: [
           // Only offered when the screen is not already filtered to one
           // emotion — arriving from "Stories about anger" and being shown a
-          // Vrat Katha switch would be a non-sequitur.
-          if (isAll) _CollectionToggle(
-            showKathas: _showKathas,
+          // collection switch would be a non-sequitur.
+          if (isAll) _CollectionSelector(
+            selected: _collection,
             hindi: hi,
             onChanged: (v) => setState(() {
-              _showKathas = v;
+              _collection = v;
               _deity = null;
             }),
           ),
-          if (_showKathas) _DeityChips(
+          if (showDeityChips) _DeityChips(
             selected: _deity,
             hindi: hi,
             otherKey: _otherKey,
             onSelected: (d) => setState(() => _deity = d),
           ),
           Expanded(
-            child: _showKathas
-                ? _buildList(ref.watch(kathasProvider), t, hi, _filterKathas)
-                : _buildList(ref.watch(storiesProvider), t, hi, _filterStories),
+            child: switch (_collection) {
+              _StoryCollection.all =>
+                _buildList(ref.watch(allStoriesProvider), t, hi, _filterAll),
+              _StoryCollection.story =>
+                _buildList(ref.watch(storiesProvider), t, hi, _filterStories),
+              _StoryCollection.katha =>
+                _buildList(ref.watch(kathasProvider), t, hi, _filterKathas),
+            },
           ),
         ],
       ),
@@ -133,35 +151,54 @@ class _StoriesScreenState extends ConsumerState<StoriesScreen> {
     }
     return all.where((k) => k.primaryDeity == _deity).toList();
   }
+
+  /// The merged view (ST-01). Stories are shown as-is; kathas go through the
+  /// same deity filter as the katha-only view, so switching from "Vrat
+  /// Katha" to "All" with a deity chip already picked does not silently drop
+  /// it — [Story.isKatha] tells stories and kathas apart in one list.
+  List<Story> _filterAll(List<Story> all) {
+    final stories = all.where((s) => !s.isKatha);
+    final kathas = _filterKathas(all.where((s) => s.isKatha).toList());
+    return [...stories, ...kathas];
+  }
 }
 
-/// Stories ⇄ Vrat Katha switch.
-class _CollectionToggle extends StatelessWidget {
-  final bool showKathas;
+/// Which of stories, kathas is showing: [all] is the merged, categorised
+/// list ST-01 asks for; the other two isolate one kind, unchanged from the
+/// screen's previous either/or toggle.
+enum _StoryCollection { all, story, katha }
+
+/// All / Stories / Vrat Katha switch.
+class _CollectionSelector extends StatelessWidget {
+  final _StoryCollection selected;
   final bool hindi;
-  final ValueChanged<bool> onChanged;
-  const _CollectionToggle(
-      {required this.showKathas, required this.hindi, required this.onChanged});
+  final ValueChanged<_StoryCollection> onChanged;
+  const _CollectionSelector(
+      {required this.selected, required this.hindi, required this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-      child: SegmentedButton<bool>(
+      child: SegmentedButton<_StoryCollection>(
         segments: [
           ButtonSegment(
-            value: false,
+            value: _StoryCollection.all,
+            label: Text(hindi ? 'सभी' : 'All'),
+          ),
+          ButtonSegment(
+            value: _StoryCollection.story,
             icon: const Icon(Icons.auto_stories_rounded, size: 18),
             label: Text(hindi ? 'कहानियाँ' : 'Stories'),
           ),
           ButtonSegment(
-            value: true,
+            value: _StoryCollection.katha,
             icon: const Icon(Icons.local_fire_department_rounded, size: 18),
             label: Text(hindi ? 'व्रत कथा' : 'Vrat Katha'),
           ),
         ],
-        selected: {showKathas},
+        selected: {selected},
         showSelectedIcon: false,
         onSelectionChanged: (s) => onChanged(s.first),
         style: SegmentedButton.styleFrom(
