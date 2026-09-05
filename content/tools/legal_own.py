@@ -83,6 +83,10 @@ STOP_EN = {
     "down", "before", "after", "again", "very", "such", "same", "while",
     "addressed", "told", "answered", "asked", "replied", "am",
     "having", "being", "even",
+    # Function words chapter 4 leans on. adya is "today" and there is no second
+    # adverb for it; "because" is a conjunction; "mine" and "yours" are the
+    # possessive pronouns of me and tava. None of these is a choice.
+    "today", "because", "mine", "yours",
 }
 STOP_HI = {
     "के", "का", "की", "को", "में", "से", "पर", "और", "भी", "है", "हैं", "था",
@@ -103,6 +107,14 @@ STOP_HI = {
     "चाहता", "चाहती", "चाहे", "चाहिए", "डालें", "डालना", "देते", "पाता",
     "पाते", "रखें", "लूँ", "सकता", "सकते", "गिना", "बीच", "भर", "ही",
     "इसे", "किसे", "इसका", "इसके", "उसको", "जिसका", "जिसने",
+    # More grammatical machinery, from chapter 4's lineage and question verses.
+    # adya is "आज" and there is no second adverb; "मैंने" is the ergative first
+    # person; "क्योंकि", "कैसे", "अनुसार", "वही", "आपने", "बाद", "पहले", "चारों"
+    # are conjunctions, interrogatives, postpositions and numerals.
+    "आज", "मैंने", "क्योंकि", "कैसे", "अनुसार", "वही", "वही", "आपने",
+    "बाद", "पहले", "चारों", "जानो", "मुझमें",
+    # A conditional conjunction and a numeral.
+    "यदि", "दो",
 }
 # Renderings the subject matter compels. There is no second way to say that
 # someone is the son of Subhadra, that a maharatha is a great chariot-warrior,
@@ -151,6 +163,24 @@ FORCED_EN = {
     "sees", "speaks", "hears", "hearing", "heard", "knows", "know",
     "victory", "victorious", "win", "wins", "won", "conquer", "conquered",
     "enjoy", "enjoys", "enjoyment", "enjoyments",
+    # Chapter 4's technical nouns. sakha is a friend and rahasya is a secret;
+    # indriya, agni, samyama and vishaya are the senses, fires, restraint and
+    # objects, and 4.26 is nothing but those four words twice. Each has exactly
+    # one ordinary English equivalent.
+    "friend", "secret", "senses", "sense", "fires", "restraint", "objects",
+    "births", "knowledge", "offering", "offerings", "brahman",
+    # apare is "some" or "others" and deva is "gods"; bahuvidha is "many" kinds
+    # and mukha is a "mouth". A determiner, a numeral, a body part and the one
+    # English word for a class of beings -- plus jnatva, for which "knowing" is
+    # the same forced form as the "know" already listed above.
+    "some", "gods", "god", "many", "mouth", "knowing",
+    # "nor" is a conjunction and "use" renders the kim-artha of 1.32, an
+    # interrogative asking what something is for. prajna is a technical term
+    # with one ordinary English equivalent, and "whose" is a relative pronoun.
+    "nor", "use", "wisdom", "whose", "kinds", "kind",
+    # karma in its plainest sense. 1.15 lists whose conch is whose, and
+    # "deeds" is the one English noun for the karman that qualifies a name.
+    "deeds", "deed",
 }
 FORCED_HI = {
     "पुत्र", "पुत्रों", "पुत्रो", "पिता", "माता", "भाई", "पितामह", "पितरों",
@@ -178,6 +208,17 @@ FORCED_HI = {
     "काटते", "काटता", "काटा", "जलाती", "जलाता", "जलाया", "भिगोता", "भिगोया",
     "सुखाती", "सुखाता", "सुखाया", "आग", "जल", "वायु", "पवन",
     "जन्म", "जन्मता", "जन्मा", "मरता", "मृत्यु",
+    # Chapter 4's technical nouns in Devanagari, and the varna verse's own
+    # vocabulary. sakha, rahasya, yoga, guna and varna are carried over from the
+    # Sanskrit unchanged; Hindi has no second form of any of them to choose.
+    "सखा", "रहस्य", "योग", "गुण", "वर्ण", "ज्ञान", "इन्द्रियों", "इन्द्रिय",
+    "संयम", "विषयों", "अर्पण", "ब्रह्म", "मनु", "इक्ष्वाकु", "उत्तम",
+    # shreyas is "श्रेष्ठ" and prakara is "प्रकार" -- a comparative and the one
+    # Hindi noun for a sort or class of thing.
+    "श्रेष्ठ", "प्रकार",
+    # 1.9's two compounds: tyakta-jivitah is having given up one's life and
+    # yuddha-visharadah is skilled in war. Hindi has one word for each half.
+    "त्यागने", "त्यागकर", "निपुण",
 }
 FORCED_TERMS = FORCED_EN | FORCED_HI
 
@@ -217,7 +258,7 @@ PROPER = {
     # Bharata; "scorcher of foes" is that name in English and there is no
     # version of it to own. Same for arisudana and purusharshabha.
     "parantapa", "scorcher", "foes", "foe", "arisudana", "enemies", "enemy",
-    "mahabaho", "purusharshabha", "bull", "rulers",
+    "mahabaho", "purusharshabha", "bull", "rulers", "armed",
 }
 
 STOPWORDS = STOP_EN | STOP_HI | FORCED_TERMS | PROPER
