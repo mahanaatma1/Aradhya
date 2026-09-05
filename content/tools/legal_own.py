@@ -181,6 +181,16 @@ FORCED_EN = {
     # karma in its plainest sense. 1.15 lists whose conch is whose, and
     # "deeds" is the one English noun for the karman that qualifies a name.
     "deeds", "deed",
+    # 5.8 is thirteen bodily actions in a row and each is a single Sanskrit
+    # participle: sprishan, jighran, ashnan, svapan, shvasan. English has one
+    # word for each of touching, smelling, eating, sleeping and breathing, and
+    # the source fixes their sequence, so the whole run is subject matter --
+    # the same situation as the kinship list of 1.26 and the four elements of
+    # 2.23. gachchhan is deliberately NOT listed: "going", "walking" and
+    # "moving" are all available there, so that one stays a choice and is
+    # scored. Also nasa, the nose, and bhruvoh, the brows, of 5.27.
+    "touching", "smelling", "eating", "sleeping", "breathing", "breath",
+    "nose", "brows", "eyes", "cow", "elephant", "dog",
 }
 FORCED_HI = {
     "पुत्र", "पुत्रों", "पुत्रो", "पिता", "माता", "भाई", "पितामह", "पितरों",

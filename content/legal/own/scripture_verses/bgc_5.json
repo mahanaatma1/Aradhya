@@ -1,0 +1,242 @@
+{
+ "slug": "bgc_5",
+ "title_en": "Karma Sanyasa Yoga",
+ "title_hi": "कर्म संन्यास योग",
+ "book_id": 5,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 205,
+   "number": "5.1",
+   "body_en": "Arjuna said: You speak well of laying works down, Krishna, and then of yoga again. Of these two, which is the better one? Tell me that, and settle it.",
+   "body_hi": "अर्जुन ने कहा — आप कर्म रख देने की बात सराहते हैं, कृष्ण, और फिर योग की भी। इन दोनों में बेहतर कौन है? वही मुझे बता दें, और तय कर दें।",
+   "commentary_en": "Sunishchitam, decided: Arjuna is not asking for more teaching, he is asking for a verdict, and the word is placed last so that the demand lands as the last thing said. Four chapters of both-and have worn him down. Note that his complaint is fair — the chapter before ended by telling him to lay works down by yoga and then to stand up and fight, and he has noticed.",
+   "commentary_hi": "'सुनिश्चितम्', तय किया हुआ: अर्जुन और उपदेश नहीं माँग रहा, वह निर्णय माँग रहा है, और शब्द अन्त में रखा गया है ताकि यह तक़ाज़ा अन्तिम बात बनकर गिरे। चार अध्यायों के 'यह भी और वह भी' ने उसे थका दिया है। ध्यान दें कि उसकी शिकायत जायज़ है — पिछला अध्याय उसे योग से कर्म रख देने को कहकर और फिर उठकर लड़ने को कहकर बन्द हुआ था, और यह उसने देख लिया है।"
+  },
+  {
+   "id": 206,
+   "number": "5.2",
+   "body_en": "The Blessed One said: Laying works down and the yoga of work both carry a man to the good. Of the two, though, the yoga of work stands out above laying works down.",
+   "body_hi": "भगवान् ने कहा — कर्म रख देना और कर्म का योग, दोनों मनुष्य को कल्याण तक ले जाते हैं। पर दोनों में कर्म का योग, कर्म रख देने से ऊपर ठहरता है।",
+   "commentary_en": "He does answer, which is worth noting after 5.1's complaint. The structure is an equality followed by a preference: both work, and one is better. Vishishyate is to be marked out, distinguished from — not to defeat but to stand out. The concession comes first and takes up the whole first line, so the ranking arrives as a refinement rather than as a rejection of what was just granted.",
+   "commentary_hi": "वे उत्तर देते हैं, और 5.1 की शिकायत के बाद यह देखने योग्य है। रचना पहले बराबरी और फिर वरीयता की है: दोनों चलते हैं, और एक बेहतर है। 'विशिष्यते' अलग दिखना है, चिह्नित हो जाना — हराना नहीं, ऊपर ठहरना। रियायत पहले आती है और पूरी पहली पंक्ति ले लेती है, सो क्रम अभी दी गई बात के खण्डन के बजाय उसके परिष्कार की तरह आता है।"
+  },
+  {
+   "id": 207,
+   "number": "5.3",
+   "body_en": "Take it that the man who has laid works down for good is the one who neither loathes anything nor hankers after it. Once he is out of the pairs, mighty-armed, he is let out of his bonds, and easily.",
+   "body_hi": "यह मान लो कि जिसने कर्म सदा के लिए रख दिए वह वही है जो न किसी से घृणा करता है, न किसी की लालसा। जोड़ों से निकल जाने पर, महाबाहो, वह अपने बन्धनों से छूट जाता है, और सहज ही।",
+   "commentary_en": "Nitya-sannyasi, the standing renouncer, and the definition given for it has nothing to do with what a man has left behind — only with two movements he no longer makes. This is the manoeuvre the chapter exists to perform: renunciation is redescribed as an inner condition, at which point the argument of 5.2 stops being a choice between two lives. Sukham, easily, is thrown in almost casually.",
+   "commentary_hi": "'नित्यसंन्यासी', सदा का संन्यासी, और उसके लिए दी गई परिभाषा का इससे कोई सम्बन्ध नहीं कि मनुष्य ने पीछे क्या छोड़ा — केवल उन दो गतियों से है जो वह अब नहीं करता। यही वह चाल है जिसके लिए अध्याय है: संन्यास को भीतरी अवस्था के रूप में फिर से कहा जाता है, और उसी क्षण 5.2 का तर्क दो जीवनों के बीच का चुनाव रहना बन्द कर देता है। 'सुखम्', सहज ही, लगभग लापरवाही से जोड़ दिया गया है।"
+  },
+  {
+   "id": 208,
+   "number": "5.4",
+   "body_en": "It is children who go about saying that the reckoning and the yoga are two things; the learned do not. A man properly settled in even one of them comes into what both of them bear.",
+   "body_hi": "बच्चे ही घूम-घूमकर कहते हैं कि गिनती और योग दो चीज़ें हैं; जानकार नहीं कहते। जो मनुष्य इनमें एक में भी ठीक से बैठ गया, वह दोनों का दिया हुआ पा लेता है।",
+   "commentary_en": "Balah is not a soft word. Children, and the poem means immature rather than innocent — the only place in the Gita where a position is dismissed by naming the age of the people who hold it. Note pravadanti, go about declaring: the objection is to a habit of saying rather than to a doctrine. And ekam api, even one, quietly makes the choice Arjuna demanded unnecessary.",
+   "commentary_hi": "'बालाः' नरम शब्द नहीं है। बच्चे, और काव्य का अर्थ भोले नहीं, अपरिपक्व है — गीता में यही एक जगह है जहाँ किसी मत को यह बताकर ख़ारिज किया गया है कि उसे मानने वालों की उम्र क्या है। 'प्रवदन्ति' देखें, घूमकर घोषित करना: आपत्ति किसी सिद्धान्त पर नहीं, कहने की आदत पर है। और 'एकमपि', एक में भी, चुपचाप उस चुनाव को अनावश्यक कर देता है जिसका अर्जुन ने तक़ाज़ा किया था।"
+  },
+  {
+   "id": 209,
+   "number": "5.5",
+   "body_en": "The standing-place the reckoners arrive at is reached by the yogas as well. Whoever sees the reckoning and the yoga as one thing — he sees.",
+   "body_hi": "जिस ठहरने की जगह तक गिनने वाले पहुँचते हैं, वहाँ योग भी पहुँच जाते हैं। जो गिनती और योग को एक ही वस्तु देखता है — वही देखता है।",
+   "commentary_en": "Yah pashyati sa pashyati: whoever sees, he sees. The line ends on a tautology and the tautology is the point — there is no predicate to supply, because seeing this is the whole of seeing. Note sthanam, a standing-place: a destination described as somewhere you stop rather than something you get. The word will be picked up by the sthiti that ends the poem's arguments elsewhere.",
+   "commentary_hi": "'यः पश्यति स पश्यति': जो देखता है, वही देखता है। पंक्ति पुनरुक्ति पर ख़त्म होती है और वही पुनरुक्ति बात है — कोई विधेय देने को नहीं, क्योंकि इसे देख लेना ही पूरा देखना है। 'स्थानम्' देखें, ठहरने की जगह: गन्तव्य का वर्णन उस स्थान की तरह जहाँ आप रुक जाते हैं, उस वस्तु की तरह नहीं जो आपको मिलती है। इसी शब्द को वह 'स्थिति' उठाएगी जो काव्य के तर्क अन्यत्र बन्द करती है।"
+  },
+  {
+   "id": 210,
+   "number": "5.6",
+   "body_en": "But laying works down is hard to come by without yoga, mighty-armed. The sage whom yoga has joined up reaches brahman, and does not take long over it.",
+   "body_hi": "पर योग के बिना कर्म रख देना कठिनाई से हाथ आता है, महाबाहो। जिस मुनि को योग ने जोड़ लिया, वह ब्रह्म तक पहुँच जाता है, और उसमें देर नहीं करता।",
+   "commentary_en": "Ayogatah, from not having yoga, and the verse says renunciation is duhkham aptum — painful to obtain, hard to get hold of. So the ranking of 5.2 is now given a reason: one of the two roads runs through the other. Nachirena, not after long, is the third time the poem has promised the result is close by, and each time it is offered to a man who has to act now.",
+   "commentary_hi": "'अयोगतः', योग के अभाव से, और श्लोक कहता है कि संन्यास 'दुःखमाप्तुम्' है — कष्ट से मिलने वाला, कठिनाई से हाथ आने वाला। सो 5.2 के क्रम को अब कारण मिल जाता है: दो रास्तों में से एक दूसरे से होकर जाता है। 'नचिरेण', देर बाद नहीं, तीसरी बार काव्य वचन देता है कि फल पास है, और हर बार वह उस मनुष्य को दिया गया है जिसे अभी कुछ करना है।"
+  },
+  {
+   "id": 211,
+   "number": "5.7",
+   "body_en": "Joined up by yoga, washed clean in himself, having beaten himself, his senses beaten, his own self become the self of every being that is — he acts, and no smear comes off on him.",
+   "body_hi": "योग से जुड़ा हुआ, अपने में धुला हुआ, अपने को जीत चुका, इन्द्रियाँ जीत चुका, अपना आप हर उस प्राणी का आप बना हुआ जो है — वह करता है, और उस पर कोई दाग़ नहीं चढ़ता।",
+   "commentary_en": "Sarva-bhutatma-bhutatma is a knot even in Sanskrit — atma four times over in two words, the self of all beings become one's own self. The poem is deliberately making the reader work, and the difficulty is the content: there is no easy way to say this because the thing said is not easy. Then na lipyate, the smear of 4.14, now denied of a man rather than of a god.",
+   "commentary_hi": "'सर्वभूतात्मभूतात्मा' संस्कृत में भी एक गाँठ है — दो शब्दों में चार बार 'आत्मा', सब प्राणियों का आप अपना आप बना हुआ। काव्य जान-बूझकर पाठक से मेहनत करवा रहा है, और वह कठिनाई ही अन्तर्वस्तु है: इसे कहने का कोई सरल ढंग नहीं क्योंकि जो कहा जा रहा है वह सरल नहीं। फिर 'न लिप्यते', 4.14 का वही दाग़, अब देवता के बजाय मनुष्य के विषय में नकारा हुआ।"
+  },
+  {
+   "id": 212,
+   "number": "5.8",
+   "body_en": "The yoked man who knows how things stand should hold that he is not doing anything at all — while he is seeing, hearing, touching, smelling, eating, going, sleeping, breathing,",
+   "body_hi": "जुता हुआ मनुष्य, जो जानता है बात कैसी है, यह थामे रखे कि वह कुछ नहीं कर रहा — देखते हुए, सुनते हुए, छूते हुए, सूँघते हुए, खाते हुए, चलते हुए, सोते हुए, श्वास लेते हुए,",
+   "commentary_en": "The line breaks off unfinished and runs into the next verse, which the Gita almost never does — the list is allowed to overflow its own container. Eight participles here and five more to come, and what they describe is nobody's spiritual life: smelling, eating, sleeping. The claim of 4.20 was abstract. This is the same claim with a body attached to it.",
+   "commentary_hi": "पंक्ति अधूरी टूटकर अगले श्लोक में चली जाती है, और गीता ऐसा लगभग कभी नहीं करती — सूची को अपना ही पात्र छलकाने की छूट मिली है। यहाँ आठ क्रियारूप और पाँच आगे आने वाले, और जिनका वे वर्णन करते हैं वह किसी का आध्यात्मिक जीवन नहीं है: सूँघना, खाना, सोना। 4.20 का दावा अमूर्त था। यह वही दावा है, जिसके साथ एक देह जुड़ी हुई है।"
+  },
+  {
+   "id": 213,
+   "number": "5.9",
+   "body_en": "chattering, letting go, taking hold, opening his eyes and shutting them again — keeping in mind, all through it, that the senses are the things going about among what the senses are for.",
+   "body_hi": "बकते हुए, छोड़ते हुए, पकड़ते हुए, आँखें खोलते और फिर मूँदते हुए — इस सबके बीच यह मन में रखते हुए कि जो विषयों में घूम रही हैं वे इन्द्रियाँ हैं।",
+   "commentary_en": "Unmishan nimishan: opening the eyes, shutting them. Thirteen actions and the list ends on blinking, which is as close to nothing as a living body gets — the poem has picked the smallest possible action to make its largest possible point. Dharayan is holding, keeping in place: the seeing of 5.5 turns out to require maintenance, something carried through the whole of an ordinary day.",
+   "commentary_hi": "'उन्मिषन् निमिषन्': आँखें खोलना, मूँदना। तेरह क्रियाएँ, और सूची पलक झपकने पर ख़त्म होती है, और जीवित देह से यह लगभग कुछ न करने के बराबर है — काव्य ने अपनी सबसे बड़ी बात कहने के लिए सबसे छोटी सम्भव क्रिया चुनी है। 'धारयन्' थामना है, जगह पर रखना: 5.5 का देखना सँभाल माँगता निकलता है, कोई ऐसी वस्तु जिसे रोज़ के पूरे दिन भर ढोया जाए।"
+  },
+  {
+   "id": 214,
+   "number": "5.10",
+   "body_en": "The man who puts his works into brahman and lets his hold on them go, and then acts — no wrong smears him, any more than water smears the leaf of a lotus.",
+   "body_hi": "जो मनुष्य अपने कर्म ब्रह्म में रख देता है और उन पर अपनी पकड़ छोड़ देता है, और फिर करता है — उस पर कोई पाप वैसे ही नहीं चढ़ता जैसे कमल के पत्ते पर जल नहीं चढ़ता।",
+   "commentary_en": "The lotus leaf is the third image the poem has made from water, after the sea taking the rivers at 2.70 and the boat blown off course at 2.67. And it is the most precise of them: the leaf is not dry, it is wet and unwetted at once, water sitting on it in beads that never soak in. Contact without absorption is exactly the position the last three verses have been describing.",
+   "commentary_hi": "कमल का पत्ता काव्य का जल से बनाया तीसरा चित्र है, 2.70 के नदियाँ लेते समुद्र और 2.67 के राह से उड़ी नाव के बाद। और उन सबमें सबसे सटीक: पत्ता सूखा नहीं है, वह एक ही साथ गीला और बिन-भीगा है, जल उस पर बूँदों में बैठा हुआ जो भीतर कभी नहीं उतरतीं। स्पर्श और उसमें डूबना नहीं — ठीक वही जगह है जिसका पिछले तीन श्लोक वर्णन कर रहे थे।"
+  },
+  {
+   "id": 215,
+   "number": "5.11",
+   "body_en": "With the body, with the mind, with the understanding, and with nothing more than the senses too — the yogins do their work, letting their hold on it go, so as to get themselves clean.",
+   "body_hi": "देह से, मन से, बुद्धि से, और केवल इन्द्रियों से भी — योगी अपना काम करते हैं, उस पर अपनी पकड़ छोड़ते हुए, अपने को निर्मल करने के लिए।",
+   "commentary_en": "Four instruments, listed from the outside in, and then kevalaih, merely: even work done with nothing but the senses counts. Atma-shuddhaye is the stated purpose and it is a modest one — not liberation, not knowledge, just getting oneself clean. Note that this is the only place the chapter gives work a reason of its own rather than defending it against renunciation.",
+   "commentary_hi": "चार साधन, बाहर से भीतर की ओर गिनाए हुए, और फिर 'केवलैः', मात्र: वह काम भी गिना जाता है जो इन्द्रियों के सिवा किसी से न हो। 'आत्मशुद्धये' बताया गया प्रयोजन है और वह विनम्र है — मुक्ति नहीं, ज्ञान नहीं, बस अपने को निर्मल करना। ध्यान दें कि अध्याय में यही एक जगह है जहाँ कर्म को संन्यास के विरुद्ध बचाने के बजाय उसका अपना कारण दिया गया है।"
+  },
+  {
+   "id": 216,
+   "number": "5.12",
+   "body_en": "The yoked man lets go of what work bears and comes into a peace that stays put. The unyoked man, driven along by his wanting, stuck fast to the fruit, gets tied down.",
+   "body_hi": "जुता हुआ मनुष्य कर्म के दिए को छोड़ देता है और उस शान्ति में आ जाता है जो टिकी रहती है। बिन-जुता मनुष्य, अपनी चाह से हाँका हुआ, फल से चिपका हुआ, बँध जाता है।",
+   "commentary_en": "Naishthiki is peace with a settled quality, from nishtha, a standing-firm — the poem is careful to distinguish it from the peace a man feels when things go well. Note kama-karena, by the doing of wanting: the unyoked man is not blamed for choosing badly, he is described as driven, the grammar putting the agency in his appetite rather than in him.",
+   "commentary_hi": "'नैष्ठिकी' ठहरे गुण वाली शान्ति है, 'निष्ठा' से, जमकर खड़ा होना — काव्य उसे उस शान्ति से अलग रखने का ध्यान रखता है जो मनुष्य को बात बन जाने पर होती है। 'कामकारेण' देखें, चाह के किए से: बिन-जुते मनुष्य पर ग़लत चुनने का दोष नहीं, उसे हाँका हुआ बताया गया है, और व्याकरण कर्तापन उसमें नहीं, उसकी भूख में रख देता है।"
+  },
+  {
+   "id": 217,
+   "number": "5.13",
+   "body_en": "Laying all his works down with his mind, the man who has himself in hand sits at ease — the one inside the body, inside a town of nine gates, neither doing anything nor having anything done.",
+   "body_hi": "अपने सारे कर्म मन से रख देकर, जिसके पास अपना आप है वह चैन से बैठता है — देह के भीतर वाला, नौ फाटकों के नगर के भीतर, न कुछ करता हुआ, न करवाता हुआ।",
+   "commentary_en": "Nava-dvare pure: a town with nine gates. It is the poem's driest joke — the body counted up as municipal architecture, two eyes, two ears, two nostrils and the rest, and the resident described as sitting inside it at ease. Note that the renouncing here is done manasa, with the mind, which is the whole of 5.3's redefinition compressed into one instrumental case.",
+   "commentary_hi": "'नवद्वारे पुरे': नौ फाटकों वाला नगर। यह काव्य का सबसे सूखा मज़ाक़ है — देह को नगर-निर्माण की तरह गिन लिया गया, दो आँखें, दो कान, दो नथुने और शेष, और भीतर रहने वाले को उसमें चैन से बैठा बताया गया। ध्यान दें कि यहाँ रख देना 'मनसा' है, मन से, और यह 5.3 की पूरी नई परिभाषा को एक ही करण-कारक में भर देता है।"
+  },
+  {
+   "id": 218,
+   "number": "5.14",
+   "body_en": "The one in charge does not make the world's doership, or its works, or the joining of works to what they bear. It is a thing's own way of being that carries on.",
+   "body_hi": "जो अधिकार में है वह संसार का कर्तापन नहीं बनाता, न उसके कर्म, न कर्मों का उनके फल से जुड़ना। जो चलता रहता है वह वस्तु का अपना ढंग है।",
+   "commentary_en": "Three denials of things a god is ordinarily supposed to do, and then svabhavas tu pravartate — one's own nature carries on, with nobody driving. The verse is the poem at its least devotional: the machinery of consequence runs by itself, and the lord is explicitly not its operator. It is also what makes 5.15 possible.",
+   "commentary_hi": "उन तीन बातों का निषेध जो देवता के करने की साधारण अपेक्षा है, और फिर 'स्वभावस्तु प्रवर्तते' — अपना स्वभाव चलता रहता है, और कोई हाँकने वाला नहीं। श्लोक काव्य का सबसे कम भक्तिपरक क्षण है: परिणाम का तन्त्र अपने आप चलता है, और स्वामी स्पष्ट रूप से उसका चालक नहीं है। और यही 5.15 को सम्भव बनाता है।"
+  },
+  {
+   "id": 219,
+   "number": "5.15",
+   "body_en": "The one who reaches everywhere takes on nobody's wrong, and nobody's good work either. Knowing is kept covered by not-knowing, and that is what leaves creatures fogged.",
+   "body_hi": "जो सब जगह पहुँचा हुआ है वह न किसी का पाप अपने पर लेता है, न किसी का सुकर्म। जानना न-जानने से ढका रहता है, और उसी से प्राणी धुँधले पड़े रहते हैं।",
+   "commentary_en": "This is a large claim and it is made in half a line: the pervading one keeps no ledger. Neither sin nor merit is taken up, which removes the bookkeeper from a universe that still has consequences in it — 5.14 having just explained who runs those instead. Note avritam, covered over: ignorance is not an absence of knowledge but a lid on it.",
+   "commentary_hi": "यह बड़ा दावा है और आधी पंक्ति में किया गया है: जो सर्वत्र है वह कोई बही नहीं रखता। न पाप उठाया जाता है, न पुण्य, और इससे उस विश्व से मुनीम हट जाता है जिसमें परिणाम अब भी हैं — 5.14 ने अभी बताया है कि उन्हें कौन चलाता है। 'आवृतम्' देखें, ढका हुआ: अज्ञान ज्ञान का अभाव नहीं, उस पर रखा ढक्कन है।"
+  },
+  {
+   "id": 220,
+   "number": "5.16",
+   "body_en": "But in those whose not-knowing about themselves has been undone by knowing, their knowing lights that highest thing up the way the sun does.",
+   "body_hi": "पर जिनका अपने विषय का न-जानना जानने से मिट गया, उनका जानना उस परम वस्तु को वैसे उजागर करता है जैसे सूर्य करता है।",
+   "commentary_en": "Adityavat, sun-like, and the image is chosen to answer the lid of the last verse: sunlight does not make things, it uncovers what was there in the dark. Note that the verse says nashitam, destroyed, of the ignorance and not of anything else — nothing is added to the man. The chapter's account of knowledge is consistently subtractive.",
+   "commentary_hi": "'आदित्यवत्', सूर्य जैसा, और चित्र पिछले श्लोक के ढक्कन का उत्तर देने के लिए चुना गया है: सूर्य का प्रकाश वस्तुएँ बनाता नहीं, वह उजागर करता है जो अँधेरे में थीं। ध्यान दें कि श्लोक 'नाशितम्', नष्ट हुआ, अज्ञान के विषय में कहता है, किसी और के विषय में नहीं — मनुष्य में कुछ जोड़ा नहीं जाता। ज्ञान का इस अध्याय का लेखा लगातार घटाव का है।"
+  },
+  {
+   "id": 221,
+   "number": "5.17",
+   "body_en": "Their understanding on it, their selves on it, standing on it, with it as the one place they are going — they go where there is no coming round again, their smudges shaken off them by knowing.",
+   "body_hi": "बुद्धि उस पर, अपना आप उस पर, उस पर खड़े, और वही एक जगह जहाँ वे जा रहे हैं — वे वहाँ जाते हैं जहाँ फिर लौटना नहीं, उनके धब्बे जानने से झाड़ दिए हुए।",
+   "commentary_en": "Four compounds, each beginning with the same syllable — tad, that — so the line drums the pronoun four times before it will say what happens. The construction is doing what it describes: everything pointed one way. Nirdhuta is shaken off, the way dust is shaken out of cloth, and it is a lighter verb than the burning the chapter before preferred.",
+   "commentary_hi": "चार समास, और हर एक उसी अक्षर से शुरू — 'तत्', वह — सो पंक्ति यह कहने से पहले सर्वनाम को चार बार पीटती है कि होता क्या है। रचना वही कर रही है जिसका वह वर्णन करती है: सब कुछ एक ही ओर तना हुआ। 'निर्धूत' झाड़ दिया हुआ है, जैसे कपड़े से धूल झाड़ी जाती है, और यह उस जलाने से हल्की क्रिया है जो पिछले अध्याय को भाती थी।"
+  },
+  {
+   "id": 222,
+   "number": "5.18",
+   "body_en": "In a brahmin who has both learning and manners, in a cow, in an elephant, in a dog, and in the man who cooks a dog — the learned are the ones who look and see one thing.",
+   "body_hi": "उस ब्राह्मण में जिसके पास विद्या और शिष्टता दोनों हैं, गाय में, हाथी में, कुत्ते में, और उस मनुष्य में जो कुत्ता पकाता है — जानकार वे हैं जो देखकर एक ही वस्तु देखते हैं।",
+   "commentary_en": "Five items and the poem sets its two extremes at either end of the list on purpose: the most respectable person a listener could name, and the least. Shvapaka is not a euphemism and the verse does not soften it. Sama-darshinah, seers of the same — and note that the word for the learned is the same panditah that 4.19 used, so the chapter's title of honour is spent here.",
+   "commentary_hi": "पाँच वस्तुएँ, और काव्य अपने दो छोर सूची के दोनों सिरों पर जान-बूझकर रखता है: वह सबसे आदरणीय व्यक्ति जिसका नाम सुनने वाला ले सकता था, और सबसे कम। 'श्वपाक' कोई शिष्ट फेर नहीं है और श्लोक उसे नरम नहीं करता। 'समदर्शिनः', समान देखने वाले — और ध्यान दें कि जानकारों का शब्द वही 'पण्डिताः' है जो 4.19 में था, सो अध्याय अपना आदर का पद यहाँ ख़र्च करता है।"
+  },
+  {
+   "id": 223,
+   "number": "5.19",
+   "body_en": "Right here, and not somewhere later, the whole of creation has been beaten by those whose minds stand in evenness. Brahman has no flaw in it and no unevenness, and so it is in brahman that they stand.",
+   "body_hi": "यहीं, कहीं आगे नहीं, सृष्टि पूरी उन लोगों से हार चुकी है जिनके मन समता में खड़े हैं। ब्रह्म में कोई दोष नहीं और कोई ऊँच-नीच नहीं, सो वे ब्रह्म में ही खड़े हैं।",
+   "commentary_en": "Ihaiva, right here: the victory is not deferred to a death or an afterlife, and the poem says so with its first word. Jitah sargah, creation conquered, is a startling thing to claim for a mental state. Then the reasoning runs backwards from the property to the location — because brahman is even, whoever is even is in it, and the sameness of 5.18 turns out to have been an address.",
+   "commentary_hi": "'इहैव', यहीं: विजय किसी मृत्यु या परलोक पर टाली नहीं गई, और काव्य यह अपने पहले शब्द से कह देता है। 'जितः सर्गः', सृष्टि जीत ली गई, किसी मानसिक अवस्था के लिए चौंकाने वाला दावा है। फिर तर्क गुण से जगह की ओर उलटा चलता है — क्योंकि ब्रह्म सम है, सो जो सम है वह उसी में है, और 5.18 की समता एक पता निकलती है।"
+  },
+  {
+   "id": 224,
+   "number": "5.20",
+   "body_en": "He should not thrill at getting what he likes, nor flinch at getting what he does not. Firm in understanding, not to be fooled, knowing brahman, he stands in brahman.",
+   "body_hi": "जो भाता है वह मिलने पर वह उछले नहीं, और जो नहीं भाता वह मिलने पर सिहरे नहीं। बुद्धि में जमा, ठगा न जाने वाला, ब्रह्म को जानता हुआ, वह ब्रह्म में खड़ा है।",
+   "commentary_en": "Prahrishyet is the bodily lift of good news — hair standing up, the same root as the horripilation of chapter one. Against it udvijet, the shrinking away, from the udvega of 2.56. So the verse describes the two reflexes physically rather than morally, which is the poem's habit: it keeps locating equanimity in the body before it locates it in the mind.",
+   "commentary_hi": "'प्रहृष्येत्' अच्छी ख़बर की देहगत उठान है — रोम खड़े हो जाना, वही धातु जो पहले अध्याय के रोमांच की थी। उसके सामने 'उद्विजेत्', सिकुड़कर हट जाना, 2.56 के 'उद्वेग' से। सो श्लोक दोनों प्रतिवर्तों का वर्णन नैतिक ढंग से नहीं, देह के ढंग से करता है, और यह काव्य की आदत है: वह समता को मन में रखने से पहले देह में रखता है।"
+  },
+  {
+   "id": 225,
+   "number": "5.21",
+   "body_en": "The man whose self is not stuck to the touches that come from outside finds the happiness that is inside himself. His self joined up in the yoga of brahman, he gets a happiness that does not wear thin.",
+   "body_hi": "जिस मनुष्य का आप बाहर से आने वाले स्पर्शों से चिपका नहीं, वह उस सुख को पा लेता है जो उसके भीतर है। उसका आप ब्रह्म के योग में जुड़ा हुआ, वह ऐसा सुख पाता है जो घिसता नहीं।",
+   "commentary_en": "Bahya-sparsha, the outside touch, and sparsha covers every contact between a sense and its object — the verse is not about pleasure but about the whole traffic of the world coming in. Akshayam, undecaying, is set against it as the one thing that does not run out. Note vindati, finds, as at 4.38: the happiness is come upon and not built.",
+   "commentary_hi": "'बाह्यस्पर्श', बाहर का स्पर्श, और 'स्पर्श' इन्द्रिय और विषय के हर सम्पर्क को ढकता है — श्लोक सुख के विषय में नहीं, संसार के भीतर आने वाले पूरे आवागमन के विषय में है। 'अक्षयम्', न घटने वाला, उसके सामने उस एक वस्तु की तरह रखा है जो चुकती नहीं। 'विन्दति' देखें, पा लेता है, जैसा 4.38 में था: वह सुख मिल जाता है, बनाया नहीं जाता।"
+  },
+  {
+   "id": 226,
+   "number": "5.22",
+   "body_en": "The pleasures that are born of contact are wombs of pain, and nothing else. They have a beginning and they have an end, Kaunteya. The man with sense takes no delight in them.",
+   "body_hi": "जो भोग सम्पर्क से जन्मते हैं वे दुख की कोख हैं, और कुछ नहीं। उनका आदि है और अन्त है, कौन्तेय। समझ वाला मनुष्य उनमें रमता नहीं।",
+   "commentary_en": "Duhkha-yonayah: wombs of pain. The image does not say pleasures bring suffering, it says they give birth to it — the suffering is their offspring and shares their blood. Then adyantavantah, having a beginning and an end, which is offered as a second and separate objection: even taken on their own terms they run out. Two arguments, and only the first is moral.",
+   "commentary_hi": "'दुःखयोनयः': दुख की कोख। चित्र यह नहीं कहता कि भोग दुख लाते हैं, वह कहता है कि वे उसे जन्म देते हैं — दुख उनकी सन्तान है और उनका ही रक्त है। फिर 'आद्यन्तवन्तः', जिनका आदि और अन्त है, और यह दूसरी अलग आपत्ति की तरह दिया गया है: उन्हीं की शर्तों पर लें तो भी वे चुक जाते हैं। दो तर्क, और उनमें पहला ही नैतिक है।"
+  },
+  {
+   "id": 227,
+   "number": "5.23",
+   "body_en": "The man who can put up with the rush that comes up out of wanting and out of anger — put up with it here, before he is let out of the body — that man is yoked, and that man is happy.",
+   "body_hi": "जो मनुष्य उस उछाल को सह सकता है जो चाह से और क्रोध से उठती है — यहीं सह सकता है, देह से छूटने से पहले — वही मनुष्य जुता हुआ है, और वही सुखी है।",
+   "commentary_en": "Vega is a rush, a surge, the word for a current or a fit — not a temptation to be resisted but a force that arrives. And sodhum is to bear it, endure it, which is a lower and more honest verb than conquer. Note prak sharira-vimokshanat, before the body is let go: the poem again refuses to let the achievement be postponed to a deathbed.",
+   "commentary_hi": "'वेग' उछाल है, बहाव, धारे या दौरे का शब्द — कोई ऐसा लोभ नहीं जिससे लड़ा जाए, बल्कि वह बल जो आ पड़ता है। और 'सोढुम्' उसे सहना है, झेलना, और यह जीतने से नीची और अधिक ईमानदार क्रिया है। 'प्राक् शरीरविमोक्षणात्' देखें, देह छूटने से पहले: काव्य फिर उपलब्धि को मृत्युशय्या पर टलने नहीं देता।"
+  },
+  {
+   "id": 228,
+   "number": "5.24",
+   "body_en": "The man whose happiness is on the inside, whose pleasure garden is on the inside, and whose light is on the inside too — that yogin has become brahman, and reaches the going-out in brahman.",
+   "body_hi": "जिस मनुष्य का सुख भीतर है, जिसका बाग़ भीतर है, और जिसका उजाला भी भीतर है — वह योगी ब्रह्म बन चुका, और ब्रह्म-निर्वाण तक पहुँच जाता है।",
+   "commentary_en": "Antararama: the garden inside. Arama is a pleasure ground, a walled grove of the kind a rich man keeps to walk in, and the compound puts one indoors — the most physical and least abstract of the three inward things listed. Note brahma-bhutah before adhigachchhati: he has already become it, and then arrives. The order is not a mistake.",
+   "commentary_hi": "'अन्तराराम': भीतर का बाग़। 'आराम' विहार की जगह है, चारदीवारी वाला उपवन, जैसा धनी लोग घूमने के लिए रखते हैं, और समास उसे भीतर ले आता है — तीनों भीतरी वस्तुओं में सबसे देहगत और सबसे कम अमूर्त। 'अधिगच्छति' से पहले 'ब्रह्मभूतः' देखें: वह पहले ही बन चुका है, और फिर पहुँचता है। यह क्रम भूल नहीं है।"
+  },
+  {
+   "id": 229,
+   "number": "5.25",
+   "body_en": "The seers come into the going-out in brahman — their smudges worn thin, their being-of-two-minds cut through, themselves reined in, and glad to be doing what is good for every being there is.",
+   "body_hi": "ऋषि ब्रह्म-निर्वाण में आ जाते हैं — उनके धब्बे घिस चुके, उनका दुचित्तापन कट चुका, अपने आप को साधे हुए, और हर प्राणी के भले में लगे रहकर प्रसन्न।",
+   "commentary_en": "Sarva-bhuta-hite ratah, taking pleasure in the good of all beings, and it is the last item in the list rather than an afterthought. The poem's liberated man is not withdrawn — he is described in the same breath as the man who has cut off his own doubleness, so the two are one condition. Chhinna-dvaidha is the doubt of 4.42 cut a second time, and with the same verb.",
+   "commentary_hi": "'सर्वभूतहिते रताः', सब प्राणियों के भले में रमे हुए, और यह सूची का अन्तिम पद है, कोई पिछली सोच नहीं। काव्य का मुक्त मनुष्य सिमटा हुआ नहीं है — उसका वर्णन उसी साँस में है जिसमें उस मनुष्य का जिसने अपना दुचित्तापन काट डाला, सो दोनों एक ही अवस्था हैं। 'छिन्नद्वैध' 4.42 का सन्देह दूसरी बार कटा हुआ है, और उसी क्रिया से।"
+  },
+  {
+   "id": 230,
+   "number": "5.26",
+   "body_en": "For the strivers who have been cut loose from wanting and from anger, whose awareness is reined in, who have come to know themselves — the going-out in brahman is close by on every side.",
+   "body_hi": "उन यतियों के लिए जो चाह और क्रोध से काट दिए गए, जिनका चित्त सधा हुआ है, जिन्होंने अपने को जान लिया — ब्रह्म-निर्वाण हर ओर पास ही है।",
+   "commentary_en": "Abhitah is both on all sides and near at hand, and the verse wants both senses: the thing is not ahead of them, it surrounds them. Note that three of the chapter's five nirvana verses fall in a row here, and each one moves it closer — 5.24 reaches it, 5.25 comes into it, and this one has it already standing round the man like weather.",
+   "commentary_hi": "'अभितः' चारों ओर भी है और पास भी, और श्लोक को दोनों अर्थ चाहिए: वह वस्तु उनके आगे नहीं, उनके चारों ओर है। ध्यान दें कि अध्याय के पाँच निर्वाण-श्लोकों में तीन यहाँ लगातार पड़ते हैं, और हर एक उसे और पास ले आता है — 5.24 उस तक पहुँचता है, 5.25 उसमें आ जाता है, और यह उसे मनुष्य के चारों ओर मौसम की तरह पहले से खड़ा रखता है।"
+  },
+  {
+   "id": 231,
+   "number": "5.27",
+   "body_en": "Putting the outer touches outside, and the eyes between the brows, and making the breath going out and the breath coming in even with each other as they move inside the nose —",
+   "body_hi": "बाहर के स्पर्शों को बाहर रखते हुए, और आँखों को भौंहों के बीच, और बाहर जाती तथा भीतर आती श्वास को आपस में बराबर करते हुए, जब वे नाक के भीतर चलती हैं —",
+   "commentary_en": "The first posture instruction in the poem, and it is oddly specific after five chapters of argument: where to put the eyes, what to do with the breath. Note that this verse also breaks off unfinished into the next, the second run-on in the chapter — the poem does it both times it wants a description to feel continuous rather than itemised.",
+   "commentary_hi": "काव्य का पहला आसन-निर्देश, और पाँच अध्यायों के तर्क के बाद वह विचित्र रूप से ब्योरेवार है: आँखें कहाँ रखनी हैं, श्वास का क्या करना है। ध्यान दें कि यह श्लोक भी अधूरा टूटकर अगले में जाता है, अध्याय का दूसरा प्रवाही जोड़ा — काव्य ऐसा दोनों बार तब करता है जब वह चाहता है कि कोई वर्णन गिनी हुई सूची के बजाय लगातार लगे।"
+  },
+  {
+   "id": 232,
+   "number": "5.28",
+   "body_en": "senses and mind and understanding reined in, a sage with release for the one place he is going, his wishing and his fear and his anger gone out of him — whoever is like that is free already, and stays so.",
+   "body_hi": "इन्द्रियाँ और मन और बुद्धि सधी हुई, वह मुनि जिसके जाने की एक ही जगह मोक्ष है, जिसमें से इच्छा और भय और क्रोध निकल चुके — जो ऐसा है वह पहले ही मुक्त है, और बना रहता है।",
+   "commentary_en": "Iccha, bhaya, krodha — the three of 2.56 and 4.10 for the fourth time, with wishing standing in for the liking of the earlier lists. Then sada mukta eva sah: he is always free, already. Note the tense the chapter keeps choosing. Nothing here is promised for later; the freedom is reported as a present fact about a man who is sitting still with his eyes half closed.",
+   "commentary_hi": "इच्छा, भय, क्रोध — 2.56 और 4.10 के वही तीन, चौथी बार, और पहले की सूचियों के राग की जगह इच्छा खड़ी है। फिर 'सदा मुक्त एव सः': वह सदा मुक्त है, पहले से। अध्याय जो काल चुनता आ रहा है वह देखें। यहाँ किसी बात का वचन आगे के लिए नहीं है; उस मुक्ति की ख़बर उस मनुष्य के विषय में वर्तमान तथ्य की तरह दी गई है जो आधी मुँदी आँखों से चुपचाप बैठा है।"
+  },
+  {
+   "id": 233,
+   "number": "5.29",
+   "body_en": "Knowing me for the one who takes what the offerings and the hard practice give, the great lord of all the worlds, the well-wisher of every being there is — he comes to peace.",
+   "body_hi": "मुझे उसी रूप में जानकर जो अर्पण और तपस्या का दिया लेता है, सब लोकों का महेश्वर, हर प्राणी का हितैषी — वह शान्ति में आ जाता है।",
+   "commentary_en": "Three descriptions, and the chapter ends on the smallest of them. After the enjoyer of sacrifices and the great lord of all worlds comes suhridam, good-hearted-towards, a well-wisher — an ordinary word for an ordinary relation. It is the same move as 4.3, where sakha was set beside bhakta. Twice now the poem has closed the distance it just opened, and both times with a word about friendship.",
+   "commentary_hi": "तीन वर्णन, और अध्याय उनमें सबसे छोटे पर ख़त्म होता है। यज्ञों के भोक्ता और सब लोकों के महेश्वर के बाद आता है 'सुहृदम्', भला चाहने वाला, हितैषी — साधारण सम्बन्ध का साधारण शब्द। यह वही चाल है जो 4.3 में थी, जहाँ 'भक्त' के बग़ल में 'सखा' रखा गया था। काव्य अब दो बार वह दूरी बन्द कर चुका है जो उसने अभी खोली थी, और दोनों बार मित्रता के किसी शब्द से।"
+  }
+ ]
+}
