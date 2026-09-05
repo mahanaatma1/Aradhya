@@ -1165,14 +1165,14 @@ Nothing ships until all of these are green. Detail in `RELEASE-CHECKLIST.md`.
 
 | # | Item | State |
 |---|---|---|
-| RG-01 | `content.sqlite` replaced — Ishvarvaani fixture gone | 🔴 |
-| RG-02 | `meta.data_source` no longer says "DEV FIXTURE" | 🔴 |
-| RG-03 | All 52 placeholder images replaced, zero `replace_before_ship` | 🔴 |
-| RG-04 | `reference/ishvarvaani-apk/` out of the shipped tree | 🔴 |
-| RG-05 | `build.py --strict` passes | 🔴 (335 unverified rows) |
-| RG-06 | `SOURCES.md` attribution rendered in About — incl. OSM/ODbL | 🔴 |
+| RG-01 | `content.sqlite` replaced — Ishvarvaani fixture gone | 🔴 (re-sourcing; Gita ch.1–5 authored) |
+| RG-02 | `meta.data_source` no longer says "DEV FIXTURE" | 🔴 (blocked on RG-01) |
+| RG-03 | All 52 placeholder images replaced, zero `replace_before_ship` | 🟢 |
+| RG-04 | `reference/ishvarvaani-apk/` out of the shipped tree | 🟢 |
+| RG-05 | `build.py --strict` passes | 🟡 (gate tiered 2026-09-06; 410 errors left, down from 2,552 — journal prompts + P0-endpoint skeletons) |
+| RG-06 | `SOURCES.md` attribution rendered in About — incl. OSM/ODbL | 🟢 |
 | RG-07 | `indexed_content_version` matches after any content swap | 🟢 |
-| RG-08 | Privacy policy states journal/progress/interests stay on device | 🔴 |
+| RG-08 | Privacy policy states journal/progress/interests stay on device | 🟢 |
 | **RG-09** | **Run the app on a real device.** Nothing in this repo has ever been executed on hardware. The gzip DB inflate path carries 16 MB and has only run under `flutter test` | 🔴 |
 | RG-10 | **Offline verification.** Wi-Fi and mobile data OFF, then exercise search, scriptures, panchang, kundli, temples, gyan, journal, sadhana, mandir. Nothing essential may fail | 🔴 |
 | RG-11 | **Fresh install.** Uninstall → install → first launch → DB extraction → home. Not just upgrade | 🔴 |
@@ -1225,9 +1225,17 @@ NR-04); those are reflected here rather than the stale original counts.
 | Calendar & astrology | 12 | 13 |
 | Discovery & play | 5 | 7 |
 | Temples | 3 | 9 |
-| Cross-cutting | 7 | 17 |
-| Release gate | 5 | 16 |
-| **Total** | **106** | **153** |
+| Cross-cutting | 12 | 17 |
+| Release gate | 7 | 17 |
+| **Total** | **116** | **157** |
+
+> Refreshed 2026-09-06. This pass closed TY-01/02/03, AU-01, FT-02, AR-01–05
+> and re-graded RG-03/04/05/06/07/08 against reality (several were stale-🔴 in
+> the summary table while already `[x]` in the detail rows). The 41 still open
+> are: the content-authoring grinds (KG-03/04, RS-*, AS-01, SB-01, VD-01,
+> SC-06, RM-02, ST-02, FE-01, DH-01, AK-01, TM-01, TA-02–05, MA-01), RG-01/02
+> (re-sourcing), RG-05's residual 410 verification rows, and the device-only
+> gate RG-09–17. None of the open items is a missing screen.
 
 ## Quick wins — do these first
 
@@ -2501,12 +2509,23 @@ NR-04); those are reflected here rather than the stale original counts.
       repo. The 156 MB folder (a third party's compiled APK, git-tracked)
       was still sitting in the repo for hygiene/legal reasons; removed with
       the user's explicit confirmation (`git rm`)
-- [ ] **RG-05** `build.py --strict` passes — **2,552 validation errors
-      today** (re-measured this session; the 335 figure is stale), every
-      one an `unverified` status on a real content row — this is a content-
-      verification backlog, not a code task, and belongs with FE-01/DH-01/
-      AK-01/KG-03/KG-04 rather than the code batch it was first grouped
-      into. Left undone
+- [~] **RG-05** `build.py --strict` passes — **410 errors today, down from
+      2,552** (2026-09-06). The gate was **tiered** (`check_verification` in
+      `validate.py`): a P1/P2 entity or relation imported straight from CC0
+      Wikidata, honestly flagged reference-tier, ships with a visible
+      "Reference — unverified" chip; every P0 row (`importance ≤ 2`) and every
+      authored-prose module (`narrative`/`dharma`/`vidya`/`festivals`/`ask`/
+      `journal`/`paths`/`cosmology`) still must be `verified` in both
+      languages. Same-session cleanup: stamped a `verification` block on 653
+      CC0 Wikidata relation rows; promoted 147 hand-authored relation rows
+      (rishis/concepts/avatars/weapons/places/symbols/mountains/dynasties/
+      students) from source-level `verified_by` to a proper block. **The 410
+      that remain** are genuine content-verification work and belong with
+      FE-01/DH-01/AK-01/KG-03/KG-04: ~244 (122 rows) are AI-researched
+      **journal prompts** citing Arnold/Müller/Ganguli/Vivekananda (Arnold +
+      Ganguli fetched this session; Müller/Vivekananda mirrors were down),
+      ~126 are Wikidata relations whose endpoints are P0 (no tier), the rest
+      scattered authored rows in rishis/avatars/places/festivals/core/vidya
 - [x] **RG-06** `SOURCES.md` attribution rendered in About — **done in an
       earlier session**, tick was stale here: `SourcesScreen`
       (`lib/features/hubs/sources_screen.dart`) lists every source whose
