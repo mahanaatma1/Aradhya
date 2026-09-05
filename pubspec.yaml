@@ -74,6 +74,8 @@ flutter:
     # Built by `py -m content.tools.build`; ATTACHed as `gyan` at runtime.
     - assets/db/gyan.sqlite.gz
     - assets/images/
+    # SIL OFL 1.1 licence text for each bundled typeface (TY-03 / Play compliance).
+    - assets/fonts/LICENSES/
 
   fonts:
     - family: Eczar

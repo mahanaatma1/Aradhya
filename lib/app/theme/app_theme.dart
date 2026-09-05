@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_colors.dart';
+import 'app_type.dart';
 import 'category_colors.dart';
 
 /// Font families (bundled for offline use — see pubspec.yaml).
@@ -108,22 +109,10 @@ class AppTheme {
   }
 
   static TextTheme _textTheme(TextTheme base, Color ink, Color inkSoft) {
-    return base
-        .copyWith(
-          displayLarge: base.displayLarge
-              ?.copyWith(fontFamily: AppFonts.display, fontWeight: FontWeight.w600),
-          displayMedium: base.displayMedium
-              ?.copyWith(fontFamily: AppFonts.display, fontWeight: FontWeight.w600),
-          headlineLarge: base.headlineLarge
-              ?.copyWith(fontFamily: AppFonts.display, fontWeight: FontWeight.w600),
-          headlineMedium: base.headlineMedium
-              ?.copyWith(fontFamily: AppFonts.display, fontWeight: FontWeight.w600),
-          headlineSmall: base.headlineSmall
-              ?.copyWith(fontFamily: AppFonts.display, fontWeight: FontWeight.w600),
-          titleLarge: base.titleLarge
-              ?.copyWith(fontFamily: AppFonts.display, fontWeight: FontWeight.w600),
-        )
-        .apply(bodyColor: ink, displayColor: ink);
+    // The one type scale — sizes and Latin line-heights per role. See
+    // app_type.dart. Devanagari leading is boosted at render time by
+    // ScriptText / AppType.forScript.
+    return AppType.textThemeFor(base).apply(bodyColor: ink, displayColor: ink);
   }
 }
 

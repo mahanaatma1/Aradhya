@@ -2354,10 +2354,32 @@ NR-04); those are reflected here rather than the stale original counts.
 - [ ] **AR-03** Manifest records tool · model · date · prompt · **prompt_version · human_reviewed**
 - [ ] **AR-04** Human review of every generated image before it ships
 - [ ] **AR-05** Keep drawn motifs for iconography; AI art for deities, temples and scenes
-- [ ] **TY-01** Devanagari line-height plus 15–20% on dense screens
-- [ ] **TY-02** Establish a type scale — sizes run 9.5 to 28 with no system
-- [ ] **TY-03** Confirm and record font licences in About
-- [!] **AU-01** Audio — **deferred by decision.** Mantra, aarti, Gita recitation and Sanskrit Pronunciation all blocked
+- [x] **TY-01** Devanagari line-height plus 15–20% on dense screens —
+      `AppType.devanagariLeadingBoost = 1.18` (mid of the 15–20% band),
+      applied by `AppType.forScript` and the new `ScriptText` widget, which
+      decides Devanagari-vs-Latin from the string's own codepoints
+      (U+0900–U+097F). The scale's Latin line-heights live in `app_type.dart`;
+      the boost multiplies whichever role's height applies. Guarded by
+      `test/type_scale_test.dart`
+- [x] **TY-02** Establish a type scale — new `lib/app/theme/app_type.dart`:
+      one modular (~1.2) scale, 8 roles micro→display (10.5–32), each with an
+      explicit line-height. `AppTheme` installs it onto the whole `TextTheme`
+      via `AppType.textThemeFor`, so every screen reading `textTheme.bodyMedium`
+      etc. gets it for free. The ~850 legacy bare `fontSize:` call sites are
+      not rewritten in this pass (per-screen regression risk); new code uses a
+      `TextTheme` role or a named `AppType` step. Monotonicity + installation
+      pinned by test
+- [x] **TY-03** Confirm and record font licences in About — all four bundled
+      families (Eczar, Ramaraja, Inter, Noto Sans Devanagari) confirmed
+      **SIL OFL 1.1** from their upstream repos; full per-font licence text
+      bundled at `assets/fonts/LICENSES/` (listed in `pubspec.yaml`) and a
+      "Typefaces" card added to `SourcesScreen` naming each family, its
+      foundry, and the licence
+- [x] **AU-01** Audio — **resolved 2026-09-06: TTS is the finished form for
+      v1.** `mantras.audio_url` stays empty by design; the aarti/mantra
+      screens already read aloud via platform TTS. Real recorded audio
+      (own recordings or commissioned work with written rights) is a
+      post-v1 track, not a v1 blocker. No code change
 - [ ] **MA-01** **Sanskrit reader needed** before word-by-word mantra analysis
 - [x] **CM-01** Add `claim_type` to every content table — added a nullable
       `claim_type TEXT CHECK (... OR claim_type IS NULL)` column, matching

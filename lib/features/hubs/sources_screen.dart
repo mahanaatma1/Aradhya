@@ -153,6 +153,8 @@ class SourcesScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 18),
           for (final s in _sources) _SourceCard(source: s, hi: hi),
+          const SizedBox(height: 18),
+          _FontsCard(hi: hi),
           const SizedBox(height: 8),
           Text(
             hi
@@ -163,6 +165,61 @@ class SourcesScreen extends ConsumerWidget {
                 fontStyle: FontStyle.italic,
                 color: scheme.onSurface.withValues(alpha: 0.5)),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+/// Typography attribution (TY-03). All four bundled families are licensed
+/// under the SIL Open Font License 1.1, which permits embedding in a shipped
+/// app; the full licence text for each is in assets/fonts/LICENSES/.
+class _FontsCard extends StatelessWidget {
+  final bool hi;
+  const _FontsCard({required this.hi});
+
+  static const _fonts = <(String, String)>[
+    ('Eczar', 'Rosetta Type Foundry'),
+    ('Ramaraja', 'Silicon Andhra / Sorkin Type'),
+    ('Inter', 'The Inter Project Authors'),
+    ('Noto Sans Devanagari', 'The Noto Project Authors (Google)'),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: scheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: scheme.outline.withValues(alpha: 0.18)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(hi ? 'फ़ॉन्ट' : 'Typefaces',
+              style: const TextStyle(
+                  fontFamily: AppFonts.display,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15.5)),
+          const SizedBox(height: 6),
+          Text(
+            hi
+                ? 'सभी चार फ़ॉन्ट SIL ओपन फ़ॉन्ट लाइसेंस 1.1 के अंतर्गत हैं, जो ऐप में एम्बेड करने की अनुमति देता है। पूर्ण लाइसेंस पाठ assets/fonts/LICENSES/ में है।'
+                : 'All four are licensed under the SIL Open Font License 1.1, which permits embedding in this app. The full licence text for each is bundled at assets/fonts/LICENSES/.',
+            style: TextStyle(
+                fontSize: 12.5,
+                height: 1.45,
+                color: scheme.onSurface.withValues(alpha: 0.65)),
+          ),
+          const SizedBox(height: 8),
+          for (final (family, foundry) in _fonts)
+            Padding(
+              padding: const EdgeInsets.only(top: 3),
+              child: Text('$family — $foundry',
+                  style: TextStyle(fontSize: 13, color: scheme.onSurface)),
+            ),
         ],
       ),
     );
