@@ -1,0 +1,282 @@
+{
+ "slug": "bgc_9",
+ "title_en": "Raja Vidya Raja Guhya Yoga",
+ "title_hi": "राज विद्या राज गुह्य योग",
+ "book_id": 9,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 339,
+   "number": "9.1",
+   "body_en": "The Blessed One said: To you, who carry no ill will, I will set out this most hidden thing — knowledge together with the seeing of it — which once you have it will free you from what is dark.",
+   "body_hi": "श्रीभगवान ने कहा — तुझे, जो कोई द्वेष नहीं ढोता, मैं यह सबसे छिपी हुई चीज़ रखूँगा — ज्ञान उसके प्रत्यक्ष दर्शन सहित — जो एक बार तुझे मिल जाए तो तुझे उस अँधेरे से मुक्त कर देगी जो अशुभ है।",
+   "commentary_en": "The eighth chapter ended by measuring its teaching against every other reward and finding it larger. The ninth opens by promising something more hidden still. The one condition Krishna names in Arjuna is anasuya — no ill will, no fault-finding disposition. It matters because what follows is a set of claims easy to sneer at, and the sneer would be the thing that shuts them out.",
+   "commentary_hi": "आठवाँ अध्याय अपनी शिक्षा को हर दूसरे इनाम के सामने तौलकर उसे बड़ा पाकर ख़त्म हुआ। नौवाँ और भी छिपी हुई कोई चीज़ का वादा करके खुलता है। कृष्ण अर्जुन में जो एक शर्त नाम देते हैं वह है अनसूया — कोई द्वेष नहीं, दोष खोजने वाला स्वभाव नहीं। यह मायने रखता है क्योंकि आगे जो आता है वह ऐसे दावों का सिलसिला है जिन पर नाक-भौं सिकोड़ना आसान है, और वही सिकोड़ना उन्हें बंद कर देता।"
+  },
+  {
+   "id": 340,
+   "number": "9.2",
+   "body_en": "This is the ruling knowledge, the ruling secret, pure as anything can be. It can be checked against your own experience, it is in line with dharma, it is easy to carry out, and it does not run down.",
+   "body_hi": "यह शासक ज्ञान है, शासक रहस्य, जितना पवित्र कोई हो सकता है। इसे अपने ही अनुभव से जाँचा जा सकता है, यह धर्म के अनुरूप है, इसे करना आसान है, और यह घिसता नहीं।",
+   "commentary_en": "The chapter's title comes from this verse: the king of knowledge, the king of secrets. And a striking phrase — pratyaksha-avagama, grasped directly. It is not a teaching to be taken on trust; you are meant to verify it in your own experience. Along with that: it is dharmic, it is not hard to do, and it does not decay. A large set of promises, made up front.",
+   "commentary_hi": "अध्याय का शीर्षक इसी श्लोक से आता है: ज्ञान का राजा, रहस्यों का राजा। और एक चौंकाने वाला वाक्यांश — प्रत्यक्ष अवगम, सीधे पकड़ा हुआ। यह विश्वास पर लेने की शिक्षा नहीं; तुम्हें इसे अपने ही अनुभव में जाँचना है। उसके साथ: यह धर्मयुक्त है, इसे करना कठिन नहीं, और यह क्षय नहीं होता। बड़े वादों का एक समूह, पहले ही रख दिया गया।"
+  },
+  {
+   "id": 341,
+   "number": "9.3",
+   "body_en": "Men with no trust in this dharma, scorcher of foes, fail to reach me and turn back onto the road of death and rebirth.",
+   "body_hi": "जिन मनुष्यों को इस धर्म में कोई भरोसा नहीं, शत्रुओं को झुलसाने वाले, वे मुझ तक नहीं पहुँच पाते और मृत्यु और पुनर्जन्म की सड़क पर लौट जाते हैं।",
+   "commentary_en": "The other side of verse 2's ease. The teaching is easy to do — but it requires trust to begin, and without that trust a person simply does not enter it. There is no punishment described, only a default: he stays on the road he was already on, the cycle of dying and being born. Faithlessness here is not a sin, it is a missed turning.",
+   "commentary_hi": "दूसरे श्लोक की सहजता का उलटा पक्ष। शिक्षा करना आसान है — पर शुरू करने के लिए भरोसा चाहिए, और उस भरोसे के बिना मनुष्य बस उसमें प्रवेश नहीं करता। कोई दंड नहीं बताया गया, केवल एक चूक: वह उसी सड़क पर रह जाता है जिस पर पहले से था, मरने और जन्म लेने का चक्र। यहाँ अविश्वास पाप नहीं, एक छूटा हुआ मोड़ है।"
+  },
+  {
+   "id": 342,
+   "number": "9.4",
+   "body_en": "This whole world is spread through by me in a form that does not show. All beings stand within me; I do not stand within them.",
+   "body_hi": "यह पूरा जगत मुझसे फैला हुआ है, एक ऐसे रूप में जो दिखता नहीं। सब प्राणी मेरे भीतर खड़े हैं; मैं उनके भीतर खड़ा नहीं।",
+   "commentary_en": "The first of the chapter's hard-to-hold statements. Krishna pervades everything, but in an unmanifest form — the pervasion is not visible. And the containing goes one way: beings are in him, he is not in them. The next verse will immediately complicate even this. The point is not a tidy picture but a relation that resists being simplified.",
+   "commentary_hi": "अध्याय के थामने में कठिन कथनों में से पहला। कृष्ण हर चीज़ में व्याप्त हैं, पर एक अव्यक्त रूप में — व्याप्ति दिखती नहीं। और समाना एक ओर चलता है: प्राणी उनमें हैं, वह उनमें नहीं। अगला श्लोक तुरंत इसे भी पेचीदा करेगा। बात एक सुथरा चित्र नहीं बल्कि एक ऐसा सम्बन्ध है जो सरल किए जाने का विरोध करता है।"
+  },
+  {
+   "id": 343,
+   "number": "9.5",
+   "body_en": "And yet the beings do not stand in me — look at the mastery of my yoga. My self holds beings up and brings them forth, and is not lodged in them.",
+   "body_hi": "और फिर भी प्राणी मुझमें खड़े नहीं — मेरे योग की महारत देख। मेरा स्व प्राणियों को थामे रखता है और उन्हें उत्पन्न करता है, और उनमें बसा नहीं।",
+   "commentary_en": "The direct contradiction of verse 4, put on purpose. First: all beings are in me. Now: they are not in me. Krishna does not resolve it; he points at it and calls it the mastery of his yoga — the very thing that cannot be pinned down to one statement. He supports and produces beings without being enclosed by them. The two verses are meant to be held together, uncomfortably.",
+   "commentary_hi": "चौथे श्लोक का सीधा विरोधाभास, जानबूझकर रखा हुआ। पहले: सब प्राणी मुझमें हैं। अब: वे मुझमें नहीं। कृष्ण इसे सुलझाते नहीं; वह उसकी ओर इशारा करते हैं और उसे अपने योग की महारत कहते हैं — ठीक वह चीज़ जिसे एक कथन में बाँधा नहीं जा सकता। वह प्राणियों को थामते और उत्पन्न करते हैं बिना उनसे घिरे। दोनों श्लोक साथ थामने के लिए हैं, असहज रूप से।"
+  },
+  {
+   "id": 344,
+   "number": "9.6",
+   "body_en": "Think of a strong wind that ranges in all directions and is never once outside the sky it moves through. Every creature sits inside me on those same terms — keep that in view.",
+   "body_hi": "जैसे महान वायु, हर जगह जाता हुआ, सदा आकाश में रहता है — यह मन में रख कि उसी तरह सब प्राणी मुझमें रहते हैं।",
+   "commentary_en": "An image to sit under the paradox. Wind moves through space in every direction, yet it never leaves space — space contains it without confining it, and without being disturbed by all that motion. Beings are in Krishna the way the wind is in the sky: fully held, entirely free-moving, and the container untouched.",
+   "commentary_hi": "विरोधाभास के नीचे बैठने के लिए एक छवि। वायु आकाश में हर दिशा में चलती है, फिर भी वह आकाश को कभी नहीं छोड़ती — आकाश उसे घिराए बिना समाता है, और उस सारी गति से बेचैन हुए बिना। प्राणी कृष्ण में वैसे हैं जैसे वायु आकाश में: पूरी तरह थमे हुए, बिल्कुल मुक्त गति में, और पात्र अछूता।"
+  },
+  {
+   "id": 345,
+   "number": "9.7",
+   "body_en": "When a great age winds down, son of Kunti, every creature folds back into what I am made of; when the next one opens, it is I who put them out into the world once more.",
+   "body_hi": "एक जगत-चक्र के अंत में, कुन्तीपुत्र, सब प्राणी मेरी प्रकृति में चले जाते हैं; और अगले के आरम्भ में, मैं उन्हें फिर बाहर भेजता हूँ।",
+   "commentary_en": "The cosmic breathing described in Chapter 8, now with Krishna as the one doing it. Beings do not just dissolve into some neutral seed-state at cycle's end — they pass into his nature, and it is he who releases them again at the next dawn. The rhythm has an agent.",
+   "commentary_hi": "आठवें अध्याय में बताई गई ब्रह्माण्डीय साँस, अब कृष्ण के साथ जो उसे कर रहे हैं। प्राणी चक्र के अंत में किसी तटस्थ बीज-दशा में केवल घुलते नहीं — वे उनकी प्रकृति में चले जाते हैं, और वही हैं जो उन्हें अगली भोर में फिर छोड़ते हैं। लय का एक कर्ता है।"
+  },
+  {
+   "id": 346,
+   "number": "9.8",
+   "body_en": "Working through the nature that is mine, I turn this entire crowd of creatures loose again and again — and not one of them has a say in it, since nature is what moves them.",
+   "body_hi": "अपनी ही प्रकृति को थामकर, मैं बाहर भेजता हूँ, बार-बार, प्राणियों का यह पूरा समूह — विवश, वे सब, प्रकृति के अधीन।",
+   "commentary_en": "How the sending-out works: Krishna acts through his own nature, prakriti, and the beings that come out are carried by it — \"helpless\" under its sway. It is the same word used in Chapter 8 for the cosmic cycle. The beings do not consent to their emergence any more than they consented to dissolve.",
+   "commentary_hi": "बाहर भेजना कैसे काम करता है: कृष्ण अपनी ही प्रकृति के ज़रिए कर्म करते हैं, और जो प्राणी निकलते हैं वे उससे ले जाए जाते हैं — उसके अधीन 'विवश'। यह वही शब्द है जो आठवें अध्याय में ब्रह्माण्डीय चक्र के लिए इस्तेमाल हुआ। प्राणी अपने निकलने पर उतनी ही सहमति नहीं देते जितनी उन्होंने घुलने पर दी थी।"
+  },
+  {
+   "id": 347,
+   "number": "9.9",
+   "body_en": "And those actions do not tie me down, Dhananjaya. I sit through them the way an onlooker sits, with no hold on them.",
+   "body_hi": "और वे कर्म मुझे बाँधते नहीं, धनञ्जय। मैं उनके बीच वैसे बैठा रहता हूँ जैसे कोई दर्शक बैठता है, उन पर कोई पकड़ न रखते हुए।",
+   "commentary_en": "The obvious objection — if Krishna does all this creating and dissolving, is he not caught in it the way any doer is caught? No: he sits through it like a spectator, unattached. It is the same principle Chapter 3 taught Arjuna about his own action — do it without the grip on outcome — now shown running at the cosmic scale.",
+   "commentary_hi": "स्पष्ट आपत्ति — यदि कृष्ण यह सारा सृजन और विलय करते हैं, तो क्या वह उसमें वैसे नहीं फँसे जैसे कोई भी कर्ता फँसता है? नहीं: वह उसके बीच एक दर्शक की तरह बैठे रहते हैं, अनासक्त। यह वही सिद्धांत है जो तीसरे अध्याय ने अर्जुन को उसके अपने कर्म के बारे में सिखाया — नतीजे की पकड़ के बिना करो — अब ब्रह्माण्डीय पैमाने पर चलता हुआ दिखाया गया।"
+  },
+  {
+   "id": 348,
+   "number": "9.10",
+   "body_en": "With me presiding, nature turns out the moving and the still. This is the cause, son of Kunti, by which the world keeps wheeling round.",
+   "body_hi": "मेरी अध्यक्षता में, प्रकृति चलते और थमे हुए को बाहर लाती है। यही कारण है, कुन्तीपुत्र, जिससे जगत घूमता रहता है।",
+   "commentary_en": "The relation between Krishna and nature stated precisely: he presides, nature produces. He is not the craftsman shaping each thing; he is the presence under whose watch nature does the shaping. And that presiding is what keeps the whole thing turning — remove it and the wheel would stop.",
+   "commentary_hi": "कृष्ण और प्रकृति के बीच का सम्बन्ध ठीक-ठीक कहा गया: वह अध्यक्षता करते हैं, प्रकृति उत्पन्न करती है। वह हर चीज़ को गढ़ने वाला कारीगर नहीं; वह वह उपस्थिति हैं जिसकी निगरानी में प्रकृति गढ़ती है। और वही अध्यक्षता पूरी चीज़ को घुमाए रखती है — उसे हटाओ और पहिया रुक जाए।"
+  },
+  {
+   "id": 349,
+   "number": "9.11",
+   "body_en": "Fools look down on me when I have taken a human form, not knowing my higher being as the great lord of everything that exists.",
+   "body_hi": "मूढ़ मुझे तुच्छ मानते हैं जब मैंने मनुष्य का रूप ले लिया हो, मेरे उस ऊँचे होने को न जानते हुए जो हर विद्यमान चीज़ का महान स्वामी है।",
+   "commentary_en": "The chapter's cosmology has been high; here it comes down to the immediate situation — Krishna standing on a chariot, in a body, talking. The fool sees only the body and dismisses him. The error is the same as the one flagged in Chapter 7: mistaking the visible form for the whole, missing what stands behind it.",
+   "commentary_hi": "अध्याय की सृष्टि-रचना ऊँची रही है; यहाँ वह तात्कालिक स्थिति पर उतर आती है — कृष्ण एक रथ पर खड़े, एक देह में, बात करते हुए। मूढ़ केवल देह देखता है और उन्हें ख़ारिज करता है। ग़लती वही है जो सातवें अध्याय में चिह्नित हुई: दिखने वाले रूप को पूरा मान लेना, उसके पीछे जो खड़ा है उसे चूकना।"
+  },
+  {
+   "id": 350,
+   "number": "9.12",
+   "body_en": "Their hopes come to nothing, their actions come to nothing, their knowledge comes to nothing; they have no sense left, and they have gone with a nature that is fiendish and deluding.",
+   "body_hi": "उनकी आशाएँ बेकार जाती हैं, उनके कर्म बेकार जाते हैं, उनका ज्ञान बेकार जाता है; उनमें समझ बाकी नहीं रही, और वे एक ऐसे स्वभाव के साथ चले गए हैं जो राक्षसी और भरमाने वाला है।",
+   "commentary_en": "The consequence of the dismissal. Everything the fool undertakes — his aims, his efforts, his learning — comes out empty, because it is built on a wrong reading of what is in front of him. And the disposition he has settled into is described as demonic and deluding: an outlook that both misleads and is itself misled.",
+   "commentary_hi": "तुच्छ मानने का परिणाम। मूढ़ जो भी उठाता है — उसके लक्ष्य, उसके प्रयत्न, उसकी विद्या — सब ख़ाली निकलता है, क्योंकि वह उसके सामने जो है उसके ग़लत पाठ पर बना है। और जिस स्वभाव में वह जम गया वह राक्षसी और भरमाने वाला बताया गया है: एक ऐसी दृष्टि जो भरमाती भी है और ख़ुद भी भरमाई हुई है।"
+  },
+  {
+   "id": 351,
+   "number": "9.13",
+   "body_en": "But the great souls, Partha, who have gone with the divine nature, worship me with a mind turned nowhere else, having seen that I am the imperishable beginning of all beings.",
+   "body_hi": "पर महात्मा, पार्थ, जो दैवी प्रकृति के साथ चले गए, मुझे ऐसे मन से पूजते हैं जो और कहीं मुड़ा नहीं, यह देखकर कि मैं सब प्राणियों का अविनाशी आदि हूँ।",
+   "commentary_en": "The contrast to the fool. The great soul has gone with the divine nature rather than the demonic one, and so sees Krishna as the undecaying source of everything — and worships him with a mind that does not divide its attention. The distinction between the two is not intelligence; it is which nature a person has taken up.",
+   "commentary_hi": "मूढ़ का विरोध। महात्मा राक्षसी के बजाय दैवी प्रकृति के साथ चला गया, इसलिए कृष्ण को हर चीज़ के अक्षय स्रोत के रूप में देखता है — और उन्हें ऐसे मन से पूजता है जो अपना ध्यान बाँटता नहीं। दोनों में भेद बुद्धि का नहीं; यह कि मनुष्य ने कौन-सी प्रकृति उठाई है।"
+  },
+  {
+   "id": 352,
+   "number": "9.14",
+   "body_en": "Always speaking my praise, striving, firm in their vow, bowing to me in devotion, they wait on me, joined without a break.",
+   "body_hi": "सदा मेरी स्तुति कहते हुए, प्रयत्न करते हुए, अपने व्रत में दृढ़, भक्ति से मुझे झुककर, वे मेरी सेवा में रहते हैं, बिना रुके जुड़े।",
+   "commentary_en": "What the great souls' worship actually consists of, listed plainly: speaking his praise, making effort, keeping their commitment, bowing. It is not a passive state — there is striving in it, and a vow held to. \"Joined without a break\" is the mark: the attention does not lapse and pick up again, it stays.",
+   "commentary_hi": "महात्माओं की पूजा वास्तव में किन चीज़ों से बनी है, सादे रूप में गिनाई गई: उनकी स्तुति कहना, प्रयत्न करना, अपनी प्रतिबद्धता निभाना, झुकना। यह निष्क्रिय दशा नहीं — उसमें प्रयत्न है, और एक व्रत निभाया हुआ। 'बिना रुके जुड़े' चिह्न है: ध्यान छूटकर फिर नहीं उठता, वह टिका रहता है।"
+  },
+  {
+   "id": 353,
+   "number": "9.15",
+   "body_en": "And others wait on me by the offering of knowledge — worshipping me as one, or as many-and-separate, or in the many forms of the one whose face is turned every way.",
+   "body_hi": "और दूसरे ज्ञान के अर्पण से मेरी सेवा करते हैं — मुझे एक मानकर, या अनेक-और-अलग मानकर, या उस एक के अनेक रूपों में जिसका मुँह हर ओर मुड़ा है।",
+   "commentary_en": "A second kind of worshipper: those who approach through jnana-yajna, the offering of knowledge rather than of ritual acts. And their understanding varies — some hold Krishna as strictly one, some as diverse, some as the single reality showing every face at once. All three readings are allowed; the worship counts in each.",
+   "commentary_hi": "दूसरी तरह का भक्त: जो ज्ञान-यज्ञ के ज़रिए आते हैं, अनुष्ठान-कर्मों के बजाय ज्ञान के अर्पण से। और उनकी समझ अलग-अलग होती है — कोई कृष्ण को कड़ाई से एक मानता है, कोई विविध, कोई उस एक सत्ता के रूप में जो एक साथ हर चेहरा दिखाती है। तीनों पाठ स्वीकृत हैं; पूजा हर एक में गिनी जाती है।"
+  },
+  {
+   "id": 354,
+   "number": "9.16",
+   "body_en": "I am the rite. I am the sacrifice. I am the offering made to the dead, I am the healing herb, I am the sacred words. I am the melted butter, I am the fire, and I am what is poured into it.",
+   "body_hi": "मैं अनुष्ठान हूँ। मैं यज्ञ हूँ। मैं मृतकों को दिया जाने वाला अर्पण हूँ, मैं औषधि हूँ, मैं पवित्र शब्द हूँ। मैं पिघला हुआ घी हूँ, मैं आग हूँ, और मैं वह हूँ जो उसमें डाला जाता है।",
+   "commentary_en": "A run of \"I am\" statements, aimed at the whole apparatus of sacrifice. Not just the ritual but every part of it — the offering, the herb, the chant, the ghee, the fire, the thing poured. Krishna is not the recipient standing at the far end of the ceremony; he is each component of it. The point is that there is no part of the act that is not already him.",
+   "commentary_hi": "'मैं हूँ' कथनों की एक लड़ी, यज्ञ के पूरे तामझाम पर निशाना। केवल अनुष्ठान नहीं बल्कि उसका हर हिस्सा — अर्पण, औषधि, जाप, घी, आग, जो डाला जाता है। कृष्ण समारोह के दूर छोर पर खड़े पाने वाले नहीं; वह उसका हर घटक हैं। बात यह है कि कर्म का कोई हिस्सा नहीं जो पहले से वह न हो।"
+  },
+  {
+   "id": 355,
+   "number": "9.17",
+   "body_en": "I am the father of this world, the mother, the one who holds it, the grandfather. I am what is to be known, the thing that purifies, the sacred syllable, and the three Vedas as well.",
+   "body_hi": "मैं इस जगत का पिता हूँ, माता, वह जो उसे थामे है, दादा। मैं वह हूँ जो जानने योग्य है, वह जो पवित्र करता है, पवित्र अक्षर, और तीनों वेद भी।",
+   "commentary_en": "The list widens to take in the whole family of relations a person has to the world and to the sacred. Krishna is both parents and the elder generation behind them; and he is the goal of knowledge, the purifying power, the syllable, the scriptures. Every role by which something is honoured or leaned on is filled by the same one.",
+   "commentary_hi": "सूची चौड़ी होकर उन सम्बन्धों के पूरे परिवार को समेटती है जो मनुष्य का जगत से और पवित्र से है। कृष्ण दोनों माता-पिता हैं और उनके पीछे की बड़ी पीढ़ी; और वह ज्ञान का लक्ष्य हैं, पवित्र करने वाली शक्ति, अक्षर, शास्त्र। हर भूमिका जिससे किसी चीज़ का सम्मान किया जाता है या उस पर टेक ली जाती है, उसी एक से भरी हुई है।"
+  },
+  {
+   "id": 356,
+   "number": "9.18",
+   "body_en": "I am where you are going and the one who carries you, the master, the one who watches, the home, the shelter, the well-wisher. I am the rising and the dissolving, the ground, the store, the seed that does not run out.",
+   "body_hi": "मैं वह हूँ जहाँ तुम जा रहे हो और वह जो तुम्हें ढोता है, स्वामी, वह जो देखता है, घर, आश्रय, हितैषी। मैं उठना और घुलना हूँ, ज़मीन, भंडार, वह बीज जो चुकता नहीं।",
+   "commentary_en": "The list keeps going, and it now covers both the journey and its end, both refuge and the friend one takes refuge with, both the beginning of things and their end. \"The seed that does not run out\" closes it — the source that can never be depleted. Everything a person might reach toward is the same point.",
+   "commentary_hi": "सूची चलती रहती है, और अब वह यात्रा और उसका अंत दोनों, आश्रय और वह मित्र जिसकी शरण ली जाती है दोनों, चीज़ों का आरम्भ और उनका अंत दोनों ढकती है। 'वह बीज जो चुकता नहीं' उसे बंद करता है — वह स्रोत जो कभी ख़ाली नहीं हो सकता। हर चीज़ जिसकी ओर मनुष्य पहुँच सकता है, वही एक बिन्दु है।"
+  },
+  {
+   "id": 357,
+   "number": "9.19",
+   "body_en": "The heat of the sun is mine to give; the rain is mine to keep back and mine to release. Deathlessness is me and so is dying; whatever has being is me, and so is whatever has none, Arjuna.",
+   "body_hi": "मैं ताप देता हूँ; मैं वर्षा रोकता हूँ और मैं उसे छोड़ता हूँ। मैं वह हूँ जो मरता नहीं और मैं मृत्यु हूँ; मैं वह हूँ जो है और जो नहीं है, अर्जुन।",
+   "commentary_en": "The list turns to the pairs. Krishna is not only the pleasant side — the life-giving rain — but also its withholding; not only deathlessness but death; not only being but non-being. Each pair he claims whole, both ends. It is a way of saying there is no opposite of him, because both members of every opposition are his.",
+   "commentary_hi": "सूची जोड़ों की ओर मुड़ती है। कृष्ण केवल सुखद पक्ष नहीं — जीवन देने वाली वर्षा — बल्कि उसका रोकना भी; केवल अमरता नहीं बल्कि मृत्यु; केवल होना नहीं बल्कि न-होना। हर जोड़ा वह पूरा दावा करते हैं, दोनों सिरे। यह कहने का तरीक़ा है कि उनका कोई विपरीत नहीं, क्योंकि हर विरोध के दोनों पक्ष उन्हीं के हैं।"
+  },
+  {
+   "id": 358,
+   "number": "9.20",
+   "body_en": "There are those who have studied the three collections, taken the soma cup, had their faults rinsed away; they honour me with rituals and put in a request for heaven. What they earn lands them in the realm ruled by the chief of the gods, and there they feed on its unearthly delights.",
+   "body_hi": "तीनों वेदों के जानकार, सोम के पीने वाले, बुरे से धुले हुए, यज्ञों के ज़रिए मुझे पूजते हैं और स्वर्ग का रास्ता माँगते हैं। देवों के राजा के पुण्यलोक तक पहुँचकर, वे उस लोक के दिव्य सुख चखते हैं।",
+   "commentary_en": "Back to the worshipper who works the ritual for a heavenly reward. The description is not mocking — these people are learned, purified, doing everything correctly, and they do reach heaven and enjoy it. The verse is being scrupulously fair to them before the next one names the limit.",
+   "commentary_hi": "वापस उस भक्त की ओर जो स्वर्गिक इनाम के लिए अनुष्ठान करता है। वर्णन उपहास करने वाला नहीं — ये लोग विद्वान हैं, शुद्ध किए हुए, सब कुछ ठीक से करते हुए, और वे स्वर्ग पहुँचते ही हैं और उसका आनन्द लेते हैं। श्लोक उनके प्रति बड़ी ईमानदारी बरत रहा है, इससे पहले कि अगला सीमा नाम दे।"
+  },
+  {
+   "id": 359,
+   "number": "9.21",
+   "body_en": "Having enjoyed that wide world of heaven, when the merit is used up they enter the world of mortals again. So, following the dharma of the three Vedas, wanting pleasures, they get a coming and going.",
+   "body_hi": "स्वर्ग के उस चौड़े लोक का भोग करके, पुण्य चुक जाने पर वे फिर मनुष्यों के लोक में आते हैं। इस तरह, तीन वेदों के धर्म का अनुसरण करते हुए, सुख चाहते हुए, उन्हें आना-जाना मिलता है।",
+   "commentary_en": "The limit. Heaven is not permanent; its entry ticket is merit, and merit runs down with use. When it is spent, they come back to earth. And the pattern repeats — this is the round trip of Chapter 8's darker path, seen from the side of the person who keeps choosing it: wanting pleasure, and so getting the wheel.",
+   "commentary_hi": "सीमा। स्वर्ग स्थायी नहीं; उसका प्रवेश-टिकट पुण्य है, और पुण्य उपयोग से घटता है। जब वह ख़र्च हो जाता है, वे धरती पर लौट आते हैं। और पैटर्न दोहराता है — यह आठवें अध्याय के अँधेरे रास्ते का आना-जाना है, उस व्यक्ति की ओर से देखा हुआ जो उसे बार-बार चुनता रहता है: सुख चाहते हुए, और इसलिए पहिया पाते हुए।"
+  },
+  {
+   "id": 360,
+   "number": "9.22",
+   "body_en": "For those people who wait on me with their thought turned nowhere else, always given over — I carry what they need to get and what they need to keep.",
+   "body_hi": "उन लोगों के लिए जो मेरी सेवा में रहते हैं, उनका विचार और कहीं मुड़ा नहीं, सदा सौंपे हुए — जो उन्हें पाना है और जो उन्हें बनाए रखना है, वह मैं ढोता हूँ।",
+   "commentary_en": "The counter to the heaven-seeker, and one of the chapter's most quoted promises. For the one whose worship is undivided and constant, Krishna takes over yogakshema — the getting of what is not yet had and the keeping of what is. The devotee does not have to arrange his own provision; that is carried for him.",
+   "commentary_hi": "स्वर्ग-चाहने वाले का उलटा, और अध्याय के सबसे उद्धृत वादों में से एक। जिसकी पूजा अनबँटी और निरन्तर है, उसके लिए कृष्ण योगक्षेम अपने ऊपर ले लेते हैं — जो अभी नहीं है उसका पाना और जो है उसका बनाए रखना। भक्त को अपनी व्यवस्था ख़ुद नहीं जुटानी पड़ती; वह उसके लिए ढोई जाती है।"
+  },
+  {
+   "id": 361,
+   "number": "9.23",
+   "body_en": "Even the ones who are devoted to other gods and sacrifice to them with faith — they too are worshipping me, son of Kunti, only not in the way the rule lays down.",
+   "body_hi": "जो दूसरे देवताओं के भक्त हैं और उन्हें श्रद्धा से यज्ञ अर्पित करते हैं — वे भी मुझे ही पूज रहे हैं, कुन्तीपुत्र, बस उस तरह नहीं जैसा नियम बताता है।",
+   "commentary_en": "The generous claim from Chapter 7 restated. Worship aimed at any deity, if it is done with faith, is in fact reaching Krishna — the aim is off, the address is wrong, but the worship lands. The one qualifier is \"not in the way the rule lays down\": it is worship without the correct understanding, which is what the next verses address.",
+   "commentary_hi": "सातवें अध्याय का उदार दावा फिर कहा हुआ। किसी भी देवता की ओर लक्षित पूजा, यदि वह श्रद्धा से की जाए, वास्तव में कृष्ण तक पहुँच रही है — लक्ष्य ग़लत है, पता ग़लत है, पर पूजा उतरती है। एक शर्त है 'उस तरह नहीं जैसा नियम बताता है': यह सही समझ के बिना पूजा है, जिसे आगे के श्लोक सम्बोधित करते हैं।"
+  },
+  {
+   "id": 362,
+   "number": "9.24",
+   "body_en": "For it is I alone who receive every sacrifice and am its master. But they do not know me as I really am, and so they slip.",
+   "body_hi": "क्योंकि हर यज्ञ को पाने वाला और उसका स्वामी मैं ही हूँ। पर वे मुझे वैसा नहीं जानते जैसा मैं सचमुच हूँ, इसलिए वे फिसल जाते हैं।",
+   "commentary_en": "Why the address being wrong still matters. Every sacrifice, whoever it is nominally for, is received by Krishna. But the worshipper who does not know this — who thinks the reward comes from the deity itself — has not understood the transaction, and so his result is limited, and he falls back into the cycle. The worship reaches Krishna; the worshipper does not.",
+   "commentary_hi": "पता ग़लत होना क्यों फिर भी मायने रखता है। हर यज्ञ, नाम से जिसके भी लिए हो, कृष्ण पाते हैं। पर जो भक्त यह नहीं जानता — जो सोचता है इनाम देवता से ही आता है — उसने लेन-देन नहीं समझा, इसलिए उसका फल सीमित है, और वह चक्र में वापस गिरता है। पूजा कृष्ण तक पहुँचती है; भक्त नहीं।"
+  },
+  {
+   "id": 363,
+   "number": "9.25",
+   "body_en": "Bind yourself by vow to the gods and it is to the gods you will go; bind yourself to the forefathers and you reach the forefathers; give your worship to the nature-spirits and you arrive among them. Offer your sacrifice to me, and you arrive at me.",
+   "body_hi": "जो अपने को देवों को समर्पित करते हैं वे देवों को जाते हैं; जो अपने को पितरों को समर्पित करते हैं वे पितरों को जाते हैं; जो भूतों को पूजते हैं वे भूतों को जाते हैं; और जो मुझे यज्ञ अर्पित करते हैं वे मुझ तक आते हैं।",
+   "commentary_en": "The rule stated cleanly: the destination matches the aim. Direct your worship at a god and you reach that god's world — a limited place with a limited stay. Direct it at the ancestors, at nature-spirits, same. Direct it at Krishna and you reach Krishna, which is the one destination that is not a return trip.",
+   "commentary_hi": "नियम साफ़ कहा हुआ: गंतव्य लक्ष्य से मेल खाता है। अपनी पूजा किसी देवता की ओर लगाओ और तुम उस देवता के लोक तक पहुँचते हो — सीमित जगह, सीमित ठहराव। पितरों की ओर लगाओ, प्रकृति-भूतों की ओर, वही। कृष्ण की ओर लगाओ और तुम कृष्ण तक पहुँचते हो, जो एकमात्र गंतव्य है जो वापसी की यात्रा नहीं।"
+  },
+  {
+   "id": 364,
+   "number": "9.26",
+   "body_en": "A leaf, a flower, a fruit, some water — whoever brings me that with devotion, that offering made in love, from someone whose heart is set right, I take and eat.",
+   "body_hi": "एक पत्ता, एक फूल, एक फल, थोड़ा पानी — जो कोई मुझे वह भक्ति से लाता है, प्रेम में किया वह अर्पण, ऐसे किसी से जिसका हृदय ठीक जगह है, मैं उसे लेकर खाता हूँ।",
+   "commentary_en": "After a chapter of cosmic scale, this. Krishna does not require the elaborate sacrifice of verse 20 — a leaf will do, or plain water, if it is brought with devotion and from a heart that is in the right place. The size of the offering is nothing; what he responds to is the love in it. It is the verse that opens the whole teaching to anyone.",
+   "commentary_hi": "ब्रह्माण्डीय पैमाने के एक अध्याय के बाद, यह। कृष्ण को बीसवें श्लोक का विस्तृत यज्ञ नहीं चाहिए — एक पत्ता चलेगा, या सादा पानी, यदि वह भक्ति से लाया जाए और ऐसे हृदय से जो ठीक जगह है। अर्पण का आकार कुछ नहीं; वह जिस पर प्रतिक्रिया देते हैं वह उसमें जो प्रेम है। यही वह श्लोक है जो पूरी शिक्षा को हर किसी के लिए खोल देता है।"
+  },
+  {
+   "id": 365,
+   "number": "9.27",
+   "body_en": "The thing you are doing, the meal in front of you, the oblation you pour, the gift you hand over, the hardship you take on yourself, son of Kunti — let each of them be done as a thing placed in my keeping.",
+   "body_hi": "जो भी तू करता है, जो भी खाता है, जो भी आग में डालता है या दान देता है, जो भी अनुशासन उठाता है, कुन्तीपुत्र — उसे मुझे सौंपी हुई चीज़ की तरह कर।",
+   "commentary_en": "The instruction that follows from verse 26. If a leaf offered in love reaches Krishna, then so can anything — a meal, a gift, a day's work, an act of self-denial — provided it is done as an offering to him. It turns the whole of ordinary life into the sacrifice. Nothing has to be set aside as separately sacred.",
+   "commentary_hi": "छब्बीसवें श्लोक से जो निर्देश निकलता है। यदि प्रेम में अर्पित एक पत्ता कृष्ण तक पहुँचता है, तो कुछ भी पहुँच सकता है — एक भोजन, एक उपहार, एक दिन का काम, आत्म-संयम का एक कर्म — बशर्ते वह उन्हें अर्पण की तरह किया जाए। यह पूरे साधारण जीवन को यज्ञ में बदल देता है। कुछ भी अलग से पवित्र मानकर एक ओर रखने की ज़रूरत नहीं।"
+  },
+  {
+   "id": 366,
+   "number": "9.28",
+   "body_en": "This way you will be freed from the bonds of action, from its good and bad fruit alike. With your self joined by the yoga of laying-down, set loose, you will come to me.",
+   "body_hi": "इस तरह तू कर्म के बन्धनों से मुक्त होगा, उसके अच्छे और बुरे फल दोनों से। अपने स्व को रख-देने के योग से जुड़ा हुआ, ढीला छूटा हुआ, तू मुझ तक आएगा।",
+   "commentary_en": "The result of turning life into offering: the actions stop binding, and not only the bad ones — the good fruit is a bond too, and it also loosens. The phrase is sannyasa-yoga, the yoga of laying down, which here means not quitting action but doing it without keeping the result. Freed that way, the person arrives at Krishna.",
+   "commentary_hi": "जीवन को अर्पण में बदलने का फल: कर्म बाँधना बंद कर देते हैं, और केवल बुरे नहीं — अच्छा फल भी एक बन्धन है, और वह भी ढीला पड़ता है। वाक्यांश है संन्यास-योग, रख-देने का योग, जिसका यहाँ मतलब कर्म छोड़ना नहीं बल्कि उसे फल रखे बिना करना है। उस तरह मुक्त होकर, मनुष्य कृष्ण तक पहुँचता है।"
+  },
+  {
+   "id": 367,
+   "number": "9.29",
+   "body_en": "My stance does not tilt for any creature over another — there is nobody I hold at a distance and nobody I favour. And still: the ones whose worship comes from love have their place in me, and I have mine in them.",
+   "body_hi": "किसी प्राणी की ओर किसी दूसरे से ज़्यादा मेरा रुख़ नहीं झुकता — न कोई है जिसे मैं दूर रखता हूँ, न कोई जिस पर मेरी तरफ़दारी है। और फिर भी: जिनकी पूजा प्रेम से आती है, उनकी जगह मुझमें है, और मेरी जगह उनमें।",
+   "commentary_en": "A careful balance. Krishna is even toward everyone — he does not favour or dislike. And yet devotion changes the relation, not by making him partial but by opening something: the one who worships enters him, and he enters that person. The evenness is unbroken; the intimacy is real. Both at once.",
+   "commentary_hi": "एक सावधान संतुलन। कृष्ण सबके प्रति एक-से हैं — वह पक्षपात या नापसन्दगी नहीं करते। और फिर भी भक्ति सम्बन्ध बदल देती है, उन्हें पक्षपाती बनाकर नहीं बल्कि कुछ खोलकर: जो पूजता है वह उनमें प्रवेश करता है, और वह उस व्यक्ति में। समता अटूट है; निकटता असली है। दोनों एक साथ।"
+  },
+  {
+   "id": 368,
+   "number": "9.30",
+   "body_en": "Even if a person of very bad conduct worships me with nothing set beside me, he is to be counted as good — because he has settled on the right course.",
+   "body_hi": "यदि बहुत बुरे चाल-चलन वाला व्यक्ति भी मुझे ऐसे पूजता है कि मेरे साथ कुछ रखा न हो, तो उसे भला ही गिनना चाहिए — क्योंकि वह सही राह पर जम गया है।",
+   "commentary_en": "One of the most argued-over verses in the Gita. It does not say the bad conduct is fine; it says that a person of bad conduct who has genuinely turned, worshipping with nothing set beside Krishna, should be counted as good — because the decisive thing has happened. The resolve has been made; the character will follow, as the next verse says.",
+   "commentary_hi": "गीता के सबसे अधिक बहस वाले श्लोकों में से एक। यह नहीं कहता कि बुरा चाल-चलन ठीक है; यह कहता है कि बुरे चाल-चलन वाला व्यक्ति जो सचमुच मुड़ गया है, कृष्ण के साथ कुछ रखे बिना पूजता हुआ, उसे भला गिनना चाहिए — क्योंकि निर्णायक चीज़ हो चुकी है। निश्चय हो गया है; चरित्र पीछे आएगा, जैसा अगला श्लोक कहता है।"
+  },
+  {
+   "id": 369,
+   "number": "9.31",
+   "body_en": "He quickly becomes a person of dharma and reaches a peace that lasts. Son of Kunti, take it as certain: no one devoted to me is lost.",
+   "body_hi": "वह जल्दी ही धर्म का मनुष्य बन जाता है और एक ऐसी शान्ति तक पहुँचता है जो टिकती है। कुन्तीपुत्र, इसे पक्का मान: मुझसे जुड़ा कोई नष्ट नहीं होता।",
+   "commentary_en": "The follow-through on verse 30. The turning is not an excuse for the past conduct; it is a start, and the conduct changes fast behind it — he becomes dharmic soon, and comes to a peace that does not run out. And then the flat guarantee, which Krishna asks Arjuna to state as a settled fact: my devotee does not perish. Whatever the starting point.",
+   "commentary_hi": "तीसवें श्लोक का निर्वाह। मुड़ना पिछले चाल-चलन का बहाना नहीं; यह एक शुरुआत है, और चाल-चलन उसके पीछे तेज़ी से बदलता है — वह जल्द ही धर्मी बन जाता है, और एक ऐसी शान्ति तक आता है जो चुकती नहीं। और फिर सपाट गारंटी, जिसे कृष्ण अर्जुन से एक तय तथ्य की तरह कहने को कहते हैं: मेरा भक्त नष्ट नहीं होता। शुरुआती बिन्दु जो भी हो।"
+  },
+  {
+   "id": 370,
+   "number": "9.32",
+   "body_en": "For taking their stand on me, Partha, even those born into a low place — women, traders, labourers — even they reach the highest way.",
+   "body_hi": "मुझ पर टेक लेकर, पार्थ, वे भी जो नीची जगह में जन्मे — स्त्रियाँ, व्यापारी, श्रमिक — वे भी सर्वोच्च गति तक पहुँचते हैं।",
+   "commentary_en": "The teaching stated in the social terms of its time — and stated to open the door, not close it. The categories the verse names were the ones a listener would have assumed to be excluded from the highest goal. Krishna says they are not: taking their stand on him, they reach it too. The claim is that the path is open regardless of where a person begins.",
+   "commentary_hi": "शिक्षा अपने समय के सामाजिक पदों में कही गई — और दरवाज़ा खोलने के लिए कही गई, बंद करने के लिए नहीं। जो श्रेणियाँ श्लोक नाम देता है वे वही थीं जिन्हें सुनने वाला सर्वोच्च लक्ष्य से बाहर मान लेता। कृष्ण कहते हैं वे बाहर नहीं: उन पर टेक लेकर, वे भी वहाँ पहुँचते हैं। दावा यह है कि रास्ता खुला है, मनुष्य कहीं से भी शुरू करे।"
+  },
+  {
+   "id": 371,
+   "number": "9.33",
+   "body_en": "If that is so for them, it is all the more so for the clean-living brahmins and the king-sages who are already my devotees. You find yourself in a world with no permanence and no comfort in it — give your worship to me.",
+   "body_hi": "फिर तो कितना अधिक, वे पवित्र ब्राह्मण और भक्त राजर्षि। इस जगत में आकर जो टिकता नहीं और जिसमें आराम नहीं — मुझे पूज।",
+   "commentary_en": "The argument from the lesser to the greater: if even those thought excluded reach the goal, then certainly those already positioned for it can. And then the turn to Arjuna directly — since you are here anyway, in a world that is brief and gives no rest, spend it on this. The whole chapter's teaching comes down to that instruction.",
+   "commentary_hi": "छोटे से बड़े तक का तर्क: यदि वे भी जिन्हें बाहर माना गया लक्ष्य तक पहुँचते हैं, तो निश्चय ही वे जो पहले से उसके लिए स्थित हैं पहुँच सकते हैं। और फिर सीधे अर्जुन की ओर मोड़ — चूँकि तू यहाँ है ही, एक ऐसे जगत में जो छोटा है और आराम नहीं देता, उसे इस पर ख़र्च कर। पूरे अध्याय की शिक्षा उसी निर्देश पर आ जाती है।"
+  },
+  {
+   "id": 372,
+   "number": "9.34",
+   "body_en": "Let your mind be on me, be devoted to me, sacrifice to me, bow to me. Joining yourself this way, with me as your aim, you will come to me — to me and no one else.",
+   "body_hi": "तेरा मन मुझ पर हो, मुझसे जुड़, मुझे यज्ञ अर्पित कर, मुझे झुक। अपने को इस तरह जोड़कर, मुझे लक्ष्य बनाकर, तू मुझ तक आएगा — मुझ तक और किसी तक नहीं।",
+   "commentary_en": "The chapter's close, and it gathers everything into four short imperatives: mind on me, devoted to me, offering to me, bowing to me. Do that, with Krishna as the destination, and the arrival is assured. The verse is repeated almost word for word at the very end of the Gita, in Chapter 18 — it is the instruction the whole book keeps returning to.",
+   "commentary_hi": "अध्याय का अंत, और वह सब कुछ चार छोटे आदेशों में बटोरता है: मन मुझ पर, मुझसे जुड़ा, मुझे अर्पण, मुझे झुका। यह करो, कृष्ण को गंतव्य बनाकर, और पहुँचना पक्का। यह श्लोक गीता के बिल्कुल अंत में, अठारहवें अध्याय में, लगभग शब्दशः दोहराया जाता है — यही वह निर्देश है जिस पर पूरी पुस्तक लौटती रहती है।"
+  }
+ ]
+}
