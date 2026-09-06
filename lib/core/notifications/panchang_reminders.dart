@@ -7,36 +7,54 @@ import '../../features/panchang/panchang_engine.dart';
 import 'reminder_service.dart';
 
 /// Automatic panchang reminders — the equivalent of Ishvarvaani's
-/// `scheduleEkadashiNotifications` / `schedulePurnimaAmavasyaNotifications` /
-/// `scheduleQuoteNotifications`.
+/// `scheduleAllNotifications` (which fans out to `scheduleEkadashiNotifications`
+/// / `schedulePurnimaAmavasyaNotifications` / `scheduleFestivalNotifications` /
+/// `scheduleQuoteNotifications`).
 ///
 /// Unlike the per-festival opt-in in `festival_reminder.dart` (the user taps a
 /// switch on one festival's page), this is a **single** toggle that, once on,
-/// keeps a rolling window of the recurring lunar-calendar days queued with the
-/// OS — computed on-device from the panchang engine, nothing fetched.
+/// keeps a rolling window queued with the OS — all computed on-device from the
+/// panchang engine, nothing fetched.
 ///
-/// The window is re-armed on every app launch (see `main.dart`). Because the
-/// tithi-based days (Ekadashi, Purnima, Amavasya) do not repeat on a fixed
-/// clock, they cannot use `matchDateTimeComponents` the way a daily nudge can;
-/// a 60-day horizon re-armed each launch is the margin. The daily verse nudge
-/// *does* repeat on its own and is scheduled once.
+/// ## Timing, matched to what Ishvarvaani actually does
+///
+/// Read off a live device with `dumpsys alarm` (its bundle is Hermes bytecode,
+/// so the schedule is only observable at runtime):
+///
+/// | What | When it fires | How far ahead it batches |
+/// |---|---|---|
+/// | Ekadashi / Purnima / Amavasya | **09:00 on the day itself** | ~180 days |
+/// | Daily bhog / diya practice nudge | **21:00 every day** | one row per calendar day |
+/// | Verse of the day | a morning hour | repeats on its own |
+///
+/// So: not "the evening before", not a 60-day horizon. The window is re-armed
+/// on every app launch (see `main.dart`) so it never drains even if the user
+/// does not open the panchang screen.
 class PanchangReminders {
   PanchangReminders._();
   static final instance = PanchangReminders._();
 
   /// SharedPreferences keys.
   static const _enabledKey = 'panchang_reminders_enabled';
-  static const _hourKey = 'panchang_reminders_hour'; // evening-before hour
-  static const _verseHourKey = 'panchang_verse_hour'; // daily verse nudge hour
+  static const _lunarHourKey = 'panchang_lunar_hour'; // 09:00 on the day
+  static const _practiceHourKey = 'panchang_practice_hour'; // 21:00 daily
+  static const _verseHourKey = 'panchang_verse_hour'; // morning verse nudge
   static const _armedIdsKey = 'panchang_reminders_armed_ids'; // csv of notif ids
 
-  /// Notification-id band reserved for these — clear of user reminders (1..1e5)
-  /// and per-festival reminders (900000+id). 60 days of at most ~6 lunar days a
-  /// month fits comfortably.
-  static const _idBase = 700000;
-  static const _verseId = 700999;
+  /// Defaults, chosen to match the observed Ishvarvaani schedule.
+  static const _lunarHourDefault = 9;
+  static const _practiceHourDefault = 21;
+  static const _verseHourDefault = 7;
 
-  static const _horizonDays = 60;
+  /// Notification-id band reserved for these — clear of user reminders (1..1e5)
+  /// and per-festival reminders (900000+id).
+  static const _idBase = 700000; // one-shot lunar days, per day-of-year
+  static const _verseId = 700998; // repeating morning verse nudge
+  static const _practiceId = 700997; // repeating 21:00 practice nudge
+
+  /// ~6 months, like Ishvarvaani's festival batch (seen out to March from
+  /// September). Re-armed each launch, so this is a floor, not a promise.
+  static const _horizonDays = 180;
 
   final _svc = ReminderService.instance;
 
@@ -56,21 +74,12 @@ class PanchangReminders {
     }
   }
 
-  Future<int> _eveHour() async {
+  Future<int> _hour(String key, int fallback) async {
     try {
       final p = await SharedPreferences.getInstance();
-      return p.getInt(_hourKey) ?? 19; // 7 pm the evening before
+      return p.getInt(key) ?? fallback;
     } catch (_) {
-      return 19;
-    }
-  }
-
-  Future<int> _verseHour() async {
-    try {
-      final p = await SharedPreferences.getInstance();
-      return p.getInt(_verseHourKey) ?? 7; // 7 am
-    } catch (_) {
-      return 7;
+      return fallback;
     }
   }
 
@@ -91,25 +100,25 @@ class PanchangReminders {
     }
   }
 
-  /// A lunar day worth a reminder, with a stable per-day id so re-arming the
-  /// overlapping part of the window is idempotent.
+  /// A lunar day worth a reminder. Title reads "today" — the reminder fires on
+  /// the day itself, at 09:00, as Ishvarvaani does.
   static ({String titleEn, String titleHi})? _lunarDayLabel(int tithiIdx) {
     switch (tithiIdx) {
       case 10: // Shukla Ekadashi
       case 25: // Krishna Ekadashi
-        return (titleEn: 'Ekadashi tomorrow', titleHi: 'कल एकादशी है');
+        return (titleEn: 'Ekadashi today', titleHi: 'आज एकादशी है');
       case 14: // Purnima
-        return (titleEn: 'Purnima tomorrow', titleHi: 'कल पूर्णिमा है');
+        return (titleEn: 'Purnima today', titleHi: 'आज पूर्णिमा है');
       case 29: // Amavasya
-        return (titleEn: 'Amavasya tomorrow', titleHi: 'कल अमावस्या है');
+        return (titleEn: 'Amavasya today', titleHi: 'आज अमावस्या है');
       default:
         return null;
     }
   }
 
-  /// Deterministic id for the reminder about [date]'s lunar day: day-of-year in
-  /// the band, so the same calendar day always maps to the same slot and a
-  /// second arming replaces rather than duplicates.
+  /// Deterministic id for a lunar-day reminder on [date], so re-arming the
+  /// overlapping part of the window replaces rather than duplicates. Year is
+  /// folded in (mod 100) so a window that crosses New Year does not collide.
   static int _idFor(DateTime date) =>
       _idBase + int.parse('${date.year % 100}${_dayOfYear(date)}');
 
@@ -120,47 +129,69 @@ class PanchangReminders {
   Future<void> rescheduleWindow({required bool hindi}) async {
     if (!_supported) return;
     if (!await isEnabled()) return;
+
     final tz = DateTime.now().timeZoneOffset;
-    final eveHour = await _eveHour();
     final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
+    final lunarHour = await _hour(_lunarHourKey, _lunarHourDefault);
+    final practiceHour = await _hour(_practiceHourKey, _practiceHourDefault);
 
-    // Cancel whatever the previous arming left, so a day that stopped
+    // Clear whatever the previous arming left, so a day that stopped
     // qualifying (or a horizon that moved) does not leave a stale alarm.
     await _clearBand();
 
     final armedIds = <int>[];
-    for (var i = 1; i <= _horizonDays; i++) {
+    var lunarCount = 0;
+
+    // The daily practice nudge is a fixed-clock repeat — one alarm the OS
+    // re-fires forever, not 180 one-shots. Ishvarvaani queues a row per day
+    // because Notifee has no clean daily-repeat for a *background* trigger;
+    // flutter_local_notifications does (matchDateTimeComponents), so we use it.
+    await _svc.schedule(
+      notifId: _practiceId,
+      kind: 'mandir',
+      title: hindi ? 'आज की साधना' : "Today's practice",
+      body: hindi
+          ? 'अपने मंदिर में दीप, भोग और प्रार्थना अर्पित करें।'
+          : 'Offer a diya, bhog and a prayer at your mandir.',
+      minuteOfDay: practiceHour * 60,
+      payload: '/mandir',
+    );
+
+    // Only the lunar days need one-shots — they are irregular, so no
+    // fixed-clock repeat can express them. ~24 over 180 days.
+    for (var i = 0; i <= _horizonDays; i++) {
       final day = today.add(Duration(days: i));
+
+      // Lunar-calendar day — Ekadashi / Purnima / Amavasya, at 09:00 on
+      // the day itself.
       final label = _lunarDayLabel(dayTithiIndex(day, tz));
       if (label == null) continue;
+      final lunarWhen = DateTime(day.year, day.month, day.day, lunarHour);
+      if (!lunarWhen.isAfter(now)) continue;
 
-      // Fire the evening before, at the chosen hour.
-      final when = DateTime(day.year, day.month, day.day, eveHour)
-          .subtract(const Duration(days: 1));
-      if (!when.isAfter(now)) continue;
-
-      // If a named festival also lands on this day, let its own reminder
-      // (if the user set one) speak — but this generic nudge is still useful
-      // for the many Ekadashis/Purnimas that are not "festivals".
+      // If a named festival also lands on this day, lead with its name — the
+      // generic nudge still earns its place for the many Ekadashis/Purnimas
+      // that are not "festivals".
       final fest = festivalOnDay(day, tz);
       final bodyEn = fest != null
-          ? '${fest.name.en} — ${label.titleEn.toLowerCase()}.'
+          ? '${fest.name.en} — a day for vrat and quiet practice.'
           : 'A day for vrat and quiet practice.';
       final bodyHi = fest != null
-          ? '${fest.name.hi} — ${label.titleHi}।'
+          ? '${fest.name.hi} — व्रत और शांत साधना का दिन।'
           : 'व्रत और शांत साधना का दिन।';
 
-      final id = _idFor(day);
+      final lid = _idFor(day);
       await _svc.scheduleOnce(
-        notifId: id,
-        kind: 'festival', // reuses the "Festivals" channel + route
+        notifId: lid,
+        kind: 'festival', // Festivals channel + route
         title: hindi ? label.titleHi : label.titleEn,
         body: hindi ? bodyHi : bodyEn,
-        when: when,
+        when: lunarWhen,
         payload: '/panchang',
       );
-      armedIds.add(id);
+      armedIds.add(lid);
+      lunarCount++;
     }
 
     try {
@@ -168,18 +199,21 @@ class PanchangReminders {
       await p.setString(_armedIdsKey, armedIds.join(','));
     } catch (_) {}
 
-    await _scheduleDailyVerse(hindi: hindi, hour: await _verseHour());
-    debugPrint('PanchangReminders: armed ${armedIds.length} lunar-day '
-        'reminder(s) over $_horizonDays days');
+    await _scheduleDailyVerse(
+        hindi: hindi, hour: await _hour(_verseHourKey, _verseHourDefault));
+
+    debugPrint('PanchangReminders: armed $lunarCount one-shot lunar-day '
+        'reminder(s) over $_horizonDays days, plus the daily practice + '
+        'verse repeats');
   }
 
-  /// The one daily-repeating reminder in this set. Uses the service's own
+  /// The one clock-repeating reminder in this set. Uses the service's own
   /// repeating path so the OS keeps re-firing it without our help.
   Future<void> _scheduleDailyVerse(
       {required bool hindi, required int hour}) async {
     await _svc.schedule(
       notifId: _verseId,
-      kind: 'sadhana', // a gentle daily nudge; Sadhana channel fits
+      kind: 'sadhana',
       title: hindi ? 'आज का श्लोक' : 'Verse of the day',
       body: hindi
           ? 'आज का श्लोक आपकी प्रतीक्षा में है।'
@@ -189,9 +223,10 @@ class PanchangReminders {
     );
   }
 
-  /// Cancel every id the last arming recorded, plus the fixed verse id.
+  /// Cancel every id the last arming recorded, plus the fixed repeat ids.
   Future<void> _clearBand() async {
     await _svc.cancel(_verseId);
+    await _svc.cancel(_practiceId);
     try {
       final p = await SharedPreferences.getInstance();
       final csv = p.getString(_armedIdsKey) ?? '';

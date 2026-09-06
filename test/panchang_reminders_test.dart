@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -5,20 +6,24 @@ import 'package:divyavaani/core/notifications/panchang_reminders.dart';
 import 'package:divyavaani/features/panchang/panchang_engine.dart';
 
 /// Guards the auto-scheduler's pure logic. The actual OS scheduling is a
-/// no-op under `flutter test` (ReminderService bails on unsupported
-/// platforms), so this covers the parts that decide *what* gets queued.
+/// no-op under `flutter test` — `PanchangReminders._supported` is false on
+/// desktop/web — so this covers the pref state and what *would* be queued.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  setUp(() => SharedPreferences.setMockInitialValues({}));
+  setUp(() {
+    SharedPreferences.setMockInitialValues({});
+    // Force the "unsupported platform" branch so setEnabled/rescheduleWindow
+    // exercise only the pref path and never touch the (uninitialised) plugin.
+    debugDefaultTargetPlatformOverride = TargetPlatform.linux;
+  });
+  tearDown(() => debugDefaultTargetPlatformOverride = null);
 
   test('feature is off by default', () async {
     expect(await PanchangReminders.instance.isEnabled(), isFalse);
   });
 
-  test('setEnabled persists the flag', () async {
-    // Under `flutter test` the OS scheduling is a no-op (see _supported), so
-    // this only asserts the pref half — the queueing is a device check.
+  test('setEnabled persists the flag both ways', () async {
     await PanchangReminders.instance.setEnabled(true, hindi: false);
     expect(await PanchangReminders.instance.isEnabled(), isTrue);
     await PanchangReminders.instance.setEnabled(false, hindi: false);
@@ -26,21 +31,21 @@ void main() {
   });
 
   test('rescheduleWindow is a no-op while disabled', () async {
-    // Must not throw and must not persist an armed-ids list.
     await PanchangReminders.instance.rescheduleWindow(hindi: false);
     final p = await SharedPreferences.getInstance();
     expect(p.getString('panchang_reminders_armed_ids'), isNull);
   });
 
-  test('the next 60 days contain at least four Ekadashis and two Purnimas',
+  test('a 180-day window spans at least a dozen Ekadashis and five Purnimas',
       () {
-    // Two Ekadashis + one Purnima + one Amavasya per lunar month, so a
-    // 60-day window always spans ~two months of them. This is what the
-    // scheduler will queue; if the tithi indices ever drift this catches it.
+    // ~2 Ekadashis + 1 Purnima + 1 Amavasya per lunar month. Over 180 days
+    // that is roughly 12 / 6 / 6. If the tithi indices (10/25 Ekadashi,
+    // 14 Purnima, 29 Amavasya) ever drift, the scheduler would queue the
+    // wrong days and this catches it.
     final tz = DateTime.now().timeZoneOffset;
     final today = DateTime.now();
     var ekadashi = 0, purnima = 0, amavasya = 0;
-    for (var i = 1; i <= 60; i++) {
+    for (var i = 0; i <= 180; i++) {
       final d = DateTime(today.year, today.month, today.day)
           .add(Duration(days: i));
       switch (dayTithiIndex(d, tz)) {
@@ -53,8 +58,8 @@ void main() {
           amavasya++;
       }
     }
-    expect(ekadashi, greaterThanOrEqualTo(4));
-    expect(purnima, greaterThanOrEqualTo(1));
-    expect(amavasya, greaterThanOrEqualTo(1));
+    expect(ekadashi, greaterThanOrEqualTo(12));
+    expect(purnima, greaterThanOrEqualTo(5));
+    expect(amavasya, greaterThanOrEqualTo(5));
   });
 }

@@ -2377,14 +2377,24 @@ NR-04); those are reflected here rather than the stale original counts.
         `exactAllowWhileIdle` when granted, inexact fallback when not. `cancel`
         /`cancelAll` gained the `_ready` guard the other methods already had
       - **new `PanchangReminders`** — the equivalent of Ishvarvaani's
-        `scheduleEkadashiNotifications` / `schedulePurnimaAmavasyaNotifications`
-        / `scheduleQuoteNotifications`: one toggle in Profile → Reminders that
-        keeps a rolling 60-day window of Ekadashi/Purnima/Amavasya nudges
-        (computed on-device from `dayTithiIndex`, evening-before) plus a daily
-        verse nudge, re-armed on every launch from `main.dart` so the queue
-        never runs dry. Notif-id band 700000–700999
-      - `test/panchang_reminders_test.dart` (4 tests); device verification of
-        all four cases (exact timing, post-reboot, post-update, permission
+        `scheduleAllNotifications` fan-out. **Timing matched to the live
+        Ishvarvaani app** (its bundle is Hermes bytecode, so `dumpsys alarm`
+        on a real device is the only way to see the schedule): lunar days
+        (Ekadashi / Purnima / Amavasya) fire at **09:00 on the day itself**
+        — not the evening before — batched **~180 days** ahead as one-shots
+        (Ishvarvaani's festival batch was seen out to March from September);
+        a **daily practice nudge at 21:00** ("Offer a diya, bhog and a
+        prayer", the `bhog_reminders_v2` channel in their build) and the
+        **verse of the day** are fixed-clock *repeats* (one alarm each via
+        `matchDateTimeComponents`, not 180 one-shots — Notifee has no
+        background daily-repeat so Ishvarvaani queues a row per day;
+        `flutter_local_notifications` does, so we use it). One toggle in
+        Profile → Reminders; re-armed every launch from `main.dart` so the
+        window never drains. Notif-id band 700000–700999 (700997 practice,
+        700998 verse, rest = per-day lunar one-shots)
+      - `test/panchang_reminders_test.dart` (4 tests, platform forced
+        unsupported so only the pref path runs); device verification of all
+        four cases (exact timing, post-reboot, post-update, permission
         prompt) folded into `RELEASE-CHECKLIST.md` §3
 - [x] **AR-01** Confirm the AI image tool's terms permit commercial
       distribution — generator is **OpenAI gpt-image-1 (API)**. OpenAI Terms

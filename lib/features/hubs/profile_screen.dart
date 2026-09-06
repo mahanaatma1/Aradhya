@@ -512,8 +512,8 @@ class _PanchangReminderToggleState extends State<_PanchangReminderToggle> {
       title: Text(hi ? 'पंचांग स्मरण' : 'Panchang reminders'),
       subtitle: Text(
         hi
-            ? 'एकादशी, पूर्णिमा और अमावस्या की एक शाम पहले सूचना, तथा प्रतिदिन एक श्लोक।'
-            : 'A nudge the evening before each Ekadashi, Purnima and Amavasya, plus a daily verse.',
+            ? 'हर एकादशी, पूर्णिमा और अमावस्या के दिन सुबह सूचना; प्रतिदिन साधना की याद और आज का श्लोक।'
+            : 'A morning nudge on each Ekadashi, Purnima and Amavasya, an evening reminder to do your practice, and the verse of the day.',
         style: TextStyle(
             fontSize: 12, color: scheme.onSurface.withValues(alpha: 0.6)),
       ),
