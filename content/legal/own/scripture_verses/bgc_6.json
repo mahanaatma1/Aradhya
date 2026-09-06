@@ -1,0 +1,386 @@
+{
+ "slug": "bgc_6",
+ "title_en": "Dhyana Yoga",
+ "title_hi": "ध्यान योग",
+ "book_id": 6,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 234,
+   "number": "6.1",
+   "body_en": "The Blessed One said: The one who does the work that must be done without leaning on what it will earn — he is the renouncer, he is the yogi, and not the person who has merely put out the fire or folded his hands.",
+   "body_hi": "श्रीभगवान ने कहा — जो कर्म करने योग्य है उसे उसके फल का सहारा लिए बिना जो करता है, वही त्यागी है, वही योगी है; वह नहीं जिसने केवल अग्नि बुझा दी या हाथ रोक लिए।",
+   "commentary_en": "The chapter opens by refusing a distinction Arjuna has been leaning on. Renunciation, in the picture he inherited, meant walking away — no household fire, no work at all. Krishna moves the word off the act and onto the motive: what you drop is the claim on the result, not the task. A man can quit everything and still be nothing here; a man can stay at his post and be both renouncer and yogi at once. It is the same answer as Chapter 3, said again because it did not take.",
+   "commentary_hi": "अध्याय एक भेद को नकारते हुए खुलता है, जिस पर अर्जुन टिका रहा है। संन्यास का जो चित्र उसे मिला, उसमें उसका अर्थ था चले जाना — न घर की अग्नि, न कोई कर्म। कृष्ण शब्द को कर्म से हटाकर मंशा पर रखते हैं: जो तुम छोड़ते हो वह फल पर दावा है, कार्य नहीं। मनुष्य सब कुछ छोड़कर भी यहाँ शून्य रह सकता है; मनुष्य अपने स्थान पर टिककर एक साथ त्यागी और योगी दोनों हो सकता है। यह वही उत्तर है जो तीसरे अध्याय में था, फिर कहा गया क्योंकि पहले लगा नहीं।"
+  },
+  {
+   "id": 235,
+   "number": "6.2",
+   "body_en": "What people call renunciation, Pandava, know that to be yoga; for no one becomes a yogi who has not first let go of wanting the outcome.",
+   "body_hi": "हे पाण्डव, जिसका नाम लोग त्याग रखते हैं, वही जुड़ाव भी है; क्योंकि जब तक भीतर का इरादा उतरा नहीं, तब तक कोई जुड़ा हुआ नहीं कहलाता।",
+   "commentary_en": "The two words have been circling each other for three chapters as if a person must pick one. Krishna welds them: the renunciation worth having and the yoga worth doing are the same act seen from two sides. The hinge is sankalpa — the fixed intention, the plan you have already written for how things must turn out. Give that up and the labels stop mattering. Keep it and neither name fits, whatever you call yourself.",
+   "commentary_hi": "ये दो शब्द तीन अध्यायों से एक-दूसरे के चक्कर काट रहे हैं मानो मनुष्य को एक चुनना ही पड़े। कृष्ण उन्हें जोड़ देते हैं: पाने योग्य संन्यास और करने योग्य योग एक ही कर्म हैं, दो ओर से देखा हुआ। धुरी है संकल्प — वह तय इरादा, वह योजना जो तुमने पहले ही लिख रखी है कि चीज़ें कैसे निकलें। उसे छोड़ो और नाम मायने रखना बंद कर देते हैं। उसे रखो और कोई नाम नहीं बैठता, चाहे तुम अपने को जो कहो।"
+  },
+  {
+   "id": 236,
+   "number": "6.3",
+   "body_en": "For the sage still climbing toward yoga, action is called the means; for the one who has reached the height of it, stillness is called the means.",
+   "body_hi": "जो मुनि अभी योग की ओर चढ़ रहा है, उसके लिए कर्म साधन कहा गया है; जो उसकी ऊँचाई तक पहुँच गया, उसके लिए शान्ति साधन कहा गया है।",
+   "commentary_en": "One method does not fit both ends of the road. The person still working his way up needs something to do — action is the rope. The person already at the top needs to stop reaching — quiet is what carries him further. The mistake is to prescribe the summit's stillness to someone at the foot of the climb, or to keep making the arrived man haul on the rope he no longer needs.",
+   "commentary_hi": "एक तरीक़ा रास्ते के दोनों सिरों पर नहीं बैठता। जो अभी ऊपर चढ़ रहा है उसे कुछ करने को चाहिए — कर्म रस्सी है। जो शिखर पर है उसे पहुँचना बंद करना है — शान्ति ही उसे आगे ले जाती है। ग़लती है शिखर की शान्ति उसे बताना जो चढ़ाई के पैर पर है, या पहुँचे हुए से उस रस्सी को खिंचवाते रहना जिसकी उसे अब ज़रूरत नहीं।"
+  },
+  {
+   "id": 237,
+   "number": "6.4",
+   "body_en": "When a man no longer clings to the things the senses reach for or to the actions themselves, when he has set down every plan for how it should go — then he is said to have arrived at yoga.",
+   "body_hi": "जब मनुष्य न इन्द्रियों के विषयों से चिपकता है, न कर्मों से, जब उसने हर योजना रख दी है कि यह कैसे हो — तब कहा जाता है कि वह योग तक पहुँच गया।",
+   "commentary_en": "The last verse named the height without saying how you would know you were on it. This one gives the test. Not that the senses have gone silent or the work has stopped, but that the grip is loose — nothing out there is being held onto, and no private script is running underneath about the result. Sankalpa again: it is the recurring word of this chapter, the thing to notice you are still carrying.",
+   "commentary_hi": "पिछले श्लोक ने ऊँचाई का नाम लिया, यह नहीं कहा कि तुम कैसे जानोगे कि तुम उस पर हो। यह कसौटी देता है। यह नहीं कि इन्द्रियाँ चुप हो गईं या कर्म रुक गया, बल्कि यह कि पकड़ ढीली है — बाहर कुछ भी थामा नहीं जा रहा, और नीचे कोई निजी लिपि नहीं चल रही कि नतीजा क्या हो। फिर संकल्प: यह इस अध्याय का लौटता हुआ शब्द है, वह चीज़ जिसे देखना है कि तुम अब भी ढो रहे हो।"
+  },
+  {
+   "id": 238,
+   "number": "6.5",
+   "body_en": "Lift yourself by your own effort; do not let yourself sink. You are your own ally and your own enemy — no one else stands in either place.",
+   "body_hi": "अपने ही प्रयत्न से अपने को उठाओ; अपने को डूबने मत दो। तुम्हीं अपने मित्र हो और तुम्हीं अपने शत्रु — इन दोनों जगहों पर और कोई नहीं खड़ा।",
+   "commentary_en": "The most quoted line in the chapter, and it is blunt on purpose. No teacher, no god named here, does the lifting. The self that hauls and the self that is hauled are the same self, which is why the work is possible and why it is nobody else's to do. The verse does not say you have no help. It says the help cannot substitute for the pull.",
+   "commentary_hi": "अध्याय की सबसे उद्धृत पंक्ति, और वह जानबूझकर दो-टूक है। कोई गुरु, यहाँ नामित कोई देव, उठाता नहीं। जो आत्मा खींचती है और जो खींची जाती है, वह एक ही आत्मा है, इसीलिए काम संभव है और इसीलिए वह किसी और के करने का नहीं। श्लोक यह नहीं कहता कि तुम्हें कोई सहारा नहीं। वह कहता है कि सहारा खिंचाई की जगह नहीं ले सकता।"
+  },
+  {
+   "id": 239,
+   "number": "6.6",
+   "body_en": "To the man who has won himself over by himself, the self is an ally; but to the man who has not, that same self keeps behaving like an enemy at war with him.",
+   "body_hi": "जिसने अपने से अपने को जीत लिया, उसके लिए आत्मा मित्र है; पर जिसने नहीं जीता, उसके लिए वही आत्मा शत्रु की तरह उससे लड़ती रहती है।",
+   "commentary_en": "The friend and enemy of the last verse are not two natures a person is assigned. They are two outcomes of one contest. Win it and the self is on your side; skip it and the self does not go neutral — it turns and fights, from inside, with everything it has. There is no third state where you are simply left alone.",
+   "commentary_hi": "पिछले श्लोक का मित्र और शत्रु दो प्रकृतियाँ नहीं जो किसी को सौंप दी जाएँ। वे एक ही मुक़ाबले के दो नतीजे हैं। जीत लो तो आत्मा तुम्हारी ओर है; छोड़ दो तो आत्मा तटस्थ नहीं होती — वह मुड़कर लड़ती है, भीतर से, अपनी पूरी ताक़त से। कोई तीसरी दशा नहीं जहाँ तुम्हें बस अकेला छोड़ दिया जाए।"
+  },
+  {
+   "id": 240,
+   "number": "6.7",
+   "body_en": "For the man who has mastered himself and grown calm, the highest Self is right there, steady, through cold and heat, through pleasure and pain, through being honoured and being scorned.",
+   "body_hi": "जिसने अपने को साध लिया और शान्त हो गया, उसके लिए परम आत्मा वहीं है, स्थिर, शीत और ताप में, सुख और दुःख में, आदर पाने और तिरस्कार पाने में।",
+   "commentary_en": "The pairs are chosen for their pull in opposite directions — one warms you, one bites; one lifts you in a room, one shrinks you. To the self-mastered person they arrive as weather, not as verdicts. What holds steady while they pass is the point: the higher Self is not somewhere to be reached later, it is already present and unmoved for the one who has stopped being moved.",
+   "commentary_hi": "जोड़े उनके विपरीत खिंचाव के लिए चुने गए हैं — एक गरमाता है, एक काटता है; एक भरी सभा में उठाता है, एक सिकोड़ देता है। साधे हुए मनुष्य के पास वे मौसम की तरह आते हैं, फ़ैसले की तरह नहीं। जो उनके गुज़रते हुए स्थिर रहता है, वही बात है: परम आत्मा बाद में पहुँचने की कोई जगह नहीं, वह पहले से मौजूद और अचल है उसके लिए जो हिलना बंद कर चुका।"
+  },
+  {
+   "id": 241,
+   "number": "6.8",
+   "body_en": "The yogi whose fill is knowledge and its ripening, who sits unshaken with his senses in hand, for whom a clod, a stone and gold weigh the same — he is called joined, held in yoga.",
+   "body_hi": "वह योगी जिसकी तृप्ति ज्ञान और उसका पककर उतरना है, जो अपनी इन्द्रियों को थामे अडोल बैठा है, जिसके लिए मिट्टी का ढेला, पत्थर और सोना एक बराबर हैं — वह युक्त कहलाता है, योग में बँधा।",
+   "commentary_en": "Two words are set side by side: knowing a thing, and having it settle into you until it stops being information. The second is what fills him. The clod, the stone, the gold are the test made cheap and physical — not that he cannot tell them apart, but that none of them tugs. His fullness is already elsewhere, so the market has nothing to sell him.",
+   "commentary_hi": "दो शब्द साथ रखे हैं: किसी बात को जानना, और उसका भीतर बैठ जाना यहाँ तक कि वह सूचना रहना बंद कर दे। दूसरा ही उसे भरता है। ढेला, पत्थर, सोना — कसौटी को सस्ता और ठोस बना दिया गया है: यह नहीं कि वह इन्हें पहचान नहीं सकता, बल्कि यह कि इनमें से कोई खींचता नहीं। उसकी भरपूरता पहले से कहीं और है, इसलिए बाज़ार के पास उसे बेचने को कुछ नहीं।"
+  },
+  {
+   "id": 242,
+   "number": "6.9",
+   "body_en": "The one who holds an even mind toward a well-wisher, a friend, an enemy, a stranger, a bystander, someone he must referee between, someone he cannot stand, a relative — and equally toward the good and the wicked — he stands out.",
+   "body_hi": "जो हितैषी, मित्र, शत्रु, अपरिचित, तमाशबीन, जिनके बीच फ़ैसला करना है, जो सह नहीं सकता, और सम्बन्धी — इन सबके प्रति सम मन रखता है, और भले तथा दुष्ट के प्रति भी बराबर — वही उभरकर दिखता है।",
+   "commentary_en": "The list is unusually long and deliberately awkward — it runs past friend and enemy into the harder middle: the person you are stuck arbitrating, the one who simply grates on you, the relative you did not choose. Evenness toward the clear cases is easy to claim. This verse asks for it across the whole crowded field, and says the person who manages it is the one who is actually further along.",
+   "commentary_hi": "सूची असामान्य रूप से लंबी और जानबूझकर बेढंगी है — वह मित्र और शत्रु से आगे बढ़कर कठिन बीच में जाती है: वह जिसके बीच तुम फँसकर पंच बने हो, वह जो बस तुम्हें खटकता है, वह सम्बन्धी जिसे तुमने चुना नहीं। साफ़ मामलों में समता का दावा आसान है। यह श्लोक उसे पूरे भीड़-भरे मैदान में माँगता है, और कहता है कि जो इसे निभा ले जाता है वही सचमुच आगे है।"
+  },
+  {
+   "id": 243,
+   "number": "6.10",
+   "body_en": "Let the yogi keep joining himself, again and again, staying in a quiet place, alone, mind and self reined in, expecting nothing, owning nothing he does not need.",
+   "body_hi": "योगी अपने को बार-बार जोड़ता रहे, किसी शान्त जगह में रहकर, अकेला, मन और आत्मा को थामे, किसी की आस न रखते हुए, ऐसा कुछ न रखते हुए जिसकी ज़रूरत नहीं।",
+   "commentary_en": "The practical instructions begin here and they are modest: somewhere quiet, by yourself, not waiting on anyone, not carrying possessions past need. \"Again and again\" is the load-bearing phrase — the joining is not done once and kept, it is a return you keep making. What follows over the next verses fills in the posture and the seat, but this is the frame: alone, unhurried, repeated.",
+   "commentary_hi": "व्यावहारिक निर्देश यहाँ से शुरू होते हैं और वे मामूली हैं: कोई शान्त जगह, अकेले, किसी की राह न देखते हुए, ज़रूरत से आगे सामान न ढोते हुए। 'बार-बार' भार उठाने वाला वाक्यांश है — जोड़ना एक बार करके रख नहीं दिया जाता, वह एक लौटना है जिसे तुम करते रहते हो। आगे के श्लोकों में आसन और मुद्रा भरी जाएगी, पर ढाँचा यही है: अकेले, बिना जल्दी, दोहराया हुआ।"
+  },
+  {
+   "id": 244,
+   "number": "6.11",
+   "body_en": "The ground should be clean, and the seat he makes on it should hold without wobbling — raised a little, not much, not flat to the floor — built up from grass with a skin over it and a cloth on top.",
+   "body_hi": "जगह साफ़ हो, और जो आसन वह उस पर बनाए वह हिले नहीं — थोड़ा उठा हुआ, ज़्यादा नहीं, फ़र्श से लगा भी नहीं — नीचे घास, उस पर चर्म, सबसे ऊपर कपड़ा।",
+   "commentary_en": "The details are plain on purpose. Clean, level, stable — a seat that will not tip and will not distract. The three layers were what a forest practitioner had to hand. The point is not the materials; it is that the body is given somewhere settled to be so the attention is not spent managing discomfort. A practice that fights the seat the whole time is not the practice being described.",
+   "commentary_hi": "ब्योरे जानबूझकर सादे हैं। साफ़, समतल, स्थिर — एक आसन जो न लुढ़के और न ध्यान बँटाए। तीन परतें वही थीं जो वन के साधक के पास होतीं। बात सामग्री की नहीं; बात यह है कि शरीर को बैठने की एक जमी हुई जगह दी जाए ताकि ध्यान असुविधा सँभालने में न खर्च हो। जो साधना पूरे समय आसन से लड़ती रहे, वह यहाँ बताई जा रही साधना नहीं।"
+  },
+  {
+   "id": 245,
+   "number": "6.12",
+   "body_en": "There, making the mind one-pointed, holding the workings of thought and sense in check, seated, he should work at yoga for the cleansing of himself.",
+   "body_hi": "वहाँ मन को एकाग्र करते हुए, विचार और इन्द्रिय के व्यापार को रोके हुए, आसन पर बैठकर, वह अपने शोधन के लिए योग का अभ्यास करे।",
+   "commentary_en": "Once the seat is right, the aim narrows: bring the many-directioned mind to a single point. The phrase for the goal is worth noticing — \"for the cleansing of himself,\" not for a vision or a power. What the practice does first is wash something out. Whatever else follows follows that.",
+   "commentary_hi": "आसन ठीक हो जाने पर लक्ष्य सिमटता है: बहुदिशा मन को एक बिन्दु पर लाना। लक्ष्य का वाक्यांश ध्यान देने योग्य है — 'अपने शोधन के लिए', किसी दर्शन या शक्ति के लिए नहीं। साधना पहले जो करती है वह कुछ धोकर निकालना है। जो और कुछ आगे आता है, वह उसी के बाद आता है।"
+  },
+  {
+   "id": 246,
+   "number": "6.13",
+   "body_en": "Holding torso, neck and head in a straight line, unmoving, still, he should look toward the tip of his own nose and not let his gaze wander to the directions around him.",
+   "body_hi": "धड़, गर्दन और सिर को एक सीध में थामे, अडोल, स्थिर, वह अपनी नाक की नोक की ओर देखे और दृष्टि को चारों ओर की दिशाओं में भटकने न दे।",
+   "commentary_en": "The physical instructions end here, and they are about closing off exits. A straight spine so the body does not slump into sleep; the eyes brought to a near, fixed point so they cannot go shopping around the room. It is not mystical. It is removing the easy ways for attention to leave.",
+   "commentary_hi": "शारीरिक निर्देश यहीं समाप्त होते हैं, और वे बाहर निकलने के रास्ते बंद करने के बारे में हैं। सीधी रीढ़ ताकि शरीर झुककर नींद में न ढले; आँखें एक पास के, तय बिन्दु पर लाई गईं ताकि वे कमरे में घूमकर ख़रीदारी न कर सकें। यह रहस्यमय नहीं। यह ध्यान के जाने के आसान रास्ते हटाना है।"
+  },
+  {
+   "id": 247,
+   "number": "6.14",
+   "body_en": "Calm within, fear gone, firm in the vow of the celibate, holding the mind steady, he should sit with his thought on me, joined, with me as the aim.",
+   "body_hi": "भीतर से शान्त, भय गया, ब्रह्मचर्य के व्रत में दृढ़, मन को स्थिर थामे, वह मुझ पर चित्त लगाकर बैठे, जुड़ा हुआ, मुझे ही लक्ष्य मानकर।",
+   "commentary_en": "The posture was outer; this is inner. Fear stilled, appetites reined, and the mind pointed at one object — and here Krishna names the object as himself. Until now the instructions could have belonged to any contemplative school. This verse gives the practice its direction: not empty concentration, but concentration aimed.",
+   "commentary_hi": "मुद्रा बाहरी थी; यह भीतरी है। भय शान्त, इच्छाएँ थमी हुईं, और मन एक वस्तु पर लगा हुआ — और यहाँ कृष्ण वस्तु को अपने रूप में नाम देते हैं। अब तक निर्देश किसी भी चिन्तन-परम्परा के हो सकते थे। यह श्लोक साधना को दिशा देता है: ख़ाली एकाग्रता नहीं, बल्कि लक्ष्य-युक्त एकाग्रता।"
+  },
+  {
+   "id": 248,
+   "number": "6.15",
+   "body_en": "Joining himself in this way without pause, the yogi with the mind held in reaches the peace that ends in extinction, the peace that rests in me.",
+   "body_hi": "इस प्रकार बिना रुके अपने को जोड़ता हुआ, नियंत्रित मन वाला योगी उस शान्ति तक पहुँचता है जो निर्वाण में सिमटती है, वह शान्ति जो मुझमें टिकी है।",
+   "commentary_en": "The result of the sitting is named: a peace, and not a mild one. \"Nirvana\" here is the going-out of the fire of craving, the end of the thing that was burning. And the peace is not free-standing — it rests in Krishna. The extinction and the resting-place are one, which is the point the chapter keeps returning to: the stillness is not empty.",
+   "commentary_hi": "बैठने का फल नाम दिया गया है: एक शान्ति, और वह हल्की नहीं। यहाँ 'निर्वाण' तृष्णा की आग का बुझ जाना है, उस चीज़ का अंत जो जल रही थी। और शान्ति निराधार नहीं — वह कृष्ण में टिकी है। बुझना और टिकने की जगह एक हैं, यही बात अध्याय बार-बार लौटता है: शान्ति ख़ाली नहीं।"
+  },
+  {
+   "id": 249,
+   "number": "6.16",
+   "body_en": "A man cannot come to yoga by gorging himself, and cannot come to it by refusing food either; the same holds for the one who is always asleep and the one who never lets himself sleep, Arjuna.",
+   "body_hi": "योग न उस मनुष्य के लिए है जो बहुत खाता है, न उसके लिए जो बिल्कुल नहीं खाता; न उसके लिए जो बहुत सोता है, न उसके लिए जो जागता रह जाता है, अर्जुन।",
+   "commentary_en": "After the high language of nirvana, a plain warning against the two ways people wreck a practice. Starving the body and stuffing it both fail; so do sleeplessness and oversleep. The verse is a rebuke to the idea that extremity is progress. It sets up the middle the next verse will state outright.",
+   "commentary_hi": "निर्वाण की ऊँची भाषा के बाद, उन दो तरीक़ों के विरुद्ध सादी चेतावनी जिनसे लोग साधना बिगाड़ते हैं। शरीर को भूखा रखना और ठूँसना दोनों विफल; वैसे ही अनिद्रा और अधिक नींद। श्लोक इस विचार को झिड़कता है कि अति ही प्रगति है। यह अगले श्लोक के सीधे कहे जाने वाले मध्य को तैयार करता है।"
+  },
+  {
+   "id": 250,
+   "number": "6.17",
+   "body_en": "For the man measured in his food and his rest, measured in his effort at work, measured in his sleep and waking, yoga becomes the thing that ends sorrow.",
+   "body_hi": "जो मनुष्य अपने भोजन और विश्राम में नपा-तुला है, कर्मों में अपने प्रयत्न में नपा-तुला, अपने सोने और जागने में नपा-तुला, उसके लिए योग दुःख का अंत करने वाली चीज़ बन जाता है।",
+   "commentary_en": "The middle path, stated for the ordinary business of a day — meals, rest, work, sleep. The repeated word is \"measured\": not indulged, not denied, kept to the amount that serves. The promise attached is large — yoga ends sorrow — and it is fastened to something small and daily. The gate to it is how a person handles a plate and a bed.",
+   "commentary_hi": "मध्य मार्ग, दिन के साधारण काम-काज के लिए कहा गया — भोजन, विश्राम, कर्म, नींद। दोहराया गया शब्द है 'नपा-तुला': न भोगा हुआ, न नकारा हुआ, उतने पर रखा हुआ जितना काम आए। जुड़ा हुआ वादा बड़ा है — योग दुःख का अंत करता है — और वह किसी छोटी, रोज़मर्रा की चीज़ से बँधा है। उस तक का द्वार यह है कि मनुष्य थाली और बिस्तर को कैसे सँभालता है।"
+  },
+  {
+   "id": 251,
+   "number": "6.18",
+   "body_en": "When the disciplined mind comes to rest in the self alone, with no pull left toward anything wanted — then the man is called joined.",
+   "body_hi": "जब साधा हुआ मन केवल आत्मा में आकर टिक जाता है, जब किसी चाही हुई चीज़ की ओर कोई खिंचाव बाकी नहीं रहता — तब मनुष्य युक्त कहलाता है।",
+   "commentary_en": "A second definition of the arrived state, tighter than the one in verse 4. There the marker was letting go of plans; here it is the mind coming to rest with nothing outstanding — no want still leaning outward. \"Joined\" is earned not by activity but by the absence of that lean.",
+   "commentary_hi": "पहुँची हुई दशा की दूसरी परिभाषा, चौथे श्लोक वाली से कसी हुई। वहाँ चिह्न था योजनाएँ छोड़ना; यहाँ है मन का ऐसे टिक जाना कि कुछ बकाया न रहे — कोई चाह बाहर की ओर झुकी न हो। 'युक्त' गतिविधि से नहीं, उस झुकाव की अनुपस्थिति से कमाया जाता है।"
+  },
+  {
+   "id": 252,
+   "number": "6.19",
+   "body_en": "Picture a flame with no draught reaching it, burning without a waver: the tradition offers that picture for the yogi whose thought is gathered in, at work on the yoga of the self.",
+   "body_hi": "जैसे बिना हवा की जगह में रखा दीपक नहीं काँपता — यही उपमा योगी के लिए सौंपी गई है, जिसका चित्त थमा हुआ है, जो आत्मा के योग में लगा है।",
+   "commentary_en": "The famous comparison. A flame is only steady when nothing is blowing on it; a mind is only steady when the winds — the wants, the fears, the running commentary — have dropped. The image is chosen because a lamp does not hold still by clenching. It holds still when the disturbance is simply gone.",
+   "commentary_hi": "प्रसिद्ध उपमा। लौ तभी स्थिर होती है जब उस पर कुछ नहीं बह रहा; मन तभी स्थिर होता है जब हवाएँ — चाहें, भय, चलती हुई टिप्पणी — गिर गई हों। छवि इसलिए चुनी गई कि दीपक कसकर स्थिर नहीं रहता। वह तब स्थिर रहता है जब अशान्ति बस चली गई हो।"
+  },
+  {
+   "id": 253,
+   "number": "6.20",
+   "body_en": "There is a point at which thinking stops, shut down by the work of yoga; a point at which a man looks upon the self through the self and wants nothing beyond it —",
+   "body_hi": "जहाँ विचार रुक जाता है, योग के अभ्यास से थमा हुआ, और जहाँ, आत्मा से आत्मा को देखकर, मनुष्य आत्मा में ही तृप्त हो जाता है —",
+   "commentary_en": "This verse and the three after it run as one long sentence. It begins by naming the place: thought stopped, and the self looking at the self with nothing in between, satisfied there. Sanskrit lets the description hang unfinished across verse breaks; the payoff lands in 6.23. What is being built up is a picture of the state, one clause at a time.",
+   "commentary_hi": "यह श्लोक और आगे के तीन एक लंबे वाक्य की तरह चलते हैं। यह जगह का नाम लेकर शुरू होता है: विचार रुका हुआ, और आत्मा बीच में कुछ लिए बिना आत्मा को देखती हुई, वहीं तृप्त। संस्कृत वर्णन को श्लोक-विरामों के पार अधूरा टँगा रहने देती है; निचोड़ 6.23 में उतरता है। जो खड़ा किया जा रहा है वह दशा का चित्र है, एक-एक उपवाक्य करके।"
+  },
+  {
+   "id": 254,
+   "number": "6.21",
+   "body_en": "— where he knows that endless happiness which the steady intellect can hold but the senses cannot reach, and, settled there, he does not slip from the truth of it —",
+   "body_hi": "— जहाँ वह उस अनन्त सुख को जानता है जिसे स्थिर बुद्धि थाम सकती है पर इन्द्रियाँ जिस तक नहीं पहुँच सकतीं, और उसमें जमकर वह उसके सत्य से डिगता नहीं —",
+   "commentary_en": "The sentence continues. The happiness in question is put beyond the senses' reach on purpose: it is not a stronger version of a pleasure they know. Only a settled intellect can hold it, and once a man is settled in it he does not fall out — not because he grips, but because there is nothing there to pull him.",
+   "commentary_hi": "वाक्य जारी है। जिस सुख की बात है उसे जानबूझकर इन्द्रियों की पहुँच से परे रखा गया है: वह किसी ज्ञात सुख का प्रबल रूप नहीं। केवल जमी हुई बुद्धि उसे थाम सकती है, और एक बार मनुष्य उसमें जम जाए तो वह गिरता नहीं — इसलिए नहीं कि वह पकड़ता है, बल्कि इसलिए कि वहाँ उसे खींचने को कुछ नहीं।"
+  },
+  {
+   "id": 255,
+   "number": "6.22",
+   "body_en": "— having gained which he thinks no other gain is worth more, and, standing in which, he is not shaken even by heavy sorrow —",
+   "body_hi": "— जो एक बार हाथ आ जाए तो और किसी उपलब्धि का उससे ऊपर होना उसे सूझता नहीं, और जिसमें पैर जमाकर वह गहरे से गहरे शोक में भी नहीं डगमगाता —",
+   "commentary_en": "The clauses keep stacking. Two more marks of the state: nothing else looks like a better prize once you have this, and sorrow — even the heavy kind, the kind that usually flattens a person — does not move you off it. Not that grief does not come. That it comes and cannot budge the footing.",
+   "commentary_hi": "उपवाक्य जमते जाते हैं। दशा के दो और चिह्न: यह मिल जाने पर और कुछ बेहतर इनाम नहीं दिखता, और दुःख — भारी वाला भी, जो प्रायः मनुष्य को चौपट कर देता है — तुम्हें उससे हटा नहीं पाता। यह नहीं कि शोक आता नहीं। यह कि वह आता है और पैर की जमीन खिसका नहीं सकता।"
+  },
+  {
+   "id": 256,
+   "number": "6.23",
+   "body_en": "— that, let it be known, is what goes by the name of yoga: the cutting away of every tie to sorrow. This yoga is to be practised with resolve, and with a mind that has not gone tired.",
+   "body_hi": "— वही, यह जान लिया जाए, योग नाम से पुकारा जाता है: दुःख से हर बन्धन का काट देना। यह योग निश्चय के साथ अभ्यास करने योग्य है, और ऐसे मन से जो थका नहीं है।",
+   "commentary_en": "The sentence lands. Everything named across the last four verses is gathered under one definition — yoga as the severing of the connection to sorrow. And then, immediately, a warning against how the practice usually dies: half-heartedly, or with a mind already sick of it. Resolve, and an untired mind. The state is high; the discipline that gets there is stubborn and ordinary.",
+   "commentary_hi": "वाक्य उतरता है। पिछले चार श्लोकों में नामित सब कुछ एक परिभाषा के नीचे बटोरा गया — योग दुःख से जुड़ाव का काट देना। और फिर, तुरंत, इस पर चेतावनी कि साधना प्रायः कैसे मरती है: अधूरे मन से, या ऐसे मन से जो पहले ही उससे ऊब चुका। निश्चय, और बिना थका मन। दशा ऊँची है; वहाँ तक ले जाने वाला अनुशासन ज़िद्दी और साधारण है।"
+  },
+  {
+   "id": 257,
+   "number": "6.24",
+   "body_en": "Giving up, without exception, every craving that is born from a plan, holding the whole crowd of the senses in from all sides with the mind itself,",
+   "body_hi": "योजना से जन्मी हर लालसा को, बिना किसी अपवाद के, छोड़ते हुए, इन्द्रियों की पूरी भीड़ को हर ओर से मन के द्वारा ही रोकते हुए,",
+   "commentary_en": "The method for it, laid out over this verse and the next. First: drop the wants that come from sankalpa — the wanting that follows a plan you have already made about how things go. \"Without exception\" is the hard word. Then bring the senses in, all of them, from every direction, and the instrument for that is the mind, not force.",
+   "commentary_hi": "उसकी विधि, इस श्लोक और अगले में रखी हुई। पहले: उन चाहों को छोड़ो जो संकल्प से आती हैं — वह चाहत जो पहले से बनाई योजना के पीछे चलती है कि चीज़ें कैसे हों। 'बिना किसी अपवाद के' कठिन शब्द है। फिर इन्द्रियों को भीतर लाओ, सबको, हर दिशा से, और उसका औज़ार मन है, बल नहीं।"
+  },
+  {
+   "id": 258,
+   "number": "6.25",
+   "body_en": "By small degrees the stopping should happen, carried by an intellect that patience keeps from slipping; once the mind is placed on the self, let nothing further be entertained.",
+   "body_hi": "थोड़ा-थोड़ा करके वह ठहराव में आए, ऐसी बुद्धि से जिसे धैर्य ने दृढ़ थाम रखा है; और मन को आत्मा पर रखकर, वह कुछ भी न सोचे।",
+   "commentary_en": "The pace is set here: little by little. Not a single act of will but a gradual coming-to-rest, and what keeps the intellect steady through the gradualness is patience — the willingness to let it take the time it takes. The end of it is stated flatly: the mind on the self, and no other thought running.",
+   "commentary_hi": "गति यहाँ तय होती है: थोड़ा-थोड़ा करके। इच्छा का एक झटका नहीं बल्कि क्रमशः ठहराव में आना, और उस क्रम के दौरान बुद्धि को जो स्थिर रखता है वह धैर्य है — जितना समय लगे उतना लगने देने की तैयारी। उसका अंत सपाट कहा गया है: मन आत्मा पर, और कोई दूसरा विचार न चलता हुआ।"
+  },
+  {
+   "id": 259,
+   "number": "6.26",
+   "body_en": "From wherever the mind wanders off, unsteady, unable to hold still, from just there he should rein it back and bring it under the self's command.",
+   "body_hi": "जहाँ-जहाँ से मन भटक जाता है, चंचल, टिक न पाता हुआ, वहीं-वहीं से वह उसे खींचकर लौटाए और आत्मा के अधीन ले आए।",
+   "commentary_en": "The realistic instruction, and the one people remember when the sitting does not go well. The mind will leave. It is expected to. The practice is not preventing the wandering; it is noticing where it went and walking it back — every time, from wherever it got to. That repetition is the work, not a failure of it.",
+   "commentary_hi": "यथार्थ निर्देश, और वही जो लोगों को याद रहता है जब बैठक अच्छी नहीं जाती। मन जाएगा। उससे यही अपेक्षा है। साधना भटकन रोकना नहीं; वह देखना है कि वह कहाँ गया और उसे वापस चलाकर लाना — हर बार, जहाँ तक भी वह पहुँचा हो। वह दोहराव ही काम है, उसकी विफलता नहीं।"
+  },
+  {
+   "id": 260,
+   "number": "6.27",
+   "body_en": "For to the yogi whose mind has grown quiet, whose passion has died down, who is faultless and has become one with the vast, the highest happiness comes of its own.",
+   "body_hi": "क्योंकि जिस योगी का मन शान्त हो गया, जिसका राग ठंडा पड़ गया, जो निर्दोष है और उस विशाल के साथ एक हो गया, उसके पास सर्वोच्च सुख अपने आप आता है।",
+   "commentary_en": "The result of all that reining-back. Notice that the happiness \"comes of its own\" — it is not produced by effort, it arrives when the conditions are met. The conditions are the quiet mind, the cooled passion, the absence of fault, the merging into what is large. Do that and the joy is not something further to chase; it shows up.",
+   "commentary_hi": "उस सारे खींच-लाने का फल। ध्यान दो कि सुख 'अपने आप आता है' — वह प्रयत्न से बनाया नहीं जाता, शर्तें पूरी होने पर वह आ पहुँचता है। शर्तें हैं शान्त मन, ठंडा पड़ा राग, दोष की अनुपस्थिति, विशाल में मिल जाना। यह करो और आनन्द आगे पीछा करने की कोई चीज़ नहीं; वह हाज़िर हो जाता है।"
+  },
+  {
+   "id": 261,
+   "number": "6.28",
+   "body_en": "Joining himself in this way without pause, the yogi, his faults behind him, tastes with ease the touch of the vast — a happiness that has no end.",
+   "body_hi": "इस प्रकार बिना रुके अपने को जोड़ता हुआ, योगी, अपने दोष पीछे छोड़कर, सहज ही उस विशाल के स्पर्श का स्वाद लेता है — एक ऐसा सुख जिसका अंत नहीं।",
+   "commentary_en": "Almost a repeat of 6.15, and the repetition is the point — the chapter circles back to the promise after laying out the method between them. The new word here is \"with ease.\" What was hard to build up becomes effortless once built; the contact with the vast is no longer strained after the faults are gone.",
+   "commentary_hi": "लगभग 6.15 की पुनरावृत्ति, और पुनरावृत्ति ही बात है — अध्याय बीच में विधि रखकर वादे पर लौट आता है। यहाँ नया शब्द है 'सहज ही'। जो खड़ा करना कठिन था वह खड़ा हो जाने पर अनायास हो जाता है; दोष चले जाने के बाद विशाल का स्पर्श अब तनावग्रस्त नहीं।"
+  },
+  {
+   "id": 262,
+   "number": "6.29",
+   "body_en": "One perception runs through the yoga-joined man: every creature has the self within it, and every creature sits within that self — one and the same, look where he will.",
+   "body_hi": "जिसकी आत्मा योग से जुड़ी है, जो सर्वत्र एक ही देखता है, वह आत्मा को सब प्राणियों में खड़ा देखता है और सब प्राणियों को आत्मा में खड़ा।",
+   "commentary_en": "The sitting has been private up to now — one person, one seat, one mind. This verse turns the result outward. The joined mind does not see a world of separate items; it sees the same thing in every being, and every being inside that same thing. The two directions are stated together because they are one perception, not two.",
+   "commentary_hi": "बैठक अब तक निजी रही है — एक व्यक्ति, एक आसन, एक मन। यह श्लोक फल को बाहर की ओर मोड़ता है। जुड़ा हुआ मन अलग-अलग चीज़ों का संसार नहीं देखता; वह हर प्राणी में एक ही चीज़ देखता है, और हर प्राणी को उसी एक चीज़ के भीतर। दोनों दिशाएँ साथ कही गई हैं क्योंकि वे एक ही दर्शन हैं, दो नहीं।"
+  },
+  {
+   "id": 263,
+   "number": "6.30",
+   "body_en": "To the man who finds me present in each thing, and each thing held within me, I never go missing, and he never drops out of my sight.",
+   "body_hi": "जिस मनुष्य को हर वस्तु में मेरी मौजूदगी मिलती है, और हर वस्तु मुझमें समाई हुई, उससे मैं कभी बिछुड़ता नहीं, और वह कभी मेरी नज़र से नहीं छूटता।",
+   "commentary_en": "The impersonal \"same everywhere\" of the last verse is now named: it is Krishna. And the relation is put as a mutual not-losing. The one who sees this way never misplaces the divine, because he sees it in everything; and he himself is never dropped from the divine's account. It is a quieter claim than union — more like never being out of contact.",
+   "commentary_hi": "पिछले श्लोक का निर्वैयक्तिक 'सर्वत्र एक' अब नाम पा जाता है: वह कृष्ण हैं। और सम्बन्ध परस्पर न-खोने के रूप में रखा गया है। जो इस तरह देखता है वह दिव्य को कभी इधर-उधर नहीं करता, क्योंकि वह उसे हर चीज़ में देखता है; और वह स्वयं दिव्य के हिसाब से कभी छूटता नहीं। यह एकता से शान्त दावा है — जैसे कभी सम्पर्क से बाहर न होना।"
+  },
+  {
+   "id": 264,
+   "number": "6.31",
+   "body_en": "The one who, settled in oneness, worships me as standing in all beings — however he goes about living, that yogi lives in me.",
+   "body_hi": "जो एकता में जमा हुआ मुझे सब प्राणियों में खड़ा मानकर पूजता है — वह चाहे जैसे भी जीता-बरतता हो, वह योगी मुझमें जीता है।",
+   "commentary_en": "The clause that matters is \"however he goes about living.\" Once the seeing is right — Krishna in every being, and the man rooted in that oneness — the outward shape of his life stops deciding the question. He is not in yoga only while seated. Whatever he is doing, he is doing it in Krishna.",
+   "commentary_hi": "जो उपवाक्य मायने रखता है वह है 'चाहे जैसे भी जीता-बरतता हो'। एक बार देखना ठीक हो जाए — हर प्राणी में कृष्ण, और मनुष्य उस एकता में जड़ा — तो उसके जीवन की बाहरी शक्ल इस सवाल का फ़ैसला करना बंद कर देती है। वह केवल आसन पर बैठे हुए योग में नहीं है। वह जो भी कर रहा हो, वह उसे कृष्ण में कर रहा है।"
+  },
+  {
+   "id": 265,
+   "number": "6.32",
+   "body_en": "The one who, measuring by his own self, sees the same everywhere, Arjuna — whether it is pleasure or whether it is pain — that yogi is held to be the highest.",
+   "body_hi": "जो अपने ही स्व से नापकर सर्वत्र एक ही देखता है, अर्जुन — चाहे वह सुख हो या चाहे दुःख — वह योगी सर्वोच्च माना जाता है।",
+   "commentary_en": "The measuring instrument is the self: what you feel as pleasure or as pain, you grant is the same in the next being — you do not weigh their hurt lighter than yours. That extension, done evenly across pleasure and pain both, is what earns the top rank. It closes the meditation section on a plainly ethical note: the fruit of sitting is felt in how you treat the person beside you.",
+   "commentary_hi": "नापने का औज़ार स्व है: जो तुम सुख या दुःख के रूप में अनुभव करते हो, वही तुम अगले प्राणी में मानते हो — तुम उसकी पीड़ा को अपनी से हल्का नहीं तौलते। वह विस्तार, सुख और दुःख दोनों पर बराबर किया हुआ, ही शीर्ष स्थान कमाता है। यह ध्यान वाले भाग को स्पष्ट रूप से नैतिक स्वर पर बंद करता है: बैठने का फल इसमें महसूस होता है कि तुम अपने पास वाले के साथ कैसा बरतते हो।"
+  },
+  {
+   "id": 266,
+   "number": "6.33",
+   "body_en": "Arjuna said: This yoga you have called an evenness, Madhusudana — I do not see how it can hold steady, because the mind will not hold still.",
+   "body_hi": "अर्जुन ने कहा — यह योग जिसे आपने समता कहा, मधुसूदन — मुझे नहीं दिखता कि यह स्थिर कैसे रह सकता है, क्योंकि मन टिकता ही नहीं।",
+   "commentary_en": "Arjuna breaks in, as he tends to, at the practical seam. Everything Krishna described rests on a steady mind. Arjuna's objection is honest: his mind does not do that, and he cannot picture the evenness surviving the restlessness. It is the same move he made in Chapter 2 — hearing the ideal and asking how a real person is supposed to get there.",
+   "commentary_hi": "अर्जुन बीच में बोल पड़ता है, जैसा वह करता है, व्यावहारिक जोड़ पर। कृष्ण ने जो वर्णन किया वह सब एक स्थिर मन पर टिका है। अर्जुन की आपत्ति ईमानदार है: उसका मन वैसा करता नहीं, और वह समता को इस बेचैनी में बचती हुई नहीं देख पाता। यह वही चाल है जो उसने दूसरे अध्याय में की — आदर्श सुनकर पूछना कि एक असली मनुष्य वहाँ कैसे पहुँचे।"
+  },
+  {
+   "id": 267,
+   "number": "6.34",
+   "body_en": "For the mind is restless, Krishna — it stirs up trouble, it is strong, it digs in. Holding it down, I think, would be as hard as holding the wind.",
+   "body_hi": "क्योंकि मन बेचैन है, कृष्ण — वह हलचल मचाता है, वह बलवान है, वह अड़ जाता है। उसे दबाना, मुझे लगता है, हवा को थामने जितना कठिन होगा।",
+   "commentary_en": "Arjuna gives the mind four adjectives and they are all fair: it does not rest, it makes noise, it overpowers, it will not be shifted once set. Then the image — holding the wind — which is a way of saying he thinks it cannot be done. This is the honest floor of the practice, said out loud by the student, and Krishna will not deny it.",
+   "commentary_hi": "अर्जुन मन को चार विशेषण देता है और वे सब जायज़ हैं: वह टिकता नहीं, वह शोर करता है, वह हावी हो जाता है, एक बार जमने पर हटता नहीं। फिर छवि — हवा को थामना — जो यह कहने का तरीक़ा है कि उसे लगता है यह हो नहीं सकता। यह साधना की ईमानदार ज़मीन है, शिष्य के मुँह से खुलकर कही हुई, और कृष्ण इससे इनकार नहीं करेंगे।"
+  },
+  {
+   "id": 268,
+   "number": "6.35",
+   "body_en": "The Blessed One said: No doubt about it, strong-armed one — the mind is hard to hold, it moves. But by steady practice, son of Kunti, and by not wanting, it is caught.",
+   "body_hi": "श्रीभगवान ने कहा — इसमें कोई संदेह नहीं, महाबाहु — मन थामना कठिन है, वह चलता है। पर लगातार अभ्यास से, कुन्तीपुत्र, और वैराग्य से, वह पकड़ में आता है।",
+   "commentary_en": "Krishna's answer is short and it grants the whole objection first: yes, the mind is hard to hold, yes it moves — Arjuna is not wrong. Then two words for the way through. Abhyasa, doing it again and again; vairagya, ceasing to want the things that pull it. Not a trick, not a shortcut. Repetition, and letting go of the bait.",
+   "commentary_hi": "कृष्ण का उत्तर छोटा है और पहले पूरी आपत्ति मान लेता है: हाँ, मन थामना कठिन है, हाँ वह चलता है — अर्जुन ग़लत नहीं। फिर पार जाने के दो शब्द। अभ्यास, उसे बार-बार करना; वैराग्य, उन चीज़ों को चाहना छोड़ देना जो उसे खींचती हैं। कोई करतब नहीं, कोई छोटा रास्ता नहीं। दोहराव, और चारे को छोड़ देना।"
+  },
+  {
+   "id": 269,
+   "number": "6.36",
+   "body_en": "Yoga is hard to reach, in my view, for a man who has not got hold of himself; but for one who has, and who tries, it can be won by the right means.",
+   "body_hi": "मेरे विचार में योग उस मनुष्य के लिए कठिन है जिसने अपने को थामा नहीं; पर जिसने थामा है, और जो प्रयत्न करता है, वह ठीक उपाय से जीता जा सकता है।",
+   "commentary_en": "The two-part answer. Yoga is genuinely out of reach — for the person who has not first taken himself in hand. That is the honest half. But for the person who has done that groundwork and keeps working, it is reachable by the right means. Not automatic, and not for everyone at every stage; but not the impossibility Arjuna feared.",
+   "commentary_hi": "दो-भाग वाला उत्तर। योग सचमुच पहुँच से बाहर है — उस मनुष्य के लिए जिसने पहले अपने को हाथ में नहीं लिया। यह ईमानदार आधा है। पर जिसने वह बुनियादी काम कर लिया और लगा रहता है, उसके लिए वह ठीक उपाय से पहुँच योग्य है। अपने आप नहीं, और हर दशा में हर किसी के लिए नहीं; पर वह असंभवता नहीं जिससे अर्जुन डरा।"
+  },
+  {
+   "id": 270,
+   "number": "6.37",
+   "body_en": "Arjuna said: The man who has faith but does not hold to it, whose mind has slipped off the yoga, who has not reached the end of it — which way does he go, Krishna?",
+   "body_hi": "अर्जुन ने कहा — जिस मनुष्य में श्रद्धा है पर जो उस पर टिका नहीं, जिसका मन योग से फिसल गया, जो उसके अंत तक नहीं पहुँचा — वह किस ओर जाता है, कृष्ण?",
+   "commentary_en": "A new worry, and a specific one: not the person who never tried, but the person who tried, believed in it, and fell short. He has left the ordinary path by turning toward yoga, and he has not arrived at yoga's goal. Arjuna wants to know what becomes of a man caught between the two — whether the attempt was wasted.",
+   "commentary_hi": "एक नई चिन्ता, और ठोस: वह मनुष्य नहीं जिसने कभी कोशिश नहीं की, बल्कि वह जिसने कोशिश की, उस पर विश्वास किया, और कम पड़ गया। उसने योग की ओर मुड़कर साधारण रास्ता छोड़ दिया, और योग के लक्ष्य तक नहीं पहुँचा। अर्जुन जानना चाहता है कि दोनों के बीच फँसे मनुष्य का क्या होता है — क्या वह प्रयास बेकार गया।"
+  },
+  {
+   "id": 271,
+   "number": "6.38",
+   "body_en": "Fallen from both, does he not just break apart like a scattered cloud, standing on nothing, gone astray on the road to the vast?",
+   "body_hi": "दोनों से गिरकर, क्या वह बिखरे बादल की तरह टूट नहीं जाता, किसी आधार पर न खड़ा, विशाल की राह पर भटका हुआ?",
+   "commentary_en": "The fear made vivid. A cloud that comes apart has no ground under it and no shape left — it is just dispersed. Arjuna imagines the failed seeker like that: too far from the worldly life to go back, not far enough along the spiritual road to have anything to stand on. Nowhere, in both directions at once.",
+   "commentary_hi": "डर को सजीव किया हुआ। जो बादल टूट जाता है उसके नीचे ज़मीन नहीं और कोई शक्ल बाकी नहीं — वह बस छितरा हुआ है। अर्जुन असफल साधक को वैसा सोचता है: सांसारिक जीवन से इतना दूर कि लौट न सके, आध्यात्मिक रास्ते पर इतना आगे नहीं कि खड़े होने को कुछ हो। कहीं नहीं, एक साथ दोनों दिशाओं में।"
+  },
+  {
+   "id": 272,
+   "number": "6.39",
+   "body_en": "Take a blade to this uncertainty of mine, Krishna, and leave none of it standing — there is nobody else who could do the cutting.",
+   "body_hi": "मेरा यह संदेह, कृष्ण, आपको पूरी तरह काट देना चाहिए — आपके सिवा इसे काटने वाला कोई नहीं मिलता।",
+   "commentary_en": "Arjuna presses for a full answer and puts the reason plainly: there is no one else he could ask. It is a small confession of dependence. He is not treating this as an academic question he can leave open; he needs it closed, and by this particular teacher.",
+   "commentary_hi": "अर्जुन पूरे उत्तर के लिए ज़ोर देता है और कारण सीधे रखता है: और कोई नहीं जिससे वह पूछ सके। यह निर्भरता की एक छोटी स्वीकारोक्ति है। वह इसे कोई शास्त्रीय सवाल नहीं मान रहा जिसे खुला छोड़ा जा सके; उसे यह बंद चाहिए, और इसी ख़ास गुरु से।"
+  },
+  {
+   "id": 273,
+   "number": "6.40",
+   "body_en": "The Blessed One said: Neither here nor in the world beyond is there ruin for him, Partha; no one who does good work, my friend, comes to a bad end.",
+   "body_hi": "श्रीभगवान ने कहा — न यहाँ, न उस पार के लोक में, उसका नाश है, पार्थ; कोई भी जो भला कर्म करता है, मेरे मित्र, बुरे अंत को नहीं पहुँचता।",
+   "commentary_en": "The reassurance is flat and total: no ruin, in this life or the next. And the reason is given as a principle, not a favour — a person doing good work does not end badly. The word Krishna uses for Arjuna here is affectionate, \"tata,\" the kind you use for someone you are looking after. The alarm of the last three verses is met with a plain no.",
+   "commentary_hi": "आश्वासन सपाट और पूर्ण है: कोई नाश नहीं, इस जीवन में या अगले में। और कारण एक सिद्धांत के रूप में दिया गया है, एहसान के रूप में नहीं — भला कर्म करने वाला मनुष्य बुरे अंत को नहीं पहुँचता। यहाँ कृष्ण अर्जुन के लिए जो शब्द इस्तेमाल करते हैं वह स्नेहभरा है, 'तात', वैसा जैसा किसी की देखभाल करते हुए बोला जाता है। पिछले तीन श्लोकों की घबराहट का सामना एक सादे 'नहीं' से होता है।"
+  },
+  {
+   "id": 274,
+   "number": "6.41",
+   "body_en": "Reaching the worlds of those who have done good, and living there for long ages, the one who has fallen from yoga is born again in the house of the pure and the well-off.",
+   "body_hi": "भले कर्म करने वालों के लोकों तक पहुँचकर, और वहाँ लंबे युगों तक रहकर, योग से गिरा हुआ मनुष्य पवित्र और सम्पन्न घर में फिर जन्म लेता है।",
+   "commentary_en": "The answer to \"which way does he go\" begins. Not down. First he goes up — to the worlds earned by good conduct, and stays a long time. Then he returns, born into a household that is both decent and comfortable — conditions favourable to picking the practice back up. The interrupted attempt is not lost; it is carried forward.",
+   "commentary_hi": "'वह किस ओर जाता है' का उत्तर शुरू होता है। नीचे नहीं। पहले वह ऊपर जाता है — सदाचरण से कमाए लोकों तक, और लंबे समय तक रहता है। फिर लौटता है, ऐसे घर में जन्म लेकर जो भला भी है और सुखी भी — साधना दोबारा उठाने के लिए अनुकूल परिस्थितियाँ। टूटा हुआ प्रयास खोया नहीं; वह आगे ले जाया जाता है।"
+  },
+  {
+   "id": 275,
+   "number": "6.42",
+   "body_en": "Or else he is born into the very family of wise yogis — though a birth like that is harder to get than the other in this world.",
+   "body_hi": "या फिर वह ज्ञानी योगियों के ही कुल में जन्म लेता है — यद्यपि इस संसार में ऐसा जन्म उस दूसरे से पाना कठिन है।",
+   "commentary_en": "A second possibility, and a rarer one: born straight into a family that already practises, where the whole environment is pointed the right way. Krishna notes it is the harder birth to obtain — presumably because it needs a deeper store of merit — but it is available. Either road puts the fallen seeker back within reach of the goal.",
+   "commentary_hi": "एक दूसरी संभावना, और दुर्लभ: सीधे ऐसे परिवार में जन्म जो पहले से साधना करता है, जहाँ पूरा वातावरण ठीक दिशा में मुड़ा है। कृष्ण कहते हैं यह पाना कठिन जन्म है — शायद इसलिए कि इसके लिए पुण्य का गहरा संचय चाहिए — पर वह उपलब्ध है। कोई भी रास्ता गिरे हुए साधक को फिर लक्ष्य की पहुँच में रख देता है।"
+  },
+  {
+   "id": 276,
+   "number": "6.43",
+   "body_en": "There he regains the connection of understanding he had built in the earlier body, and from that he strives again, harder, toward the completion, son of the Kurus.",
+   "body_hi": "वहाँ वह उस बुद्धि के जुड़ाव को फिर पा लेता है जो उसने पहले शरीर में बनाया था, और उससे वह फिर प्रयत्न करता है, और ज़ोर लगाकर, पूर्णता की ओर, कुरुनन्दन।",
+   "commentary_en": "The mechanism of the carry-over. What was built in the last life — the trained understanding, the alignment toward yoga — is not gone; it is recovered in the new body and picked up from where it stopped. And the striving resumes with more force than before, because the ground already gained does not have to be gained twice.",
+   "commentary_hi": "आगे ले जाने की क्रियाविधि। पिछले जीवन में जो बनाया गया — साधी हुई बुद्धि, योग की ओर का जुड़ाव — वह गया नहीं; वह नए शरीर में फिर पाया जाता है और जहाँ रुका था वहीं से उठा लिया जाता है। और प्रयत्न पहले से अधिक ज़ोर के साथ फिर शुरू होता है, क्योंकि पहले पाई हुई ज़मीन दोबारा पानी नहीं पड़ती।"
+  },
+  {
+   "id": 277,
+   "number": "6.44",
+   "body_en": "By that very practice of the earlier life he is carried along, even against his will. And even the man who only wishes to know about yoga has already gone past the words of scripture.",
+   "body_hi": "पिछले जीवन के उसी अभ्यास से वह बहा ले जाया जाता है, अपनी इच्छा के विरुद्ध भी। और जो मनुष्य केवल योग के बारे में जानना चाहता है, वह भी शास्त्र के शब्दों से आगे निकल चुका है।",
+   "commentary_en": "Two claims. First: the old momentum pulls him forward whether he means to go or not — the habit of practice is that strong across lives. Second, and more startling: merely wanting to understand yoga already puts you beyond the mechanical recitation of scripture. The bare inclination counts for something. Nothing spent on this is spent for nothing.",
+   "commentary_hi": "दो दावे। पहला: पुराना वेग उसे आगे खींचता है चाहे वह जाना चाहे या नहीं — साधना की आदत जीवनों के पार इतनी प्रबल है। दूसरा, और अधिक चौंकाने वाला: केवल योग को समझना चाहना ही तुम्हें शास्त्र के यांत्रिक पाठ से आगे रख देता है। बस झुकाव भी कुछ मायने रखता है। इस पर जो लगाया गया, वह व्यर्थ नहीं लगाया गया।"
+  },
+  {
+   "id": 278,
+   "number": "6.45",
+   "body_en": "But the yogi who works at it with real effort, cleansed of his faults, made whole across many births, then reaches the highest way.",
+   "body_hi": "पर जो योगी सच्चे प्रयत्न से इसमें लगा रहता है, अपने दोषों से धुला हुआ, अनेक जन्मों में पूर्ण किया हुआ, तब वह सर्वोच्च गति तक पहुँचता है।",
+   "commentary_en": "The full arc, stated at last. Not one life but many; not a burst but sustained effort; the faults washed out along the way; and the completion earned across all of it. Then the highest goal. The verse is the answer to Arjuna's whole worry: the road is long, but it goes somewhere, and no step on it is wasted.",
+   "commentary_hi": "पूरा चाप, आख़िर में कहा हुआ। एक जीवन नहीं बल्कि अनेक; एक झटका नहीं बल्कि सतत प्रयत्न; रास्ते भर दोष धुलते हुए; और पूर्णता उस सबके पार कमाई हुई। तब सर्वोच्च गति। यह श्लोक अर्जुन की पूरी चिन्ता का उत्तर है: रास्ता लंबा है, पर वह कहीं जाता है, और उस पर कोई क़दम व्यर्थ नहीं।"
+  },
+  {
+   "id": 279,
+   "number": "6.46",
+   "body_en": "The yogi is more than those who do hard penance, more, it is held, than those who have knowledge, more than those who act for a result. So be a yogi, Arjuna.",
+   "body_hi": "योगी उनसे बढ़कर है जो कठोर तप करते हैं, बढ़कर, ऐसा माना जाता है, उनसे जिनके पास ज्ञान है, बढ़कर उनसे जो फल के लिए कर्म करते हैं। इसलिए योगी बन, अर्जुन।",
+   "commentary_en": "Krishna ranks the yogi above three other kinds of serious person — the ascetic, the scholar, the results-driven worker. Not because effort, learning and action are worthless, but because the yogi as this chapter has drawn him holds what those three each hold only in part: discipline without self-punishment, knowledge that has settled in, action without the grip on outcome. \"So be a yogi\" is the instruction the whole chapter has been building to.",
+   "commentary_hi": "कृष्ण योगी को तीन और तरह के गम्भीर मनुष्यों से ऊपर रखते हैं — तपस्वी, विद्वान, फल-प्रेरित कर्मी। इसलिए नहीं कि प्रयत्न, विद्या और कर्म बेकार हैं, बल्कि इसलिए कि योगी को जैसा इस अध्याय ने बनाया है, वह वह सब थामता है जो उन तीनों में से हर एक केवल आंशिक रूप से थामता है: बिना आत्म-दंड के अनुशासन, भीतर बैठ चुका ज्ञान, बिना नतीजे की पकड़ के कर्म। 'इसलिए योगी बन' वही निर्देश है जिसकी ओर पूरा अध्याय बढ़ रहा था।"
+  },
+  {
+   "id": 280,
+   "number": "6.47",
+   "body_en": "And of all yogis, the one who, with his inner self gone to me, full of faith, worships me — him I hold to be the most closely joined of all.",
+   "body_hi": "और सब योगियों में, जो अपने अन्तरतम को मुझमें लगाकर, श्रद्धा से भरा, मुझे पूजता है — उसे मैं सबसे गहराई से जुड़ा हुआ मानता हूँ।",
+   "commentary_en": "The last verse narrows once more. Among all yogis, the highest is the one whose innermost self has gone over to Krishna and who worships with faith. The chapter began by taking meditation apart into method and posture and pace; it ends by saying the tightest join is not a technique at all but where the heart has gone. It also sets up the next six chapters, which are about exactly that.",
+   "commentary_hi": "अंतिम श्लोक एक बार और सिमटता है। सब योगियों में सर्वोच्च वह है जिसका अन्तरतम स्व कृष्ण में चला गया और जो श्रद्धा से पूजता है। अध्याय ध्यान को विधि, मुद्रा और गति में तोड़कर शुरू हुआ; वह यह कहते हुए ख़त्म होता है कि सबसे कसा हुआ जोड़ कोई तकनीक है ही नहीं, बल्कि यह कि हृदय कहाँ चला गया है। यह आगे के छह अध्यायों को भी तैयार करता है, जो ठीक उसी के बारे में हैं।"
+  }
+ ]
+}
