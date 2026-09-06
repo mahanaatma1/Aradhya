@@ -1,0 +1,346 @@
+{
+ "slug": "bgc_10",
+ "title_en": "Vibhuti Yoga",
+ "title_hi": "विभूति योग",
+ "book_id": 10,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 373,
+   "number": "10.1",
+   "body_en": "Listen once more, mighty-armed, to the highest thing I have to say. I am going to tell it to you because you are dear to me, and because I want what is good for you.",
+   "body_hi": "एक बार फिर सुनो, महाबाहो, वह सबसे ऊँची बात जो मुझे कहनी है। मैं तुम्हें यह बताने जा रहा हूँ क्योंकि तुम मुझे प्रिय हो, और क्योंकि मैं तुम्हारा भला चाहता हूँ।",
+   "commentary_en": "Hita-kamyaya, out of wanting your good, and the verse gives a reason for speaking, which Krishna almost never does. Everywhere else the teaching answers a question. Here it is offered because the man in front of him is dear to him — so the warmest chapter in the poem is set going by affection rather than by argument.",
+   "commentary_hi": "'हितकाम्यया', तुम्हारा भला चाहने से, और श्लोक बोलने का कारण देता है, जो कृष्ण लगभग कभी नहीं करते। हर दूसरी जगह उपदेश किसी प्रश्न का उत्तर है। यहाँ वह इसलिए दिया जा रहा है कि सामने बैठा मनुष्य उन्हें प्रिय है — सो काव्य का सबसे गर्मजोश अध्याय तर्क से नहीं, स्नेह से चलता है।"
+  },
+  {
+   "id": 374,
+   "number": "10.2",
+   "body_en": "The ranks of the gods do not know where I came from, and neither do the great seers, since I am the beginning of the gods and the beginning of the great seers alike.",
+   "body_hi": "देवताओं की पाँतें नहीं जानतीं कि मैं कहाँ से आया, और बड़े ऋषि भी नहीं जानते, क्योंकि देवताओं का आदि भी मैं हूँ और बड़े ऋषियों का आदि भी।",
+   "commentary_en": "Worth holding on to, because of what it does to the list still to come. When Krishna says a few verses later that among the gods he is Indra, the reader has already been told that Indra does not know who Krishna is. The litany is not a roll of colleagues; every name in it belongs to someone in the dark about the speaker.",
+   "commentary_hi": "इसे थामे रखने योग्य है, क्योंकि आगे आने वाली सूची पर इसका असर पड़ता है। जब कृष्ण कुछ श्लोक बाद कहते हैं कि देवताओं में वे इन्द्र हैं, तब पाठक को यह पहले ही बताया जा चुका है कि इन्द्र नहीं जानता कि कृष्ण कौन हैं। वह सूची साथियों की पाँत नहीं है; उसका हर नाम किसी ऐसे का है जो बोलने वाले के विषय में अँधेरे में है।"
+  },
+  {
+   "id": 375,
+   "number": "10.3",
+   "body_en": "Whoever knows me for what I am — unborn, without a beginning, the great lord of the worlds — walks among mortals with a clear head, and is let out of every wrong he has done.",
+   "body_hi": "जो मुझे वैसा जान लेता है जैसा मैं हूँ — अजन्मा, आदि से रहित, लोकों का महेश्वर — वह मरने वालों के बीच साफ़ सिर लिए चलता है, और अपने किए हर पाप से छूट जाता है।",
+   "commentary_en": "Asammudhah, not fogged. It is a modest word for a large claim, and the poem prefers it: the mark of knowing is not ecstasy or power but the absence of confusion. Note martyeshu, among mortals — the clearing happens while he is still living among people who will die, and so will he.",
+   "commentary_hi": "'असम्मूढः', धुँधलाया हुआ नहीं। बड़े दावे के लिए यह विनम्र शब्द है, और काव्य को यही भाता है: जानने का चिह्न आवेश या शक्ति नहीं, भ्रम का अभाव है। 'मर्त्येषु' देखें, मरने वालों के बीच — वह साफ़ होना तब होता है जब वह उन लोगों के बीच जी ही रहा है जो मरेंगे, और वह भी मरेगा।"
+  },
+  {
+   "id": 376,
+   "number": "10.4",
+   "body_en": "Understanding, knowledge, a clear head; patience, truth, self-command, quiet; pleasure and pain; coming into being and going out of it; fear, and the absence of fear;",
+   "body_hi": "बुद्धि, ज्ञान, साफ़ सिर; धीरज, सत्य, अपने पर क़ाबू, शान्ति; सुख और दुख; होना और मिट जाना; भय, और भय का न होना;",
+   "commentary_en": "Twenty abstractions across this verse and the next, and the list will not behave like a list of virtues. Fear stands next to fearlessness. Coming-to-be stands next to ceasing. Whatever theology is being offered here, it is not one where the good things come from god and the bad ones from somewhere else.",
+   "commentary_hi": "इस श्लोक और अगले में मिलाकर बीस अमूर्त वस्तुएँ, और सूची सद्गुणों की सूची की तरह बरतने से इनकार कर देती है। भय के बग़ल में निर्भयता खड़ी है। होने के बग़ल में मिटना। यहाँ जो भी धर्मदृष्टि दी जा रही है, वह ऐसी नहीं जिसमें अच्छी चीज़ें ईश्वर से आएँ और बुरी कहीं और से।"
+  },
+  {
+   "id": 377,
+   "number": "10.5",
+   "body_en": "doing no harm, evenness, being satisfied with what there is, hard practice, giving, a good name and a bad one — every one of these different conditions a creature can find itself in comes from me, and from nowhere else.",
+   "body_hi": "किसी को न सताना, समता, जो है उसमें सन्तोष, तपस्या, दान, अच्छा नाम और बुरा नाम — प्राणी जिन-जिन भिन्न हालतों में पड़ सकता है, उनमें से हर एक मुझसे आती है, और कहीं से नहीं।",
+   "commentary_en": "Bhavah, states of being, and prithag-vidhah, of separate kinds. The claim is not that Krishna produces good behaviour; it is that he is the source of every condition a person can be in, including the ones nobody would ask for. Ayashas, disrepute, is on the list, and so is fear.",
+   "commentary_hi": "'भावाः', होने की हालतें, और 'पृथग्विधाः', अलग-अलग तरह की। दावा यह नहीं कि कृष्ण अच्छा आचरण पैदा करते हैं; दावा यह है कि व्यक्ति जिस भी हालत में हो सकता है, उसका स्रोत वे हैं, उन हालतों का भी जो कोई नहीं माँगेगा। 'अयशः', बदनामी, सूची में है, और भय भी।"
+  },
+  {
+   "id": 378,
+   "number": "10.6",
+   "body_en": "The seven great seers, and the four before them, and the Manus, were born out of what I am, out of my mind; and the people of this world are all descended from them.",
+   "body_hi": "सात बड़े ऋषि, और उनसे पहले के चार, और मनु — ये मेरे ही होने से जन्मे, मेरे मन से; और इस लोक के लोग सब उन्हीं की सन्तान हैं।",
+   "commentary_en": "Manasa jatah, born from the mind. Follow the descent the verse lays out: mind, then seers, then the Manus, then \"these people in the world\" — which is where the reader is standing. The genealogy is built so that it ends on you.",
+   "commentary_hi": "'मानसा जाताः', मन से जन्मे। श्लोक जो उतार बिछाता है उसका पीछा करें: मन, फिर ऋषि, फिर मनु, फिर 'लोक के ये लोग' — और वहीं पाठक खड़ा है। वंशावली इस तरह बनाई गई है कि वह आप पर ख़त्म हो।"
+  },
+  {
+   "id": 379,
+   "number": "10.7",
+   "body_en": "Whoever really grasps how far I reach and how I work is joined to me by a yoga that nothing shakes. There is no question about it.",
+   "body_hi": "जो मेरी पहुँच और मेरे काम करने के ढंग को सचमुच पकड़ लेता है, वह मुझसे ऐसे योग से जुड़ जाता है जिसे कोई हिला नहीं सकता। इसमें कोई सन्देह नहीं।",
+   "commentary_en": "Avikampena, unshakeable, from kamp — to tremble. It is the same root as the trembling Arjuna reported of his own body in the first chapter, when his skin crawled and the bow slid out of his hand. The cure is named with the word for the symptom.",
+   "commentary_hi": "'अविकम्पेन', न हिलने वाला, 'कम्प्' से — काँपना। यह वही धातु है जो पहले अध्याय में अर्जुन ने अपनी देह के काँपने के लिए बताई थी, जब उसका रोम-रोम सिहर गया और धनुष हाथ से सरक गया। रोग का जो शब्द था, उसी से इलाज का नाम रखा गया है।"
+  },
+  {
+   "id": 380,
+   "number": "10.8",
+   "body_en": "I am where everything starts, and everything moves on out of me. Once they understand that, the wise worship me — and they do it with their whole feeling behind it.",
+   "body_hi": "सब कुछ जहाँ से शुरू होता है वह मैं हूँ, और सब कुछ मुझसे आगे चलता है। यह समझ लेने पर जानकार मेरी उपासना करते हैं — और वे उसमें अपना पूरा भाव लगा देते हैं।",
+   "commentary_en": "Bhava-samanvitah, with bhava alongside. Bhava is feeling, disposition, the way a person is inwardly turned — and it is the same word the last two verses used for the twenty conditions creatures fall into. So the knowing described here is not held at arm's length from what a man feels; it arrives with the whole of him attached.",
+   "commentary_hi": "'भावसमन्विताः', भाव के साथ। 'भाव' अनुभूति है, रुख़, वह ढंग जिससे व्यक्ति भीतर से मुड़ा हुआ है — और यह वही शब्द है जो पिछले दो श्लोकों ने प्राणियों की बीस हालतों के लिए बरता था। सो यहाँ जिस जानने का वर्णन है, वह मनुष्य की अनुभूति से दूरी बनाकर नहीं रखा गया; वह उसके पूरेपन के साथ आता है।"
+  },
+  {
+   "id": 381,
+   "number": "10.9",
+   "body_en": "Their minds on me, their whole lives given over to me, they wake one another up, they talk about me without stopping, and they are content, and they are glad.",
+   "body_hi": "मन मुझ पर, सारा जीवन मुझे सौंपा हुआ, वे एक-दूसरे को जगाते हैं, बिना रुके मेरी बात करते हैं, और वे सन्तुष्ट रहते हैं, और प्रसन्न।",
+   "commentary_en": "Bodhayantah parasparam, waking each other up. This is the one place in the poem where the devout are given each other. Everything else happens between one man and his god, or one man and his own mind — this verse has a group in it, and they talk. Ramanti, at the end, is not contentment but pleasure; they enjoy themselves.",
+   "commentary_hi": "'बोधयन्तः परस्परम्', एक-दूसरे को जगाते हुए। काव्य में यही एक जगह है जहाँ भक्तों को एक-दूसरे का साथ दिया गया है। बाक़ी सब कुछ एक मनुष्य और उसके ईश्वर के बीच होता है, या एक मनुष्य और उसके मन के बीच — इस श्लोक में एक समूह है, और वे बात करते हैं। अन्त का 'रमन्ति' सन्तोष नहीं, आनन्द है; उनका मन लगता है।"
+  },
+  {
+   "id": 382,
+   "number": "10.10",
+   "body_en": "To those who stay joined to me and worship me with love in it, I give the understanding that carries them across to me.",
+   "body_hi": "जो मुझसे जुड़े रहते हैं और प्रेम के साथ मेरी उपासना करते हैं, उन्हें मैं वह बुद्धि देता हूँ जो उन्हें मुझ तक पार ले आती है।",
+   "commentary_en": "Dadami: I give. Not something earned by practice but something handed over. Set this against the answer Arjuna got when he said the mind was as hard to hold as the wind — practice and dispassion, both of them his own work. This verse is the other half of the poem's account, and the two halves are never reconciled, only both stated.",
+   "commentary_hi": "'ददामि': मैं देता हूँ। अभ्यास से कमाई गई वस्तु नहीं, सौंपी गई वस्तु। इसे उस उत्तर के सामने रखें जो अर्जुन को तब मिला था जब उसने कहा कि मन को थामना हवा को थामने जैसा है — अभ्यास और वैराग्य, दोनों उसका अपना काम। यह श्लोक काव्य के लेखे का दूसरा आधा है, और दोनों आधे कभी मिलाए नहीं जाते, दोनों बस कह दिए जाते हैं।"
+  },
+  {
+   "id": 383,
+   "number": "10.11",
+   "body_en": "Out of pity for them, and for nothing else, I take my place in what they are and destroy the dark that ignorance made, holding up the lamp of knowledge, which gives light.",
+   "body_hi": "उन पर दया से, और किसी कारण से नहीं, मैं उनके भीतर अपनी जगह लेता हूँ और अज्ञान से बने अन्धकार को मिटा देता हूँ, ज्ञान का दीपक उठाए हुए, जो उजाला देता है।",
+   "commentary_en": "The lamp comes back, after the flame in a windless place that stood for a steadied mind. There the lamp was Arjuna; here Krishna is carrying one. And anukampa, pity, is literally a trembling-along-with — the same kamp as the unshakeable yoga four verses ago. What cannot be shaken in him is what lets him shake with them.",
+   "commentary_hi": "दीपक लौट आता है, उस बिन-हवा जगह की लौ के बाद जो सधे मन के लिए खड़ी थी। वहाँ दीपक अर्जुन था; यहाँ कृष्ण एक उठाए हुए हैं। और 'अनुकम्पा', दया, शब्द से साथ-साथ काँपना है — वही 'कम्प्' जो चार श्लोक पहले न हिलने वाले योग में था। उनमें जो हिलाया नहीं जा सकता, वही उन्हें दूसरों के साथ काँपने देता है।"
+  },
+  {
+   "id": 384,
+   "number": "10.12",
+   "body_en": "Arjuna said: You are the highest brahman, the highest place to come to rest, the highest thing that makes a man clean. You are the person who lasts, you are divine, the first of the gods, unborn, and you reach everywhere.",
+   "body_hi": "अर्जुन ने कहा — आप परम ब्रह्म हैं, विश्राम की परम जगह, वह परम वस्तु जो मनुष्य को पवित्र करती है। आप वह पुरुष हैं जो टिका रहता है, आप दिव्य हैं, देवताओं में पहले, अजन्मे, और आप सब जगह पहुँचे हुए हैं।",
+   "commentary_en": "The first time Arjuna speaks at any length with no question in it. Six epithets and not one request — after nine chapters in which every speech of his has been a problem handed over, this one is simply said. The change is the chapter's real event, larger than anything in the list to come.",
+   "commentary_hi": "पहली बार अर्जुन कुछ लम्बा बोलता है और उसमें कोई प्रश्न नहीं। छह विशेषण और एक भी माँग नहीं — नौ अध्यायों के बाद, जिनमें उसका हर कथन सौंपी गई समस्या रहा है, यह बस कहा गया है। यही बदलाव अध्याय की असली घटना है, आगे आने वाली सूची की किसी भी बात से बड़ी।"
+  },
+  {
+   "id": 385,
+   "number": "10.13",
+   "body_en": "Every one of the seers says so of you — Narada, who is a seer among the gods, and Asita, and Devala, and Vyasa — and now you are telling me so yourself.",
+   "body_hi": "ऋषियों में हर एक आपके विषय में यही कहता है — नारद, जो देवताओं के बीच ऋषि हैं, और असित, और देवल, और व्यास — और अब आप स्वयं मुझसे यही कह रहे हैं।",
+   "commentary_en": "He names his authorities and then puts \"and you yourself tell me\" last. Tradition first, the direct word after it as confirmation. That is the order of a careful man rather than a swept-away one, and it is exactly how Arjuna has behaved since chapter two — he keeps checking.",
+   "commentary_hi": "वह अपने प्रमाण गिनाता है और फिर 'और आप स्वयं मुझसे कहते हैं' को अन्त में रखता है। परम्परा पहले, सीधा वचन उसके बाद, पुष्टि की तरह। यह सावधान मनुष्य का क्रम है, बहे हुए मनुष्य का नहीं, और अर्जुन दूसरे अध्याय से ठीक ऐसा ही करता आया है — वह जाँचता रहता है।"
+  },
+  {
+   "id": 386,
+   "number": "10.14",
+   "body_en": "I take all of it to be true, Keshava, everything you say to me. What you actually are, Bhagavan, is something neither the gods know nor the demons.",
+   "body_hi": "मैं इस सबको सच मानता हूँ, केशव, वह सब जो आप मुझसे कहते हैं। आप वास्तव में क्या हैं, भगवन्, यह न देवता जानते हैं न दानव।",
+   "commentary_en": "Ritam, not merely factual but right — an old word for the order things are supposed to have. And then he hands 10.2 back to its speaker: you said the gods do not know you, and I am telling you I have understood what that means. He is following, not just listening.",
+   "commentary_hi": "'ऋतम्', केवल तथ्य नहीं, सही — उस व्यवस्था का पुराना शब्द जो वस्तुओं में होनी चाहिए। और फिर वह 10.2 को उसी के कहने वाले को लौटा देता है: आपने कहा था कि देवता आपको नहीं जानते, और मैं आपको बता रहा हूँ कि उसका अर्थ मैंने समझ लिया। वह केवल सुन नहीं रहा, वह पीछे-पीछे चल रहा है।"
+  },
+  {
+   "id": 387,
+   "number": "10.15",
+   "body_en": "You alone know yourself, by yourself, highest of persons — you who bring beings into being and are their lord, the god the gods have, the master of the world.",
+   "body_hi": "आप ही अपने को जानते हैं, अपने से, पुरुषोत्तम — आप, जो प्राणियों को होने में लाते हैं और उनके स्वामी हैं, देवताओं के देवता, जगत् के मालिक।",
+   "commentary_en": "Atmana atmanam vettha: you know yourself by yourself. The knowing is a closed circuit with no way in from outside, which is Arjuna's actual point — he is not paying a compliment, he is explaining why he has no option but to ask. The question follows two verses later.",
+   "commentary_hi": "'आत्मना आत्मानं वेत्थ': आप अपने से अपने को जानते हैं। वह जानना एक बन्द घेरा है जिसमें बाहर से घुसने का रास्ता नहीं, और अर्जुन की असली बात यही है — वह प्रशंसा नहीं कर रहा, वह बता रहा है कि उसके पास पूछने के सिवा चारा क्यों नहीं। प्रश्न दो श्लोक बाद आता है।"
+  },
+  {
+   "id": 388,
+   "number": "10.16",
+   "body_en": "So you are the one who can tell it and leave nothing out — the divine reaches that are your own, the reaches by which you stand spread right through these worlds.",
+   "body_hi": "सो आप ही वह हैं जो इसे कह सकते हैं और कुछ भी छोड़े नहीं — वे दिव्य विभूतियाँ जो आपकी अपनी हैं, वे विभूतियाँ जिनसे आप इन लोकों में फैले हुए ठहरे हैं।",
+   "commentary_en": "Vaktum arhasi, you are fit to tell it — the same construction he used when he said only Krishna was fit to cut his doubt about the failed yogin. Arjuna's compliments are always also arguments: because nobody else can, you must.",
+   "commentary_hi": "'वक्तुमर्हसि', आप कहने योग्य हैं — वही रचना जो उसने तब बरती थी जब उसने कहा था कि उसका वह सन्देह काटने योग्य केवल कृष्ण हैं। अर्जुन की प्रशंसाएँ सदा तर्क भी होती हैं: क्योंकि कोई और नहीं कर सकता, इसलिए आपको करना है।"
+  },
+  {
+   "id": 389,
+   "number": "10.17",
+   "body_en": "How am I to know you, yogin, if I am to keep you in mind all the time? In which of your forms should I be holding you, Bhagavan?",
+   "body_hi": "मैं आपको कैसे जानूँ, योगिन्, अगर मुझे आपको हर समय मन में रखना है? आपके किन-किन रूपों में मैं आपको थामे रहूँ, भगवन्?",
+   "commentary_en": "This is the practical question, and everything from here to the end of the chapter is an answer to it. Note what he is actually asking for: not a description of god but something to put in his mind when he sits down. The great list that follows is a working aid, and reading it as a boast gets the chapter backwards.",
+   "commentary_hi": "यही व्यावहारिक प्रश्न है, और यहाँ से अध्याय के अन्त तक सब उसी का उत्तर है। ध्यान दें कि वह असल में क्या माँग रहा है: ईश्वर का वर्णन नहीं, बल्कि कोई ऐसी वस्तु जिसे बैठते समय मन में रखा जाए। आगे आने वाली बड़ी सूची काम की चीज़ है, और उसे बड़ाई समझ लेना अध्याय को उलटा पढ़ना है।"
+  },
+  {
+   "id": 390,
+   "number": "10.18",
+   "body_en": "Tell me the yoga and the reach of what you are, Janardana, and tell it at length. However much of this I hear I am not filled up — the words are nectar.",
+   "body_hi": "मुझे अपना योग और अपनी पहुँच बताइए, जनार्दन, और विस्तार से बताइए। इसे जितना भी सुनूँ, मेरा भरना नहीं होता — ये वचन अमृत हैं।",
+   "commentary_en": "Na asti trptih shrinvato me: there is no getting full for me as I listen. Then amritam, the drink of the deathless, said of somebody's speech. It is the warmest thing Arjuna says in the whole poem, and it comes from a man who three chapters ago was arguing that the mind could not be held at all.",
+   "commentary_hi": "'नास्ति तृप्तिः शृण्वतो मे': सुनते हुए मेरा भरना नहीं होता। फिर 'अमृतम्', अमरता का पेय, किसी के वचन के लिए कहा गया। यह पूरे काव्य में अर्जुन की सबसे गर्मजोश बात है, और यह उस मनुष्य से आ रही है जो तीन अध्याय पहले यह तर्क कर रहा था कि मन थामा ही नहीं जा सकता।"
+  },
+  {
+   "id": 391,
+   "number": "10.19",
+   "body_en": "The Blessed One said: Then here it is. I will tell you the divine reaches that are my own, best of the Kurus — the chief of them, because how far I extend has no end to it.",
+   "body_hi": "भगवान् ने कहा — तो लो, सुनो। मैं तुम्हें अपनी दिव्य विभूतियाँ बताऊँगा, कुरुश्रेष्ठ — उनमें मुख्य, क्योंकि मैं कहाँ तक फैला हूँ इसका कोई अन्त नहीं।",
+   "commentary_en": "Hanta is an exclamation — come now, well then — and it is the only one Krishna uses in the poem. He is pleased, and it shows in a single word before the teaching starts. Then pradhanyatah, by the chief ones: what follows is admitted from the outset to be a selection.",
+   "commentary_hi": "'हन्त' विस्मय का शब्द है — लो, तो फिर — और काव्य में कृष्ण यही एक बरतते हैं। वे प्रसन्न हैं, और उपदेश शुरू होने से पहले वह एक शब्द में दिख जाता है। फिर 'प्राधान्यतः', मुख्य के अनुसार: आगे जो आता है, वह शुरू में ही मान लिया गया है कि चुनाव है।"
+  },
+  {
+   "id": 392,
+   "number": "10.20",
+   "body_en": "I am the self, Gudakesha, and the place I sit is the innermost room of everything alive. Whatever comes into existence starts out of me, holds together in me for as long as it lasts, and finishes back in me.",
+   "body_hi": "मैं आत्मा हूँ, गुडाकेश, और मेरे बैठने की जगह हर जीवित वस्तु का सबसे भीतरी कमरा है। जो कुछ अस्तित्व में आता है वह मुझसे चलकर आता है, जब तक टिकता है मुझमें जुड़ा रहता है, और लौटकर मुझमें ही ख़त्म होता है।",
+   "commentary_en": "Before any of the particulars comes the answer that needs none: I am the self in the heart of each of them. Everything from the next verse onward is a concession — the list exists because a mind that has just been told this cannot hold it, and asks for things it can name instead.",
+   "commentary_hi": "किसी भी ब्योरे से पहले वह उत्तर आता है जिसे ब्योरे की ज़रूरत नहीं: मैं उनमें से हर एक के हृदय की आत्मा हूँ। अगले श्लोक से जो कुछ है वह रियायत है — सूची इसलिए है कि जिस मन को यह अभी बताया गया, वह इसे थाम नहीं पाता, और बदले में नाम लेने योग्य वस्तुएँ माँगता है।"
+  },
+  {
+   "id": 393,
+   "number": "10.21",
+   "body_en": "Among the sons of Aditi I am Vishnu. Take anything at all that gives off light: I am the sun there, burning at the head of the whole company. Of the storm-gods I am Marichi. And when the night fills up with small fires, I am the moon walking among them.",
+   "body_hi": "आदित्यों में विष्णु मैं हूँ। जो कुछ भी उजाला देता है उसे लो — वहाँ पूरे समूह के आगे दहकता सूर्य मैं हूँ। मरुतों में मरीचि। और जब रात छोटी-छोटी आगों से भर जाती है, तब उनके बीच चलता चन्द्रमा मैं हूँ।",
+   "commentary_en": "The litany starts, and its rule is plain: name any class of things and he is the best specimen of it. That makes the list an answer to 10.17 as well as a hymn — Arjuna asked what to hold in mind, and the reply is that whatever he happens to be looking at, he should take the highest instance of it and think of that.",
+   "commentary_hi": "सूची शुरू होती है, और उसका नियम साफ़ है: किसी भी वर्ग का नाम लो, वे उसका सर्वोत्तम नमूना हैं। इससे सूची स्तुति के साथ-साथ 10.17 का उत्तर भी बन जाती है — अर्जुन ने पूछा था कि मन में क्या रखे, और उत्तर है कि जिस पर भी उसकी दृष्टि पड़े, उसका सर्वोत्तम रूप ले और उसी का ध्यान करे।"
+  },
+  {
+   "id": 394,
+   "number": "10.22",
+   "body_en": "Of the Vedas I am the Sama. Among the gods I am Vasava. Among the senses I am the mind, and in living things I am the awareness itself.",
+   "body_hi": "वेदों में सामवेद मैं हूँ। देवताओं की सभा में वासव, और इन्द्रियों की क़तार में मन। और जो कुछ जीता है, उसके भीतर जो सजगता जगी हुई है, वह मैं हूँ।",
+   "commentary_en": "The mind is listed as chief among the senses — ranked as an organ, alongside the eyes and the ears, rather than as the thing that owns them. That is the Gita's settled view and it is easy to miss here, sitting quietly in a line otherwise made of gods and scriptures. Then chetana, awareness, which is not an instance of anything; it is the whole category.",
+   "commentary_hi": "मन इन्द्रियों में मुख्य गिनाया गया है — आँख और कान के बग़ल में एक करण की तरह, उनका मालिक बनकर नहीं। यही गीता की जमी हुई दृष्टि है और यहाँ इसे चूकना आसान है, उस पंक्ति में चुपचाप बैठे हुए जो बाक़ी देवताओं और शास्त्रों से बनी है। फिर 'चेतना', बोध, जो किसी वर्ग का नमूना नहीं है; वह पूरा वर्ग ही है।"
+  },
+  {
+   "id": 395,
+   "number": "10.23",
+   "body_en": "Among the Rudras I am Shankara, and among the yakshas and rakshasas the keeper of wealth. Of the Vasus I am fire, and of all the peaked mountains I am Meru.",
+   "body_hi": "रुद्रों में शंकर मैं हूँ, और यक्षों तथा राक्षसों में वह जो कोश का रखवाला है। वसुओं के बीच जो आग जल रही है वह मैं हूँ, और जितने पहाड़ चोटी तक उठते हैं उन सबमें मेरु।",
+   "commentary_en": "The list does not step around the frightening classes. Yakshas and rakshasas get their own highest instance like everybody else, and nothing is said to excuse it. Over the next fifteen verses this will stop looking like an oversight and start looking like the whole method.",
+   "commentary_hi": "सूची डरावने वर्गों से किनारा नहीं करती। यक्षों और राक्षसों को भी बाक़ी सबकी तरह अपना सर्वोत्तम नमूना मिलता है, और उसकी सफ़ाई में कुछ नहीं कहा जाता। अगले पन्द्रह श्लोकों में यह चूक जैसा दिखना बन्द कर देगा और पूरी विधि जैसा दिखने लगेगा।"
+  },
+  {
+   "id": 396,
+   "number": "10.24",
+   "body_en": "Of the priests who serve at a household's fire, know me for Brihaspati, the first of them, Partha. Where armies are led, I am Skanda who leads them. And of every stretch of water there is, I am the sea.",
+   "body_hi": "मुझे बृहस्पति समझो, पुरोहितों में पहला, पार्थ। सेनापतियों में स्कन्द मैं हूँ, और सब जलों में समुद्र।",
+   "commentary_en": "The sea again, after the one that took every river into itself and never rose. There it was an image for a man; here it is simply the largest of its kind. The poem has a habit of re-using its own furniture, and it does not usually mark the repetition.",
+   "commentary_hi": "समुद्र फिर, उस समुद्र के बाद जो हर नदी को अपने में लेता था और कभी नहीं चढ़ता था। वहाँ वह किसी मनुष्य का चित्र था; यहाँ वह बस अपनी जाति में सबसे बड़ा है। काव्य की आदत है कि वह अपना ही सामान दोबारा बरतता है, और वह दोहराव पर आम तौर पर निशान नहीं लगाता।"
+  },
+  {
+   "id": 397,
+   "number": "10.25",
+   "body_en": "Of the great seers I am Bhrigu, and of everything that is said, the single syllable. Of offerings I am the one that is only muttered, and of things that do not move, the Himalaya.",
+   "body_hi": "बड़े ऋषियों में भृगु मैं हूँ, और जो कुछ कहा जाता है उसमें वह एक अक्षर। यज्ञों में वह जो केवल मन ही मन जपा जाता है, और जो हिलती नहीं उन वस्तुओं में हिमालय।",
+   "commentary_en": "Japa-yajna, the offering that is only muttered. Of every sacrifice a man could make, the one ranked highest here needs no fire, no priest, no money and no particular place, and can be done by anyone walking down a road. It is the most quietly democratic line in the chapter, and it is buried in the middle of a verse about mountains and seers.",
+   "commentary_hi": "'जपयज्ञ', वह यज्ञ जो केवल मन ही मन जपा जाता है। मनुष्य जो भी यज्ञ कर सकता है, उनमें यहाँ सबसे ऊँचा वह गिना गया है जिसे न अग्नि चाहिए, न पुरोहित, न धन, न कोई ख़ास जगह, और जिसे राह चलता कोई भी कर सकता है। यह अध्याय की सबसे चुपचाप जनतान्त्रिक पंक्ति है, और वह पर्वतों और ऋषियों वाले श्लोक के बीच दबी पड़ी है।"
+  },
+  {
+   "id": 398,
+   "number": "10.26",
+   "body_en": "Of everything that grows tall and puts out branches, I am the ashvattha. Of the seers who belong to the gods, Narada. Among the gandharvas, Chitraratha. And among those who have come all the way through, Kapila, who did it in silence.",
+   "body_hi": "वृक्षों में अश्वत्थ; देवताओं के ऋषियों में नारद; गन्धर्वों में चित्ररथ; और जो सिद्ध हो चुके उनमें कपिल मुनि।",
+   "commentary_en": "A verse built out of four names and nothing else — no verb of its own, no comment. The litany allows itself stretches like this where the naming is the whole content, and they give the passage its rhythm: dense verses of thought alternating with plain roll-calls.",
+   "commentary_hi": "चार नामों और उनके सिवा कुछ नहीं से बना श्लोक — अपनी कोई क्रिया नहीं, कोई टिप्पणी नहीं। सूची अपने को ऐसे हिस्से देती है जहाँ नाम लेना ही पूरी अन्तर्वस्तु है, और उन्हीं से इस प्रसंग की लय बनती है: विचार से भरे श्लोक और सादी नामावलियाँ, बारी-बारी।"
+  },
+  {
+   "id": 399,
+   "number": "10.27",
+   "body_en": "When you look at horses, take me for Uchchaihshravas, who came up out of the churning when the drink that stops death was won. Among the great tusked ones, Airavata. And among men, the one who rules the rest of them.",
+   "body_hi": "घोड़ों को देखो तो मुझे उच्चैःश्रवा समझो, जो मन्थन से निकला जब मृत्यु रोकने वाला पेय हाथ आया। बड़े दाँत वालों में ऐरावत। और मनुष्यों में वह जो बाक़ी सब पर राज करता है।",
+   "commentary_en": "Amritodbhavam, risen out of the nectar — the horse came up when the ocean was churned, and the epithet quietly ties this verse to the nectar Arjuna said he was drinking nine verses ago. The chapter keeps making small loops like this without pointing at them.",
+   "commentary_hi": "'अमृतोद्भवम्', अमृत से निकला हुआ — वह घोड़ा समुद्र मथे जाने पर निकला था, और यह विशेषण चुपचाप इस श्लोक को उस अमृत से बाँध देता है जिसे अर्जुन ने नौ श्लोक पहले पीना कहा था। अध्याय ऐसे छोटे-छोटे घेरे बनाता चलता है और उनकी ओर उँगली नहीं उठाता।"
+  },
+  {
+   "id": 400,
+   "number": "10.28",
+   "body_en": "Of weapons I am the thunderbolt; of cows, the one that can be milked for whatever is wanted. I am Kandarpa, who gets the young begotten, and of the snakes I am Vasuki.",
+   "body_hi": "शस्त्रों में वज्र मैं हूँ; गायों में वह जिससे जो चाहा जाए वही दुहा जा सके। मैं कन्दर्प हूँ, जिससे सन्तान जन्मती है, और सर्पों में वासुकि।",
+   "commentary_en": "Kandarpa is desire — the god of it, and the word covers the thing itself. Two chapters ago desire was named the enemy that had to be killed. Here it is claimed without a word of qualification, in a list of best things. The poem is not being careless; it is holding both, and it never resolves them.",
+   "commentary_hi": "'कन्दर्प' काम है — उसका देवता, और शब्द उस वस्तु को भी ढकता है। दो अध्याय पहले काम को वह शत्रु कहा गया था जिसे मारना है। यहाँ उसे बिना एक शब्द की शर्त के अपना कह लिया गया है, सर्वोत्तम वस्तुओं की सूची में। काव्य लापरवाह नहीं है; वह दोनों को थामे हुए है, और उन्हें कभी सुलझाता नहीं।"
+  },
+  {
+   "id": 401,
+   "number": "10.29",
+   "body_en": "I am Ananta among the nagas, and Varuna among everything that lives in water. Of the fathers I am Aryaman, and of all who keep things in check, I am Yama.",
+   "body_hi": "नागों में अनन्त मैं हूँ, और जो जल में रहते हैं उन सबमें वरुण। पितरों में अर्यमा मैं हूँ, और जो सबको रोक में रखते हैं उन सबमें यम।",
+   "commentary_en": "Yama among those who hold things in check. Death ranked as a form of self-restraint is a strange joke and a good one — the poem has spent five chapters on men reining in their senses, and here the greatest restrainer turns out to be the one who stops everything at once.",
+   "commentary_hi": "जो रोक में रखते हैं उनमें यम। मृत्यु को संयम का एक रूप गिनना विचित्र मज़ाक़ है और अच्छा है — काव्य ने पाँच अध्याय उन मनुष्यों पर लगाए हैं जो अपनी इन्द्रियाँ साधते हैं, और यहाँ सबसे बड़ा साधने वाला वही निकलता है जो सब कुछ एक ही बार रोक देता है।"
+  },
+  {
+   "id": 402,
+   "number": "10.30",
+   "body_en": "Among the daityas I am Prahlada. Wherever anything is being counted off, I am the time it gets counted in. Of the animals I am the one they call their king, and of everything that flies, the son of Vinata.",
+   "body_hi": "दैत्यों में प्रह्लाद मैं हूँ। जहाँ कुछ भी गिना जा रहा है, वहाँ जिसमें वह गिना जाता है — वह काल मैं हूँ। जानवरों में जो उनका राजा कहलाता है वह मैं हूँ, और जो कुछ उड़ता है उसमें विनता का पुत्र।",
+   "commentary_en": "Kalah kalayatam — time among the counters, and the two words share a root, so the line turns on itself. Time is what counting is, and the best of the counters. Note also that Prahlada is a demon, and he is on the list because he was the most devout of them: the class is low and the instance is chosen for its devotion.",
+   "commentary_hi": "'कालः कलयताम्' — गिनने वालों में काल, और दोनों शब्दों की धातु एक है, सो पंक्ति अपने ऊपर मुड़ जाती है। गिनना जो है वही काल है, और गिनने वालों में सर्वोत्तम भी। यह भी देखें कि प्रह्लाद दैत्य है, और वह सूची में इसलिए है कि उनमें सबसे भक्त वही था: वर्ग नीचा है और नमूना उसकी भक्ति के कारण चुना गया है।"
+  },
+  {
+   "id": 403,
+   "number": "10.31",
+   "body_en": "Of everything that blows a place clean, I am the wind. Of the men who go armed, Rama. In the water I am the makara among all that swims, and of everything that runs downhill to the sea, the Jahnavi.",
+   "body_hi": "जो कुछ शुद्ध करता है उसमें पवन मैं हूँ; जो शस्त्र उठाते हैं उनमें राम। मछलियों में मकर मैं हूँ, और नदियों में जाह्नवी।",
+   "commentary_en": "Rama among the bearers of weapons, said to a man who has spent the whole poem trying not to bear one. The verse does not press the point and does not need to; Arjuna is holding a bow he put down in chapter one, and he is being told the highest instance of his own trade.",
+   "commentary_hi": "शस्त्र उठाने वालों में राम, और यह उस मनुष्य से कहा गया है जिसने पूरा काव्य शस्त्र न उठाने की कोशिश में बिताया है। श्लोक इस बात पर ज़ोर नहीं देता और ज़रूरत भी नहीं; अर्जुन के हाथ में वह धनुष है जिसे उसने पहले अध्याय में रख दिया था, और उसे उसके ही पेशे का सर्वोत्तम नमूना बताया जा रहा है।"
+  },
+  {
+   "id": 404,
+   "number": "10.32",
+   "body_en": "Of everything that is made I am the beginning and the end and the middle too, Arjuna. Of the branches of learning I am the one about the self, and where men argue, I am the argument.",
+   "body_hi": "जो कुछ रचा जाता है उसका आदि और अन्त और मध्य भी मैं हूँ, अर्जुन। विद्याओं में वह मैं हूँ जो आत्मा की है, और जहाँ लोग बहस करते हैं, वहाँ बहस मैं हूँ।",
+   "commentary_en": "Vadah pravadatam: not the winner of the debate, and not the truth the debate is about — the debate. He claims the activity rather than its outcome, which is what he did with the muttered offering and will do again with silence a few verses on.",
+   "commentary_hi": "'वादः प्रवदताम्': बहस का जीतने वाला नहीं, और वह सत्य भी नहीं जिस पर बहस है — बहस स्वयं। वे परिणाम के बजाय क्रिया को अपना कहते हैं, जैसा उन्होंने जपयज्ञ के साथ किया और कुछ श्लोक बाद मौन के साथ फिर करेंगे।"
+  },
+  {
+   "id": 405,
+   "number": "10.33",
+   "body_en": "Of the letters I am A; of the compounds, the one that couples two words as equals. I am time that does not wear out, and I am the one who holds it all together, with faces turned every way.",
+   "body_hi": "अक्षरों में अ मैं हूँ; समासों में वह जो दो शब्दों को बराबरी से जोड़ता है। मैं वह काल हूँ जो घिसता नहीं, और मैं वही हूँ जो सब कुछ थामे रखता है, हर ओर मुँह किए हुए।",
+   "commentary_en": "The letter A is the first sound the mouth makes and sits inside every syllable that follows. Then the dvandva compound, which is a grammarian's joke twice over: a dvandva joins two words as equals, and dvandva is also the word for the pairs — hot and cold, honour and dishonour — that the poem told him to climb out of five chapters ago.",
+   "commentary_hi": "अ पहला स्वर है जो मुँह से निकलता है और उसके बाद के हर अक्षर के भीतर बैठा रहता है। फिर द्वन्द्व समास, और यह दोहरा वैयाकरणिक मज़ाक़ है: द्वन्द्व दो शब्दों को बराबरी से जोड़ता है, और 'द्वन्द्व' उन जोड़ों का भी शब्द है — सर्दी-गर्मी, मान-अपमान — जिनसे निकल आने को काव्य ने पाँच अध्याय पहले कहा था।"
+  },
+  {
+   "id": 406,
+   "number": "10.34",
+   "body_en": "I am death, who carries everyone off, and I am the coming-into-being of all that is still on its way. Among the things the language calls she: fame, fortune, speech, memory, quick wit, firmness, patience.",
+   "body_hi": "मैं मृत्यु हूँ, जो सबको उठा ले जाती है, और मैं उन सबका होना हूँ जो अभी आने वाले हैं। भाषा जिन्हें स्त्री कहती है उनमें: कीर्ति, श्री, वाणी, स्मृति, मेधा, धृति, क्षमा।",
+   "commentary_en": "Mrityuh sarva-harah: death, who takes it all. He says it flatly, in the middle of a hymn, and in the same breath he is the arrival of everything still coming. Then seven feminine nouns — and the reason they are together is grammatical gender and nothing else, which is the only time the poem organises anything that way.",
+   "commentary_hi": "'मृत्युः सर्वहरः': मृत्यु, जो सब ले जाती है। वे इसे सीधे कह देते हैं, स्तुति के बीच में, और उसी साँस में वे उन सबका आना भी हैं जो अभी आ रहे हैं। फिर सात स्त्रीलिंग शब्द — और उन्हें एक साथ रखने का कारण व्याकरण का लिंग है, और कुछ नहीं, और काव्य किसी वस्तु को इस ढंग से केवल यहीं सजाता है।"
+  },
+  {
+   "id": 407,
+   "number": "10.35",
+   "body_en": "Of the Sama chants I am the Brihat. Of the measures a verse can be laid out in, the Gayatri. Of the twelve that make up a year I am Margashirsha, and of the year's turns, the one that opens the flowers.",
+   "body_hi": "साम-गानों में बृहत्साम मैं हूँ। जिन मापों में पद्य बाँधा जाता है उनमें गायत्री। जो बारह मिलकर वर्ष बनाते हैं उनमें मार्गशीर्ष, और वर्ष के फेरों में वह जो फूल खोलता है।",
+   "commentary_en": "The list comes down out of cosmology and into the calendar. After Meru and the sea and death itself, a month and a season — and the effect is not a fall in scale so much as a widening: whatever measure a person actually lives by, that has a highest instance too.",
+   "commentary_hi": "सूची ब्रह्माण्ड से उतरकर पंचांग में आ जाती है। मेरु और समुद्र और स्वयं मृत्यु के बाद एक महीना और एक ऋतु — और असर पैमाने के गिरने का इतना नहीं जितना फैलने का है: व्यक्ति असल में जिस माप से जीता है, उसका भी एक सर्वोत्तम नमूना है।"
+  },
+  {
+   "id": 408,
+   "number": "10.36",
+   "body_en": "I am the dice-play of men who cheat. I am the brilliance of the brilliant. I am winning, and I am the will to see a thing through; I am the goodness of the good.",
+   "body_hi": "जो लोग छल करते हैं उनका जुआ मैं हूँ। जो तेजस्वी हैं उनका तेज मैं हूँ। मैं जय हूँ, और मैं वह निश्चय हूँ जो काम को अन्त तक ले जाता है; जो सज्जन हैं उनका सत्त्व मैं हूँ।",
+   "commentary_en": "Dyutam chhalayatam, the gambling of cheats, and this is the line that stops the chapter being a catalogue of admirable things. The Pandavas lost their kingdom, their freedom and their wife's dignity at a rigged dice game, and Arjuna is sitting in the war that came out of it. Krishna says that game was him too. Nobody who knows the story can hear this verse comfortably, and it is placed here on purpose.",
+   "commentary_hi": "'द्यूतं छलयताम्', छल करने वालों का जुआ, और यही वह पंक्ति है जो अध्याय को सराहने योग्य वस्तुओं की सूची बनने से रोक देती है। पाण्डवों ने अपना राज्य, अपनी स्वतन्त्रता और अपनी पत्नी की मर्यादा एक बेईमान जुए में खोई थी, और अर्जुन उसी से निकले युद्ध में बैठा है। कृष्ण कहते हैं कि वह खेल भी वही थे। जो कथा जानता है वह इस श्लोक को चैन से नहीं सुन सकता, और वह यहाँ जान-बूझकर रखा गया है।"
+  },
+  {
+   "id": 409,
+   "number": "10.37",
+   "body_en": "Vasudeva, among the Vrishnis, is who I am; and among Pandu's sons, Dhananjaya. Of the ones who keep silence I am Vyasa; and of those who make the poems, Ushanas.",
+   "body_hi": "वृष्णियों में जो वासुदेव है, वही मैं हूँ; और पाण्डु के पुत्रों में धनंजय। जो चुप रहते हैं उनमें व्यास; और जो पद्य रचते हैं उनमें उशना।",
+   "commentary_en": "Two names in one verse: his own, and Arjuna's. After seventeen verses of gods, mountains, rivers and beasts, the list arrives at the two men sitting in the chariot. It is the wittiest turn in the poem and also its point — the highest of any class is him, Arjuna is the highest of the Pandavas, and so Arjuna has been on the list the whole time without being told.",
+   "commentary_hi": "एक श्लोक में दो नाम: अपना, और अर्जुन का। देवताओं, पर्वतों, नदियों और पशुओं के सत्रह श्लोकों के बाद सूची उन दो मनुष्यों पर आ जाती है जो रथ में बैठे हैं। यह काव्य का सबसे चतुर मोड़ है और उसकी बात भी — किसी भी वर्ग में सर्वोत्तम वही हैं, अर्जुन पाण्डवों में सर्वोत्तम है, सो अर्जुन बिना बताए ही पूरे समय सूची में था।"
+  },
+  {
+   "id": 410,
+   "number": "10.38",
+   "body_en": "I am the rod in the hand of those who punish, and the statecraft of those who mean to win. I am the silence that secrets keep, and I am the knowing of those who know.",
+   "body_hi": "जो दण्ड देते हैं उनके हाथ का दण्ड मैं हूँ, और जो जीतना चाहते हैं उनकी नीति। जो रहस्य हैं उनका मौन मैं हूँ, और जो जानते हैं उनका ज्ञान।",
+   "commentary_en": "Maunam guhyanam, the silence of secrets. The best a secret can manage is to remain unspoken, so what he claims is the not-saying rather than the thing not said. In a chapter that is one long act of naming, it is a strange and lovely thing to put on the list.",
+   "commentary_hi": "'मौनं गुह्यानाम्', रहस्यों का मौन। रहस्य से जो सबसे अच्छा हो सकता है वह अनकहा रह जाना है, सो वे उस अनकहेपन को अपना कहते हैं, उस वस्तु को नहीं जो अनकही है। जो अध्याय पूरा एक लम्बा नामकरण है, उसमें सूची पर यह रखना विचित्र और सुन्दर है।"
+  },
+  {
+   "id": 411,
+   "number": "10.39",
+   "body_en": "And whatever is the seed of every being, Arjuna — that is what I am. Nothing that moves and nothing that stands still could be there at all without me.",
+   "body_hi": "और हर प्राणी का जो बीज है, अर्जुन — वही मैं हूँ। जो चलता है और जो ठहरा है, उनमें कुछ भी मेरे बिना हो ही नहीं सकता।",
+   "commentary_en": "The naming stops and the principle behind it is stated. Bijam, seed, and it is the right word for what the list has been doing: each name was not a piece of him but the point at which a whole class of things starts.",
+   "commentary_hi": "नाम लेना रुक जाता है और उसके पीछे का सिद्धान्त कह दिया जाता है। 'बीजम्', बीज, और सूची जो कर रही थी उसके लिए यही ठीक शब्द है: हर नाम उनका कोई टुकड़ा नहीं था, बल्कि वह बिन्दु था जहाँ से वस्तुओं का एक पूरा वर्ग शुरू होता है।"
+  },
+  {
+   "id": 412,
+   "number": "10.40",
+   "body_en": "There is no end to the divine reaches I have, scorcher of foes. What I have set out here is no more than a pointing at how far it goes.",
+   "body_hi": "मेरी दिव्य विभूतियों का कोई अन्त नहीं, परन्तप। जो मैंने यहाँ रखा है वह इससे अधिक कुछ नहीं कि कहाँ तक जाता है, उसकी ओर एक इशारा।",
+   "commentary_en": "Uddeshatah, by way of indication — a gesture in the direction of a thing rather than the thing itself. He calls his own twenty verses a pointing, which is a fair description of what a list of best instances can do and cannot do.",
+   "commentary_hi": "'उद्देशतः', इशारे के तौर पर — किसी वस्तु की दिशा में संकेत, वह वस्तु स्वयं नहीं। वे अपने ही बीस श्लोकों को एक इशारा कहते हैं, और सर्वोत्तम नमूनों की सूची जो कर सकती है और जो नहीं कर सकती, उसका यह ईमानदार वर्णन है।"
+  },
+  {
+   "id": 413,
+   "number": "10.41",
+   "body_en": "Anything at all that has reach in it, or good fortune, or force — take it that the thing grew out of one splinter of my brightness.",
+   "body_hi": "जिस किसी में भी पहुँच है, या श्री, या ज़ोर — समझ लो कि वह वस्तु मेरी चमक के एक ही टुकड़े से उगी है।",
+   "commentary_en": "Tejo-'msha-sambhavam: grown from a fragment of my heat. Mind the arithmetic, because it is the same move the last verse of the chapter will make on a larger scale — not the whole of anything, a splinter, and the splinter was enough for everything on the list.",
+   "commentary_hi": "'तेजोंऽशसंभवम्': मेरे तेज के एक अंश से उगा हुआ। गणित पर ध्यान दें, क्योंकि अध्याय का अन्तिम श्लोक इसी चाल को और बड़े पैमाने पर चलेगा — किसी वस्तु का पूरापन नहीं, एक टुकड़ा, और सूची में जो कुछ था उसके लिए वह टुकड़ा काफ़ी था।"
+  },
+  {
+   "id": 414,
+   "number": "10.42",
+   "body_en": "Or else — what is all this knowing going to get you, Arjuna? I have set myself underneath this whole world and I am holding it up, and I do it with one part of me.",
+   "body_hi": "या फिर — यह सारा जानना तुम्हें क्या दे देगा, अर्जुन? मैंने अपने को इस पूरे जगत् के नीचे लगा दिया है और मैं उसे थामे हुए हूँ, और यह मैं अपने एक अंश से करता हूँ।",
+   "commentary_en": "The chapter's last move is to throw the chapter away. Bahuna etena kim jnatena: what use is the knowing of all this? Then eka-amshena, with a single part, which turns the whole litany into a rounding error against what was never said. Vishtabhya is to prop something up from below, the posture of a thing bearing a load — the one physical verb in a chapter otherwise made entirely of names.",
+   "commentary_hi": "अध्याय की अन्तिम चाल अध्याय को ही फेंक देना है। 'बहुनैतेन किं ज्ञातेन': इस सबका जानना किस काम का? फिर 'एकांशेन', एक ही अंश से, और इससे पूरी सूची उसके सामने गिनती की भूल बन जाती है जो कभी कहा ही नहीं गया। 'विष्टभ्य' किसी वस्तु को नीचे से थामना है, बोझ उठाए हुए होने की मुद्रा — उस अध्याय की एक ही देहगत क्रिया जो बाक़ी पूरा नामों से बना है।"
+  }
+ ]
+}

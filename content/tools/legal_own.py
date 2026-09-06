@@ -269,6 +269,32 @@ PROPER = {
     # version of it to own. Same for arisudana and purusharshabha.
     "parantapa", "scorcher", "foes", "foe", "arisudana", "enemies", "enemy",
     "mahabaho", "purusharshabha", "bull", "rulers", "armed",
+    # Chapter 10 is a catalogue: eighteen verses of "of the As, I am B", where
+    # both A and B are almost always named. Every one of these is a name of a
+    # god, a sage, a class of beings, a mountain, a river, a metre, a month or
+    # an animal out of the same public-domain cast, and PROPER had never seen
+    # any of them -- so the checker was scoring the whole catalogue as though
+    # the names were wording we had chosen. They are not: there is no second
+    # way to say Airavata. Names and name-like class terms only; the ordinary
+    # nouns the verses sort them into (sun, months, rivers) are deliberately
+    # NOT here, because how those get phrased is still ours.
+    "vishnu", "marichi", "marut", "maruts", "aditya", "adityas", "vasava",
+    "rudra", "rudras", "shankara", "yaksha", "yakshas", "rakshasa",
+    "rakshasas", "vasu", "vasus", "meru", "brihaspati", "skanda", "bhrigu",
+    "ashvattha", "narada", "gandharva", "gandharvas", "chitraratha", "kapila",
+    "uchchaihshravas", "airavata", "vasuki", "ananta", "naga", "nagas",
+    "varuna", "aryaman", "yama", "prahlada", "daitya", "daityas", "vainateya",
+    "vinata", "rama", "makara", "jahnavi", "gayatri", "brihat", "margashirsha",
+    "vasudeva", "vyasa", "ushanas", "ushana", "kandarpa", "kamadhuk",
+    "vrishnis", "devala", "asita", "samaveda", "sama", "siddhas", "indra",
+    "विष्णु", "मरीचि", "मरुत", "मरुतों", "आदित्य", "आदित्यों", "वासव",
+    "रुद्र", "रुद्रों", "शंकर", "यक्ष", "यक्षों", "राक्षस", "राक्षसों",
+    "वसु", "वसुओं", "मेरु", "बृहस्पति", "स्कन्द", "भृगु", "अश्वत्थ", "नारद",
+    "गन्धर्व", "गन्धर्वों", "चित्ररथ", "कपिल", "उच्चैःश्रवा", "ऐरावत",
+    "वासुकि", "अनन्त", "नाग", "नागों", "वरुण", "अर्यमा", "यम", "प्रह्लाद",
+    "दैत्य", "दैत्यों", "वैनतेय", "विनता", "राम", "मकर", "जाह्नवी", "गायत्री",
+    "बृहत्साम", "मार्गशीर्ष", "वासुदेव", "व्यास", "उशना", "कन्दर्प", "कामधुक",
+    "वृष्णियों", "देवल", "असित", "सामवेद", "साम", "सिद्धों", "इन्द्र",
 }
 
 STOPWORDS = STOP_EN | STOP_HI | FORCED_TERMS | PROPER
