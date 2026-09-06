@@ -49,7 +49,16 @@ Swiss Ephemeris path is **only** verifiable on a device. Deploy via
 - [ ] Festival dates resolve for two different locations, and the Explorer
       agrees with the Panchang screen for the same day
 - [ ] A festival reminder actually fires (Android OEM battery policies are the
-      usual reason it does not)
+      usual reason it does not). Since 2026-09-06 the reminder path uses
+      **exact** alarms (`USE_EXACT_ALARM` / `SCHEDULE_EXACT_ALARM`, with an
+      inexact fallback if the user declines) and the plugin's
+      `ScheduledNotificationBootReceiver` is declared in the manifest — verify
+      all four cases on a real device:
+      - fires at the exact minute set (not a fuzzy window)
+      - still fires after a **reboot** without the app being opened
+      - still fires after an **app update** (`MY_PACKAGE_REPLACED`)
+      - the "Alarms &amp; reminders" system prompt appears when exact-alarm is
+        not already granted, and declining it still leaves an (inexact) reminder
 
 ## 4. Upgrade, not just install
 

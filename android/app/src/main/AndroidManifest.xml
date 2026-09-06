@@ -4,6 +4,16 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <!-- Re-arm scheduled reminders after a reboot; Android drops them otherwise. -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <!-- A devotional reminder is only useful if it lands at the time the user
+         chose. USE_EXACT_ALARM is auto-granted on Android 13+ for an app whose
+         core purpose is timed reminders (Play-policy category we fit);
+         SCHEDULE_EXACT_ALARM is the Android 12 fallback the user grants once. -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <!-- Wake the device to actually post a reminder scheduled while the screen
+         is off, and let the alarm-triggered work finish under Doze. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -42,6 +52,29 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- flutter_local_notifications: these two receivers do the work that
+             makes a scheduled reminder survive the real world. The plugin ships
+             the classes but NOT the manifest entries — the host app must
+             declare them, or a reminder silently stops after a reboot / an
+             exact-alarm grant. Mirrors what Notifee registers in the
+             Ishvarvaani build. -->
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver"
+            android:exported="false"/>
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver"
+            android:exported="false"/>
 
         <!-- Home-screen widgets (Panchang + Verse of the day). -->
         <receiver

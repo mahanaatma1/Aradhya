@@ -73,3 +73,4 @@ assets/db/*.sqlite.gz
 # Secrets — never commit API keys
 .env
 .env.*
+android/.kotlin/

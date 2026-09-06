@@ -5,6 +5,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../app/brand.dart';
 import '../../app/theme/app_theme.dart';
+import '../../core/notifications/panchang_reminders.dart';
+import '../../core/notifications/reminder_service.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/interest_signals.dart';
 import '../../core/user/bookmarks.dart';
@@ -223,6 +225,13 @@ class ProfileScreen extends ConsumerWidget {
           ),
           const SizedBox(height: 16),
 
+          _SectionLabel(hi ? 'स्मरण' : 'Reminders'),
+          Card(
+            clipBehavior: Clip.antiAlias,
+            child: _PanchangReminderToggle(hi: hi),
+          ),
+          const SizedBox(height: 16),
+
           _SectionLabel(hi ? 'निजता' : 'Privacy'),
           Card(
             clipBehavior: Clip.antiAlias,
@@ -434,6 +443,81 @@ class _SelectTile extends StatelessWidget {
           ? Icon(Icons.check_circle_rounded, color: scheme.primary)
           : Icon(Icons.circle_outlined,
               color: scheme.onSurface.withValues(alpha: 0.3)),
+    );
+  }
+}
+
+/// One switch that turns on the automatic panchang reminders — a rolling
+/// window of Ekadashi / Purnima / Amavasya nudges plus a daily verse, all
+/// scheduled on-device. Separate from the per-festival toggles on each
+/// festival's own page.
+class _PanchangReminderToggle extends StatefulWidget {
+  final bool hi;
+  const _PanchangReminderToggle({required this.hi});
+
+  @override
+  State<_PanchangReminderToggle> createState() =>
+      _PanchangReminderToggleState();
+}
+
+class _PanchangReminderToggleState extends State<_PanchangReminderToggle> {
+  bool? _on;
+  bool _busy = false;
+
+  @override
+  void initState() {
+    super.initState();
+    PanchangReminders.instance.isEnabled().then((v) {
+      if (mounted) setState(() => _on = v);
+    });
+  }
+
+  Future<void> _toggle(bool want) async {
+    setState(() => _busy = true);
+    if (want) {
+      // Reuse the same permission gate the other reminders use.
+      final granted = await ReminderService.instance.requestPermission();
+      if (!granted) {
+        if (mounted) {
+          setState(() {
+            _busy = false;
+            _on = false;
+          });
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+            content: Text(widget.hi
+                ? 'सूचना की अनुमति नहीं मिली।'
+                : 'Notification permission was not granted.'),
+          ));
+        }
+        return;
+      }
+    }
+    await PanchangReminders.instance.setEnabled(want, hindi: widget.hi);
+    if (mounted) {
+      setState(() {
+        _on = want;
+        _busy = false;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    final hi = widget.hi;
+    return SwitchListTile(
+      value: _on ?? false,
+      onChanged: (_on == null || _busy) ? null : _toggle,
+      secondary: Icon(Icons.brightness_3_rounded, color: scheme.primary),
+      title: Text(hi ? 'पंचांग स्मरण' : 'Panchang reminders'),
+      subtitle: Text(
+        hi
+            ? 'एकादशी, पूर्णिमा और अमावस्या की एक शाम पहले सूचना, तथा प्रतिदिन एक श्लोक।'
+            : 'A nudge the evening before each Ekadashi, Purnima and Amavasya, plus a daily verse.',
+        style: TextStyle(
+            fontSize: 12, color: scheme.onSurface.withValues(alpha: 0.6)),
+      ),
+      isThreeLine: true,
     );
   }
 }

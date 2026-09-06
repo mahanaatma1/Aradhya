@@ -8,6 +8,7 @@ import 'app/brand.dart';
 import 'app/router/app_router.dart';
 import 'app/theme/app_theme.dart';
 import 'core/db/user_database.dart';
+import 'core/notifications/panchang_reminders.dart';
 import 'core/notifications/reminder_service.dart';
 import 'core/providers/app_providers.dart';
 import 'core/user/user_prefs.dart';
@@ -40,6 +41,11 @@ Future<void> main() async {
   if (userDb != null) {
     final hindi = prefs.getString('locale') == 'hi';
     unawaited(ReminderService.instance.rescheduleAll(userDb, hindi: hindi));
+    // Auto panchang reminders keep a rolling 60-day window of Ekadashi /
+    // Purnima / Amavasya queued. Re-armed here so the window never runs dry
+    // even if the user never opens the panchang screen. No-op when the
+    // single toggle is off.
+    unawaited(PanchangReminders.instance.rescheduleWindow(hindi: hindi));
   }
 
   // High-precision Swiss Ephemeris for the Kundli (falls back to the built-in

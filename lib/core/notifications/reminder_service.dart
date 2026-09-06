@@ -105,6 +105,14 @@ class ReminderService {
   /// Requests permission at the point a reminder is actually being set.
   /// Returns false when denied, so callers can leave the toggle off rather
   /// than pretending a reminder was scheduled.
+  ///
+  /// On Android this asks for two things: the POST_NOTIFICATIONS runtime
+  /// permission (13+), and — where the OS did not auto-grant it via
+  /// USE_EXACT_ALARM — the exact-alarm permission, without which a reminder
+  /// under Doze on a Xiaomi/Oppo/Samsung device can be delayed for hours or
+  /// dropped. Notification permission is the hard requirement; exact-alarm is
+  /// best-effort, so a refusal there still returns true and the schedule falls
+  /// back to inexact.
   Future<bool> requestPermission() async {
     if (!_supported) return false;
     await init();
@@ -112,7 +120,20 @@ class ReminderService {
       if (defaultTargetPlatform == TargetPlatform.android) {
         final android = _plugin.resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>();
-        return await android?.requestNotificationsPermission() ?? false;
+        final notif =
+            await android?.requestNotificationsPermission() ?? false;
+        if (notif) {
+          _canScheduleExact =
+              await android?.canScheduleExactNotifications() ?? false;
+          if (!_canScheduleExact) {
+            // Opens the system "Alarms & reminders" page for this app. The
+            // user may decline; we do not block the reminder on it.
+            await android?.requestExactAlarmsPermission();
+            _canScheduleExact =
+                await android?.canScheduleExactNotifications() ?? false;
+          }
+        }
+        return notif;
       }
       final ios = _plugin.resolvePlatformSpecificImplementation<
           IOSFlutterLocalNotificationsPlugin>();
@@ -124,6 +145,18 @@ class ReminderService {
       return false;
     }
   }
+
+  /// Whether the OS will let us post *exact* alarms. Re-checked on each
+  /// permission request; assume true elsewhere (iOS has no such gate) and let
+  /// [_scheduleMode] downgrade when it is false.
+  bool _canScheduleExact = true;
+
+  /// Exact where the OS allows it — a reminder the user set for 6:00 am should
+  /// arrive at 6:00 am, not 7:40. Falls back to inexact-while-idle when the
+  /// exact-alarm permission was refused, which still fires, just fuzzily.
+  AndroidScheduleMode get _scheduleMode => _canScheduleExact
+      ? AndroidScheduleMode.exactAllowWhileIdle
+      : AndroidScheduleMode.inexactAllowWhileIdle;
 
   NotificationDetails _details(String kind) {
     final (name, desc) = _channels[kind] ?? _channels['sadhana']!;
@@ -175,10 +208,12 @@ class ReminderService {
         body: body,
         scheduledDate: _nextOccurrence(minuteOfDay, weekdays),
         notificationDetails: _details(kind),
-        // Inexact on purpose: an exact alarm needs SCHEDULE_EXACT_ALARM, which
-        // Android 13+ treats as a high-friction permission. A devotional
-        // reminder does not need to fire to the second.
-        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        // Exact where the OS permits it (USE_EXACT_ALARM is auto-granted for a
+        // reminder-first app; otherwise the user grants it once). Falls back to
+        // inexact-while-idle when refused — still fires, just fuzzily. Inexact
+        // alone was the reason reminders were unreliable on OEM-throttled
+        // devices.
+        androidScheduleMode: _scheduleMode,
         matchDateTimeComponents: DateTimeComponents.time,
         payload: payload ?? reminderRouteFor(kind, null),
       );
@@ -214,7 +249,9 @@ class ReminderService {
         body: body,
         scheduledDate: at,
         notificationDetails: _details(kind),
-        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        // A festival fires once, on a date the panchang fixed — exactness
+        // matters more here than for a daily nudge. Same fallback as above.
+        androidScheduleMode: _scheduleMode,
         // No matchDateTimeComponents: this must NOT repeat.
         payload: payload ?? reminderRouteFor(kind, null),
       );
@@ -225,6 +262,8 @@ class ReminderService {
 
   Future<void> cancel(int notifId) async {
     if (!_supported) return;
+    await init();
+    if (!_ready) return; // nothing was ever scheduled, nothing to cancel
     try {
       await _plugin.cancel(id: notifId);
     } catch (e) {
@@ -234,6 +273,8 @@ class ReminderService {
 
   Future<void> cancelAll() async {
     if (!_supported) return;
+    await init();
+    if (!_ready) return;
     try {
       await _plugin.cancelAll();
     } catch (e) {

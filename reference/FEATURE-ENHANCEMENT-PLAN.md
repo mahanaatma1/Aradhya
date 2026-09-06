@@ -1225,17 +1225,18 @@ NR-04); those are reflected here rather than the stale original counts.
 | Calendar & astrology | 12 | 13 |
 | Discovery & play | 5 | 7 |
 | Temples | 3 | 9 |
-| Cross-cutting | 12 | 17 |
+| Cross-cutting | 13 | 18 |
 | Release gate | 7 | 17 |
-| **Total** | **116** | **157** |
+| **Total** | **117** | **158** |
 
-> Refreshed 2026-09-06. This pass closed TY-01/02/03, AU-01, FT-02, AR-01–05
-> and re-graded RG-03/04/05/06/07/08 against reality (several were stale-🔴 in
-> the summary table while already `[x]` in the detail rows). The 41 still open
-> are: the content-authoring grinds (KG-03/04, RS-*, AS-01, SB-01, VD-01,
-> SC-06, RM-02, ST-02, FE-01, DH-01, AK-01, TM-01, TA-02–05, MA-01), RG-01/02
-> (re-sourcing), RG-05's residual 410 verification rows, and the device-only
-> gate RG-09–17. None of the open items is a missing screen.
+> Refreshed 2026-09-06. This pass closed TY-01/02/03, AU-01, FT-02, AR-01–05,
+> RM-01 (notifications/reminders parity with Ishvarvaani) and re-graded
+> RG-03/04/05/06/07/08 against reality (several were stale-🔴 in the summary
+> table while already `[x]` in the detail rows). The 41 still open are: the
+> content-authoring grinds (KG-03/04, RS-*, AS-01, SB-01, VD-01, SC-06, RM-02,
+> ST-02, FE-01, DH-01, AK-01, TM-01, TA-02–05, MA-01), RG-01/02 (re-sourcing),
+> RG-05's residual 410 verification rows, and the device-only gate RG-09–17.
+> None of the open items is a missing screen.
 
 ## Quick wins — do these first
 
@@ -2357,6 +2358,34 @@ NR-04); those are reflected here rather than the stale original counts.
 
 ## Cross-cutting
 
+- [x] **RM-01** Notifications & reminders — parity with Ishvarvaani's
+      Notifee-based feature. **Why ours did not fire:** the app declared
+      `POST_NOTIFICATIONS` + `RECEIVE_BOOT_COMPLETED` but (a) scheduled with
+      `inexactAllowWhileIdle`, which OEM battery managers (Xiaomi/Oppo/Vivo/
+      Samsung) delay for hours or drop under Doze, and (b) never declared the
+      `flutter_local_notifications` receivers — the plugin ships the classes
+      but not the manifest entries, so a reminder was only re-armed if the
+      user *opened* the app after a reboot. Fixed 2026-09-06:
+      - manifest: `USE_EXACT_ALARM` + `SCHEDULE_EXACT_ALARM` + `WAKE_LOCK` +
+        `FOREGROUND_SERVICE`, and the three plugin receivers
+        (`ScheduledNotificationReceiver`, `ScheduledNotificationBootReceiver`
+        with `BOOT_COMPLETED`/`MY_PACKAGE_REPLACED`/`QUICKBOOT_POWERON`,
+        `ActionBroadcastReceiver`) — the same set Notifee registers in the
+        Ishvarvaani build
+      - `ReminderService`: `requestPermission()` now also asks for the
+        exact-alarm permission and remembers the answer; `_scheduleMode` is
+        `exactAllowWhileIdle` when granted, inexact fallback when not. `cancel`
+        /`cancelAll` gained the `_ready` guard the other methods already had
+      - **new `PanchangReminders`** — the equivalent of Ishvarvaani's
+        `scheduleEkadashiNotifications` / `schedulePurnimaAmavasyaNotifications`
+        / `scheduleQuoteNotifications`: one toggle in Profile → Reminders that
+        keeps a rolling 60-day window of Ekadashi/Purnima/Amavasya nudges
+        (computed on-device from `dayTithiIndex`, evening-before) plus a daily
+        verse nudge, re-armed on every launch from `main.dart` so the queue
+        never runs dry. Notif-id band 700000–700999
+      - `test/panchang_reminders_test.dart` (4 tests); device verification of
+        all four cases (exact timing, post-reboot, post-update, permission
+        prompt) folded into `RELEASE-CHECKLIST.md` §3
 - [x] **AR-01** Confirm the AI image tool's terms permit commercial
       distribution — generator is **OpenAI gpt-image-1 (API)**. OpenAI Terms
       of Use §3(a): the user retains Input rights and **owns the Output**,
