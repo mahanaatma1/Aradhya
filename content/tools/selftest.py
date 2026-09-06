@@ -122,6 +122,22 @@ CASES: list[tuple[str, str, list[dict], bool]] = [
     ("schema rejects bad kind", "schema", [entity("k1", kind="wizard")], False),
     ("no sources at all", "schema", [entity("s1", sources=[])], False),
 
+    # The cited chapter must be re-readable on disk, not merely named. Both
+    # sources below are registered and legitimate; the difference is that one
+    # has been fetched to content/raw/ and the other has not, which is the
+    # difference between a citation a later reader can check and one they
+    # cannot. Uses the real registry, so if dutt-ramayana is ever fetched this
+    # case starts failing and must be re-pointed -- the same self-invalidating
+    # shape as the stale-exception check below.
+    ("citing a source never fetched to raw/", "corpus-not-fetched",
+     [entity("c1", sources=[{**GOOD_SOURCE, "source_slug": "dutt-ramayana",
+                             "source_chapter_or_section": "Bala Kanda, Sarga 1"}])],
+     False),
+    ("citing an unfetched source blocks --strict", "corpus-not-fetched",
+     [entity("c2", sources=[{**GOOD_SOURCE, "source_slug": "dutt-ramayana",
+                             "source_chapter_or_section": "Bala Kanda, Sarga 1"}])],
+     True),
+
     # SC-05: the 30-second read. Absence is tolerated while the epics are being
     # authored and refused by the release build; the rest is wrong in any mode.
     ("event with a real quick summary passes", "", [event("n1")], False),
@@ -204,6 +220,109 @@ def check_bounds_agree() -> str:
     return ""
 
 
+def check_kg_degree() -> str:
+    """report.kg_coverage must count relations the way the goal words it.
+
+    This metric has been mis-measured by hand three times, each time in the
+    direction that flattered the number: once with the threshold one below the
+    goal, once counting `src_id or dst_id` (double, since build.py materialises
+    every inverse), once counting rows rather than distinct partners (double for
+    any pair attested by two chapters). It reported 91% against a 100% target
+    when the real figure was 48%.
+
+    So: a six-entity graph whose answer is countable by eye, shaped so that each
+    wrong reading gives a DIFFERENT answer from the right one. `b` and `e` are
+    the load-bearing rows -- each has one more citation than it has partners, so
+    counting rows lets them over the bar and counting partners does not.
+    """
+    import sqlite3
+
+    from content.tools import report
+
+    db = sqlite3.connect(":memory:")
+    db.executescript(
+        "create table entities(id integer primary key, slug text, kind text,"
+        " importance int);"
+        "create table relations(src_id int, rel_type text, dst_id int);")
+    db.executemany("insert into entities values (?,?,?,?)", [
+        (1, "a", "deity", 1), (2, "b", "deity", 1), (3, "c", "human", 3),
+        (4, "d", "human", 3), (5, "e", "human", 3), (6, "f", "human", 3),
+    ])
+    db.executemany("insert into relations values (?,?,?)", [
+        # a: three distinct partners -> the only P0 that meets 3.
+        (1, "r", 3), (1, "r", 4), (1, "r", 5),
+        # b: TWO partners, one of them attested by two chapters. 3 rows, 2
+        # relations. Counting rows would pass it; counting partners must not.
+        (2, "r", 6), (2, "r", 6), (2, "r", 5),
+        # c, d: two distinct partners each -> genuinely meet the P1 bar of 2.
+        (3, "r", 1), (3, "r", 4), (4, "r", 1), (4, "r", 3),
+        # e: ONE partner, two citations. Same trap as b, at the P1 bar.
+        (5, "r", 1), (5, "r", 1),
+        # f: nothing at all.
+    ])
+
+    got = {t["tier"]: (t["met"], t["total"]) for t in report.kg_coverage(db)}
+    want = {"P0": (1, 2), "P1": (2, 4)}
+    if got != want:
+        return f"counted {got}, hand-count is {want}"
+    return ""
+
+
+def check_provenance_not_presence() -> str:
+    """A raw/ directory holding the wrong book must not count as fetched.
+
+    This is the failure that motivated validate.fetched_sources(). Two
+    directories under content/raw/ existed, held one .txt each, and were the
+    wrong works entirely -- a Gutenberg comedy filed as Müller's Upanishads and
+    a Vermont historical novel filed as Vivekananda's Raja Yoga -- while 61
+    rows cited them saying the primary text had been read. A check that asks
+    "does the directory exist" passes both, and passing is the worse outcome:
+    the next reader to grep for the quoted verse blames the citation.
+
+    So the fixture is the two cases side by side, identical except for the
+    manifest: `recorded/` has one and must count, `orphan/` has none and must
+    not. Hermetic -- a temp RAW_DIR, so it keeps its teeth no matter what the
+    real corpus does next.
+    """
+    import json as _json
+
+    from content.tools import validate as v
+
+    tmp = Path(tempfile.mkdtemp(prefix="aradhya-raw-"))
+    try:
+        (tmp / "recorded").mkdir()
+        (tmp / "recorded" / "ch1.txt").write_text("text", encoding="utf-8")
+        (tmp / "manifest.json").write_text(_json.dumps(
+            [{"source_slug": "recorded", "file": "recorded/ch1.txt"}]),
+            encoding="utf-8")
+
+        # Same shape, no manifest anywhere. This is the wrong-book case.
+        (tmp / "orphan").mkdir()
+        (tmp / "orphan" / "full.txt").write_text("text", encoding="utf-8")
+
+        # And the per-source manifest form the Gutenberg fetches write.
+        (tmp / "gutenberg").mkdir()
+        (tmp / "gutenberg" / "full.txt").write_text("text", encoding="utf-8")
+        (tmp / "gutenberg" / "manifest.json").write_text(_json.dumps(
+            {"source_slug": "gutenberg",
+             "files": [{"path": "full.txt", "url": "https://x/y.txt"}]}),
+            encoding="utf-8")
+
+        original = v.RAW_DIR
+        v.RAW_DIR = tmp
+        try:
+            got = v.fetched_sources()
+        finally:
+            v.RAW_DIR = original
+
+        want = {"recorded": 1, "gutenberg": 1}
+        if got != want:
+            return f"counted {got}, should be {want} (orphan/ must be absent)"
+        return ""
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
 def main() -> int:
     failures = 0
 
@@ -213,6 +332,21 @@ def main() -> int:
     print(f"[{'FAIL' if drift else 'PASS'}] "
           f"{'applier and gate agree on word bounds':<34} "
           f"{'quick_summary':<32} {drift or validate.QUICK_SUMMARY_WORDS}")
+
+    kg = check_kg_degree()
+    if kg:
+        failures += 1
+    print(f"[{'FAIL' if kg else 'PASS'}] "
+          f"{'KG degree counts distinct partners':<34} "
+          f"{'kg_coverage':<32} {kg or 'P0 1/2, P1 2/4 by hand'}")
+
+    prov = check_provenance_not_presence()
+    if prov:
+        failures += 1
+    print(f"[{'FAIL' if prov else 'PASS'}] "
+          f"{'raw/ needs provenance, not bytes':<34} "
+          f"{'fetched_sources':<32} "
+          f"{prov or 'unrecorded directory does not count'}")
 
     for label, expected, rows, strict in CASES:
         rep = run_case(rows, strict)
@@ -228,7 +362,8 @@ def main() -> int:
         print(f"[{status}] {label:<34} {detail:<32} got={sorted(codes) or '-'}")
 
     print()
-    print(f"selftest: {len(CASES) + 1 - failures}/{len(CASES) + 1} passed")
+    total = len(CASES) + 3
+    print(f"selftest: {total - failures}/{total} passed")
     return 1 if failures else 0
 
 

@@ -30,7 +30,8 @@ if __package__ in (None, ""):
 
 from content.tools.common import (  # noqa: E402
     ASSETS_DB_DIR, CONTENT_DIR, DATA_DIR, GYAN_DB, KINDS_DIR, LEGACY_DB,
-    REPO_ROOT, SOURCES_DIR, excluded_domains, fold, read_jsonl, registry_slugs,
+    RAW_DIR, REPO_ROOT, SOURCES_DIR, excluded_domains, fold, read_jsonl,
+    registry_slugs,
 )
 
 CURATION_DIR = CONTENT_DIR / "curation"
@@ -723,6 +724,116 @@ def check_curation_gate(rep: Report) -> None:
                 "each into the right subfolder")
 
 
+def fetched_sources() -> dict[str, int]:
+    """slug -> number of files whose provenance is recorded, for content/raw/.
+
+    Provenance, not presence. `content/raw/manifest.json` (written by
+    fetch_pd.py) and `content/raw/<slug>/manifest.json` (written by the
+    Gutenberg fetches) each record, per file, the URL it came from and the
+    sha256 of what arrived. A directory with no such record is a directory
+    nobody can account for, which is exactly how the wrong book got in.
+    """
+    counts: dict[str, int] = {}
+    if not RAW_DIR.is_dir():
+        return counts
+
+    def note(slug: str, rel: str) -> None:
+        if slug and rel and (RAW_DIR / slug / rel).exists():
+            counts[slug] = counts.get(slug, 0) + 1
+
+    top = RAW_DIR / "manifest.json"
+    if top.exists():
+        try:
+            for m in json.loads(top.read_text(encoding="utf-8")):
+                # `file` is recorded relative to raw/, so it carries the slug.
+                f = str(m.get("file", ""))
+                note(m.get("source_slug", ""), f.split("\\", 1)[-1].split("/", 1)[-1])
+        except (OSError, ValueError, TypeError):
+            pass
+
+    for sub in sorted(p for p in RAW_DIR.iterdir() if p.is_dir()):
+        mf = sub / "manifest.json"
+        if not mf.exists():
+            continue
+        try:
+            obj = json.loads(mf.read_text(encoding="utf-8"))
+            for m in obj.get("files", []):
+                note(obj.get("source_slug", sub.name), str(m.get("path", "")))
+        except (OSError, ValueError, TypeError, AttributeError):
+            pass
+    return counts
+
+
+def check_corpus_on_disk(rows: list[Row], rep: Report, registry: dict[str, dict],
+                         strict: bool) -> None:
+    """The cited chapter must be re-readable, and be the work it claims to be.
+
+    The pipeline rule this project holds itself to is: cited public-domain
+    chapter -> fetched into content/raw/ -> read -> drafted -> verified -> DB.
+    Every step but the first leaves no trace a later reader can check. What
+    makes a citation auditable is that the text is ON DISK, so anyone can open
+    the chapter and see whether it says what the row claims.
+
+    Six registered sources were being cited by 300 rows whose verification
+    notes read "confirmed in the primary text" while nothing of that text had
+    ever been fetched -- dutt-ramayana (85 citations), underhill-hindu-year
+    (58), telang-bhagavadgita (56), gopinatha-rao-iconography (29),
+    griffith-rigveda (27), gupte-hindu-holidays (5). Those claims may well be
+    true; the point is that no one could tell, which is the thing the pipeline
+    rule exists to prevent.
+
+    An earlier version of this check asked only whether content/raw/<slug>/
+    existed, and that was not enough. Two directories existed and held the
+    WRONG BOOK: muller-upanishads/full.txt was a Project Gutenberg copy of
+    "The convolvulus: a comedy in three acts" and vivekananda-yoga-sutras/
+    full.txt was "The Rangers; or, The Tory's Daughter" -- 61 citations resting
+    on text with no relation to the works named. A directory-exists check
+    passes both, and passing is worse than failing here: a later reader who
+    greps the file for the quoted verse and does not find it will suspect the
+    citation before suspecting the corpus.
+
+    So the test is provenance, not presence: some manifest must record the URL
+    a file came from and the hash of what arrived. That is decisive on the real
+    corpus -- the four sources with recorded provenance are exactly the four
+    holding the right text, and the two wrong-book directories have no
+    manifest at all, which is how they went unnoticed. Content sniffing was
+    tried first and rejected: probing for a distinctive word from the source's
+    own title flags griffith-ramayana, whose pages never name the work.
+
+    `source_type: reference` is exempt: wikidata is a queried API, not a
+    chapter, and `wd_pull.py` records the QID that a later reader can re-query.
+    A warning in dev (this is a fetch backlog, and it must not block authoring
+    against the corpora that ARE present) and an error under --strict, because
+    a release must not ship a claim its own audit trail cannot support.
+    """
+    fetched = fetched_sources()
+
+    # slug -> (citation count, first location), for sources that need a text
+    missing: dict[str, tuple[int, Row]] = {}
+    for r in rows:
+        for s in r.obj.get("sources") or []:
+            slug = s.get("source_slug")
+            meta = registry.get(slug or "")
+            if not meta or meta.get("source_type") == "reference":
+                continue
+            if fetched.get(slug or ""):
+                continue
+            n, first = missing.get(slug, (0, r))
+            missing[slug] = (n + 1, first)
+
+    for slug, (n, first) in sorted(missing.items(), key=lambda kv: -kv[1][0]):
+        where = RAW_DIR / slug
+        why = ("holds no file with recorded provenance -- nothing says which URL "
+               "produced it, so there is no way to tell it is the right book"
+               if where.is_dir() else "does not exist")
+        rep.add(
+            "error" if strict else "warning", "corpus-not-fetched",
+            f"{n} row(s) cite '{slug}' but content/raw/{slug}/ {why}. The "
+            f"chapter cannot be audited. Fetch it (content/tools/fetch_pd.py) "
+            f"or downgrade the rows that depend on it",
+            file=first.rel, line=first.line, module=first.module)
+
+
 def check_index_version(rep: Report) -> None:
     """14. gyan.indexed_content_version must match content.sqlite (Risk 2)."""
     if not GYAN_DB.exists():
@@ -827,6 +938,7 @@ def run(strict: bool = False, skip_index_check: bool = False) -> Report:
         check_verification(rows, rep, strict)
         check_routes(rows, rep)
         check_assets(rows, rep, strict)
+        check_corpus_on_disk(rows, rep, registry, strict)
 
     check_curation_gate(rep)
 

@@ -37,18 +37,25 @@ from content.tools.common import BUILD_DIR, GYAN_DB, REPO_ROOT  # noqa: E402
 # The tier is `importance` (1 major .. 5 minor), which is what P0/P1 mean
 # everywhere else in the corpus: P0 is importance 1-2, P1 is importance 3.
 #
-# Degree is the row count in `relations` keyed on src_id, and that is the FULL
-# degree rather than half of it: build.py materialises the inverse of every
-# authored edge (build.py:289), so an entity that is only ever a destination in
-# the source JSONL still has its own outbound row. Counting both src_id and
-# dst_id here would double every relation.
+# Degree is the count of DISTINCT dst_id keyed on src_id. Two independent
+# choices, both of which have been got wrong by hand before:
 #
-# This lives in the report rather than in a notebook because it was previously
-# computed by hand, and the hand-written query used the threshold one BELOW the
-# one the goal states -- `>= 2` where the goal said 3, `>= 1` where it said 2.
-# That reported KG-04 at 63% against an 80% target, i.e. nearly met, when the
-# real figure for "2 or more" was 37%. A metric worth a target is worth a query
-# that runs on every report.
+# 1. src_id only, not `src_id or dst_id`. build.py materialises the inverse of
+#    every authored edge (build.py:371), so out-degree is already the FULL
+#    degree -- verified: for all 516 entities the set of out-neighbours equals
+#    the set of all neighbours. A hand query using `where src_id=? or dst_id=?`
+#    therefore counts every relation twice and reported KG-03 at 124/138 (91%)
+#    when the real figure was 66 (48%).
+#
+# 2. distinct dst_id, not row count. The same pair legitimately appears twice
+#    when two different chapters each attest it (Dhruva -> Vishnu is cited to
+#    Wilson I.XI and I.XII). Those are two citations of one relation, and the
+#    goal says "3 or more relations", so they must count once.
+#
+# An earlier hand query got the threshold wrong too -- `>= 2` where the goal
+# said 3, `>= 1` where it said 2. Three ways to flatter the same number, all
+# found after the plan had already recorded the flattering figure. A metric
+# worth a target is worth a query that runs on every report.
 KG_TIERS: tuple[tuple[str, tuple[int, ...], int, float], ...] = (
     ("P0", (1, 2), 3, 1.00),
     ("P1", (3,), 2, 0.80),
@@ -58,7 +65,7 @@ KG_TIERS: tuple[tuple[str, tuple[int, ...], int, float], ...] = (
 def kg_coverage(db: sqlite3.Connection) -> list[dict]:
     """Relation-count coverage per importance tier."""
     degree = dict(db.execute(
-        "select src_id, count(*) from relations group by src_id"))
+        "select src_id, count(distinct dst_id) from relations group by src_id"))
 
     out: list[dict] = []
     for name, importances, need, target in KG_TIERS:

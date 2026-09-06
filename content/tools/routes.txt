@@ -12,6 +12,7 @@
 /calendar
 /chalisa
 /cosmos
+/debug/notifications
 /dharma
 /dharma/play/:scenarioId
 /festivals

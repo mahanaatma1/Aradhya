@@ -4,7 +4,7 @@
   "entities_verified": 178,
   "entities_with_prose": 35,
   "entities_hindi": 516,
-  "relations": 1271,
+  "relations": 1280,
   "aliases": 2139,
   "narrative_nodes": 79,
   "narrative_with_prose": 61,
@@ -21,7 +21,7 @@
   "sources": 18,
   "item_sources": 1031,
   "search_docs": 33255,
-  "related_edges": 7422
+  "related_edges": 7426
  },
  "slugs": {
   "entities": [
