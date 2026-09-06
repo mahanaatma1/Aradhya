@@ -80,6 +80,16 @@ class RemindersController extends StateNotifier<List<Reminder>> {
     }
   }
 
+  /// A stable, unique notification id for a (kind, refKey) pair, in the band
+  /// 100000..699999 — clear of panchang auto-reminders (700000+) and
+  /// per-festival reminders (900000+). Deterministic so the same reminder
+  /// always maps to the same id across restarts, and distinct kinds never
+  /// collide (which would make one tray entry stand for two reminders).
+  static int _notifIdFor(String kind, String? refKey) {
+    final h = '$kind|${refKey ?? ''}'.hashCode & 0x7fffffff;
+    return 100000 + (h % 600000);
+  }
+
   Reminder? forKey(String kind, String? refKey) {
     for (final r in state) {
       if (r.kind == kind && r.refKey == refKey) return r;
@@ -107,10 +117,14 @@ class RemindersController extends StateNotifier<List<Reminder>> {
     if (!granted) return false;
 
     final existing = forKey(kind, refKey);
-    // Notification ids must be stable and unique. Derived from the row id so a
-    // reminder can always be cancelled again, even after a restart.
-    final notifId = existing?.notifId ??
-        (DateTime.now().millisecondsSinceEpoch % 100000) + 1;
+    // Notification ids must be stable and unique per (kind, refKey). The old
+    // code used `millis % 100000`, which is random: two reminders created in
+    // the same ~100s window could land on the same id, and then the OS treats
+    // the second `show`/`schedule` as an *update* of the first — one tray
+    // entry, and cancelling one cancels both. Deriving it from the key fixes
+    // that and also lets a reminder be cancelled after a cold restart.
+    // Band 100000..699999 — clear of panchang (700000+) and festivals (900000+).
+    final notifId = existing?.notifId ?? _notifIdFor(kind, refKey);
 
     try {
       if (existing == null) {

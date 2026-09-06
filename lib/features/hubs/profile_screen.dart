@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -505,19 +506,41 @@ class _PanchangReminderToggleState extends State<_PanchangReminderToggle> {
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final hi = widget.hi;
-    return SwitchListTile(
-      value: _on ?? false,
-      onChanged: (_on == null || _busy) ? null : _toggle,
-      secondary: Icon(Icons.brightness_3_rounded, color: scheme.primary),
-      title: Text(hi ? 'पंचांग स्मरण' : 'Panchang reminders'),
-      subtitle: Text(
-        hi
-            ? 'हर एकादशी, पूर्णिमा और अमावस्या के दिन सुबह सूचना; प्रतिदिन साधना की याद और आज का श्लोक।'
-            : 'A morning nudge on each Ekadashi, Purnima and Amavasya, an evening reminder to do your practice, and the verse of the day.',
-        style: TextStyle(
-            fontSize: 12, color: scheme.onSurface.withValues(alpha: 0.6)),
-      ),
-      isThreeLine: true,
+    return Column(
+      children: [
+        SwitchListTile(
+          value: _on ?? false,
+          onChanged: (_on == null || _busy) ? null : _toggle,
+          secondary: Icon(Icons.brightness_3_rounded, color: scheme.primary),
+          title: Text(hi ? 'पंचांग स्मरण' : 'Panchang reminders'),
+          subtitle: Text(
+            hi
+                ? 'हर एकादशी, पूर्णिमा और अमावस्या के दिन सुबह सूचना; प्रतिदिन साधना की याद और आज का श्लोक।'
+                : 'A morning nudge on each Ekadashi, Purnima and Amavasya, an evening reminder to do your practice, and the verse of the day.',
+            style: TextStyle(
+                fontSize: 12, color: scheme.onSurface.withValues(alpha: 0.6)),
+          ),
+          isThreeLine: true,
+        ),
+        // Debug-only: opens the notification test panel (fire each kind on
+        // demand, see the pending/tray counts, check where a tap lands).
+        // Compiled out of release builds.
+        if (kDebugMode)
+          ListTile(
+            leading: Icon(Icons.bug_report_outlined, color: scheme.secondary),
+            title: Text(
+                hi ? 'सूचना परीक्षण (डिबग)' : 'Notification test (debug)'),
+            subtitle: Text(
+              hi
+                  ? 'हर तरह की सूचना भेजें, गिनती और रीडायरेक्ट जाँचें।'
+                  : 'Fire each kind, check counts and where a tap lands.',
+              style: TextStyle(
+                  fontSize: 12, color: scheme.onSurface.withValues(alpha: 0.6)),
+            ),
+            trailing: const Icon(Icons.chevron_right_rounded),
+            onTap: () => context.push('/debug/notifications'),
+          ),
+      ],
     );
   }
 }

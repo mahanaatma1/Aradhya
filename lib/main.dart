@@ -155,10 +155,8 @@ class _DivyaVaaniAppState extends ConsumerState<DivyaVaaniApp> {
     // frame so it navigates on top of the already-resolved initial route
     // (onboarding vs. home) rather than racing it.
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      final payload = ReminderService.instance.takePendingLaunchPayload();
-      if (payload != null && payload.isNotEmpty) {
-        appRouter.push(payload);
-      }
+      ReminderService.navigateTo(
+          ReminderService.instance.takePendingLaunchPayload());
     });
   }
 

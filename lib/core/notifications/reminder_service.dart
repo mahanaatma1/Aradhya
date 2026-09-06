@@ -1,4 +1,5 @@
-import 'package:flutter/foundation.dart' show debugPrint, defaultTargetPlatform, TargetPlatform, kIsWeb;
+import 'package:flutter/foundation.dart'
+    show debugPrint, defaultTargetPlatform, TargetPlatform, kIsWeb, kDebugMode;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tzdata;
@@ -40,12 +41,25 @@ class ReminderService {
   }
 
   static void _onTap(NotificationResponse response) {
-    final payload = response.payload;
+    navigateTo(response.payload);
+  }
+
+  /// Navigate to the route a notification's payload names. Fires from a
+  /// platform callback, outside any widget's BuildContext, so the app-wide
+  /// router instance is the only way in.
+  ///
+  /// Uses `go`, not `push`: a tapped notification should *take* the user to a
+  /// screen, not stack a second copy of it on top of wherever they were. And
+  /// if they are already on that exact route (open the app on /panchang, tap a
+  /// panchang reminder) it does nothing — `push`-ing a duplicate there trips
+  /// go_router's `_debugCheckDuplicatedPageKeys` assertion.
+  static void navigateTo(String? payload) {
     if (payload == null || payload.isEmpty) return;
-    // Fires from a platform callback, outside any widget's BuildContext —
-    // the app-wide router instance is the only way to navigate from here.
     try {
-      appRouter.push(payload);
+      final current =
+          appRouter.routerDelegate.currentConfiguration.uri.toString();
+      if (current == payload) return;
+      appRouter.go(payload);
     } catch (e) {
       debugPrint('ReminderService: tap navigation failed ($e)');
     }
@@ -257,6 +271,102 @@ class ReminderService {
       );
     } catch (e) {
       debugPrint('ReminderService: scheduleOnce failed ($e)');
+    }
+  }
+
+  // ---- Debug notification test harness (compiled out of release) ----
+
+  /// Whether the OS currently grants exact alarms. Public read for the test
+  /// screen; updated by [requestPermission].
+  bool get canScheduleExact => _canScheduleExact;
+
+  /// Every channel this app can post to, as (key, display name).
+  static List<(String, String)> get channels =>
+      _channels.entries.map((e) => (e.key, e.value.$1)).toList();
+
+  static const _testIdBase = 999000;
+
+  /// Fire a test notification for one channel [kind]. When [delay] is zero it
+  /// shows immediately (proves POST_NOTIFICATIONS + the channel); otherwise it
+  /// goes through the exact-alarm schedule path (proves a reminder survives the
+  /// app being backgrounded / the screen off). [payload] is the route a tap
+  /// opens — defaults to the kind's own screen. Returns a status line.
+  Future<String> fireTest({
+    required String kind,
+    required bool hindi,
+    Duration delay = Duration.zero,
+    String? payload,
+  }) async {
+    if (!kDebugMode) return 'disabled in release';
+    if (!_supported) return 'not an Android/iOS build';
+    await init();
+    if (!_ready) return 'notification plugin failed to initialise';
+    final granted = await requestPermission();
+    if (!granted) return 'notification permission denied';
+
+    final route = payload ?? reminderRouteFor(kind, null);
+    final id = _testIdBase + kind.hashCode % 900 + (delay == Duration.zero ? 0 : 1);
+    final secs = delay.inSeconds;
+
+    if (delay == Duration.zero) {
+      try {
+        await _plugin.show(
+          id: id,
+          title: hindi ? 'परीक्षण: $kind' : 'Test: $kind',
+          body: hindi
+              ? 'यह अभी भेजा गया। टैप करने पर $route खुलेगा।'
+              : 'Sent now. Tapping opens $route.',
+          notificationDetails: _details(kind),
+          payload: route,
+        );
+        return hindi ? '"$kind" अभी भेजा गया।' : 'Sent "$kind" now.';
+      } catch (e) {
+        return 'show failed: $e';
+      }
+    }
+
+    await scheduleOnce(
+      notifId: id,
+      kind: kind,
+      title: hindi ? 'निर्धारित परीक्षण: $kind' : 'Scheduled test: $kind',
+      body: hindi
+          ? '${secs}s बाद निर्धारित। टैप करने पर $route खुलेगा।'
+          : 'Scheduled ${secs}s out (exact alarm). Tapping opens $route.',
+      when: DateTime.now().add(delay),
+      payload: route,
+    );
+    final exact = _canScheduleExact
+        ? (hindi ? 'सटीक अलार्म चालू' : 'exact alarms ON')
+        : (hindi ? 'सटीक अलार्म बंद — देर हो सकती है' : 'exact alarms OFF — may be late');
+    return hindi
+        ? '"$kind" ${secs}s में आएगा ($exact).'
+        : '"$kind" arrives in ${secs}s ($exact).';
+  }
+
+  /// How many notifications this app currently has scheduled with the OS
+  /// (pending, not yet fired) and how many are showing in the tray right now.
+  Future<({int pending, int active})> counts() async {
+    if (!_supported || !_ready) return (pending: 0, active: 0);
+    try {
+      final pending = await _plugin.pendingNotificationRequests();
+      final active = await _plugin.getActiveNotifications();
+      return (pending: pending.length, active: active.length);
+    } catch (_) {
+      return (pending: 0, active: 0);
+    }
+  }
+
+  /// A one-line summary of every pending notification: "id · title".
+  Future<List<String>> pendingList() async {
+    if (!_supported || !_ready) return const [];
+    try {
+      final rows = await _plugin.pendingNotificationRequests();
+      rows.sort((a, b) => a.id.compareTo(b.id));
+      return rows
+          .map((r) => '${r.id} · ${r.title ?? '(no title)'}')
+          .toList();
+    } catch (_) {
+      return const [];
     }
   }
 

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:go_router/go_router.dart';
 
 import '../../features/devotional/devotional_models.dart';
@@ -31,6 +32,7 @@ import '../../features/journal/journal_screen.dart';
 import '../../features/journey/journey_detail_screen.dart';
 import '../../features/journey/journey_list_screen.dart';
 import '../../features/hubs/jyotish_hub_screen.dart';
+import '../../features/hubs/notification_test_screen.dart';
 import '../../features/hubs/profile_screen.dart';
 import '../../features/hubs/sources_screen.dart';
 import '../../features/astrology/ashtakoot.dart';
@@ -285,6 +287,13 @@ final appRouter = GoRouter(
     // Rashifal keeps its route for deep links and the Android home widget,
     // even though it no longer has a tab of its own.
     GoRoute(path: '/cosmos', builder: (c, s) => const CosmosScreen()),
+
+    // Debug-only notification test panel (Profile → Reminders in debug builds).
+    if (kDebugMode)
+      GoRoute(
+        path: '/debug/notifications',
+        builder: (c, s) => const NotificationTestScreen(),
+      ),
 
 
     // ---- Karma Journal (personal — surfaced from You) ----
