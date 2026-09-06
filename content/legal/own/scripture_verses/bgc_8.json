@@ -1,0 +1,234 @@
+{
+ "slug": "bgc_8",
+ "title_en": "Akshara Brahma Yoga",
+ "title_hi": "अक्षर ब्रह्म योग",
+ "book_id": 8,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 311,
+   "number": "8.1",
+   "body_en": "Arjuna said: What is that Brahman, highest of persons; what is the self within, and what is action? What has been called the ground of the elements, and what is meant by the ground of the gods?",
+   "body_hi": "अर्जुन ने कहा — वह ब्रह्म क्या है, पुरुषों में सर्वोच्च; भीतर का स्व क्या है, और कर्म क्या? तत्त्वों का आधार किसे कहा गया, और देवों के आधार से क्या मतलब है?",
+   "commentary_en": "The seventh chapter ended by dropping a handful of terms — Brahman, adhyatma, karma, adhibhuta, adhidaiva — without explaining them, and Arjuna picks them up one by one and asks what each means. He is doing what a good student does: not letting the vocabulary slide past. The whole chapter is Krishna answering this list.",
+   "commentary_hi": "सातवाँ अध्याय कुछ पदों को गिराकर ख़त्म हुआ — ब्रह्म, अध्यात्म, कर्म, अधिभूत, अधिदैव — बिना समझाए, और अर्जुन उन्हें एक-एक उठाकर पूछता है कि हर एक का क्या मतलब है। वह वही कर रहा है जो अच्छा शिष्य करता है: शब्दावली को यूँ ही सरकने नहीं देता। पूरा अध्याय कृष्ण का इस सूची का उत्तर देना है।"
+  },
+  {
+   "id": 312,
+   "number": "8.2",
+   "body_en": "And who, and in what way, is the ground of sacrifice here in this body, Madhusudana? And at the hour of leaving, how are the self-restrained to know you?",
+   "body_hi": "और कौन, और किस तरह, इस देह में यज्ञ का आधार है, मधुसूदन? और जाने की घड़ी में, संयमी लोग तुम्हें कैसे जानें?",
+   "commentary_en": "Two more questions, and the second one turns toward the chapter's real subject. Arjuna has heard, at the end of Chapter 7, that the one who knows Krishna keeps that knowing \"even at the hour of setting out.\" He wants to understand that moment: how is Krishna to be held in mind as the body is being left? Everything after this is shaped by that question.",
+   "commentary_hi": "दो और सवाल, और दूसरा अध्याय के असली विषय की ओर मुड़ता है। अर्जुन ने सातवें अध्याय के अंत में सुना है कि जो कृष्ण को जानता है वह उस जानने को 'अन्तिम प्रस्थान की घड़ी में भी' थामे रहता है। वह उस क्षण को समझना चाहता है: शरीर छूटते समय कृष्ण को मन में कैसे रखा जाए? इसके बाद सब कुछ उसी सवाल से ढला हुआ है।"
+  },
+  {
+   "id": 313,
+   "number": "8.3",
+   "body_en": "The Blessed One said: What does not perish, the supreme, is Brahman. A being's own nature is what is called the self within. And the sending-forth that makes beings come into their conditions is what goes by the name of action.",
+   "body_hi": "श्रीभगवान ने कहा — जो नष्ट नहीं होता, सर्वोच्च, वह ब्रह्म है। किसी सत्ता की अपनी प्रकृति ही भीतर का स्व कहलाती है। और वह भेजना जिससे प्राणी अपनी दशाओं में आते हैं, वही कर्म नाम से पुकारा जाता है।",
+   "commentary_en": "Three of the answers, compressed. Brahman is the imperishable, the highest. Adhyatma is svabhava — what a being essentially is. Karma, at this level, is not a deed but the creative outflow that puts beings into their states in the first place. Krishna is defining the words at their widest, cosmic reading before narrowing them.",
+   "commentary_hi": "तीन उत्तर, सिकुड़े हुए। ब्रह्म अक्षर है, सर्वोच्च। अध्यात्म स्वभाव है — कोई सत्ता मूलतः जो है। कर्म, इस स्तर पर, कोई काम नहीं बल्कि वह सृजनात्मक निकास है जो प्राणियों को पहले-पहल उनकी दशाओं में डालता है। कृष्ण शब्दों को उनके सबसे चौड़े, ब्रह्माण्डीय पाठ में परिभाषित कर रहे हैं, संकरा करने से पहले।"
+  },
+  {
+   "id": 314,
+   "number": "8.4",
+   "body_en": "The ground of the elements is the perishing side of things; the cosmic person is the ground of the gods; and I myself am the ground of sacrifice, here, in the body, best of the embodied.",
+   "body_hi": "तत्त्वों का आधार चीज़ों का नाशवान पक्ष है; ब्रह्माण्डीय पुरुष देवों का आधार है; और यज्ञ का आधार मैं ही हूँ, यहीं, देह में, देहधारियों में श्रेष्ठ।",
+   "commentary_en": "The last three answers. Adhibhuta is the perishable aspect — matter as it comes and goes. Adhidaiva is the cosmic person behind the powers. And the adhiyajna, the ground of sacrifice, Krishna names as himself, and locates precisely: not in a heaven, but in the body. The answers spiral inward from cosmos to the person Arjuna is.",
+   "commentary_hi": "अंतिम तीन उत्तर। अधिभूत नाशवान पहलू है — पदार्थ जैसे वह आता-जाता है। अधिदैव शक्तियों के पीछे का ब्रह्माण्डीय पुरुष है। और अधियज्ञ, यज्ञ का आधार, कृष्ण अपने रूप में नाम देते हैं, और ठीक जगह बताते हैं: किसी स्वर्ग में नहीं, बल्कि देह में। उत्तर ब्रह्माण्ड से घूमते हुए भीतर उस व्यक्ति तक आते हैं जो अर्जुन है।"
+  },
+  {
+   "id": 315,
+   "number": "8.5",
+   "body_en": "And the one who, at the last, holding me in mind and nothing else, lets go of the body and goes — he comes into my being. There is no doubt about this.",
+   "body_hi": "और जो, अंत में, मुझे मन में थामे और कुछ नहीं, देह छोड़कर जाता है — वह मेरे भाव में आ जाता है। इसमें कोई संदेह नहीं।",
+   "commentary_en": "Now the answer to Arjuna's real question. Whoever leaves the body with Krishna, and only Krishna, in mind, arrives at Krishna's own state. The certainty is stated flatly — \"no doubt about this.\" The rest of the chapter is going to complicate the picture with cosmology and paths, but this is the plain centre it keeps returning to.",
+   "commentary_hi": "अब अर्जुन के असली सवाल का उत्तर। जो कृष्ण को, और केवल कृष्ण को, मन में लिए देह छोड़ता है, वह कृष्ण की अपनी दशा में पहुँचता है। निश्चय सपाट कहा गया है — 'इसमें कोई संदेह नहीं'। अध्याय का बाकी हिस्सा चित्र को सृष्टि-विज्ञान और मार्गों से पेचीदा करेगा, पर यही वह सादा केन्द्र है जिस पर वह लौटता रहता है।"
+  },
+  {
+   "id": 316,
+   "number": "8.6",
+   "body_en": "Whatever state a person has in mind as he lets go of the body at the end, son of Kunti, that is the state he goes to — because that is the state he has been steeped in all along.",
+   "body_hi": "अंत में देह छोड़ते समय मनुष्य के मन में जो दशा होती है, कुन्तीपुत्र, वही दशा वह पाता है — क्योंकि वही दशा है जिसमें वह भर से रँगा रहा है।",
+   "commentary_en": "The principle behind verse 5, and it is not magical thinking. What comes to mind at the end is not random — it is whatever a person has been soaking in through the years. The last thought is a report of the life, not a lottery. Which is why the next verse's instruction is about now, not about the deathbed.",
+   "commentary_hi": "पाँचवें श्लोक के पीछे का सिद्धांत, और यह जादुई सोच नहीं। अंत में जो मन में आता है वह यादृच्छिक नहीं — वह वही है जिसमें मनुष्य वर्षों भीगा रहा है। अंतिम विचार जीवन की रिपोर्ट है, लॉटरी नहीं। इसीलिए अगले श्लोक का निर्देश अभी के बारे में है, मृत्यु-शय्या के बारे में नहीं।"
+  },
+  {
+   "id": 317,
+   "number": "8.7",
+   "body_en": "So keep me in mind at every hour — and fight. With your thought and your judgement handed over to me, you will come to me; do not doubt it.",
+   "body_hi": "इसलिए हर घड़ी मुझे मन में रख — और लड़। अपना विचार और अपना निर्णय मुझे सौंपकर, तू मुझ तक आएगा; इसमें संदेह मत कर।",
+   "commentary_en": "The instruction the whole cosmology serves. If the last thought is decided by the habitual one, then the work is to make Krishna the habitual one — at every hour, not at the end. And the two halves of the sentence sit together deliberately: remember me, and fight. The practice is not withdrawal from the battle; it is the battle done with the mind given over.",
+   "commentary_hi": "वह निर्देश जिसके लिए पूरी सृष्टि-रचना है। यदि अंतिम विचार आदती विचार से तय होता है, तो काम है कृष्ण को आदती बनाना — हर घड़ी, अंत में नहीं। और वाक्य के दो हिस्से जानबूझकर साथ बैठे हैं: मुझे स्मरण कर, और लड़। साधना युद्ध से हटना नहीं; वह युद्ध ही है, मन सौंपकर किया हुआ।"
+  },
+  {
+   "id": 318,
+   "number": "8.8",
+   "body_en": "With a mind trained by steady practice, one that does not go off elsewhere, keeping the divine highest person in thought, a man reaches him, Partha.",
+   "body_hi": "लगातार अभ्यास से साधे हुए मन से, ऐसे जो कहीं और नहीं भटकता, दिव्य सर्वोच्च पुरुष को विचार में रखते हुए, मनुष्य उस तक पहुँचता है, पार्थ।",
+   "commentary_en": "How the habitual thought is built: abhyasa, practice, done again and again until the mind stops wandering off. The object is the divine person, held steady. It is the same method as Chapter 6's — repetition, and not letting the mind leave — now aimed at the death-moment rather than at a sitting.",
+   "commentary_hi": "आदती विचार कैसे बनता है: अभ्यास, बार-बार किया हुआ यहाँ तक कि मन भटकना बंद कर दे। वस्तु दिव्य पुरुष है, स्थिर थामी हुई। यह वही तरीक़ा है जो छठे अध्याय का था — दोहराव, और मन को जाने न देना — अब बैठक के बजाय मृत्यु-क्षण की ओर निशाना लगाया हुआ।"
+  },
+  {
+   "id": 319,
+   "number": "8.9",
+   "body_en": "The one who keeps in mind the seer, the ancient one, the ruler, finer than the finest, the holder-up of everything, whose form thought cannot reach, sun-coloured, on the far side of the dark —",
+   "body_hi": "जो मन में रखता है उस द्रष्टा को, प्राचीन को, शासक को, सबसे सूक्ष्म से भी सूक्ष्म, हर चीज़ को थामे रखने वाले को, जिसका रूप विचार पकड़ नहीं सकता, सूर्य के रंग का, अंधकार के उस पार —",
+   "commentary_en": "A string of names for what is to be held in mind, and they pull in two directions at once: finer than the finest, yet holding everything up; a definite colour, yet a form no thought can get around. The verse hangs unfinished — it is the object; the action, keeping the breath steady, comes in the next verse.",
+   "commentary_hi": "जिसे मन में रखना है उसके नामों की एक लड़ी, और वे एक साथ दो दिशाओं में खींचती हैं: सबसे सूक्ष्म से भी सूक्ष्म, फिर भी सब कुछ थामे हुए; एक निश्चित रंग, फिर भी ऐसा रूप जिसके इर्द-गिर्द कोई विचार नहीं जा सकता। श्लोक अधूरा टँगा है — यह वस्तु है; कर्म, प्राण को स्थिर रखना, अगले श्लोक में आता है।"
+  },
+  {
+   "id": 320,
+   "number": "8.10",
+   "body_en": "— at the hour of leaving, with a mind that does not stir, joined by devotion and by the strength that yoga has built, settling the life-breath rightly between the brows, he reaches that divine highest person.",
+   "body_hi": "— जाने की घड़ी में, ऐसे मन से जो हिलता नहीं, भक्ति से जुड़ा और उस बल से जो योग ने बनाया, प्राण को भौंहों के बीच ठीक से जमाकर, वह उस दिव्य सर्वोच्च पुरुष तक पहुँचता है।",
+   "commentary_en": "The sentence lands. Three things carry him at the end: an unmoved mind, devotion, and the accumulated strength of practice — yogabala, the reserve you cannot borrow at the last minute. The breath between the brows is a technical detail from the yogic tradition, one point of focus for the departing attention. The result is the same as verse 5, now with the method spelled out.",
+   "commentary_hi": "वाक्य उतरता है। अंत में तीन चीज़ें उसे ले जाती हैं: अचल मन, भक्ति, और अभ्यास का जमा हुआ बल — योगबल, वह भंडार जो अंतिम क्षण में उधार नहीं लिया जा सकता। भौंहों के बीच प्राण योग-परम्परा का एक तकनीकी ब्योरा है, जाती हुई चेतना के लिए एक केन्द्र-बिन्दु। फल वही है जो पाँचवें श्लोक का, अब तरीक़े के साथ खुला हुआ।"
+  },
+  {
+   "id": 321,
+   "number": "8.11",
+   "body_en": "That which the knowers of the Veda call imperishable, which those who strive, free of craving, go into, wanting which men live the celibate life — that state I will lay out for you in short.",
+   "body_hi": "जिसे वेद के जानकार अक्षर कहते हैं, जिसमें प्रयत्नशील, चाह से मुक्त, प्रवेश करते हैं, जिसकी चाह में मनुष्य ब्रह्मचर्य का जीवन जीते हैं — वह दशा मैं तुम्हारे सामने संक्षेप में रखूँगा।",
+   "commentary_en": "Krishna sets up a fuller description of the goal by first naming who else points at it — the Vedic scholars, the desireless strivers, the celibates. All three are reaching for the same imperishable thing. Then he offers a short version. The next two verses give the practice; verse 14 gives the shortcut.",
+   "commentary_hi": "कृष्ण लक्ष्य के भरे वर्णन को पहले यह नाम देकर तैयार करते हैं कि और कौन उसकी ओर इशारा करता है — वेद के विद्वान, निष्काम साधक, ब्रह्मचारी। तीनों उसी अक्षर चीज़ के लिए बढ़ रहे हैं। फिर वह एक छोटा संस्करण देते हैं। आगे के दो श्लोक साधना देते हैं; चौदहवाँ छोटा रास्ता देता है।"
+  },
+  {
+   "id": 322,
+   "number": "8.12",
+   "body_en": "Closing off all the doors, penning the mind in the heart, drawing his own life-breath up into the head, held in the grip of yoga —",
+   "body_hi": "सब दरवाज़े बंद करके, मन को हृदय में घेरकर, अपने प्राण को सिर में ऊपर खींचकर, योग की पकड़ में थमा हुआ —",
+   "commentary_en": "The technical version of dying well. The doors are the senses, shut so nothing outside pulls; the mind is confined to the heart; the breath is raised to the crown. It is the yogic method in its precise form, and it is hard. The verse hangs — the syllable to be spoken comes next.",
+   "commentary_hi": "अच्छी तरह मरने का तकनीकी संस्करण। दरवाज़े इन्द्रियाँ हैं, बंद ताकि बाहर की कोई चीज़ न खींचे; मन हृदय में घिरा; प्राण शिखा तक उठाया हुआ। यह योग-विधि अपने ठीक रूप में है, और वह कठिन है। श्लोक टँगा है — जो अक्षर बोलना है वह आगे आता है।"
+  },
+  {
+   "id": 323,
+   "number": "8.13",
+   "body_en": "— saying the one syllable, Om, which is Brahman, and holding me in mind, the one who goes out, letting the body go, reaches the highest way.",
+   "body_hi": "— एक अक्षर, ॐ, जो ब्रह्म है, उसे कहते हुए और मुझे मन में लिए, जो निकलता है, देह छोड़ते हुए, सर्वोच्च गति तक पहुँचता है।",
+   "commentary_en": "The sentence completes. The technical practice is capped with two things: the single syllable Om, and Krishna held in mind. It is worth noticing that even this most method-heavy route still ends the same way as the plain one in verse 5 — remembering Krishna. The technique is a scaffold; the remembering is the load it carries.",
+   "commentary_hi": "वाक्य पूरा होता है। तकनीकी साधना दो चीज़ों से ढँकी है: एक अक्षर ॐ, और कृष्ण मन में लिए हुए। ध्यान देने योग्य है कि यह सबसे विधि-भारी रास्ता भी उसी तरह ख़त्म होता है जैसे पाँचवें श्लोक का सादा वाला — कृष्ण को स्मरण करना। तकनीक एक ढाँचा है; स्मरण वह भार है जो वह ढोता है।"
+  },
+  {
+   "id": 324,
+   "number": "8.14",
+   "body_en": "For the yogi who keeps me in mind without a break, thinking of nothing else, always joined — I am easy for him to reach, Partha.",
+   "body_hi": "उस योगी के लिए जो मुझे बिना रुके मन में रखता है, और कुछ नहीं सोचता, सदा जुड़ा — मैं उसके लिए पहुँचने में आसान हूँ, पार्थ।",
+   "commentary_en": "After the difficult technical route, a plain relief. For the person whose mind is on Krishna constantly and on nothing else, none of that apparatus is needed — Krishna is simply easy to reach. The word is su-labha, easily got. The rare thing is the constancy, not the technique. Given the constancy, the arrival is not hard.",
+   "commentary_hi": "कठिन तकनीकी रास्ते के बाद, एक सादी राहत। जिस व्यक्ति का मन लगातार कृष्ण पर और किसी चीज़ पर नहीं, उसे उस पूरे तामझाम की ज़रूरत नहीं — कृष्ण बस पहुँचने में आसान हैं। शब्द है सुलभ, आसानी से मिलने वाला। दुर्लभ चीज़ निरन्तरता है, तकनीक नहीं। निरन्तरता हो तो पहुँचना कठिन नहीं।"
+  },
+  {
+   "id": 325,
+   "number": "8.15",
+   "body_en": "Having come to me, the great souls, arrived at the highest completion, do not take on rebirth — that lodging in impermanence, that address of sorrow.",
+   "body_hi": "मुझ तक आकर, महात्मा, सर्वोच्च पूर्णता को पहुँचे हुए, फिर से जन्म नहीं लेते — वह अस्थायीपन में ठहरना, वह दुःख का पता।",
+   "commentary_en": "What is gained by reaching Krishna: no more rebirth. And rebirth is described here without softening — a lodging that does not last, a place whose defining feature is sorrow. It is not that life is bad; it is that this particular return, over and over, is the thing the great souls have stepped out of.",
+   "commentary_hi": "कृष्ण तक पहुँचने से जो मिलता है: फिर जन्म नहीं। और जन्म यहाँ बिना नरमी के बताया गया है — एक ठहराव जो टिकता नहीं, एक जगह जिसका परिभाषक लक्षण दुःख है। यह नहीं कि जीवन बुरा है; यह कि यह ख़ास लौटना, बार-बार, वही चीज़ है जिससे महात्मा बाहर निकल आए हैं।"
+  },
+  {
+   "id": 326,
+   "number": "8.16",
+   "body_en": "Take the highest realm there is, the one where the creator himself dwells, and every realm from there downward: all of them send their residents back. Only arrival at me, son of Kunti, closes the door on another birth.",
+   "body_hi": "ब्रह्मा के लोक से नीचे तक, सब लोक लौटते हैं, अर्जुन। पर मुझ तक आकर, कुन्तीपुत्र, फिर से जन्म नहीं होता।",
+   "commentary_en": "The scope of \"no return\" is set by contrast. Even the highest heaven, the world of Brahma the creator, is inside the cycle — its residents eventually come back. Only reaching Krishna is outside it. The verse quietly deflates the ambition of a better rebirth: the best possible one is still a rebirth.",
+   "commentary_hi": "'न लौटना' का दायरा विरोध से तय होता है। सबसे ऊँचा स्वर्ग भी, सृष्टिकर्ता ब्रह्मा का लोक, चक्र के भीतर है — उसके निवासी आख़िर लौट आते हैं। केवल कृष्ण तक पहुँचना उसके बाहर है। श्लोक चुपचाप बेहतर पुनर्जन्म की महत्त्वाकांक्षा की हवा निकाल देता है: सबसे अच्छा संभव पुनर्जन्म भी पुनर्जन्म ही है।"
+  },
+  {
+   "id": 327,
+   "number": "8.17",
+   "body_en": "People who have worked out how the creator's day and night are counted put a single one of his days at a thousand of the great ages, and give his night the same length again.",
+   "body_hi": "जो दिन और रात का हिसाब समझते हैं, वे जानते हैं कि ब्रह्मा का एक दिन हज़ार युगों तक चलता है, और उसकी रात भी हज़ार युगों तक।",
+   "commentary_en": "The scale of the cycle is drawn out. A single day of Brahma is a thousand of the vast ages, and his night the same. The point of the number is perspective: against a clock like that, the difference between a good rebirth and a bad one shrinks, and the difference between any rebirth and none becomes the only one worth caring about.",
+   "commentary_hi": "चक्र का पैमाना खींचकर बताया गया है। ब्रह्मा का एक दिन हज़ार विशाल युगों का है, और उसकी रात उतनी ही। संख्या का मक़सद परिप्रेक्ष्य है: ऐसी घड़ी के सामने, अच्छे और बुरे पुनर्जन्म का फ़र्क़ सिकुड़ जाता है, और किसी भी पुनर्जन्म और कोई पुनर्जन्म नहीं के बीच का फ़र्क़ ही एकमात्र रह जाता है जिसकी परवाह करने लायक़ है।"
+  },
+  {
+   "id": 328,
+   "number": "8.18",
+   "body_en": "When Brahma's day comes on, all the manifest forms rise up out of the unmanifest; when his night comes on, they dissolve back into that same thing called unmanifest.",
+   "body_hi": "जब ब्रह्मा का दिन आता है, सब व्यक्त रूप अव्यक्त से उठ खड़े होते हैं; जब उसकी रात आती है, वे उसी चीज़ में घुल जाते हैं जिसे अव्यक्त कहते हैं।",
+   "commentary_en": "The mechanism of the cosmic day and night. Manifestation is not a one-time event; it pulses. Everything visible surfaces from the unmanifest at daybreak and sinks back at nightfall, and the cycle repeats without end. The forms are real while they last, but they are on a tide.",
+   "commentary_hi": "ब्रह्माण्डीय दिन-रात की क्रियाविधि। प्रकटीकरण एक बार की घटना नहीं; वह धड़कता है। हर दिखने वाली चीज़ भोर में अव्यक्त से ऊपर आती है और रात में वापस डूब जाती है, और चक्र बिना अंत के दोहराता है। रूप जब तक रहते हैं तब तक असली हैं, पर वे एक ज्वार पर हैं।"
+  },
+  {
+   "id": 329,
+   "number": "8.19",
+   "body_en": "This same host of beings, coming to be over and over, dissolves — helpless — when night comes on, Partha, and rises again when day comes on.",
+   "body_hi": "प्राणियों का यही समूह, बार-बार होकर, घुल जाता है — विवश — जब रात आती है, पार्थ, और फिर उठ खड़ा होता है जब दिन आता है।",
+   "commentary_en": "The key word is \"helpless.\" The beings do not choose to dissolve or to reappear; the cosmic rhythm carries them whether they consent or not. And it is the same host each time — not fresh beings but the same collective, cycled. The verse is meant to make the automatic, un-consulted nature of the cycle land.",
+   "commentary_hi": "मुख्य शब्द है 'विवश'। प्राणी घुलना या फिर प्रकट होना चुनते नहीं; ब्रह्माण्डीय लय उन्हें ले जाती है चाहे वे मानें या नहीं। और हर बार वही समूह है — नए प्राणी नहीं बल्कि वही सामूहिकता, चक्र में घुमाई हुई। श्लोक का मक़सद है कि चक्र की स्वचालित, बिन-पूछी प्रकृति महसूस हो।"
+  },
+  {
+   "id": 330,
+   "number": "8.20",
+   "body_en": "Further out than that hidden seed-state lies a different one — also hidden, but with no beginning to it, and staying whole on the day every creature is undone.",
+   "body_hi": "पर उस अव्यक्त से आगे एक और सत्ता है, अव्यक्त और आदिरहित, जो सब प्राणियों के नष्ट होने पर भी नष्ट नहीं होती।",
+   "commentary_en": "There are two unmanifests, and this is the distinction the chapter's title turns on. One is the seed-state of the cycle — things sink into it at night and rise from it at day. The other is past even that: beginningless, and untouched when everything in the cycle, seed-state included, is dissolved. This second one is the imperishable, the akshara.",
+   "commentary_hi": "दो अव्यक्त हैं, और यही वह भेद है जिस पर अध्याय का शीर्षक टिका है। एक चक्र की बीज-दशा है — चीज़ें रात में उसमें डूबती हैं और दिन में उससे उठती हैं। दूसरा उससे भी आगे है: आदिरहित, और तब भी अछूता जब चक्र की हर चीज़, बीज-दशा सहित, घुल जाती है। यह दूसरा ही अक्षर है, अविनाशी।"
+  },
+  {
+   "id": 331,
+   "number": "8.21",
+   "body_en": "That unmanifest is called the imperishable. They say it is the highest way — and reaching it, they do not come back. That is my highest home.",
+   "body_hi": "वह अव्यक्त अक्षर कहलाता है। कहते हैं वह सर्वोच्च गति है — और उस तक पहुँचकर, वे लौटते नहीं। वही मेरा सर्वोच्च धाम है।",
+   "commentary_en": "The second unmanifest is named the goal. What marks it off from every heaven of verse 16 is exactly this: from it there is no return. And Krishna claims it as his own dwelling — the imperishable is not a rival to him, it is where he is. The cosmology has been building to identifying the exit from the cycle, and this is it.",
+   "commentary_hi": "दूसरा अव्यक्त लक्ष्य नाम दिया गया है। जो इसे सोलहवें श्लोक के हर स्वर्ग से अलग करता है वह ठीक यही है: उससे कोई वापसी नहीं। और कृष्ण उसे अपना निवास बताते हैं — अक्षर उनका प्रतिद्वन्द्वी नहीं, वह वहाँ है जहाँ वह हैं। सृष्टि-रचना चक्र से निकास की पहचान की ओर बढ़ रही थी, और यही वह है।"
+  },
+  {
+   "id": 332,
+   "number": "8.22",
+   "body_en": "That highest person, Partha, is reached by devotion and by nothing alongside it — the one within whom all beings stand, by whom all this is spread out.",
+   "body_hi": "वह सर्वोच्च पुरुष, पार्थ, भक्ति से पहुँचा जाता है और उसके साथ किसी और चीज़ से नहीं — वह जिसके भीतर सब प्राणी खड़े हैं, जिससे यह सब फैला हुआ है।",
+   "commentary_en": "The imperishable was described in impersonal terms; here it is a person, and the way to it is named as ananya bhakti — devotion with nothing set beside it. Not devotion plus technique, plus knowledge, plus effort: devotion alone. And the person reached is the container of all beings and the fabric everything is woven from.",
+   "commentary_hi": "अक्षर निर्वैयक्तिक पदों में बताया गया था; यहाँ वह एक पुरुष है, और उस तक का रास्ता अनन्य भक्ति नाम दिया गया है — ऐसी भक्ति जिसके साथ कुछ और रखा न हो। भक्ति और तकनीक, और ज्ञान, और प्रयत्न नहीं: केवल भक्ति। और जो पुरुष पहुँचा जाता है वह सब प्राणियों का पात्र है और वह ताना-बाना जिससे हर चीज़ बुनी गई है।"
+  },
+  {
+   "id": 333,
+   "number": "8.23",
+   "body_en": "Now the times, bull of the Bharatas — going out at which yogis reach either no-return or return: I will tell you which times these are.",
+   "body_hi": "अब वे समय, भरतों के वृषभ — जिनमें निकलकर योगी या तो न-लौटना या लौटना पाते हैं: मैं तुम्हें बताऊँगा कि ये समय कौन-से हैं।",
+   "commentary_en": "A shift into a strange stretch of the chapter — the doctrine of the two paths of departure, keyed to when in the year and the cycle a person dies. Modern readers often find this the hardest part to take literally. Traditionally it has been read both as astronomy and as an inner symbol; the verses that follow describe the two routes.",
+   "commentary_hi": "अध्याय के एक अजीब हिस्से में मोड़ — प्रस्थान के दो मार्गों का सिद्धांत, इससे जुड़ा हुआ कि साल और चक्र में कब मनुष्य मरता है। आधुनिक पाठक अक्सर इसे शब्दशः लेना सबसे कठिन पाते हैं। परम्परा में इसे खगोल-विज्ञान और एक भीतरी प्रतीक दोनों रूप में पढ़ा गया है; आगे के श्लोक दो रास्तों का वर्णन करते हैं।"
+  },
+  {
+   "id": 334,
+   "number": "8.24",
+   "body_en": "A flame, a brightness, daytime, the fortnight while the moon fills out, the half-year while the sun tracks north — a person who knows Brahman and leaves under these signs arrives at Brahman.",
+   "body_hi": "आग, प्रकाश, दिन, महीने का उजला पक्ष, सूर्य के उत्तर की ओर चलने के छह महीने — इनमें निकलकर, जो ब्रह्म को जानते हैं वे ब्रह्म को जाते हैं।",
+   "commentary_en": "The first path, the one of light. Its markers are all bright and rising — fire, daylight, the waxing moon, the lengthening days. To die under these signs, for one who knows Brahman, is to go to Brahman and not return. The imagery is of ascent and illumination.",
+   "commentary_hi": "पहला मार्ग, प्रकाश वाला। इसके चिह्न सब उजले और चढ़ते हुए हैं — आग, दिन का उजाला, बढ़ता चाँद, लंबे होते दिन। इन संकेतों में मरना, ब्रह्म को जानने वाले के लिए, ब्रह्म को जाना है और न लौटना। कल्पना आरोहण और प्रकाश की है।"
+  },
+  {
+   "id": 335,
+   "number": "8.25",
+   "body_en": "Smoke, night, the dark half of the month, the six months of the sun's southward course — going out then, the yogi reaches the light of the moon and comes back.",
+   "body_hi": "धुआँ, रात, महीने का अँधेरा पक्ष, सूर्य के दक्षिण की ओर चलने के छह महीने — इनमें निकलकर, योगी चाँद के प्रकाश तक पहुँचता है और लौट आता है।",
+   "commentary_en": "The second path, the one of smoke. Its markers are the mirror of the first — dim, waning, shortening. To die under these is to reach the lunar realm, enjoy its rewards, and then return to birth. It is not a punishment; it is a shorter arc. The reward is real and the return is real.",
+   "commentary_hi": "दूसरा मार्ग, धुएँ वाला। इसके चिह्न पहले के दर्पण हैं — मंद, घटते, छोटे होते। इनमें मरना चन्द्रलोक तक पहुँचना है, उसके फल भोगना, और फिर जन्म को लौटना। यह दंड नहीं; यह एक छोटा चाप है। फल असली है और लौटना असली है।"
+  },
+  {
+   "id": 336,
+   "number": "8.26",
+   "body_en": "These two courses of the world, the light and the dark, are held to be lasting ones. By the one a man goes and does not come back; by the other he comes back again.",
+   "body_hi": "संसार के ये दो रास्ते, उजला और अँधेरा, टिकाऊ माने जाते हैं। एक से मनुष्य जाता है और लौटता नहीं; दूसरे से वह फिर लौट आता है।",
+   "commentary_en": "The two paths summarised. They are called permanent features of how the world works, not a rule invented for the occasion. One is a one-way road, the other a round trip. The verse states the structure plainly before the next one draws the practical lesson from it.",
+   "commentary_hi": "दो मार्गों का सार। उन्हें जगत के काम करने के तरीक़े के स्थायी लक्षण कहा गया है, इस मौक़े के लिए गढ़ा गया नियम नहीं। एक एकतरफ़ा सड़क है, दूसरा आना-जाना। श्लोक ढाँचे को सादे रूप में कहता है, इससे पहले कि अगला उससे व्यावहारिक सबक़ खींचे।"
+  },
+  {
+   "id": 337,
+   "number": "8.27",
+   "body_en": "Knowing these two routes, Partha, no yogi is thrown off. So at every hour, Arjuna, stay joined in yoga.",
+   "body_hi": "इन दो रास्तों को जानकर, पार्थ, कोई योगी चकराता नहीं। इसलिए हर घड़ी, अर्जुन, योग में जुड़ा रह।",
+   "commentary_en": "The practical point of the whole path doctrine, and it turns out to be simple. Knowing how the two routes work, the yogi is not confused or anxious about the moment of death. And the conclusion is the one from verse 7: since you cannot schedule the hour, be joined at every hour. The cosmology serves the same plain instruction as before.",
+   "commentary_hi": "पूरे मार्ग-सिद्धांत का व्यावहारिक बिन्दु, और वह सरल निकलता है। दो रास्ते कैसे काम करते हैं यह जानकर, योगी मृत्यु के क्षण को लेकर उलझन या चिन्ता में नहीं। और निष्कर्ष सातवें श्लोक वाला है: चूँकि तुम घड़ी तय नहीं कर सकते, हर घड़ी जुड़े रहो। सृष्टि-रचना उसी सादे निर्देश की सेवा करती है जो पहले था।"
+  },
+  {
+   "id": 338,
+   "number": "8.28",
+   "body_en": "Whatever fruit of merit is laid down for the Vedas, for sacrifices, for austerities, for gifts — the yogi, once he knows all this, passes beyond every bit of it, and reaches the first and highest place.",
+   "body_hi": "वेदों के लिए, यज्ञों के लिए, तपों के लिए, दानों के लिए जो पुण्य का फल तय है — योगी, यह सब जान लेने पर, उसके हर हिस्से से परे निकल जाता है, और पहली और सर्वोच्च जगह तक पहुँचता है।",
+   "commentary_en": "The chapter closes by measuring what it has offered against the old rewards. Study, ritual, austerity, charity — each has its promised fruit. The yogi who has understood this chapter goes past all of those fruits, not by scorning them but by having something they cannot add up to: the primal, highest place. Knowing the death-moment rightly is worth more than every merit combined.",
+   "commentary_hi": "अध्याय अपने दिए हुए को पुराने फलों के सामने तौलकर बंद होता है। अध्ययन, अनुष्ठान, तप, दान — हर एक का अपना वादा किया हुआ फल है। जो योगी इस अध्याय को समझ गया वह उन सब फलों से आगे निकल जाता है, उन्हें तुच्छ मानकर नहीं बल्कि कुछ ऐसा पाकर जिसे वे जोड़कर नहीं बना सकते: वह आदि, सर्वोच्च जगह। मृत्यु-क्षण को ठीक से जानना हर पुण्य के जोड़ से ज़्यादा क़ीमती है।"
+  }
+ ]
+}
