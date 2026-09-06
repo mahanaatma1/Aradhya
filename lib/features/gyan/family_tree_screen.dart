@@ -38,6 +38,10 @@ class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
   /// Which tradition's reading to show, when the edges disagree (FT-04).
   String? _tradition;
 
+  /// Which relation family the tree is drawn from (FT-01). Genealogy by
+  /// default -- it is what the screen is named for and what most roots have.
+  String _family = 'lineage';
+
   @override
   void initState() {
     super.initState();
@@ -80,6 +84,7 @@ class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
                 _root = null;
                 _trail.clear();
                 _tradition = null;
+                _family = 'lineage';
               }),
             ),
         ],
@@ -114,6 +119,8 @@ class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
                   onReroot: _reroot,
                   tradition: _tradition,
                   onTradition: (t) => setState(() => _tradition = t),
+                  family: _family,
+                  onFamily: (f) => setState(() => _family = f),
                 ),
               ),
             ],
@@ -124,8 +131,10 @@ class _FamilyTreeScreenState extends ConsumerState<FamilyTreeScreen> {
   }
 }
 
-/// Only entities that actually have lineage edges are offered as roots —
-/// opening a tree with a single lonely node is a dead end.
+/// Only entities that actually have edges a tree can be drawn from are offered
+/// as roots — opening a tree with a single lonely node is a dead end. The test
+/// itself is in `_RootRow`, which hides its own tile; this widget only narrows
+/// the candidates to the major figures.
 class _RootPicker extends ConsumerWidget {
   final List<Entity> entities;
   final bool hindi;
@@ -224,6 +233,8 @@ class _Tree extends ConsumerWidget {
   final int rootId;
   final String? tradition;
   final ValueChanged<String?> onTradition;
+  final String family;
+  final ValueChanged<String> onFamily;
   final Map<int, Entity> byId;
   final bool hindi;
   final ValueChanged<int> onReroot;
@@ -235,6 +246,8 @@ class _Tree extends ConsumerWidget {
     required this.onReroot,
     required this.tradition,
     required this.onTradition,
+    required this.family,
+    required this.onFamily,
   });
 
   @override
@@ -262,16 +275,38 @@ class _Tree extends ConsumerWidget {
                 r.tradition == tradition)
             .toList();
 
-    final parents = rels2
-        .where((r) => r.relType == 'child_of' || r.relType == 'parent_of')
-        .toList();
-    final partners = rels2
-        .where((r) => r.relType == 'spouse_of' || r.relType == 'consort_of')
-        .toList();
-    final children = rels2
-        .where((r) => r.relType == 'father_of' || r.relType == 'mother_of')
-        .toList();
-    final siblings = rels2.where((r) => r.relType == 'sibling_of').toList();
+    // FT-01. Offered only where the root actually has the edges: a chip that
+    // opens an empty tree is worse than no chip, because it reads as a claim
+    // that nothing is recorded when the truth is that nothing was ever asked
+    // for. Teaching and dynasty edges used to be dropped here in silence --
+    // Vishvamitra guru_of Rama is in this very data and Rama's tree gave no
+    // sign of it.
+    final available = <String>[
+      for (final f in RelBands.drawable)
+        if (rels2.any((r) => r.family == f)) f,
+    ];
+    // Fall back to the genealogical view when the chosen family has nothing
+    // here, so re-rooting onto a figure with no guru cannot land on a blank.
+    final shown = available.contains(family)
+        ? family
+        : (available.isNotEmpty ? available.first : 'lineage');
+    final spec = RelBands.forFamily(shown);
+
+    final parents =
+        rels2.where((r) => spec.above.contains(r.relType)).toList();
+    final children =
+        rels2.where((r) => spec.below.contains(r.relType)).toList();
+    // Spouses and siblings are genealogy only -- a teacher has no consort in
+    // their capacity as a teacher.
+    final partners = shown != 'lineage'
+        ? const <EntityRelation>[]
+        : rels2
+            .where((r) =>
+                r.relType == 'spouse_of' || r.relType == 'consort_of')
+            .toList();
+    final siblings = shown != 'lineage'
+        ? const <EntityRelation>[]
+        : rels2.where((r) => r.relType == 'sibling_of').toList();
 
     final scheme = Theme.of(context).colorScheme;
 
@@ -283,6 +318,15 @@ class _Tree extends ConsumerWidget {
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 32),
         child: Column(
           children: [
+            if (available.length > 1) ...[
+              _FamilyFilter(
+                families: available,
+                selected: shown,
+                hindi: hindi,
+                onPick: onFamily,
+              ),
+              const SizedBox(height: 12),
+            ],
             if (traditions.length > 1) ...[
               _TraditionPicker(
                 traditions: traditions,
@@ -296,9 +340,12 @@ class _Tree extends ConsumerWidget {
             // so three children read as three descents from one couple rather
             // than as a list that happens to sit lower on the screen.
             if (parents.isNotEmpty) ...[
-              _BandLabel(hindi ? 'माता-पिता' : 'PARENTS'),
+              _BandLabel(spec.aboveLabel(hindi)),
               _Band(relations: parents, hindi: hindi, onReroot: onReroot),
-              _Bracket(count: parents.length, pointsDown: false),
+              if (spec.descent)
+                _Bracket(count: parents.length, pointsDown: false)
+              else
+                const SizedBox(height: 10),
             ],
             _CoupleRow(
               root: _RootCard(entity: root, hindi: hindi),
@@ -315,8 +362,11 @@ class _Tree extends ConsumerWidget {
                   onReroot: onReroot),
             ],
             if (children.isNotEmpty) ...[
-              _Bracket(count: children.length),
-              _BandLabel(hindi ? 'संतान' : 'CHILDREN'),
+              if (spec.descent)
+                _Bracket(count: children.length)
+              else
+                const SizedBox(height: 10),
+              _BandLabel(spec.belowLabel(hindi)),
               _Band(relations: children, hindi: hindi, onReroot: onReroot),
             ],
             if (siblings.isNotEmpty) ...[
@@ -334,9 +384,19 @@ class _Tree extends ConsumerWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 30),
                 child: Text(
-                  hindi
-                      ? 'इस नाम के लिए अभी कोई वंश-संबंध दर्ज नहीं है।'
-                      : 'No family links recorded for this name yet.',
+                  // Named by family, so "nothing here" cannot be misread as
+                  // "nothing at all" when the other chips have something.
+                  switch (shown) {
+                    'teaching' => hindi
+                        ? 'इस नाम के लिए अभी कोई गुरु-शिष्य संबंध दर्ज नहीं है।'
+                        : 'No teaching links recorded for this name yet.',
+                    'dynasty' => hindi
+                        ? 'इस नाम के लिए अभी कोई वंश-संबंध दर्ज नहीं है।'
+                        : 'No dynasty links recorded for this name yet.',
+                    _ => hindi
+                        ? 'इस नाम के लिए अभी कोई पारिवारिक संबंध दर्ज नहीं है।'
+                        : 'No family links recorded for this name yet.',
+                  },
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: scheme.onSurface.withValues(alpha: 0.55)),
@@ -748,6 +808,50 @@ class _Breadcrumb extends StatelessWidget {
 ///
 /// Only appears when the edges actually disagree. The app does not pick a
 /// winner; it shows one reading at a time and says which.
+/// FT-01. Which relation family the tree is drawn from.
+///
+/// A `ChoiceChip` set rather than a dropdown or a tab bar: there are at most
+/// three, the whole point is that the user can see which kinds of link this
+/// figure has at all, and a closed control would hide exactly that.
+class _FamilyFilter extends StatelessWidget {
+  final List<String> families;
+  final String selected;
+  final bool hindi;
+  final ValueChanged<String> onPick;
+  const _FamilyFilter({
+    required this.families,
+    required this.selected,
+    required this.hindi,
+    required this.onPick,
+  });
+
+  static const _icons = <String, IconData>{
+    'lineage': Icons.family_restroom_rounded,
+    'teaching': Icons.school_rounded,
+    'dynasty': Icons.castle_rounded,
+  };
+
+  @override
+  Widget build(BuildContext context) => Wrap(
+        alignment: WrapAlignment.center,
+        spacing: 6,
+        runSpacing: 6,
+        children: [
+          for (final f in families)
+            ChoiceChip(
+              avatar: Icon(_icons[f] ?? Icons.link_rounded, size: 15),
+              label: Text(RelLabels.familyLabel(f, hindi)),
+              labelStyle: const TextStyle(fontSize: 12),
+              visualDensity: VisualDensity.compact,
+              selected: selected == f,
+              // Not a toggle. Deselecting the only chip would leave the screen
+              // with no family to draw and nothing to say about why.
+              onSelected: (_) => onPick(f),
+            ),
+        ],
+      );
+}
+
 class _TraditionPicker extends StatelessWidget {
   final List<String> traditions;
   final String? selected;

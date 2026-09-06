@@ -1355,7 +1355,24 @@ NR-04); those are reflected here rather than the stale original counts.
       no edges 285 -> 208. `P1080`/`P2789` return nothing for this corpus
 - [x] **KG-02** 100% of P0 entities have a description — measured 135/135
 - [ ] **KG-03** 100% of P0 entities have 3 or more verified relations —
-      **124/136 today (91.2%)**, up from 36 at the start of this pass. Every
+      **66/138 today (48%)**, up from 30 at the start of this pass.
+
+      > **The 91.2% previously recorded here was wrong, three times over.**
+      > It came from a hand query counting `where src_id = ? or dst_id = ?`,
+      > which double-counts every relation: `build.py:371` already
+      > materialises the inverse of each authored edge, so out-degree *is*
+      > full degree (verified — for all 516 entities the set of
+      > out-neighbours equals the set of all neighbours). An earlier figure
+      > used the threshold one below the goal (`>= 2` where the goal says 3);
+      > a third counted rows rather than distinct partners, so a pair
+      > attested by two chapters counted twice. All three erred towards
+      > flattery. The metric now lives in `report.py` `kg_coverage()` and
+      > runs on every report, and `selftest.py` `check_kg_degree()` holds it
+      > to a six-entity graph hand-shaped so that each of the three wrong
+      > readings gives a different answer from the right one — confirmed all
+      > three are caught. **72 P0 entities are short of 3, not 12.**
+
+      Every
       relation added carries an exact Parva/Sarga/Section citation against a
       primary translation (`ganguli-mahabharata`, `dutt-ramayana`,
       `wilson-vishnu-purana`, `muller-upanishads`, `griffith-rigveda`) —
@@ -1383,9 +1400,9 @@ NR-04); those are reflected here rather than the stale original counts.
       §XXV), Yamuna (sibling_of Yama and paired with Ganga, both via
       Rigveda Mandala 10).
 
-      **12 P0 entities remain below the bar, and each was individually
-      researched and rejected as unciteable from a registered source, not
-      skipped:** Damaru, Diya, Rudraksha, Swastika, Tilaka (ritual objects
+      **12 P0 entities are at zero, and each was individually researched and
+      rejected as unciteable from a registered source, not skipped:** Damaru,
+      Diya, Rudraksha, Swastika, Tilaka (ritual objects
       whose textual glorification lives in the Shiva Purana / Rudraksha
       Jabala Upanishad / Devi Mahatmya — none registered; the one Mahabharata
       passage on lamp-merit found, Anusasana Parva §XCVIII, blesses "the
@@ -1399,17 +1416,36 @@ NR-04); those are reflected here rather than the stale original counts.
       its purifying sound — too thin to support a real `related_to` edge to
       one specific king); Padma's 3rd relation (the Brahma-born-from-a-
       lotus-navel myth is not in Wilson's Vishnu Purana in that form — every
-      chapter checked either omits the lotus or omits the navel). None of
-      these are a research-time problem; they are a source-registration
-      ceiling. 124/136 is the practical maximum without either registering
-      a new source (would need Wiki approval — out of scope here) or
-      citing thin/misattributed material, which the standing "don't
-      compromise" instruction rules out.
+      chapter checked either omits the lotus or omits the navel). Those 12
+      are a source-registration ceiling, not a research-time problem.
+
+      **The other 60 are not blocked, and the corrected count is what makes
+      that visible.** 50 sit at exactly 2 and need one more relation each; 10
+      sit at 1. `report.py` names them all (`kg_coverage()` returns a `short`
+      work list, not just a percentage) so this is a work queue rather than a
+      number. The registered primary corpus that is already fetched to
+      `content/raw/` — Ganguli's Mahabharata (504 files), Griffith's Ramayana
+      (182), Wilson's Vishnu Purana (14) — covers the great majority of them:
+      the 50 include Bhishma, Vidura, Sanjaya, Kamsa, Ekalavya, Prahlada, six
+      rishis, eight places and ten weapons, all of whom act in chapters
+      already on disk. What is genuinely unreachable is narrower than the old
+      figure implied and narrower than these 12 suggest in aggregate: the
+      abstract concepts (atman, dharma, karma, moksha, maya, samsara, guna,
+      tapas, yajna, bhakti) want Upanishadic and Gita citations, and of those
+      only `muller-upanishads` and `telang-bhagavadgita` are registered —
+      Müller is fetched as a single 112 KB `full.txt` with no per-chapter
+      split, so citing it precisely needs a fetch pass first.
 - [ ] **KG-04** 80% or more of P1 entities have 2 or more verified relations —
-      **65.5% (247/377) today**, moving in step with KG-03's work above
-      since most P0 rishis, places, weapons, and concepts are also P1-tier
-      or touch P1 entities as their relation partner. Still short of 80%;
-      not yet the direct focus of a dedicated pass
+      **37% (141/377) today.** The previously recorded 65.5% (247/377) came
+      from the same double-counting query as KG-03 above, and 247 is
+      *exactly* the number of P1 entities with **one or more** relations —
+      not approximately, exactly. That is what the doubling does here: under
+      `src_id or dst_id`, one authored edge plus its materialised inverse
+      makes two rows, so "2 or more rows" and "1 or more relations" are the
+      same set. The published figure was measuring half the goal.
+      130 P1 entities have no relations at all.
+      Reaching 80% means 161 more entities crossing the bar, and unlike
+      KG-03 this has never had a dedicated pass
 - [x] **KG-05** Written empty state for an entity with no edges — 285 of 511 today
 - [x] **KG-06** Group more than 20 relations by family
 - [x] **KG-07** Relation-family filter chips
@@ -1427,8 +1463,9 @@ NR-04); those are reflected here rather than the stale original counts.
       (mid-range Android in particular) run through pan/zoom on an
       entity with many relations (Krishna: 506 related_edges is the
       largest in the DB today) before this can honestly be checked off
-- [~] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple ·
-      Dynasty — researched and partially unblocked, not a filter chip yet.
+- [x] **FT-01** Relationship-type filter: Family · Lineage · Guru/Disciple ·
+      Dynasty — **chips delivered 2026-09-06**; the research and data work
+      below came first and is what made a filter meaningful to build.
       `guru_of`/`disciple_of` were already in the relation vocabulary
       (`validate.py` `REL_INVERSE`, `LINEAGE_RELS`) and in `gyan.sql`'s
       comment, but zero edges existed. Added 3 real, source-cited relations
@@ -1450,7 +1487,8 @@ NR-04); those are reflected here rather than the stale original counts.
       exist but have **zero relations of any kind** — populating real
       membership/founding edges for three dynasties across two epics is a
       research task of its own, not done here.
-      What is still genuinely missing: (1) a filter UI — `FamilyTreeScreen`'s
+      What was still genuinely missing at that point — (1) is now done, see
+      "The chips" below: (1) a filter UI — `FamilyTreeScreen`'s
       three-band layout (parents/root/spouses+children) has no slot for a
       teaching relation, which is not the same shape as a genealogical band;
       the right home for guru/disciple is the entity page's `RelatedRail`,
@@ -1478,6 +1516,52 @@ NR-04); those are reflected here rather than the stale original counts.
       but the excerpt alone doesn't name him, so confidence medium, not
       high). Rebuilt again: +6 relations, +3 related_edges, both directions
       confirmed. `flutter test`: 350/350 pass throughout both rebuilds.
+      **The chips, 2026-09-06.** Point (1) above said the three-band layout
+      "has no slot for a teaching relation, which is not the same shape as a
+      genealogical band." On re-reading the vocabulary that turned out to be
+      wrong, and in a useful way: `child_of`, `disciple_of` and `member_of` all
+      point *up* from the root — to a parent, a teacher, a house — and
+      `father_of`/`mother_of`/`parent_of`, `guru_of` and `has_member` all point
+      *down*. The bands are already the right shape; only the labels and the
+      descent brackets differ. So `_Tree` now takes a family, and a
+      `ChoiceChip` row picks between Family / Teaching / Dynasty.
+      What that required, and each of these is a real defect it exposed:
+      • `parent_of` was grouped with the band **above** the root, for as long as
+        the family tree has existed. It is the materialised inverse of
+        `child_of` (`REL_INVERSE`), never authored, so its dst is always the
+        *child* — the tree was inverting 29 edges across 24 entities. Vishrava's
+        tree gave Kumbhakarna and Vibhishana as his parents; Vayu's gave Bhima
+        as his parent. Verified against the DB before touching it
+        (`brahma parent_of bhrigu`, `abhimanyu child_of arjuna`) rather than
+        reasoned about.
+      • `member_of`/`has_member` had **no labels in either table** in
+        `entity_models.dart`. They were added to the vocabulary, to `gyan.sql`
+        and to `validate.py` for the dynasty work above and not there, so
+        `RelLabels.of` fell through to its ASCII fallback and Rama's Ikshvaku
+        edge read "member of" — English text in a Hindi screen. Added to `_en`
+        and `_hi`, and `EntityRelation.family` now returns a new `'dynasty'`
+        instead of letting it fall into `'general'` beside untyped `related_to`.
+      • Band knowledge moved out of the widget into `TreeBand`/`RelBands` in
+        `entity_models.dart`. The screen-private version had been wrong for the
+        screen's entire existence with nothing able to check it, which is the
+        whole argument for the move — it is a statement about what the edges
+        *mean*, not about how they are drawn.
+      Chips are offered only for families the root actually has edges in: a chip
+      that opens an empty tree reads as "nothing is recorded" when the truth is
+      "nothing was ever asked for," and teaching edges were being dropped in
+      silence — Vishvamitra guru_of Rama is in this very data and Rama's tree
+      gave no sign of it. A chosen family with nothing on a re-rooted figure
+      falls back to genealogy rather than landing on a blank, the empty state is
+      worded per family, and only genealogy draws the descent brackets (a
+      bracket asserts descent; joining a teacher to a student with one would
+      claim a parentage no source gives).
+      Tests: `test/entity_relation_family_test.dart` 4 → 7, mirroring
+      `REL_INVERSE`'s 37 types (36 keys + `parent_of`). The Hindi-label test
+      compares against the **ASCII fallback**, not against the English label —
+      the obvious `of(t,true) != of(t,false)` formulation passes when the
+      English label exists and the Hindi one does not, which was verified by
+      deleting only the `_hi` rows: the fallback comparison caught it,
+      en-vs-hi did not. `flutter analyze` clean, **373/373 tests pass.**
 - [x] **NR-04** Surface `RelatedItem.reason` on `_RelatedCard`, named by
       FT-01 above as the real follow-up its own filter work exposed. Added
       `RelatedItem.relationLabel(hi)`, matching the `relation:<rel_type>`

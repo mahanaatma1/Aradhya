@@ -181,6 +181,12 @@ class EntityRelation {
         'spouse_of' || 'sibling_of' || 'consort_of' =>
           'lineage',
         'guru_of' || 'disciple_of' => 'teaching',
+        // A house is not a parent. `member_of` was added to the vocabulary
+        // precisely because no existing type meant "belongs to a dynasty" --
+        // filing it under 'lineage' here would undo that distinction, and
+        // leaving it in 'general' put Rama's Ikshvaku membership in the same
+        // bucket as an untyped `related_to`.
+        'member_of' || 'has_member' => 'dynasty',
         'wields' || 'wielded_by' || 'killed' || 'killed_by' ||
         'incarnation_of' || 'has_incarnation' || 'mount_of' || 'has_mount' =>
           'epic',
@@ -220,6 +226,7 @@ class RelLabels {
     'related_to': 'Related to', 'symbol_of': 'Symbol of',
     'has_symbol': 'Symbol', 'associated_with': 'Associated with',
     'part_of': 'Part of', 'has_part': 'Includes',
+    'member_of': 'Of the house of', 'has_member': 'House member',
   };
 
   static const _hi = <String, String>{
@@ -240,8 +247,16 @@ class RelLabels {
     'related_to': 'संबंधित', 'symbol_of': 'प्रतीक',
     'has_symbol': 'चिह्न', 'associated_with': 'संबद्ध',
     'part_of': 'अंश', 'has_part': 'सम्मिलित',
+    'member_of': 'वंश', 'has_member': 'वंशज',
   };
 
+  /// A missing label falls back to the rel_type with its underscores opened
+  /// out, which is a legible last resort in English and *English text in a
+  /// Hindi screen* otherwise. That is not theoretical: `member_of` and
+  /// `has_member` were added to the relation vocabulary for FT-01's dynasty
+  /// work and to `gyan.sql` and `validate.py`, but not here, so Rama's
+  /// Ikshvaku edge read "member of" to a Hindi reader. Anything added to
+  /// `REL_INVERSE` needs a row in both maps above.
   static String of(String relType, bool hi) =>
       (hi ? _hi[relType] : _en[relType]) ??
       relType.replaceAll('_', ' ');
@@ -249,10 +264,109 @@ class RelLabels {
   static String familyLabel(String family, bool hi) => switch (family) {
         'lineage' => hi ? 'परिवार' : 'Family',
         'teaching' => hi ? 'गुरु-शिष्य' : 'Teaching',
+        'dynasty' => hi ? 'वंश' : 'Dynasty',
         'epic' => hi ? 'महाकाव्य' : 'In the epics',
         'text' => hi ? 'ग्रंथ' : 'Texts',
         'place' => hi ? 'स्थान' : 'Places',
         _ => hi ? 'अन्य' : 'Related',
+      };
+}
+
+/// One relation family laid out as a tree: what sits above the root, what sits
+/// below it, and what the two bands are called.
+class TreeBand {
+  /// Edge types on the root whose target belongs ABOVE it.
+  final Set<String> above;
+
+  /// Edge types on the root whose target belongs BELOW it.
+  final Set<String> below;
+
+  final String aboveEn;
+  final String aboveHi;
+  final String belowEn;
+  final String belowHi;
+
+  /// Whether the two bands are separated by generations. Only the genealogical
+  /// family is: a bracket asserts descent, and joining a teacher to a student
+  /// with one would claim a parentage no source gives.
+  final bool descent;
+
+  const TreeBand({
+    required this.above,
+    required this.below,
+    required this.aboveEn,
+    required this.aboveHi,
+    required this.belowEn,
+    required this.belowHi,
+    required this.descent,
+  });
+
+  String aboveLabel(bool hi) => hi ? aboveHi : aboveEn;
+  String belowLabel(bool hi) => hi ? belowHi : belowEn;
+}
+
+/// Which edges feed the band above the root and which feed the band below it,
+/// per relation family.
+///
+/// Lives beside the vocabulary rather than in the family-tree widget because it
+/// is a statement about what the edges MEAN, not about how they are drawn — and
+/// because a screen-private version of it was wrong for as long as the screen
+/// existed with nothing able to check it.
+///
+/// All three families share one shape, since that is what the vocabulary already
+/// says: `child_of`, `disciple_of` and `member_of` all point up from the root —
+/// to a parent, a teacher, a house — and `father_of`/`mother_of`/`parent_of`,
+/// `guru_of` and `has_member` all point down.
+class RelBands {
+  RelBands._();
+
+  static const lineage = TreeBand(
+    above: {'child_of'},
+    // `parent_of` belongs here, with the children. It was grouped with the band
+    // ABOVE for as long as the family tree existed, which inverted 29 edges
+    // across 24 entities: Vishrava's tree gave Kumbhakarna and Vibhishana as
+    // his parents when they are his sons, and Vayu's gave Bhima as his parent.
+    //
+    // The direction is not a judgement call. `parent_of` is never authored — it
+    // exists only as the materialised inverse of `child_of` (REL_INVERSE in
+    // content/tools/validate.py maps `child_of` -> `parent_of`), so
+    // `abhimanyu child_of arjuna` is what produces `arjuna parent_of abhimanyu`
+    // and dst is therefore always the child.
+    below: {'father_of', 'mother_of', 'parent_of'},
+    aboveEn: 'PARENTS',
+    aboveHi: 'माता-पिता',
+    belowEn: 'CHILDREN',
+    belowHi: 'संतान',
+    descent: true,
+  );
+
+  static const teaching = TreeBand(
+    above: {'disciple_of'},
+    below: {'guru_of'},
+    aboveEn: 'TEACHERS',
+    aboveHi: 'गुरु',
+    belowEn: 'STUDENTS',
+    belowHi: 'शिष्य',
+    descent: false,
+  );
+
+  static const dynasty = TreeBand(
+    above: {'member_of'},
+    below: {'has_member'},
+    aboveEn: 'HOUSE',
+    aboveHi: 'वंश',
+    belowEn: 'MEMBERS',
+    belowHi: 'वंशज',
+    descent: false,
+  );
+
+  /// The families a tree can be drawn from, in the order they are offered.
+  static const drawable = ['lineage', 'teaching', 'dynasty'];
+
+  static TreeBand forFamily(String family) => switch (family) {
+        'teaching' => teaching,
+        'dynasty' => dynasty,
+        _ => lineage,
       };
 }
 
