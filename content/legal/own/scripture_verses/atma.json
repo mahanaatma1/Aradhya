@@ -1,0 +1,258 @@
+{
+ "slug": "atma",
+ "title_en": "Atma Upanishad",
+ "title_hi": "आत्म उपनिषद्",
+ "book_id": 35,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here. From 1.6 onward the source's verses run half a step out of phase with the row boundaries, so a row often ends on the opening line of the next thought; we have kept that break where the source puts it.",
+ "rows": [
+  {
+   "id": 21127,
+   "number": "1.1",
+   "body_en": "Om. And then Angiras said this. The Purusha came into being in three kinds: there is the self, and there is the inner self, and there is the highest self. Take first the one that has been put together out of parts, and go over it from the outside inward. The skin, and the hide lying under it, and the flesh, and the hair that grows up through; the thumb, and the fingers ranged along beside it; the spine with its ridge of bone, the nails, the knobs of the ankles; the belly and the navel, the member, the hip, the thighs; the cheeks, the ears, the brows, the forehead above them; the arms, the two sides of the trunk, the head, and the eyes set into it — every one of these comes to be. And the thing that all of them together are made into is born, and then it dies. Just that much, and nothing further than that, is what is being called the self here.",
+   "body_hi": "ॐ। और तब अंगिरा ने यह कहा। पुरुष तीन तरह का होकर हुआ: एक आत्मा है, और एक अंतरात्मा, और एक परमात्मा। पहले उसे लीजिए जो हिस्सों से जोड़कर बनाया गया है। त्वचा और चमड़ा और मांस और रोम; अँगूठा, और उसके बाद उँगलियाँ; पीठ में नीचे तक जाती रीढ़, नाख़ून, टख़ने; पेट और नाभि, लिंग, कटि, जाँघें; गाल, कान, भौंहें, ललाट; बाँहें, देह के दोनों पहलू, सिर, और आँखें — ये सब हो जाते हैं। और जो चीज़ इनसे बनती है वह जन्मती है, और वह मरती है। इतना ही, और इससे आगे कुछ नहीं, आत्मा से मतलब है।",
+   "commentary_en": "The first of the three is defined by being listed. Two dozen parts are named and then the definition closes, and nothing has been said about the thing except what it is made of and that it begins and ends. That is the point of the list: a self you can take an inventory of is a self that can run out.",
+   "commentary_hi": "तीनों में पहले को गिनाकर ही परिभाषित किया जाता है। दो दर्जन हिस्सों के नाम लिए जाते हैं और फिर परिभाषा बंद हो जाती है, और उस चीज़ के बारे में इसके सिवा कुछ नहीं कहा गया कि वह किससे बनी है और शुरू होकर ख़त्म हो जाती है। सूची का मतलब यही है: जिस आत्मा की फ़ेहरिस्त बन सकती है वह आत्मा चुक भी सकती है।"
+  },
+  {
+   "id": 21128,
+   "number": "1.2",
+   "body_en": "And next, the one that goes by the name of the inner self. Earth, water, fire, wind and space; wanting a thing and not wanting it; being pleased and being hurt; desire, and being led astray, and the doubt that will not settle; the marks left behind by a memory that has no beginning to it; the raised pitch and the unraised, and the short and the long and the one drawn out; stumbling and roaring, bursting out and taking delight, dancing, singing, playing upon instruments, the coming apart of things, the stretch of a yawn, and whatever else is of that kind. This is the one that hears, and smells, and tastes; the one that leads and the one that does; the self that knows, the Purusha. The old books, the science of reasoning, the enquiry into the rites, the books of the law — it is this that draws the distinctions among them, and does the work of hearing and smelling and drawing things in. That is the inner self.",
+   "body_hi": "और उसके बाद वह, जो अंतरात्मा के नाम से चलता है। पृथ्वी, जल, अग्नि, वायु और आकाश; किसी चीज़ को चाहना और उसे न चाहना; सुख होना और चोट लगना; काम, और भटकाया जाना, और वह संदेह जो जमता नहीं; उस स्मृति के छोड़े हुए चिह्न जिसका कोई आदि नहीं; उदात्त स्वर और अनुदात्त, और ह्रस्व और दीर्घ और खींचा हुआ; लड़खड़ाना और गरजना, फूट पड़ना और प्रसन्न होना, नाचना, गाना, बाजे बजाना, चीज़ों का बिखर जाना, जमुहाई का खिंचाव, और जो कुछ भी इस तरह का है। यही है जो सुनता है, और सूँघता है, और चखता है; जो ले चलता है और जो करता है; वह जाननेवाली आत्मा, वह पुरुष। पुराण, तर्क की विद्या, कर्मों की मीमांसा, धर्म के शास्त्र — यही है जो उनके बीच भेद करता है, और सुनने और सूँघने और चीज़ों को भीतर खींचने का काम करता है।",
+   "commentary_en": "This is a rag-bag and it is meant to be one. The five elements sit in the same list as jealousy, the two Vedic pitch accents, dancing, and yawning; nothing is sorted and nothing is ranked. Whatever in a person can be catalogued at all goes here, and the sweep of it is the argument, since the third self will be defined by having none of it.",
+   "commentary_hi": "यह एक अटाला है और होना भी यही है। पाँच तत्त्व उसी सूची में बैठे हैं जिसमें द्वेष, वैदिक स्वर के दो भेद, नाचना, और जमुहाई; कुछ छाँटा नहीं गया और किसी को दर्जा नहीं दिया गया। आदमी में जो कुछ भी फ़ेहरिस्त में आ सकता है वह यहाँ जाता है, और यह फैलाव ही दलील है, क्योंकि तीसरी आत्मा की परिभाषा इसी के न होने से बनेगी।"
+  },
+  {
+   "id": 21129,
+   "number": "1.3",
+   "body_en": "And next, the one that goes by the name of the highest self. It is to be waited upon in the way the syllable is. And it is come at by the holding of the breath, by drawing the senses back, by holding fast, by meditation, by being wholly gathered in, by yoking, by drawing conclusions, by a mind that thinks upon the self — come at as the seed of a banyan is come at, or a grain of millet, or by making out a hundred-thousandth part of the tip of a hair. It is got hold of, and it is not got hold of. It is not born and it does not die; it does not dry out and it does not grow damp; it does not burn, and it does not shake, and it is not split and not cut. It has no strands to it; it stands by as a witness; it is clean; it is a self with no parts, and alone, and fine; it keeps nothing for its own; there is no smudge upon it and no changing into anything else; sound and touch and shape and taste and smell have all been left out of it; there is no wavering in it and no reaching after anything; it spreads through everything. It cannot be thought and it cannot be told; and it makes clean the things that are unclean and were never purified.",
+   "body_hi": "और उसके बाद वह, जो परमात्मा के नाम से चलता है। उसकी सेवा उसी तरह की जानी है जिस तरह अक्षर की। और वह प्राण के थामने से हाथ आता है, इंद्रियों को पीछे खींचने से, कसकर धारण करने से, ध्यान से, पूरी तरह समा जाने से, योग से, अनुमान से, उस मन से जो आत्मा पर सोचता है — वैसे हाथ आता है जैसे बरगद का बीज हाथ आता है, या सामा का दाना, या बाल की नोक का एक लाखवाँ हिस्सा निकाल लेने से। वह पकड़ में आता है, और पकड़ में नहीं आता। वह न जन्मता है और न मरता है; न सूखता है और न सीझता है; न जलता है, न काँपता है, न फटता है और न कटता है। उसमें गुण नहीं हैं; वह साक्षी बनकर खड़ा रहता है; वह शुद्ध है; वह ऐसी आत्मा है जिसका कोई अवयव नहीं, और अकेली, और सूक्ष्म; वह कुछ अपना नहीं रखती; उस पर कोई धब्बा नहीं और किसी और चीज़ में बदलना नहीं; शब्द और स्पर्श और रूप और रस और गंध सब उससे बाहर छोड़ दिए गए हैं; उसमें कोई डोलना नहीं और किसी चीज़ की ओर हाथ बढ़ाना नहीं; वह सब में फैली हुई है। उसे सोचा नहीं जा सकता और कहा नहीं जा सकता; और वह उन चीज़ों को पवित्र कर देती है जो अशुद्ध हैं और कभी पवित्र नहीं की गईं।",
+   "commentary_en": "Almost every clause here is a denial, and the two that are not are the strangest in the book: this thing is come at like a banyan seed, or a grain of millet, or the hundred-thousandth part of a hair's tip. The list of practices before them is orthodox and could be from any manual. What the smallness images add is that the target is not far off but too small to aim at.",
+   "commentary_hi": "यहाँ लगभग हर वाक्यांश एक निषेध है, और जो दो नहीं हैं वे किताब में सबसे अजीब हैं: यह चीज़ बरगद के बीज की तरह हाथ आती है, या सामा के दाने की तरह, या बाल की नोक के एक लाखवें हिस्से की तरह। उनसे पहले साधनों की सूची शास्त्रसम्मत है और किसी भी पोथी की हो सकती थी। छोटेपन के बिंब जो जोड़ते हैं वह यह है कि निशाना दूर नहीं है, बल्कि इतना छोटा है कि उस पर तानी नहीं जा सकती।"
+  },
+  {
+   "id": 21130,
+   "number": "1.4",
+   "body_en": "There is no work in it, and for it there is no going round and round. It goes by the name of the self; it is Shiva; it is clean; it is one and one only, with no second to it, and so it is always. Having the form of brahman, what shows itself is brahman and that alone.",
+   "body_hi": "उसमें कोई क्रिया नहीं, और उसके लिए कोई गोल-गोल घूमना नहीं। वह आत्मा के नाम से चलता है; वह शिव है; वह शुद्ध है; वह एक है और एक ही, उसका कोई दूसरा नहीं, और वह हमेशा ऐसा ही है। ब्रह्म का रूप होने से, जो अपने को दिखाता है वह ब्रह्म ही है, और कुछ नहीं।",
+   "commentary_en": "The name Shiva is dropped into the middle of a definition that is otherwise pure Advaita, and it is not argued for. Half a line later the sentence has gone back to brahman and stays there for the rest of the book. Somebody has put their own god's name into an inherited formula and left it standing without a word of defence.",
+   "commentary_hi": "शिव का नाम एक ऐसी परिभाषा के बीच में डाल दिया गया है जो बाक़ी पूरी तरह अद्वैत की है, और उसके लिए कोई दलील नहीं दी गई। आधी पंक्ति बाद वाक्य ब्रह्म पर लौट आता है और किताब भर वहीं रहता है। किसी ने विरासत में मिले सूत्र में अपने ही देवता का नाम रख दिया है और उसे बिना एक शब्द बचाव के खड़ा छोड़ दिया है।"
+  },
+  {
+   "id": 21131,
+   "number": "1.5",
+   "body_en": "But the world's showing up as untrue is the thing that turns the round of births back the other way. To know that what is in front of you is a pot — what rule is there that anybody has to consult for that?",
+   "body_hi": "पर जगत का असत्य होकर दिखना ही वह चीज़ है जो जन्मों के चक्कर को उलटी दिशा में मोड़ देती है। सामने रखी चीज़ को घड़ा जान लेने के लिए — ऐसा कोई नियम है जिसे किसी को देखना पड़ता हो?",
+   "commentary_en": "The question is rhetorical and the answer is meant to be obvious: you do not check a rulebook before recognising a pot. What the verse is smuggling in is that the recognition it cares about works the same way. If seeing the world as untrue needed a procedure, the procedure would be one more thing in the world.",
+   "commentary_hi": "सवाल दिखावटी है और उत्तर का ज़ाहिर होना ही मक़सद है: घड़े को पहचानने से पहले कोई नियम-पोथी नहीं देखी जाती। श्लोक चुपके से जो घुसा रहा है वह यह है कि जिस पहचान की उसे परवाह है वह भी इसी तरह चलती है। अगर जगत को असत्य देखने के लिए कोई विधि चाहिए होती, तो वह विधि जगत की एक और चीज़ ही होती।"
+  },
+  {
+   "id": 21132,
+   "number": "1.6",
+   "body_en": "That in whose being present the thought of an object comes up at all, and comes up without any soundness of proof behind it — this self, which stands settled from the first, is what shows out when there is a proof there to show anything.",
+   "body_hi": "वह, जिसके होने पर ही किसी वस्तु का बोध उठता है, और बिना किसी प्रमाण की मज़बूती के उठता है — यही आत्मा, जो शुरू से सिद्ध खड़ी है, वही है जो तब झलकती है जब कुछ भी दिखाने के लिए कोई प्रमाण मौजूद हो।",
+   "commentary_en": "The argument turns the usual order of things over. Proof does not establish the self; the self is what any proof already stands on, since a means of knowing has to be known by somebody before it can be used on anything. Say it the other way and you have a tool with nobody holding it.",
+   "commentary_hi": "दलील चीज़ों के आम क्रम को उलट देती है। प्रमाण आत्मा को सिद्ध नहीं करता; आत्मा वही है जिस पर कोई भी प्रमाण पहले से टिका है, क्योंकि जानने के साधन को किसी चीज़ पर लगाने से पहले किसी को उसे जानना ही पड़ता है। उलटकर कहिए तो हाथ में औज़ार रह जाता है और थामनेवाला कोई नहीं।"
+  },
+  {
+   "id": 21133,
+   "number": "1.7",
+   "body_en": "It does not look to a place, nor to a time either, nor to anybody's having been made clean beforehand. I am Devadatta: a knowing of that kind hangs upon nothing outside itself.",
+   "body_hi": "वह न जगह देखता है, न समय, और न यह कि कोई पहले से पवित्र किया गया हो। मैं देवदत्त हूँ: इस तरह का जानना अपने बाहर किसी चीज़ पर टिका नहीं है।",
+   "commentary_en": "The example is a man's own name, which is as ordinary a piece of knowledge as there is, and it is carrying the weight of the whole chapter. Nobody consults the calendar or bathes first before knowing who they are; and that, the verse says, is the shape self-knowledge has.",
+   "commentary_hi": "उदाहरण आदमी का अपना नाम है, जो जानकारी का जितना आम टुकड़ा हो सकता है उतना है, और वही पूरे अध्याय का बोझ ढो रहा है। कोई अपने को जानने से पहले पंचांग नहीं देखता और न नहाता है; और श्लोक कहता है कि आत्मज्ञान का आकार यही है।"
+  },
+  {
+   "id": 21134,
+   "number": "1.8",
+   "body_en": "And it is the same for the man who knows brahman, with this knowing of his that says I am brahman. He by whose burning brightness the whole world is lit, the way it is lit by the sun —",
+   "body_hi": "और जो आदमी ब्रह्म को जानता है उसके लिए भी बात बिलकुल वैसी ही है, उसके इस जानने के साथ जो कहता है कि मैं ब्रह्म हूँ। वह, जिसके तेज से सारा जगत उजाला हो उठता है, ठीक उसी तरह जैसे वह सूर्य से रोशन होता है —",
+   "commentary_en": "The comparison is doing the work of an argument by standing next to it. If knowing your own name needs nothing outside it, then knowing that you are brahman needs nothing outside it either — and the two are set side by side without a word to join them, as though the likeness were too plain to spell out.",
+   "commentary_hi": "उपमा बग़ल में खड़े होकर दलील का काम कर रही है। अगर अपना नाम जानने के लिए बाहर कुछ नहीं चाहिए, तो यह जानने के लिए भी कुछ नहीं चाहिए कि आप ब्रह्म हैं — और दोनों को जोड़ने के लिए एक शब्द भी न लगाकर बग़ल-बग़ल रख दिया गया है, जैसे समानता बताने लायक़ भी न हो।"
+  },
+  {
+   "id": 21135,
+   "number": "1.9",
+   "body_en": "what is not the self, and untrue, and of no account — what is there in that which could light him up? The Vedas, the treatises, the old books, and every one of the elements besides —",
+   "body_hi": "जो आत्मा नहीं है, और असत्य है, और तुच्छ — उसमें ऐसा क्या है जो उसे उजाला कर सके? वेद, शास्त्र, पुराण, और उनके अलावा एक-एक भूत भी —",
+   "commentary_en": "The question is put so that only one answer will fit, and the point is not that scripture is worthless but that it is on the wrong side of the transaction. Nothing that is lit can be the thing doing the lighting; and the Vedas are on the list of things that get lit.",
+   "commentary_hi": "सवाल ऐसा रखा गया है कि उसमें एक ही उत्तर बैठे, और बात यह नहीं है कि शास्त्र बेकार है, बल्कि यह कि वह लेन-देन के ग़लत पाले में है। जो चीज़ उजाला की जाती है वह उजाला करनेवाली नहीं हो सकती; और वेद उन चीज़ों की सूची में हैं जो उजाला की जाती हैं।"
+  },
+  {
+   "id": 21136,
+   "number": "1.10",
+   "body_en": "these have whatever meaning they have by him; then what is there that could light up the knower himself? Setting his hunger aside and the aching of his body, a child goes on playing with the thing in his hands.",
+   "body_hi": "इनका जो भी अर्थ है वह उसी से है; तो फिर ऐसा क्या है जो ख़ुद जाननेवाले को उजाला कर सके? अपनी भूख को और देह की पीड़ा को किनारे रखकर बच्चा हाथ की चीज़ से खेलता चला जाता है।",
+   "commentary_en": "The best line in the book, and it arrives with no warning in the middle of an argument about proof. A child who has forgotten he is hungry is not exercising a discipline; he is simply somewhere else. That, and not any feat of concentration, is what the next verse is going to hold up as the model.",
+   "commentary_hi": "किताब की सबसे अच्छी पंक्ति, और वह प्रमाण की बहस के बीचोंबीच बिना चेतावनी आ जाती है। जो बच्चा भूल गया है कि वह भूखा है वह कोई साधना नहीं कर रहा; वह बस कहीं और है। अगला श्लोक जिसे नमूना बनाकर उठाएगा वह यही है, ध्यान का कोई करतब नहीं।"
+  },
+  {
+   "id": 21137,
+   "number": "1.11",
+   "body_en": "In just that way the man who knows takes his pleasure: nothing his own, no I in him, and happy with it. In the middle of things that could be wanted he keeps the shape of somebody who wants nothing; the sage goes about, and goes about alone.",
+   "body_hi": "ठीक उसी तरह जाननेवाला आदमी अपना सुख लेता है: कुछ अपना नहीं, उसमें कोई मैं नहीं, और इसी में ख़ुश। जिन चीज़ों की चाह की जा सकती है उनके बीच वह उसका आकार बनाए रखता है जिसे कुछ नहीं चाहिए; मुनि घूमता है, और अकेला ही घूमता है।",
+   "commentary_en": "Note what is not being asked for. He is not told to leave the things that could be wanted, only to keep the shape of a man who does not want them; the child in the verse before had food in front of him and forgot about it. Renunciation here is a matter of attention, not of inventory.",
+   "commentary_hi": "ध्यान दें कि क्या नहीं माँगा जा रहा है। उसे यह नहीं कहा जाता कि चाही जा सकने वाली चीज़ें छोड़ दो, बस उस आदमी का आकार बनाए रखो जिसे वे नहीं चाहिए; पिछले श्लोक के बच्चे के सामने खाना रखा था और वह उसे भूल गया। यहाँ त्याग ध्यान का मामला है, फ़ेहरिस्त का नहीं।"
+  },
+  {
+   "id": 21138,
+   "number": "1.12",
+   "body_en": "He is content with his own self and looks for nothing more, standing of himself as the self of everything there is. He has no money and he is content all the same; he has nobody at all to help him, and his strength is great.",
+   "body_hi": "वह अपनी ही आत्मा से तृप्त है और उससे आगे कुछ नहीं ढूँढ़ता, ख़ुद ही सब कुछ की आत्मा बनकर खड़ा। उसके पास धन नहीं है और वह फिर भी तृप्त है; उसकी मदद करनेवाला कोई नहीं है, और उसका बल बड़ा है।",
+   "commentary_en": "Two flat contradictions, stated as facts and not softened. He is poor and wants nothing; he is unsupported and strong. The form of the sentence is the whole of its argument: put the two halves together often enough and the reader stops hearing a paradox and starts hearing a description.",
+   "commentary_hi": "दो सीधे विरोध, तथ्य की तरह कहे गए और नरम नहीं किए गए। वह ग़रीब है और उसे कुछ नहीं चाहिए; उसका कोई सहारा नहीं और वह बलवान है। वाक्य का ढाँचा ही उसकी पूरी दलील है: दोनों आधों को काफ़ी बार साथ रख दीजिए और पढ़नेवाले को विरोधाभास सुनाई देना बंद हो जाता है, ब्योरा सुनाई देने लगता है।"
+  },
+  {
+   "id": 21139,
+   "number": "1.13",
+   "body_en": "He is satisfied for good although he has not eaten; there is nobody to match him, and he looks upon all alike. He goes on doing and is not the doer of it; he takes no enjoyment, and yet the fruit comes to him to be enjoyed.",
+   "body_hi": "वह हमेशा के लिए तृप्त है हालाँकि उसने खाया नहीं; उसकी बराबरी करनेवाला कोई नहीं, और वह सब पर एक जैसी नज़र डालता है। वह करता चला जाता है और उसका करनेवाला नहीं है; वह कोई भोग नहीं लेता, और फिर भी फल भोगने के लिए उसके पास आता है।",
+   "commentary_en": "Four more of the same, and the last one is the load-bearing one: the deed is done and the fruit arrives, and neither is his. That is how the tradition keeps a liberated man inside a working life without making him either idle or accountable, and it is stated here in eight words.",
+   "commentary_hi": "उसी तरह के चार और, और आख़िरी ही भार उठा रहा है: काम हो जाता है और फल आ जाता है, और दोनों उसके नहीं हैं। परंपरा मुक्त आदमी को चलते-फिरते जीवन के भीतर इसी तरह रखती है, उसे न निकम्मा बनाकर और न जवाबदेह, और यहाँ यह आठ शब्दों में कह दिया गया है।"
+  },
+  {
+   "id": 21140,
+   "number": "1.14",
+   "body_en": "He has a body and he is bodiless; he is marked off within limits, and he goes everywhere. This man who knows brahman, being always without a body and nowhere in particular —",
+   "body_hi": "उसके पास देह है और वह देहरहित है; वह हदों में बँधा है, और वह हर जगह जाता है। यह आदमी जो ब्रह्म को जानता है, हमेशा देह के बिना और किसी ख़ास जगह नहीं —",
+   "commentary_en": "The run of contradictions has been going for three verses and here it thins to two, as though the form had done its work. And then the sentence does not finish: it hands its subject over to the next verse and lets the predicate arrive there.",
+   "commentary_hi": "विरोधों की झड़ी तीन श्लोकों से चल रही है और यहाँ दो पर आकर पतली हो जाती है, जैसे ढाँचे ने अपना काम कर लिया हो। और फिर वाक्य पूरा नहीं होता: वह अपना विषय अगले श्लोक को सौंप देता है और विधेय वहाँ आने देता है।"
+  },
+  {
+   "id": 21141,
+   "number": "1.15",
+   "body_en": "the liked and the disliked do not touch him, and no more do the fair and the foul. As people speak of the sun, which looks as though the dark had swallowed it and has not been swallowed at all —",
+   "body_hi": "प्रिय और अप्रिय उसे छूते नहीं, और भला-बुरा भी नहीं छूता। जैसे लोग सूर्य के बारे में कहते हैं, जो देखने में ऐसा लगता है मानो अँधेरे ने उसे निगल लिया हो और जो निगला गया ज़रा भी नहीं —",
+   "commentary_en": "An eclipse is a good thing to argue from, because the mistake in it is public and correctable. Everybody says the sun has been swallowed, and everybody is wrong in the same way at the same time, and the sun is not affected by the unanimity.",
+   "commentary_hi": "ग्रहण से दलील देना अच्छा है, क्योंकि उसमें की भूल सार्वजनिक है और सुधारी जा सकती है। सब कहते हैं कि सूर्य निगल लिया गया, और सब एक ही तरह से एक ही समय ग़लत हैं, और इस सर्वसम्मति से सूर्य पर कोई असर नहीं पड़ता।"
+  },
+  {
+   "id": 21142,
+   "number": "1.16",
+   "body_en": "and say that it has been swallowed, out of a mistake, not having found out what the thing itself is like — just so the best of those who know brahman, loosed from the ties of the body and the rest —",
+   "body_hi": "और कहते हैं कि वह निगल लिया गया, एक भूल के कारण, यह पता न कर पाने पर कि चीज़ ख़ुद कैसी है — ठीक उसी तरह ब्रह्म को जाननेवालों में सबसे भला, देह वग़ैरह के बंधनों से छूटा हुआ —",
+   "commentary_en": "The reason given for the error is worth pausing on: not stupidity, but not having found out what the thing is like. It is an incuriosity rather than an incapacity, which leaves the mistake correctable and puts the burden back on whoever is making it.",
+   "commentary_hi": "भूल के लिए दी गई वजह पर ठहरना चाहिए: मूर्खता नहीं, बल्कि यह पता न करना कि चीज़ कैसी है। यह अक्षमता नहीं, बेपरवाही है, और इससे भूल सुधारी जा सकने वाली रह जाती है और बोझ उसी पर लौट आता है जो उसे कर रहा है।"
+  },
+  {
+   "id": 21143,
+   "number": "1.17",
+   "body_en": "the dull-witted look at and take for a man with a body, because what they are seeing is the body's seeming. But like the skin a snake has crawled out of, this body, once it is let go of, stays where it is.",
+   "body_hi": "मूढ़ लोग देह वाले आदमी की तरह देखते और मानते हैं, क्योंकि वे जो देख रहे हैं वह देह का आभास है। पर उस केंचुली की तरह जिससे साँप निकल चुका है, यह देह, एक बार छोड़ दी जाने पर, जहाँ है वहीं पड़ी रहती है।",
+   "commentary_en": "The cast skin is exact where a gentler image would not be. It keeps the shape of the snake, down to the eyes, and anybody who has picked one up knows at once that nothing is in it. The body of a liberated man, the verse says, is being read the way a child reads a sloughed skin.",
+   "commentary_hi": "केंचुली वहाँ ठीक बैठती है जहाँ कोई नरम बिंब नहीं बैठता। वह साँप का आकार बनाए रखती है, आँखों तक, और जिसने उसे उठाया है वह फ़ौरन जान जाता है कि उसमें कुछ नहीं है। श्लोक कहता है कि मुक्त आदमी की देह को उसी तरह पढ़ा जा रहा है जैसे बच्चा उतरी केंचुली को पढ़ता है।"
+  },
+  {
+   "id": 21144,
+   "number": "1.18",
+   "body_en": "It gets pushed about this way and that by whatever the breath-wind happens to be doing. As a stream carries a log along, over the low ground and over the high —",
+   "body_hi": "प्राणवायु जो कुछ भी कर रहा हो, उससे वह इधर-उधर धकेली जाती फिरती है। जैसे धारा किसी लक्कड़ को बहाकर ले जाती है, नीची ज़मीन पर से और ऊँची पर से —",
+   "commentary_en": "A log in a stream does not choose the low ground or the high; it also does not resist them. The comparison is careful to be about a thing with no stake in where it ends up, which is the only way it can describe a body without describing a passenger inside it.",
+   "commentary_hi": "धारा में बहता लक्कड़ नीची ज़मीन या ऊँची नहीं चुनता; वह उनका विरोध भी नहीं करता। उपमा जान-बूझकर ऐसी चीज़ के बारे में है जिसे इससे कोई मतलब नहीं कि वह कहाँ जाकर लगेगी, और देह का ब्योरा उसके भीतर बैठे किसी सवार के ब्योरे के बिना देने का यही एक रास्ता है।"
+  },
+  {
+   "id": 21145,
+   "number": "1.19",
+   "body_en": "so the body is carried by what has been laid down for it, through the enjoyments that belong to its own span of time. Letting go of the way that is marked out and the way that is not, whoever should stand by the self alone —",
+   "body_hi": "उसी तरह देह उसी से बहाई जाती है जो उसके लिए तय कर दिया गया है, उन भोगों में से जो उसके अपने समय के हैं। जो लक्ष्य वाला रास्ता है और जो नहीं है, दोनों को छोड़कर, जो कोई अकेली आत्मा के सहारे खड़ा रहे —",
+   "commentary_en": "Both roads are to be given up, the marked one and the unmarked, which rules out the obvious escape of choosing the trackless way and feeling free about it. What is left when both are dropped is not a third road; it is standing still.",
+   "commentary_hi": "दोनों रास्ते छोड़ने हैं, चिह्न वाला और बिना चिह्न वाला, और इससे वह ज़ाहिर बचाव भी बंद हो जाता है कि बिना पगडंडी वाला रास्ता चुनकर अपने को आज़ाद महसूस किया जाए। दोनों छोड़ने पर जो बचता है वह तीसरा रास्ता नहीं है; वह खड़े रह जाना है।"
+  },
+  {
+   "id": 21146,
+   "number": "1.20",
+   "body_en": "he is Shiva himself, right there in plain sight, this best of the men who know brahman. He is free always, while he is still alive; he has got what he came for, this best of the men who know brahman.",
+   "body_hi": "वही ख़ुद शिव है, ठीक सामने खुली नज़र में, ब्रह्म को जाननेवालों में यह सबसे भला। वह हमेशा मुक्त है, जीते-जी ही; उसे जिसके लिए वह आया था वह मिल गया, ब्रह्म को जाननेवालों में यह सबसे भला।",
+   "commentary_en": "Freedom while still alive is stated here without any hedging about a body that has to be worn out first, and the phrase for it sits in the middle of the verse as though it needed no defending. The title lands at the end of each of the two lines, which is how a verse marks the place it wants remembered.",
+   "commentary_hi": "जीते-जी मुक्ति यहाँ बिना किसी लाग-लपेट के कह दी गई है, यह जोड़े बिना कि पहले कोई देह चुकानी होगी, और उसके लिए आया वाक्यांश श्लोक के बीच में ऐसे बैठा है जैसे उसे बचाव की ज़रूरत ही न हो। पदवी दोनों पंक्तियों में से हर एक के सिरे पर आकर गिरती है, और श्लोक जिस जगह को याद रखवाना चाहता है उसे इसी तरह निशान लगाता है।"
+  },
+  {
+   "id": 21147,
+   "number": "1.21",
+   "body_en": "When the thing that limited him falls away, being brahman he comes to brahman, in which there is no second. As a player on a stage is a man whether the costume is upon him or off —",
+   "body_hi": "जिस चीज़ ने उसे सीमित किया था वह गिर जाने पर, ब्रह्म होकर वह ब्रह्म तक पहुँचता है, जिसमें कोई दूसरा नहीं। जैसे रंगमंच का खेलनेवाला आदमी ही रहता है, पोशाक उस पर हो या न हो —",
+   "commentary_en": "Three comparisons for the same thing are about to be made in a row, and this is the first: an actor out of costume. Its particular use is that it puts the change on the outside. Nothing happened to the man when the costume came off, and nothing happened to him when it went on either.",
+   "commentary_hi": "एक ही चीज़ के लिए तीन उपमाएँ एक के बाद एक आने वाली हैं, और यह पहली है: पोशाक उतारा हुआ नट। इसका ख़ास काम यह है कि यह बदलाव को बाहर रख देती है। पोशाक उतरने पर उस आदमी को कुछ नहीं हुआ, और पहनने पर भी कुछ नहीं हुआ था।"
+  },
+  {
+   "id": 21148,
+   "number": "1.22",
+   "body_en": "just so the best of those who know brahman is brahman for good and nothing besides. As, when a pot gets broken, the space that had been shut inside it becomes plain space and nothing more —",
+   "body_hi": "ठीक उसी तरह ब्रह्म को जाननेवालों में सबसे भला हमेशा ब्रह्म ही है और कुछ नहीं। जैसे घड़ा टूटने पर उसके भीतर का आकाश आकाश ही हो जाता है और उससे ज़्यादा कुछ नहीं —",
+   "commentary_en": "The pot and the space in it is the most worn image in this whole literature, and it is worn because it works. What it adds to the actor is that here the limit was never a thing in its own right: an actor's costume exists, whereas the pot's inside was only ever the shape of an absence.",
+   "commentary_hi": "घड़ा और उसके भीतर का आकाश इस पूरे साहित्य का सबसे घिसा बिंब है, और घिसा इसलिए है कि वह चलता है। नट की उपमा में यह जो जोड़ता है वह यह है कि यहाँ हद अपने आप में कोई चीज़ ही नहीं थी: नट की पोशाक होती है, जबकि घड़े का भीतर कभी एक अभाव का आकार भर था।"
+  },
+  {
+   "id": 21149,
+   "number": "1.23",
+   "body_en": "so, when the thing that had been limiting him dissolves away, the man who knows brahman is brahman himself and no more than that. Take milk that has been poured out into milk, and oil into oil, and water into water of its own —",
+   "body_hi": "उसी तरह, जो चीज़ उसे हद में बाँधे हुए थी वह घुलकर बैठ जाने पर, ब्रह्म को जाननेवाला ख़ुद ब्रह्म है और उससे ज़्यादा कुछ नहीं। जैसे दूध में उड़ेला गया दूध, और तेल में तेल, और जल अपने ही जल में —",
+   "commentary_en": "The third comparison is the only one of the three that gets rid of the seam. An actor can put the costume back on and a broken pot leaves shards, but milk poured into milk cannot be told from what it was poured into, and there is no operation that would separate them again.",
+   "commentary_hi": "तीनों उपमाओं में तीसरी ही एक है जो सीवन से पीछा छुड़ाती है। नट पोशाक फिर पहन सकता है और टूटे घड़े के ठीकरे रह जाते हैं, पर दूध में उड़ेले दूध को उससे अलग नहीं पहचाना जा सकता जिसमें वह उड़ेला गया, और उन्हें फिर अलग करने की कोई क्रिया नहीं है।"
+  },
+  {
+   "id": 21150,
+   "number": "1.24",
+   "body_en": "once put together come to be one thing, so does the sage who knows the self, in the self. This, then, is aloneness with no body to it, being and nothing but being, with no break anywhere in it —",
+   "body_hi": "एक बार मिल जाने पर एक ही चीज़ हो जाते हैं, वैसे ही आत्मा को जाननेवाला मुनि, आत्मा में। तो यही है देह के बिना का अकेलापन, सत्ता और सत्ता के सिवा कुछ नहीं, कहीं भी उसमें कोई दरार नहीं —",
+   "commentary_en": "The technical name arrives only after the three pictures have done their work, which is the right order and not the usual one. A reader who has been shown a costume, a broken pot and milk in milk already knows what the word means before it is used on them.",
+   "commentary_hi": "पारिभाषिक नाम तीनों चित्रों का काम हो चुकने के बाद ही आता है, और यही ठीक क्रम है, आम नहीं। जिस पढ़नेवाले को पोशाक, टूटा घड़ा और दूध में दूध दिखा दिया गया है वह शब्द का अर्थ उस पर लगाए जाने से पहले ही जानता है।"
+  },
+  {
+   "id": 21151,
+   "number": "1.25",
+   "body_en": "and having come into the state of brahman, this ascetic does not turn back again. Burnt up by the knowing that being is what he himself is, the bodies made of learning and the rest —",
+   "body_hi": "और ब्रह्म की अवस्था में आ जाने पर यह यति फिर लौटकर नहीं आता। यह जान लेने से कि सत्ता ही वह ख़ुद है, जलकर राख हुए विद्या वग़ैरह के शरीर —",
+   "commentary_en": "Learning is on the list of things that get burnt away, along with whatever else the man had been made of. Nothing in the text softens this, and nothing needs to: a book that has already put the Vedas among the things that get lit up would be going back on itself if it spared learning here.",
+   "commentary_hi": "विद्या उन चीज़ों की सूची में है जो जल जाती हैं, उस सबके साथ जिससे वह आदमी बना था। पाठ में कुछ इसे नरम नहीं करता, और करने की ज़रूरत भी नहीं: जो किताब वेदों को पहले ही उजाला की जाने वाली चीज़ों में रख चुकी है, वह यहाँ विद्या को बचा देती तो अपनी ही बात से मुकर जाती।"
+  },
+  {
+   "id": 21152,
+   "number": "1.26",
+   "body_en": "since this man has come to be brahman, where would brahman arise from for him? Being tied down and getting loose are things that maya has put together; in one's own self, as a matter of fact, neither of them is there at all.",
+   "body_hi": "चूँकि यह आदमी ब्रह्म हो चुका है, उसके लिए ब्रह्म कहाँ से उठेगा? बँधना और छूटना, ये माया ने जोड़कर बनाई हुई चीज़ें हैं; अपनी ही आत्मा में, असल बात यह है कि, इनमें से कोई नहीं है।",
+   "commentary_en": "The last five verses of the book are going to take this sentence apart, and the surprising half is the second one. It is easy enough to say that bondage is unreal; saying in the same breath that release is unreal too costs the writer his own subject matter, and he says it anyway.",
+   "commentary_hi": "किताब के आख़िरी पाँच श्लोक इस वाक्य को खोलने वाले हैं, और चौंकाने वाला दूसरा आधा है। यह कहना आसान है कि बंधन असत्य है; उसी साँस में यह कहना कि मुक्ति भी असत्य है, लेखक से उसका अपना विषय ही छीन लेता है, और वह फिर भी कहता है।"
+  },
+  {
+   "id": 21153,
+   "number": "1.27",
+   "body_en": "As in a rope, which does nothing at all, the seeming snake comes out and goes away again. It is from a covering's being there and its not being there that being tied down and getting loose come to be spoken of —",
+   "body_hi": "जैसे उस रस्सी में, जो कुछ भी नहीं करती, आभास का साँप निकल आता है और फिर चला जाता है। किसी ढँकने वाली चीज़ के होने और न होने से ही बँधना और छूटना कहे जाने लगते हैं —",
+   "commentary_en": "The rope is picked because it does nothing. A snake appearing on it and going away again are two events in the man looking, and none in the rope; so if bondage and release are like that pair, then they are events in the looking and the self has no history at all.",
+   "commentary_hi": "रस्सी इसलिए चुनी गई है कि वह कुछ नहीं करती। उस पर साँप का आ जाना और फिर चला जाना देखनेवाले आदमी में दो घटनाएँ हैं, रस्सी में एक भी नहीं; सो अगर बंधन और मुक्ति उस जोड़े जैसे हैं, तो वे देखने में घटनाएँ हैं और आत्मा का कोई इतिहास ही नहीं।"
+  },
+  {
+   "id": 21154,
+   "number": "1.28",
+   "body_en": "and there is no covering upon brahman anywhere; it is uncovered, because there is nothing else to be a cover for it. The notion that a thing is, and the notion that it is not —",
+   "body_hi": "और ब्रह्म पर कहीं कोई ढँकने वाली चीज़ नहीं है; वह अनढँका है, क्योंकि उसे ढँकने के लिए कोई और चीज़ ही नहीं है। यह ख़याल कि कोई चीज़ है, और यह कि वह नहीं है —",
+   "commentary_en": "The reason offered is worth more than the claim. Brahman is not uncovered because the cover has been taken off; it is uncovered because a cover would have to be a second thing, and by this point in the book there is no second thing available to be one.",
+   "commentary_hi": "जो वजह दी गई है वह दावे से ज़्यादा क़ीमती है। ब्रह्म इसलिए अनढँका नहीं है कि ढक्कन हटा दिया गया; वह इसलिए अनढँका है कि ढक्कन को दूसरी चीज़ होना पड़ेगा, और किताब में इस जगह तक कोई दूसरी चीज़ बची ही नहीं जो वह हो सके।"
+  },
+  {
+   "id": 21155,
+   "number": "1.29",
+   "body_en": "both of these belong to the intellect and to nothing else, and not to the thing that lasts for ever. And so these two that maya has put together, being tied down and getting loose, are not in the self.",
+   "body_hi": "ये दोनों बुद्धि के हैं और किसी के नहीं, और उस चीज़ के नहीं जो हमेशा रहती है। और इसीलिए माया ने जोड़कर बनाई हुई ये दोनों चीज़ें, बँधना और छूटना, आत्मा में नहीं हैं।",
+   "commentary_en": "Is and is not are handed over to the intellect as its own two moods, which is a considerable thing to say: existence and non-existence become facts about the instrument rather than about anything it is turned on. The verse then brings back the sentence from three verses earlier as its conclusion, with a therefore set in front of it and the tail trimmed off.",
+   "commentary_hi": "है और नहीं है, दोनों बुद्धि को उसके अपने दो भाव कहकर सौंप दिए जाते हैं, और यह कहना बड़ी बात है: होना और न होना उस औज़ार के बारे में तथ्य बन जाते हैं, उस चीज़ के बारे में नहीं जिस पर वह लगाया जाता है। फिर श्लोक तीन पीछे के वाक्य को अपने निष्कर्ष की तरह वापस ले आता है, उसके आगे एक इसलिए रखकर और उसकी पूँछ काटकर।"
+  },
+  {
+   "id": 21156,
+   "number": "1.30",
+   "body_en": "In what has no parts and does no work, at peace, with nothing in it to be blamed and no smudge upon it; in the highest truth of things, which has no second — where would there be room for anything made up, any more than there is in the empty sky?",
+   "body_hi": "जो अखंड है और कोई क्रिया नहीं करता, शांत, जिसमें दोष देने लायक़ कुछ नहीं और जिस पर कोई धब्बा नहीं; उस परम तत्त्व में, जिसका कोई दूसरा नहीं — वहाँ किसी गढ़ी हुई चीज़ के लिए जगह कहाँ से आएगी, उससे ज़्यादा जितनी खुले आकाश में है?",
+   "commentary_en": "Five words of denial with one word of peace set in among them, and then the sky, which is the one thing in ordinary experience that will not hold a mark. You cannot scratch it, divide it, or put anything down in it; whatever seems to be there is somewhere else, at some distance, and the sky itself has taken no impression at all.",
+   "commentary_hi": "निषेध के पाँच शब्द, उनके बीच में शांति का एक शब्द रखा हुआ, और फिर आकाश, जो आम अनुभव में वही एक चीज़ है जिस पर कोई निशान नहीं टिकता। उसे खुरचा नहीं जा सकता, बाँटा नहीं जा सकता, उसमें कुछ रखा नहीं जा सकता; जो कुछ वहाँ दिखता है वह कहीं और है, किसी दूरी पर, और आकाश पर ज़रा भी छाप नहीं पड़ी है।"
+  },
+  {
+   "id": 21157,
+   "number": "1.31",
+   "body_en": "Nothing held in, and nothing coming into being; nobody tied down, and nobody working away at getting untied; nobody who wants to be free, and nobody who is free. That is how the matter stands when it is put at its highest.",
+   "body_hi": "कुछ रोका हुआ नहीं, और कुछ पैदा होता हुआ नहीं; कोई बँधा हुआ नहीं, और कोई छूटने की साधना में लगा हुआ नहीं; कोई मुक्ति चाहनेवाला नहीं, और कोई मुक्त नहीं। बात को सबसे ऊँचे पर रखा जाए तो वह ऐसी ही खड़ी है।",
+   "commentary_en": "This same verse closes the Amritabindu, and we have rendered it the same way here, because it is one stock verse and not two. Six denials, and the last pair is the one that costs: no seeker, and no one who has finished seeking. Everything the book has been saying about a liberated man is withdrawn in its final clause, and that withdrawal is offered as the highest way of putting it.",
+   "commentary_hi": "यही श्लोक अमृतबिंदु को भी बंद करता है, और हमने इसे यहाँ उसी तरह उतारा है, क्योंकि यह एक ही चलता हुआ श्लोक है, दो नहीं। छह निषेध, और आख़िरी जोड़ा ही क़ीमत माँगता है: कोई खोजनेवाला नहीं, और कोई खोज पूरी कर चुका हुआ नहीं। मुक्त आदमी के बारे में किताब ने जो कुछ कहा है वह उसके आख़िरी वाक्यांश में वापस ले लिया जाता है, और उस वापसी को ही सबसे ऊँचा कहने का ढंग बताया जाता है।"
+  }
+ ]
+}
