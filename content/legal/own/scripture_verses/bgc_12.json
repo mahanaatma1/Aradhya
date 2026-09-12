@@ -1,0 +1,170 @@
+{
+ "slug": "bgc_12",
+ "title_en": "Bhakti Yoga",
+ "title_hi": "भक्ति योग",
+ "book_id": 12,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 470,
+   "number": "12.1",
+   "body_en": "Arjuna said: There are people who stay joined to you day in and day out, and give themselves to you as you stand there in front of them. And there are others who go after the thing that cannot be seen and does not wear out. Of these two, which sort has the better grasp of yoga?",
+   "body_hi": "अर्जुन ने कहा — कुछ लोग हैं जो दिन-रात आपसे जुड़े रहते हैं, और जैसे आप सामने खड़े हैं वैसे ही अपने आप को आपको सौंप देते हैं। और कुछ हैं जो उसके पीछे जाते हैं जो न दिखता है न घिसता है। इन दोनों में योग को बेहतर कौन समझता है?",
+   "commentary_en": "Arjuna's question is practical, not theological. He does not ask which of the two is holier, or which one you are supposed to be. He asks which of them knows the work better -- and that is a question about method. The whole chapter is the answer.",
+   "commentary_hi": "अर्जुन का सवाल व्यावहारिक है, धर्मशास्त्र का नहीं। वह यह नहीं पूछता कि दोनों में पवित्र कौन है, या बनना किसे चाहिए। वह पूछता है कि काम को बेहतर कौन जानता है — और यह तरीक़े का सवाल है। पूरा अध्याय इसी का जवाब है।"
+  },
+  {
+   "id": 471,
+   "number": "12.2",
+   "body_en": "The Blessed One said: Those who set their minds down in me and stay with me without a break, bringing to it a trust with nothing held back — those are the ones I count as most joined.",
+   "body_hi": "श्रीभगवान ने कहा — जो अपना मन मुझमें रख देते हैं और बिना नागा मेरे साथ बने रहते हैं, और इसमें ऐसा भरोसा लगाते हैं जिसमें कुछ बचाकर नहीं रखा — उन्हीं को मैं सबसे ज़्यादा जुड़ा हुआ मानता हूँ।",
+   "commentary_en": "Notice how the answer is worded: I count them so. It is a preference stated as a preference, not a ruling handed down. The same thing happened at 6.47, where the yogi who goes with faith was called the closest of all. Krishna answers Arjuna's question first, and only then spends three verses being fair to the other side.",
+   "commentary_hi": "जवाब के शब्द देखिए: मैं उन्हें ऐसा मानता हूँ। यह पसंद है, और पसंद की तरह ही कही गई है — ऊपर से सुनाया गया फ़ैसला नहीं। यही बात 6.47 में हुई थी, जहाँ श्रद्धा से चलने वाले योगी को सबसे नज़दीक कहा गया। कृष्ण पहले अर्जुन के सवाल का जवाब देते हैं, और उसके बाद ही तीन श्लोक दूसरे पक्ष के साथ इंसाफ़ करने में लगाते हैं।"
+  },
+  {
+   "id": 472,
+   "number": "12.3",
+   "body_en": "But there are those who wait instead on what does not wear out — a thing you cannot point at, cannot see, that is everywhere at once, that no thought will close around; a thing that stands where it stands, and does not stir, and does not shift.",
+   "body_hi": "पर कुछ उसकी सेवा में लगते हैं जो घिसता नहीं — ऐसी चीज़ जिसकी ओर उँगली नहीं उठाई जा सकती, जो दिखती नहीं, जो एक ही समय हर जगह है, जिसके चारों ओर कोई विचार बँध नहीं पाता; जो जहाँ है वहीं टिकी है, न हिलती है, न जगह बदलती है।",
+   "commentary_en": "Six descriptions, and five of them are removals. That is what happens when you try to describe something by taking away everything about it that could be pointed at: what is left is a shape made entirely of edges. It is an honest way to speak of the imperishable, and it is also why the next three verses are about how hard this road is to walk.",
+   "commentary_hi": "छह बातें कही गई हैं, और उनमें पाँच हटाने की हैं। यही होता है जब किसी चीज़ को बताने के लिए उसमें से वह सब निकाल दिया जाए जिस पर उँगली रखी जा सके: जो बचता है वह सिर्फ़ किनारों से बनी एक आकृति है। अक्षर के बारे में कहने का यह ईमानदार तरीक़ा है, और यही वजह है कि अगले तीन श्लोक इसी पर हैं कि यह रास्ता चलने में कितना कठिन है।"
+  },
+  {
+   "id": 473,
+   "number": "12.4",
+   "body_en": "They keep the whole troop of the senses on a short rein, they look at everything with the same eye, and what they take pleasure in is whatever is good for every creature alive. They arrive at me as well.",
+   "body_hi": "वे इन्द्रियों की सारी टोली को छोटी रस्सी पर रखते हैं, हर चीज़ को एक ही आँख से देखते हैं, और उनका मन इसी में लगा रहता है कि हर जीव का भला हो। वे भी मुझ तक पहुँच जाते हैं।",
+   "commentary_en": "They arrive at me as well -- said plainly, with no grudge in it. And note the test that is quietly applied here: a man on this road is known by whether he has come to want the good of everything that lives. That was the mark of the freed man at 5.25 too. Whichever road, the destination shows up as a change in what you want for other people.",
+   "commentary_hi": "वे भी मुझ तक पहुँच जाते हैं — सीधे कहा गया है, बिना किसी कसक के। और यहाँ चुपके से एक कसौटी रख दी गई है: इस रास्ते का आदमी इसी से पहचाना जाता है कि वह हर जीव का भला चाहने लगा है या नहीं। 5.25 में मुक्त पुरुष का चिह्न भी यही था। रास्ता कोई भी हो, मंज़िल इसी बदलाव में दिखती है कि आप दूसरों के लिए क्या चाहने लगे हैं।"
+  },
+  {
+   "id": 474,
+   "number": "12.5",
+   "body_en": "But they take the harder road, the ones whose minds fasten on what cannot be seen. A man goes about carrying a body, and an aim with nothing in it to look at costs him more to get at.",
+   "body_hi": "पर रास्ता उनका ज़्यादा कठिन है जिनका मन उस पर अटकता है जो दिखता नहीं। आदमी देह लिए फिरता है, और जिस निशाने में देखने को कुछ हो ही नहीं, उस तक पहुँचना उसे महँगा पड़ता है।",
+   "commentary_en": "The objection is not that the road is wrong. It is that we are embodied, and a body is a thing built to attend to other things it can see. Asking it to hold steady on what has no surface is asking it to work against its own grain. This is the rare verse where the Gita concedes a difficulty instead of talking past it.",
+   "commentary_hi": "आपत्ति यह नहीं कि रास्ता ग़लत है। आपत्ति यह है कि हम देह में हैं, और देह उन्हीं चीज़ों पर ध्यान देने के लिए बनी है जिन्हें वह देख सकती है। उससे यह कहना कि वह बिना सतह वाली चीज़ पर टिकी रहे, उसे उसकी अपनी बनावट के उलट चलाना है। यह उन थोड़े श्लोकों में है जहाँ गीता कठिनाई को टालती नहीं, मान लेती है।"
+  },
+  {
+   "id": 475,
+   "number": "12.6",
+   "body_en": "But there are those who lay every last thing they do at my feet and hold nothing above me; who sit with me in a joining that has no second object, and stay at it.",
+   "body_hi": "पर कुछ ऐसे हैं जो अपना किया-धरा सब मेरे आगे रख देते हैं और मुझसे ऊपर कुछ नहीं मानते; जो ऐसे जुड़ाव में मेरे साथ बैठते हैं जिसका दूसरा कोई ठिकाना नहीं, और उसी पर टिके रहते हैं।",
+   "commentary_en": "A joining with no second object -- ananya -- is the phrase this chapter turns on, and it has already been used of the men Krishna said he personally carries, at 9.22. It does not mean thinking about nothing else. It means there is nothing else you are secretly also hoping this will get you.",
+   "commentary_hi": "जिसका दूसरा कोई ठिकाना न हो — अनन्य — यही वह शब्द है जिस पर यह अध्याय घूमता है, और 9.22 में उन्हीं लोगों के लिए इसका इस्तेमाल हो चुका है जिनका भार कृष्ण ख़ुद उठाने को कहते हैं। इसका मतलब यह नहीं कि और कुछ सोचना ही नहीं। मतलब यह है कि इसके पीछे चुपचाप कोई दूसरी उम्मीद नहीं लगी है।"
+  },
+  {
+   "id": 476,
+   "number": "12.7",
+   "body_en": "For them, Partha, I become the one who reaches down and pulls — up out of that sea where dying and being born again follow each other around — and they do not wait long for it, once their minds have come inside me.",
+   "body_hi": "उनके लिए, पार्थ, मैं वही बन जाता हूँ जो हाथ बढ़ाकर खींच लेता है — उस समुद्र में से, जहाँ मरना और फिर जन्मना एक-दूसरे के पीछे लगे रहते हैं — और एक बार उनका मन मेरे भीतर आ जाए, तो उन्हें ज़्यादा इंतज़ार नहीं करना पड़ता।",
+   "commentary_en": "The picture is of drowning, not of climbing. Everywhere else the Gita gives you something to do; here it gives you an arm. It is worth seeing how far this is from the previous verse's discipline -- the effort is real, and then at some point the thing stops being about effort.",
+   "commentary_hi": "तस्वीर डूबने की है, चढ़ने की नहीं। बाकी हर जगह गीता आपको करने को कुछ देती है; यहाँ वह हाथ देती है। देखने लायक़ है कि यह पिछले श्लोक के अनुशासन से कितनी दूर है — मेहनत सच्ची है, और फिर एक जगह आकर बात मेहनत की रह ही नहीं जाती।"
+  },
+  {
+   "id": 477,
+   "number": "12.8",
+   "body_en": "Put your mind down here, in me, and let your judgement settle here too. After that, your living will be in me. There is no question about it.",
+   "body_hi": "अपना मन यहीं रख दे, मुझमें, और अपनी समझ को भी यहीं बैठ जाने दे। उसके बाद तेरा रहना मुझमें ही होगा। इसमें कोई सवाल ही नहीं।",
+   "commentary_en": "The shortest instruction in the chapter, and on its own terms the whole of it. Everything from here to verse 12 is what to do when you find you cannot manage this one.",
+   "commentary_hi": "अध्याय का सबसे छोटा निर्देश, और अपने आप में पूरा। यहाँ से बारहवें श्लोक तक जो कुछ है, वह इसी के लिए है कि जब यह आपसे न सधे तब क्या करें।"
+  },
+  {
+   "id": 478,
+   "number": "12.9",
+   "body_en": "And if you cannot hold your thought on me and keep it still, then come at me by practice, Dhananjaya — go back to it, and go back to it again.",
+   "body_hi": "और अगर तू अपना ध्यान मुझ पर टिकाकर स्थिर नहीं रख पाता, तो अभ्यास के रास्ते मुझ तक आ, धनञ्जय — बार-बार लौटकर, फिर लौटकर।",
+   "commentary_en": "The ladder starts here, and it is built downward: each rung is for someone who has just found he cannot stand on the one above. Nobody is told to leave. That is the kindest piece of construction in the book.",
+   "commentary_hi": "सीढ़ी यहाँ से शुरू होती है, और वह नीचे की ओर बनी है: हर पायदान उसके लिए है जिसे अभी-अभी पता चला कि ऊपर वाले पर वह खड़ा नहीं रह सकता। किसी से जाने को नहीं कहा जाता। पूरी किताब में बनावट का यह सबसे दयालु टुकड़ा है।"
+  },
+  {
+   "id": 479,
+   "number": "12.10",
+   "body_en": "If you are not up to the practice either, then make my work the thing you put first. Do what you do on my account, and you will arrive.",
+   "body_hi": "अगर अभ्यास भी तुझसे नहीं सधता, तो मेरा काम वह चीज़ बना ले जिसे तू सबसे आगे रखता है। जो करता है वह मेरे खाते में करता चल, और तू पहुँच जाएगा।",
+   "commentary_en": "Which is to say: you do not have to feel anything in particular. Work that is done on someone else's account gets you there whether or not your mind cooperated on the day. The idea goes back to 3.9, where work done as offering was said not to bind.",
+   "commentary_hi": "यानी: कुछ ख़ास महसूस करना ज़रूरी नहीं है। जो काम किसी और के खाते में किया जाता है वह आपको वहाँ पहुँचा देता है, चाहे उस दिन मन ने साथ दिया हो या न दिया हो। यह बात 3.9 से आ रही है, जहाँ कहा गया था कि यज्ञ के लिए किया गया काम बाँधता नहीं।"
+  },
+  {
+   "id": 480,
+   "number": "12.11",
+   "body_en": "And if even that is beyond you, then stand inside my yoga and do this much: let go of what your work earns you, the whole of it, and keep a hand on yourself.",
+   "body_hi": "और अगर इतना भी तुझसे नहीं होता, तो मेरे योग के भीतर खड़ा हो जा और बस इतना कर: तेरे काम से जो मिलना है उसे छोड़ दे, पूरा का पूरा, और अपने ऊपर हाथ रखे रह।",
+   "commentary_en": "The bottom rung of the ladder turns out to be 2.47 -- the very first instruction Arjuna was given, the one about having a claim on the work and none on what it yields. A reader who has come this far can see that the chapter has been walking him back to where he started, and that the beginning was never the easy part.",
+   "commentary_hi": "सीढ़ी का सबसे निचला पायदान निकलता है 2.47 — वही पहला निर्देश जो अर्जुन को दिया गया था, कि काम पर हक़ है, उसके फल पर नहीं। यहाँ तक आया पाठक देख सकता है कि अध्याय उसे चलाकर वहीं वापस ले आया है जहाँ से वह चला था, और यह भी कि शुरुआत कभी आसान हिस्सा थी ही नहीं।"
+  },
+  {
+   "id": 481,
+   "number": "12.12",
+   "body_en": "Better than going back to it again and again is understanding what you are doing; better than understanding is sitting with it; and better than sitting with it is letting go of what the work earns. Let go, and quiet arrives the same moment.",
+   "body_hi": "बार-बार दोहराने से बेहतर है यह समझना कि तू कर क्या रहा है; समझने से बेहतर है उसके साथ बैठना; और बैठने से भी बेहतर है काम से जो मिलना है उसे छोड़ देना। छोड़ा, और शान्ति उसी क्षण आ जाती है।",
+   "commentary_en": "Read upward, it is a ranking. Read downward, it is the ladder of the last four verses with the rungs named. Either way the surprise is at the top: letting go is placed above sitting in meditation. And it is the only one of the four that is said to pay off immediately -- no interval, the peace comes with the act.",
+   "commentary_hi": "ऊपर से पढ़िए तो यह क्रम है। नीचे से पढ़िए तो यह पिछले चार श्लोकों की वही सीढ़ी है, पायदानों के नाम के साथ। दोनों तरह पढ़ने पर चौंकाने वाली बात ऊपर है: छोड़ देने को ध्यान से ऊपर रखा गया है। और चारों में वही एक है जिसका फल तुरंत कहा गया — बीच में कोई अंतर नहीं, शान्ति काम के साथ ही आती है।"
+  },
+  {
+   "id": 482,
+   "number": "12.13",
+   "body_en": "A man who hates nothing that lives; who is a friend, and has pity in him; who says of nothing that it is his, and does not stand apart as an I; who takes pain and pleasure as they come, and lets an injury go —",
+   "body_hi": "ऐसा आदमी जो किसी जीव से बैर नहीं रखता; जो दोस्त है, और जिसके भीतर तरस है; जो किसी चीज़ के बारे में यह नहीं कहता कि वह उसकी है, और 'मैं' बनकर अलग नहीं खड़ा होता; जो दुख और सुख जैसे आते हैं वैसे ले लेता है, और चोट को जाने देता है —",
+   "commentary_en": "The long portrait that closes the chapter starts, of all places, with not hating -- the lowest bar there is, and the one most people quietly fail. Everything that follows is built on it.",
+   "commentary_hi": "अध्याय को ख़त्म करने वाला यह लंबा चित्र शुरू होता है बैर न रखने से — सबसे नीची कसौटी, और वही जिस पर ज़्यादातर लोग चुपचाप खरे नहीं उतरते। आगे जो कुछ है, सब इसी पर खड़ा है।"
+  },
+  {
+   "id": 483,
+   "number": "12.14",
+   "body_en": "— content with what there is, always at the joining, with a hand on himself and his mind made up; a man who has handed me his thinking and his judgement both: he loves me, and I hold him dear.",
+   "body_hi": "— जो है उसी में संतुष्ट, हमेशा जुड़ा हुआ, अपने ऊपर हाथ रखे और तय किए हुए मन का; जिसने अपना सोचना और अपनी समझ, दोनों मुझे सौंप दी हैं: वह मुझे चाहता है, और मुझे वह प्रिय है।",
+   "commentary_en": "Mind and judgement both -- the same pair that verse 8 asked for, arriving now as a description of someone rather than as an instruction to someone. The refrain that ends this verse will end five more. It is the only place in the Gita where the teaching is put in terms of what Krishna is fond of.",
+   "commentary_hi": "मन और समझ, दोनों — वही जोड़ी जो आठवें श्लोक में माँगी गई थी, अब निर्देश की जगह किसी आदमी के वर्णन के रूप में आती है। इस श्लोक को ख़त्म करने वाली टेक आगे पाँच और श्लोकों को ख़त्म करेगी। पूरी गीता में यही एक जगह है जहाँ शिक्षा इस रूप में रखी गई है कि कृष्ण को क्या प्रिय लगता है।"
+  },
+  {
+   "id": 484,
+   "number": "12.15",
+   "body_en": "Nobody has to brace themselves when he walks in, and he does not brace himself against anybody. Nothing in him is jumping — not delight, not irritation, not fear, not alarm. He too is dear to me.",
+   "body_hi": "उसके आने पर किसी को कसकर बैठना नहीं पड़ता, और वह भी किसी से कसकर नहीं बैठता। उसके भीतर कुछ उछलता नहीं — न खुशी, न चिढ़, न डर, न घबराहट। वह भी मुझे प्रिय है।",
+   "commentary_en": "The first half of this is reciprocal, and deliberately so: the world is easy with him because he is easy with the world. It is a social test, not an inward one -- you find out whether you pass it by watching how a room changes when you enter it.",
+   "commentary_hi": "इसका पहला आधा दोतरफ़ा है, और जानबूझकर: दुनिया उसके साथ सहज है क्योंकि वह दुनिया के साथ सहज है। यह भीतर की नहीं, बाहर की कसौटी है — इस पर खरे उतरे या नहीं, यह देखकर पता चलता है कि आपके कमरे में घुसते ही कमरा कैसे बदल जाता है।"
+  },
+  {
+   "id": 485,
+   "number": "12.16",
+   "body_en": "He expects nothing from anyone. He is clean, and he is good at what he does, and he can sit to one side of a thing without being pulled into it. Nothing gets under his skin any more, and he has stopped launching schemes. He loves me, and I hold him dear.",
+   "body_hi": "वह किसी से कुछ उम्मीद नहीं रखता। साफ़ है, अपने काम में पक्का है, और किसी चीज़ के किनारे बैठ सकता है बिना उसमें खिंचे। अब कुछ उसकी चमड़ी के नीचे नहीं उतरता, और उसने नई-नई योजनाएँ शुरू करना छोड़ दिया है। वह मुझे चाहता है, और मुझे वह प्रिय है।",
+   "commentary_en": "Sitting to one side is not the same as not caring, and the word for it here does not mean cold. It means not having a stake. Note that being good at the work stays on the list: nothing in this portrait asks a man to be less competent than he is.",
+   "commentary_hi": "किनारे बैठना और परवाह न करना एक बात नहीं है, और यहाँ जो शब्द है उसका अर्थ ठंडापन नहीं। अर्थ है इसमें अपना कुछ दाँव पर न होना। ध्यान दीजिए कि काम में पक्का होना सूची में बना हुआ है: इस चित्र में कहीं भी आदमी से यह नहीं कहा गया कि वह जितना क़ाबिल है उससे कम हो जाए।"
+  },
+  {
+   "id": 486,
+   "number": "12.17",
+   "body_en": "He does not crow, or hate, or mourn, or hanker. He has put down the pleasant along with the unpleasant. There is love in that man, and I hold him dear.",
+   "body_hi": "वह न इतराता है, न बैर करता है, न रोता है, न ललचाता है। भला और बुरा, दोनों उसने रख दिए हैं। उस आदमी के भीतर प्रेम है, और मुझे वह प्रिय है।",
+   "commentary_en": "The four things named are two pairs: crowing and mourning are what you do about what has happened, hating and hankering are what you do about what has not. And the line that follows asks for the harder half of the giving up -- putting down the pleasant is a good deal less popular than putting down the unpleasant.",
+   "commentary_hi": "जो चार बातें गिनाई गई हैं वे दो जोड़े हैं: इतराना और रोना उसके बारे में है जो हो चुका, बैर और ललचाना उसके बारे में जो नहीं हुआ। और उसके बाद की पंक्ति छोड़ने का कठिन आधा माँगती है — भले को रख देना, बुरे को रख देने से कहीं कम लोकप्रिय है।"
+  },
+  {
+   "id": 487,
+   "number": "12.18",
+   "body_en": "An enemy and a friend get the same man. So do honour and disgrace. Cold or heat, a good turn or a bad one — it is the same man throughout, and he keeps hold of none of it.",
+   "body_hi": "दुश्मन को और दोस्त को वही एक आदमी मिलता है। मान को और अपमान को भी। ठंड हो या गर्मी, सुख हो या दुख — आदमी वही का वही रहता है, और वह किसी को पकड़कर नहीं रखता।",
+   "commentary_en": "Sameness has been asked for since 2.38, where it was a soldier's evenness before winning and losing. By now it has widened until it covers who is standing in front of you. That is the harder version: it is one thing to meet two outcomes alike, another to meet two people alike.",
+   "commentary_hi": "समता 2.38 से माँगी जा रही है, जहाँ वह जीत और हार के आगे एक सैनिक की बराबरी थी। अब तक वह फैलकर इस तक आ गई है कि आपके सामने खड़ा कौन है। यह कठिन वाला रूप है: दो नतीजों को एक जैसा लेना एक बात है, दो आदमियों को एक जैसा लेना दूसरी।"
+  },
+  {
+   "id": 488,
+   "number": "12.19",
+   "body_en": "Praise and blame weigh the same in his hand. He keeps quiet. Whatever turns up is enough for him. He has no address he must get back to, and his mind stays where he put it. There is love in that man, and he is dear to me.",
+   "body_hi": "तारीफ़ और बुराई उसके हाथ में एक ही तौल की हैं। वह चुप रहता है। जो सामने आ जाए उतना उसके लिए काफ़ी है। लौटने के लिए उसका कोई पता नहीं, और उसका मन वहीं टिका रहता है जहाँ उसने रखा था। उस आदमी के भीतर प्रेम है, और मुझे वह प्रिय है।",
+   "commentary_en": "Having no address is worth pausing on, because chapter 6 spent several verses setting up a seat in a clean place and telling Arjuna to sit on it. Both are true. The seat is for the man who is learning; by the time he is this one, he no longer needs a particular spot for it to work.",
+   "commentary_hi": "कोई पता न होने पर रुककर सोचना चाहिए, क्योंकि छठे अध्याय ने कई श्लोक साफ़ जगह पर आसन बिछाने और अर्जुन से उस पर बैठने को कहने में लगाए थे। दोनों सच हैं। आसन सीखने वाले के लिए है; जब तक आदमी यह वाला हो जाता है, तब तक उसे काम चलाने के लिए किसी ख़ास जगह की ज़रूरत नहीं रहती।"
+  },
+  {
+   "id": 489,
+   "number": "12.20",
+   "body_en": "And those who take up this deathless thing I have set out — take it up as it stands, trusting it, and putting nothing above me — of all the people who love me, those are the ones I hold dearest.",
+   "body_hi": "और जो इस अमर चीज़ को उठा लेते हैं जो मैंने अभी रख दी है — जैसी है वैसी उठा लेते हैं, उस पर भरोसा करके, और मुझसे ऊपर कुछ न रखकर — मुझे चाहने वालों में सबसे प्रिय वही हैं।",
+   "commentary_en": "The chapter ends by calling its own last eight verses a deathless thing, which is a large claim for a list of ordinary decencies: do not hate, do not crow, do not expect, let the injury go. That is the claim being made. The refrain has run five times without a superlative; here, at the close, it finally takes one.",
+   "commentary_hi": "अध्याय अपने ही आख़िरी आठ श्लोकों को अमर चीज़ कहकर ख़त्म होता है, और साधारण शराफ़त की एक सूची के लिए यह बड़ा दावा है: बैर मत रखो, इतराओ मत, उम्मीद मत बाँधो, चोट को जाने दो। दावा यही है। टेक पाँच बार बिना किसी अतिशयोक्ति के चली है; यहाँ, अंत में, वह आख़िरकार एक ले लेती है।"
+  }
+ ]
+}
