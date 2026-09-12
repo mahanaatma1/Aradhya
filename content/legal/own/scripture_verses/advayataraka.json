@@ -1,0 +1,162 @@
+{
+ "slug": "advayataraka",
+ "title_en": "Advayataraka Upanishad",
+ "title_hi": "अद्वयतारक उपनिषद्",
+ "book_id": 26,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 20907,
+   "number": "1.1",
+   "body_en": "Now, then, we will set out the Advayataraka Upanishad — for an ascetic who has his senses under him and who is full up with the six qualities, beginning with being calm.",
+   "body_hi": "अब, इसके बाद, हम अद्वयतारक उपनिषद् को खोलकर रखेंगे — उस संन्यासी के लिए जिसकी इन्द्रियाँ उसके क़ाबू में हैं और जो छह गुणों से भरा है, जिनमें पहला शांति है।",
+   "commentary_en": "The opening names its audience before it says anything else, and the audience is narrow on purpose. What follows is a set of practices with the eyes and the inner light, and the text will not hand them to somebody who has not done the earlier work.",
+   "commentary_hi": "शुरुआत कुछ कहने से पहले अपना पाठक तय करती है, और वह पाठक जान-बूझकर सीमित है। आगे जो है वह आँखों और भीतरी उजाले के अभ्यास हैं, और पाठ उन्हें ऐसे किसी को नहीं देगा जिसने पहले का काम न किया हो।"
+  },
+  {
+   "id": 20908,
+   "number": "1.2",
+   "body_en": "Holding the thought that awareness is what he is made of, with his eyes properly shut or a little bit open, looking inward from above the space behind the brows — he takes in the supreme brahman, that peak of being and awareness and bliss and light. And he turns into it.",
+   "body_hi": "यह भाव थामे हुए कि चेतना ही उसका स्वरूप है, आँखें ठीक से बंद किए हुए या ज़रा-सी खुली, भौंहों के पीछे की जगह से ऊपर की तरफ़ भीतर देखते हुए — वह उस परब्रह्म को लेता है, सत् और चित् और आनंद और तेज के उस शिखर को। और वह उसी में बदल जाता है।",
+   "commentary_en": "Eyes properly shut or a little bit open — the alternative is given without a preference, and both are named because both work. It is the first sign of what kind of text this is: instructions from somebody who has watched people do this and knows they differ.",
+   "commentary_hi": "'आँखें ठीक से बंद या ज़रा-सी खुली' — विकल्प बिना किसी पसंद के दिया गया है, और दोनों का नाम इसलिए लिया गया कि दोनों से काम बनता है। यह इस बात का पहला निशान है कि यह किस तरह का पाठ है: ऐसे किसी के निर्देश जिसने लोगों को यह करते देखा है और जानता है कि वे एक जैसे नहीं होते।"
+  },
+  {
+   "id": 20909,
+   "number": "1.3",
+   "body_en": "It carries a man across the fear of the womb, of being born, of getting old, of dying — and that is why it is called the crossing. Know that the living soul and the lord are both got up out of maya. Then set aside every particular thing with a not this, not this, and what is left over after that is brahman, which is not two.",
+   "body_hi": "वह आदमी को गर्भ के डर से, जन्म के, बुढ़ापे के, मरने के डर से पार उतार देता है — और इसीलिए उसे 'तारक' कहा जाता है। जान लो कि जीव और ईश्वर, दोनों माया के बने हैं। फिर हर एक ख़ास चीज़ को 'यह नहीं, यह नहीं' कहकर हटा दो, और उसके बाद जो बचा रहता है वही ब्रह्म है, जो दो नहीं है।",
+   "commentary_en": "Both sides of the usual pair are dismissed here — the soul and the lord alike are said to be made of maya, which is more than most texts will say. What is left after the not this is not a third thing. It is what the two were covering.",
+   "commentary_hi": "यहाँ आम जोड़े के दोनों सिरे हटा दिए जाते हैं — जीव और ईश्वर, दोनों को माया का बना कहा गया है, और यह उससे ज़्यादा है जितना ज़्यादातर पाठ कहेंगे। 'यह नहीं' के बाद जो बचता है वह कोई तीसरी चीज़ नहीं है। वह वही है जिसे ये दोनों ढके हुए थे।"
+  },
+  {
+   "id": 20910,
+   "number": "1.4",
+   "body_en": "To bring that about, a man has to work at holding three things in view, one after another.",
+   "body_hi": "इसे सिद्ध करने के लिए आदमी को तीन चीज़ों को नज़र में रखने का काम करना पड़ता है, एक के बाद एक।",
+   "commentary_en": "One line, and it is the plan for everything that follows. The three are the inward one, the outward one, and the one in between, and the next three passages take them in turn.",
+   "commentary_hi": "एक पंक्ति, और आगे जो कुछ है उसका पूरा नक़्शा यही है। वे तीन हैं — भीतर वाली, बाहर वाली, और बीच वाली — और आगे के तीन हिस्से उन्हें एक-एक करके लेते हैं।"
+  },
+  {
+   "id": 20911,
+   "number": "1.5",
+   "body_en": "In the middle of the body runs the brahma channel, sushumna, shaped like the sun and shining like the full moon. It starts at the base and goes up to the opening at the crown. Inside it, with a brightness like crores of lightning flashes and a body as fine as the thread in a lotus stalk, is what everyone knows as kundalini. A man who sees her with nothing but his mind is freed — the door for it is the wearing away of every sin he has. Above the forehead, in that particular circle of the brow, if he keeps seeing light without a break, thrown out by the crossing-yoga, then he is one who has arrived. Put the tips of the forefingers into the two ear-holes and a whistling sound starts up in there. With the mind held in that, look at the place of blue light in the middle of the eye, and by that inward looking a man comes into a happiness nothing goes past. He sees it in the heart the same way. This is what having something in view inwardly comes to, and men who want out are to sit with it.",
+   "body_hi": "देह के बीच में ब्रह्मनाड़ी सुषुम्ना चलती है, सूरज के आकार की और पूरे चाँद जैसी चमकती। वह मूलाधार से शुरू होकर ऊपर, कपाल के छिद्र तक जाती है। उसके भीतर, करोड़ों बिजलियों जैसी चमक और कमल की डंडी के धागे जैसी बारीक देह लेकर, वही है जिसे सब कुंडलिनी के नाम से जानते हैं। जो आदमी उसे केवल मन से देख लेता है वह मुक्त हो जाता है — और उसका दरवाज़ा है उसके हर पाप का घिस जाना। माथे के ऊपर, भौंहों के उस ख़ास घेरे में, अगर उसे बिना रुके उजाला दिखता रहे, जो तारक-योग से फूटता है, तो वह पहुँचा हुआ है। तर्जनी के सिरे दोनों कानों के छिद्रों में डालो और वहाँ भीतर एक सन्नाटे जैसी आवाज़ उठ खड़ी होती है। मन को उसमें थामे हुए, आँख के बीच की नीली ज्योति की जगह देखो, और उस भीतरी देखने से आदमी ऐसे सुख में आता है जिससे आगे कुछ नहीं। हृदय में भी वह उसे वैसे ही देखता है। भीतर की तरफ़ कुछ नज़र में रखना इसी को कहते हैं, और जो निकलना चाहते हैं वे इसी के पास बैठें।",
+   "commentary_en": "The register changes completely here — from doctrine to a list of things to do with the eyes and the fingers. Whatever a reader makes of the anatomy, the passage is written by somebody giving directions, and the fingers in the ears is the detail that gives it away.",
+   "commentary_hi": "यहाँ लहजा पूरी तरह बदल जाता है — सिद्धांत से हटकर उन चीज़ों की सूची पर, जो आँखों और उँगलियों से की जाती हैं। शरीर-विज्ञान का पढ़ने वाला जो मतलब निकाले, यह हिस्सा उस आदमी का लिखा है जो रास्ता बता रहा है — और कानों में उँगलियाँ वह बारीक बात है जो इसे खोल देती है।"
+  },
+  {
+   "id": 20912,
+   "number": "1.6",
+   "body_en": "Now for having something in view outwardly. In front of the tip of the nose, at four fingers, then six, then eight, then ten, then twelve — if a man sees a space there carrying a blue glow, a dark shade to match it, a streak of red, and a shimmer of two yellows in it, then he is a yogi. For a man who runs his eye over a patch of that space, letting the sight travel, rays of light stand in front of his seeing; and that is enough to make him a yogi. If he catches rays like heated gold at the outer corner of the eye or down on the ground, his sight steadies. For a man who holds a full gaze twelve fingers above his own head, there is no dying. And wherever he happens to be, if the light of that space is seen over his head, then he is a yogi.",
+   "body_hi": "अब बाहर की तरफ़ कुछ नज़र में रखने की बात। नाक की नोक के आगे, चार उँगली पर, फिर छह, फिर आठ, फिर दस, फिर बारह — अगर आदमी को वहाँ ऐसा व्योम दिखे जो नीली झलक लिए हो, उसी से मिलती एक गहरी छाँह, लाल की एक लकीर, और उसमें दो पीली आभाओं की झिलमिल, तो वह योगी है। जो आदमी उस व्योम के एक टुकड़े पर अपनी नज़र घुमाता है, नज़र को चलने देते हुए, उसके देखने के आगे उजाले की किरणें खड़ी हो जाती हैं; और इतने से ही वह योगी हो जाता है। अगर आँख के बाहरी कोने पर या नीचे ज़मीन पर उसे तपे सोने जैसी किरणें पकड़ में आ जाएँ, तो उसकी नज़र जम जाती है। जो आदमी अपने सिर से बारह उँगली ऊपर भरी हुई नज़र टिकाए रखता है, उसके लिए मरना नहीं है। और वह जहाँ भी हो, अगर उसके सिर के ऊपर उस व्योम का उजाला दिख जाए, तो वह योगी है।",
+   "commentary_en": "Measured in finger-widths and worked outward from the nose — the precision is the striking thing. Nothing here is symbolic. Somebody counted, and wrote down what people reported seeing at each distance.",
+   "commentary_hi": "उँगली की चौड़ाई से नापा गया और नाक से बाहर की तरफ़ बढ़ाया गया — चौंकाने वाली बात यही बारीकी है। यहाँ कुछ भी प्रतीक नहीं है। किसी ने गिना, और लिखा कि हर फ़ासले पर लोगों ने क्या देखा बताया।"
+  },
+  {
+   "id": 20913,
+   "number": "1.7",
+   "body_en": "Now for having something in view in the middle. In the morning he sees it like a whole wheel of sun with all its colours on it, and like a running row of flames, and then like the open air with none of that in it. He comes to rest in the shape of whatever he has taken the shape of. Seeing it again and again, it becomes a space with no strands in it. It becomes the highest space, deep as thick darkness lit by the shape of a star throwing itself out. It becomes the great space, blazing like the fire at the end of an age. It becomes the space of the elements, shining out with the highest brightness of all. It becomes the sun-space, with the grandeur of crores of suns lighting up in it. These five spaces, the outer ones and the ones held inside, are what the crossing has in view. A man who sees them takes freedom for his fruit and comes to be like the space he has seen. So the crossing is the only thing to have in view, and what it hands over is a mind that has stopped being a mind.",
+   "body_hi": "अब बीच में कुछ नज़र में रखने की बात। सुबह उसे वह सूरज के पूरे चक्र जैसा दिखता है, अपने सारे रंग लिए हुए, और लपटों की चलती क़तार जैसा, और फिर खुले आकाश जैसा जिसमें इनमें से कुछ नहीं। वह जिसका आकार ले चुका है उसी आकार में ठहर जाता है। उसे बार-बार देखते हुए वह ऐसा व्योम बन जाता है जिसमें कोई गुण नहीं। वह परम व्योम बन जाता है — गाढ़े अँधेरे जितना गहरा, और उसमें अपने आप को फेंकते तारे का आकार जलता हुआ। वह महा व्योम बन जाता है, युग के अंत की आग जैसा दहकता। वह तत्त्व का व्योम बन जाता है, सबसे ऊँची चमक से चमकता। वह सूर्य का व्योम बन जाता है, करोड़ों सूरजों की भव्यता उसमें जलती हुई। ये पाँच व्योम, बाहर के और भीतर थमे हुए, वही हैं जो तारक की नज़र में हैं। जो आदमी इन्हें देख लेता है वह मुक्ति को अपना फल बनाता है और उसी व्योम जैसा हो जाता है जिसे उसने देखा। तो नज़र में रखने के लिए तारक ही अकेली चीज़ है, और वह जो सौंपता है वह ऐसा मन है जो मन रह ही नहीं गया।",
+   "commentary_en": "Five spaces, each named and each described by what it looks like rather than what it means, and they come in an order that keeps getting brighter until it ends in suns. The last sentence gives away what the whole sequence is for: not a vision, but the end of the mind that was having one.",
+   "commentary_hi": "पाँच व्योम, हर एक का नाम, और हर एक का वर्णन इससे कि वह कैसा दिखता है, इससे नहीं कि उसका मतलब क्या है — और वे ऐसे क्रम में आते हैं जो चमकता ही जाता है, आख़िर में सूरजों पर पहुँचकर। आख़िरी वाक्य खोल देता है कि यह पूरा सिलसिला किसलिए है: किसी दर्शन के लिए नहीं, बल्कि उस मन के अंत के लिए जिसे वह दर्शन हो रहा था।"
+  },
+  {
+   "id": 20914,
+   "number": "1.8",
+   "body_en": "That crossing comes in two kinds: the first half is the crossing itself, and the second half is the mind gone past being a mind. There is a verse for it. Know this yoga to be two, by what is laid down for the first and for the second. Know the crossing to be the earlier one, and the mind gone past being a mind the one after it.",
+   "body_hi": "वह तारक दो तरह का है: पहला आधा तारक ही है, और दूसरा आधा वह मन है जो मन होने से आगे निकल चुका। इस पर एक श्लोक है। इस योग को दो जानो, उस विधान से जो पहले के लिए है और दूसरे के लिए। तारक को पहला जानो, और मन के मन न रह जाने को उसके बाद वाला।",
+   "commentary_en": "The verse says in metre what the sentence before it just said in prose, and the text keeps both. That is how these books were assembled — a teaching, and then the line somebody had already made of it, set down side by side.",
+   "commentary_hi": "श्लोक छंद में वही कहता है जो उससे पहले का वाक्य गद्य में कह चुका, और पाठ दोनों को रखता है। ये किताबें ऐसे ही जोड़ी गई थीं — एक उपदेश, और फिर वह पंक्ति जो कोई उससे पहले ही बना चुका था, दोनों बग़ल-बग़ल रख दी गईं।"
+  },
+  {
+   "id": 20915,
+   "number": "1.9",
+   "body_en": "What the crossing-yoga has for its one fruit is seeing the moon and the sun as one. Inside the eyes, in the pupils, the moon and the sun are thrown back. Through the pupils he makes out the discs of the two, and settles it that the space inside the head of this small body holds a pair of them just as the great world does — and that the pupils are where that pair gets caught. Here too, with the two seen as one, he should meditate with his mind in it, for without that joining the senses are left room to run out. So the crossing is the one thing to be held in view by the inward look.",
+   "body_hi": "तारक-योग का एक ही फल है — चाँद और सूरज को एक देखना। आँखों के भीतर, पुतलियों में, चाँद और सूरज लौटकर पड़ते हैं। पुतलियों से ही वह दोनों के मंडल देखता है, और यह तय कर लेता है कि इस छोटे पिंड के सिर के भीतर के आकाश में, जैसे उस बड़े में, ऐसे दो मंडल हैं — और वे पुतलियों से ही देखे जाते हैं। यहाँ भी, दोनों को एक देखते हुए, उसे मन उसमें रखकर ध्यान करना चाहिए — क्योंकि उस जोड़ के बिना इन्द्रियों के बाहर दौड़ने की गुंजाइश बनी रहती है। तो भीतरी नज़र से नज़र में रखने की एक ही चीज़ है, तारक।",
+   "commentary_en": "The word for pupil is also the word for star, and the passage is built on that. Two lights are reflected in the two pupils; the same two are said to be inside the head; and the practice is to stop seeing them as two. The pun is the argument.",
+   "commentary_hi": "पुतली का शब्द तारे का भी शब्द है, और यह पूरा हिस्सा उसी पर खड़ा है। दो पुतलियों में दो उजाले लौटकर पड़ते हैं; वही दो सिर के भीतर भी कहे गए हैं; और अभ्यास यह है कि उन्हें दो देखना बंद हो जाए। शब्द का यह दोहरा अर्थ ही यहाँ दलील है।"
+  },
+  {
+   "id": 20916,
+   "number": "1.10",
+   "body_en": "It is to be held in view under two heads, by the split between what has a form and what has none. The crossing is of two kinds: with form, and without. What stops at the senses has a form. What is past the pair of brows has none. Everywhere, in sorting out what a thing inwardly is, practice with the mind in it is what is wanted. Seeing, through the pupils, the being that stands above them — by looking inward with the mind in it — that is brahman itself, whose own form is being and awareness and bliss. So it is settled that brahman is made of white light. That brahman becomes knowable by the inward look, with the eye working alongside the mind. It is the same with the formless crossing. It is by the eye with the mind in it that the space in the heart and the rest of it becomes knowable — because whatever is for the sake of catching a form depends on the mind and the eye, and inwardly as much as outwardly, the catching of a form only comes off when the self and the mind and the eye are joined. So the inward look with the mind in it is what the crossing lights up by.",
+   "body_hi": "उसे दो सिरों के नीचे नज़र में रखना है, उस बँटवारे से जो रूप वाले और बिना रूप वाले के बीच है। तारक दो तरह का है: रूप के साथ, और बिना रूप। जो इन्द्रियों पर रुक जाता है उसका रूप है। जो भौंहों के जोड़े के पार है उसका नहीं। हर जगह, यह छाँटने में कि कोई चीज़ भीतर से क्या है, वही अभ्यास चाहिए जिसमें मन लगा हो। पुतलियों से उस सत् को देखना जो उनके ऊपर खड़ा है — मन लगाकर भीतर देखते हुए — वह ब्रह्म ही है, जिसका अपना रूप सत्, चित् और आनंद है। तो यह तय हुआ कि ब्रह्म सफ़ेद तेज का बना है। वह ब्रह्म भीतरी नज़र से जानने में आता है, जब आँख मन के साथ मिलकर काम करती है। बिना रूप वाले तारक के साथ भी यही है। हृदय का आकाश और बाक़ी सब उसी आँख से जानने में आता है जिसमें मन लगा हो — क्योंकि जो कुछ रूप पकड़ने के लिए है वह मन और आँख पर टिका है, और जितना बाहर उतना भीतर, रूप का पकड़ना तभी बनता है जब आत्मा, मन और आँख जुड़ जाएँ। तो जिस चीज़ से तारक उजागर होता है वह मन लगाकर की गई भीतरी नज़र है।",
+   "commentary_en": "The argument is careful in a way the earlier passages are not. Seeing needs three things joined — self, mind, eye — and the claim is that this holds inwardly on exactly the same terms as it does outwardly. Nothing mystical is being asked for. The same apparatus is being turned around.",
+   "commentary_hi": "यहाँ दलील उस तरह सावधान है जिस तरह पहले के हिस्से नहीं थे। देखने के लिए तीन चीज़ों का जुड़ना चाहिए — आत्मा, मन, आँख — और दावा यह है कि भीतर भी यह ठीक उसी शर्त पर लागू है जिस पर बाहर। यहाँ कुछ रहस्यमय नहीं माँगा जा रहा। वही औज़ार घुमाकर दूसरी तरफ़ कर दिया जा रहा है।"
+  },
+  {
+   "id": 20917,
+   "number": "1.11",
+   "body_en": "Put the sight in the hollow between the two brows, and the light that stands above comes out through that door — this is the crossing-yoga. Join the crossing well to that light, with the mind in it, and then with some effort, carefully, lift the pair of brows a little upward. That is the earlier crossing-yoga. The one after it is called the formless mind gone past being a mind. Above the root of the palate there is a great ray of light. Yogis are to hold that in mind. From it come the powers, beginning with the power of the small.",
+   "body_hi": "नज़र को दोनों भौंहों के बीच के गड्ढे में रखो, और जो उजाला ऊपर खड़ा है वह उसी दरवाज़े से बाहर आता है — यही तारक-योग है। तारक को उस उजाले से अच्छी तरह जोड़ो, मन उसमें लगाकर, और फिर कुछ ज़ोर लगाकर, सावधानी से, भौंहों के जोड़े को ज़रा ऊपर उठाओ। यही पहले वाला तारक-योग है। उसके बाद वाले को बिना रूप का, मन से आगे निकला मन कहा जाता है। तालु की जड़ के ऊपर उजाले की एक बड़ी किरण है। योगियों को उसे मन में रखना है। उससे सिद्धियाँ आती हैं, जिनमें पहली सूक्ष्म हो जाने की है।",
+   "commentary_en": "Lift the brows a little, carefully — the most physical instruction in the book, and it is given as an ordinary technical detail. Then the powers are mentioned in one clause and dropped. This text is not interested in them.",
+   "commentary_hi": "'भौंहों को ज़रा ऊपर उठाओ, सावधानी से' — किताब का सबसे शारीरिक निर्देश, और वह एक आम तकनीकी बात की तरह दिया गया है। फिर सिद्धियों का नाम एक ही पद में आता है और छूट जाता है। इस पाठ को उनमें दिलचस्पी नहीं है।"
+  },
+  {
+   "id": 20918,
+   "number": "1.12",
+   "body_en": "When the sight is on what is in view, inward or outward, and there is no shutting and opening left in it, that is truly the shambhavi seal. Wherever a man who has climbed onto that seal lives, the ground becomes clean. By his looking, all the worlds become clean. And whoever gets to serve a great yogi of that kind is freed as well.",
+   "body_hi": "जब नज़र उस पर हो जो नज़र में है — भीतर की तरफ़ या बाहर की — और उसमें बंद होना और खुलना बचा ही न रहे, तो वही सचमुच शांभवी मुद्रा है। ऐसा आदमी जो इस मुद्रा पर चढ़ चुका है, जहाँ रहता है वहाँ की ज़मीन साफ़ हो जाती है। उसके देखने से सारे लोक साफ़ हो जाते हैं। और जिसे ऐसे बड़े योगी की सेवा मिल जाए, वह भी मुक्त हो जाता है।",
+   "commentary_en": "No shutting and opening left in it — that is the whole definition, and it is a physical one. The eyes have stopped blinking because there is nothing in the seeing that needs to be adjusted for. What follows is a claim about other people, and it is the only place the book turns outward.",
+   "commentary_hi": "'उसमें बंद होना और खुलना बचा ही न रहे' — पूरी परिभाषा यही है, और वह शारीरिक है। आँखें झपकना बंद कर देती हैं क्योंकि देखने में कुछ ऐसा नहीं बचा जिसके लिए फेरबदल करनी पड़े। इसके बाद जो आता है वह दूसरे लोगों के बारे में दावा है, और किताब में यही एक जगह है जहाँ वह बाहर की तरफ़ मुड़ती है।"
+  },
+  {
+   "id": 20919,
+   "number": "1.13",
+   "body_en": "What a man has in view inwardly is a burning light by its own nature. By what the highest teacher tells him, what he has in view inwardly may be the light burning in the thousand-petalled place, or the light of awareness laid away in the cave of the understanding, or the fourth awareness that stands at the end of the sixteen. Seeing it has a true teacher at the root of it.",
+   "body_hi": "भीतर की तरफ़ जो आदमी की नज़र में है वह अपने स्वभाव से ही जलता हुआ उजाला है। सबसे बड़े गुरु के बताए से, भीतर उसकी नज़र में यह हो सकता है — सहस्रदल की जगह में जलता उजाला, या बुद्धि की गुफा में रख दिया चेतना का उजाला, या वह चौथी चेतना जो सोलह के छोर पर खड़ी है। इसका दिखना जड़ से गुरु पर टिका है।",
+   "commentary_en": "Three possibilities, offered as alternatives rather than as a sequence — and then the last line, which is the hinge of the whole book. It has a teacher at the root of it. Everything before this was technique. What comes next is about who gives it.",
+   "commentary_hi": "तीन संभावनाएँ, विकल्प की तरह दी गईं, क्रम की तरह नहीं — और फिर आख़िरी पंक्ति, जो पूरी किताब का मोड़ है। यह जड़ से गुरु पर टिका है। इससे पहले का सब कुछ तकनीक था। आगे जो है वह इस बारे में है कि उसे देता कौन है।"
+  },
+  {
+   "id": 20920,
+   "number": "1.14",
+   "body_en": "The teacher has the Veda at his fingertips. He is given over to Vishnu. There is no spite in him. He knows yoga, he stands in yoga, and he is always made of it — a clean man.",
+   "body_hi": "गुरु के पास वेद उँगलियों पर है। वह विष्णु को दिया हुआ है। उसमें कोई ईर्ष्या नहीं। वह योग जानता है, योग में टिका है, और हमेशा उसी का बना है — साफ़ आदमी।",
+   "commentary_en": "The list is short and two items in it are about character rather than learning. No spite is an odd thing to put in a qualification list, which is exactly why it is there — the text has met teachers who had everything else.",
+   "commentary_hi": "सूची छोटी है और उसमें दो बातें सीखे हुए की नहीं, स्वभाव की हैं। योग्यता की सूची में 'ईर्ष्या न हो' रखना अजीब है — और यही वजह है कि वह वहाँ है। पाठ ऐसे गुरुओं से मिल चुका है जिनमें बाक़ी सब था।"
+  },
+  {
+   "id": 20921,
+   "number": "1.15",
+   "body_en": "He is bound up with devotion to his own teacher, and he knows what a man is — that above all. Someone in whom these marks are all present is what the word teacher is used for.",
+   "body_hi": "वह अपने ही गुरु की भक्ति से बँधा है, और वह जानता है कि आदमी क्या है — सबसे बढ़कर यही। जिसमें ये सारे लक्षण मौजूद हैं, उसी के लिए 'गुरु' शब्द इस्तेमाल होता है।",
+   "commentary_en": "Devotion to his own teacher is on the list, which puts every teacher inside a line rather than at the head of one. And knowing what a man is comes last and is marked as the one that matters most — not knowing the texts, knowing people.",
+   "commentary_hi": "'अपने ही गुरु की भक्ति' सूची में है, और इससे हर गुरु किसी क़तार के सिरे पर नहीं, उसके भीतर आ जाता है। और 'आदमी क्या है, यह जानना' आख़िर में आता है और उसी पर सबसे ज़्यादा ज़ोर है — शास्त्र जानना नहीं, लोगों को जानना।"
+  },
+  {
+   "id": 20922,
+   "number": "1.16",
+   "body_en": "The sound gu would be the dark. The sound ru is what shuts the dark out. Because he is the shutting out of the dark, the word teacher is used for him.",
+   "body_hi": "'गु' ध्वनि अँधेरा होगी। 'रु' ध्वनि वह है जो अँधेरे को रोक देती है। क्योंकि वह अँधेरे का रुक जाना है, इसीलिए उसके लिए 'गुरु' शब्द इस्तेमाल होता है।",
+   "commentary_en": "An etymology of the kind these texts are fond of, and it does not have to be historically right to do its work. The word is being taken apart so that the next two verses can be built on the pieces.",
+   "commentary_hi": "ऐसी व्युत्पत्ति जिनका इन पाठों को शौक़ है, और अपना काम करने के लिए उसे इतिहास में सही होना ज़रूरी नहीं। शब्द को टुकड़ों में खोला जा रहा है ताकि अगले दो श्लोक उन टुकड़ों पर खड़े किए जा सकें।"
+  },
+  {
+   "id": 20923,
+   "number": "1.17",
+   "body_en": "The teacher is the supreme brahman and nothing else. The teacher is the highest road there is. The teacher is the knowledge that stands above the rest. The teacher is the last place a man goes.",
+   "body_hi": "गुरु ही परब्रह्म है, और कुछ नहीं। गुरु ही सबसे ऊँचा रास्ता है। गुरु ही वह विद्या है जो बाक़ी सबसे ऊपर खड़ी है। गुरु ही वह आख़िरी जगह है जहाँ आदमी जाता है।",
+   "commentary_en": "Four clauses, and each one begins with the same word in the Sanskrit. The repetition is the text's own device and it runs into the next verse too, hammering one word into four slots where a reader would expect four different answers.",
+   "commentary_hi": "चार पद, और संस्कृत में हर एक उसी शब्द से शुरू होता है। यह दोहराव पाठ का अपना है और अगले श्लोक तक चलता है — एक ही शब्द को चार जगहों पर ठोंकता हुआ, जहाँ पढ़ने वाला चार अलग जवाब की उम्मीद करता।"
+  },
+  {
+   "id": 20924,
+   "number": "1.18",
+   "body_en": "The teacher is the far post a man runs to. The teacher is the wealth above all wealth. And because he is the one who hands over that teaching, the teacher weighs heavier than anything called heavy.",
+   "body_hi": "गुरु ही वह दूर का खंभा है जिस तक आदमी दौड़ता है। गुरु ही वह धन है जो हर धन से ऊपर है। और क्योंकि वही है जो वह उपदेश सौंपता है, इसलिए जिसे भारी कहा जाता है, गुरु उससे भी भारी है।",
+   "commentary_en": "The last line turns the word around on itself. Heavy is what the word for teacher literally means, and having spent two verses raising him above everything, the text ends by saying only that he outweighs. It is a smaller claim and a better one, with a reason attached: he is the one who hands it over.",
+   "commentary_hi": "आख़िरी पंक्ति शब्द को उसी पर पलट देती है। 'गुरु' का शाब्दिक अर्थ भारी ही है, और दो श्लोक उसे सब से ऊपर उठाने में लगाकर पाठ अंत में बस यह कहता है कि वह भारी पड़ता है। यह छोटा दावा है और बेहतर है, और उसके साथ वजह भी है: सौंपने वाला वही है।"
+  },
+  {
+   "id": 20925,
+   "number": "1.19",
+   "body_en": "Whoever says it out even once is let go of the round of birth and death. The wrong he has done over all his births is gone that same instant. He comes into everything he wanted. Every end a man can set himself is reached. So it is for the one who knows this. That is the secret teaching.",
+   "body_hi": "जो इसे एक बार भी बोल देता है, वह जन्म-मरण के चक्र से छोड़ दिया जाता है। सारे जन्मों में उसने जो बुरा किया, वह उसी पल जाता रहता है। उसकी हर चाही चीज़ उसमें आ जाती है। आदमी अपने लिए जो भी लक्ष्य रख सकता है, वह पूरा हो जाता है। जो यह जानता है, उसके लिए ऐसा ही है। यही उपनिषद् है।",
+   "commentary_en": "A closing promise of the kind these books nearly always end on, and it sits oddly against everything before it. The body of the text asked for a teacher, six qualities and years of practice with the eyes. The last line says saying it once will do. Both are in the book, and it does not reconcile them.",
+   "commentary_hi": "अंत में ऐसा वादा, जिस पर ये किताबें लगभग हमेशा ख़त्म होती हैं — और वह अपने से पहले की हर बात के सामने अजीब बैठता है। पाठ का शरीर गुरु माँगता है, छह गुण, और आँखों के साथ बरसों का अभ्यास। आख़िरी पंक्ति कहती है कि एक बार बोल देना काफ़ी है। दोनों किताब में हैं, और वह इनमें मेल नहीं बिठाती।"
+  }
+ ]
+}
