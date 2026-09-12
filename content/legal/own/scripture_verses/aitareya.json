@@ -1,0 +1,202 @@
+{
+ "slug": "aitareya",
+ "title_en": "Aitareya Upanishad",
+ "title_hi": "ऐतरेय उपनिषद्",
+ "book_id": 27,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 20926,
+   "number": "1.1",
+   "body_en": "Om. At the start there was the self, alone, and nothing beside it — not a single thing anywhere that was alive enough to blink an eye. He looked about him and said: now worlds. I will make worlds.",
+   "body_hi": "ॐ। शुरुआत में आत्मा ही था, अकेला, और उसके बग़ल में कुछ नहीं — कहीं एक भी ऐसी चीज़ नहीं जो पलक झपकाने जितनी भी जीती हो। उसने चारों तरफ़ देखा और कहा: अब लोक। लोक मैं बनाऊँगा।",
+   "commentary_en": "What was absent before creation is put in an odd way — not that there was no matter, but that there was nothing that blinked. Emptiness is being described by the absence of a small involuntary movement, which is a stranger and better way of saying it than any abstraction would be.",
+   "commentary_hi": "सृष्टि से पहले क्या नहीं था, यह अजीब ढंग से कहा गया है — यह नहीं कि पदार्थ नहीं था, बल्कि यह कि कुछ भी ऐसा नहीं था जो पलक झपकाता हो। शून्य का वर्णन एक छोटी-सी अनचाही हरकत के न होने से किया जा रहा है, और यह किसी भी अमूर्त शब्द से ज़्यादा अनोखा और बेहतर है।"
+  },
+  {
+   "id": 20927,
+   "number": "1.2",
+   "body_en": "He put out these worlds: the water above, the light-specks, the dying one, and the waters below. That water above is past the sky, and the sky is the floor it stands on. The light-specks are the middle air. The dying one is this earth, and what lies underneath is the waters.",
+   "body_hi": "उसने ये लोक निकाले: ऊपर का जल, किरण-कण, मरने वाला, और नीचे के जल। वह ऊपर का जल आकाश के पार है, और आकाश वह फ़र्श है जिस पर वह टिका है। किरण-कण वही बीच की हवा है। मरने वाला यही पृथ्वी है, और जो उसके नीचे पड़ा है वे जल हैं।",
+   "commentary_en": "Four names are given first and explained afterwards, which is how a teacher works who expects the list to be memorised before it is understood. The third one is called simply the dying one, and it turns out to mean the earth.",
+   "commentary_hi": "पहले चार नाम दिए जाते हैं और समझाया बाद में जाता है — यही उस गुरु का तरीक़ा है जो चाहता है कि सूची समझ में आने से पहले कंठस्थ हो जाए। तीसरे को बस 'मरने वाला' कहा गया है, और आगे चलकर पता चलता है कि उसका मतलब पृथ्वी है।"
+  },
+  {
+   "id": 20928,
+   "number": "1.3",
+   "body_en": "He looked at them and thought: here are the worlds; now let me put out keepers for them. He drew a man straight up out of the waters and worked him into a shape.",
+   "body_hi": "उसने उन्हें देखा और सोचा: लोक तो ये रहे; अब इनके रखवाले निकालूँ। उसने जल में से एक पुरुष सीधे ऊपर खींचा और उसे गढ़कर आकार दिया।",
+   "commentary_en": "Drew up and worked into a shape — the two verbs are a potter's, and they are used without apology. The man is not spoken into being. He is pulled out of the water wet and then made to hold a form.",
+   "commentary_hi": "'खींचा' और 'गढ़कर आकार दिया' — ये दोनों क्रियाएँ कुम्हार की हैं, और बिना किसी झिझक के इस्तेमाल की गई हैं। पुरुष को बोलकर पैदा नहीं किया जाता। उसे पानी में से भीगा हुआ निकाला जाता है और फिर आकार में थमाया जाता है।"
+  },
+  {
+   "id": 20929,
+   "number": "1.4",
+   "body_en": "He brooded over him with heat. Under that heat a mouth broke open in him, the way an egg cracks; out of the mouth came speech, and out of speech fire. Nostrils broke open; out of the nostrils came breath, and out of breath the wind. Eyes broke open; out of the eyes came sight, and out of sight the sun. Ears broke open; out of the ears came hearing, and out of hearing the quarters of the sky. Skin broke open; out of the skin came the hairs, and out of the hairs the plants and the standing trees. A heart broke open; out of the heart came mind, and out of mind the moon. A navel broke open; out of the navel came the breath that goes downward, and out of that breath death. The organ that begets broke open; out of it came seed, and out of seed the waters.",
+   "body_hi": "उसने उस पर तपस्या की आँच रखी। उस आँच में उसका मुँह फटकर खुल गया, जैसे अंडा चटकता है; मुँह में से वाणी निकली, और वाणी में से आग। नथुने फटे; नथुनों में से प्राण निकला, और प्राण में से हवा। आँखें फटीं; आँखों में से देखना निकला, और देखने में से सूरज। कान फटे; कानों में से सुनना निकला, और सुनने में से दिशाएँ। त्वचा फटी; त्वचा में से रोएँ निकले, और रोओं में से पौधे और खड़े हुए पेड़। हृदय फटा; हृदय में से मन निकला, और मन में से चाँद। नाभि फटी; नाभि में से नीचे की तरफ़ जाने वाला प्राण निकला, और उस प्राण में से मृत्यु। जनने वाली इंद्रिय फटी; उसमें से बीज निकला, और बीज में से जल।",
+   "commentary_en": "The chain runs the same way nine times over: an opening, then the power that comes through it, then the god that power belongs to. What repays attention is which god gets paired with what. Sight gets the sun. Mind gets the moon. The breath that goes downward gets death. None of those pairings is idle — each one is an argument compressed into a single word.",
+   "commentary_hi": "यह सिलसिला नौ बार एक ही ढंग से चलता है: एक छिद्र खुलता है, फिर उसमें से आने वाली शक्ति, फिर वह देवता जिसका वह शक्ति है। ध्यान देने लायक़ बात यह है कि किस देवता की जोड़ी किससे बनी। देखने को सूरज मिला। मन को चाँद। नीचे जाने वाले प्राण को मृत्यु। इनमें से कोई जोड़ी बेकार की नहीं है — हर एक एक पूरी दलील है, एक शब्द में दबाकर रखी हुई।"
+  },
+  {
+   "id": 20930,
+   "number": "1.5",
+   "body_en": "Hunger and thirst came to him and said: find us a place too. He told them: I am giving you a share in these very gods; I am making you partners in them. That is why, whenever an offering is taken up for any god at all, hunger and thirst come in for a share of it.",
+   "body_hi": "भूख और प्यास उसके पास आईं और बोलीं: हमारे लिए भी कोई जगह निकालो। उसने उनसे कहा: मैं तुम्हें इन्हीं देवताओं में हिस्सा दे रहा हूँ; तुम्हें इन्हीं में साझी बना रहा हूँ। इसीलिए, किसी भी देवता के लिए जब कभी हवि उठाई जाती है, भूख और प्यास उसमें अपना हिस्सा पा जाती हैं।",
+   "commentary_en": "These two are not made. They turn up and ask, which puts them outside the whole scheme and makes them impossible to get rid of. The answer they get is a share of every offering that will ever be made — a wry account of why nothing given to a god has ever seemed to be enough.",
+   "commentary_hi": "ये दोनों बनाई नहीं गईं। ये आकर माँगती हैं, और इसी से ये पूरी व्यवस्था के बाहर पड़ जाती हैं और इन्हें हटाना नामुमकिन हो जाता है। जवाब में इन्हें हर उस हवि का हिस्सा मिलता है जो कभी दी जाएगी — यह इस बात का चुटीला हिसाब है कि देवता को दी गई कोई चीज़ आज तक काफ़ी क्यों नहीं लगी।"
+  },
+  {
+   "id": 20931,
+   "number": "1.6",
+   "body_en": "He went after the food with hearing, and hearing could not lay hold of it. If it had, then a man would have his fill just by listening to what was set in front of him.",
+   "body_hi": "उसने भोजन पर कान से हाथ डाला, और कान उसे पकड़ न सका। अगर पकड़ लेता, तो आदमी सामने रखी चीज़ को सुन भर लेने से भर जाता।",
+   "commentary_en": "Four attempts follow, and in the Sanskrit they are one sentence run four times with a single word changed. The repetition is not carelessness; it is how the text makes a thing land. This first one is the easiest to grant. Nobody was ever fed by the sound of a meal.",
+   "commentary_hi": "आगे चार कोशिशें हैं, और संस्कृत में वे एक ही वाक्य हैं जो चार बार चलता है, हर बार एक शब्द बदलकर। यह दोहराव लापरवाही नहीं है; पाठ किसी बात को इसी तरह बैठाता है। इनमें पहली को मान लेना सबसे आसान है। खाने की आवाज़ से आज तक किसी का पेट नहीं भरा।"
+  },
+  {
+   "id": 20932,
+   "number": "1.7",
+   "body_en": "He went after the food with skin, and skin could not lay hold of it. If it had, then a man would have his fill just by laying a hand on what was in front of him.",
+   "body_hi": "उसने भोजन पर त्वचा से हाथ डाला, और त्वचा उसे पकड़ न सकी। अगर पकड़ लेती, तो आदमी सामने रखी चीज़ पर हाथ धर देने भर से भर जाता।",
+   "commentary_en": "Touch has a better claim than hearing does — it at least reaches the thing. And it still fails, which is the point of putting it second. The list is arranged so that each attempt gets closer and each one comes to nothing.",
+   "commentary_hi": "छूने का दावा कान से बेहतर है — वह कम-से-कम चीज़ तक पहुँच तो जाता है। और फिर भी वह चूक जाता है, और इसे दूसरे नंबर पर रखने का मक़सद यही है। सूची ऐसी सजाई गई है कि हर कोशिश पहले से नज़दीक जाती है और हर एक बेकार जाती है।"
+  },
+  {
+   "id": 20933,
+   "number": "1.8",
+   "body_en": "He went after the food with mind, and mind could not lay hold of it. If it had, then a man would have his fill just by turning his thoughts to a meal.",
+   "body_hi": "उसने भोजन पर मन से हाथ डाला, और मन उसे पकड़ न सका। अगर पकड़ लेता, तो आदमी खाने का ख़याल भर कर लेने से भर जाता।",
+   "commentary_en": "This is the one that stings. Thinking about a meal is the nearest a person can get to eating one without eating, and everybody has tried it. The text does not soften the answer.",
+   "commentary_hi": "चुभती यही है। खाने का ख़याल करना उस चीज़ के सबसे पास है जो खाए बिना खाने जैसी हो, और यह हर किसी ने आज़माया है। पाठ जवाब को ज़रा भी नरम नहीं करता।"
+  },
+  {
+   "id": 20934,
+   "number": "1.9",
+   "body_en": "He went after the food with the organ that begets, and it could not lay hold of it either. If it had, then a man would have his fill just by spending his seed.",
+   "body_hi": "उसने भोजन पर जनने वाली इंद्रिय से हाथ डाला, और वह भी उसे पकड़ न सकी। अगर पकड़ लेती, तो आदमी बीज बहा देने भर से भर जाता।",
+   "commentary_en": "The fourth and last of the failures, and the one a later, more squeamish tradition would have left out. It is here because the list is of every hunger the body has, and the text is not embarrassed by any of them.",
+   "commentary_hi": "चूकों में यह चौथी और आख़िरी है, और बाद की ज़्यादा संकोची परंपरा इसे छोड़ देती। यह यहाँ इसलिए है कि सूची देह की हर भूख की है, और पाठ उनमें से किसी से शरमाता नहीं।"
+  },
+  {
+   "id": 20935,
+   "number": "1.10",
+   "body_en": "He went after it with the breath that goes downward, and that one got it. So the grip that takes food is the wind — for the wind is the thing whose living is food.",
+   "body_hi": "उसने नीचे की तरफ़ जाने वाले प्राण से उस पर हाथ डाला, और उसी ने उसे पा लिया। तो भोजन को थामने वाली पकड़ हवा है — क्योंकि हवा ही वह है जिसका जीना भोजन से चलता है।",
+   "commentary_en": "After four organs of experience have failed, the thing that succeeds is none of them. It is the plain downward working of the body. The last clause turns on a play between the word for wind and the words for living on food, and the play is the argument.",
+   "commentary_hi": "अनुभव की चार इंद्रियाँ चूक जाने के बाद जो कामयाब होता है वह इनमें से कोई नहीं। वह देह का सीधा-सादा नीचे की तरफ़ चलने वाला काम है। आख़िरी पद हवा के शब्द और भोजन से जीने के शब्दों के बीच के खेल पर टिका है, और वही खेल यहाँ दलील है।"
+  },
+  {
+   "id": 20936,
+   "number": "1.11",
+   "body_en": "He looked and thought: how would this hold together without me? Then he looked and thought: which way shall I go in by? Then he looked and thought: if speech is what does the speaking, and breath the breathing, and the eye the seeing, and the ear the hearing, and the skin the touching, and the mind the thinking, and the lower breath the pushing down, and the organ that begets the letting go — then who am I in all this?",
+   "body_hi": "उसने देखा और सोचा: मेरे बिना यह टिकेगा कैसे? फिर उसने देखा और सोचा: किस रास्ते से भीतर पैठूँ? फिर उसने देखा और सोचा: अगर बोलना वाणी करती है, और साँस लेना प्राण, और देखना आँख, और सुनना कान, और छूना त्वचा, और सोचना मन, और नीचे धकेलना अपान, और छोड़ना जनने वाली इंद्रिय — तो इस सब में मैं कौन हुआ?",
+   "commentary_en": "Three lookings in a row, and only the third is a real question. Every job has already been handed out to an organ, and once the handing out is complete the one who did it is left with nothing to do. That is the position the question is asked from, and it is a genuinely uncomfortable one.",
+   "commentary_hi": "लगातार तीन बार देखना, और उनमें सचमुच का सवाल सिर्फ़ तीसरा है। हर काम पहले ही किसी इंद्रिय को बाँट दिया गया है, और बँटवारा पूरा हो जाने पर बाँटने वाले के पास करने को कुछ नहीं बचता। सवाल ठीक इसी जगह से पूछा गया है, और यह जगह सचमुच असहज है।"
+  },
+  {
+   "id": 20937,
+   "number": "1.12",
+   "body_en": "He tore the seam at the top of the head and came in by that door. The name of that door is the split, and it is the place of delight. He has three houses to stay in, and three sleeps: this is a house, and this is a house, and this is a house.",
+   "body_hi": "उसने सिर के ऊपर की सीवन चीर दी और उसी दरवाज़े से भीतर पैठ गया। उस दरवाज़े का नाम है दरार, और वही आनंद की जगह है। उसके रहने के तीन घर हैं और तीन नींदें: यह एक घर, और यह एक घर, और यह एक घर।",
+   "commentary_en": "The door is named for the damage done in making it, and then in the same breath it is called the place of delight. Both names are kept. The three houses are pointed at rather than listed, as though the teacher were touching three places on a body in front of him.",
+   "commentary_hi": "दरवाज़े का नाम उस टूट-फूट पर है जो उसे बनाने में हुई, और उसी साँस में उसे आनंद की जगह भी कह दिया जाता है। दोनों नाम रख लिए गए हैं। तीन घरों को गिनाया नहीं जाता, उनकी तरफ़ इशारा किया जाता है — जैसे गुरु सामने खड़ी किसी देह पर तीन जगह छूकर बता रहा हो।"
+  },
+  {
+   "id": 20938,
+   "number": "1.13",
+   "body_en": "Once born, he looked the beings over. What here would speak of anything else? he thought. And he saw this very person, brahman, spread out to the last edge. I have seen it, he said.",
+   "body_hi": "जन्म लेकर उसने भूतों पर नज़र डाली। यहाँ कोई और की बात करेगा भी क्या? उसने सोचा। और उसने इसी पुरुष को देखा, ब्रह्म को, आख़िरी छोर तक फैला हुआ। यह मैंने देख लिया, उसने कहा।",
+   "commentary_en": "The exclamation is left in the text as an exclamation, not tidied into a doctrine. Somebody looks around, finds there is nothing else to be talking about, and says so out loud. The next verse builds a name out of those words.",
+   "commentary_hi": "यह उद्गार पाठ में उद्गार की तरह ही छोड़ दिया गया है, किसी सिद्धांत में समेटा नहीं गया। कोई चारों तरफ़ देखता है, पाता है कि और किसी की बात करने को है ही नहीं, और यह ज़ोर से कह देता है। अगला श्लोक इन्हीं शब्दों से एक नाम गढ़ता है।"
+  },
+  {
+   "id": 20939,
+   "number": "1.14",
+   "body_en": "So his name is Idandra, the one who saw this. Idandra, truly, is the name. And though he is Idandra, they call him Indra, going the long way round. For the gods rather like the long way round. The gods rather like the long way round.",
+   "body_hi": "इसीलिए उसका नाम इदंद्र है — जिसने 'यह' देखा। इदंद्र ही सचमुच उसका नाम है। और इदंद्र होते हुए भी लोग उसे इंद्र कहते हैं, घुमा-फिराकर। क्योंकि देवताओं को घुमा-फिराकर कहना भाता है। देवताओं को घुमा-फिराकर कहना भाता है।",
+   "commentary_en": "An etymology, and then a joke at the expense of the gods — they are said to prefer being approached obliquely, which is offered as the reason a name got shortened. The last sentence is said twice, which is how these chapters are marked as finished.",
+   "commentary_hi": "एक व्युत्पत्ति, और फिर देवताओं की क़ीमत पर एक चुटकी — कहा जाता है कि उन्हें टेढ़े रास्ते से आना पसंद है, और नाम के छोटे हो जाने की वजह यही बताई जाती है। आख़िरी वाक्य दो बार कहा गया है, और इन अध्यायों के ख़त्म होने का निशान यही है।"
+  },
+  {
+   "id": 20940,
+   "number": "2.1",
+   "body_en": "Om. In a man this first becomes a seed, and that is what semen is. It is the vigour drawn together out of every one of his limbs, and in carrying it he is carrying himself inside himself. When he pours it into a woman, that is the moment he gets it born. This is its first birth.",
+   "body_hi": "ॐ। पुरुष में यह पहले बीज बनता है, और वही वीर्य है। यह उसके एक-एक अंग से खिंचकर इकट्ठा हुआ तेज है, और उसे उठाए रखने में वह अपने भीतर अपने को ही उठाए रखता है। जब वह उसे स्त्री में उँड़ेलता है, वही घड़ी है जब वह उसे जन्म देता है। यही उसका पहला जन्म है।",
+   "commentary_en": "The chapter counts three births, and only one of them is the one we ordinarily mean by the word. The first is not the child's own doing at all — it is the moment he is poured out of somebody else, and it happens before there is anybody there for it to happen to.",
+   "commentary_hi": "यह अध्याय तीन जन्म गिनता है, और उनमें से सिर्फ़ एक वह है जिसे हम आम तौर पर जन्म कहते हैं। पहला जन्म बच्चे का अपना किया हुआ है ही नहीं — वह वह घड़ी है जब उसे किसी और में से उँड़ेला जाता है, और वह तब हो जाता है जब वहाँ ऐसा कोई है ही नहीं जिसके साथ यह हो।"
+  },
+  {
+   "id": 20941,
+   "number": "2.2",
+   "body_en": "It goes over into the woman's own body, as much a part of her as any limb of hers. That is why it does no harm to her. She brings on this self of his that has come to be there.",
+   "body_hi": "वह स्त्री की अपनी देह में मिल जाता है, उसके अपने किसी अंग जितना ही उसका। इसीलिए वह उसे कोई नुक़सान नहीं पहुँचाता। वहाँ जो उसकी आत्मा आ बसी है, उसे वह बढ़ाती है।",
+   "commentary_en": "One sentence to explain why a pregnancy does not destroy the woman carrying it, and the explanation is that the thing inside her is not a foreign body. Whatever its biology, the intent is plainly reassurance, and it is the oldest form that reassurance takes.",
+   "commentary_hi": "एक वाक्य यह समझाने के लिए कि गर्भ उसे उठाने वाली स्त्री को तबाह क्यों नहीं करता, और समझाइश यह है कि उसके भीतर की चीज़ पराई नहीं है। शरीर-विज्ञान जो भी हो, मंशा साफ़ तौर पर ढाढ़स बँधाने की है, और ढाढ़स का यह सबसे पुराना रूप है।"
+  },
+  {
+   "id": 20942,
+   "number": "2.3",
+   "body_en": "She who brings it on becomes one to be looked after herself. The woman carries the seed. He tends the child from before its birth and goes on after. And in tending it before and after, what he tends is himself, so that these worlds keep going — for that is how these worlds are kept going. This is its second birth.",
+   "body_hi": "जो बढ़ाती है, वह ख़ुद सँभाले जाने वाली हो जाती है। स्त्री गर्भ को उठाए रखती है। वह बच्चे को उसके जन्म से पहले से पालता है और बाद में भी पालता रहता है। और पहले और बाद उसे पालने में वह जिसे पाल रहा है वह अपने को ही पाल रहा है, ताकि ये लोक चलते रहें — क्योंकि इन लोकों का चलते रहना इसी तरह बनता है। यही उसका दूसरा जन्म है।",
+   "commentary_en": "The first sentence turns on itself: the one doing the nourishing becomes the one who has to be nourished. And the father looking after the child is said to be looking after himself, which is not sentiment but the chapter's whole argument put in six words.",
+   "commentary_hi": "पहला वाक्य अपने ही ऊपर पलट जाता है: जो पाल रही है, वही पाली जाने वाली हो जाती है। और बच्चे की देखभाल करते पिता के बारे में कहा जाता है कि वह अपनी ही देखभाल कर रहा है — यह भावुकता नहीं, इस अध्याय की पूरी दलील है, छह शब्दों में रखी हुई।"
+  },
+  {
+   "id": 20943,
+   "number": "2.4",
+   "body_en": "This self of his is set in his place to carry the good work forward. Then that other self of his, having done what it had to do and come to the end of its years, goes out. Going out from here, it is born once more. This is its third birth.",
+   "body_hi": "उसकी यह आत्मा उसकी जगह पर बिठा दी जाती है, ताकि पुण्य का काम आगे चलता रहे। फिर उसकी वह दूसरी आत्मा, जो करना था कर चुककर और उम्र के छोर पर आकर, निकल जाती है। यहाँ से निकलते ही वह फिर से जन्म ले लेती है। यही उसका तीसरा जन्म है।",
+   "commentary_en": "The third birth is the one that comes after dying, and it is put in the flattest language in the chapter. Having done what it had to, gone in years, it leaves. There is no fear in the sentence and no promise either — just the end of a shift and the beginning of the next.",
+   "commentary_hi": "तीसरा जन्म वह है जो मरने के बाद आता है, और उसे इस अध्याय की सबसे सपाट भाषा में रखा गया है। जो करना था कर चुककर, उम्र पूरी करके, वह निकल जाती है। इस वाक्य में न डर है न कोई वादा — बस एक पारी का ख़त्म होना और अगली का शुरू होना।"
+  },
+  {
+   "id": 20944,
+   "number": "2.5",
+   "body_en": "The seer has said it: While I was still inside the womb I came to know the births of all these gods. A hundred forts of iron were holding me down. Then a hawk — and I was out and away with speed. Vamadeva said this while he was still lying in the womb.",
+   "body_hi": "ऋषि ने यह कह रखा है: गर्भ के भीतर पड़े-पड़े ही मैं इन सारे देवताओं के जन्म जान गया था। लोहे के सौ क़िले मुझे दबाए हुए थे। फिर एक बाज़ — और मैं वेग से निकल भागा। वामदेव ने यह गर्भ में पड़े-पड़े ही कहा था।",
+   "commentary_en": "The strangest lines in the book, and the text does not explain them. A hundred forts of iron, and then a hawk, and then he is gone — the syntax breaks in the middle the way a memory does. The frame around the quotation is stranger still: he said it before he was born.",
+   "commentary_hi": "किताब की सबसे अजीब पंक्तियाँ, और पाठ उन्हें समझाता नहीं। लोहे के सौ क़िले, फिर एक बाज़, फिर वह जा चुका — वाक्य बीच में ही टूट जाता है, जैसे कोई याद टूटती है। उद्धरण के चारों तरफ़ का ढाँचा और भी अजीब है: उसने यह जन्म लेने से पहले कहा था।"
+  },
+  {
+   "id": 20945,
+   "number": "2.6",
+   "body_en": "A man who knows this, when the body breaks and he climbs up out of it, gets everything he wanted in that world above, and has become deathless. Has become deathless.",
+   "body_hi": "जो आदमी यह जान लेता है, देह के टूटने पर जब वह उसमें से ऊपर चढ़ जाता है, ऊपर के उस लोक में जो चाहा था सब पा लेता है, और अमर हो चुका होता है। अमर हो चुका होता है।",
+   "commentary_en": "The closing formula, with the last two words said twice — the same mark of an ending that shut the first chapter. It will come round once more at the end of the third.",
+   "commentary_hi": "यह अंत का बँधा हुआ वाक्य है, जिसके आख़िरी दो शब्द दो बार कहे गए हैं — यही निशान पहला अध्याय भी बंद कर चुका है। तीसरे के अंत में यह एक बार और लौटेगा।"
+  },
+  {
+   "id": 20946,
+   "number": "3.1",
+   "body_en": "Om. Who is this self that we sit down beside? Which one of them is the self? Is it what we see with, or what we hear with, or what picks up a smell off the air, or what gets words out of us, or what tells a sweet mouthful from a flat one?",
+   "body_hi": "ॐ। यह आत्मा कौन है जिसके पास हम बैठते हैं? इनमें से आत्मा है कौन-सी? क्या वही जिससे हम देखते हैं, या जिससे सुनते हैं, या जो हवा में से गंध उठा लेती है, या जो हमारे मुँह से शब्द निकलवाती है, या जो मीठे कौर को फीके कौर से अलग बता देती है?",
+   "commentary_en": "The last chapter opens by refusing to take its own key word for granted. Five candidates are put up, all of them ordinary and all of them from experience rather than doctrine. Nothing is settled here; the question is left standing on purpose.",
+   "commentary_hi": "आख़िरी अध्याय अपने ही मुख्य शब्द को मान लेने से इनकार करके शुरू होता है। पाँच उम्मीदवार खड़े किए जाते हैं, सब आम, और सब सिद्धांत से नहीं, अनुभव से लिए हुए। यहाँ कुछ तय नहीं होता; सवाल जान-बूझकर खड़ा छोड़ दिया गया है।"
+  },
+  {
+   "id": 20947,
+   "number": "3.2",
+   "body_en": "There is this heart, and there is mind. Taking something in; giving an order; telling one thing from another; knowing; a good head on you; the way you look at a thing; holding steady; an opinion; weighing something up; the push to move; remembering; making your mind up; seeing a thing through; being alive at all; wanting; having your way. Every one of these is a name for knowing.",
+   "body_hi": "यह जो हृदय है, और मन है। किसी चीज़ को भीतर ले लेना; हुक्म देना; एक को दूसरे से अलग पहचानना; जानना; अच्छा दिमाग़ होना; किसी चीज़ को देखने का ढंग; टिके रहना; कोई राय; तौलकर तय करना; हिलने का धक्का; याद रखना; मन बना लेना; काम को अंजाम तक पहुँचाना; ज़िंदा होना ही; चाहना; अपनी चलाना। इनमें से हर एक जानने का ही एक नाम है।",
+   "commentary_en": "Sixteen words, and to the people who wrote them down none was a technical term — these are the ordinary names for the ordinary business of a mind, including wanting and getting your own way. The claim is that all of them are one thing under different names, and the list is long precisely so that the claim costs something.",
+   "commentary_hi": "सोलह शब्द, और जिन्होंने इन्हें लिखा उनके लिए इनमें से कोई पारिभाषिक शब्द नहीं था — ये मन के रोज़मर्रा के काम के रोज़मर्रा के नाम हैं, जिनमें चाहना और अपनी चलाना भी शामिल हैं। दावा यह है कि ये सब अलग-अलग नामों के नीचे एक ही चीज़ हैं, और सूची इतनी लंबी ठीक इसलिए है कि दावे की क़ीमत चुकानी पड़े।"
+  },
+  {
+   "id": 20948,
+   "number": "3.3",
+   "body_en": "This is brahman; this is Indra; this is Prajapati. All these gods are this, and so are the five great elements — earth, wind, space, water, the lights. So are the small mixed-up things: seeds of one kind and of another; whatever comes out of an egg, whatever comes out of a womb, whatever breeds in the wet, whatever pushes up through the ground; horses, cattle, men, elephants; every breathing thing here, what walks and what flies and what stands still. All of it has knowing for its eye. It rests on knowing. Knowing is the eye of the world; knowing is what the world stands on. Knowing is brahman.",
+   "body_hi": "यह ब्रह्म है; यह इंद्र है; यह प्रजापति है। ये सारे देवता यही हैं, और पाँचों महाभूत भी — पृथ्वी, हवा, आकाश, जल, ज्योतियाँ। और वे छोटी-छोटी मिली-जुली चीज़ें भी: एक तरह के बीज और दूसरी तरह के; जो कुछ अंडे में से निकलता है, जो कुछ गर्भ में से निकलता है, जो कुछ सीलन में पनपता है, जो कुछ ज़मीन फोड़कर ऊपर आता है; घोड़े, गाएँ, आदमी, हाथी; यहाँ की हर साँस लेती चीज़, जो चलता है और जो उड़ता है और जो खड़ा रह जाता है। इस सबकी आँख जानना है। यह जानने पर टिका है। जानना जगत की आँख है; जानना ही वह है जिस पर जगत खड़ा है। जानना ही ब्रह्म है।",
+   "commentary_en": "The list keeps widening — gods first, then the elements, then seeds, then the four ways a thing can be born, then animals, then simply what moves and what does not. Each time it widens, the same short word is pushed underneath it, and by the end the word has to hold up everything there is.",
+   "commentary_hi": "सूची चौड़ी होती चली जाती है — पहले देवता, फिर महाभूत, फिर बीज, फिर पैदा होने के चार तरीक़े, फिर जानवर, और आख़िर में बस वह जो चलता है और वह जो नहीं चलता। हर बार जब वह चौड़ी होती है, उसके नीचे वही छोटा-सा शब्द सरका दिया जाता है, और अंत तक उसी शब्द को सब कुछ थामे रखना पड़ता है।"
+  },
+  {
+   "id": 20949,
+   "number": "3.4",
+   "body_en": "By that self which knows, he climbs up out of this world, gets everything he wanted in that world above, and has become deathless. Has become deathless.",
+   "body_hi": "जानने वाली उसी आत्मा के सहारे वह इस लोक में से ऊपर चढ़ जाता है, ऊपर के उस लोक में जो चाहा था सब पा लेता है, और अमर हो चुका होता है। अमर हो चुका होता है।",
+   "commentary_en": "The same close as the second chapter, with one word changed: the self is now the knowing one. That single substitution is the whole of what the third chapter added, and the book stops as soon as it has been made.",
+   "commentary_hi": "दूसरे अध्याय जैसा ही अंत, बस एक शब्द बदलकर: आत्मा अब जानने वाली है। इस एक बदलाव में ही वह सब है जो तीसरे अध्याय ने जोड़ा, और यह बदलाव होते ही किताब रुक जाती है।"
+  }
+ ]
+}
