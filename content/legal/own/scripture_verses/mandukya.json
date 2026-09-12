@@ -1,0 +1,106 @@
+{
+ "slug": "mandukya",
+ "title_en": "Mandukya Upanishad",
+ "title_hi": "माण्डूक्य उपनिषद्",
+ "book_id": 79,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 23940,
+   "number": "1.1",
+   "body_en": "Hari OM. This syllable, OM — all of this is that. Here is the unfolding of it. What has been, what is, and what is still to come: the whole of it is OM and nothing else. And whatever there may be outside the three times, that is OM as well.",
+   "body_hi": "हरि ॐ। यह अक्षर, ॐ — यह सब वही है। इसका खुलना ऐसे है। जो हो चुका, जो है, और जो आना बाक़ी है: पूरा का पूरा ॐ है और कुछ नहीं। और तीनों कालों के बाहर जो कुछ हो, वह भी ॐ ही है।",
+   "commentary_en": "The shortest of the Upanishads — twelve sentences from end to end. It opens by putting everything there is inside one syllable, and then spends the rest of its length taking that syllable apart to show you what was in it.",
+   "commentary_hi": "उपनिषदों में सबसे छोटा — सिरे से सिरे तक बारह वाक्य। यह जो कुछ है उस सबको एक अक्षर के भीतर रखकर खुलता है, और फिर अपनी बाक़ी पूरी लंबाई उसी अक्षर को खोलकर यह दिखाने में लगाता है कि उसमें क्या था।"
+  },
+  {
+   "id": 23941,
+   "number": "1.2",
+   "body_en": "Every bit of this is brahman. This self is brahman. And that very one, the one just now named, is a thing that stands on four feet.",
+   "body_hi": "इसका कण-कण ब्रह्म है। यह आत्मा ब्रह्म है। और वही, जिसका अभी-अभी नाम लिया गया, ऐसा है जो चार पैरों पर खड़ा रहता है।",
+   "commentary_en": "This self is brahman is one of the four great sayings, and this is the book it comes from. Three words in the Sanskrit. Then, without a pause, a piece of architecture — the word is literally four-footed, like a creature standing on four legs, and what follows is the tour of those four.",
+   "commentary_hi": "'यह आत्मा ब्रह्म है' उन चार महावाक्यों में से एक है, और वह इसी किताब का है। संस्कृत में तीन शब्द। फिर, बिना रुके, एक ढाँचा — शब्द का मतलब सीधे-सीधे चार पैरों वाला है, जैसे कोई जानवर चार टाँगों पर खड़ा हो, और आगे उन्हीं चारों का दौरा है।"
+  },
+  {
+   "id": 23942,
+   "number": "1.3",
+   "body_en": "The first quarter is the one whose place is waking, whose knowing faces outward, who has seven limbs and nineteen mouths, and who eats what is coarse. He is Vaishvanara, the one in all men.",
+   "body_hi": "पहला हिस्सा वह है जिसकी जगह जागना है, जिसका जानना बाहर की ओर मुँह किए है, जिसके सात अंग और उन्नीस मुँह हैं, और जो मोटी चीज़ें खाता है। वह वैश्वानर है — वह जो सब आदमियों में है।",
+   "commentary_en": "Nineteen mouths: the five senses, the five organs a man acts with, the five breaths, and then the mind, the judgement, the I, and the attention. They are called mouths because they are the ways the world gets in.",
+   "commentary_hi": "उन्नीस मुँह: पाँच इन्द्रियाँ, वे पाँच अंग जिनसे आदमी काम करता है, पाँच प्राण, और फिर मन, समझ, 'मैं', और ध्यान। इन्हें मुँह इसलिए कहा गया कि दुनिया इन्हीं रास्तों से भीतर आती है।"
+  },
+  {
+   "id": 23943,
+   "number": "1.4",
+   "body_en": "The second quarter is the one whose place is dreaming, whose knowing faces inward, who has the same seven limbs and the same nineteen mouths, and who eats what is fine. He is Taijasa, the one made of light.",
+   "body_hi": "दूसरा हिस्सा वह है जिसकी जगह सपना है, जिसका जानना भीतर की ओर मुँह किए है, जिसके वही सात अंग और वही उन्नीस मुँह हैं, और जो बारीक चीज़ें खाता है। वह तैजस है — वह जो रोशनी का बना है।",
+   "commentary_en": "The same equipment, turned around. Nothing is coming in from outside, and all nineteen are still working — which is the observation the whole verse is built on. A man asleep is still seeing, hearing and moving. Just not with the room.",
+   "commentary_hi": "वही साज़-सामान, घुमा दिया गया। बाहर से कुछ नहीं आ रहा, और उन्नीसों अब भी चल रहे हैं — पूरा श्लोक इसी देखी हुई बात पर खड़ा है। सोया हुआ आदमी अब भी देख रहा है, सुन रहा है, चल रहा है। बस उस कमरे के साथ नहीं।"
+  },
+  {
+   "id": 23944,
+   "number": "1.5",
+   "body_en": "Where a sleeping man wants nothing at all and sees no dream, that is deep sleep. The third quarter is the one whose place is deep sleep, who has become one, who is a single heap of knowing, who is made of ease and lives on ease, and whose one mouth is thought. He is Prajna.",
+   "body_hi": "जहाँ सोया हुआ आदमी कुछ भी नहीं चाहता और कोई सपना नहीं देखता, वह गहरी नींद है। तीसरा हिस्सा वह है जिसकी जगह गहरी नींद है, जो एक हो चुका, जो जानने का एक ही ढेर है, जो सुख का बना है और सुख पर ही जीता है, और जिसका एक ही मुँह है — चित्त। वह प्राज्ञ है।",
+   "commentary_en": "The definition offered is negative and it is empirical: no wanting, and no dream. That is something a person can check against his own night rather than take on authority. And the nineteen mouths have closed down to one.",
+   "commentary_hi": "जो परिभाषा दी गई है वह नकार में है और देखी हुई है: कोई चाह नहीं, कोई सपना नहीं। यह ऐसी चीज़ है जिसे आदमी किसी के कहने पर मानने के बजाय अपनी ही रात से जाँच सकता है। और उन्नीस मुँह घटकर एक रह गए।"
+  },
+  {
+   "id": 23945,
+   "number": "1.6",
+   "body_en": "This one is the lord of everything. This one knows everything. This one is the controller sitting inside. This one is the womb of it all, since creatures come out of him and go back into him.",
+   "body_hi": "यही सबका स्वामी है। यही सब जानता है। यही भीतर बैठा चलाने वाला है। यही सबका गर्भ है, क्योंकि प्राणी इसी से निकलते हैं और इसी में लौट जाते हैं।",
+   "commentary_en": "Attached to deep sleep, of all the four. The state a man passes through every night without noticing is where the book puts the lord of everything and the place all creatures come out of.",
+   "commentary_hi": "चारों में से गहरी नींद के साथ जुड़ा हुआ। जिस हालत से आदमी हर रात बिना ध्यान दिए गुज़र जाता है, किताब वहीं सबके स्वामी को और उस जगह को रखती है जहाँ से सारे प्राणी निकलते हैं।"
+  },
+  {
+   "id": 23946,
+   "number": "1.7",
+   "body_en": "The fourth is not the knowing that faces inward, nor the knowing that faces outward, nor both at once. It is not a heap of knowing. It is not knowing, and it is not the absence of knowing either. It cannot be seen. There is no dealing with it, no getting hold of it, and no mark on it by which you would know it again. It cannot be thought and it cannot be pointed at. What it comes down to is the certainty of one self and nothing besides. In it the spread-out world goes quiet. It is at peace, it is kind, and there is no second thing anywhere in it. That is the self. That is the thing to know.",
+   "body_hi": "चौथा न भीतर की ओर मुँह किया जानना है, न बाहर की ओर, न एक साथ दोनों ओर। वह जानने का ढेर नहीं है। वह जानना नहीं है, और जानने का न होना भी नहीं। उसे देखा नहीं जा सकता। उससे कोई लेन-देन नहीं, उस पर कोई पकड़ नहीं, और उस पर कोई निशान नहीं जिससे उसे फिर पहचाना जाए। उसे सोचा नहीं जा सकता, उसकी ओर उँगली नहीं उठाई जा सकती। बात इतनी है कि वहाँ एक ही आत्मा का यक़ीन है और उसके सिवा कुछ नहीं। उसमें फैली हुई दुनिया शांत हो जाती है। वह शांति है, वह भला है, और उसमें कहीं कोई दूसरी चीज़ नहीं। वही आत्मा है। वही जानने की चीज़ है।",
+   "commentary_en": "Six sentences of what it is not, and then the negations stop and the book says three things about it: at peace, kind, one. The kindness is the one nothing prepares you for. After all that refusing to describe, the last word it will allow is a word about temperament.",
+   "commentary_hi": "छह वाक्य इस बात के कि वह क्या नहीं है, और फिर नकार रुक जाते हैं और किताब उसके बारे में तीन चीज़ें कहती है: शांत, भला, एक। 'भला' वही है जिसके लिए कुछ भी तैयार नहीं करता। इतना सब बताने से इनकार करने के बाद आख़िरी शब्द जो वह मानती है वह स्वभाव का शब्द है।"
+  },
+  {
+   "id": 23947,
+   "number": "1.8",
+   "body_en": "This same self, taken as the syllable, is OM. Taken as the pieces of the syllable, the quarters are the pieces and the pieces are the quarters: A, U, M.",
+   "body_hi": "यही आत्मा, अक्षर के रूप में, ॐ है। अक्षर के टुकड़ों के हिसाब से — हिस्से ही टुकड़े हैं और टुकड़े ही हिस्से: अ, उ, म्।",
+   "commentary_en": "The hinge of the book. Everything just said about four states is about to be said over again about three sounds and a silence.",
+   "commentary_hi": "किताब की चूल। चार हालतों के बारे में जो कुछ अभी कहा गया, वही अब तीन आवाज़ों और एक चुप्पी के बारे में दोबारा कहा जाने वाला है।"
+  },
+  {
+   "id": 23948,
+   "number": "1.9",
+   "body_en": "Waking, Vaishvanara, is A, the first piece — because of getting, or because of coming first. A man who knows it so gets everything he wants, and he comes first.",
+   "body_hi": "जागना, वैश्वानर, अ है — पहला टुकड़ा; इसलिए कि पाना होता है, या इसलिए कि वह पहले आता है। जो इसे इस तरह जानता है, वह जो चाहता है सब पा लेता है, और पहले आता है।",
+   "commentary_en": "The reason given is a play on the sound: in Sanskrit the word for getting and the word for first both open with A. It does not carry into English and there is no use pretending it does. But it is not decoration either — this is how the text argues, by ear.",
+   "commentary_hi": "जो वजह दी गई है वह आवाज़ का खेल है: संस्कृत में पाने का शब्द और पहले होने का शब्द, दोनों अ से खुलते हैं। यह अंग्रेज़ी या हिंदी में नहीं उतरता और उतरने का बहाना करने का कोई फ़ायदा नहीं। पर यह सजावट भी नहीं है — पाठ अपनी दलील इसी तरह रखता है, कान से।"
+  },
+  {
+   "id": 23949,
+   "number": "1.10",
+   "body_en": "Dreaming, Taijasa, is U, the second piece — because of rising, or because of standing between the two. A man who knows it so raises the stream of what he knows, and he is a match for anyone. Nobody is born in his line who does not know brahman.",
+   "body_hi": "सपना, तैजस, उ है — दूसरा टुकड़ा; इसलिए कि उठान होती है, या इसलिए कि वह दोनों के बीच खड़ा है। जो इसे इस तरह जानता है, वह अपने जाने हुए की धारा को ऊपर उठाता है, और किसी से कम नहीं रहता। उसके कुल में कोई ऐसा नहीं जन्मता जो ब्रह्म को न जाने।",
+   "commentary_en": "Standing between the two is the plainer of the two reasons and the better one: U sits between the open throat of A and the closed lips of M, exactly as dreaming sits between waking and deep sleep.",
+   "commentary_hi": "'दोनों के बीच खड़ा है' — दोनों वजहों में यह ज़्यादा सीधी है और ज़्यादा अच्छी भी: उ अ के खुले गले और म् के बंद होंठों के बीच बैठता है, ठीक वैसे जैसे सपना जागने और गहरी नींद के बीच बैठता है।"
+  },
+  {
+   "id": 23950,
+   "number": "1.11",
+   "body_en": "Deep sleep, Prajna, is M, the third piece — because of measuring, or because of going in. A man who knows it so takes the measure of all of this, and he is the going-in.",
+   "body_hi": "गहरी नींद, प्राज्ञ, म् है — तीसरा टुकड़ा; इसलिए कि नाप होता है, या इसलिए कि उसमें समा जाना होता है। जो इसे इस तरह जानता है, वह इस सबका नाप ले लेता है, और वही समा जाना हो जाता है।",
+   "commentary_en": "Three sounds, three claims, and the same shape to each: know it, and become what it is. Worth saying aloud once — A opens the throat, U rolls forward, M shuts the lips. The syllable is a mouth closing, and it has been mapped onto a man going to sleep.",
+   "commentary_hi": "तीन आवाज़ें, तीन दावे, और हर एक का वही ढाँचा: इसे जानो, और वही हो जाओ जो यह है। एक बार बोलकर देखने लायक़ — अ गला खोलता है, उ आगे लुढ़कता है, म् होंठ बंद कर देता है। यह अक्षर एक मुँह का बंद होना है, और उसे आदमी के सोने पर बिठा दिया गया है।"
+  },
+  {
+   "id": 23951,
+   "number": "1.12",
+   "body_en": "The fourth has no piece to it. There is no dealing with it. In it the spread-out world goes quiet. It is kind, and there is no second thing in it. So OM is nothing other than the self. Whoever knows it so goes into the self by way of the self, and that is the whole of it.",
+   "body_hi": "चौथे का कोई टुकड़ा नहीं है। उससे कोई लेन-देन नहीं। उसमें फैली हुई दुनिया शांत हो जाती है। वह भला है, और उसमें कोई दूसरी चीज़ नहीं। तो ॐ आत्मा के सिवा कुछ नहीं है। जो इसे इस तरह जानता है, वह आत्मा से होकर आत्मा में चला जाता है — और बस इतना ही।",
+   "commentary_en": "It ends on the syllable it began with, having taken the thing apart and put it back together. And the fourth has no sound at all: it is the silence the three run into when the mouth has shut. Twelve sentences, and not one of them is spare.",
+   "commentary_hi": "यह उसी अक्षर पर ख़त्म होता है जिससे शुरू हुआ था, चीज़ को खोलकर और फिर जोड़कर। और चौथे की कोई आवाज़ ही नहीं है: वह वही चुप्पी है जिसमें मुँह बंद होने पर तीनों जाकर गिरते हैं। बारह वाक्य, और उनमें एक भी फ़ालतू नहीं।"
+  }
+ ]
+}
