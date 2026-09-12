@@ -1,0 +1,234 @@
+{
+ "slug": "bgc_17",
+ "title_en": "Shraddhatraya Vibhaga Yoga",
+ "title_hi": "श्रद्धात्रय विभाग योग",
+ "book_id": 17,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 596,
+   "number": "17.1",
+   "body_en": "Arjuna said: And the men who let the rule of the books go and make their offering anyway, with faith in them — where does that leave them standing, Krishna? In the clear mode, or the restless one, or the heavy one?",
+   "body_hi": "अर्जुन ने कहा — और जो लोग किताबों का नियम जाने देते हैं और फिर भी श्रद्धा लिए अपनी आहुति डालते हैं — वे कहाँ खड़े होते हैं, कृष्ण? साफ़ वाले गुण में, बेचैन वाले में, या भारी वाले में?",
+   "commentary_en": "He has caught the problem in the two verses that closed the last chapter. He was told to take the books as his measure, and he is asking after the sincere man who does not have them. It is a good question, and the whole chapter is the answer to it.",
+   "commentary_hi": "पिछले अध्याय के आख़िरी दो श्लोकों में जो दिक़्क़त थी, उसे उसने पकड़ लिया है। उससे कहा गया था कि किताबों को पैमाना बनाओ, और वह उस सच्चे आदमी के बारे में पूछ रहा है जिसके पास वे किताबें नहीं हैं। सवाल अच्छा है, और पूरा अध्याय उसी का जवाब है।"
+  },
+  {
+   "id": 597,
+   "number": "17.2",
+   "body_en": "The Blessed One said: The faith men have comes in three kinds, and it grows out of what each man already is. Clear, restless, heavy. Listen.",
+   "body_hi": "श्रीभगवान ने कहा — आदमियों की श्रद्धा तीन तरह की होती है, और वह उसी में से उगती है जो आदमी पहले से है। साफ़, बेचैन, भारी। सुनो।",
+   "commentary_en": "The answer does not sort men into those who keep the rule and those who do not. It sorts them by what their faith is made of, which is a different cut altogether, and a kinder one.",
+   "commentary_hi": "जवाब आदमियों को इसमें नहीं बाँटता कि कौन नियम निभाता है और कौन नहीं। वह उन्हें इससे बाँटता है कि उनकी श्रद्धा बनी किस चीज़ की है — और यह बिलकुल दूसरी तरह की कटाई है, और ज़्यादा नरम।"
+  },
+  {
+   "id": 598,
+   "number": "17.3",
+   "body_en": "Every man's faith takes the shape of what he is, Bharata. He is put together out of it: whatever he trusts, that is what he turns out to be.",
+   "body_hi": "हर आदमी की श्रद्धा वही शक्ल ले लेती है जो वह ख़ुद है, भारत। आदमी अपनी श्रद्धा से ही जुड़ा हुआ है: जिस पर उसका भरोसा है, निकलकर वही बन जाता है।",
+   "commentary_en": "One of the most quoted lines in the book, and it cuts both ways. No man gets a faith better than himself — and equally, change what he trusts and you have changed him.",
+   "commentary_hi": "किताब की सबसे ज़्यादा दोहराई जाने वाली पंक्तियों में एक, और वह दोनों तरफ़ काटती है। किसी को अपने से बेहतर श्रद्धा नहीं मिलती — और उतना ही यह भी कि जिस पर उसका भरोसा है उसे बदल दो, तो आदमी बदल गया।"
+  },
+  {
+   "id": 599,
+   "number": "17.4",
+   "body_en": "The clear-minded make their offering to the gods. The restless go to the spirits that hand things out and the ones that take them away. And the rest — the heavy sort — make theirs to the dead, and to the crowds of small powers that hang about a place.",
+   "body_hi": "साफ़ मन वाले देवताओं को अपनी आहुति देते हैं। बेचैन वाले उन आत्माओं के पास जाते हैं जो चीज़ें बाँटती हैं, और उनके पास जो छीन लेती हैं। और बाक़ी — भारी क़िस्म — मरे हुओं को देते हैं, और उन छोटी-मोटी शक्तियों की भीड़ को जो किसी जगह के आसपास मँडराती रहती है।",
+   "commentary_en": "The test is what a man goes to when he wants something, which is a fair one. Nobody picks the small powers first. They are what a man settles for once he is in a hurry.",
+   "commentary_hi": "कसौटी यह है कि आदमी को कुछ चाहिए हो तो वह जाता किसके पास है — और यह कसौटी ठीक है। छोटी-मोटी शक्तियों को कोई पहले नहीं चुनता। जब जल्दी पड़ जाती है, तब आदमी उन पर उतरता है।"
+  },
+  {
+   "id": 600,
+   "number": "17.5",
+   "body_en": "There are men who put themselves through fearful hardships that no book ever asked for, with the showing-off and the sense of being an I standing right there alongside, and behind it the whole weight of what they want and what they are chasing.",
+   "body_hi": "कुछ लोग अपने आप को ऐसी डरावनी तकलीफ़ों में डालते हैं जो किसी किताब ने कभी माँगी ही नहीं, और साथ में दिखावा और 'मैं' का भाव ठीक बग़ल में खड़े रहते हैं, और पीछे उनकी चाह और उनके पीछे भागने का पूरा बोझ।",
+   "commentary_en": "Note what the objection is not. Nobody is being told the hardship is too hard.",
+   "commentary_hi": "ध्यान दीजिए कि एतराज़ किस बात पर नहीं है। किसी से यह नहीं कहा जा रहा कि तकलीफ़ ज़्यादा कड़ी है।"
+  },
+  {
+   "id": 601,
+   "number": "17.6",
+   "body_en": "What they are grinding down is the gathering of elements a body is made of — and me along with it, since I am in there too. Set them down as men who have made their minds up on the wrong side.",
+   "body_hi": "वे जिसे घिस रहे हैं वह तत्वों का वही जमघट है जिससे देह बनी है — और उसके साथ मुझे भी, क्योंकि मैं भी उसी के भीतर हूँ। इन्हें ऐसे आदमियों में गिनो जिन्होंने ग़लत पाले का मन बना लिया है।",
+   "commentary_en": "There is somebody else in the body being made to bear it. A man fasting like this is not fasting alone, and that is the whole of the charge against him.",
+   "commentary_hi": "देह के भीतर कोई और भी है जिससे वह सब सहलवाया जा रहा है। इस तरह उपवास करता आदमी अकेला उपवास नहीं कर रहा — और उस पर इल्ज़ाम बस इतना ही है।"
+  },
+  {
+   "id": 602,
+   "number": "17.7",
+   "body_en": "Food comes in three kinds as well, and each man is drawn to his own. So does the offering, so does going without, so does giving. Hear how they come apart.",
+   "body_hi": "अन्न भी तीन तरह का होता है, और हर आदमी अपने वाले की ओर खिंचता है। आहुति भी, बिना रहना भी, देना भी। सुनो कि ये अलग कैसे होते हैं।",
+   "commentary_en": "Four things are about to be sorted the same way, and the first of them is dinner. The book does not treat that as a change of subject.",
+   "commentary_hi": "अब चार चीज़ें एक ही तरीक़े से छाँटी जाने वाली हैं, और उनमें पहली है खाना। किताब इसे विषय बदलना नहीं मानती।"
+  },
+  {
+   "id": 603,
+   "number": "17.8",
+   "body_en": "Some food lengthens a life and steadies the man living it — puts strength in him, keeps him well, leaves him pleased and easy. There is taste in it, some fat in it, it sits where you put it, and it does the heart good. That is what the clear sort want.",
+   "body_hi": "कुछ अन्न ज़िन्दगी लंबी करता है और जीने वाले को थामे रखता है — उसमें ताक़त भरता है, उसे ठीक रखता है, और उसे ख़ुश और हलका छोड़ता है। उसमें स्वाद है, थोड़ी चिकनाई है, वह जहाँ रखो वहीं बैठता है, और दिल को भाता है। साफ़ क़िस्म वालों को यही चाहिए।",
+   "commentary_en": "It sits where you put it is the whole of what is being asked for. Not richness and not denial — food that does not fight the man who ate it.",
+   "commentary_hi": "'जहाँ रखो वहीं बैठता है' — माँग बस इतनी ही है। न भरा-पूरा खाना, न त्याग — बस ऐसा अन्न जो खाने वाले से लड़े नहीं।"
+  },
+  {
+   "id": 604,
+   "number": "17.9",
+   "body_en": "Other food bites. Too sharp, too sour, too much salt, too much heat in it, dry, and scorching on the way down. It buys a man pain, and grief after that, and illness at the end of it. That is the food the restless reach for.",
+   "body_hi": "दूसरा अन्न काटता है। बहुत तीखा, बहुत खट्टा, नमक ज़्यादा, गरमी ज़्यादा, सूखा, और उतरते हुए जलाता हुआ। वह आदमी को दर्द ख़रीदकर देता है, उसके बाद शोक, और आख़िर में बीमारी। बेचैन वाले इसी अन्न की ओर हाथ बढ़ाते हैं।",
+   "commentary_en": "Pain, grief, illness — in that order, and the order is the point. What is bought at the table gets paid for somewhere further down the line.",
+   "commentary_hi": "दर्द, शोक, बीमारी — इसी क्रम में, और क्रम ही असल बात है। जो थाली पर ख़रीदा जाता है उसका दाम कहीं आगे चलकर चुकाया जाता है।"
+  },
+  {
+   "id": 605,
+   "number": "17.10",
+   "body_en": "And food cooked too long ago, with the good gone out of it, turned, kept past its day; what was left on somebody else's plate; what should not be eaten at all. That is what the heavy sort will put in their mouths.",
+   "body_hi": "और वह अन्न जो बहुत पहले पका था, जिसमें से अच्छाई निकल चुकी, जो बदल गया, जो अपना दिन पार कर चुका; जो किसी और की थाली में छूट गया; जो खाया ही नहीं जाना चाहिए। भारी क़िस्म वाले यही मुँह में डालते हैं।",
+   "commentary_en": "Three verses on what is in a man's bowl, sitting in the middle of a book about the self and its release. Whoever put them here did not think the two subjects were far apart.",
+   "commentary_hi": "आदमी की थाली में क्या है, इस पर तीन श्लोक — और वे उस किताब के बीचोंबीच बैठे हैं जो आत्मा और उसके छूटने की बात करती है। जिसने इन्हें यहाँ रखा, उसे ये दोनों विषय दूर-दूर के नहीं लगते थे।"
+  },
+  {
+   "id": 606,
+   "number": "17.11",
+   "body_en": "An offering made the way the rule has it, by men who are not after what it pays, with the mind settled on nothing beyond this is a thing that is to be done — that one is clear.",
+   "body_hi": "वह आहुति जो नियम के मुताबिक़ डाली जाए, उन लोगों के हाथों जो उसका फल नहीं ताक रहे, और मन इससे आगे कहीं टिका ही न हो कि यह करने की चीज़ है — वह साफ़ है।",
+   "commentary_en": "This is 2.47 turned into a ritual instruction. The man is not told to want nothing; he is told to let the doing of it be the whole of what he is thinking about while he does it.",
+   "commentary_hi": "यह 2.47 को कर्मकांड के हुक्म में बदल देना है। आदमी से यह नहीं कहा जा रहा कि कुछ मत चाहो; उससे यह कहा जा रहा है कि करते वक़्त उसका करना ही उसके सोचने की पूरी चीज़ बना रहे।"
+  },
+  {
+   "id": 607,
+   "number": "17.12",
+   "body_en": "But when a man has one eye on what it will bring him, or is doing it so as to be seen doing it, best of the Bharatas — put that offering down as restless.",
+   "body_hi": "पर जब आदमी की एक आँख इस पर हो कि इससे उसे मिलेगा क्या, या वह इसीलिए कर रहा हो कि लोग उसे करते हुए देखें, भरतश्रेष्ठ — तो उस आहुति को बेचैन वाली में गिनो।",
+   "commentary_en": "The middle kind is the one to watch. The third is a botched job and anybody can see it is botched; this one is done properly, in public, by a man who means every word.",
+   "commentary_hi": "देखने लायक़ बीच वाली क़िस्म है। तीसरी तो बिगड़ा हुआ काम है और उसका बिगड़ा होना सबको दिखता है; यह वाली ठीक से होती है, सबके सामने होती है, और करने वाला अपनी हर बात में सच्चा होता है।"
+  },
+  {
+   "id": 608,
+   "number": "17.13",
+   "body_en": "No rule followed, nobody fed, nothing said over it, nobody paid, and no faith anywhere in the thing. An offering like that they call heavy.",
+   "body_hi": "न कोई नियम निभाया गया, न किसी को खिलाया गया, न उस पर कुछ कहा गया, न किसी को कुछ दिया गया, और उस पूरी चीज़ में श्रद्धा कहीं नहीं। ऐसी आहुति को भारी कहते हैं।",
+   "commentary_en": "Nobody fed and nobody paid are the two that give it away. An offering with no cost to the man making it was never an offering.",
+   "commentary_hi": "'न किसी को खिलाया गया' और 'न किसी को कुछ दिया गया' — ये दो ही भेद खोल देती हैं। जिस आहुति में डालने वाले का कुछ ख़र्च ही न हुआ हो, वह कभी आहुति थी ही नहीं।"
+  },
+  {
+   "id": 609,
+   "number": "17.14",
+   "body_en": "Giving the gods their due, and the teachers, and the men who carry the learning, and the ones who actually know. Keeping clean. Dealing straight. Holding to the one course. Doing no harm. That is what the body can manage by way of going without.",
+   "body_hi": "देवताओं को उनका हक़ देना, और गुरुओं को, और जो विद्या उठाए हुए हैं उन्हें, और जो सचमुच जानते हैं उन्हें। साफ़ रहना। सीधा बरताव। एक ही राह पर टिके रहना। किसी को चोट न पहुँचाना। बिना रहने के नाम पर देह इतना कर सकती है।",
+   "commentary_en": "Three verses follow the same road from outside in: what other people can see, then what they can hear, then the one nobody can check on. The order is not an accident.",
+   "commentary_hi": "आगे तीन श्लोक एक ही रास्ते पर बाहर से भीतर की ओर चलते हैं: पहले वह जो दूसरे देख सकते हैं, फिर वह जो वे सुन सकते हैं, फिर वह जिसकी जाँच कोई नहीं कर सकता। यह क्रम संयोग नहीं है।"
+  },
+  {
+   "id": 610,
+   "number": "17.15",
+   "body_en": "Speech that leaves nobody shaken; that is true; and that is both kind to the man it is said to and good for him. And keeping up the reading you are meant to keep up. That is what going without comes to in the mouth.",
+   "body_hi": "ऐसी बात जो किसी को हिलाकर न छोड़े; जो सच हो; और जो जिससे कही जा रही है उसके लिए भली भी हो और काम की भी। और जो पढ़ना निभाना है उसे निभाते रहना। मुँह के हिस्से में बिना रहना इतना ही है।",
+   "commentary_en": "Kind and good for him are two requirements, not one, and they come apart constantly. Most of what a man wants to say fails one or the other, which is why so little of it should be said.",
+   "commentary_hi": "'भली' और 'काम की' — ये दो शर्तें हैं, एक नहीं, और ये आए दिन अलग-अलग हो जाती हैं। आदमी जो कुछ कहना चाहता है उसमें से ज़्यादातर इनमें से किसी एक पर खरा नहीं उतरता, और इसीलिए उसमें से इतना कम कहा जाना चाहिए।"
+  },
+  {
+   "id": 611,
+   "number": "17.16",
+   "body_en": "A mind with the sediment settled out of it. An easy way about him. Keeping quiet. A hand held on himself. And nothing muddy left in what he means to do. That is going without, done where nobody can see it happening.",
+   "body_hi": "ऐसा मन जिसका मैल नीचे बैठ चुका हो। सहज बरताव। चुप रहना। अपने ऊपर रखा हुआ हाथ। और जो वह करना चाहता है उसमें कुछ गँदला बचा न हो। यह बिना रहना है, वहाँ किया हुआ जहाँ किसी को होते हुए दिखता नहीं।",
+   "commentary_en": "Settled out, not strained out. Nothing was removed from the mind; it was left alone long enough for what was churning in it to go to the bottom.",
+   "commentary_hi": "नीचे बैठ चुका, छानकर निकाला हुआ नहीं। मन में से कुछ निकाला नहीं गया; उसे बस इतनी देर अकेला छोड़ दिया गया कि जो उसमें घुल-मिलकर उठ रहा था वह तले में जा बैठे।"
+  },
+  {
+   "id": 612,
+   "number": "17.17",
+   "body_en": "Those three kinds of going without, borne with the best faith a man has in him, by men who are not after the pay and who are yoked to the work — that they call clear.",
+   "body_hi": "बिना रहने की वे तीनों क़िस्में, आदमी के भीतर जो सबसे अच्छी श्रद्धा है उसके साथ उठाई हुईं, उन लोगों के हाथों जो फल के पीछे नहीं हैं और काम से जुड़े हुए हैं — उसी को साफ़ कहते हैं।",
+   "commentary_en": "The same three were just sorted by where they happen. Now the identical three are sorted again by why, and the two sortings cut across each other — which is the chapter admitting that where a thing is done tells you less than it looks like it does.",
+   "commentary_hi": "अभी-अभी इन्हीं तीनों को इस आधार पर छाँटा गया था कि वे होती कहाँ हैं। अब इन्हीं तीनों को दोबारा इस आधार पर छाँटा जा रहा है कि क्यों होती हैं, और दोनों छँटाइयाँ एक-दूसरे को काटती हुई चलती हैं — यानी अध्याय यह मान रहा है कि कोई चीज़ कहाँ की जा रही है, इससे उतना पता नहीं चलता जितना लगता है।"
+  },
+  {
+   "id": 613,
+   "number": "17.18",
+   "body_en": "Hardship taken on to be thought well of, to be looked up to, to be bowed to — with the showing-off sitting inside it — is called restless here, and it wobbles, and it does not last.",
+   "body_hi": "वह तकलीफ़ जो इसलिए उठाई जाए कि लोग अच्छा समझें, ऊँचा मानें, सिर झुकाएँ — और उसके भीतर दिखावा बैठा हो — उसे यहाँ बेचैन कहा गया है, और वह डगमगाती है, और टिकती नहीं।",
+   "commentary_en": "It does not last is not a threat but an observation. Hardship carried for an audience keeps going exactly as long as the audience does.",
+   "commentary_hi": "'टिकती नहीं' कोई धमकी नहीं, बस देखी हुई बात है। जो तकलीफ़ देखने वालों के लिए उठाई जाती है वह ठीक उतनी ही देर चलती है जितनी देर देखने वाले रहते हैं।"
+  },
+  {
+   "id": 614,
+   "number": "17.19",
+   "body_en": "Hardship a man takes up with some fixed wrong idea lodged in his head, hurting himself with it — or taking it on in order to finish somebody else — is set down as heavy.",
+   "body_hi": "वह तकलीफ़ जिसे आदमी सिर में जमी किसी ग़लत बात के साथ उठाता है, और अपने को उससे दुखाता है — या इसीलिए उठाता है कि किसी और को ख़त्म कर दे — उसे भारी में रखा गया है।",
+   "commentary_en": "Hardship undertaken in order to destroy another man is a real category and it is entered here without any surprise. A man can starve himself at somebody, and the book knows it.",
+   "commentary_hi": "किसी दूसरे को ख़त्म करने के लिए उठाई गई तकलीफ़ एक सचमुच की क़िस्म है, और उसे यहाँ बिना किसी हैरानी के दर्ज कर दिया गया है। आदमी किसी के ख़िलाफ़ भी भूखा रह सकता है, और किताब यह जानती है।"
+  },
+  {
+   "id": 615,
+   "number": "17.20",
+   "body_en": "Something given because giving it was the right thing, put into the hands of a man who is in no position to do anything back, in the right place, at the right hour, and to somebody it will do good to — that giving is the clear kind.",
+   "body_hi": "वह चीज़ जो इसलिए दी जाए कि देना ही ठीक था, ऐसे आदमी के हाथ में रखी जाए जो बदले में कुछ कर पाने की हालत में नहीं, सही जगह, सही घड़ी, और ऐसे किसी को जिसके काम आएगी — वह देना साफ़ क़िस्म का है।",
+   "commentary_en": "In no position to do anything back is the load-bearing clause. It rules out every transaction dressed up as generosity, and most giving between equals turns out to be one.",
+   "commentary_hi": "'जो बदले में कुछ कर पाने की हालत में नहीं' — पूरा भार इसी टुकड़े पर है। यह हर उस सौदे को बाहर कर देता है जो उदारता का कपड़ा पहनकर आता है, और बराबरी वालों के बीच का ज़्यादातर देना निकलता वही है।"
+  },
+  {
+   "id": 616,
+   "number": "17.21",
+   "body_en": "But something handed over with a favour expected back, or with one eye on what it will earn, or given with the face pulled — that giving they set down as restless.",
+   "body_hi": "पर वह चीज़ जो इस उम्मीद में थमाई जाए कि बदले में कुछ मिलेगा, या एक आँख इस पर हो कि इससे कमाई क्या होगी, या जो मुँह बनाकर दी जाए — उस देने को बेचैन में रखा गया है।",
+   "commentary_en": "With the face pulled belongs on the list beside the other two, and that is the interesting part. Giving resentfully is put in the same class as giving for profit.",
+   "commentary_hi": "'मुँह बनाकर' बाक़ी दोनों के साथ उसी सूची में रखा गया है, और दिलचस्प बात यही है। कुढ़कर देना उसी दर्जे में रख दिया गया है जिसमें फ़ायदे के लिए देना।"
+  },
+  {
+   "id": 617,
+   "number": "17.22",
+   "body_en": "And what is handed over somewhere it should not have been, at an hour that does not suit, to people it has no business going to, with no courtesy in the handing over and a sneer behind it — that giving they call heavy.",
+   "body_hi": "और जो ग़लत जगह और ग़लत घड़ी में दिया जाए, ऐसे लोगों को जिन तक उसका पहुँचना बनता ही नहीं, देते हुए कोई तमीज़ न हो और पीछे एक तिरस्कार हो — उस देने को भारी कहते हैं।",
+   "commentary_en": "Three verses on giving and not one of them mentions the amount. What gets examined every time is the face of the man handing it over.",
+   "commentary_hi": "देने पर तीन श्लोक, और उनमें से कोई यह नहीं पूछता कि कितना दिया। हर बार जाँचा उसी आदमी का चेहरा जाता है जो दे रहा है।"
+  },
+  {
+   "id": 618,
+   "number": "17.23",
+   "body_en": "Om Tat Sat. Three words, and from the start they have stood for what brahman is. The men of learning were made by them, and so were the Vedas, and so were the offerings, long ago.",
+   "body_hi": "ॐ तत् सत्। तीन शब्द, और शुरू से ही वे उसी के लिए खड़े हैं जो ब्रह्म है। विद्या वालों को इन्हीं से बनाया गया, वेदों को भी, और आहुतियों को भी, बहुत पहले।",
+   "commentary_en": "Another three, and after seven of them the reader will assume this is one more sorting into modes. It is not. These three are not rivals; they are one phrase, taken a word at a time.",
+   "commentary_hi": "एक और तीन, और सात बार के बाद पढ़ने वाला मान लेगा कि यह भी गुणों में एक और छँटाई है। है नहीं। ये तीन आपस में होड़ में नहीं हैं; ये एक ही वाक्य है, जिसे एक-एक शब्द करके लिया जा रहा है।"
+  },
+  {
+   "id": 619,
+   "number": "17.24",
+   "body_en": "So the men who speak of brahman never begin an offering, or a giving, or a going-without, until they have said Om over it. That is how it has always been done.",
+   "body_hi": "इसीलिए जो लोग ब्रह्म की बात करते हैं वे कोई आहुति, कोई दान, कोई तप तब तक शुरू नहीं करते जब तक उस पर ॐ न कह लें। यह हमेशा से ऐसे ही होता आया है।",
+   "commentary_en": "The first word is for starting. It does not describe the work or judge it; it only marks the place where a man stops being about to do it.",
+   "commentary_hi": "पहला शब्द शुरू करने के लिए है। वह न काम का वर्णन करता है, न उस पर फ़ैसला देता है; वह बस उस जगह पर निशान लगाता है जहाँ आदमी का 'करने ही वाला हूँ' ख़त्म होता है।"
+  },
+  {
+   "id": 620,
+   "number": "17.25",
+   "body_en": "With Tat, and with nothing aimed at — that is how men who want out do their offering, their going-without, and their giving of every sort.",
+   "body_hi": "'तत्' के साथ, और किसी चीज़ पर निशाना लगाए बिना — जो लोग छूटना चाहते हैं वे अपनी आहुति, अपना तप और हर तरह का दान ऐसे ही करते हैं।",
+   "commentary_en": "The second word means that, and pointing away from yourself is the whole of its work. Say it and the question of what you are getting has already been handed elsewhere.",
+   "commentary_hi": "दूसरे शब्द का मतलब है 'वह', और अपने से दूर इशारा कर देना ही उसका पूरा काम है। उसे कह दो, और 'मुझे क्या मिल रहा है' वाला सवाल पहले ही किसी और के हवाले हो चुका।"
+  },
+  {
+   "id": 621,
+   "number": "17.26",
+   "body_en": "Sat is the word for what is really there, and for what is good. And a piece of work that deserves praise gets the same word laid on it, Partha.",
+   "body_hi": "'सत्' उस चीज़ के लिए शब्द है जो सचमुच है, और उसके लिए भी जो भला है। और जो काम तारीफ़ के लायक़ हो, उस पर भी यही शब्द रख दिया जाता है, पार्थ।",
+   "commentary_en": "One word doing duty for what exists and for what is good. The book is not confusing the two; it is saying that at the far end they stop being separable.",
+   "commentary_hi": "एक ही शब्द दो काम कर रहा है — जो है उसके लिए भी, और जो भला है उसके लिए भी। किताब इन्हें आपस में गड्डमड्ड नहीं कर रही; वह कह रही है कि दूर वाले छोर पर ये दोनों अलग होने लायक़ रह ही नहीं जाते।"
+  },
+  {
+   "id": 622,
+   "number": "17.27",
+   "body_en": "Standing firm in the offering, in the going-without, in the giving — that is called sat too. And work done for the sake of that is called by the same name.",
+   "body_hi": "आहुति में, तप में, दान में जमे रहना — उसे भी सत् कहते हैं। और जो काम उसी के लिए किया जाए, उसे भी इसी नाम से पुकारते हैं।",
+   "commentary_en": "Standing firm, not performing. What earns the word is not the act but the staying with it once there is nothing interesting left about it.",
+   "commentary_hi": "जमे रहना, कर दिखाना नहीं। शब्द काम से नहीं मिलता, बल्कि उसके साथ बने रहने से मिलता है — तब, जब उसमें दिलचस्पी की कोई चीज़ बची नहीं रह जाती।"
+  },
+  {
+   "id": 623,
+   "number": "17.28",
+   "body_en": "Whatever is put in the fire, or handed over, or borne, or done, with no faith in it, is called asat, Partha — the word turned around. It comes to nothing afterwards, and it comes to nothing now.",
+   "body_hi": "जो कुछ आग में डाला जाए, या किसी को थमाया जाए, या सहा जाए, या किया जाए — और उसमें श्रद्धा न हो — उसे असत् कहते हैं, पार्थ, वही शब्द उलटा करके। वह बाद में भी कुछ नहीं बनता, और अभी भी कुछ नहीं।",
+   "commentary_en": "The chapter opened with Arjuna asking after men who have faith but no rule. It closes on the opposite case: every rule kept, and no faith in any of it. That one, he is told, is worth nothing at all — which answers the question he asked, from behind.",
+   "commentary_hi": "अध्याय अर्जुन के इस सवाल से खुला था कि जिनके पास श्रद्धा है पर नियम नहीं, उनका क्या। वह उलटी हालत पर बंद होता है: हर नियम निभाया हुआ, और उसमें श्रद्धा कहीं नहीं। उससे कहा जाता है कि उसकी क़ीमत कुछ भी नहीं — और यही उसके पूछे हुए सवाल का जवाब है, पीछे की तरफ़ से आया हुआ।"
+  }
+ ]
+}
