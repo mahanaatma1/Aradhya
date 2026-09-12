@@ -1,0 +1,226 @@
+{
+ "slug": "bgc_14",
+ "title_en": "Gunatraya Vibhaga Yoga",
+ "title_hi": "गुणत्रय विभाग योग",
+ "book_id": 14,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 525,
+   "number": "14.1",
+   "body_en": "The Blessed One said: I am going to tell you something further, and of everything there is to know it is the best. Every man who ever went quiet and worked at it has known this, and gone from here to the end of the road.",
+   "body_hi": "श्रीभगवान ने कहा — अब मैं एक और बात बताने जा रहा हूँ, और जानने लायक़ जो कुछ है उसमें सबसे अच्छी यही है। जितने लोग चुप होकर इस पर लगे, सब यही जानकर यहाँ से रास्ते के आख़िर तक पहुँचे।",
+   "commentary_en": "The chapter opens by claiming to be the best thing in the book, which is worth noting because what it then delivers is a piece of taxonomy. Three modes, their marks, their outcomes. The claim turns out to be earned at verse 10.",
+   "commentary_hi": "अध्याय अपने को किताब की सबसे अच्छी चीज़ कहकर शुरू होता है, और यह देखने लायक़ है क्योंकि इसके बाद वह जो देता है वह एक वर्गीकरण है। तीन गुण, उनके लक्षण, उनके नतीजे। यह दावा सही है या नहीं, इसका फ़ैसला दसवें श्लोक पर होता है।"
+  },
+  {
+   "id": 526,
+   "number": "14.2",
+   "body_en": "Those who have leaned their weight on this have come to be of the same kind as me. When a world is sent out they are not born into it, and when one is taken down they are not disturbed.",
+   "body_hi": "जिन्होंने अपना भार इस पर टिका दिया, वे मेरी ही जाति के हो गए। जब कोई सृष्टि भेजी जाती है तो वे उसमें जन्म नहीं लेते, और जब वह समेटी जाती है तो उनके भीतर कुछ हिलता नहीं।",
+   "commentary_en": "Of the same kind as me -- not merged into, not dissolved in. The word keeps the two apart while making them alike, which is a careful thing to have said and is easy to read past.",
+   "commentary_hi": "मेरी ही जाति के — उसमें मिल गए नहीं, उसमें घुल गए नहीं। शब्द दोनों को अलग रखते हुए एक जैसा कहता है, और यह सावधानी से कही गई बात है जिसे पढ़ते हुए आसानी से छोड़ा जा सकता है।"
+  },
+  {
+   "id": 527,
+   "number": "14.3",
+   "body_en": "The great brahman is the womb I use. I lay the seed in it, and out of that, Bharata, every living thing comes to be.",
+   "body_hi": "बड़ा ब्रह्म ही वह गर्भ है जिसे मैं काम में लाता हूँ। बीज मैं उसमें रखता हूँ, और उसी में से, भारत, हर जीव बनकर आता है।",
+   "commentary_en": "It is a startling picture, and the Gita spends no time softening it. Brahman -- which the last chapter refused to call either existent or non-existent -- is here the mother.",
+   "commentary_hi": "यह चौंकाने वाली तस्वीर है, और गीता उसे नरम करने में समय नहीं लगाती। ब्रह्म — जिसे पिछले अध्याय ने न 'है' कहा था न 'नहीं है' — यहाँ माता है।"
+  },
+  {
+   "id": 528,
+   "number": "14.4",
+   "body_en": "Every shape that gets born, son of Kunti, in every kind of creature there is — the great brahman is what carried it, and the father who put the seed there is me.",
+   "body_hi": "जो भी आकृति जन्म लेती है, कुन्तीपुत्र, किसी भी जाति के जीव में — उसे उठाया उसी बड़े ब्रह्म ने है, और बीज रखने वाला पिता मैं हूँ।",
+   "commentary_en": "In every kind of creature there is: the sentence is not about human beings. Every shape that has ever been born anywhere is being given the same two parents, which puts the reader and the animal in the field outside on exactly equal footing.",
+   "commentary_hi": "किसी भी जाति के जीव में: वाक्य मनुष्यों के बारे में नहीं है। कहीं भी जन्मी हर आकृति को वही दो माता-पिता दिए जा रहे हैं, और इससे पढ़ने वाला और बाहर खेत में खड़ा पशु ठीक एक ही धरातल पर आ जाते हैं।"
+  },
+  {
+   "id": 529,
+   "number": "14.5",
+   "body_en": "Sattva, rajas, tamas — three modes, and nature is where all three come from. What they do, mighty-armed, is tie down inside a body the one who lives in it and never wears out.",
+   "body_hi": "सत्त्व, रजस्, तमस् — तीन गुण, और तीनों प्रकृति से निकले हैं। इनका काम, महाबाहु, यह है कि जो देह में रहता है और कभी घिसता नहीं, उसे उसी देह में बाँध दें।",
+   "commentary_en": "All three tie. That is the sentence the rest of the chapter is built on, and the one most readers are not expecting, since one of the three is the good one.",
+   "commentary_hi": "तीनों बाँधते हैं। बाकी अध्याय इसी वाक्य पर खड़ा है, और यही वह बात है जिसकी ज़्यादातर पाठक उम्मीद नहीं करते, क्योंकि तीनों में एक तो अच्छा वाला है।"
+  },
+  {
+   "id": 530,
+   "number": "14.6",
+   "body_en": "Of the three, sattva is the clear one. There is nothing wrong with it, and it lights things up. And that is exactly how it holds a man: he grows attached to feeling well, and attached to understanding, and the attachment is the rope.",
+   "body_hi": "तीनों में सत्त्व साफ़ वाला है। उसमें कोई ख़राबी नहीं, और वह चीज़ों को रोशन करता है। और आदमी को वह पकड़ता भी ठीक इसी से है: उसे अच्छा लगना भाने लगता है, और समझ में आना भाने लगता है, और यही लगाव रस्सी बन जाता है।",
+   "commentary_en": "The most comfortable rope, and for that reason the hardest to notice you are wearing. A man tied by pleasure in his own clear-headedness has no complaint to alert him.",
+   "commentary_hi": "सबसे आरामदेह रस्सी, और इसीलिए वह जिसका बँधा होना सबसे देर में पता चलता है। जिस आदमी को अपनी ही साफ़ समझ में मज़ा आने लगा है, उसके पास कोई शिकायत ही नहीं जो उसे चेताए।"
+  },
+  {
+   "id": 531,
+   "number": "14.7",
+   "body_en": "Rajas is made of wanting. Know it by the thirst it comes up out of, and by the way a man takes hold of things and will not put them down. It ties him with the work: he cannot stop doing.",
+   "body_hi": "रजस् चाह से बना है। उसे उस प्यास से पहचान जिसमें से वह उठता है, और इससे कि आदमी चीज़ें पकड़ लेता है और छोड़ता नहीं। वह उसे काम से बाँधता है: उससे करना रुकता ही नहीं।",
+   "commentary_en": "Not the work itself -- the inability to stop. A man in this mode will describe himself as busy, and mean it as a fact about his circumstances rather than about him.",
+   "commentary_hi": "काम ख़ुद नहीं — रुक न पाना। इस गुण में बैठा आदमी अपने को व्यस्त बताएगा, और इसे अपने बारे में नहीं, अपने हालात के बारे में तथ्य समझकर कहेगा।"
+  },
+  {
+   "id": 532,
+   "number": "14.8",
+   "body_en": "Tamas comes up out of not knowing, and there is no creature alive it cannot fuddle. It ties a man with carelessness, with putting things off, and with sleep.",
+   "body_hi": "तमस् न जानने में से उठता है, और ऐसा कोई जीव नहीं जिसे वह गड़बड़ा न सके। वह आदमी को लापरवाही से बाँधता है, टालते रहने से, और नींद से।",
+   "commentary_en": "Three ropes named for three modes, and they get shorter and plainer as they go. Attachment to understanding; inability to stop working; and then simply sleep.",
+   "commentary_hi": "तीन गुणों के लिए तीन रस्सियाँ गिनाई गईं, और वे आगे बढ़ते-बढ़ते छोटी और सादी होती जाती हैं। समझ से लगाव; काम से न रुक पाना; और फिर बस नींद।"
+  },
+  {
+   "id": 533,
+   "number": "14.9",
+   "body_en": "Sattva glues a man to feeling good, Bharata, and rajas glues him to doing. Tamas throws a cloth over what he knows, and glues him to not caring.",
+   "body_hi": "सत्त्व आदमी को अच्छा लगने से चिपका देता है, भारत, और रजस् करने से। तमस् उसकी जानी हुई बात पर कपड़ा डाल देता है, और उसे बेपरवाही से चिपका देता है।",
+   "commentary_en": "The extra clause belongs to tamas alone. The other two fasten a man to something; this one first takes away what he might have used to notice he was being fastened.",
+   "commentary_hi": "फ़ालतू वाला वाक्यांश अकेले तमस् के हिस्से आया है। बाकी दो आदमी को किसी चीज़ से बाँधते हैं; यह पहले वह चीज़ छीन लेता है जिससे वह देख पाता कि उसे बाँधा जा रहा है।"
+  },
+  {
+   "id": 534,
+   "number": "14.10",
+   "body_en": "The three are not held in any fixed arrangement. Whichever one has the upper hand at a given hour got it by pushing the other two down, and the turn comes round to each of them, Bharata.",
+   "body_hi": "तीनों किसी बँधे-बँधाए क्रम में नहीं रखे हैं। जिस घड़ी जिसका पलड़ा भारी है, वह बाकी दोनों को दबाकर ही भारी हुआ है, और बारी तीनों की आती है, भारत।",
+   "commentary_en": "This is the verse that makes the chapter usable, and it is why the opening claim was not idle. The modes are weather, not caste. There is no such thing as a sattvic man -- only a man in whom sattva happens to be winning this afternoon, who was someone else this morning and will be someone else again.",
+   "commentary_hi": "यही वह श्लोक है जो पूरे अध्याय को काम का बनाता है, और इसी से पहला दावा खोखला नहीं रह जाता। गुण मौसम हैं, जाति नहीं। सात्त्विक आदमी जैसी कोई चीज़ होती ही नहीं — बस एक आदमी होता है जिसमें आज दोपहर सत्त्व जीत रहा है, जो सुबह कोई और था और फिर कोई और हो जाएगा।"
+  },
+  {
+   "id": 535,
+   "number": "14.11",
+   "body_en": "When light comes up at every door of the body at once, and a man finds that he understands — then sattva has grown, and you can tell by that.",
+   "body_hi": "जब इस शरीर के हर दरवाज़े पर एक साथ रोशनी आ जाए, और आदमी को लगे कि समझ में आ रहा है — तब जान लेना कि सत्त्व फैल चुका है, और पहचान यही है।",
+   "commentary_en": "The doors are the senses. Three verses of this follow, and their use is diagnostic: they are written so that a man can tell from inside which weather he is in at the moment of asking.",
+   "commentary_hi": "दरवाज़े इन्द्रियाँ हैं। इस तरह के तीन श्लोक आते हैं, और उनका काम पहचान का है: वे ऐसे लिखे गए हैं कि आदमी भीतर से बता सके कि पूछने के इस क्षण में वह किस मौसम में है।"
+  },
+  {
+   "id": 536,
+   "number": "14.12",
+   "body_en": "Greed. Getting up and going somewhere. Schemes started. No settling anywhere, and a hankering that does not let up. When those turn up, bull of the Bharatas, rajas has grown.",
+   "body_hi": "लालच। उठकर कहीं चल देना। नई-नई योजनाएँ। कहीं जम न पाना, और एक ललक जो चैन नहीं लेने देती। ये दिखें, भरतों के वृषभ, तो रजस् बढ़ा हुआ है।",
+   "commentary_en": "Every item on this list is something the world praises. That is the difficulty with the middle mode: from outside it looks exactly like a man doing well.",
+   "commentary_hi": "इस सूची की हर बात वह है जिसकी दुनिया तारीफ़ करती है। बीच वाले गुण की दिक़्क़त यही है: बाहर से वह ठीक ऐसा दिखता है जैसे आदमी तरक़्क़ी कर रहा हो।"
+  },
+  {
+   "id": 537,
+   "number": "14.13",
+   "body_en": "Nothing lit. Nothing started. Carelessness, and a fog over the mind. When those turn up, son of Kuru, tamas has grown.",
+   "body_hi": "कुछ रोशन नहीं। कुछ शुरू नहीं। लापरवाही, और मन पर एक कुहासा। ये दिखें, कुरुनन्दन, तो तमस् बढ़ा हुआ है।",
+   "commentary_en": "Two of the four are absences, which is the honest way to describe this one. You do not catch tamas by what it puts in front of you; you catch it by what has quietly stopped happening.",
+   "commentary_hi": "चार में दो बातें न होने की हैं, और इसे बताने का ईमानदार तरीक़ा यही है। तमस् इससे नहीं पकड़ा जाता कि वह आपके सामने क्या रख देता है; वह इससे पकड़ा जाता है कि चुपचाप क्या होना बंद हो गया।"
+  },
+  {
+   "id": 538,
+   "number": "14.14",
+   "body_en": "If a man goes down while sattva has the upper hand, he arrives among people who know the highest, in worlds with no stain on them.",
+   "body_hi": "अगर आदमी उस समय चले जब सत्त्व का पलड़ा भारी है, तो वह उन लोगों के बीच पहुँचता है जो सर्वोच्च को जानते हैं — ऐसे लोकों में जिन पर कोई दाग़ नहीं।",
+   "commentary_en": "The same rule chapter eight gave for the hour of death, now put in terms of the modes: a man arrives wherever he has been living. Which mode had the upper hand is not settled at the end. It is settled over years.",
+   "commentary_hi": "जो नियम आठवें अध्याय ने मरने की घड़ी के लिए दिया था, वही अब गुणों की भाषा में है: आदमी वहीं जा पहुँचता है जहाँ वह रहता आया है। किस गुण का पलड़ा भारी रहेगा, यह अंत में तय नहीं होता। वह बरसों में तय होता है।"
+  },
+  {
+   "id": 539,
+   "number": "14.15",
+   "body_en": "Go while rajas has it, and he is born again among people who cannot stop working. Go while tamas has it, and he is born into a womb where not much wakes up.",
+   "body_hi": "रजस् के रहते जाए, तो वह उन लोगों में फिर जन्म लेता है जिनसे काम करना छूटता नहीं। तमस् के रहते जाए, तो ऐसी योनि में जन्म लेता है जहाँ कुछ ख़ास जागता नहीं।",
+   "commentary_en": "Note that the punishment in each case is more of the same. A man who could not stop is put among people who cannot stop. Nothing is added; the mode simply gets what it asked for.",
+   "commentary_hi": "ध्यान दीजिए कि दोनों जगह सज़ा वही चीज़ और ज़्यादा है। जो रुक नहीं पाता था उसे उन्हीं लोगों में रख दिया जाता है जो रुक नहीं पाते। कुछ जोड़ा नहीं जाता; गुण को बस वही मिल जाता है जो उसने माँगा था।"
+  },
+  {
+   "id": 540,
+   "number": "14.16",
+   "body_en": "Work done well, they say, pays out clean. What rajas pays out is pain. And what tamas pays out is that a man goes on not knowing.",
+   "body_hi": "ठीक से किया हुआ काम, कहते हैं, साफ़ फल देता है। रजस् जो देता है वह दुख है। और तमस् जो देता है वह यह कि आदमी जाने बिना ही रह जाता है।",
+   "commentary_en": "Three payments, and only the first is what anyone would call a payment. The other two are descriptions of the state the work leaves a man in, which is the more accurate way to speak of what actions actually return.",
+   "commentary_hi": "तीन भुगतान, और उनमें बस पहले को कोई भुगतान कहेगा। बाकी दो उस हालत का वर्णन हैं जिसमें वह काम आदमी को छोड़ जाता है — और काम असल में लौटाता क्या है, यह कहने का सही तरीक़ा यही है।"
+  },
+  {
+   "id": 541,
+   "number": "14.17",
+   "body_en": "Understanding grows out of sattva. Greed grows out of rajas. And out of tamas come carelessness, the fog, and the not-knowing itself.",
+   "body_hi": "समझ सत्त्व में से उगती है। लालच रजस् में से। और तमस् में से लापरवाही निकलती है, कुहासा, और वह न जानना ही।",
+   "commentary_en": "Read alongside verse 8, this closes a circle: tamas came up out of not knowing, and what it produces is not knowing. It is the only one of the three that feeds itself.",
+   "commentary_hi": "आठवें श्लोक के साथ पढ़िए तो घेरा पूरा हो जाता है: तमस् न जानने में से उठा था, और वह पैदा भी न जानना ही करता है। तीनों में यही एक है जो अपना भोजन ख़ुद बनाता है।"
+  },
+  {
+   "id": 542,
+   "number": "14.18",
+   "body_en": "Sattva takes a man up. Rajas keeps him about where he is. Tamas — a man living out the workings of the lowest of the three — takes him down.",
+   "body_hi": "सत्त्व आदमी को ऊपर ले जाता है। रजस् उसे वहीं के आसपास रखता है जहाँ वह है। और तमस् — तीनों में सबसे नीचे वाले के चलन में जीता आदमी — नीचे ले जाता है।",
+   "commentary_en": "This closes the analytical half of the chapter. Everything up to here has been a ranking; everything after verse 19 is about getting out from under the whole arrangement, at which point the ranking stops mattering.",
+   "commentary_hi": "यहाँ अध्याय का विश्लेषण वाला आधा ख़त्म होता है। यहाँ तक जो कुछ है वह क्रम लगाना है; उन्नीसवें श्लोक के बाद जो है वह पूरे इंतज़ाम के नीचे से निकल आने के बारे में है — और उस जगह पर क्रम के मायने ख़त्म हो जाते हैं।"
+  },
+  {
+   "id": 543,
+   "number": "14.19",
+   "body_en": "When a man watching it happen can see that there is no doer here except the three modes, and knows what stands past them, he comes to be as I am.",
+   "body_hi": "जब इसे होते हुए देखता आदमी यह देख ले कि यहाँ इन तीन गुणों के सिवा कोई करने वाला है ही नहीं, और यह जान ले कि इनसे परे क्या खड़ा है — तब वह वैसा हो जाता है जैसा मैं हूँ।",
+   "commentary_en": "The same seeing that 13.30 called the second of the two things a man must see, and that 3.27 first put as a warning about the sense of being an I. Three chapters have now approached it from three directions.",
+   "commentary_hi": "यही वह देखना है जिसे 13.30 ने उन दो चीज़ों में दूसरी कहा था जो आदमी को देखनी हैं, और जिसे 3.27 ने पहली बार 'मैं' के भाव की चेतावनी के रूप में रखा था। तीन अध्याय अब तीन दिशाओं से इसी तक आ चुके हैं।"
+  },
+  {
+   "id": 544,
+   "number": "14.20",
+   "body_en": "Get past the three of them — and they are what the body was put together out of — and a man is out from under being born, and dying, and growing old, and hurting. What he tastes then does not end.",
+   "body_hi": "इन तीनों के पार निकल जाए — और देह इन्हीं से जोड़ी गई थी — तो आदमी जन्मने, मरने, बूढ़े होने और दुखने के नीचे से निकल आता है। फिर उसे जो स्वाद मिलता है वह ख़त्म नहीं होता।",
+   "commentary_en": "The four named here are the four that 13.9 asked a man to keep in plain view. There they were what you were told not to look away from; here they are what you are let out of. It is the same list doing opposite work.",
+   "commentary_hi": "यहाँ जो चार गिनाई गई हैं वही हैं जिन्हें 13.9 ने आँख के सामने रखने को कहा था। वहाँ वे थीं जिनसे नज़र न हटाने को कहा गया; यहाँ वे हैं जिनके नीचे से आदमी निकाल दिया जाता है। एक ही सूची, और उलटा काम।"
+  },
+  {
+   "id": 545,
+   "number": "14.21",
+   "body_en": "Arjuna said: By what marks would I know a man who has got past the three, lord? How does he go about things? And how does a man get past them in the first place?",
+   "body_hi": "अर्जुन ने कहा — जो इन तीनों के पार निकल गया, उसे किन लक्षणों से पहचानूँ, प्रभु? उसका चलन कैसा होता है? और आदमी इनके पार जाता कैसे है?",
+   "commentary_en": "Three questions: how to recognise him, how he lives, how he got there. They are answered in that order, and the third -- which is the one a reader actually needs -- gets a single verse near the end.",
+   "commentary_hi": "तीन सवाल: उसे पहचानें कैसे, वह जीता कैसे है, और वहाँ पहुँचा कैसे। जवाब इसी क्रम में आते हैं, और तीसरे को — जो असल में पाठक के काम का है — अंत के पास एक ही श्लोक मिलता है।"
+  },
+  {
+   "id": 546,
+   "number": "14.22",
+   "body_en": "The Blessed One said: Light, the urge to be up and doing, the fog — when any of the three turns up, Pandava, he does not hold it against them; and when they go, he does not ask them back.",
+   "body_hi": "श्रीभगवान ने कहा — रोशनी, चल पड़ने की हूक, कुहासा — इनमें से जो भी आ जाए, पाण्डव, वह उसे बुरा नहीं मानता; और जब वे चले जाएँ, तो उन्हें वापस नहीं बुलाता।",
+   "commentary_en": "The surprise is that the fog is not hated either. A man who has got past the three is not a man in whom the good one has finally won for good. He is a man who has stopped taking sides among them.",
+   "commentary_hi": "चौंकाने वाली बात यह है कि कुहासे को भी बुरा नहीं माना जाता। तीनों के पार गया आदमी वह नहीं है जिसमें अच्छे वाले ने आख़िरकार हमेशा के लिए जीत ली हो। वह वह है जिसने इनके बीच पक्ष लेना छोड़ दिया है।"
+  },
+  {
+   "id": 547,
+   "number": "14.23",
+   "body_en": "He sits the way a man sits who is off to one side, and nothing the modes do moves him. The modes are going about their business — he holds to that much, and does not budge.",
+   "body_hi": "वह ऐसे बैठा रहता है जैसे कोई किनारे बैठा हो, और गुण जो भी करें उससे वह हिलता नहीं। गुण अपना काम कर रहे हैं — बस इतने पर वह टिका रहता है, और जगह से नहीं हटता।",
+   "commentary_en": "Off to one side was on the list at 12.16 as well, among the plain habits of a man Krishna is fond of. It is the same posture reached by a different route, and it still does not mean coldness. It means not having a stake in the outcome.",
+   "commentary_hi": "किनारे बैठना 12.16 की सूची में भी था, उस आदमी की साधारण आदतों के बीच जो कृष्ण को प्रिय है। वही मुद्रा, दूसरे रास्ते से पहुँची हुई — और उसका मतलब अब भी ठंडापन नहीं है। मतलब यह है कि नतीजे में अपना कुछ दाँव पर नहीं।"
+  },
+  {
+   "id": 548,
+   "number": "14.24",
+   "body_en": "Pain and pleasure find him the same; he stands in his own place. A lump of earth, a stone, a bar of gold — all one to him. What he likes and what he does not come to the same weight. He is steady. And whether he is being run down or praised makes no odds.",
+   "body_hi": "दुख और सुख उसे एक-सा पाते हैं; वह अपनी ही जगह पर खड़ा है। मिट्टी का ढेला, पत्थर, सोने की छड़ — उसके लिए सब बराबर। जो उसे भाता है और जो नहीं भाता, दोनों एक ही तौल के। वह ठहरा हुआ है। और उसे कोई गाली दे या तारीफ़ — इससे कोई फ़र्क़ नहीं पड़ता।",
+   "commentary_en": "He stands in his own place is the phrase to keep. Everything else on the list is about things weighing the same, which could be mistaken for numbness; this one says where the evenness comes from. He is not flattened. He is simply not standing anywhere that the weighing could tip him.",
+   "commentary_hi": "अपनी ही जगह पर खड़ा है — यही वाक्यांश रखने लायक़ है। सूची की बाकी हर बात चीज़ों के एक ही तौल की होने के बारे में है, जिसे सुन्न पड़ जाना समझा जा सकता है; यह बताती है कि वह बराबरी आती कहाँ से है। वह कुचला हुआ नहीं है। वह बस कहीं ऐसी जगह खड़ा नहीं है जहाँ से तौल उसे लुढ़का सके।"
+  },
+  {
+   "id": 549,
+   "number": "14.25",
+   "body_en": "Honour and disgrace weigh the same. So does the side his friends are on and the side his enemies are on. He starts nothing. That is the man they call gone past the three.",
+   "body_hi": "मान और अपमान एक ही तौल के। दोस्तों का पक्ष और दुश्मनों का पक्ष भी एक ही। वह कुछ शुरू नहीं करता। यही वह आदमी है जिसे तीनों के पार गया हुआ कहते हैं।",
+   "commentary_en": "This portrait was already drawn once, at 12.18 and 12.19, and nearly line for line. It was arrived at there by love and here by seeing through the modes. Two roads, and the same man standing at the end of both -- which is as close as the book comes to saying outright that its several methods are one.",
+   "commentary_hi": "यह चित्र एक बार पहले बन चुका है, 12.18 और 12.19 में, और लगभग पंक्ति-दर-पंक्ति। वहाँ उस तक प्रेम से पहुँचा गया था, यहाँ गुणों के आर-पार देखकर। दो रास्ते, और दोनों के आख़िर में वही एक आदमी खड़ा है — किताब यह कहने के इससे ज़्यादा पास कहीं नहीं आती कि उसके कई तरीक़े दरअसल एक हैं।"
+  },
+  {
+   "id": 550,
+   "number": "14.26",
+   "body_en": "And the man who waits on me with a love that does not stray gets past all three of them, and is ready then to be brahman.",
+   "body_hi": "और जो आदमी ऐसे प्रेम से मुझमें लगा रहता है जो इधर-उधर भटकता नहीं, वह तीनों के पार निकल जाता है, और तभी ब्रह्म होने को तैयार हो जाता है।",
+   "commentary_en": "Arjuna's third question, answered. Twenty-five verses of analysis have gone into taking the modes apart, and the way out turns out to be one line long and not analytical at all.",
+   "commentary_hi": "अर्जुन का तीसरा सवाल, और उसका जवाब। पच्चीस श्लोक गुणों को खोलकर रखने में लगे, और निकलने का रास्ता निकला एक पंक्ति का, और विश्लेषण वाला बिलकुल नहीं।"
+  },
+  {
+   "id": 551,
+   "number": "14.27",
+   "body_en": "Because what brahman stands on is me — brahman, and the deathless that does not wear out, and the dharma that never lapses, and the one happiness with nothing else mixed into it.",
+   "body_hi": "क्योंकि ब्रह्म जिस पर खड़ा है वह मैं हूँ — ब्रह्म, और वह अमर जो घिसता नहीं, और वह धर्म जो कभी चूकता नहीं, और वह एक सुख जिसमें और कुछ मिला हुआ नहीं।",
+   "commentary_en": "The last word of the chapter is unmixed, and everything before it has been about mixtures -- three modes in shifting proportion, never one of them alone. The chapter ends by naming the single thing in it that is not a blend of anything.",
+   "commentary_hi": "अध्याय का आख़िरी शब्द है बिना मिलावट का, और उससे पहले जो कुछ है वह सब मिलावट के बारे में है — तीन गुण, बदलते अनुपात में, कभी कोई अकेला नहीं। अध्याय उस एक चीज़ का नाम लेकर ख़त्म होता है जो किसी का मिश्रण नहीं है।"
+  }
+ ]
+}
