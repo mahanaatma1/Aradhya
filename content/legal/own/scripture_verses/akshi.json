@@ -1,0 +1,410 @@
+{
+ "slug": "akshi",
+ "title_en": "Akshi Upanishad",
+ "title_hi": "अक्षि उपनिषद्",
+ "book_id": 29,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here. The verse numbering runs on across chapters (2.1 to 2.30, then 3.31 to 3.40, then 4.41 to 4.49) and is carried over as the fixture has it.",
+ "rows": [
+  {
+   "id": 20967,
+   "number": "1.1",
+   "body_en": "Then the lord Sankriti went to the world of the sun. He bowed to Aditya there and praised him with the vidya that belongs to the eye. Om, homage to the lord, to holy Surya, whose burning never runs down — homage. Om, to the one who travels the open sky — homage. Om, to the one who commands a great army — homage. Om, to darkness — homage. Om, to restlessness — homage. Om, to clearness — homage. Om — out of what is not, carry me over to what is; out of the dark, carry me over to the light; out of dying, carry me over to what does not die. The lord is the swan, clean in his shape, standing there over against us. He wears the shape of everything; he glows; he knows whatever has been born; he is made of gold; he has the shape of light, and he scorches. A thousand rays, going out a hundred ways, a person: this sun comes up over the creatures. Om, homage to the lord, to holy Surya, to Aditya, whose burning never runs down — aho vahini, vahini, svaha. Praised in this manner with the vidya of the eye, holy Surya Narayana was well pleased, and he said: a brahmin who goes over the vidya of the eye every day gets no disease in his eyes, and no one born in his line goes blind. Let him put it into the hands of eight brahmins, and then the vidya comes good. A man who knows it in this way becomes great.",
+   "body_hi": "फिर भगवान् सांकृति सूर्य के लोक में गए। वहाँ उन्होंने आदित्य को प्रणाम किया और आँख वाली विद्या से उनकी स्तुति की। ॐ, भगवान् को नमस्कार, श्री सूर्य को, जिनका तप कभी घटता नहीं — नमस्कार। ॐ, खुले आकाश में चलने वाले को — नमस्कार। ॐ, जिसकी बड़ी सेना है उसे — नमस्कार। ॐ, अंधकार को — नमस्कार। ॐ, बेचैनी को — नमस्कार। ॐ, निखार को — नमस्कार। ॐ — जो नहीं है उससे मुझे उस पार ले चलो जो है; अंधेरे से मुझे उस पार ले चलो जहाँ उजाला है; मरने से मुझे उस पार ले चलो जहाँ मरना नहीं। भगवान् हंस हैं, अपने रूप में निर्मल, वहाँ हमारे सामने खड़े। वे सबका रूप पहने हैं; वे दमकते हैं; जो कुछ जन्मा है सब जानते हैं; वे सोने के बने हैं; ज्योति का रूप रखते हैं, और तपते हैं। हज़ार किरणें, सौ तरफ़ फैलती हुईं, एक पुरुष: यह सूर्य प्रजा के ऊपर उदय होता है। ॐ, भगवान् को नमस्कार, श्री सूर्य को, आदित्य को, जिनका तप कभी घटता नहीं — अहो वाहिनि, वाहिनि, स्वाहा। इस तरह आँख वाली विद्या से स्तुति किए जाने पर श्री सूर्यनारायण बहुत प्रसन्न हुए और बोले: जो ब्राह्मण आँख वाली विद्या रोज़ दोहराता है, उसकी आँखों में रोग नहीं होता, और उसके कुल में कोई अंधा नहीं जन्मता। वह इसे आठ ब्राह्मणों के हाथ में सौंप दे, तब यह विद्या सिद्ध होती है। जो इसे इस तरह जानता है, वह बड़ा हो जाता है।",
+   "commentary_en": "The name of the book and the name of the vidya both turn on the eye, and so does the promise at the end — no eye-disease, no blindness in the family. But notice what the praise itself asks for, right in the middle: carry me over from the unreal to the real, from dark to light, from death to deathlessness. The book starts by asking for working eyes and ends, forty-nine verses later, having asked for something else.",
+   "commentary_hi": "किताब का नाम और विद्या का नाम, दोनों आँख पर टिके हैं, और आख़िर का वचन भी — आँख का रोग नहीं, कुल में अंधापन नहीं। पर देखिए कि स्तुति ख़ुद बीच में क्या माँगती है: असत् से सत् की ओर ले चलो, अंधेरे से उजाले की ओर, मृत्यु से अमरता की ओर। किताब काम करती आँखें माँगने से शुरू होती है और उनचास श्लोक बाद कुछ और माँग चुकी होती है।"
+  },
+  {
+   "id": 20968,
+   "number": "2.1",
+   "body_en": "Then Sankriti put a question to Aditya. Sir, he said, tell me the knowledge of brahman. And Aditya said to him: Sankriti, listen — I will tell you the knowing of what is really there, which is very hard to come by, and the moment you have understood it you will be free while you are still alive.",
+   "body_hi": "फिर सांकृति ने आदित्य से एक सवाल किया। महाराज, उन्होंने कहा, मुझे ब्रह्मविद्या बताइए। और आदित्य ने उनसे कहा: सांकृति, सुनो — मैं तुम्हें बताऊँगा कि जो सचमुच है उसे जानना क्या है; वह बहुत मुश्किल से मिलता है, और जिस घड़ी तुम उसे समझ लोगे उसी घड़ी तुम जीते-जी मुक्त हो जाओगे।",
+   "commentary_en": "Free while you are still alive — that is the whole claim, and it is made in the first breath. Everything that follows is a description of the road there, broken into seven stages, and the book will spend the rest of itself counting them off.",
+   "commentary_hi": "जीते-जी मुक्त — यही पूरा दावा है, और पहली ही साँस में कह दिया गया है। आगे जो कुछ है वह उस रास्ते का ब्यौरा है, सात पड़ावों में बँटा हुआ, और किताब अपना बाक़ी सारा वक़्त उन्हें गिनने में लगाएगी।"
+  },
+  {
+   "id": 20969,
+   "number": "2.2",
+   "body_en": "All of it is one, unborn, at rest, without an end, fixed, never wearing down. See it as it really is, made of awareness — and then sit still, as comfortably as you please.",
+   "body_hi": "यह सब एक है, अजन्मा, शांत, जिसका अंत नहीं, अटल, जो कभी घिसता नहीं। इसे वैसा ही देखो जैसा यह सचमुच है, चेतना का बना हुआ — और फिर चुपचाप बैठ जाओ, जितने आराम से जी चाहे।",
+   "commentary_en": "The last clause is unusually relaxed for a text of this kind. Sit still, as comfortably as you please. Nothing is being demanded of the body here; the whole weight is on the seeing.",
+   "commentary_hi": "आख़िरी वाक्य इस तरह के पाठ के लिए ग़ैरमामूली तौर पर ढीला है। चुपचाप बैठ जाओ, जितने आराम से जी चाहे। यहाँ शरीर से कुछ माँगा नहीं जा रहा; सारा बोझ देखने पर है।"
+  },
+  {
+   "id": 20970,
+   "number": "2.3",
+   "body_en": "They know yoga to be a not-knowing, a wearing away of the mind that nobody has manufactured. Stand in yoga and do your work; or, if the taste has gone out of it, do not do it.",
+   "body_hi": "योग को वे एक न-जानना कहते हैं, मन का ऐसा घिस जाना जिसे किसी ने गढ़ा नहीं। योग में खड़े होकर अपना काम करो; या फिर, अगर उसमें से स्वाद निकल गया हो, तो मत करो।",
+   "commentary_en": "The permission at the end is easy to miss and hard to argue with. Do the work, or do not do it — the point of the sentence is that by now it no longer matters which, and a rule that has stopped mattering has been answered.",
+   "commentary_hi": "आख़िर में दी गई छूट पर नज़र आसानी से नहीं जाती और उससे बहस भी नहीं की जा सकती। काम करो, या मत करो — वाक्य का मतलब यह है कि अब इससे फ़र्क़ नहीं पड़ता कि कौन-सा, और जिस नियम से फ़र्क़ पड़ना बंद हो गया उसका जवाब मिल चुका।"
+  },
+  {
+   "id": 20971,
+   "number": "2.4",
+   "body_en": "Day after day a coolness comes into him, in under the old pulls. He moves about in acts of a generous kind, and takes pleasure in them as the days go by.",
+   "body_hi": "दिन पर दिन उसके भीतर एक ठंडक उतरती जाती है, पुरानी खिंचावों के नीचे तक। वह उदार क़िस्म के कामों में चलता-फिरता है, और जैसे-जैसे दिन बीतते हैं उन्हीं में ख़ुश रहता है।",
+   "commentary_en": "The first stage begins with nothing dramatic. Something cools down underneath the wanting, and generosity starts to be pleasant rather than effortful. That is the whole of it, and the text takes seven more verses to describe it.",
+   "commentary_hi": "पहला पड़ाव किसी नाटकीय चीज़ से शुरू नहीं होता। चाहत के नीचे कुछ ठंडा पड़ जाता है, और उदारता मेहनत की जगह अच्छी लगने लगती है। बस इतना ही है, और पाठ इसे बताने में सात श्लोक और लेता है।"
+  },
+  {
+   "id": 20972,
+   "number": "2.5",
+   "body_en": "The coarse, thick-headed business of the village leaves him doubtful all the time. He does not bring up what hurts people, and he keeps to work that does some good.",
+   "body_hi": "गाँव का मोटा, भोंदू कारोबार उसे हर वक़्त संदेह में डाले रहता है। लोगों की जो बात चुभती है वह उसे उठाता नहीं, और ऐसे काम से जुड़ा रहता है जिससे कुछ भला हो।",
+   "commentary_en": "He does not bring up what hurts people. It is a small line about ordinary manners, sitting in the middle of a treatise on liberation, and the text sees no gap between the two.",
+   "commentary_hi": "लोगों की जो बात चुभती है वह उसे उठाता नहीं। यह रोज़मर्रा के शिष्टाचार की एक छोटी-सी पंक्ति है, जो मुक्ति के ग्रंथ के बीचोबीच बैठी है, और पाठ को दोनों में कोई फ़ासला नहीं दिखता।"
+  },
+  {
+   "id": 20973,
+   "number": "2.6",
+   "body_en": "He keeps to soft dealings, the kind that put nobody out. He is afraid of doing wrong at every moment, and he is not on the lookout for a good time.",
+   "body_hi": "वह नरम बरताव से जुड़ा रहता है, ऐसे बरताव से जिससे किसी को तकलीफ़ न हो। हर पल उसे ग़लत कर बैठने का डर रहता है, और वह मज़े की ताक में नहीं रहता।",
+   "commentary_en": "Afraid of doing wrong at every moment — the text does not treat that fear as a weakness to be trained out. At this stage it is doing useful work, and it will go on its own later.",
+   "commentary_hi": "हर पल ग़लत कर बैठने का डर — पाठ इस डर को ऐसी कमज़ोरी नहीं मानता जिसे साध कर निकाल देना हो। इस पड़ाव पर वह काम का है, और आगे ख़ुद ही चला जाएगा।"
+  },
+  {
+   "id": 20974,
+   "number": "2.7",
+   "body_en": "Words with warmth and liking inside them, smooth words, words that fit, words that suit the place they are said in and the hour — those are the ones he speaks.",
+   "body_hi": "जिन शब्दों में अपनापन और स्नेह भरा हो, चिकने शब्द, ठीक बैठने वाले शब्द, ऐसे शब्द जो जिस जगह और जिस घड़ी कहे जा रहे हैं उन पर जँचें — वही वह बोलता है।",
+   "commentary_en": "Four conditions on speech, and not one of them is about truth. They are all about fit — warmth, smoothness, aptness, timing. The text assumes a man at this stage has stopped lying and moves on to the harder question of how to talk.",
+   "commentary_hi": "बोलने पर चार शर्तें, और उनमें से एक भी सच्चाई के बारे में नहीं है। सब जँचने के बारे में हैं — अपनापन, चिकनाहट, ठीक बैठना, वक़्त। पाठ मान कर चलता है कि इस पड़ाव पर आदमी झूठ बोलना छोड़ चुका है, और उससे कठिन सवाल पर बढ़ जाता है कि बोला कैसे जाए।"
+  },
+  {
+   "id": 20975,
+   "number": "2.8",
+   "body_en": "In his mind, in what he does and in what he says, he keeps the company of decent people. And fetching them in from wherever he can, he looks into the books every day.",
+   "body_hi": "मन से, काम से और बोली से वह भले लोगों की संगत में रहता है। और जहाँ से भी मिल जाएँ वहाँ से उठा लाकर, वह रोज़ किताबों में झाँकता है।",
+   "commentary_en": "Fetching them in from wherever he can. Books were scarce and had to be borrowed, copied, begged off somebody; the line has the ordinary scramble of a reader in it, and the text puts it beside decent company as though the two were the same kind of effort.",
+   "commentary_hi": "जहाँ से भी मिल जाएँ वहाँ से उठा लाकर। किताबें दुर्लभ थीं, उधार लेनी पड़ती थीं, उतारनी पड़ती थीं, किसी से माँगनी पड़ती थीं; इस पंक्ति में पढ़ने वाले की रोज़ की भागदौड़ है, और पाठ इसे भली संगत के बग़ल में इस तरह रखता है जैसे दोनों एक ही क़िस्म की मेहनत हों।"
+  },
+  {
+   "id": 20976,
+   "number": "2.9",
+   "body_en": "By then he has arrived at the first of the stages, that one. Whoever turns things over in his mind like this, with getting across the round of births in view —",
+   "body_hi": "तब तक वह पड़ावों में से पहले पर, उसी पर, पहुँच चुका होता है। जो कोई इस तरह चीज़ें मन में उलटता-पलटता है, जन्मों के चक्कर से पार उतरने की नीयत से —",
+   "commentary_en": "Everything in the last six verses — the cooling, the manners, the careful speech, the borrowed books — turns out to have been the first stage only. The scheme is severe about its own scale.",
+   "commentary_hi": "पिछले छह श्लोकों का सब कुछ — ठंडक, शिष्टाचार, सँभली हुई बोली, माँगी हुई किताबें — आख़िर में सिर्फ़ पहला पड़ाव निकलता है। यह योजना अपने पैमाने के बारे में सख़्त है।"
+  },
+  {
+   "id": 20977,
+   "number": "2.10",
+   "body_en": "— of him it is said that he has a footing; what is left of him goes by the name of noble. And he has come now to the next stage of yoga, the one whose name is looking into things.",
+   "body_hi": "— उसके बारे में कहा जाता है कि उसे पैर रखने की जगह मिल गई; उसका जो बचा है वह आर्य के नाम से जाना जाता है। और अब वह योग के अगले पड़ाव पर आ चुका है, जिसका नाम है चीज़ों की जाँच।",
+   "commentary_en": "The second stage is inquiry, and the word is deliberately dry. Not devotion, not practice — looking into things, of the sort anyone does who wants to know how something works.",
+   "commentary_hi": "दूसरा पड़ाव विचार है, और यह शब्द जान-बूझकर सूखा है। भक्ति नहीं, साधना नहीं — चीज़ों की जाँच, उसी तरह की जैसी कोई भी करता है जो जानना चाहता हो कि कोई चीज़ चलती कैसे है।"
+  },
+  {
+   "id": 20978,
+   "number": "2.11",
+   "body_en": "By what is heard and what is handed down, by decent conduct, by holding the mind steady, by meditation and by work, he attaches himself to the finest of the learned — the ones set out under the leading account.",
+   "body_hi": "जो सुना गया और जो याद रखकर सौंपा गया, उससे; भले चालचलन से; मन को थामे रखने से; ध्यान से और काम से — इन सबसे वह सबसे अच्छे विद्वानों से जुड़ जाता है, उन्हीं से जो मुख्य व्याख्या में गिनाए गए हैं।",
+   "commentary_en": "Six things are listed and the sixth is work. The scheme keeps refusing to let the practitioner off the ordinary world, even while it moves him steadily further from it.",
+   "commentary_hi": "छह चीज़ें गिनाई गई हैं और छठी काम है। यह योजना साधक को साधारण दुनिया से छूटने नहीं देती, चाहे वह उसे लगातार उससे दूर ले जाती रहे।"
+  },
+  {
+   "id": 20979,
+   "number": "2.12",
+   "body_en": "Knowing how the things there are fall into their divisions, he can settle what has to be done and what has not. And having got hold of that, he is like a man who has learned his way about his own house.",
+   "body_hi": "जो चीज़ें हैं वे किन-किन भेदों में बँटती हैं, यह जानकर वह तय कर सकता है कि क्या करना है और क्या नहीं। और यह हाथ आ जाने पर वह उस आदमी जैसा हो जाता है जिसे अपने ही घर का रास्ता मालूम हो गया हो।",
+   "commentary_en": "The comparison is well chosen. A man in his own house does not work out where the door is; he simply goes through it. That is what the second stage is said to feel like from inside.",
+   "commentary_hi": "तुलना सोच-समझकर चुनी गई है। अपने घर में आदमी यह हिसाब नहीं लगाता कि दरवाज़ा कहाँ है; वह बस उससे होकर निकल जाता है। कहा जाता है कि भीतर से दूसरा पड़ाव ऐसा ही लगता है।"
+  },
+  {
+   "id": 20980,
+   "number": "2.13",
+   "body_en": "Being puffed up, thinking a great deal of himself, grudging others, grasping, in a muddle — whatever of that is still lying on him, even out at the edges, even a little, he gets out of it the way a snake gets out of its skin.",
+   "body_hi": "फूला हुआ होना, अपने को बहुत कुछ समझना, दूसरों से जलना, लपकना, गड़बड़ में रहना — इसमें से जो कुछ अब भी उस पर पड़ा है, किनारों पर भी, थोड़ा-सा भी, वह उससे इस तरह निकल आता है जैसे साँप अपनी केंचुल से निकल आता है।",
+   "commentary_en": "Even out at the edges, even a little. The qualification is what makes the line honest — at this stage the gross form of all five is long gone, and what remains is a residue at the rim, which is exactly where a snake's old skin hangs on last.",
+   "commentary_hi": "किनारों पर भी, थोड़ा-सा भी। यही शर्त पंक्ति को ईमानदार बनाती है — इस पड़ाव पर पाँचों का मोटा रूप कब का जा चुका है, और जो बचा है वह किनारे पर बची तलछट है, यानी ठीक वहाँ जहाँ साँप की पुरानी केंचुल आख़िर तक चिपकी रहती है।"
+  },
+  {
+   "id": 20981,
+   "number": "2.14",
+   "body_en": "With his mind brought to such a state, by waiting on the books, on the teacher and on decent people, he arrives at the whole of it, secret and all, exactly as it stands.",
+   "body_hi": "मन को इस हाल तक पहुँचाकर, किताबों की, गुरु की और भले लोगों की सेवा करते हुए, वह पूरे का पूरा पा लेता है, भेद समेत, ठीक जैसा वह है।",
+   "commentary_en": "Three supports again, and the books come first. This is a tradition that is often accused of putting the teacher above the text, and here it does the opposite twice over.",
+   "commentary_hi": "फिर तीन सहारे, और किताबें पहले आती हैं। इस परंपरा पर अक्सर आरोप लगता है कि वह गुरु को पाठ से ऊपर रखती है, और यहाँ वह दो बार इसका उल्टा करती है।"
+  },
+  {
+   "id": 20982,
+   "number": "2.15",
+   "body_en": "Then he drops into the third stage of yoga, the one that answers to another name — keeping clear of things — and he drops into it the way a lover drops onto a clean bed of flowers.",
+   "body_hi": "फिर वह योग के तीसरे पड़ाव में गिर पड़ता है, जो दूसरे नाम से पुकारा जाता है — चीज़ों से अलग रहना — और वह उसमें इस तरह गिरता है जैसे कोई प्रेमी फूलों की साफ़ सेज पर गिरता है।",
+   "commentary_en": "Detachment arrives here not as a hardship but as a bed somebody falls into gladly. The image is startling in context and it is not an accident: the text keeps insisting that the road gets more comfortable rather than less.",
+   "commentary_hi": "वैराग्य यहाँ किसी कष्ट की तरह नहीं आता, बल्कि उस सेज की तरह जिस पर कोई ख़ुशी-ख़ुशी गिर पड़ता है। इस प्रसंग में यह चित्र चौंकाने वाला है और यह इत्तेफ़ाक़ नहीं: पाठ बार-बार ज़ोर देता है कि रास्ता आगे कठिन नहीं, आरामदेह होता जाता है।"
+  },
+  {
+   "id": 20983,
+   "number": "2.16",
+   "body_en": "Having set his mind steadily on the sense of the sayings, exactly as it is; among people resting in the huts of the ascetics, going in order through their talk of the self; seated on a slab of stone for a bed — he wears a long life away.",
+   "body_hi": "वचनों के अर्थ पर मन को अडिग जमाकर, ठीक जैसा वह है; तपस्वियों की कुटियों में विश्राम कर रहे लोगों के बीच, आत्मा की उनकी बातचीत के क्रम से गुज़रते हुए; पत्थर की सिल को ही बिछौना बनाकर बैठे हुए — वह एक लंबी उम्र घिसा देता है।",
+   "commentary_en": "He wears a long life away. The phrase is not complimentary and not a complaint; it is a description of what the third stage costs in hours. Nothing in the scheme is said to be quick.",
+   "commentary_hi": "वह एक लंबी उम्र घिसा देता है। यह वाक्यांश न तारीफ़ है न शिकायत; यह बताता है कि तीसरा पड़ाव घंटों में कितना माँगता है। इस योजना में किसी चीज़ को जल्दी होने वाला नहीं कहा गया।"
+  },
+  {
+   "id": 20984,
+   "number": "2.17",
+   "body_en": "Wandering about on forest ground, made handsome by the settling of his mind, with the ease and the plain pleasure of being attached to nothing — a man who knows how to go about it passes his time.",
+   "body_hi": "जंगल की ज़मीन पर घूमते-फिरते, मन के ठहर जाने से सुंदर हुआ, किसी से न बँधे होने के आराम और सीधे-सादे सुख के साथ — जिसे चलना आता है वह आदमी अपना वक़्त काट देता है।",
+   "commentary_en": "Made handsome by the settling of his mind. The claim is physical and the text means it — something in the face changes, and other people can see it before the man himself can.",
+   "commentary_hi": "मन के ठहर जाने से सुंदर हुआ। यह दावा शरीर के बारे में है और पाठ इसे सचमुच कह रहा है — चेहरे में कुछ बदल जाता है, और दूसरे लोग उसे उस आदमी से पहले देख लेते हैं।"
+  },
+  {
+   "id": 20985,
+   "number": "2.18",
+   "body_en": "Out of working at the good books, out of doing the things that are worth doing, this true sight of how matters stand settles clear for a creature, exactly as it should.",
+   "body_hi": "अच्छी किताबों पर मेहनत करने से, करने लायक़ काम करने से, प्राणी के भीतर यह सच्ची नज़र साफ़ बैठ जाती है कि बात क्या है — ठीक जैसी बैठनी चाहिए।",
+   "commentary_en": "Settles clear is the word the text uses for water going still after it has been stirred. Nothing is added; something merely stops moving, and what was always there can be seen through.",
+   "commentary_hi": "'साफ़ बैठ जाना' वही शब्द है जो पाठ हिलाए जाने के बाद ठहरते पानी के लिए बरतता है। कुछ जोड़ा नहीं जाता; बस कुछ हिलना बंद कर देता है, और जो हमेशा से वहाँ था उसके आर-पार देखा जा सकता है।"
+  },
+  {
+   "id": 20986,
+   "number": "2.19",
+   "body_en": "Once he has come as far as the third stage, the man in whom something has woken finds out what it is by living through it, and there is nobody who can do that part on his behalf.",
+   "body_hi": "जब वह तीसरे पड़ाव तक आ जाता है, तब जिस आदमी के भीतर कुछ जाग उठा है वह उसे जीकर ही जान पाता है, और यह हिस्सा उसकी जगह कोई दूसरा नहीं कर सकता।",
+   "commentary_en": "One line, and it says only that he finds out himself. From here the text can describe less and less, and it starts saying so.",
+   "commentary_hi": "एक पंक्ति, और उसमें बस इतना है कि वह ख़ुद जान लेता है। यहाँ से पाठ कम और कम बता सकता है, और वह यह कहना शुरू कर देता है।"
+  },
+  {
+   "id": 20987,
+   "number": "2.20",
+   "body_en": "Being caught up with things runs to two kinds. Listen to this division of it. Keeping clear of things is also of two kinds — the common sort and the best.",
+   "body_hi": "चीज़ों में उलझे रहना दो तरह का होता है। उसका यह भेद सुनो। चीज़ों से अलग रहना भी दो तरह का है — आम वाला और सबसे ऊँचा।",
+   "commentary_en": "The third stage now gets split down the middle, and the rest of chapter two is spent on the split. It is the most technical passage in the book, and it is here because the difference between the two is easy to miss from inside.",
+   "commentary_hi": "अब तीसरे पड़ाव को बीच से चीरा जाता है, और दूसरे अध्याय का बाक़ी हिस्सा इसी चीर पर ख़र्च होता है। यह किताब का सबसे तकनीकी हिस्सा है, और यह इसलिए है कि भीतर से दोनों का फ़र्क़ पकड़ में नहीं आता।"
+  },
+  {
+   "id": 20988,
+   "number": "2.21",
+   "body_en": "I am not the one doing it; I am not the one it happens to; I am neither held back nor holding anything back. Not gluing yourself onto matters in that way is what carries the name of the common sort of keeping clear.",
+   "body_hi": "न मैं करने वाला हूँ, न जिस पर बीतती है वह; न मुझे कोई रोकता है, न मैं किसी को रोकता हूँ। इस तरह अपने को बातों से चिपकाए बिना रहना ही उस अलगाव का नाम है जो आम वाला है।",
+   "commentary_en": "Four denials, and each one takes away a role rather than a thing. The man is not being asked to give up anything he owns; he is being asked to stop standing where he has been standing.",
+   "commentary_hi": "चार इनकार, और हर एक किसी चीज़ को नहीं, किसी भूमिका को हटाता है। आदमी से यह नहीं कहा जा रहा कि जो उसका है वह छोड़ दे; यह कहा जा रहा है कि वह जहाँ खड़ा था वहाँ खड़ा रहना छोड़ दे।"
+  },
+  {
+   "id": 20989,
+   "number": "2.22",
+   "body_en": "All of it was shaped by earlier work, or else it hangs on the lord. Whether what comes is pleasant or whether it hurts — in any of it, what doing is yours?",
+   "body_hi": "यह सब पहले किए काम का गढ़ा हुआ है, या फिर ईश्वर के हाथ में टँगा है। जो आए वह सुख हो या दुख — इसमें तुम्हारा करना है ही कहाँ?",
+   "commentary_en": "The verse gives two explanations and does not choose between them, because for its purpose they come to the same thing. Either way the question at the end stands.",
+   "commentary_hi": "श्लोक दो कारण देता है और उनमें से चुनता नहीं, क्योंकि उसके काम के लिए दोनों एक ही जगह पहुँचते हैं। किसी भी हाल में आख़िर का सवाल वहीं खड़ा रहता है।"
+  },
+  {
+   "id": 20990,
+   "number": "2.23",
+   "body_en": "The spread of good things is a great sickness; a fortune is the worst of misfortunes; every coming together is only for the sake of coming apart; and the mind's own worries are the diseases it suffers from.",
+   "body_hi": "भोगों का फैलाव एक बड़ी बीमारी है; दौलत सबसे बड़ी आफ़त है; हर मिलना बिछड़ने के ही लिए होता है; और मन की अपनी चिंताएँ ही वे रोग हैं जो उसे लगते हैं।",
+   "commentary_en": "Four flat statements, and the last one is a small piece of wordplay in the original — the worries and the diseases are almost the same word, set side by side so that you cannot say which one is the figure of speech.",
+   "commentary_hi": "चार सपाट बातें, और आख़िरी में मूल का एक छोटा-सा शब्द-खेल है — चिंता और व्याधि लगभग एक ही शब्द हैं, अगल-बग़ल रखे हुए, ताकि आप कह न सकें कि इनमें रूपक कौन-सा है।"
+  },
+  {
+   "id": 20991,
+   "number": "2.24",
+   "body_en": "And time, hard at work with its reckoning, is at every state of things without a pause. Not leaning on them, in that way — the not-dwelling on those states, down inside, for a man whose mind has caught what the saying meant: that is the common sort of keeping clear.",
+   "body_hi": "और काल, अपनी गिनती में लगा हुआ, बिना रुके हर हालत पर चढ़ा रहता है। उन पर टेक न लगाना, इस तरह — उन हालतों को भीतर ही भीतर मन में न बसाना, उस आदमी के लिए जिसके मन ने पकड़ लिया हो कि वचन का मतलब क्या था: वही आम वाला अलगाव है।",
+   "commentary_en": "Whose mind has caught what the saying meant. That clause is the whole limitation of the common sort: it works by understanding a sentence, and so it is still running on words.",
+   "commentary_hi": "जिसके मन ने पकड़ लिया हो कि वचन का मतलब क्या था। यही वाक्यांश आम वाले की पूरी सीमा है: वह किसी वाक्य को समझने से चलता है, और इसलिए अब भी शब्दों के सहारे चल रहा है।"
+  },
+  {
+   "id": 20992,
+   "number": "2.25",
+   "body_en": "By this practice taken in order, by falling in with people who are large in themselves: I am not the one doing it — the lord is the one doing it — or else it is my own work from before.",
+   "body_hi": "इस क्रम से की गई साधना से, और उन लोगों की संगत से जो अपने भीतर बड़े हैं: करने वाला मैं नहीं हूँ — करने वाला ईश्वर है — या फिर यह मेरा ही पहले का किया हुआ है।",
+   "commentary_en": "The formula from two verses back comes round again, and this time it is stated as something the man says rather than something he is told. That shift is the point of the repetition.",
+   "commentary_hi": "दो श्लोक पहले वाला वाक्य फिर लौटता है, और इस बार वह उस आदमी की कही हुई बात है, उसे बताई गई बात नहीं। यही बदलाव इस दोहराव का मक़सद है।"
+  },
+  {
+   "id": 20993,
+   "number": "2.26",
+   "body_en": "When even that has been put a long way off — that dwelling on what the words come to — the silence that is then, the sitting, the quiet: that is what is called the best sort of keeping clear.",
+   "body_hi": "जब वह भी बहुत दूर रख दिया जाए — शब्दों का जो मतलब निकलता है उस पर टिके रहना — तब जो चुप्पी बचती है, जो बैठक, जो शांति: उसी को सबसे ऊँचा अलगाव कहते हैं।",
+   "commentary_en": "The best sort is reached by dropping the formula that got you to the common sort. The book has just spent six verses building a thought and now tells you to put it a long way off, and it is not being playful — the thought was scaffolding.",
+   "commentary_hi": "सबसे ऊँचा अलगाव उसी वाक्य को छोड़ देने से मिलता है जो आम वाले तक ले आया था। किताब अभी-अभी छह श्लोक एक विचार खड़ा करने में लगा चुकी है और अब कहती है कि उसे बहुत दूर रख दो — और यह मज़ाक़ नहीं है: वह विचार मचान था।"
+  },
+  {
+   "id": 20994,
+   "number": "2.27",
+   "body_en": "The first stage comes up sweet, with the gladness of having enough in it. It is like a shoot of nectar within, the moment it has pushed up out of the ground.",
+   "body_hi": "पहला पड़ाव मीठा उगता है, संतोष की ख़ुशी उसमें घुली रहती है। वह भीतर के अमृत का अंकुर है, उसी घड़ी का, जब वह ज़मीन फोड़कर बाहर निकला हो।",
+   "commentary_en": "Having gone forward to the third stage, the text turns back to the first and describes it again, this time by how it tasted. The scheme is not only a ladder; it is also a memory.",
+   "commentary_hi": "तीसरे पड़ाव तक बढ़ आने के बाद पाठ पहले पर लौटता है और उसे फिर बताता है, इस बार यह बताकर कि उसका स्वाद कैसा था। यह योजना सिर्फ़ सीढ़ी नहीं है; यह याद भी है।"
+  },
+  {
+   "id": 20995,
+   "number": "2.28",
+   "body_en": "For this is the one soil where giving up is born, once the inside of it has been rubbed clean. And from it he would come to the second stage, and to the third.",
+   "body_hi": "क्योंकि यही वह अकेली मिट्टी है जिसमें त्याग जन्म लेता है, जब उसका भीतर माँज दिया गया हो। और इसी से वह दूसरे पड़ाव तक आएगा, और तीसरे तक।",
+   "commentary_en": "The first stage is called soil rather than a step. Nothing grows in it until it has been cleaned out, and once it has, the other two come up from it rather than after it.",
+   "commentary_hi": "पहले पड़ाव को सीढ़ी नहीं, मिट्टी कहा गया है। जब तक उसे साफ़ न कर दिया जाए उसमें कुछ नहीं उगता, और साफ़ हो जाने पर बाक़ी दोनों उसके बाद नहीं, उसी में से ऊपर आते हैं।"
+  },
+  {
+   "id": 20996,
+   "number": "2.29",
+   "body_en": "This third stage is the finest of them and it reaches everywhere. Here a man becomes somebody who has thrown off the last of his reckoning and his planning.",
+   "body_hi": "यह तीसरा पड़ाव इन सबमें सबसे अच्छा है और हर जगह पहुँचता है। यहाँ आदमी वह बन जाता है जिसने अपनी आख़िरी गिनती और आख़िरी योजना भी उतार फेंकी हो।",
+   "commentary_en": "Reaches everywhere is the claim that matters. Up to here the stages have been states a man is in; from here on the state is said to be where he is, which is a different kind of sentence.",
+   "commentary_hi": "'हर जगह पहुँचता है' — यही असली दावा है। यहाँ तक पड़ाव वे हालतें थीं जिनमें आदमी होता है; यहाँ से कहा जाता है कि वह हालत ही वह जगह है जहाँ वह है, और यह बिल्कुल दूसरी तरह का वाक्य है।"
+  },
+  {
+   "id": 20997,
+   "number": "2.30",
+   "body_en": "From working at the three stages, once not-knowing has come to its wearing-away, those who have got to the fourth stage see one and the same thing everywhere.",
+   "body_hi": "तीनों पड़ावों पर मेहनत करने से, जब अनजानपन घिसकर ख़त्म हो चुका होता है, तब जो चौथे पड़ाव तक पहुँच गए हैं वे हर जगह एक ही चीज़ देखते हैं।",
+   "commentary_en": "Ignorance is not defeated here; it wears away, which is a slower and less heroic word, and the text has used it before. The fourth stage arrives when the friction has finally used something up.",
+   "commentary_hi": "यहाँ अज्ञान हराया नहीं जाता; वह घिसकर ख़त्म होता है, और यह धीमा और कम वीरतापूर्ण शब्द है, जिसे पाठ पहले भी बरत चुका है। चौथा पड़ाव तब आता है जब रगड़ ने आख़िरकार किसी चीज़ को ख़त्म कर दिया हो।"
+  },
+  {
+   "id": 20998,
+   "number": "3.31",
+   "body_en": "When steadiness has come in the not-two, and the two has gone quiet, those who have got to the fourth stage see the world the way a man sees a dream.",
+   "body_hi": "जब अद्वैत में ठहराव आ जाता है, और द्वैत चुप हो जाता है, तब जो चौथे पड़ाव तक पहुँच गए हैं वे जगत को उस तरह देखते हैं जैसे आदमी सपना देखता है।",
+   "commentary_en": "A dream is not called false here, only dreamt. The man at the fourth stage still sees everything he saw before, in the same order and the same colours; what has changed is where he thinks it is coming from.",
+   "commentary_hi": "सपने को यहाँ झूठा नहीं कहा गया, बस देखा हुआ कहा गया है। चौथे पड़ाव का आदमी वह सब कुछ अब भी देखता है जो पहले देखता था, उसी क्रम में और उन्हीं रंगों में; बदला यह है कि वह इसे आ कहाँ से रहा मानता है।"
+  },
+  {
+   "id": 20999,
+   "number": "3.32",
+   "body_en": "Take the first three stages together and they amount to no more than being awake in the usual manner; the fourth is the one they give the name of dreaming to.",
+   "body_hi": "पहले तीनों पड़ावों को इकट्ठा कर लो तो वे मामूली ढंग से जागे रहने से ज़्यादा कुछ नहीं ठहरते; चौथा वह है जिसे सपने का नाम दिया जाता है।",
+   "commentary_en": "The seven stages are now laid over the four states of the self, and the fit is not flattering to the first three. Everything achieved so far counts as being awake in the ordinary way.",
+   "commentary_hi": "अब सातों पड़ावों को आत्मा की चार अवस्थाओं पर बिछा दिया जाता है, और यह बैठक पहले तीन के लिए तारीफ़ वाली नहीं है। अब तक जो कुछ हासिल हुआ वह मामूली तरीक़े से जागे रहने में गिना जाता है।"
+  },
+  {
+   "id": 21000,
+   "number": "3.33",
+   "body_en": "But the mind melts right away, the way a cloud comes apart at the end of the rains. Nothing but clearness is left standing for the man who has got to the fifth stage.",
+   "body_hi": "पर मन पूरी तरह पिघल जाता है, जैसे बरसात के बाद बादल बिखर जाता है। जो पाँचवें पड़ाव तक पहुँच गया, उसके लिए निखार के सिवा कुछ खड़ा नहीं रहता।",
+   "commentary_en": "An autumn cloud does not blow away; it simply stops being a cloud where it stands. That is exactly the distinction the verse wants, and the image was chosen by somebody who had watched the sky after a monsoon.",
+   "commentary_hi": "शरद का बादल उड़कर नहीं जाता; वह जहाँ है वहीं बादल होना छोड़ देता है। श्लोक को ठीक यही फ़र्क़ चाहिए, और यह चित्र उसने चुना है जिसने बरसात के बाद का आसमान देखा हो।"
+  },
+  {
+   "id": 21001,
+   "number": "3.34",
+   "body_en": "No parcelling out of the world comes up here, because the mind has been dissolved away in it. Having come to the fifth stage, which answers to the name of deep sleep, with every last particular quieted, he stands as nothing but the not-two.",
+   "body_hi": "यहाँ जगत का कोई बँटवारा उठता ही नहीं, क्योंकि इसमें मन घुल चुका होता है। पाँचवें पड़ाव पर आकर, जो गहरी नींद के नाम से जाना जाता है, जब आख़िरी ब्योरा तक शांत हो चुका होता है, वह अद्वैत के सिवा और कुछ नहीं रह जाता।",
+   "commentary_en": "Deep sleep is the name, and it is chosen for one property only: in deep sleep nothing is divided from anything, and nobody has to work at keeping it that way.",
+   "commentary_hi": "नाम गहरी नींद है, और वह सिर्फ़ एक ख़ासियत के लिए चुना गया है: गहरी नींद में कोई चीज़ किसी से अलग नहीं होती, और उसे वैसा बनाए रखने के लिए किसी को मेहनत नहीं करनी पड़ती।"
+  },
+  {
+   "id": 21002,
+   "number": "3.35",
+   "body_en": "With the showing of two slipped off him, glad, and from then on with his waking in him, he stays a mind in deep sleep, having got to the fifth stage.",
+   "body_hi": "दो का दिखना उससे खिसक जाने पर, ख़ुश, और तब से अपने जागरण को अपने भीतर लिए हुए, वह गहरी नींद में पड़ा हुआ मन बना रहता है — पाँचवें पड़ाव पर पहुँचकर।",
+   "commentary_en": "A mind in deep sleep that is at the same time awake — the phrase should not work, and the text uses it deliberately. From here on, its sentences will be built out of pairs that cancel.",
+   "commentary_hi": "गहरी नींद में पड़ा हुआ मन जो उसी वक़्त जागा हुआ भी है — यह वाक्यांश बनना नहीं चाहिए, और पाठ इसे जान-बूझकर बरतता है। यहाँ से उसके वाक्य ऐसी जोड़ियों से बनेंगे जो एक-दूसरे को काट देती हैं।"
+  },
+  {
+   "id": 21003,
+   "number": "3.36",
+   "body_en": "Standing there turned inward, even while he is busy with what faces outward, he looks for all the world like a man worn out and ready to fall asleep.",
+   "body_hi": "भीतर की ओर मुड़ा हुआ खड़ा, तब भी जब वह बाहर के कामों में लगा हो, वह देखने में बिल्कुल ऐसा लगता है जैसे कोई थका हुआ आदमी जिसे अभी नींद आ जाएगी।",
+   "commentary_en": "This is the only verse in the book that tells you what such a man looks like from outside, and the answer is: tired. There is nothing to see. Anyone hoping for a sign has just been told there is not one.",
+   "commentary_hi": "पूरी किताब में यही अकेला श्लोक बताता है कि ऐसा आदमी बाहर से कैसा दिखता है, और जवाब है: थका हुआ। देखने को कुछ नहीं है। जो कोई किसी चिह्न की उम्मीद लगाए बैठा था उससे अभी-अभी कह दिया गया कि कोई चिह्न नहीं है।"
+  },
+  {
+   "id": 21004,
+   "number": "3.37",
+   "body_en": "Keeping at his practice while he is on this stage, and with the old pulls now drained out of him, he drops by degrees into the next one along — the sixth, which answers to the name that the fourth state carries.",
+   "body_hi": "इसी पड़ाव पर रहते हुए अपनी साधना में लगे रहकर, और जब पुरानी खिंचावें उसमें से निथर चुकी हों, वह धीरे-धीरे अगले में जा गिरता है — छठे में, जो उसी नाम से जाना जाता है जो तुरीय अवस्था का है।",
+   "commentary_en": "The sixth stage carries the name of the fourth state, which makes the numbering read strangely on purpose. The two counts are not measuring the same thing, and the text lets the collision stand rather than tidy it.",
+   "commentary_hi": "छठे पड़ाव का नाम चौथी अवस्था के नाम पर है, जिससे गिनती जान-बूझकर अटपटी पड़ जाती है। दोनों गिनतियाँ एक ही चीज़ नहीं नाप रहीं, और पाठ इस टकराव को सुधारने के बजाय खड़ा रहने देता है।"
+  },
+  {
+   "id": 21005,
+   "number": "3.38",
+   "body_en": "Where nothing wears the shape of what is not, and nothing the shape of what is; no I, and no making of an I; with the thinking itself worn out, he stays in the not-two, with nothing at all left to fear.",
+   "body_hi": "जहाँ न कुछ उस रूप में है जो नहीं है, न उस रूप में जो है; न मैं, न मैं बनाने की क्रिया; जहाँ सोचना ही घिस चुका है — वहाँ वह अद्वैत में रहता है, और डरने को कुछ भी बाक़ी नहीं रहता।",
+   "commentary_en": "Nothing at all left to fear is the plainest thing said in the whole book, and it is put at the end of a line that has just taken away being, non-being, and the I. Fear needed one of those to stand on.",
+   "commentary_hi": "'डरने को कुछ भी बाक़ी नहीं' पूरी किताब की सबसे सीधी बात है, और उसे उस पंक्ति के आख़िर में रखा गया है जिसने अभी-अभी होना, न होना और मैं — तीनों छीन लिए हैं। डर को इनमें से किसी एक पर खड़ा होना पड़ता था।"
+  },
+  {
+   "id": 21006,
+   "number": "3.39",
+   "body_en": "The knot untied, his doubt gone quiet, free while he is still alive, with nothing left to picture — not put out, and yet put out — he stands there like a lamp in a painting.",
+   "body_hi": "गाँठ खुल गई, संदेह चुप हो गया, जीते-जी मुक्त, जिसके पास कल्पने को कुछ नहीं बचा — बुझा नहीं, और फिर भी बुझा हुआ — वह वहाँ किसी चित्र में बने दीये की तरह खड़ा रहता है।",
+   "commentary_en": "A lamp in a painting is the best image in the book. It is unquestionably a lamp; it gives no heat and burns no oil; it cannot go out, because it was never alight in the way lamps are. Nothing about it has to change for any of that to be true at once.",
+   "commentary_hi": "चित्र में बना दीया इस किताब का सबसे अच्छा चित्र है। वह बेशक दीया है; न गर्मी देता है न तेल जलाता है; बुझ नहीं सकता, क्योंकि वह उस तरह जला ही कभी नहीं जिस तरह दीये जलते हैं। यह सब एक साथ सच होने के लिए उसमें कुछ भी बदलना नहीं पड़ता।"
+  },
+  {
+   "id": 21007,
+   "number": "3.40",
+   "body_en": "When a man has taken his stand on the sixth ground and held his place there, it is off that footing and no other that he would come through to the seventh.",
+   "body_hi": "जब आदमी छठी भूमि पर अपने पैर जमा ले और वहीं टिका रहे, तब उसी टेक से — और किसी से नहीं — वह सातवीं तक पहुँच पाएगा।",
+   "commentary_en": "A single line, and the verb in it is the one a grammarian would call a wish rather than a statement. Even at this height the text will not say flatly that the man arrives.",
+   "commentary_hi": "एक अकेली पंक्ति, और उसमें जो क्रिया है उसे व्याकरणी कथन नहीं, कामना कहेगा। इस ऊँचाई पर भी पाठ सीधे-सीधे यह नहीं कहता कि आदमी पहुँच ही जाता है।"
+  },
+  {
+   "id": 21008,
+   "number": "4.41",
+   "body_en": "The seventh stage of yoga is spoken of there as the freedom that has no body left. Words cannot get to it; it is at rest; it is the boundary line of all the stages.",
+   "body_hi": "योग के सातवें पड़ाव को वहाँ ऐसी मुक्ति कहा गया है जिसमें देह बची ही नहीं। शब्द वहाँ तक पहुँच नहीं पाते; वह शांत है; वह सारे पड़ावों की हद है।",
+   "commentary_en": "The boundary line of all the stages, not the last of them. A boundary is not a place you stand in, and the phrase quietly withdraws the seventh from the series it is supposed to finish.",
+   "commentary_hi": "सारे पड़ावों की हद, उनमें से आख़िरी नहीं। हद कोई ऐसी जगह नहीं जहाँ खड़ा हुआ जाए, और यह वाक्यांश चुपचाप सातवें को उसी क्रम से बाहर खींच लेता है जिसे उसे पूरा करना था।"
+  },
+  {
+   "id": 21009,
+   "number": "4.42",
+   "body_en": "Give up going along with the world; give up going along with the body; give up going along with the books; and take off what you have laid over yourself.",
+   "body_hi": "दुनिया के पीछे-पीछे चलना छोड़ो; देह के पीछे-पीछे चलना छोड़ो; किताबों के पीछे-पीछे चलना छोड़ो; और जो तुमने अपने ऊपर ओढ़ रखा है उसे उतार दो।",
+   "commentary_en": "The books are put in the same list as the world and the body, and they go last, which is the hardest place to put them. Everything that got the reader this far is now something to be set down.",
+   "commentary_hi": "किताबों को दुनिया और देह के साथ एक ही सूची में रखा गया है, और वे आख़िर में आती हैं, जो उन्हें रखने की सबसे कठिन जगह है। जो कुछ पाठक को यहाँ तक लाया, अब उसी को नीचे रख देना है।"
+  },
+  {
+   "id": 21010,
+   "number": "4.43",
+   "body_en": "The whole of it is nothing but om, marked off as the one in the world and the one in the knowing and the rest of them — because the difference between the thing said and the saying of it, and the sameness of them, is not to be got hold of either way.",
+   "body_hi": "यह सब ॐ के सिवा कुछ नहीं, जिसे विश्व और प्राज्ञ और बाक़ी नामों से अलग-अलग पहचाना गया है — क्योंकि जो कहा जाता है और जिससे कहा जाता है, उनका फ़र्क़ और उनका एक होना, दोनों में से कुछ भी हाथ नहीं आता।",
+   "commentary_en": "The argument is compact: you cannot show that the word and what it names are two, and you cannot show that they are one, so the division you were counting on is not there to be used. What is left is the sound.",
+   "commentary_hi": "तर्क कसा हुआ है: आप यह नहीं दिखा सकते कि शब्द और जिसका वह नाम है, दोनों दो हैं, और यह भी नहीं दिखा सकते कि वे एक हैं — तो जिस भेद पर आप भरोसा कर रहे थे वह बरतने को है ही नहीं। जो बचता है वह ध्वनि है।"
+  },
+  {
+   "id": 21011,
+   "number": "4.44",
+   "body_en": "The one in the world would be just the sound a; the shining one is handed down as u; the one in the knowing is m. Look right through them, in that order.",
+   "body_hi": "विश्व सिर्फ़ अ की ध्वनि होगा; तैजस को उ के रूप में सौंपा गया है; प्राज्ञ म है। इन्हें इसी क्रम से आर-पार देखो।",
+   "commentary_en": "Three states of the self mapped onto three sounds of one syllable — the same move the Mandukya makes at greater length. Here it is done in half a verse and then left behind.",
+   "commentary_hi": "आत्मा की तीन अवस्थाएँ एक ही अक्षर की तीन ध्वनियों पर बिठा दी गईं — वही काम माण्डूक्य ज़्यादा विस्तार से करता है। यहाँ इसे आधे श्लोक में निपटाकर पीछे छोड़ दिया जाता है।"
+  },
+  {
+   "id": 21012,
+   "number": "4.45",
+   "body_en": "Well before the hour of gathering himself in, having thought it through with a great deal of trouble taken, he should melt the whole of it down into the self that is awareness, going in order from the coarse to the fine.",
+   "body_hi": "समाधि की घड़ी से काफ़ी पहले, ख़ूब मेहनत करके सोच लेने के बाद, वह पूरे का पूरा चेतना वाले आत्मा में घोल दे — मोटे से महीन की ओर, क्रम से।",
+   "commentary_en": "Well before the hour. The work is to be done in advance, in daylight, with trouble taken; what happens at the hour itself is not something you can arrange while it is happening.",
+   "commentary_hi": "घड़ी से काफ़ी पहले। काम पहले से कर लेना है, दिन के उजाले में, मेहनत के साथ; उस घड़ी में जो होता है उसे होते-होते सँवारा नहीं जा सकता।"
+  },
+  {
+   "id": 21013,
+   "number": "4.46",
+   "body_en": "The self that is awareness: always clean, always awake, always let go, real, with no second to it; the highest gladness past all doubting — I am Vasudeva. Om.",
+   "body_hi": "वह आत्मा जो चेतना है: सदा निर्मल, सदा जागा हुआ, सदा छूटा हुआ, सत्य, जिसके साथ दूसरा कोई नहीं; सबसे ऊँचा आनंद, जिस पर संदेह की गुंजाइश नहीं — मैं वासुदेव हूँ। ॐ।",
+   "commentary_en": "The verse ends on a name, and it is a name with a face and a story attached to it. After a chapter spent taking away every particular thing, the sentence a man is given to say has Krishna in it.",
+   "commentary_hi": "श्लोक एक नाम पर ख़त्म होता है, और वह ऐसा नाम है जिसके साथ चेहरा भी है और कथा भी। पूरा अध्याय हर ब्योरा छीनने में बीता, और आख़िर में आदमी को कहने के लिए जो वाक्य दिया जाता है उसमें कृष्ण हैं।"
+  },
+  {
+   "id": 21014,
+   "number": "4.47",
+   "body_en": "Since all of this is pain at its start, pain in the middle of it and pain at the end, let go of the whole of it and stand on what is really there — you who have done nothing wrong.",
+   "body_hi": "चूँकि यह सब शुरू में दुख है, बीच में दुख है और आख़िर में दुख है, इसलिए पूरे का पूरा छोड़ दो और जो सचमुच है उस पर खड़े हो जाओ — तुम, जिससे कोई ग़लती नहीं हुई।",
+   "commentary_en": "The address at the end is a courtesy formula, but it lands oddly well here. The man being told to give everything up is not being scolded; he is being called blameless in the same breath.",
+   "commentary_hi": "आख़िर का संबोधन शिष्टाचार का वाक्यांश है, पर यहाँ वह अजीब तरह से ठीक बैठता है। जिस आदमी से सब छोड़ देने को कहा जा रहा है उसे डाँटा नहीं जा रहा; उसी साँस में उसे निर्दोष भी कहा जा रहा है।"
+  },
+  {
+   "id": 21015,
+   "number": "4.48",
+   "body_en": "Past the dimness of not-knowing; with every appearance left out of it; gladness, spotless, clean, not to be come at by the mind or by anything that can be said —",
+   "body_hi": "न जानने के धुँधलेपन से परे; जिसमें से हर दिखावा निकाल दिया गया हो; आनंद, बेदाग़, निर्मल, जिस तक न मन पहुँच सके न कोई कही जाने वाली बात —",
+   "commentary_en": "The word for the dimness of not-knowing is the same one used for a cataract on the eye. That is not a coincidence in a book named after the eye, and it is the last time the book reaches for the image.",
+   "commentary_hi": "न जानने के धुँधलेपन के लिए जो शब्द है वही आँख के मोतियाबिंद के लिए बरता जाता है। आँख के नाम वाली किताब में यह इत्तेफ़ाक़ नहीं है, और किताब आख़िरी बार यहीं इस चित्र तक हाथ बढ़ाती है।"
+  },
+  {
+   "id": 21016,
+   "number": "4.49",
+   "body_en": "— let him bring it up before himself in this way: I am brahman, thick through with knowing, and gladness.",
+   "body_hi": "— वह इसे अपने सामने इस तरह ले आए: मैं ब्रह्म हूँ, जानने से ठसाठस भरा हुआ, और आनंद।",
+   "commentary_en": "Fifty verses that began by asking the sun for unspoiled eyesight finish with a man saying this to himself, and nobody is present to hear it. The vidya of the eye turned out to be about what is looking rather than what is looked at.",
+   "commentary_hi": "पचास श्लोक, जो सूरज से बेदाग़ नज़र माँगने से शुरू हुए थे, इस पर ख़त्म होते हैं कि एक आदमी यह अपने आप से कह रहा है, और सुनने वाला कोई मौजूद नहीं। आँख वाली विद्या आख़िर में इस बारे में निकली कि देखने वाला क्या है, न कि यह कि देखा क्या जा रहा है।"
+  }
+ ]
+}
