@@ -27,7 +27,7 @@ States, where the Internet Sacred Text Archive hosts them:
   Telang, The Bhagavadgita (Sacred Books of the East vol. 8, 1882)
   Müller, The Upanishads (Sacred Books of the East vols. 1 and 15, 1879-1884)
 """
-import hashlib, html, json, pathlib, re, sys, time, urllib.request
+import hashlib, html, json, pathlib, re, sys, time, urllib.parse, urllib.request
 
 sys.path.insert(0, r'd:\Project\PlayStore\DivyaVaani')
 import content.tools.common  # noqa: F401
@@ -237,6 +237,31 @@ ARCHIVE_ORG_BOOKS = {
         "body_start_pattern": r"^Akshaya-Tritiya\s*—",
         "body_end_pattern": r"^INDEX AND GLOSSARY",
     },
+    # Dutt's Ramayana -- also WRONG in the registry (ramayanatranslat01valmuoft
+    # 404s the same way). The real text is a Project Gutenberg transcription
+    # (eBook #57265), cleaner than the OCR scans above, republished on
+    # archive.org. Existing citations to this source are already Kanda-level
+    # ("Aranya Kanda", "Bala Kanda, sarga 42-44"), so the seven Kandas are the
+    # citable unit here, not individual sargas -- unlike Underhill's numbered
+    # chapters, matching what callers actually cite.
+    "dutt-ramayana": {
+        "identifier": "the-ramayana-manmatha-nath-dutt",
+        "split": "kanda",
+        # Each name appears twice in the file (once in the front-matter TOC,
+        # once at the real section heading) -- the SECOND occurrence of each
+        # is the body start, so kanda boundaries are found by taking the last
+        # match before the next kanda's own first real occurrence rather than
+        # the first match overall.
+        "kanda_markers": [
+            ("bala", r"^BALAKANDAM\.?\s*$"),
+            ("ayodhya", r"^AYODHYAKANDAM\s*$"),
+            ("aranya", r"^ARANYA KANDAM\.?\s*$"),
+            ("kishkindha", r"^KISHKINDHA KANDAM\.?\s*$"),
+            ("sundara", r"^SUNDARA KANDAM\.?\s*$"),
+            ("yuddha", r"^YUDDHAKANDAM\.?\s*$"),
+            ("uttara", r"^UTTARAKANDAM\s*$"),
+        ],
+    },
 }
 
 
@@ -258,8 +283,22 @@ def fetch_archive_org_books(prior: dict[str, str]) -> tuple[list[dict], list[tup
         if raw_cache.exists():
             full = raw_cache.read_text(encoding='utf-8')
         else:
-            url = f"https://archive.org/download/{ident}/{ident}_djvu.txt"
             try:
+                # The djvu.txt filename is not always `{identifier}_djvu.txt`
+                # -- some uploads (e.g. Gutenberg reprints) keep their
+                # original title as the filename, spaces and all. Reading it
+                # from the item's own file list, then percent-encoding it,
+                # is the only way that is not a guess.
+                meta_req = urllib.request.Request(
+                    f"https://archive.org/metadata/{ident}",
+                    headers={'User-Agent': UA})
+                with urllib.request.urlopen(meta_req, timeout=45) as r:
+                    meta = json.loads(r.read().decode('utf-8'))
+                txt_name = next(
+                    f['name'] for f in meta.get('files', [])
+                    if f['name'].endswith('_djvu.txt'))
+                url = (f"https://archive.org/download/{ident}/"
+                       f"{urllib.parse.quote(txt_name)}")
                 req = urllib.request.Request(url, headers={'User-Agent': UA})
                 with urllib.request.urlopen(req, timeout=90) as r:
                     full = r.read().decode('utf-8', 'replace')
@@ -286,6 +325,38 @@ def fetch_archive_org_books(prior: dict[str, str]) -> tuple[list[dict], list[tup
                 body = full[start:end].strip()
                 label = f"Chapter {m.group(1)}"
                 name = f"chapter_{m.group(1)}.txt"
+                dest = outdir / name
+                dest.write_text(body, encoding='utf-8')
+                sha = hashlib.sha256(body.encode('utf-8')).hexdigest()
+                path = f"{source}/{name}"
+                manifest.append({
+                    "source_slug": source, "path": path,
+                    "label": prior.get(path, label),
+                    "label_verified": path in prior,
+                    "file": str(dest.relative_to(RAW)),
+                    "chars": len(body), "sha256": sha,
+                })
+                print(f"  {source:<22} {label:<32} {len(body):>7} chars")
+        elif cfg["split"] == "kanda":
+            # Each kanda name occurs twice (TOC, then the real heading); the
+            # LAST match of each is the body start, since the TOC always
+            # precedes the body in these front-loaded contents pages.
+            starts: list[tuple[str, int]] = []
+            for kanda_key, pattern in cfg["kanda_markers"]:
+                found = list(re.finditer(pattern, full, re.M))
+                if not found:
+                    print(f"  FAIL {source}: no marker for kanda '{kanda_key}'")
+                    failed.append((source, ident, f"NoKandaMarker:{kanda_key}"))
+                    starts = []
+                    break
+                starts.append((kanda_key, found[-1].start()))
+            if not starts:
+                continue
+            for i, (kanda_key, start) in enumerate(starts):
+                end = starts[i + 1][1] if i + 1 < len(starts) else len(full)
+                body = full[start:end].strip()
+                label = f"{kanda_key.capitalize()} Kanda"
+                name = f"{kanda_key}_kanda.txt"
                 dest = outdir / name
                 dest.write_text(body, encoding='utf-8')
                 sha = hashlib.sha256(body.encode('utf-8')).hexdigest()
