@@ -1,0 +1,450 @@
+{
+ "slug": "bgc_11",
+ "title_en": "Vishwaroopa Darshana Yoga",
+ "title_hi": "विश्वरूप दर्शन योग",
+ "book_id": 11,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 415,
+   "number": "11.1",
+   "body_en": "Arjuna said: You spoke as you did to do me a kindness — the deepest of the secrets, the one that goes by the name of the self. Hearing it, the fog I had been standing in has lifted.",
+   "body_hi": "अर्जुन ने कहा — मुझ पर कृपा करके आपने वह कह दिया जो सबसे गहरा रहस्य है, जिसे अध्यात्म नाम दिया गया है। उसे सुन लेने पर जिस धुंध में मैं खड़ा था, वह छँट गई है।",
+   "commentary_en": "Chapter ten ended with the catalogue of reaches and Arjuna asking for more of it. He opens here by admitting the words did their work — the confusion he carried onto the field in chapter one is gone. What follows is therefore not doubt. It is a man who has understood something with his ears asking to have it with his eyes as well.",
+   "commentary_hi": "दसवाँ अध्याय विभूतियों की सूची पर और अर्जुन के 'और कहिए' पर ख़त्म हुआ था। यहाँ वह पहले यह मानता है कि शब्दों ने अपना काम कर दिया — पहले अध्याय में जो मोह लेकर वह रणभूमि पर खड़ा था, वह अब नहीं है। इसलिए आगे जो आता है वह संदेह नहीं है। वह उस आदमी की माँग है जिसे कान से बात समझ आ गई, और जो अब उसे आँख से भी चाहता है।"
+  },
+  {
+   "id": 416,
+   "number": "11.2",
+   "body_en": "How living things come into being and how they go back out of it — I have heard the whole of that from you, at length, and heard as well that your greatness never runs down, you whose eyes are shaped like the petals of the lotus.",
+   "body_hi": "प्राणी कैसे उपजते हैं और कैसे मिट जाते हैं — यह सब मैंने आपसे विस्तार से सुन लिया है, और यह भी सुना है कि आपकी महिमा कभी घटती नहीं, हे कमल की पंखुड़ी जैसी आँखों वाले।",
+   "commentary_en": "The epithet is worth pausing on. Arjuna is about to ask for a sight that will nearly break him, and the name he reaches for first is the gentlest one available — the eye like a lotus petal. He does not yet know what he is asking for.",
+   "commentary_hi": "इस संबोधन पर एक क्षण रुकना चाहिए। अर्जुन अभी ऐसा दर्शन माँगने वाला है जो उसे लगभग तोड़ देगा, और जो नाम वह पहले चुनता है वह सबसे कोमल नाम है — कमलपत्र जैसी आँख। वह अभी जानता नहीं कि वह क्या माँग रहा है।"
+  },
+  {
+   "id": 417,
+   "number": "11.3",
+   "body_en": "What you have said about yourself is so, highest lord; I do not doubt it. And still I would like to see it — the form in which you rule — with my own eyes, best of persons.",
+   "body_hi": "हे परमेश्वर, अपने बारे में आपने जो कहा है वह ऐसा ही है; मुझे उसमें संदेह नहीं। फिर भी मैं उसे देखना चाहता हूँ — वह रूप जिसमें आप शासन करते हैं — अपनी आँखों से, हे पुरुषोत्तम।",
+   "commentary_en": "The two halves of the verse are the whole of the human situation: belief that is real, and an appetite that belief does not satisfy. Arjuna is careful to say the first before he asks for the second.",
+   "commentary_hi": "इस श्लोक के दो हिस्से पूरी मानवीय स्थिति हैं: विश्वास जो सच्चा है, और भूख जो विश्वास से नहीं भरती। अर्जुन दूसरी बात माँगने से पहले पहली बात कह देने का ध्यान रखता है।"
+  },
+  {
+   "id": 418,
+   "number": "11.4",
+   "body_en": "If you judge that I can stand to look at it, master of yoga, then show me — let me see the self of yours that nothing wears away.",
+   "body_hi": "हे प्रभु, यदि आपको लगता है कि इतना मुझसे सह लिया जाएगा, तो हे योगेश्वर, मेरे सामने ले आइए अपने आपको — वैसा, जिस पर कुछ भी घिसता नहीं।",
+   "commentary_en": "He leaves the decision with the one being asked. That condition — if you judge that I can — turns out to be the only prudent thing in the chapter, and Krishna answers it two verses later by handing him a different pair of eyes.",
+   "commentary_hi": "निर्णय वह उसी पर छोड़ देता है जिससे माँग रहा है। यह शर्त — 'यदि आप मानते हैं कि मैं देख सकूँगा' — इस अध्याय की अकेली समझदारी की बात निकलती है, और कृष्ण दो श्लोक बाद उसका उत्तर एक दूसरी आँख देकर देते हैं।"
+  },
+  {
+   "id": 419,
+   "number": "11.5",
+   "body_en": "The Blessed One said: Look, then, Partha. Not one shape but hundreds of them, and past the hundreds, thousands — every kind, every colour, no two of them alike, and every one of them lit.",
+   "body_hi": "श्रीभगवान ने कहा — तो देख, पार्थ। एक रूप नहीं, सैकड़ों — और सैकड़ों के आगे हज़ारों; हर तरह के, हर रंग के, कोई दो एक जैसे नहीं, और सब के सब दीप्त।",
+   "commentary_en": "The answer comes without argument. Nothing is withheld and nothing is prepared — the first word is simply look.",
+   "commentary_hi": "उत्तर बिना बहस के आता है। न कुछ रोका जाता है, न कोई तैयारी कराई जाती है — पहला शब्द बस यही है: देख।"
+  },
+  {
+   "id": 420,
+   "number": "11.6",
+   "body_en": "The Adityas are in here, and the Vasus, and the Rudras; the two Ashvins; the Maruts. Look at what no eye of yours has ever gone over before, Bharata — there is a great deal of it, and not one part of it is ordinary.",
+   "body_hi": "यहाँ आदित्य हैं, वसु हैं, रुद्र हैं; दोनों अश्विन; मरुत भी। देख वह सब, भारत, जिस पर तेरी आँख पहले कभी नहीं पड़ी — बहुत कुछ है, और उसमें एक भी चीज़ साधारण नहीं।",
+   "commentary_en": "The names arrive in a heap, which is the point: these are whole classes of gods, and they are being listed the way one would list the contents of a room. The vastness is not being described. It is being pointed at.",
+   "commentary_hi": "नाम ढेर की तरह आते हैं, और यही बात है: ये देवताओं की पूरी-पूरी श्रेणियाँ हैं, और इन्हें ऐसे गिनाया जा रहा है जैसे कोई कमरे का सामान गिनाता हो। विशालता का वर्णन नहीं हो रहा। उसकी ओर उँगली उठाई जा रही है।"
+  },
+  {
+   "id": 421,
+   "number": "11.7",
+   "body_en": "Everything there is stands gathered in one place here — what walks and what stays put, the whole of it, in this one body. Whatever else you were hoping to see, Gudakesha, look for it here; it is here.",
+   "body_hi": "जो कुछ है वह सब यहाँ एक ही जगह इकट्ठा खड़ा है — जो चलता है और जो ठहरा रहता है, सब का सब, इस एक देह में। और जो कुछ तू देखना चाहता था, गुडाकेश, उसे यहीं ढूँढ़; वह यहीं है।",
+   "commentary_en": "Gudakesha — the one who has beaten sleep. The name was used in 10.20 as well, where the teaching was that everything begins in him, holds in him and ends in him. Here that sentence stops being a proposition and becomes a room Arjuna is standing in.",
+   "commentary_hi": "गुडाकेश — जिसने नींद को जीत लिया। यह नाम 10.20 में भी आया था, जहाँ बात यह थी कि सब कुछ उसी से शुरू होता, उसी में ठहरता और उसी में मिटता है। यहाँ वह वाक्य सिद्धांत नहीं रह जाता; वह कमरा बन जाता है जिसमें अर्जुन खड़ा है।"
+  },
+  {
+   "id": 422,
+   "number": "11.8",
+   "body_en": "But you will never manage it with the eyes you were born with. I am giving you another kind of sight. Use it, and see how I hold all this together.",
+   "body_hi": "पर जिन आँखों के साथ तू जन्मा है, उनसे यह तुझसे न होगा। मैं तुझे एक दूसरी दृष्टि देता हूँ। उससे देख कि मैं यह सब कैसे थामे हुए हूँ।",
+   "commentary_en": "The limit is in the instrument, not in the thing to be seen. This is the argument the poem has been making about knowledge all along, made for once about the body: what is available to you depends on what you are looking with.",
+   "commentary_hi": "सीमा देखने वाले यंत्र में है, देखी जाने वाली वस्तु में नहीं। यही तर्क यह काव्य ज्ञान के बारे में शुरू से करता आया है; यहाँ एक बार वह देह के बारे में किया गया है — तुझे क्या उपलब्ध है, यह इस पर टिका है कि तू देख किससे रहा है।"
+  },
+  {
+   "id": 423,
+   "number": "11.9",
+   "body_en": "Sanjaya said: Having said that much, king, Hari — the great master of yoga — let Partha see it: the highest form, the one in which he rules.",
+   "body_hi": "संजय ने कहा — इतना कहकर, हे राजा, हरि ने — जो योग के बड़े स्वामी हैं — पार्थ के आगे अपने को उस सबसे ऊँचे ऐश्वर्य में खोल दिया, जिसमें वे शासन करते हैं।",
+   "commentary_en": "The frame returns for a moment. Everything that follows is being reported by one man to a blind king who cannot see any of it, which is its own comment on how this sight is to be had.",
+   "commentary_hi": "एक क्षण के लिए बाहरी ढाँचा लौट आता है। आगे जो कुछ है, वह एक आदमी एक अंधे राजा को सुना रहा है जो उसमें से कुछ भी देख नहीं सकता — और यह अपने आप में इस बात पर टिप्पणी है कि यह दर्शन मिलता कैसे है।"
+  },
+  {
+   "id": 424,
+   "number": "11.10",
+   "body_en": "There was no counting the mouths, and no counting the eyes. Wherever he looked there was another thing he had no name for. Ornaments past telling, all of them burning; and weapons past counting, every one of them raised and ready.",
+   "body_hi": "मुख गिने नहीं जा सकते थे, आँखें भी नहीं। जिधर भी वह देखता, वहाँ कोई और चीज़ थी जिसका नाम उसके पास नहीं था। गहने इतने कि बताए न जाएँ, और सब के सब जलते हुए; और हथियार इतने कि गिने न जाएँ, हर एक उठा हुआ और तैयार।",
+   "commentary_en": "The Sanskrit stacks four compounds that all begin with the same word for many. Read straight, the effect is not a picture but the failure of counting — and that failure is itself the description.",
+   "commentary_hi": "संस्कृत में चार समास एक ही शब्द 'अनेक' से शुरू होते हैं। सीधे पढ़ने पर जो बनता है वह चित्र नहीं, गिनती का टूट जाना है — और वही टूटना ही यहाँ वर्णन है।"
+  },
+  {
+   "id": 425,
+   "number": "11.11",
+   "body_en": "Garlands and robes that were not of this world, and rubbed into the skin a fragrance that was not of it either. A god made out of nothing but wonder — no edge to him anywhere, and a face turned toward every direction at once.",
+   "body_hi": "माला और वस्त्र जो इस लोक के नहीं थे, और देह पर मला हुआ वह गंध जो इस लोक का नहीं था। एक देव जो केवल आश्चर्य से बना हो — कहीं कोई छोर नहीं, और हर दिशा की ओर एक साथ मुड़ा हुआ मुख।",
+   "commentary_en": "Note how ordinary the inventory is — garland, cloth, scent — and how the last line takes it apart. A face in every direction is not a face. The verse gives the senses something familiar to hold and then removes the holder.",
+   "commentary_hi": "ध्यान दें कि सूची कितनी साधारण है — माला, वस्त्र, गंध — और अंतिम पंक्ति उसे कैसे तोड़ देती है। हर दिशा में मुख होना मुख होना नहीं है। श्लोक इंद्रियों को पकड़ने के लिए कुछ जाना-पहचाना देता है, और फिर पकड़ने वाले को हटा देता है।"
+  },
+  {
+   "id": 426,
+   "number": "11.12",
+   "body_en": "Suppose a thousand suns came up into the sky together, all in the one instant. The light of that might come near the light of him — might, and no more than that.",
+   "body_hi": "मान लो आकाश में एक साथ, एक ही क्षण में, हज़ार सूर्य उग आएँ। उस प्रकाश की तुलना शायद उनके प्रकाश से की जा सके — शायद, और उससे आगे कुछ नहीं।",
+   "commentary_en": "The comparison is built to fail. A thousand suns is not offered as a measurement but as the largest thing the mind can assemble, and even assembled it only gets near. What the verse reports is that nothing in the sky is the right size.",
+   "commentary_hi": "यह उपमा हारने के लिए ही बनाई गई है। हज़ार सूर्य कोई माप नहीं, बल्कि सबसे बड़ी चीज़ है जिसे मन जोड़ सकता है — और जोड़ने पर भी वह बस पास तक पहुँचती है। श्लोक असल में यही बताता है कि आकाश में कुछ भी उस नाप का नहीं है।"
+  },
+  {
+   "id": 427,
+   "number": "11.13",
+   "body_en": "And there, in the body of the god of gods, Pandu's son saw the whole world at once — gathered into a single place, and in the same moment parted out into its countless pieces.",
+   "body_hi": "और वहाँ, देवों के देव की देह में, पांडु के पुत्र ने सारा जगत एक साथ देखा — एक ही जगह पर इकट्ठा, और उसी क्षण अनगिनत टुकड़ों में बँटा हुआ।",
+   "commentary_en": "Both things are true in the same glance: one, and many. The poem has been asserting that pair since the second chapter. Here it is not asserted; it is simply what is in front of him.",
+   "commentary_hi": "एक ही दृष्टि में दोनों बातें सच हैं: एक, और अनेक। दूसरे अध्याय से यह काव्य इसी जोड़े का दावा करता आया है। यहाँ दावा नहीं है; यहाँ बस वही उसके सामने है।"
+  },
+  {
+   "id": 428,
+   "number": "11.14",
+   "body_en": "Then wonder took hold of Dhananjaya and the hair rose on his body. He put his head down before the god, brought his palms together, and found his voice.",
+   "body_hi": "तब धनंजय पर विस्मय छा गया और उसके रोएँ खड़े हो गए। उसने देव के आगे सिर झुकाया, हाथ जोड़े, और बोल पाया।",
+   "commentary_en": "In 1.29 the hair stood up on him too, and that was terror on the edge of a battle he did not want to fight. The body does the same thing here for a different reason. The poem takes one reflex and gives it a second meaning.",
+   "commentary_hi": "पहले अध्याय के उन्तीसवें श्लोक में भी उसके रोएँ खड़े हुए थे, और वह उस युद्ध के कगार पर खड़े आदमी का डर था जिसे वह लड़ना नहीं चाहता था। यहाँ देह वही करती है, पर कारण दूसरा है। काव्य वही एक प्रतिक्रिया लेकर उसे दूसरा अर्थ दे देता है।"
+  },
+  {
+   "id": 429,
+   "number": "11.15",
+   "body_en": "Arjuna said: I can see the gods in your body, god — and every crowd of living things there is, each kind in its own crowd. I can see Brahma, who governs, seated on the lotus. I can see the sages, all of them, and the shining serpents.",
+   "body_hi": "अर्जुन ने कहा — हे देव, मैं आपकी देह में देवताओं को देख रहा हूँ — और प्राणियों के सारे समूह, हर जाति अपने-अपने समूह में। मैं ब्रह्मा को देख रहा हूँ, जो शासन करते हैं, कमल पर बैठे हुए। मैं ऋषियों को देख रहा हूँ, सब को, और उन दिव्य सर्पों को भी।",
+   "commentary_en": "From here to verse thirty Arjuna speaks in the longer metre, and the lines lengthen along with what he is trying to hold. He begins by naming what he recognises. He will not be able to keep that up for long.",
+   "commentary_hi": "यहाँ से तीसवें श्लोक तक अर्जुन लंबे छंद में बोलता है, और पंक्तियाँ उसी अनुपात में लंबी होती जाती हैं जिस अनुपात में वह जो देख रहा है उसे सँभालने की कोशिश करता है। शुरुआत वह पहचानी हुई चीज़ों के नाम लेकर करता है। यह ज़्यादा देर नहीं चल पाएगा।"
+  },
+  {
+   "id": 430,
+   "number": "11.16",
+   "body_en": "Arms without number, bellies, mouths, eyes — I look, and whichever way I turn there is more of you, and no end to the shapes. I cannot find where you stop. I cannot find your middle. I cannot find where you began either, you who rule everything and who are everything's shape.",
+   "body_hi": "भुजाएँ अनगिनत, पेट, मुख, नेत्र — मैं देखता हूँ, और जिधर भी मुड़ूँ उधर आप और हैं, और रूपों का कोई अंत नहीं। मुझे वह जगह नहीं मिलती जहाँ आप ख़त्म होते हैं। आपका मध्य नहीं मिलता। आपका आरम्भ भी नहीं मिलता, हे विश्वेश्वर, हे विश्वरूप।",
+   "commentary_en": "Three failures in a row — no end, no middle, no beginning — and they come in that order rather than the natural one, because that is the order in which a man searching a shape for its edges would run out.",
+   "commentary_hi": "लगातार तीन नाकामियाँ — अंत नहीं, मध्य नहीं, आरम्भ नहीं — और ये उसी क्रम में दी गई हैं, स्वाभाविक क्रम में नहीं, क्योंकि जो आदमी किसी रूप में उसके किनारे ढूँढ़ रहा हो, वह इसी क्रम में हारता है।"
+  },
+  {
+   "id": 431,
+   "number": "11.17",
+   "body_en": "The crown, the club, the wheel — and around them a heaped-up mass of brightness throwing light on every side. I can hardly hold my eyes on you: wherever I try, there is the glare of a fire and of the sun at once, and no measuring it.",
+   "body_hi": "मुकुट, गदा, चक्र — और उनके चारों ओर तेज का ढेर, हर तरफ़ प्रकाश फेंकता हुआ। मैं आप पर आँख टिका ही नहीं पाता: जहाँ भी टिकाऊँ, वहाँ एक साथ आग की और सूर्य की चौंध है, और उसका कोई माप नहीं।",
+   "commentary_en": "He reaches for the three objects he knows from the familiar image — crown, club, wheel — and they are the last recognisable things he will mention until verse forty-six, where he asks for them back.",
+   "commentary_hi": "वह उन तीन चीज़ों को पकड़ता है जो जानी-पहचानी मूर्ति से उसे याद हैं — मुकुट, गदा, चक्र — और छियालीसवें श्लोक तक, जहाँ वह उन्हीं को वापस माँगेगा, ये आख़िरी पहचानी हुई चीज़ें हैं जिनका वह नाम लेता है।"
+  },
+  {
+   "id": 432,
+   "number": "11.18",
+   "body_en": "You are what does not decay, the highest thing there is to know. You are where all this is finally kept. You are the one who never runs down, the guard set over an order that does not end. You are the person who was always here — that is what I make of you.",
+   "body_hi": "आप वही हैं जो क्षीण नहीं होता, जानने योग्य सबसे ऊँची वस्तु। आप वह हैं जहाँ यह सब अंत में रखा जाता है। आप वह हैं जो कभी घटते नहीं, उस धर्म के रक्षक जिसका अंत नहीं। आप वह पुरुष हैं जो सदा से यहाँ है — मेरी समझ में आप यही हैं।",
+   "commentary_en": "The last few words are doing real work. He is not reciting a creed he was handed; he is saying what he has concluded, standing there, with the evidence in front of him.",
+   "commentary_hi": "अंतिम शब्द यहाँ असली काम कर रहे हैं। वह कोई रटा हुआ मत नहीं दोहरा रहा; वह वही कह रहा है जो वहाँ खड़े-खड़े, सामने के प्रमाण के साथ, उसकी समझ में आया है।"
+  },
+  {
+   "id": 433,
+   "number": "11.19",
+   "body_en": "No beginning to you, no middle, no end; strength that never gives out; arms that cannot be counted; the moon and the sun for your two eyes. Your mouth is the fire that takes the offering, burning — and the heat coming off you, all by itself, is scorching all this.",
+   "body_hi": "न आपका आरम्भ, न मध्य, न अंत; बल जो कभी चुकता नहीं; भुजाएँ जो गिनी नहीं जातीं; चंद्रमा और सूर्य आपकी दो आँखें। आपका मुख वह अग्नि है जो आहुति लेती है, जलती हुई — और आपसे उठती हुई तपन अपने आप ही इस सब को तपा रही है।",
+   "commentary_en": "The fire that takes the offering is the household altar fire, the tame one a man feeds every day. Putting it in the mouth of this is the first hint of what the next ten verses are going to say plainly.",
+   "commentary_hi": "आहुति लेने वाली अग्नि घर की वेदी की अग्नि है — वही पालतू आग जिसे गृहस्थ रोज़ खिलाता है। उसे इस रूप के मुख में रख देना पहला संकेत है कि अगले दस श्लोक क्या साफ़-साफ़ कहने वाले हैं।"
+  },
+  {
+   "id": 434,
+   "number": "11.20",
+   "body_en": "The whole gap between the sky and the ground is filled by you, and by you alone, and so is every direction out of it. Great one, the three worlds have seen this shape of yours — a wonder, and a terrible one — and they are shaking.",
+   "body_hi": "आकाश और धरती के बीच की सारी जगह आपसे भरी है, केवल आपसे, और उसमें से निकलती हर दिशा भी। हे महात्मन्, तीनों लोकों ने आपका यह रूप देख लिया है — अद्भुत, और भयानक — और वे काँप रहे हैं।",
+   "commentary_en": "The word used of the shape holds both at once: a marvel, and something that makes you afraid. From this verse on, the second sense takes over from the first.",
+   "commentary_hi": "रूप के लिए जो शब्द है वह दोनों अर्थ एक साथ रखता है: अचरज, और वह चीज़ जो डरा दे। इस श्लोक के बाद दूसरा अर्थ पहले पर भारी पड़ने लगता है।"
+  },
+  {
+   "id": 435,
+   "number": "11.21",
+   "body_en": "Those crowds of gods are going into you. Some of them are frightened, and stand with their palms together saying your names. Let it go well — that is the cry from the crowds of great seers and perfected ones, and then they praise you, and the praise keeps on coming.",
+   "body_hi": "देवताओं के वे समूह आप में समाते जा रहे हैं। उनमें से कुछ डरे हुए हैं, और हाथ जोड़े आपके नाम ले रहे हैं। 'कल्याण हो' — यही पुकार महर्षियों और सिद्धों के समूहों से उठती है, और फिर वे स्तुति करते हैं, और स्तुति थमती नहीं।",
+   "commentary_en": "Even the gods are frightened, and even the gods are being swallowed. Whatever is happening here is not on the side of any party in this war, including the divine one.",
+   "commentary_hi": "देवता भी डरे हुए हैं, और देवता भी निगले जा रहे हैं। यहाँ जो हो रहा है वह इस युद्ध के किसी पक्ष के साथ नहीं है — देवताओं के पक्ष के साथ भी नहीं।"
+  },
+  {
+   "id": 436,
+   "number": "11.22",
+   "body_en": "The Rudras are watching, and the Adityas, and the Vasus; the Sadhyas and the Vishvas; the two Ashvins, the Maruts, and the fathers who take their food as steam. Gandharvas, yakshas, asuras, the perfected ones — crowd after crowd of them, and every one has stopped where it stands and cannot take its eyes off you.",
+   "body_hi": "रुद्र देख रहे हैं, आदित्य भी, वसु भी; साध्य और विश्वेदेव; दोनों अश्विन, मरुत, और वे पितर जो भाप से अपना भोजन लेते हैं। गंधर्व, यक्ष, असुर, सिद्ध — समूह पर समूह, और हर कोई जहाँ खड़ा था वहीं ठहर गया है और आप पर से नज़र नहीं हटा पा रहा।",
+   "commentary_en": "Gods and anti-gods are named in the same breath and given the same posture. The sight does not sort its audience into sides; it stops all of them equally.",
+   "commentary_hi": "देव और असुर एक ही साँस में गिनाए जाते हैं और दोनों की मुद्रा एक ही है। यह दृश्य अपने दर्शकों को पक्षों में नहीं बाँटता; वह सबको एक जैसा रोक देता है।"
+  },
+  {
+   "id": 437,
+   "number": "11.23",
+   "body_en": "This great shape of yours, strong-armed one — mouths and eyes past counting, arms and thighs and feet past counting, bellies past counting, and the whole of it made ghastly by row upon row of teeth. The worlds have seen it and are shaking. So am I.",
+   "body_hi": "आपका यह विशाल रूप, हे महाबाहु — मुख और नेत्र गिनती से बाहर, भुजाएँ, जाँघें, पैर गिनती से बाहर, पेट गिनती से बाहर, और यह सब दाँतों की पंक्ति पर पंक्ति से भयावना। लोकों ने इसे देखा है और वे काँप रहे हैं। मैं भी।",
+   "commentary_en": "He has been speaking for the worlds. In two words at the end he stops doing that and speaks for himself, and the poem lets the admission land without comment.",
+   "commentary_hi": "अब तक वह लोकों की ओर से बोल रहा था। अंत के दो शब्दों में वह यह करना छोड़ देता है और अपनी ओर से बोलता है, और काव्य इस स्वीकार को बिना किसी टिप्पणी के गिरने देता है।"
+  },
+  {
+   "id": 438,
+   "number": "11.24",
+   "body_en": "You stand tall enough to touch the sky; you burn; your colours will not hold still; your mouths hang open, and the huge eyes in them are alight. I have looked at you, and something inside me has come loose. I cannot find my nerve, Vishnu, and I cannot find any quiet.",
+   "body_hi": "आप आकाश छू लेने जितने ऊँचे खड़े हैं; आप जल रहे हैं; आपके रंग ठहरते नहीं; आपके मुख खुले हुए हैं, और उनमें लगी विशाल आँखें दहक रही हैं। मैंने आपको देख लिया है, और भीतर कुछ खुल कर गिर गया है। हे विष्णु, न मुझे अपना धीरज मिलता है, न कोई शांति।",
+   "commentary_en": "Two things fail him in the same line: the steadiness that keeps a man upright, and the calm the sixth chapter spent forty-seven verses building. Both were his a chapter ago.",
+   "commentary_hi": "एक ही पंक्ति में दो चीज़ें उसके हाथ से निकल जाती हैं: वह धृति जो आदमी को खड़ा रखती है, और वह शम जिसे छठे अध्याय ने सैंतालीस श्लोकों में गढ़ा था। एक अध्याय पहले तक ये दोनों उसके पास थीं।"
+  },
+  {
+   "id": 439,
+   "number": "11.25",
+   "body_en": "One look at those faces of yours, made ghastly by the teeth and burning the way a fire burns at the end of an age, and I no longer know which way is which, and there is nowhere I can get to that is safe. Be kind. You are the lord the gods answer to; you are the house all this lives in.",
+   "body_hi": "आपके उन मुखों पर एक नज़र — दाँतों से भयावने, और युग के अंत की आग की तरह जलते हुए — और मुझे यह भी नहीं सूझता कि कौन-सी दिशा कौन-सी है, और ऐसी कोई जगह नहीं जहाँ पहुँचकर मैं सुरक्षित रहूँ। प्रसन्न होइए। देवता आपको उत्तर देते हैं; यह सब आप ही में बसता है।",
+   "commentary_en": "Losing the directions is not a figure of speech in a war poem — it is what happens to a man on a field who no longer knows where his own line is. The plea that follows is the first of four in this chapter.",
+   "commentary_hi": "युद्ध के काव्य में दिशाओं का खो जाना कोई अलंकार नहीं है — मैदान में खड़े उस आदमी के साथ यही होता है जिसे अब यह भी नहीं पता कि उसकी अपनी पंक्ति किधर है। इसके बाद जो विनती आती है, वह इस अध्याय की चार विनतियों में पहली है।"
+  },
+  {
+   "id": 440,
+   "number": "11.26",
+   "body_en": "And these — Dhritarashtra's sons, the whole line of them, and with them the crowds of kings who hold the land; Bhishma, Drona, the charioteer's son over there — and along with all of those, our own best fighters too —",
+   "body_hi": "और ये — धृतराष्ट्र के पुत्र, पूरी की पूरी कतार, और उनके साथ धरती सँभालने वाले राजाओं के समूह; भीष्म, द्रोण, वह सामने खड़ा सूत का पुत्र — और इन सबके साथ हमारे अपने प्रमुख योद्धा भी —",
+   "commentary_en": "Four words at the end undo the whole logic of sides. He came looking for the enemy's fate and found his own men in the same mouth. The sentence does not finish here; it runs into the next verse, and that is where the finishing is done.",
+   "commentary_hi": "अंत के चार शब्द पक्षों के सारे तर्क को ढहा देते हैं। वह शत्रु की गति देखने आया था और उसी मुख में अपने ही लोग मिले। वाक्य यहाँ पूरा नहीं होता; वह अगले श्लोक में जाकर पूरा होता है, और वहीं सब कुछ ख़त्म भी होता है।"
+  },
+  {
+   "id": 441,
+   "number": "11.27",
+   "body_en": "— they are hurrying into your mouths, into that ghastly hedge of teeth, and it is not a thing to be watched. Some have caught in the gaps between the teeth and are hanging there, and you can see what has become of their heads: powder.",
+   "body_hi": "— वे जल्दी-जल्दी आपके मुखों में घुसे जा रहे हैं, दाँतों की उस भयावनी बाड़ में, और यह देखा नहीं जाता। कुछ दाँतों के बीच की दरारों में फँस गए हैं और वहीं लटके हैं, और दिख रहा है कि उनके सिरों का क्या हुआ: चूरा।",
+   "commentary_en": "The last word is the most specific thing in the chapter, and deliberately so. After forty lines of immeasurable brightness the poem gives one small physical detail, and it is the one that cannot be got out of the mind.",
+   "commentary_hi": "अंतिम शब्द इस पूरे अध्याय की सबसे ठोस चीज़ है, और जान-बूझकर है। चालीस पंक्तियों की अपरिमेय दीप्ति के बाद काव्य एक छोटा-सा देह का ब्योरा देता है, और वही है जो मन से नहीं उतरता।"
+  },
+  {
+   "id": 442,
+   "number": "11.28",
+   "body_en": "The way the many rushing waters of the rivers all run one way, with the sea in front of them and nothing else, these heroes out of the world of men are running into your mouths, and your mouths are blazing as they come.",
+   "body_hi": "जैसे नदियों का बहुत-सा वेगवान जल एक ही ओर दौड़ता है, सामने केवल समुद्र और कुछ नहीं, वैसे ही मनुष्यलोक के ये वीर आपके मुखों में दौड़े जा रहे हैं, और आते हुए उन्हें आपके मुख धधकते मिल रहे हैं।",
+   "commentary_en": "The sea has been in this poem before. In 2.70 it was the image of a man at peace, taking in every river without being moved. Here it is the same water, the same sea, the same one-way motion — and it is the most frightening thing Arjuna has said.",
+   "commentary_hi": "समुद्र इस काव्य में पहले भी आ चुका है। दूसरे अध्याय के सत्तरवें श्लोक में वह उस आदमी की उपमा था जो शांत है और सारी नदियाँ लेकर भी डिगता नहीं। यहाँ वही जल, वही समुद्र, वही एकतरफ़ा गति — और अर्जुन ने जो कुछ कहा है उसमें यह सबसे डरावना है।"
+  },
+  {
+   "id": 443,
+   "number": "11.29",
+   "body_en": "The way moths go headlong into a fire that is already blazing, faster and faster, and it finishes them — just so these worlds go headlong into your mouths, faster and faster, and it finishes them.",
+   "body_hi": "जैसे पतंगे पहले से धधकती आग में सिर के बल घुसते हैं, और तेज़, और तेज़, और वह उन्हें ख़त्म कर देती है — ठीक वैसे ही ये लोक आपके मुखों में सिर के बल घुसे जा रहे हैं, और तेज़, और तेज़, और वह उन्हें ख़त्म कर देता है।",
+   "commentary_en": "Two images in a row, and the difference between them is the point. The river cannot help going to the sea. The moth is going somewhere nothing drove it, at speed, and the poem gives it the same verb.",
+   "commentary_hi": "लगातार दो उपमाएँ, और उनका फ़र्क़ ही असल बात है। नदी समुद्र तक जाने के अलावा कुछ कर ही नहीं सकती। पतंगा वहाँ जा रहा है जहाँ उसे किसी ने धकेला नहीं, और पूरी तेज़ी से — और काव्य दोनों के लिए एक ही क्रिया रखता है।"
+  },
+  {
+   "id": 444,
+   "number": "11.30",
+   "body_en": "You are licking them up, swallowing whole worlds from every side with those burning mouths, and you are not finished. Your brightness has filled everything there is; the rays coming off you are savage, Vishnu, and they scorch.",
+   "body_hi": "आप उन्हें चाट रहे हैं, उन जलते मुखों से हर ओर से पूरे-पूरे लोक निगल रहे हैं, और अभी भी तृप्त नहीं हुए। आपकी दीप्ति ने जो कुछ है उस सब को भर दिया है; आपसे निकलती किरणें उग्र हैं, विष्णु, और वे तपा रही हैं।",
+   "commentary_en": "The verb is the one used of a flame running along the edge of what it is about to take. It is the last description Arjuna manages before he asks the question he should have asked at the start.",
+   "commentary_hi": "यहाँ जो क्रिया है वह उस लपट के लिए आती है जो जिसे निगलने वाली है उसके किनारे-किनारे दौड़ती है। अर्जुन का यह आख़िरी वर्णन है; इसके बाद वह वही प्रश्न पूछता है जो उसे शुरू में ही पूछ लेना चाहिए था।"
+  },
+  {
+   "id": 445,
+   "number": "11.31",
+   "body_en": "Tell me who you are, you in this terrible shape. I bow to you; be kind, best of the gods. I want to understand you as you were at the start, because what you are doing now is past my understanding.",
+   "body_hi": "बताइए, इस भयानक रूप में आप कौन हैं। मैं आपको प्रणाम करता हूँ; प्रसन्न होइए, हे देववर। मैं आपको वैसा समझना चाहता हूँ जैसे आप आरम्भ में थे, क्योंकि अभी आप जो कर रहे हैं वह मेरी समझ से बाहर है।",
+   "commentary_en": "In verse four he asked to see. Now he asks to be told. Sight turned out not to be the thing that explains, and the chapter's answer to its own request is that a man still needs the sentence.",
+   "commentary_hi": "चौथे श्लोक में उसने देखने की माँग की थी। अब वह बताए जाने की माँग कर रहा है। दर्शन वह चीज़ नहीं निकली जो समझा देती हो — और अपनी ही माँग का इस अध्याय का उत्तर यही है कि आदमी को फिर भी वाक्य चाहिए।"
+  },
+  {
+   "id": 446,
+   "number": "11.32",
+   "body_en": "The Blessed One said: I am time, grown to my full size, and the wearing away of worlds is my work; here I have set about gathering them in. These fighters drawn up in the ranks against you — they will not go on being. Take yourself out of it, and they still will not.",
+   "body_hi": "श्रीभगवान ने कहा — मैं काल हूँ, अपने पूरे विस्तार तक बढ़ा हुआ, और लोकों का क्षय मेरा काम है; यहाँ मैंने उन्हें समेटना शुरू कर दिया है। तेरे सामने पंक्तियों में खड़े ये योद्धा — ये बने नहीं रहेंगे। तू अपने को इसमें से हटा ले, तब भी नहीं रहेंगे।",
+   "commentary_en": "The answer to who are you is a word nobody expects. Not a god's name, not a title — time. And the second half draws the consequence for the argument that has run since the second chapter: Arjuna's withdrawal would change who does the killing, and nothing else.",
+   "commentary_hi": "'आप कौन हैं' का उत्तर एक ऐसा शब्द है जिसकी कोई उम्मीद नहीं करता। न कोई देवता का नाम, न कोई उपाधि — काल। और दूसरा हिस्सा दूसरे अध्याय से चली आ रही बहस का नतीजा निकाल देता है: अर्जुन के हट जाने से केवल इतना बदलेगा कि मारने वाला कोई और होगा, और कुछ नहीं।"
+  },
+  {
+   "id": 447,
+   "number": "11.33",
+   "body_en": "So get on your feet and earn the name. Beat the men who are set against you and enjoy a kingdom with something in it. They are already struck down — I did it, and it was done before today. Be the occasion, Savyasachin; that is the whole of your part.",
+   "body_hi": "तो उठ खड़ा हो और नाम कमा। जो तेरे विरुद्ध खड़े हैं उन्हें जीत और भरा-पूरा राज्य भोग। ये पहले ही मारे जा चुके हैं — मैंने मारा है, और यह आज से पहले हो चुका है। तू निमित्त बन जा, सव्यसाचिन्; तेरा हिस्सा बस इतना है।",
+   "commentary_en": "Be the occasion is not a demotion. It is the third chapter's teaching handed over in one phrase: do the work, and hand the result of it to the one it already belonged to.",
+   "commentary_hi": "'निमित्त बन जा' कोई घटाव नहीं है। यह तीसरे अध्याय की पूरी शिक्षा एक वाक्यांश में सौंप देना है: काम कर, और उसका फल उसी को सौंप दे जिसका वह पहले से था।"
+  },
+  {
+   "id": 448,
+   "number": "11.34",
+   "body_en": "Drona, Bhishma, Jayadratha, Karna, and the other fighting men besides — I have killed them; you kill them. Do not come apart over it. Fight. The field is yours, and the ones who claim it against you will lose it.",
+   "body_hi": "द्रोण, भीष्म, जयद्रथ, कर्ण, और बाक़ी योद्धा भी — मैंने उन्हें मार दिया है; तू उन्हें मार। इस पर टूट मत। लड़। रण तेरा है, और जो उसे तुझसे छीनने खड़े हैं वे हारेंगे।",
+   "commentary_en": "The four names are the four hardest ones — two teachers he owes everything to, and two men he has reason to hate. They come in one breath, which is the point: the instruction does not distinguish between them.",
+   "commentary_hi": "ये चार नाम सबसे कठिन चार नाम हैं — दो गुरु जिनका उस पर सब कुछ उधार है, और दो आदमी जिनसे बैर के कारण उसके पास हैं। ये एक ही साँस में दिए गए हैं, और बात यही है: आदेश इनमें कोई फ़र्क़ नहीं करता।"
+  },
+  {
+   "id": 449,
+   "number": "11.35",
+   "body_en": "Sanjaya said: Hearing Keshava say that, the crowned one put his palms together, shaking. He made his bow, and then bowed again, and spoke to Krishna — the words coming out broken, and the fear not letting go of him.",
+   "body_hi": "संजय ने कहा — केशव की यह बात सुनकर मुकुटधारी ने हाथ जोड़े, काँपते हुए। उसने प्रणाम किया, फिर झुककर दोबारा प्रणाम किया, और कृष्ण से बोला — शब्द टूट-टूटकर निकलते हुए, और डर उसे छोड़ता हुआ नहीं।",
+   "commentary_en": "Sanjaya notes the stammer. It is a small thing to report to a king, and it is the most honest line in the chapter: the man has been given the answer he asked for and it has not made him calm.",
+   "commentary_hi": "संजय उस लड़खड़ाती आवाज़ को दर्ज करता है। राजा को सुनाने के लिए यह छोटी-सी बात है, और इस अध्याय की सबसे ईमानदार पंक्ति है: आदमी को वही उत्तर मिल गया जो उसने माँगा था, और उससे वह शांत नहीं हुआ।"
+  },
+  {
+   "id": 450,
+   "number": "11.36",
+   "body_en": "Arjuna said: It is fitting, Hrishikesha. When your name goes out, the world lifts and takes to you. The rakshasas are frightened and scatter in every direction, and every crowd of the perfected ones bows.",
+   "body_hi": "अर्जुन ने कहा — यह ठीक ही है, हृषीकेश। आपका नाम जहाँ पहुँचता है, वहाँ जगत खिल उठता है और आपसे जुड़ जाता है। राक्षस डरकर सब दिशाओं में भागते हैं, और सिद्धों के सारे समूह सिर झुकाते हैं।",
+   "commentary_en": "The first word is an act of acceptance, not of praise: whatever it is you are doing, it is in order. Everything Arjuna says from here to verse forty-six is spoken by a man who has stopped arguing.",
+   "commentary_hi": "पहला शब्द स्तुति नहीं, स्वीकार है: आप जो भी कर रहे हैं, वह ठीक है। यहाँ से छियालीसवें श्लोक तक अर्जुन जो कुछ कहता है, वह उस आदमी की बात है जिसने बहस करना छोड़ दिया है।"
+  },
+  {
+   "id": 451,
+   "number": "11.37",
+   "body_en": "And why should they not bow, great one? You weigh more than Brahma; you are the one who made first of all. You have no end; the gods answer to you; all this lives in you. You are what does not decay — you are what there is and what there is not, and the thing beyond the pair of them as well.",
+   "body_hi": "और वे क्यों न झुकें, हे महात्मन्? आप ब्रह्मा से भी भारी हैं; आप ही सबसे पहले रचने वाले हैं। आपका अंत नहीं; देवता आपको उत्तर देते हैं; यह सब आप में बसता है। आप वही हैं जो क्षीण नहीं होता — आप सत् हैं और असत् भी, और उन दोनों के परे जो है वह भी।",
+   "commentary_en": "Being and non-being were the two terms the second chapter opened with, and the teaching there was that one of them never was and the other never stops. Here both are folded into one address, and something is put past them.",
+   "commentary_hi": "सत् और असत् वही दो शब्द हैं जिनसे दूसरा अध्याय शुरू हुआ था, और वहाँ शिक्षा यह थी कि एक कभी था ही नहीं और दूसरा कभी मिटता नहीं। यहाँ दोनों एक ही संबोधन में समेट लिए गए हैं, और उनके आगे भी कुछ रख दिया गया है।"
+  },
+  {
+   "id": 452,
+   "number": "11.38",
+   "body_en": "You are the god who came first, the person who has been here from of old. You are where all this is finally kept. You are the one who knows, and the thing to be known, and the highest place to arrive at. Everything there is has been stretched out by you, you of the endless shapes.",
+   "body_hi": "आप वही देव हैं जो सबसे पहले थे, वही पुरुष जो पुराने समय से यहाँ है। आप वह हैं जहाँ यह सब अंत में रखा जाता है। आप जानने वाले हैं, और जानी जाने वाली वस्तु भी, और पहुँचने की सबसे ऊँची जगह भी। जो कुछ है वह सब आपसे फैला हुआ है, हे अनंतरूप।",
+   "commentary_en": "Knower and known in the same person is the sentence the thirteenth chapter will take apart at length. Here it is said the way a frightened man says a true thing — all at once, without working it out.",
+   "commentary_hi": "जानने वाला और जाना जाने वाला एक ही में — यही वाक्य तेरहवाँ अध्याय विस्तार से खोलेगा। यहाँ इसे वैसे कहा गया है जैसे डरा हुआ आदमी कोई सच्ची बात कहता है — एक साथ, बिना उसे सुलझाए।"
+  },
+  {
+   "id": 453,
+   "number": "11.39",
+   "body_en": "You are the wind; you are Yama; the fire, and Varuna, and the one marked with the hare. You are Prajapati, and the father of the father of us all. Take my bow a thousand times over, and take it again, and again after that.",
+   "body_hi": "आप वायु हैं; आप यम हैं; अग्नि, वरुण, और वह जिस पर ख़रगोश का चिह्न है। आप प्रजापति हैं, और हम सबके पितामह के भी पिता। मेरा प्रणाम हज़ार बार लीजिए, और फिर लीजिए, और उसके बाद फिर।",
+   "commentary_en": "The naming has become repetition, and the repetition is doing what the names cannot. He adds no information in the last line; he bows until something in him settles.",
+   "commentary_hi": "नाम लेना अब दोहराव बन गया है, और यह दोहराव वह कर रहा है जो नाम नहीं कर पाते। अंतिम पंक्ति में वह कोई नई बात नहीं जोड़ रहा; वह तब तक झुक रहा है जब तक भीतर कुछ बैठ न जाए।"
+  },
+  {
+   "id": 454,
+   "number": "11.40",
+   "body_en": "A bow in front of you and a bow behind you; a bow from every side, since you are every side. Your strength has no end and your reach has no measure. You come out at the far edge of everything — and so everything is what you are.",
+   "body_hi": "आपके आगे प्रणाम और आपके पीछे प्रणाम; हर ओर से प्रणाम, क्योंकि हर ओर आप ही हैं। आपका बल अनंत है और आपका पराक्रम अमाप। जो कुछ है उसके आख़िरी सिरे तक आप पहुँच जाते हैं — इसीलिए जो कुछ है वह आप हैं।",
+   "commentary_en": "The last line is an argument, not a compliment: because you reach the end of everything, you are everything. It is the tightest statement of the case the poem makes anywhere.",
+   "commentary_hi": "अंतिम पंक्ति प्रशंसा नहीं, तर्क है: क्योंकि आप हर चीज़ के छोर तक पहुँचते हैं, इसलिए आप हर चीज़ हैं। इस काव्य में यह दावा कहीं और इतने कसे हुए रूप में नहीं आता।"
+  },
+  {
+   "id": 455,
+   "number": "11.41",
+   "body_en": "I took you for a friend, and so I said whatever came — hey Krishna, hey Yadava, hey friend. I had no idea of this greatness of yours. It was carelessness, or else it was love —",
+   "body_hi": "मैंने आपको मित्र समझा, और इसलिए जो मुँह में आया कह दिया — अरे कृष्ण, अरे यादव, अरे मित्र। आपकी इस महिमा का मुझे कुछ पता नहीं था। वह असावधानी थी, या फिर वह स्नेह था —",
+   "commentary_en": "The friendship was never a mistake. It was offered in 4.3, where the teaching was given because Arjuna was a friend, and again in 5.29, where he was told the well-wisher of every being there is is the same person. What he apologises for here is the only footing on which any of it was possible.",
+   "commentary_hi": "वह मित्रता कभी भूल नहीं थी — चौथे अध्याय के तीसरे श्लोक में यह ज्ञान इसीलिए दिया गया था कि अर्जुन मित्र है, और पाँचवें अध्याय के उन्तीसवें श्लोक में उसे बताया गया था कि सारे जगत का सुहृद् वही एक है। यहाँ वह जिसके लिए क्षमा माँग रहा है, वही अकेली ज़मीन थी जिस पर यह सब संभव हुआ।"
+  },
+  {
+   "id": 456,
+   "number": "11.42",
+   "body_en": "— and whatever slight I put on you to raise a laugh, at play, or lying down, or sitting, or over food, with only the two of us there or in front of everyone: for that, Achyuta, I ask you to let it go. There is no measuring you, and I did not know it.",
+   "body_hi": "— और हँसी के लिए मैंने आपका जो अपमान किया, खेल में, लेटे हुए, बैठे हुए, या खाते समय, चाहे हम दो ही थे या सबके सामने: उसके लिए, अच्युत, मैं चाहता हूँ कि आप जाने दें। आपका कोई माप नहीं, और यह मुझे मालूम नहीं था।",
+   "commentary_en": "The list is domestic on purpose — meals, beds, seats, jokes. Years of ordinary company are being recalled by a man who has just watched the same companion eat the world.",
+   "commentary_hi": "यह सूची जान-बूझकर घरेलू है — भोजन, बिस्तर, आसन, मज़ाक़। बरसों का साधारण साथ वह आदमी याद कर रहा है जिसने अभी-अभी उसी साथी को जगत निगलते देखा है।"
+  },
+  {
+   "id": 457,
+   "number": "11.43",
+   "body_en": "You are the father of the world, of what moves in it and what does not. You are the one it should honour, and the teacher who weighs most in it. Nobody comes level with you — so how would anyone stand higher? In all three worlds there is nothing your power can be set beside.",
+   "body_hi": "आप जगत के पिता हैं, चलने वाले के भी और न चलने वाले के भी। आप वह हैं जिसे इसे पूजना चाहिए, और वह गुरु जो इसमें सबसे भारी है। कोई आपकी बराबरी तक नहीं आता — तो ऊपर कौन खड़ा होगा? तीनों लोकों में ऐसा कुछ नहीं जिसके साथ आपके प्रभाव को रखा जा सके।",
+   "commentary_en": "The teacher is named as a teacher for the first time. Arjuna asked in 2.7 to be taught, calling himself a pupil; nine chapters later he says out loud what that made the other man.",
+   "commentary_hi": "यहाँ पहली बार गुरु को गुरु कहकर पुकारा गया है। दूसरे अध्याय के सातवें श्लोक में अर्जुन ने अपने को शिष्य कहकर सिखाने को कहा था; नौ अध्याय बाद वह ज़ोर से कह देता है कि इससे सामने वाला क्या बन गया था।"
+  },
+  {
+   "id": 458,
+   "number": "11.44",
+   "body_en": "So I go down, I put my body on the ground, and I ask you — you who govern, you who are worth the asking — to be kind. As a father bears with a son, as one friend bears with another, as a man bears with the woman he loves: bear with me, god. It is in you to do it.",
+   "body_hi": "इसलिए मैं गिरता हूँ, अपनी देह ज़मीन पर रख देता हूँ, और आपसे — जो शासन करते हैं, जो माँगने योग्य हैं — प्रार्थना करता हूँ कि प्रसन्न हों। जैसे पिता पुत्र को सह लेता है, जैसे मित्र मित्र को सह लेता है, जैसे प्रेमी अपनी प्रिया को सह लेता है: मुझे सह लीजिए, देव। यह आपसे हो सकता है।",
+   "commentary_en": "Three verses after apologising for treating him as a friend, he asks to be borne with as a friend. The chapter does not resolve that; it lets both stand, which is nearer to how people actually hold the two.",
+   "commentary_hi": "मित्र की तरह बर्ताव करने की क्षमा माँगने के तीन श्लोक बाद वह यही माँगता है कि उसे मित्र की तरह सह लिया जाए। अध्याय इस विरोध को सुलझाता नहीं; दोनों को खड़ा रहने देता है — और लोग इन दोनों को असल में ऐसे ही एक साथ रखते हैं।"
+  },
+  {
+   "id": 459,
+   "number": "11.45",
+   "body_en": "I have seen what was never seen before, and the joy of it is in me — and at the same time the fear has my mind coming apart. Show me the other shape, the one I knew. Be kind. You are the lord the gods answer to; you are the house all this lives in.",
+   "body_hi": "मैंने वह देखा जो पहले कभी नहीं देखा गया, और उसका हर्ष मेरे भीतर है — और उसी समय डर मेरे मन को तोड़े दे रहा है। मुझे वह दूसरा रूप दिखाइए, वही जिसे मैं जानता था। प्रसन्न होइए। देवता आपको उत्तर देते हैं; यह सब आप में बसता है।",
+   "commentary_en": "He does not pretend the sight was not worth having. He says it was, and asks for it to stop. The two clauses are joined by and, not by but, and the poem means that.",
+   "commentary_hi": "वह यह दिखावा नहीं करता कि यह दर्शन पाने लायक़ नहीं था। वह कहता है कि था, और साथ ही उसे बंद करने को कहता है। दोनों बातें 'और' से जुड़ी हैं, 'पर' से नहीं, और काव्य का अभिप्राय यही है।"
+  },
+  {
+   "id": 460,
+   "number": "11.46",
+   "body_en": "The crown, the club, the wheel in the hand — that is how I want to see you, the way I did before. You of the thousand arms, you whose body is the world: put the four-armed shape back on.",
+   "body_hi": "मुकुट, गदा, हाथ में चक्र — मैं आपको वैसे ही देखना चाहता हूँ, जैसे पहले देखता था। हे सहस्रबाहु, हे विश्वमूर्ते: वही चतुर्भुज रूप फिर धारण कर लीजिए।",
+   "commentary_en": "He asks for exactly the three things he named in verse seventeen, before the shape overwhelmed him. It is a request to be given back the size of god he can live with.",
+   "commentary_hi": "वह ठीक वही तीन चीज़ें माँगता है जिनके नाम उसने सत्रहवें श्लोक में लिए थे, उस रूप के उस पर छा जाने से पहले। यह माँग इतनी ही है कि उसे ईश्वर का वह नाप लौटा दिया जाए जिसके साथ वह जी सकता है।"
+  },
+  {
+   "id": 461,
+   "number": "11.47",
+   "body_en": "The Blessed One said: I was pleased with you, Arjuna, and out of my own power I let you see the highest shape — made of light, holding everything, without end, there from the start. Nobody before you had looked at it.",
+   "body_hi": "श्रीभगवान ने कहा — मैं तुझ पर प्रसन्न था, अर्जुन, और अपने ही योग से मैंने तुझे वह परम रूप दिखा दिया — तेज से बना, सब कुछ समेटे हुए, अनंत, आदि से मौजूद। तुझसे पहले इसे किसी ने नहीं देखा।",
+   "commentary_en": "It is called a favour, and the whole terrifying middle of the chapter was inside it. The poem does not take that back or soften it.",
+   "commentary_hi": "इसे कृपा कहा गया है, और इस अध्याय का सारा भयावना बीच उसी कृपा के भीतर था। काव्य इसे न वापस लेता है, न नरम करता है।"
+  },
+  {
+   "id": 462,
+   "number": "11.48",
+   "body_en": "Not by study of the Vedas, not by the offering, not by what is given away, not by the rites, not by hard penance either — nobody else in the world of men can be brought to see me in this shape, foremost of the Kurus.",
+   "body_hi": "न वेद पढ़ लेने से, न यज्ञ से, न दान से, न क्रियाओं से, न उस कठिन तप से जो देह को सुखा देता है — मनुष्यलोक में और कोई मुझे ऐसा देख नहीं सकता जैसा तू अभी देख रहा है, हे कुरुप्रवीर।",
+   "commentary_en": "Five things are ruled out, and they are the five a religious life is normally made of. The point is not that they are worthless; it is that this particular sight was not earned by them, and could not be.",
+   "commentary_hi": "पाँच चीज़ें ख़ारिज की गई हैं, और सामान्य धार्मिक जीवन इन्हीं पाँच से बनता है। बात यह नहीं कि वे व्यर्थ हैं; बात यह है कि यह ख़ास दर्शन उनसे कमाया नहीं गया, और कमाया जा भी नहीं सकता था।"
+  },
+  {
+   "id": 463,
+   "number": "11.49",
+   "body_en": "No more of this shaking, and no more of that stunned confusion, from having looked at a shape of mine as frightful as this. Let the fear go, be glad again, and look — here is the one you asked for.",
+   "body_hi": "अब यह काँपना नहीं, और वह भौंचक्का मोह भी नहीं, कि मेरा इतना घोर रूप देख लिया। डर को जाने दे, फिर से प्रसन्न हो, और देख — यह रहा वही जो तूने माँगा था।",
+   "commentary_en": "The word for confusion is the one from the first verse of this chapter, where Arjuna said it had left him. It came back the moment he got what he asked for, and it is being sent away a second time.",
+   "commentary_hi": "मोह के लिए यहाँ वही शब्द है जो इस अध्याय के पहले ही श्लोक में आया था, जहाँ अर्जुन ने कहा था कि वह चला गया। जो माँगा था वह मिलते ही वह लौट आया, और अब उसे दूसरी बार विदा किया जा रहा है।"
+  },
+  {
+   "id": 464,
+   "number": "11.50",
+   "body_en": "Sanjaya said: Vasudeva said that much to Arjuna and showed him his own shape once more. The great one took a gentle body again, and steadied the frightened man.",
+   "body_hi": "संजय ने कहा — वासुदेव ने अर्जुन से इतना कहा और उसे अपना वही रूप फिर दिखा दिया। उस महात्मा ने दोबारा सौम्य देह धारण की, और उस डरे हुए आदमी को थाम लिया।",
+   "commentary_en": "His own shape. After everything in between, the poem calls the ordinary one his — which settles a question the middle of the chapter had left open.",
+   "commentary_hi": "'अपना वही रूप।' बीच में जो कुछ हुआ उसके बाद काव्य साधारण रूप को ही उनका कहता है — और इससे वह प्रश्न तय हो जाता है जिसे अध्याय का मध्य खुला छोड़ गया था।"
+  },
+  {
+   "id": 465,
+   "number": "11.51",
+   "body_en": "Arjuna said: Now that I have this human shape of yours in front of me, Janardana, and the kindness in it, I am gathered up again. My wits are back. I am myself.",
+   "body_hi": "अर्जुन ने कहा — अब जब आपका यह मनुष्य रूप मेरे सामने है, जनार्दन, और उसमें वह सौम्यता है, मैं फिर से सिमट आया हूँ। होश लौट आया है। मैं अपने आप में हूँ।",
+   "commentary_en": "The last phrase is literally gone back to my own nature. A chapter that set out to exceed the ordinary ends by handing the ordinary back, and treats its return as the relief it is.",
+   "commentary_hi": "अंतिम वाक्यांश का सीधा अर्थ है 'अपनी प्रकृति को प्राप्त हो गया'। जो अध्याय साधारण से आगे जाने चला था, वह साधारण को लौटा कर ख़त्म होता है — और उस लौटने को वैसी ही राहत मानता है जैसी वह है।"
+  },
+  {
+   "id": 466,
+   "number": "11.52",
+   "body_en": "The Blessed One said: That shape of mine you have just been looking at is very hard to get sight of. Even the gods go on wanting a look at it, and go on waiting.",
+   "body_hi": "श्रीभगवान ने कहा — मेरा वह रूप जिसे तू अभी देख रहा था, उसका दर्शन बहुत कठिन है। देवता भी उसे देखने की इच्छा लिए रहते हैं, और प्रतीक्षा में रहते हैं।",
+   "commentary_en": "Said immediately after Arjuna has begged for it to stop. Both sentences are allowed to be true: it is the rarest thing there is, and he could not bear it.",
+   "commentary_hi": "यह ठीक उसके बाद कहा जाता है जब अर्जुन ने उसे बंद करने की विनती की है। दोनों वाक्य सच रहने दिए जाते हैं: यह सबसे दुर्लभ वस्तु है, और वह इसे सह नहीं सका।"
+  },
+  {
+   "id": 467,
+   "number": "11.53",
+   "body_en": "Not with the Vedas, not with penance, not with what is given away, not with the offering can I be seen in the way you have just seen me.",
+   "body_hi": "वेदों से नहीं, तप से नहीं, दान से नहीं, यज्ञ से भी नहीं — इनमें से कोई भी मुझ तक वैसी आँख नहीं पहुँचाता जैसी तुझे अभी मिली है।",
+   "commentary_en": "The same five are ruled out a second time within five verses, which is how the poem marks what it is about to say next.",
+   "commentary_hi": "पाँच श्लोकों के भीतर वही पाँच चीज़ें दूसरी बार ख़ारिज की जाती हैं — और इसी तरह यह काव्य उस बात पर निशान लगाता है जो वह अगले श्लोक में कहने वाला है।"
+  },
+  {
+   "id": 468,
+   "number": "11.54",
+   "body_en": "By love that has nowhere else to go — by that, Arjuna, I can be known in this way, and seen as I am, and entered, you who burn what stands against you.",
+   "body_hi": "उस भक्ति से जिसके पास जाने को और कहीं नहीं है — उसी से, अर्जुन, मैं इस रूप में जाना जा सकता हूँ, और जैसा हूँ वैसा देखा जा सकता हूँ, और उसी में प्रवेश भी किया जा सकता है, हे परंतप।",
+   "commentary_en": "Three verbs, and the third is the one that matters: known, seen, and then entered. Seeing was what Arjuna asked for in verse four, and the chapter has shown that seeing by itself leaves a man outside, shaking.",
+   "commentary_hi": "तीन क्रियाएँ, और असली बात तीसरी है: जानना, देखना, और फिर प्रवेश करना। चौथे श्लोक में अर्जुन ने देखना ही माँगा था, और इस अध्याय ने दिखा दिया कि अकेला देखना आदमी को बाहर ही खड़ा छोड़ देता है, काँपता हुआ।"
+  },
+  {
+   "id": 469,
+   "number": "11.55",
+   "body_en": "The man whose work is mine, who holds nothing higher than me, who loves me, who has cut away his clinging, and who carries no enmity toward any living thing at all — he is the one who comes to me, son of Pandu.",
+   "body_hi": "जिसका काम मेरा है, जो मुझसे ऊपर कुछ नहीं रखता, जो मुझे चाहता है, जिसने आसक्ति काट दी है, और जो किसी भी प्राणी के प्रति बैर नहीं ढोता — वही मुझ तक आता है, पांडुपुत्र।",
+   "commentary_en": "The chapter that showed him time eating armies closes on a list of five ordinary dispositions, and the last of them is no enmity toward anything alive — said to a man who is about to fight. The vision ends where 5.25 ended, in what a person does with other people.",
+   "commentary_hi": "जिस अध्याय ने उसे काल को सेनाएँ निगलते दिखाया, वह पाँच साधारण वृत्तियों की सूची पर बंद होता है, और उनमें आख़िरी है किसी भी जीव से बैर न रखना — यह उस आदमी से कहा जा रहा है जो अभी लड़ने जा रहा है। यह दर्शन वहीं ख़त्म होता है जहाँ पाँचवें अध्याय का पच्चीसवाँ श्लोक ख़त्म हुआ था: इसमें कि आदमी दूसरे लोगों के साथ क्या करता है।"
+  }
+ ]
+}
