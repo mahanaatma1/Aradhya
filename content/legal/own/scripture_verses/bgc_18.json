@@ -1,0 +1,634 @@
+{
+ "slug": "bgc_18",
+ "title_en": "Moksha Sanyasa Yoga",
+ "title_hi": "मोक्ष संन्यास योग",
+ "book_id": 18,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 624,
+   "number": "18.1",
+   "body_en": "Arjuna said: I want to know what it really is to lay work down, mighty-armed — and what it is to let the thing go. Tell me the two apart, Hrishikesha.",
+   "body_hi": "अर्जुन ने कहा — काम छोड़ देना असल में है क्या, महाबाहु, और चीज़ को जाने देना क्या है — मुझे इन दोनों की तह तक पहुँचना है। इनमें फ़र्क़ कहाँ है, हृषीकेश, यह मुझे खोलकर बताइए।",
+   "commentary_en": "The last question of the dialogue, and it is about two words. He has heard both used for seventeen chapters and has worked out that they are not the same, which is more than most readers manage.",
+   "commentary_hi": "संवाद का आख़िरी सवाल, और वह दो शब्दों के बारे में है। वह सत्रह अध्यायों से दोनों का इस्तेमाल सुनता आया है और यह निकाल चुका है कि दोनों एक नहीं हैं — और यह उतना ही है जितना ज़्यादातर पढ़ने वाले नहीं कर पाते।"
+  },
+  {
+   "id": 625,
+   "number": "18.2",
+   "body_en": "The Blessed One said: Setting down the work you took up because you wanted something — the poets call that laying it down. Letting go of what any work pays out — the clear-sighted call that letting go.",
+   "body_hi": "श्रीभगवान ने कहा — जो काम तुमने इसलिए उठाया कि तुम्हें कुछ चाहिए था, उसे रख देना — कवि इसी को छोड़ना कहते हैं। और कोई भी काम जो चुकाता है, उसे जाने देना — जिनकी नज़र साफ़ है वे इसी को जाने देना कहते हैं।",
+   "commentary_en": "The difference is the whole book in one verse. One of them drops the work; the other keeps the work and drops the claim on what it brings in. Everything from 2.47 onward has been the second.",
+   "commentary_hi": "इन दोनों का फ़र्क़ एक ही श्लोक में पूरी किताब है। एक काम गिरा देता है; दूसरा काम रखे रहता है और उससे जो मिलना है उस पर से दावा गिरा देता है। 2.47 से आगे जो कुछ है वह दूसरा ही है।"
+  },
+  {
+   "id": 626,
+   "number": "18.3",
+   "body_en": "Some thinking men say work should be let go of the way you let go of anything faulty. Others say the offering, the giving and the going-without are not to be let go of at all.",
+   "body_hi": "कुछ सोचने वाले कहते हैं कि काम को वैसे ही छोड़ देना चाहिए जैसे किसी दोष वाली चीज़ को छोड़ते हैं। दूसरे कहते हैं कि आहुति, दान और तप — इन्हें छोड़ना ही नहीं चाहिए।",
+   "commentary_en": "A real disagreement, reported flatly and without naming anybody. The book does this rarely, and it is a sign that what follows is meant as a ruling rather than a teaching.",
+   "commentary_hi": "एक सचमुच का मतभेद, सपाट ढंग से और बिना किसी का नाम लिए रखा हुआ। किताब ऐसा कम ही करती है, और यह इस बात का निशान है कि आगे जो आता है वह उपदेश नहीं, फ़ैसला है।"
+  },
+  {
+   "id": 627,
+   "number": "18.4",
+   "body_en": "Then take my ruling on this business of letting go, best of the Bharatas — because it has been spoken of as coming in three kinds, tiger among men, and I mean to sort them out.",
+   "body_hi": "इस जाने देने के मामले में मैंने जो तय किया है वह सुनो, भरतश्रेष्ठ। क्योंकि जाने देना, पुरुषों में बाघ, तीन तरह का कहा गया है।",
+   "commentary_en": "What I have settled on, not what is written. He is deciding between the two camps of the last verse rather than quoting a third.",
+   "commentary_hi": "'जो मैंने तय किया है', न कि 'जो लिखा है'। वे पिछले श्लोक के दोनों पक्षों के बीच फ़ैसला कर रहे हैं, किसी तीसरे का हवाला नहीं दे रहे।"
+  },
+  {
+   "id": 628,
+   "number": "18.5",
+   "body_en": "The offering, the giving and the going-without are not to be let go of. They are to be done. All three of them wash a thinking man clean.",
+   "body_hi": "आहुति, दान और तप — इन्हें छोड़ना नहीं है। इन्हें करना है। तीनों सोचने वाले आदमी को धोकर साफ़ करते हैं।",
+   "commentary_en": "The ruling goes to the second camp. Note which three survive: the ones that cost the man something and put it where somebody else gets the good of it.",
+   "commentary_hi": "फ़ैसला दूसरे पक्ष के हक़ में जाता है। ध्यान दीजिए कि बचे कौन-से तीन: वही जिनमें आदमी का कुछ ख़र्च होता है और वह ख़र्च वहाँ जाता है जहाँ उसका फ़ायदा किसी और को मिलता है।"
+  },
+  {
+   "id": 629,
+   "number": "18.6",
+   "body_en": "But even these are to be done with the holding-on let go of, and what they pay out let go of too. That is what I have made up my mind about, Partha, and I hold it to be the best of the answers.",
+   "body_hi": "पर ये भी उसी तरह किए जाने हैं कि पकड़ छोड़ दी जाए, और जो ये चुकाते हैं उसे भी जाने दिया जाए। यही मैंने तय किया है, पार्थ, और मैं इसे ही सबसे अच्छा जवाब मानता हूँ।",
+   "commentary_en": "The two camps are not split down the middle. The first is told it was wrong about what to drop, and then handed the dropping it actually wanted.",
+   "commentary_hi": "दोनों पक्षों को बीच से बाँटा नहीं जाता। पहले से कहा जाता है कि छोड़ने की चीज़ के बारे में वह ग़लत था, और फिर उसे वही छोड़ना थमा दिया जाता है जो वह सचमुच चाहता था।"
+  },
+  {
+   "id": 630,
+   "number": "18.7",
+   "body_en": "Work that is laid on you is not the sort a man can lay down; there is no such thing. Walking away from that in the fog is called the heavy kind of letting go.",
+   "body_hi": "जो काम तुम पर रखा गया है, उसे रख देने की कोई चीज़ है ही नहीं। कुहासे में उससे हट जाना — इसी को जाने देने की भारी क़िस्म कहते हैं।",
+   "commentary_en": "Three verses follow, and the outward act is identical in all three: a man does not do a piece of work. What separates them is nothing you could see from outside.",
+   "commentary_hi": "आगे तीन श्लोक आते हैं, और तीनों में बाहर से दिखने वाला काम एक ही है: आदमी कोई काम नहीं करता। उन्हें अलग करने वाली चीज़ वह है जो बाहर से दिखती ही नहीं।"
+  },
+  {
+   "id": 631,
+   "number": "18.8",
+   "body_en": "A man who drops a piece of work because it is hard, and because his body flinches from the trouble of it, has done the restless kind of letting go. He will not get what letting go gives.",
+   "body_hi": "जो आदमी कोई काम इसलिए छोड़ देता है कि वह कठिन है, और इसलिए कि उसकी देह उस तकलीफ़ से सिहरती है — उसने जाने देने की बेचैन क़िस्म की है। जाने देने से जो मिलता है वह उसे नहीं मिलेगा।",
+   "commentary_en": "Nothing is said about whether his reading of the work was right. It may well be hard. The objection is that the hardness is doing the deciding.",
+   "commentary_hi": "इस बारे में कुछ नहीं कहा जाता कि काम के बारे में उसका अंदाज़ा ठीक था या नहीं। हो सकता है वह सचमुच कठिन हो। एतराज़ यह है कि फ़ैसला कठिनाई कर रही है।"
+  },
+  {
+   "id": 632,
+   "number": "18.9",
+   "body_en": "But when work that is laid on a man gets done, Arjuna, simply because it is his to do, and the holding-on is let go of and so is the pay — that letting go is the clear kind.",
+   "body_hi": "पर जो काम आदमी पर रखा गया है वह इसलिए हो जाए, अर्जुन, कि वह उसी का करने का है, और पकड़ भी जाने दी जाए और मिलने वाला भी — वह जाने देना साफ़ क़िस्म का है।",
+   "commentary_en": "And the clear kind is the one where the work gets done. Three verses of letting go and the best of them leaves a man exactly where he was standing, doing what was in front of him.",
+   "commentary_hi": "और साफ़ वाली क़िस्म वही है जिसमें काम हो जाता है। जाने देने पर तीन श्लोक, और उनमें सबसे अच्छा वही आदमी को ठीक वहीं छोड़ता है जहाँ वह खड़ा था, वही करते हुए जो उसके सामने था।"
+  },
+  {
+   "id": 633,
+   "number": "18.10",
+   "body_en": "He does not hold a grudge against work that goes badly, and he does not fasten himself to work that goes well. A man who lets go like that has the clear mode all through him. He has his wits about him, and whatever he was in two minds about has been cut away.",
+   "body_hi": "जो काम बिगड़ता है उससे वह बैर नहीं रखता, और जो अच्छा चलता है उससे चिपकता नहीं। इस तरह जाने देने वाले आदमी में साफ़ गुण आर-पार भरा होता है। उसकी अक़्ल ठिकाने है, और जिस बात में वह दुविधा में था वह कट चुकी है।",
+   "commentary_en": "Cut away is the same figure the last chapter opened with, where the blade was made of not-holding-on. Here it has been turned on the man's own hesitation, which is what Arjuna has been full of since chapter one.",
+   "commentary_hi": "'कट चुकी' वही रूपक है जिससे पिछला अध्याय खुला था, जहाँ धार न-पकड़ने की बनी थी। यहाँ वही आदमी की अपनी हिचक पर चला दी गई है — और पहले अध्याय से अर्जुन उसी से भरा हुआ है।"
+  },
+  {
+   "id": 634,
+   "number": "18.11",
+   "body_en": "Nobody carrying a body around can put work down altogether. It cannot be done. The man who lets go of what work pays — he is the one the word belongs to.",
+   "body_hi": "जो देह ढो रहा है वह काम को पूरी तरह रख नहीं सकता। यह होता ही नहीं। जो आदमी काम की चुकौती जाने देता है — शब्द उसी का है।",
+   "commentary_en": "The concession the whole argument has been walking toward. Letting go was never going to mean stopping, because stopping is not one of the things on offer.",
+   "commentary_hi": "पूरी दलील इसी रियायत की ओर चल रही थी। जाने देने का मतलब रुक जाना होना ही नहीं था, क्योंकि रुक जाना उन चीज़ों में है ही नहीं जो मिल सकती हैं।"
+  },
+  {
+   "id": 635,
+   "number": "18.12",
+   "body_en": "What work pays comes in three sorts — the kind you did not want, the kind you did, and the kind that is some of each. It comes to men who did not let go, once they are gone. To the ones who laid it down it never comes at all.",
+   "body_hi": "काम की चुकौती तीन तरह की होती है — वह जो तुम नहीं चाहते थे, वह जो चाहते थे, और वह जो कुछ इसकी कुछ उसकी। जिन्होंने जाने नहीं दिया, उनके पास वह चले जाने के बाद आती है। जिन्होंने रख दिया, उनके पास कभी नहीं आती।",
+   "commentary_en": "Some of each is the honest category, and it is the one most things fall into. Very little of what a man does pays out cleanly one way or the other.",
+   "commentary_hi": "'कुछ इसकी कुछ उसकी' — यही ईमानदार ख़ाना है, और ज़्यादातर चीज़ें इसी में गिरती हैं। आदमी जो करता है उसमें से बहुत कम कुछ साफ़-साफ़ इधर या उधर चुकाता है।"
+  },
+  {
+   "id": 636,
+   "number": "18.13",
+   "body_en": "There are five things behind anything getting done, mighty-armed. Learn them from me. The reckoning that counts up the parts of things has them worked out, and they are what any piece of work comes off on.",
+   "body_hi": "कोई भी चीज़ होने के पीछे पाँच चीज़ें होती हैं, महाबाहु। इन्हें मुझसे जान लो। चीज़ों के हिस्से गिनने वाला हिसाब इन्हें निकाल चुका है, और कोई भी काम इन्हीं पर होकर निकलता है।",
+   "commentary_en": "A short, dry, technical passage, and it is where the chapter does its heaviest lifting. Everything said later about who is responsible for what rests on these five.",
+   "commentary_hi": "छोटा, सूखा, तकनीकी हिस्सा — और अध्याय का सबसे भारी काम यहीं होता है। आगे कौन किस चीज़ का ज़िम्मेदार है, यह जो कुछ कहा जाएगा वह इन्हीं पाँच पर टिका है।"
+  },
+  {
+   "id": 637,
+   "number": "18.14",
+   "body_en": "The place it stands on. The one doing it. The tools, which are of several sorts. The various motions that go into it. And fifth, whatever nobody arranged.",
+   "body_hi": "वह जगह जिस पर वह खड़ा है। करने वाला। औज़ार, जो कई तरह के हैं। उसमें लगने वाली तरह-तरह की हरकतें। और पाँचवाँ, वह जिसे किसी ने तय नहीं किया।",
+   "commentary_en": "The fifth is usually given as fate, which loads it. The word only means what was not anybody's doing — the weather on the day, the man who happened to be standing there. Every piece of work has some, and it is nobody's.",
+   "commentary_hi": "पाँचवें को अक्सर भाग्य कहकर रख दिया जाता है, जिससे उस पर बोझ आ जाता है। शब्द का मतलब सिर्फ़ इतना है कि जो किसी का किया हुआ नहीं था — उस दिन का मौसम, वह आदमी जो इत्तिफ़ाक़ से वहाँ खड़ा था। हर काम में इतना कुछ होता है, और वह किसी का नहीं होता।"
+  },
+  {
+   "id": 638,
+   "number": "18.15",
+   "body_en": "Anything a man sets going with his body, or by opening his mouth, or in his mind — the straight thing and the crooked one alike — has those same five underneath it.",
+   "body_hi": "आदमी अपनी देह से, या मुँह खोलकर, या अपने मन में जो कुछ चलाता है — सीधी चीज़ और टेढ़ी, दोनों — उसके नीचे वही पाँच होते हैं।",
+   "commentary_en": "The straight thing and the crooked one alike. The analysis covers the crime as well as the good deed, which is what keeps it from being an excuse: it is not a finding about the innocent, it is a description of how anything at all gets done.",
+   "commentary_hi": "'सीधी चीज़ और टेढ़ी, दोनों।' यह विश्लेषण अच्छे काम के साथ-साथ जुर्म पर भी लागू है, और इसी से यह बहाना बनने से बच जाता है: यह बेगुनाहों के बारे में निकाला गया नतीजा नहीं है, यह इस बात का बयान है कि कोई भी चीज़ होती कैसे है।"
+  },
+  {
+   "id": 639,
+   "number": "18.16",
+   "body_en": "That being so, the man who looks at all this and sees himself alone as the one doing it is not seeing. The work has not been done on him, and his judgement is poor.",
+   "body_hi": "ऐसा होते हुए भी जो आदमी इस सब को देखकर अकेले अपने को ही करने वाला देखता है, वह देख ही नहीं रहा। उस पर काम नहीं हुआ है, और उसकी समझ कच्ची है।",
+   "commentary_en": "The book does not often call a man's judgement poor. It is doing it here about the most ordinary belief there is — that when you do something, you are the one who did it.",
+   "commentary_hi": "किताब किसी की समझ को कच्ची कम ही कहती है। यहाँ वह सबसे साधारण मान्यता के बारे में यह कह रही है — कि जब तुम कुछ करते हो, तो करने वाले तुम्हीं हो।"
+  },
+  {
+   "id": 640,
+   "number": "18.17",
+   "body_en": "A man with no I-am-the-one-doing-it in him, whose judgement takes no stain — even if he kills these people here, he does not kill, and nothing binds him for it.",
+   "body_hi": "जिस आदमी के भीतर 'करने वाला मैं हूँ' नहीं है, जिसकी समझ पर कोई दाग़ नहीं चढ़ता — वह इन लोगों को मार भी दे, तो वह मारता नहीं, और उससे उस पर कोई बंधन नहीं आता।",
+   "commentary_en": "The hardest verse in the book, and it is read as a licence only by skipping the two conditions in front of it. Both are absolute, and nobody who wanted this verse to apply to him has ever met them. It is the same claim as 4.18 and 5.8, spoken to a man with a bow in his hand, and it should not be softened.",
+   "commentary_hi": "किताब का सबसे कठिन श्लोक, और इसे छूट की तरह पढ़ा तभी जाता है जब इसके आगे लगी दो शर्तें छोड़ दी जाएँ। दोनों शर्तें पूरी की पूरी हैं, और जिसने भी चाहा कि यह श्लोक उस पर लागू हो, वह उन पर कभी खरा नहीं उतरा। यह वही दावा है जो 4.18 और 5.8 में है, और यह उस आदमी से कहा जा रहा है जिसके हाथ में धनुष है — इसे नरम नहीं करना चाहिए।"
+  },
+  {
+   "id": 641,
+   "number": "18.18",
+   "body_en": "Three things set work going: the knowing, the thing known, and the one who knows it. And three things make it up: the tool, the doing, and the doer.",
+   "body_hi": "तीन चीज़ें काम को चलाती हैं: जानना, जानी जाने वाली चीज़, और वह जो उसे जानता है। और तीन चीज़ें उसे बनाती हैं: औज़ार, करना, और करने वाला।",
+   "commentary_en": "Six terms laid out like a frame, and the chapter is about to fill three of them in three ways each. What follows is the longest stretch of sorting in the book.",
+   "commentary_hi": "छह पद ढाँचे की तरह रख दिए गए, और अध्याय अब इनमें से तीन को तीन-तीन तरह से भरने वाला है। आगे जो आता है वह पूरी किताब की सबसे लंबी छँटाई है।"
+  },
+  {
+   "id": 642,
+   "number": "18.19",
+   "body_en": "Knowing, the work, and the one who does it come in three kinds apiece, sorted out by the modes. That is what the men who do the counting say. Take these from me as well.",
+   "body_hi": "जानना, काम, और करने वाला — तीनों तीन-तीन क़िस्मों में आते हैं, गुणों के हिसाब से छँटे हुए। जो लोग यह गिनती करते हैं वे यही कहते हैं। इन्हें भी मुझसे ले लो।",
+   "commentary_en": "Take these from me as well. The chapter has already done letting go in three; it is about to do six more, which is more of this than the rest of the book put together.",
+   "commentary_hi": "'इन्हें भी मुझसे ले लो।' अध्याय जाने देने को तीन में बाँट चुका है; अब वह छह और करने वाला है — और यह बाक़ी पूरी किताब के जोड़ से भी ज़्यादा है।"
+  },
+  {
+   "id": 643,
+   "number": "18.20",
+   "body_en": "There is a way of knowing that catches one thing standing in everything alive, and it does not wear out, and it is not in pieces although the things it stands in are. Take that knowing for the clear kind.",
+   "body_hi": "जानने का एक ढंग है जो हर जीवित चीज़ में खड़ी एक ही चीज़ को पकड़ लेता है, और वह घिसती नहीं, और वह टुकड़ों में नहीं है — जबकि जिन चीज़ों में वह खड़ी है वे टुकड़ों में हैं। उस जानने को साफ़ क़िस्म का समझो।",
+   "commentary_en": "Not in pieces although the things it stands in are. That last clause is what stops this being a denial that anything is separate. The separateness is real. It is just not the bottom of the matter.",
+   "commentary_hi": "'टुकड़ों में नहीं है, जबकि जिन चीज़ों में वह खड़ी है वे टुकड़ों में हैं।' आख़िरी टुकड़ा ही इसे इस बात से रोकता है कि यह अलगाव का इनकार बन जाए। अलगाव सचमुच है। बस वह मामले का तला नहीं है।"
+  },
+  {
+   "id": 644,
+   "number": "18.21",
+   "body_en": "And there is a way of knowing that takes everything alive one at a time, and finds in them only the many separate kinds of thing they are. Take that one for restless.",
+   "body_hi": "और जानने का एक ढंग है जो हर जीवित चीज़ को एक-एक करके लेता है, और उनमें बस वही बहुत सारी अलग-अलग क़िस्में पाता है जो वे हैं। उसे बेचैन क़िस्म का समझो।",
+   "commentary_en": "Not called false. Everything it reports is accurate, and a man who works in the world needs it. It is second-best rather than wrong, which is the harder thing to say.",
+   "commentary_hi": "इसे झूठा नहीं कहा गया। यह जो भी बताता है वह ठीक है, और दुनिया में काम करने वाले आदमी को यह चाहिए भी। यह ग़लत नहीं, दूसरे दर्जे का है — और यही कहना ज़्यादा कठिन बात है।"
+  },
+  {
+   "id": 645,
+   "number": "18.22",
+   "body_en": "And there is the knowing that fastens on one piece of work as though it were the whole world, with no reason behind it, no hold on what is actually so, and nothing much to it. That one is set down as heavy.",
+   "body_hi": "और वह जानना जो किसी एक काम पर ऐसे चिपक जाता है जैसे वही पूरी दुनिया हो, जिसके पीछे कोई वजह नहीं, जो सचमुच जो है उस पर पकड़ नहीं रखता, और जिसमें कुछ ख़ास है भी नहीं। उसे भारी में रखा गया है।",
+   "commentary_en": "This is not ignorance. It is one true thing held so tightly that everything else has been squeezed out — which is the fanatic, not the fool, and the chapter is right to file it under the heaviest mode.",
+   "commentary_hi": "यह अज्ञान नहीं है। यह एक सच्ची बात है जिसे इतना कसकर पकड़ लिया गया कि बाक़ी सब निचुड़ गया — और यह मूर्ख नहीं, कट्टर आदमी है, और अध्याय इसे सबसे भारी गुण में रखकर ठीक करता है।"
+  },
+  {
+   "id": 646,
+   "number": "18.23",
+   "body_en": "Work that is yours to take on, and you take it on with nothing fastening you to it, no pull toward the thing and no push away from it, and you are not after what it pays — that is clear work.",
+   "body_hi": "वह काम जो तुम्हारा करने का है, उससे चिपके बिना किया गया, उसकी ओर खिंचाव या उससे हटाव के बिना, और ऐसे किसी के हाथों जो उसकी चुकौती के पीछे नहीं है — उसे साफ़ काम कहते हैं।",
+   "commentary_en": "The triad now moves from the man's knowing to the work itself, and the vocabulary goes plain: what was a metaphysical question two verses ago is now a question about how somebody went about a job.",
+   "commentary_hi": "अब यह तिकड़ी आदमी के जानने से हटकर ख़ुद काम पर आ जाती है, और भाषा सादी हो जाती है: दो श्लोक पहले जो तत्व का सवाल था, वह अब इस बात का सवाल है कि किसी ने कोई काम किया कैसे।"
+  },
+  {
+   "id": 647,
+   "number": "18.24",
+   "body_en": "But work got through by a man who is after what he wants, or with the I-am-the-one-doing-it on him, and put through at enormous cost to himself — that is set down as restless.",
+   "body_hi": "पर वह काम जो ऐसे आदमी के हाथों निपटता है जो अपनी चाह के पीछे है, या जिस पर 'करने वाला मैं हूँ' सवार है, और जो अपने ऊपर बहुत भारी क़ीमत चुकाकर निकाला जाता है — उसे बेचैन में रखा गया है।",
+   "commentary_en": "At enormous cost to himself appears here and not under the heavy mode, which is worth noticing. Exhaustion is a mark of the restless mode. The heavy one does not tire itself out.",
+   "commentary_hi": "'अपने ऊपर बहुत भारी क़ीमत चुकाकर' यहाँ आता है, भारी गुण के नीचे नहीं — और यह देखने लायक़ है। थक जाना बेचैन गुण का निशान है। भारी वाला अपने को थकाता नहीं।"
+  },
+  {
+   "id": 648,
+   "number": "18.25",
+   "body_en": "And work begun in the fog, without a thought for what will come of it, or what it will cost, or who it will hurt, or whether the man has it in him — that is called heavy.",
+   "body_hi": "और वह काम जो कुहासे में शुरू किया जाए, बिना यह सोचे कि इसका नतीजा क्या होगा, इसमें क्या ख़र्च होगा, इससे किसे चोट पहुँचेगी, या आदमी के भीतर उसे कर पाने का दम है भी या नहीं — उसे भारी कहते हैं।",
+   "commentary_en": "Four things not thought about, and every one of them is the sort a man would have noticed if he had stopped for a moment first. That is the whole content of the heavy mode: not malice, just never stopping to look.",
+   "commentary_hi": "चार चीज़ें जिन पर सोचा नहीं गया, और उनमें से हर एक ऐसी है जो आदमी को दिख जाती अगर वह पहले एक पल ठहर गया होता। भारी गुण में इतना ही है: बदनीयती नहीं, बस कभी रुककर देखना ही नहीं।"
+  },
+  {
+   "id": 649,
+   "number": "18.26",
+   "body_en": "A doer who has got loose from holding on, who does not go about saying I; who has some backbone and some drive in him, and whom it does not alter whether the thing comes off or fails — he is called the clear kind.",
+   "body_hi": "वह करने वाला जो पकड़ से छूट चुका, जो चलते-फिरते 'मैं' नहीं कहता; जिसमें रीढ़ है और जिसमें जोश भी है, और जिसे इससे कोई फ़र्क़ नहीं पड़ता कि चीज़ बनी या बिगड़ी — उसे साफ़ क़िस्म का कहते हैं।",
+   "commentary_en": "Drive is on the list. Whatever the clear mode is, it is not a man gone quiet and slack, and this is the place where the book says so outright.",
+   "commentary_hi": "सूची में जोश भी है। साफ़ गुण जो भी हो, वह कोई चुप और ढीला पड़ा आदमी नहीं है — और किताब यह बात खोलकर यहीं कहती है।"
+  },
+  {
+   "id": 650,
+   "number": "18.27",
+   "body_en": "A doer with a pull in him, out for what the work pays, greedy, with harm in his nature, not clean, and going up and down with every turn of it — he is spoken of as the restless kind.",
+   "body_hi": "वह करने वाला जिसमें खिंचाव है, जो काम की चुकौती के पीछे है, लालची, जिसके स्वभाव में चोट पहुँचाना है, जो साफ़ नहीं, और जो हर मोड़ पर ऊपर-नीचे होता रहता है — उसे बेचैन क़िस्म का कहा गया है।",
+   "commentary_en": "Going up and down with every turn of it is the mark to watch for, because it is the one a man can check in himself. The others are hard to see from inside.",
+   "commentary_hi": "'हर मोड़ पर ऊपर-नीचे होना' — यही वह निशान है जिसे देखना चाहिए, क्योंकि आदमी अपने भीतर इसी की जाँच कर सकता है। बाक़ी भीतर से दिखते ही नहीं।"
+  },
+  {
+   "id": 651,
+   "number": "18.28",
+   "body_en": "A doer who is not up to it and never learned how; stiff-necked, a cheat, and unkind with it; idle, gloomy, and forever drawing things out — he is called the heavy kind.",
+   "body_hi": "वह करने वाला जो काम के लायक़ नहीं और जिसने सीखा भी कभी नहीं; अकड़ा हुआ, धोखेबाज़, और उसके साथ निर्दयी भी; आलसी, मनहूस, और हर चीज़ को खींचता जाने वाला — उसे भारी क़िस्म का कहते हैं।",
+   "commentary_en": "Forever drawing things out is the sharpest item on any of these lists. Putting a thing off has been named a fault of character here, in the same breath as cheating.",
+   "commentary_hi": "'हर चीज़ को खींचता जाने वाला' — इन सूचियों में सबसे तीखी चीज़ यही है। किसी काम को टालते रहना यहाँ चरित्र का दोष कहा गया है, उसी साँस में जिसमें धोखा देना।"
+  },
+  {
+   "id": 652,
+   "number": "18.29",
+   "body_en": "Now hear how judgement comes apart by the modes, and how holding-on does, in three kinds each. I will set them out one at a time and leave nothing out, Dhananjaya.",
+   "body_hi": "अब सुनो कि समझ गुणों के हिसाब से कैसे बँटती है, और टिके रहना कैसे — तीन-तीन क़िस्मों में। मैं इन्हें एक-एक करके रखूँगा और कुछ छोड़ूँगा नहीं, धनञ्जय।",
+   "commentary_en": "Two more triads announced, with a third to follow. It is a great deal of machinery, and the reason for it arrives at 18.40.",
+   "commentary_hi": "दो और तिकड़ियों का ऐलान, और उसके बाद एक तीसरी। यह बहुत सारा ताम-झाम है, और इसकी वजह 18.40 पर आती है।"
+  },
+  {
+   "id": 653,
+   "number": "18.30",
+   "body_en": "Judgement that knows when to go at a thing and when to leave it, what is to be done and what is not, what is worth being afraid of and what is not, what ties a man and what lets him out — that judgement is the clear kind, Partha.",
+   "body_hi": "वह समझ जो जानती है कि कब किसी चीज़ पर जाना है और कब उसे छोड़ देना है, क्या करना है और क्या नहीं, किससे डरना बनता है और किससे नहीं, कौन-सी चीज़ आदमी को बाँधती है और कौन-सी उसे छोड़ देती है — वह समझ साफ़ क़िस्म की है, पार्थ।",
+   "commentary_en": "Four pairs, and the first is the one Arjuna could not settle in chapter one. This is the faculty he has been missing, described as what it does rather than as what it is.",
+   "commentary_hi": "चार जोड़े, और पहला वही है जिसे अर्जुन पहले अध्याय में तय नहीं कर पाया था। यही वह ताक़त है जो उसमें नहीं थी, और उसे बताया गया है कि वह है क्या नहीं, बल्कि करती क्या है।"
+  },
+  {
+   "id": 654,
+   "number": "18.31",
+   "body_en": "Judgement that gets dharma and what runs against it, and what is to be done and what is not, but never quite gets them right — that judgement is the restless kind, Partha.",
+   "body_hi": "वह समझ जो धर्म और उसके उलट को, और क्या करना है और क्या नहीं, पकड़ती तो है पर कभी ठीक-ठीक नहीं पकड़ पाती — वह समझ बेचैन क़िस्म की है, पार्थ।",
+   "commentary_en": "Never quite. The restless mode is not described as blind here; it is described as slightly off, every time, which is a more troubling condition and a much commoner one.",
+   "commentary_hi": "'कभी ठीक-ठीक नहीं।' बेचैन गुण को यहाँ अंधा नहीं बताया गया; उसे हर बार थोड़ा-सा चूकता हुआ बताया गया है — और यह ज़्यादा परेशान करने वाली हालत है, और कहीं ज़्यादा आम भी।"
+  },
+  {
+   "id": 655,
+   "number": "18.32",
+   "body_en": "Judgement with the dark wrapped round it, taking what runs against dharma for dharma itself, and everything else backwards too — that judgement is the heavy kind, Partha.",
+   "body_hi": "वह समझ जिस पर अँधेरा लिपटा है, जो धर्म के उलट को ही धर्म मान लेती है, और बाक़ी सब भी उलटा ही — वह समझ भारी क़िस्म की है, पार्थ।",
+   "commentary_en": "Everything else backwards too. To have it exactly inverted takes a consistency that mere confusion cannot manage; there is a conviction at work. That is why this is worse than the middle kind and not merely further along from it.",
+   "commentary_hi": "'बाक़ी सब भी उलटा ही।' हर चीज़ को ठीक उलटा मान लेने के लिए जो निरंतरता चाहिए, वह महज़ गड़बड़ी से नहीं आती; वहाँ कोई यक़ीन काम कर रहा होता है। इसीलिए यह बीच वाली क़िस्म से बुरा है, बस उससे थोड़ा और आगे नहीं।"
+  },
+  {
+   "id": 656,
+   "number": "18.33",
+   "body_en": "The holding by which a man holds together what his mind is doing, and his breath, and his senses, and does it through a yoke that never slips — that holding is the clear kind, Partha.",
+   "body_hi": "वह टिकना जिससे आदमी अपने मन के काम को, अपनी साँस को और अपनी इन्द्रियों को एक साथ थामे रखता है, और ऐसे जुड़ाव से थामता है जो कभी फिसलता नहीं — वह टिकना साफ़ क़िस्म का है, पार्थ।",
+   "commentary_en": "Holds together, not holds down. The word is about keeping a man in one piece rather than about force, which the next two verses will make clear by showing the same faculty misapplied.",
+   "commentary_hi": "'एक साथ थामे रखता है', दबाकर नहीं रखता। शब्द आदमी को एक टुकड़े में बनाए रखने का है, ताक़त का नहीं — और अगले दो श्लोक यही साफ़ करेंगे, उसी ताक़त को ग़लत जगह लगते हुए दिखाकर।"
+  },
+  {
+   "id": 657,
+   "number": "18.34",
+   "body_en": "But the holding by which a man keeps his grip on dharma and on pleasure and on what he owns, Arjuna — clinging as he goes, and wanting what each of them will pay — that holding is the restless kind, Partha.",
+   "body_hi": "पर वह टिकना जिससे आदमी धर्म पर, सुख पर और अपनी मिल्कियत पर पकड़ बनाए रखता है, अर्जुन — चलते-चलते चिपकता हुआ, और यह चाहता हुआ कि इनमें से हर एक उसे क्या चुकाएगा — वह टिकना बेचैन क़िस्म का है, पार्थ।",
+   "commentary_en": "Dharma is on that list, alongside pleasure and property. A man can hold on to his own uprightness in exactly the way he holds on to his money, and the book has noticed.",
+   "commentary_hi": "उस सूची में धर्म भी है, सुख और मिल्कियत के साथ। आदमी अपनी नेकी को ठीक उसी तरह पकड़े रह सकता है जैसे अपने पैसे को — और किताब ने यह देख लिया है।"
+  },
+  {
+   "id": 658,
+   "number": "18.35",
+   "body_en": "And the holding by which a fool will not let go of his sleep, or his fear, or his grief, or his low spirits, or the swagger he has got up on — that holding is the heavy kind, Partha.",
+   "body_hi": "और वह टिकना जिससे मूर्ख अपनी नींद नहीं छोड़ता, न अपना डर, न अपना शोक, न अपनी उदासी, न वह अकड़ जिस पर वह चढ़ा हुआ है — वह टिकना भारी क़िस्म का है, पार्थ।",
+   "commentary_en": "Still holding, note, and it is the same strength as in the clear kind. The faculty that keeps a man in one piece is exactly the one clamping him to the things ruining him. Nothing is wrong with his grip.",
+   "commentary_hi": "ध्यान दीजिए, टिकना यहाँ भी है, और वह उतनी ही ताक़त है जितनी साफ़ वाली क़िस्म में। जो ताक़त आदमी को एक टुकड़े में रखती है, वही उसे उन चीज़ों से कसे रहती है जो उसे तबाह कर रही हैं। उसकी पकड़ में कोई ख़राबी नहीं है।"
+  },
+  {
+   "id": 659,
+   "number": "18.36",
+   "body_en": "Three kinds of happiness are left, bull of the Bharatas, and you should have them from me as well. One of them a man only learns to like by going at it again and again, and it is the one that puts a stop to his grief.",
+   "body_hi": "तीन क़िस्म का सुख बचा है, भरतों के वृषभ, और वह भी तुम्हें मुझसे ले लेना चाहिए। उनमें से एक ऐसा है जिसे आदमी बार-बार उसी पर जाकर ही पसंद करना सीखता है, और वही उसके शोक पर रोक लगाता है।",
+   "commentary_en": "Learns to like, having not liked it at first. This is the only kind of happiness the book rates highly, and it is the only one that has to be practised before it will arrive.",
+   "commentary_hi": "'पसंद करना सीखता है' — यानी पहले पसंद नहीं थी। किताब जिस एक ही क़िस्म के सुख को ऊँचा मानती है वह यही है, और यही अकेली ऐसी है जिसे आने से पहले अभ्यास करना पड़ता है।"
+  },
+  {
+   "id": 660,
+   "number": "18.37",
+   "body_en": "What tastes at the outset like something poisonous, and at the end of it like the drink that keeps a man from dying — that happiness is called clear. It comes out of the sediment settling in a man's own judgement.",
+   "body_hi": "जो शुरू में ज़हर जैसी लगे, और आख़िर में उस पेय जैसी जो आदमी को मरने से रोक दे — उस सुख को साफ़ कहते हैं। वह आदमी की अपनी समझ का मैल नीचे बैठ जाने से निकलता है।",
+   "commentary_en": "The one test the book gives for happiness is what it turns into. Nothing is asked about how it feels at the start, which is the only thing anybody consults.",
+   "commentary_hi": "सुख के लिए किताब जो एक ही कसौटी देती है वह यह है कि वह आगे चलकर बनता क्या है। इस बारे में कुछ नहीं पूछा जाता कि शुरू में वह कैसा लगता है — और सलाह हर कोई उसी से लेता है।"
+  },
+  {
+   "id": 661,
+   "number": "18.38",
+   "body_en": "What comes of the senses meeting the things they want, and tastes at the outset like the drink that keeps a man from dying, and at the end like something poisonous — that happiness is set down as restless.",
+   "body_hi": "जो इन्द्रियों के अपनी मनचाही चीज़ों से मिलने पर बनता है, और शुरू में उस पेय जैसा लगता है जो आदमी को मरने से रोक दे, और आख़िर में ज़हर जैसा — उस सुख को बेचैन में रखा गया है।",
+   "commentary_en": "The same two words as the verse before, in the other order, and that is the entire difference between them. Which one a man is holding depends on how long he is prepared to wait before deciding.",
+   "commentary_hi": "पिछले श्लोक के वही दो शब्द, उलटे क्रम में — और दोनों के बीच पूरा फ़र्क़ बस इतना ही है। आदमी के हाथ में कौन-सा है, यह इस पर टिका है कि फ़ैसला करने से पहले वह कितनी देर ठहरने को तैयार है।"
+  },
+  {
+   "id": 662,
+   "number": "18.39",
+   "body_en": "And the happiness that fogs a man at the start and is still fogging him at the finish, got up out of sleep and idleness and not paying attention — that one is set down as heavy.",
+   "body_hi": "और वह सुख जो आदमी को शुरू में भी कुहासे में रखता है और आख़िर में भी वहीं रखे रहता है, और जो नींद, आलस और ध्यान न देने में से उठता है — उसे भारी में रखा गया है।",
+   "commentary_en": "The third has no turn in it at all. The other two both become their opposite; this one simply goes on being what it was, which is the worst thing that can be said of it.",
+   "commentary_hi": "तीसरे में कोई पलटा है ही नहीं। बाक़ी दोनों अपने उलट में बदल जाते हैं; यह बस वही बना रहता है जो था — और इसके बारे में सबसे बुरी बात यही कही जा सकती है।"
+  },
+  {
+   "id": 663,
+   "number": "18.40",
+   "body_en": "Not one thing on the earth, and nothing up in the sky among the gods either, has got out from under these three modes. Nature puts them out, and there is no standing anywhere beyond her reach.",
+   "body_hi": "न धरती पर एक भी चीज़ ऐसी है, न ऊपर आकाश में देवताओं के बीच कुछ, जो इन तीन गुणों के नीचे से निकल गया हो। प्रकृति इन्हें निकालती है, और उसकी पहुँच से परे कहीं खड़े होने की जगह नहीं है।",
+   "commentary_en": "Here is why the sorting went on so long. If the three cover everything there is, then there is no standing outside them to make a choice — a man can only find out which one he is in, and the twenty verses just finished are the instrument for finding out.",
+   "commentary_hi": "इतनी लंबी छँटाई की वजह यही है। अगर ये तीन हर मौजूद चीज़ को ढक लेते हैं, तो इनसे बाहर खड़े होकर चुनने की कोई जगह बची ही नहीं — आदमी सिर्फ़ इतना पता कर सकता है कि वह किसके भीतर है, और अभी-अभी ख़त्म हुए बीस श्लोक उसी पता करने का औज़ार हैं।"
+  },
+  {
+   "id": 664,
+   "number": "18.41",
+   "body_en": "The work of the priest, of the man who rules and fights, of the man who trades, and of the man who serves, scorcher of the foe, has been parcelled out by the natures they were born with.",
+   "body_hi": "पुरोहित का काम, शासन और लड़ाई करने वाले का, व्यापार करने वाले का, और सेवा करने वाले का, हे शत्रुतापन — यह सब उन स्वभावों के हिसाब से बाँटा गया है जिनके साथ वे जन्मे।",
+   "commentary_en": "The natures they were born with. The verse rests the whole division on that phrase, and everything a reader thinks about this passage turns on how much weight it will bear.",
+   "commentary_hi": "'जिन स्वभावों के साथ वे जन्मे।' श्लोक पूरा बँटवारा इसी वाक्यांश पर टिका देता है, और इस हिस्से के बारे में पढ़ने वाला जो कुछ सोचता है वह इसी बात पर घूमता है कि यह वाक्यांश कितना बोझ उठा सकता है।"
+  },
+  {
+   "id": 665,
+   "number": "18.42",
+   "body_en": "Quiet, and the hold on oneself, and going without; being clean, and putting up with things, and straight in one's dealings; knowing, and having sat with the knowledge, and taking the word of what is there — that is the priest's work, and it grows out of what he is.",
+   "body_hi": "शांति, अपने पर पकड़, और तप; साफ़ रहना, चीज़ों को सह लेना, और लेन-देन में सीधा होना; जानना, उस जानकारी के साथ बैठ चुका होना, और जो है उसकी बात मान लेना — यह पुरोहित का काम है, और यह उसी में से उगता है जो वह है।",
+   "commentary_en": "Nine things, and not one of them is a rite. The whole list is about the kind of man he has to be before anybody should let him near an altar.",
+   "commentary_hi": "नौ चीज़ें, और उनमें एक भी कर्मकांड नहीं है। पूरी सूची इस बारे में है कि वेदी के पास आने देने से पहले उसे किस तरह का आदमी होना चाहिए।"
+  },
+  {
+   "id": 666,
+   "number": "18.43",
+   "body_en": "Bravery, and heat, and standing firm, and being handy; not running from a fight; giving with an open hand, and carrying the weight of command — that is the fighter's work, and it grows out of what he is.",
+   "body_hi": "बहादुरी, तेज़ी, जमे रहना, और काम का होना; लड़ाई से न भागना; खुले हाथ से देना, और हुक्म का बोझ उठाना — यह लड़ने वाले का काम है, और यह उसी में से उगता है जो वह है।",
+   "commentary_en": "Not running from a fight is the item on this list that has been in front of Arjuna since chapter one, and it took seventeen chapters to get round to naming it as his trade.",
+   "commentary_hi": "'लड़ाई से न भागना' — इस सूची की यही चीज़ पहले अध्याय से अर्जुन के सामने पड़ी है, और उसे उसका पेशा कहने तक पहुँचने में सत्रह अध्याय लग गए।"
+  },
+  {
+   "id": 667,
+   "number": "18.44",
+   "body_en": "Working the land, minding the cattle, and buying and selling are the trader's work, and they grow out of what he is. Work that is done in another man's service is the servant's, and it grows out of what he is.",
+   "body_hi": "ज़मीन जोतना, गाय-बैल सँभालना, और ख़रीदना-बेचना — यह व्यापारी का काम है, और यह उसी में से उगता है जो वह है। जो काम किसी दूसरे की सेवा में होता है वह सेवक का है, और वह भी उसी में से उगता है जो वह है।",
+   "commentary_en": "The fourth gets half a line and no qualities at all, only a relation to somebody else. The text is old and it shows here more than anywhere; what the next verses do with it is the interesting part.",
+   "commentary_hi": "चौथे को आधी पंक्ति मिलती है और कोई गुण नहीं, सिर्फ़ किसी और से एक रिश्ता। पाठ पुराना है और यह बात यहाँ सबसे ज़्यादा दिखती है; दिलचस्प हिस्सा यह है कि आगे के श्लोक इसका करते क्या हैं।"
+  },
+  {
+   "id": 668,
+   "number": "18.45",
+   "body_en": "A man arrives by staying pleased with his own work, whatever it happens to be. Hear how he does arrive, when he takes pleasure in the work that is his.",
+   "body_hi": "आदमी अपने ही काम में ख़ुश रहकर पहुँचता है, वह काम चाहे जो हो। सुनो कि वह पहुँचता कैसे है, जब उसे अपने ही काम में मज़ा आता है।",
+   "commentary_en": "Whatever it happens to be. That is the turn, and it arrives immediately after the shortest and least flattering entry on the list. The road does not run through the ranking.",
+   "commentary_hi": "'वह काम चाहे जो हो।' यही मोड़ है, और वह ठीक उस सबसे छोटी और सबसे कम तारीफ़ वाली प्रविष्टि के बाद आता है। रास्ता उस दर्जेबंदी में से होकर नहीं जाता।"
+  },
+  {
+   "id": 669,
+   "number": "18.46",
+   "body_en": "The one every creature came out of, the one all this is spread through — a man reaches what he is after by worshipping him with the work that is his own.",
+   "body_hi": "जिसमें से हर प्राणी निकला, जिसमें यह सब फैला हुआ है — आदमी उसकी पूजा अपने ही काम से करके वह पा लेता है जिसके पीछे वह है।",
+   "commentary_en": "With the work that is his own. This is the sentence that makes the chapter's argument work: what the man does for a living is the offering, so there is no second, holier thing he ought to be doing instead.",
+   "commentary_hi": "'अपने ही काम से।' यही वाक्य अध्याय की दलील को चलाता है: आदमी जिस काम से रोटी कमाता है वही आहुति है, इसलिए कोई दूसरी, ज़्यादा पवित्र चीज़ है ही नहीं जो उसे इसकी जगह करनी चाहिए।"
+  },
+  {
+   "id": 670,
+   "number": "18.47",
+   "body_en": "Your own work, done badly, is worth more than another man's done well. Doing the work that your own nature lays out for you, a man takes on no fault.",
+   "body_hi": "तुम्हारा अपना काम, बुरी तरह किया हुआ भी, दूसरे के अच्छी तरह किए हुए काम से ज़्यादा क़ीमती है। जो काम आदमी का अपना स्वभाव उसके सामने रखता है, उसे करते हुए उस पर कोई दोष नहीं चढ़ता।",
+   "commentary_en": "Said once already at 3.35, and repeated here because the chapter is closing and this is one of the few things the book wants a reader to leave holding. Badly is not a slip: the comparison is deliberately made at its most unfavourable.",
+   "commentary_hi": "3.35 में यह एक बार कहा जा चुका है, और यहाँ दोहराया गया है क्योंकि अध्याय बंद हो रहा है और यह उन थोड़ी-सी चीज़ों में से है जिन्हें किताब चाहती है कि पढ़ने वाला साथ लेकर जाए। 'बुरी तरह' चूक नहीं है: तुलना जान-बूझकर सबसे प्रतिकूल हालत में रखी गई है।"
+  },
+  {
+   "id": 671,
+   "number": "18.48",
+   "body_en": "So a man should not let go of the work he was born to, son of Kunti, even where something is wrong with it. Every undertaking there is has a fault wrapped round it, the way smoke is wrapped round fire.",
+   "body_hi": "इसलिए आदमी को वह काम नहीं छोड़ना चाहिए जिसके लिए वह जन्मा है, कौन्तेय, चाहे उसमें कोई ख़राबी ही क्यों न हो। दुनिया के हर काम पर एक दोष लिपटा रहता है, जैसे आग पर धुआँ लिपटा रहता है।",
+   "commentary_en": "The soundest line in the chapter. Nobody gets clean work; the smoke comes with the fire and is not a sign that the fire was a mistake. A man waiting for an occupation with nothing wrong in it will wait his whole life and do nothing.",
+   "commentary_hi": "अध्याय की सबसे ठोस पंक्ति। साफ़ काम किसी को नहीं मिलता; धुआँ आग के साथ ही आता है और यह इस बात का निशान नहीं कि आग ग़लती थी। जो आदमी ऐसे पेशे का इंतज़ार कर रहा है जिसमें कोई ख़राबी न हो, वह पूरी ज़िंदगी इंतज़ार करेगा और कुछ नहीं करेगा।"
+  },
+  {
+   "id": 672,
+   "number": "18.49",
+   "body_en": "A man whose judgement is fastened to nothing anywhere, who has himself in hand and is past wanting — by laying work down he comes to the highest thing there is, where nothing more is owed and nothing more is to be done.",
+   "body_hi": "जिस आदमी की समझ कहीं भी किसी चीज़ से बँधी नहीं, जो अपने को सँभाले हुए है और चाह से आगे निकल चुका है — वह काम को रख देकर उस सबसे ऊँची चीज़ तक पहुँचता है, जहाँ न कुछ बाक़ी है न कुछ करना है।",
+   "commentary_en": "Laying work down turns up again at the end, and it means what 18.11 said it meant. The man is still working. What he has set down is the account.",
+   "commentary_hi": "'काम रख देना' आख़िर में फिर आता है, और इसका मतलब वही है जो 18.11 ने बताया था। आदमी काम अब भी कर रहा है। जो उसने रखा है वह हिसाब है।"
+  },
+  {
+   "id": 673,
+   "number": "18.50",
+   "body_en": "Once a man has come that far, learn from me how he takes hold of brahman, son of Kunti — the end of the road for knowing anything, and I will tell it you shortly.",
+   "body_hi": "आदमी जब इतनी दूर आ चुका, तो मुझसे सीखो कि वह ब्रह्म को कैसे थामता है, कौन्तेय — जानने की सारी सड़क का आख़िरी सिरा, और मैं तुम्हें यह थोड़े में बताऊँगा।",
+   "commentary_en": "Shortly, and he takes six verses over it, which for this subject counts as short.",
+   "commentary_hi": "'थोड़े में' — और इस पर वे छह श्लोक लगाते हैं, जो इस विषय के लिए थोड़ा ही गिना जाएगा।"
+  },
+  {
+   "id": 674,
+   "number": "18.51",
+   "body_en": "Yoked to a judgement that has been washed clean, keeping himself in hand with some backbone, having put down sound and the rest of what the senses live on, and having thrown out both the pull and the push —",
+   "body_hi": "धुली हुई समझ से जुड़ा हुआ, रीढ़ के साथ अपने को सँभाले हुए, आवाज़ और बाक़ी उन चीज़ों को नीचे रखकर जिन पर इन्द्रियाँ जीती हैं, और खिंचाव और धक्का दोनों बाहर फेंककर —",
+   "commentary_en": "Three verses run on into each other here without stopping, which the book does only for the things it will not break up. What follows is a single description from start to finish.",
+   "commentary_hi": "यहाँ तीन श्लोक बिना रुके एक-दूसरे में चलते जाते हैं, और किताब ऐसा सिर्फ़ उन्हीं चीज़ों के लिए करती है जिन्हें वह तोड़ना नहीं चाहती। आगे जो है वह शुरू से आख़िर तक एक ही बयान है।"
+  },
+  {
+   "id": 675,
+   "number": "18.52",
+   "body_en": "keeping to himself, eating little, with his speech and his body and his mind held in; always at the practice that joins him up, and leaning the whole of his weight on not wanting —",
+   "body_hi": "अपने तक रहता हुआ, कम खाता हुआ, अपनी बात, अपनी देह और अपने मन को थामे हुए; हमेशा उस अभ्यास पर जो उसे जोड़ता है, और अपना पूरा बोझ न-चाहने पर टिकाए हुए —",
+   "commentary_en": "Eating little. The book keeps putting the ordinary and the exalted in the same list, and it is one of the surest signs that it was written by somebody who had tried this rather than read about it.",
+   "commentary_hi": "'कम खाता हुआ।' किताब साधारण और ऊँची चीज़ों को बार-बार एक ही सूची में रखती है, और यह उन सबसे पक्के निशानों में से है कि इसे लिखने वाले ने इसे पढ़ा नहीं, करके देखा था।"
+  },
+  {
+   "id": 676,
+   "number": "18.53",
+   "body_en": "and having let go of the I-am-doing-it, the force, the swagger, the wanting, the temper, the keeping of things — nothing is his and he is quiet in himself. That man is fit to be brahman.",
+   "body_hi": "और 'मैं कर रहा हूँ' को, ज़ोर को, अकड़ को, चाह को, ग़ुस्से को, चीज़ें जमा रखने को जाने देकर — कुछ भी उसका नहीं है और वह अपने भीतर शांत है। वह आदमी ब्रह्म होने के लायक़ है।",
+   "commentary_en": "Six things put down, and force is on the list beside the temper and the swagger. The book does not often hold a man's strength against him, but here it is the grip that has to go.",
+   "commentary_hi": "छह चीज़ें नीचे रखी गईं, और ग़ुस्से और अकड़ के साथ 'ज़ोर' भी सूची में है। किताब आदमी की ताक़त को उसके ख़िलाफ़ कम ही गिनती है, पर यहाँ जाना उसी पकड़ को है।"
+  },
+  {
+   "id": 677,
+   "number": "18.54",
+   "body_en": "Become brahman, and clear in himself, he does not grieve and he does not want. He is the same toward every creature alive, and he comes into the highest love of me.",
+   "body_hi": "ब्रह्म हो चुका, और अपने भीतर साफ़, वह न शोक करता है न चाहता है। हर जीवित प्राणी के लिए वह एक-सा है, और वह मेरे उस सबसे ऊँचे प्रेम में आ जाता है।",
+   "commentary_en": "The order is the surprise. Becoming brahman is not the end of the road; it is where the love starts. Everything the philosophy was working toward turns out to be the doorway into the thing chapter twelve was about.",
+   "commentary_hi": "चौंकाने वाली बात क्रम है। ब्रह्म हो जाना रास्ते का आख़िर नहीं है; प्रेम वहीं से शुरू होता है। पूरा दर्शन जिस चीज़ की ओर काम कर रहा था, वह उसी चीज़ का दरवाज़ा निकलती है जिस पर बारहवाँ अध्याय था।"
+  },
+  {
+   "id": 678,
+   "number": "18.55",
+   "body_en": "Through that love he comes to know me for what I am, how much of me there is and who; and having known me as I am, he goes into me on the spot.",
+   "body_hi": "उसी प्रेम से वह मुझे वैसा जान लेता है जैसा मैं हूँ — मैं कितना हूँ और कौन हूँ; और जैसा मैं हूँ वैसा जान लेने पर वह उसी जगह मुझमें चला आता है।",
+   "commentary_en": "Knowing comes second, out of the love, and not the other way round. That is the reverse of how the argument has usually been made, and it is the book's own answer to the question it set itself in chapter twelve.",
+   "commentary_hi": "जानना दूसरे नंबर पर आता है, प्रेम में से — उलटा नहीं। यह उस तरीक़े से उलटा है जिससे दलील आम तौर पर रखी जाती है, और यह उस सवाल का किताब का अपना जवाब है जो उसने बारहवें अध्याय में ख़ुद अपने सामने रखा था।"
+  },
+  {
+   "id": 679,
+   "number": "18.56",
+   "body_en": "A man who does all the work there is to do, all the time, and keeps his shelter in me — he reaches by my grace the place that lasts and does not end.",
+   "body_hi": "जो आदमी सारा काम करता है, हर वक़्त, और अपनी पनाह मुझमें रखे रहता है — वह मेरी कृपा से उस जगह पहुँचता है जो टिकती है और ख़त्म नहीं होती।",
+   "commentary_en": "All the work there is to do, all the time. No retirement, no half-measure, no withdrawal. The shelter is the whole of what has changed.",
+   "commentary_hi": "'सारा काम, हर वक़्त।' न संन्यास, न आधा-अधूरा, न हट जाना। बदला सिर्फ़ इतना है कि पनाह कहाँ है।"
+  },
+  {
+   "id": 680,
+   "number": "18.57",
+   "body_en": "Hand over everything you do to me in your own mind. Take me for what you are aiming at. Get hold of the yoking that runs through the judgement, and keep your thought on me, always.",
+   "body_hi": "जो कुछ तुम करते हो, वह सब अपने मन में मुझे सौंप दो। जिस निशाने पर जा रहे हो, वह मुझे मान लो। उस जुड़ाव को पकड़ो जो समझ में से होकर चलता है, और अपना ध्यान मुझ पर रखो, हमेशा।",
+   "commentary_en": "In your own mind. Nothing outward is being asked for; the same work goes on and the transfer happens where nobody can see it.",
+   "commentary_hi": "'अपने मन में।' बाहर से कुछ नहीं माँगा जा रहा; वही काम चलता रहता है और सौंपना वहाँ होता है जहाँ किसी को दिखता नहीं।"
+  },
+  {
+   "id": 681,
+   "number": "18.58",
+   "body_en": "Keep your thought on me and you will get past everything that is hard, by my grace. But if the I-am-the-one-doing-it makes you deaf to this, you will be lost.",
+   "body_hi": "अपना ध्यान मुझ पर रखो और तुम हर कठिन चीज़ के पार निकल जाओगे, मेरी कृपा से। पर अगर 'करने वाला मैं हूँ' ने तुम्हें इसके लिए बहरा कर दिया, तो तुम गए।",
+   "commentary_en": "The threat is not punishment. It is the plain observation that a man too full of himself to hear the offer will not take it, and that is the whole of what happens to him.",
+   "commentary_hi": "यह धमकी सज़ा नहीं है। यह सीधी-सी बात है कि जो आदमी अपने में इतना भरा है कि पेशकश सुन ही नहीं सकता, वह उसे लेगा भी नहीं — और उसके साथ जो होता है वह बस इतना ही है।"
+  },
+  {
+   "id": 682,
+   "number": "18.59",
+   "body_en": "If you take yourself in hand and say you will not fight, that settling of yours is empty. Your own make-up will put you to it.",
+   "body_hi": "अगर तुम अपने को थामकर कह दो कि मैं नहीं लड़ूँगा, तो तुम्हारा वह तय करना खोखला है। तुम्हारी अपनी बनावट तुम्हें उसमें लगा देगी।",
+   "commentary_en": "The hardest thing said to Arjuna in eighteen chapters, and it has nothing to do with duty. It is a prediction about him: he will fight, and the only open question is whether he will have understood anything by the time he does.",
+   "commentary_hi": "अठारह अध्यायों में अर्जुन से कही गई सबसे कड़ी बात, और इसका कर्तव्य से कोई लेना-देना नहीं है। यह उसके बारे में एक भविष्यवाणी है: वह लड़ेगा, और खुला सवाल सिर्फ़ इतना है कि तब तक वह कुछ समझ चुका होगा या नहीं।"
+  },
+  {
+   "id": 683,
+   "number": "18.60",
+   "body_en": "Tied down by the work your own make-up gives you, son of Kunti, you will be carried into the very thing you do not want to do, by the fog you are in. You will do it whether you will or no.",
+   "body_hi": "अपनी ही बनावट के दिए काम से बँधे हुए, कौन्तेय, तुम उसी चीज़ में खींच लिए जाओगे जिसे तुम करना नहीं चाहते, उसी कुहासे से जिसमें तुम हो। तुम वह करोगे, चाहो या न चाहो।",
+   "commentary_en": "By the fog you are in. That is the point of it: the refusal is not freedom, it is one more thing his nature is doing to him while he believes he is choosing.",
+   "commentary_hi": "'उसी कुहासे से जिसमें तुम हो।' बात यही है: इनकार आज़ादी नहीं है, वह एक और चीज़ है जो उसका स्वभाव उसके साथ कर रहा है — जबकि वह समझ रहा है कि वह चुन रहा है।"
+  },
+  {
+   "id": 684,
+   "number": "18.61",
+   "body_en": "The lord is standing in the heart of every creature there is, Arjuna, and by his trick of making things he turns them all round and round, mounted on a machine.",
+   "body_hi": "हर प्राणी के हृदय में वह स्वामी खड़ा है, अर्जुन, और चीज़ें बनाने की अपनी माया से वह उन सबको घुमाता रहता है, किसी कल पर चढ़ाए हुए।",
+   "commentary_en": "Mounted on a machine — the image is of figures fixed to a turning frame, and it is the bleakest picture the book draws of a man's freedom. The next verse is the way out of it, and it is put immediately, before the reader has time to sit with this one.",
+   "commentary_hi": "'किसी कल पर चढ़ाए हुए' — छवि उन पुतलों की है जो घूमते हुए ढाँचे पर जड़े होते हैं, और आदमी की आज़ादी की यह किताब की खींची सबसे उजाड़ तस्वीर है। अगला श्लोक इससे बाहर निकलने का रास्ता है, और वह फ़ौरन रखा जाता है, इससे पहले कि पढ़ने वाले को इसके साथ बैठने का वक़्त मिले।"
+  },
+  {
+   "id": 685,
+   "number": "18.62",
+   "body_en": "Go to him for shelter, with the whole of what you are, Bharata. By his grace you will come into rest and into the place that stands, where nothing ends.",
+   "body_hi": "उसी की पनाह में जाओ, अपने पूरे के पूरे साथ, भारत। उसकी कृपा से तुम विश्राम में आओगे और उस ठहरी हुई जगह में, जहाँ कुछ ख़त्म नहीं होता।",
+   "commentary_en": "The whole of what you are. Not part, and not the good part. The figure on the turning frame is not told to get off it; he is told where to lean.",
+   "commentary_hi": "'अपने पूरे के पूरे साथ।' हिस्सा नहीं, और अच्छा हिस्सा भी नहीं। घूमते ढाँचे पर जड़े पुतले से यह नहीं कहा जाता कि उतर आ; उससे कहा जाता है कि किस ओर टिक जा।"
+  },
+  {
+   "id": 686,
+   "number": "18.63",
+   "body_en": "There. I have told you what is harder to get at than anything hidden. Turn it over completely, and then do as you like.",
+   "body_hi": "लो। जो किसी भी छिपी चीज़ से ज़्यादा मुश्किल से हाथ आता है, वह मैंने तुम्हें बता दिया। इसे पूरी तरह उलट-पलट कर देखो, और फिर जैसा तुम्हें ठीक लगे वैसा करो।",
+   "commentary_en": "After the machine and the turning, after eighteen chapters, the matter is handed back. Whatever the book thinks freedom is, it thinks Arjuna has enough of it to be left with the decision.",
+   "commentary_hi": "कल और घुमाव के बाद, अठारह अध्यायों के बाद, मामला वापस उसी के हाथ में सौंप दिया जाता है। किताब आज़ादी को जो भी समझती हो, वह यह समझती है कि अर्जुन के पास इतनी तो है कि फ़ैसला उसी पर छोड़ा जा सके।"
+  },
+  {
+   "id": 687,
+   "number": "18.64",
+   "body_en": "Hear it once more, the last thing of all, the closest-held thing I have. I am telling you this because you are dear to me past any doubt, and because it will do you good.",
+   "body_hi": "एक बार और सुनो — सबसे आख़िरी बात, वह जो मैंने सबसे पास रखी है। मैं यह तुम्हें इसलिए बता रहा हूँ कि तुम मुझे बिना किसी शक के प्यारे हो, और इसलिए कि इससे तुम्हारा भला होगा।",
+   "commentary_en": "The reason given is not that Arjuna has earned it or understood enough. It is affection, stated plainly, and it is the only reason offered anywhere for why any of this was said at all.",
+   "commentary_hi": "वजह यह नहीं दी जाती कि अर्जुन ने इसे कमाया है या काफ़ी समझ लिया है। वजह स्नेह है, सीधे-सीधे कहा हुआ — और यही अकेली वजह है जो कहीं भी इस बात के लिए दी गई है कि यह सब कहा ही क्यों गया।"
+  },
+  {
+   "id": 688,
+   "number": "18.65",
+   "body_en": "Keep your mind on me. Be mine. Put your offering in front of me and bend your head to me. It will bring you all the way to me, and I am giving you my word on that, because I hold you close.",
+   "body_hi": "अपना मन मुझ पर रखो। मेरे हो जाओ। अपनी आहुति मेरे सामने रखो और मेरे आगे सिर झुकाओ। यह तुम्हें पूरे रास्ते मुझ तक ले आएगा, और इस पर मैं तुम्हें अपना वचन दे रहा हूँ, क्योंकि तुम मेरे नज़दीक हो।",
+   "commentary_en": "Four things asked, and not one of them is an achievement. Then a word given, and the ground under it is affection again. The book has been building an argument for seventeen chapters and it finishes by making a personal undertaking.",
+   "commentary_hi": "चार चीज़ें माँगी गईं, और उनमें एक भी उपलब्धि नहीं है। फिर एक वचन, और उसके नीचे की ज़मीन फिर वही स्नेह है। किताब सत्रह अध्यायों से एक दलील खड़ी कर रही थी और वह अपनी ओर से ज़िम्मा लेकर ख़त्म करती है।"
+  },
+  {
+   "id": 689,
+   "number": "18.66",
+   "body_en": "Set every duty aside, all of them, and come to me alone for shelter. I will get you out from under everything you have done wrong. Do not grieve.",
+   "body_hi": "सारे कर्तव्य एक तरफ़ रख दो, सब के सब, और अकेले मेरी पनाह में आ जाओ। तुमने जो कुछ ग़लत किया है, उस सबके नीचे से मैं तुम्हें निकाल लूँगा। शोक मत करो।",
+   "commentary_en": "The most argued-over verse in the book, and the thing to notice is that it ends in two words of comfort rather than a doctrine. The chapter has just spent eight verses on duty and the man's own work; this does not cancel them, it says where he is to stand while he does them. And do not grieve is the answer to 2.11, which was the first thing said to him. The whole dialogue is bracketed by the same instruction.",
+   "commentary_hi": "किताब का सबसे ज़्यादा बहस वाला श्लोक, और देखने की बात यह है कि यह किसी सिद्धांत पर नहीं, दो शब्दों की तसल्ली पर ख़त्म होता है। अध्याय अभी-अभी आठ श्लोक कर्तव्य और आदमी के अपने काम पर ख़र्च कर चुका है; यह उन्हें काटता नहीं, यह बताता है कि उन्हें करते हुए उसे खड़ा कहाँ होना है। और 'शोक मत करो' 2.11 का जवाब है, जो उससे कही गई पहली बात थी। पूरा संवाद एक ही हिदायत के बीच बँधा हुआ है।"
+  },
+  {
+   "id": 690,
+   "number": "18.67",
+   "body_en": "Never say any of this to a man who goes without going without, or who has no love in him, or who will not listen, or who has no use for me and speaks against me.",
+   "body_hi": "यह सब कभी ऐसे आदमी से मत कहना जो तप के बिना जीता है, या जिसमें प्रेम नहीं है, या जो सुनने को तैयार नहीं, या जिसे मुझसे कोई मतलब नहीं और जो मेरे ख़िलाफ़ बोलता है।",
+   "commentary_en": "Four kinds of man, and it is the third that does the work. Nothing can be done with somebody who will not listen, and the other three are ways of not listening.",
+   "commentary_hi": "चार तरह के आदमी, और काम तीसरा करता है। जो सुनने को तैयार ही नहीं, उसके साथ कुछ नहीं किया जा सकता — और बाक़ी तीन न सुनने के ही तरीक़े हैं।"
+  },
+  {
+   "id": 691,
+   "number": "18.68",
+   "body_en": "But the man who carries this closest-held thing to the ones who love me, having given me the highest love himself — he will come to me, and there is no doubt left over about it.",
+   "body_hi": "पर जो आदमी यह सबसे पास रखी बात उन तक पहुँचाता है जो मुझसे प्रेम करते हैं, और जिसने ख़ुद मुझे वह सबसे ऊँचा प्रेम दिया है — वह मुझ तक आएगा, और इसमें कोई शक बाक़ी नहीं रहता।",
+   "commentary_en": "Having given me the highest love himself. The condition is on the teller, not the hearer. A man who does not have the thing cannot hand it on, whatever words he uses.",
+   "commentary_hi": "'जिसने ख़ुद मुझे वह सबसे ऊँचा प्रेम दिया है।' शर्त कहने वाले पर है, सुनने वाले पर नहीं। जिस आदमी के पास चीज़ ही नहीं है वह उसे आगे नहीं दे सकता, शब्द चाहे जो इस्तेमाल करे।"
+  },
+  {
+   "id": 692,
+   "number": "18.69",
+   "body_en": "Nobody among men does anything I like better than that, and nobody else on the whole earth will be closer to me than he is.",
+   "body_hi": "आदमियों में कोई ऐसा कुछ नहीं करता जो मुझे इससे ज़्यादा भाता हो, और पूरी धरती पर कोई दूसरा मेरे इतने नज़दीक नहीं होगा जितना वह है।",
+   "commentary_en": "The highest place in the book goes to the one who passes it on. Not to the one who understood it best.",
+   "commentary_hi": "किताब की सबसे ऊँची जगह उसे मिलती है जो इसे आगे पहुँचाता है। उसे नहीं जिसने इसे सबसे अच्छा समझा।"
+  },
+  {
+   "id": 693,
+   "number": "18.70",
+   "body_en": "And whoever goes through this conversation of ours, the two of us here, has made me an offering of what he knows. That is how I take it.",
+   "body_hi": "और जो कोई हम दोनों की इस बातचीत से गुज़रता है, उसने मुझे अपने जाने हुए की आहुति चढ़ा दी। मैं इसे ऐसे ही लेता हूँ।",
+   "commentary_en": "This conversation of ours, the two of us here. The book calls itself what it is: not a scripture, a thing two people said to each other, and reading it is counted as the rite.",
+   "commentary_hi": "'हम दोनों की यह बातचीत।' किताब अपने को वही कहती है जो वह है: शास्त्र नहीं, दो लोगों के बीच कही गई एक चीज़ — और उसे पढ़ना ही कर्मकांड में गिन लिया जाता है।"
+  },
+  {
+   "id": 694,
+   "number": "18.71",
+   "body_en": "And a man who only listens to it, with some trust in him and no sneer, gets loose even so, and reaches the good worlds that belong to men whose deeds came out right.",
+   "body_hi": "और जो आदमी बस इसे सुनता भर है, थोड़े भरोसे के साथ और बिना मुँह बिचकाए, वह भी छूट जाता है, और उन अच्छे लोकों तक पहुँचता है जो सही काम करने वालों के हैं।",
+   "commentary_en": "The bar has come down as far as it can go. Listen, and do not sneer. That is the whole requirement, and it is set at the end deliberately, after everything harder.",
+   "commentary_hi": "कसौटी जितनी नीचे आ सकती थी, आ चुकी। सुनो, और मुँह मत बिचकाओ। पूरी शर्त इतनी ही है, और इसे जान-बूझकर आख़िर में रखा गया है, उन सब कठिन चीज़ों के बाद।"
+  },
+  {
+   "id": 695,
+   "number": "18.72",
+   "body_en": "Has this been heard by you, Partha, with your thought in one place? Has the fog you were in from not knowing gone off you, Dhananjaya?",
+   "body_hi": "क्या यह तुमने सुन लिया, पार्थ, अपना ध्यान एक जगह रखकर? न जानने का जो कुहासा तुम पर था, क्या वह उतर गया, धनञ्जय?",
+   "commentary_en": "He asks. After all of it, he does not assume, and the last word in the teaching is a question put to the man it was for.",
+   "commentary_hi": "वे पूछते हैं। इस सबके बाद भी वे मान नहीं लेते, और उपदेश का आख़िरी शब्द उसी आदमी से पूछा गया सवाल है जिसके लिए यह सब था।"
+  },
+  {
+   "id": 696,
+   "number": "18.73",
+   "body_en": "Arjuna said: The fog is gone. I have got back what I knew, by your grace, you who do not fall. I am standing here with it settled, and what I was in two minds about is over. I will do what you say.",
+   "body_hi": "अर्जुन ने कहा — कुहासा जा चुका। जो मैं जानता था वह मुझे वापस मिल गया है, आपकी कृपा से, हे अच्युत। मैं यहाँ इसे तय करके खड़ा हूँ, और जिस बात में मैं दुविधा में था वह ख़त्म हुई। जो आप कहते हैं वही मैं करूँगा।",
+   "commentary_en": "I have got back what I knew. Not learned something new — got back. Everything in the eighteen chapters is being described by the man who received it as the return of something he had already and had lost hold of in the first chapter.",
+   "commentary_hi": "'जो मैं जानता था वह मुझे वापस मिल गया है।' कुछ नया सीखा नहीं — वापस मिला। अठारह अध्यायों में जो कुछ है, उसे पाने वाला आदमी उसे उसी चीज़ की वापसी बता रहा है जो उसके पास पहले से थी और जिस पर से पहले अध्याय में उसकी पकड़ छूट गई थी।"
+  },
+  {
+   "id": 697,
+   "number": "18.74",
+   "body_en": "Sanjaya said: This is what I have heard, between Vasudeva's son and the great-souled Partha — a conversation to make the hair stand up on a man's body.",
+   "body_hi": "सञ्जय ने कहा — यही मैंने सुना है, वसुदेव के बेटे और महात्मा पार्थ के बीच — ऐसी बातचीत जिससे आदमी के रोंगटे खड़े हो जाएँ।",
+   "commentary_en": "The frame comes back, and with it the fact that a third man has been listening the whole time. Sanjaya has been on a throne-room floor in a palace, describing this to a blind king, while it happened.",
+   "commentary_hi": "ढाँचा लौट आता है, और उसके साथ यह बात भी कि तीसरा आदमी पूरे वक़्त सुन रहा था। सञ्जय एक महल के दरबार में फ़र्श पर बैठा है, यह सब होते हुए एक अंधे राजा को सुना रहा है।"
+  },
+  {
+   "id": 698,
+   "number": "18.75",
+   "body_en": "By Vyasa's grace I heard it, this yoking at its highest, the closest-held thing there is, told out by the lord of what joins men up — by Krishna, in his own voice, in front of me.",
+   "body_hi": "व्यास की कृपा से मैंने इसे सुना — यह जुड़ाव अपने सबसे ऊँचे पर, सबसे पास रखी जाने वाली चीज़, उसी के मुँह से कही हुई जो जोड़ने का स्वामी है — कृष्ण से, उनकी अपनी आवाज़ में, मेरे सामने।",
+   "commentary_en": "In his own voice, in front of me. Sanjaya knows what he has been given and says so once, plainly, and then gets on with reporting.",
+   "commentary_hi": "'उनकी अपनी आवाज़ में, मेरे सामने।' सञ्जय जानता है कि उसे क्या मिला है और वह यह एक बार, सीधे-सीधे कह देता है, और फिर आगे की ख़बर देने लगता है।"
+  },
+  {
+   "id": 699,
+   "number": "18.76",
+   "body_en": "King, I call it to mind and call it to mind again, this conversation, holy and hair-raising, between Keshava and Arjuna — and every time, I am glad again.",
+   "body_hi": "राजन्, मैं इसे याद करता हूँ और फिर याद करता हूँ — यह बातचीत, पवित्र और रोंगटे खड़े कर देने वाली, केशव और अर्जुन के बीच — और हर बार मैं फिर ख़ुश हो उठता हूँ।",
+   "commentary_en": "The doubling is the verse's own; it says the thing twice because that is what remembering something like this is like. Two verses of a man going back over it, and then the book ends.",
+   "commentary_hi": "यह दोहराव श्लोक का अपना है; वह बात दो बार कहता है क्योंकि ऐसी किसी चीज़ को याद करना ऐसा ही होता है। दो श्लोक एक आदमी के इसे बार-बार पलटकर देखने के, और फिर किताब ख़त्म।"
+  },
+  {
+   "id": 700,
+   "number": "18.77",
+   "body_en": "And that shape of Hari's — I call it to mind, and call it to mind again, and the wonder of it comes over me great and fresh, king; and I am glad, and glad once more.",
+   "body_hi": "और हरि के उस बेहद अनोखे रूप को याद करके, फिर याद करके, मुझ पर बड़ा अचरज छा जाता है, राजन्; और मैं ख़ुश होता हूँ, और फिर से ख़ुश।",
+   "commentary_en": "What he keeps going back to is not the argument. It is chapter eleven — the one thing in the book nobody could have talked him into and nobody can take off him.",
+   "commentary_hi": "जिस चीज़ पर वह बार-बार लौटता है वह दलील नहीं है। वह ग्यारहवाँ अध्याय है — किताब की वह अकेली चीज़ जिसके लिए उसे कोई बहला नहीं सकता था और जिसे कोई उससे छीन नहीं सकता।"
+  },
+  {
+   "id": 701,
+   "number": "18.78",
+   "body_en": "Wherever Krishna is, the lord of what joins men up, and wherever Partha is with his bow — there is good fortune there, and the winning of it, and plenty, and conduct that does not waver. So I hold.",
+   "body_hi": "जहाँ कृष्ण हैं, जोड़ने के स्वामी, और जहाँ पार्थ अपने धनुष के साथ है — वहीं अच्छा भाग्य है, और उसकी जीत, और भरपूरी, और वह चाल-चलन जो डगमगाता नहीं। मेरा मत यही है।",
+   "commentary_en": "The book ends with both men named and both still holding what they came with — one his teaching, one his bow. Nothing has been taken away from Arjuna. He was told to fight and he is standing there armed, and the last word of the whole work is that this is what a good outcome looks like.",
+   "commentary_hi": "किताब दोनों आदमियों के नाम के साथ ख़त्म होती है, और दोनों अब भी वही थामे हुए हैं जो वे लेकर आए थे — एक अपना उपदेश, एक अपना धनुष। अर्जुन से कुछ छीना नहीं गया। उससे लड़ने को कहा गया और वह हथियार लिए वहीं खड़ा है, और पूरी रचना का आख़िरी शब्द यह है कि अच्छा नतीजा दिखता ऐसा ही है।"
+  }
+ ]
+}
