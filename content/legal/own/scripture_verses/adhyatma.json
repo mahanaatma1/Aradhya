@@ -1,0 +1,570 @@
+{
+ "slug": "adhyatma",
+ "title_en": "Adhyatma Upanishad",
+ "title_hi": "अध्यात्म उपनिषद्",
+ "book_id": 25,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 20837,
+   "number": "1.1",
+   "body_en": "He is hidden in the cave of the body, the one, the everlasting. The earth is his body; he moves about inside the earth, and the earth has no idea. Water is his body, and water does not know him. Fire is his body, and fire cannot make him out. Air is his body, and air never catches him. Space is his body, and space does not recognize him. Mind is his body, and mind knows nothing of him. Understanding is his body, and it does not know him either. The ego is his body, and the ego does not see him. The heart's own stuff is his body, and it does not see him. The unmanifest is his body, and it does not see him. The imperishable is his body, and it does not see him. Death is his body; he moves about inside death, and death does not know him. This is the self within every being — sin shaken off, divine, the one god, Narayana. And the sense of I and mine that a man puts on the body and the senses and everything else that is not the self — that is the superimposition a knowing man, standing in brahman, has to take away.",
+   "body_hi": "वह देह की गुफा में छिपा बैठा है — वही एक, वही सनातन। पृथ्वी उसका शरीर है; वह पृथ्वी के भीतर चलता-फिरता है, और पृथ्वी को पता ही नहीं। जल उसका शरीर है, और जल उसे नहीं पहचानता। अग्नि उसका शरीर है, और अग्नि उसे देख ही नहीं पाती। वायु उसका शरीर है, और वायु उसे कभी पकड़ नहीं पाती। आकाश उसका शरीर है, और आकाश उसे नहीं जानता। मन उसका शरीर है, और मन को उसकी ख़बर नहीं। बुद्धि उसका शरीर है, और बुद्धि भी उसे नहीं जानती। अहंकार उसका शरीर है, और अहंकार उसे नहीं देखता। चित्त उसका शरीर है, और चित्त उसे नहीं देखता। अव्यक्त उसका शरीर है, और अव्यक्त उसे नहीं देखता। अक्षर उसका शरीर है, और अक्षर उसे नहीं देखता। मृत्यु उसका शरीर है; वह मृत्यु के भीतर चलता-फिरता है, और मृत्यु उसे नहीं जानती। यही हर प्राणी के भीतर बैठी आत्मा है — पाप से धुली, दिव्य, वही एक देवता, नारायण। और देह, इन्द्रियाँ और बाक़ी सब जो आत्मा नहीं है — उन पर आदमी जो 'मैं' और 'मेरा' का भाव चढ़ाता है, वही अध्यास है जिसे ब्रह्म में टिका जानने वाला हटा देता है।",
+   "commentary_en": "The list is the argument. Earth, water, fire, air, space, mind, understanding, ego, heart, the unmanifest, the imperishable, death — twelve covers, and each one is called his body and each one is said not to know him. The point of going through all twelve is that there is nothing left over that could be the cover. Whatever a man might point at as himself has been walked through and left behind.",
+   "commentary_hi": "यह सूची ही दलील है। पृथ्वी, जल, अग्नि, वायु, आकाश, मन, बुद्धि, अहंकार, चित्त, अव्यक्त, अक्षर, मृत्यु — बारह आवरण, और हर एक को उसका शरीर कहा गया और हर एक के बारे में कहा गया कि वह उसे नहीं जानता। इन बारह को गिनाने का मतलब यही है कि अब कोई ऐसी चीज़ बचती ही नहीं जो आवरण हो सके। आदमी जिसे भी अपना कहेगा, वह सब इस सूची में आ चुका और पीछे छूट चुका।"
+  },
+  {
+   "id": 20838,
+   "number": "1.2",
+   "body_en": "First a man comes to know his own self as it turns inward — the witness of the workings of his understanding. Then he takes up the thought I am that, and by that very working he is done with being a self to anything else.",
+   "body_hi": "पहले आदमी अपनी आत्मा को भीतर की ओर मुड़ी हुई जानता है — बुद्धि के सारे कामों का साक्षी। फिर वह 'मैं वही हूँ' की बात उठाता है, और उसी एक काम से उसका किसी और चीज़ के लिए आत्मा होना ख़त्म हो जाता है।",
+   "commentary_en": "Two steps, and they are in order. The witness comes first and the sentence comes second. The book is careful about this because the sentence without the seeing is just a sentence, and the seeing without the sentence leaves a man at a distance from what he has seen.",
+   "commentary_hi": "दो क़दम, और क्रम में हैं। पहले साक्षी, फिर वाक्य। किताब इसमें सावधान है, क्योंकि बिना देखे वाक्य बस वाक्य रह जाता है, और बिना वाक्य के देखना आदमी को उस चीज़ से कुछ दूर ही छोड़ देता है जिसे उसने देखा।"
+  },
+  {
+   "id": 20839,
+   "number": "1.3",
+   "body_en": "Stop going along with what people around you are doing. Stop going along with what your body wants. Stop going along with books. Turn around and work at removing what you have laid on top of yourself.",
+   "body_hi": "छोड़ दो दुनिया वालों के पीछे चलना। छोड़ दो देह के पीछे चलना। छोड़ दो किताबों के पीछे चलना। पलटो, और जो कुछ तुमने अपने ऊपर चढ़ा लिया है, उसे उतारने में लगो।",
+   "commentary_en": "Three things to drop, and the third is the surprise: the scriptures go too. The verse is addressed to someone who has been reading, and it tells him that the reading has become another thing to follow instead of the thing to use.",
+   "commentary_hi": "छोड़ने की तीन चीज़ें, और तीसरी चौंकाती है: शास्त्र भी। यह श्लोक ऐसे आदमी से कहा जा रहा है जो पढ़ता रहा है, और वह उससे कह रहा है कि पढ़ना भी अब एक और चीज़ बन गया है जिसके पीछे चला जाता है, उस चीज़ के बजाय जिसे काम में लाना था।"
+  },
+  {
+   "id": 20840,
+   "number": "1.4",
+   "body_en": "A man who stays put in his own self has his mind worn away and gone. He gets there by reasoning, by what he has heard, and by what he has tasted for himself — and what he knows by then is that the self in him is the self of everything.",
+   "body_hi": "जो आदमी अपनी आत्मा में जमा रहता है, उसका मन घिस-घिसकर मिट जाता है। वहाँ वह पहुँचता है तर्क से, सुने हुए से, और अपने ही अनुभव से — और तब तक वह जान चुका होता है कि जो आत्मा उसमें है वही सब की आत्मा है।",
+   "commentary_en": "Three instruments and none of them alone: reasoning, hearing, and one's own taste of it. The mind wears away rather than being killed, which is the difference between this text and the ones that talk of destroying the mind. It goes by attrition, from being kept in one place long enough.",
+   "commentary_hi": "तीन साधन, और एक भी अकेला नहीं: तर्क, सुना हुआ, और ख़ुद का चखा हुआ। मन मारा नहीं जाता, घिसकर मिटता है — यही फ़र्क़ है इस पाठ और उन पाठों में जो मन को नष्ट करने की बात करते हैं। वह एक जगह टिकाए रखने से, धीरे-धीरे, अपने आप चला जाता है।"
+  },
+  {
+   "id": 20841,
+   "number": "1.5",
+   "body_en": "Do not give it room — not to sleep, not to the talk going around, not to sounds and the rest, not to forgetting who you are. Turn your thought onto the self, and keep it in the self.",
+   "body_hi": "उसे जगह मत दो — न नींद को, न इधर-उधर की बातों को, न शब्द वग़ैरह को, न अपने आप को भूल जाने को। अपना सोच आत्मा की तरफ़ मोड़ो, और उसे आत्मा में ही रखो।",
+   "commentary_en": "It is not a list of things to hate. It is a list of things that will take the room if the room is left open, and every one of them is ordinary. Sleep, small talk, noise, and the drift of not remembering. Those four are enough to use up a life.",
+   "commentary_hi": "यह उन चीज़ों की सूची नहीं है जिनसे नफ़रत करनी है। यह उन चीज़ों की सूची है जो जगह ख़ाली मिलते ही उस पर क़ब्ज़ा कर लेंगी, और हर एक बिल्कुल आम है। नींद, गपशप, शोर, और अपने आप को भूलते चले जाना। ये चार ही एक ज़िंदगी ख़त्म करने के लिए काफ़ी हैं।"
+  },
+  {
+   "id": 20842,
+   "number": "1.6",
+   "body_en": "This body came out of the filth of a mother and a father; it is filth and flesh put together. Throw it off the way you would step away from an outcast, and be brahman — you who have done what had to be done.",
+   "body_hi": "यह देह माँ-बाप की गंदगी से निकली है; वह मल और मांस से जोड़ी गई है। इसे ऐसे फेंक दो जैसे कोई चांडाल से हट जाता है, और ब्रह्म हो जाओ — तुम, जिसने वह सब कर लिया जो करना था।",
+   "commentary_en": "The language is meant to be shocking and it is. The aim is not contempt for the body but the end of a habit, and a habit is broken by something violent enough to break it. The last phrase is the tell: this is said to somebody who has already finished, and is being told to stop carrying the equipment.",
+   "commentary_hi": "भाषा चौंकाने के लिए है और चौंकाती है। मक़सद देह से घृणा नहीं, एक आदत का अंत है — और आदत वहीं टूटती है जहाँ झटका काफ़ी ज़ोर का हो। आख़िरी पद ही असली इशारा है: यह उससे कहा जा रहा है जो पहले ही पूरा कर चुका है, और उसे कहा जा रहा है कि सामान ढोना बंद करो।"
+  },
+  {
+   "id": 20843,
+   "number": "1.7",
+   "body_en": "The space inside a pot, and the great space outside it — they are not two. Pour the self into the supreme self the same way, with no seam left anywhere, and then be quiet, always, O sage.",
+   "body_hi": "घड़े के भीतर का आकाश, और उसके बाहर का महाकाश — दो नहीं हैं। आत्मा को परमात्मा में वैसे ही डाल दो, बिना कहीं कोई जोड़ छोड़े, और फिर चुप हो जाओ, हमेशा के लिए, हे मुनि।",
+   "commentary_en": "Pot space and great space is the oldest image in this literature for a reason: nothing has to happen to the space for the two to be one. The pot has to break, or be seen through, but the space was never divided. Then a strange instruction follows all that — be quiet.",
+   "commentary_hi": "घटाकाश और महाकाश इस साहित्य की सबसे पुरानी तसवीर है, और वजह भी साफ़ है: दोनों के एक होने के लिए आकाश को कुछ करना ही नहीं पड़ता। घड़ा टूटना पड़ता है, या उसके भीतर देखना पड़ता है — पर आकाश कभी बँटा ही नहीं था। और इस सबके बाद एक अजीब बात आती है — चुप हो जाओ।"
+  },
+  {
+   "id": 20844,
+   "number": "1.8",
+   "body_en": "He lights himself and he stands under everything. Be that self by being your own self, and throw off the cosmic egg and the egg of the body the way a man throws off a pot of filth.",
+   "body_hi": "वह ख़ुद अपना उजाला है और सब के नीचे टिका है। अपने ही आत्मा से वही आत्मा बन जाओ, और ब्रह्मांड के अंडे को और देह के अंडे को ऐसे फेंक दो जैसे आदमी गंदगी का बर्तन फेंकता है।",
+   "commentary_en": "The cosmic egg and the body egg are thrown off in one motion, which is the whole point of the sentence. A man who can let go of the universe can let go of his body, and a man who cannot let go of his body has not really let go of the universe.",
+   "commentary_hi": "ब्रह्मांड का अंडा और देह का अंडा एक ही हरकत में फेंके जाते हैं, और यही पूरे वाक्य का मतलब है। जो ब्रह्मांड छोड़ सकता है वह अपनी देह भी छोड़ सकता है, और जो अपनी देह नहीं छोड़ पाता उसने ब्रह्मांड भी सचमुच नहीं छोड़ा।"
+  },
+  {
+   "id": 20845,
+   "number": "1.9",
+   "body_en": "The self is wide awake and it is always full of joy. Take the I-notion, which has climbed up onto the body, and set it down there instead. Then drop the subtle body, and be alone — for good.",
+   "body_hi": "आत्मा चेतना है और सदा आनंद से भरी है। देह पर चढ़ बैठी 'मैं' की धारणा को वहीं उतारकर रख दो। फिर सूक्ष्म देह को भी गिरा दो, और अकेले रह जाओ — हमेशा के लिए।",
+   "commentary_en": "The I has climbed up onto the body, and the instruction is not to destroy it but to move it back down to where it belongs. Nothing is killed in this text. Things are put in their right place, and the wrongness was only ever a matter of position.",
+   "commentary_hi": "'मैं' देह पर चढ़ बैठा है, और निर्देश उसे नष्ट करने का नहीं, वापस उतारकर उसकी जगह पर रख देने का है। इस पाठ में कुछ भी मारा नहीं जाता। चीज़ें अपनी सही जगह पर रखी जाती हैं, और ग़लती सिर्फ़ जगह की थी।"
+  },
+  {
+   "id": 20846,
+   "number": "1.10",
+   "body_en": "This whole world shows up in it the way a room shows up in a mirror. Know that brahman is what you are, and you are a man with nothing left to do, O sinless one.",
+   "body_hi": "यह पूरा संसार उसमें ऐसे दिखता है जैसे आईने में एक कमरा। जान लो कि ब्रह्म ही तुम हो, और तुम वह आदमी हो जिसके पास करने को कुछ नहीं बचा, हे निष्पाप।",
+   "commentary_en": "A room in a mirror — the room is not in the mirror and the mirror is not changed by the room. The verse is addressed to somebody who has already understood, and told that the consequence is not more work but the end of work.",
+   "commentary_hi": "आईने में एक कमरा — कमरा आईने के भीतर नहीं है और आईना कमरे से बदलता नहीं। यह श्लोक उससे कहा जा रहा है जो समझ चुका है, और उसे बताया जा रहा है कि इसका नतीजा और काम नहीं, काम का अंत है।"
+  },
+  {
+   "id": 20847,
+   "number": "1.11",
+   "body_en": "Let go of the grip the ego has on you and you come back to what you already are — clean as the moon, full, always happy, carrying your own light.",
+   "body_hi": "अहंकार की पकड़ छोड़ दो, और तुम वहाँ लौट आते हो जो तुम हो — चाँद जैसे निर्मल, पूरे, सदा प्रसन्न, अपना उजाला आप ढोते हुए।",
+   "commentary_en": "Four words for what a man is when the grip is released, and all four are images of wholeness rather than of emptiness. The moon here is the full moon, clean and complete, and the light is described as his own — not borrowed from anywhere.",
+   "commentary_hi": "पकड़ छूटने पर आदमी जो होता है उसके चार शब्द, और चारों पूर्णता की तसवीरें हैं, ख़ालीपन की नहीं। यहाँ चाँद पूर्णिमा का है — निर्मल और पूरा — और उजाला उसका अपना कहा गया है, कहीं से उधार लिया हुआ नहीं।"
+  },
+  {
+   "id": 20848,
+   "number": "1.12",
+   "body_en": "When a man stops doing, his thinking stops too. When his thinking stops, his habits wear out. And when his habits are worn out — that is freedom, and that is what is meant by being free while still alive.",
+   "body_hi": "जब आदमी करना छोड़ देता है, तो सोचना भी छूट जाता है। सोचना छूटा तो आदतें घिस जाती हैं। और आदतें जब घिस गईं — वही मुक्ति है, और यही है जीते-जी मुक्त होना।",
+   "commentary_en": "The chain runs from action to thought to habit to freedom, and the last link is the one that matters. Freedom is not described as a state a man enters. It is described as what is left when a set of habits has stopped growing back.",
+   "commentary_hi": "सिलसिला कर्म से सोच तक, सोच से आदत तक, आदत से मुक्ति तक चलता है, और आख़िरी कड़ी ही असली है। मुक्ति को ऐसी हालत नहीं बताया गया जिसमें आदमी दाख़िल होता है। उसे वह बताया गया है जो तब बचता है जब आदतें फिर से उगना बंद कर दें।"
+  },
+  {
+   "id": 20849,
+   "number": "1.13",
+   "body_en": "Look at brahman and nothing but brahman, everywhere, on every side, in every single thing. And when the felt sense of what is real has grown rich in you, you come to where the habits settle and go still.",
+   "body_hi": "हर जगह, हर तरफ़, हर एक चीज़ में ब्रह्म को देखो और ब्रह्म के सिवा कुछ न देखो। और जब सत्य का अनुभव तुममें गहरा हो जाए, तब तुम वहाँ पहुँचते हो जहाँ आदतें बैठ जाती हैं और थम जाती हैं।",
+   "commentary_en": "Seeing comes first and the settling comes after, and the text does not reverse them. A man does not get quiet in order to see; he sees, and then the noise has nothing to feed on.",
+   "commentary_hi": "पहले देखना, फिर ठहरना — और पाठ इन्हें उलटता नहीं। आदमी देखने के लिए चुप नहीं होता; वह देखता है, और तब शोर के पास खाने को कुछ नहीं बचता।"
+  },
+  {
+   "id": 20850,
+   "number": "1.14",
+   "body_en": "Never let yourself get slack about standing in brahman. Those who talk about brahman have a saying for it: where knowledge is at stake, being slack about it is the same thing as dying.",
+   "body_hi": "ब्रह्म में टिके रहने के बारे में अपने आप को ढीला पड़ने मत दो। जो ब्रह्म की बात करते हैं उनका इस पर एक कहा हुआ है: जहाँ ज्ञान का सवाल है, वहाँ ढीला पड़ना और मर जाना एक ही बात है।",
+   "commentary_en": "Going slack is dying — an unusually blunt sentence in a book that has nothing to say about punishment. The point is that the standing is not a state a man acquires once. It is something he is doing or not doing, at any moment, and the failure mode is quiet.",
+   "commentary_hi": "'ढीला पड़ना और मर जाना एक ही बात है' — इस किताब में यह असामान्य रूप से कड़ा वाक्य है, जिसमें दंड की बात कहीं नहीं है। मतलब यह कि यह टिकाव ऐसी हालत नहीं जो एक बार मिल जाए। यह हर पल किया जा रहा काम है या नहीं किया जा रहा — और चूक चुपचाप होती है।"
+  },
+  {
+   "id": 20851,
+   "number": "1.15",
+   "body_en": "Moss that has been dragged off a pond does not stay off it even for a moment. That is how maya comes back over a man — over a wise man too, the moment he turns his face away.",
+   "body_hi": "तालाब से खींचकर हटाई गई काई एक पल भी हटी नहीं रहती। माया भी आदमी पर वैसे ही चढ़ आती है — बुद्धिमान पर भी, जैसे ही वह मुँह फेरता है।",
+   "commentary_en": "The moss image is exact and it is not encouraging. Moss does not return because the man did something wrong. It returns because that is what moss does in water, and the only thing that helps is not turning away.",
+   "commentary_hi": "काई की तसवीर एकदम सटीक है, और तसल्ली देने वाली नहीं। काई लौटती नहीं है इसलिए कि आदमी ने कुछ ग़लत किया। वह लौटती है क्योंकि पानी में काई का यही काम है — और एक ही चीज़ काम आती है, मुँह न फेरना।"
+  },
+  {
+   "id": 20852,
+   "number": "1.16",
+   "body_en": "The man who is free while he is still in a body is free when the body is gone too. Come to sit steady in samadhi and let nothing stir in you, O sinless one.",
+   "body_hi": "जो आदमी देह में रहते हुए मुक्त है, वह देह छूटने पर भी मुक्त ही है। समाधि में जमकर बैठना सीखो, और भीतर कुछ भी हिलने मत दो, हे निष्पाप।",
+   "commentary_en": "Free now, free later — the verse refuses the idea that liberation is something that happens to a man at the end. If it is not the case now, it will not be the case then either, because there will be nothing different about the man.",
+   "commentary_hi": "'अब मुक्त, बाद में भी मुक्त' — यह श्लोक इस बात को नहीं मानता कि मोक्ष आदमी के साथ अंत में कहीं होता है। अगर वह अभी नहीं है, तो तब भी नहीं होगा, क्योंकि तब उस आदमी में ऐसा कुछ भी अलग नहीं होगा।"
+  },
+  {
+   "id": 20853,
+   "number": "1.17",
+   "body_en": "Then the knot that ignorance has tied in the heart comes undone, right to the end, with nothing left of it. And that is when samadhi is steady and a man sees the self as one and not two.",
+   "body_hi": "तब अज्ञान ने जो गाँठ हृदय में बाँध रखी है वह खुल जाती है, पूरी की पूरी, कुछ भी बचा नहीं रहता। और तभी समाधि टिकती है और आदमी आत्मा को एक देखता है, दो नहीं।",
+   "commentary_en": "A knot in the heart is the right image, because a knot is not an object sitting in a place. It is a tightening, and it comes undone rather than being removed. The verse puts the undoing before the steady samadhi, not after.",
+   "commentary_hi": "हृदय की गाँठ सही तसवीर है, क्योंकि गाँठ कोई चीज़ नहीं है जो किसी जगह पड़ी हो। वह एक कसाव है, और वह हटती नहीं, खुलती है। श्लोक समाधि के टिकने को बाद में रखता है, पहले नहीं।"
+  },
+  {
+   "id": 20854,
+   "number": "1.18",
+   "body_en": "Here, make your being the self and firm it up. Let the I and the rest go. And toward all of them stay as indifferent as you would toward a pot lying in a corner or a cloth thrown over a line.",
+   "body_hi": "यहाँ, अपने होने को आत्मा बनाओ और उसे पक्का करो। 'मैं' वग़ैरह को जाने दो। और उन सबके प्रति वैसे ही बेपरवाह रहो जैसे कोने में पड़े घड़े या तार पर टँगे कपड़े के प्रति रहते हो।",
+   "commentary_en": "A pot in a corner and a cloth on a line — household things, noticed and not attended to. The indifference asked for here is not coldness. It is what a man already feels toward everything in his house that is doing nothing.",
+   "commentary_hi": "कोने में पड़ा घड़ा और तार पर टँगा कपड़ा — घर की चीज़ें, जो दिखती हैं पर जिन पर ध्यान नहीं जाता। यहाँ जो बेपरवाही माँगी गई है वह ठंडापन नहीं है। वह वही है जो आदमी अपने घर की हर उस चीज़ के लिए पहले से महसूस करता है जो कुछ कर नहीं रही।"
+  },
+  {
+   "id": 20855,
+   "number": "1.19",
+   "body_en": "From Brahma down to a blade of grass, every one of the conditions a thing is met under is a fiction. See through them, and what you see is your own self, full, standing as one self and nothing beside it.",
+   "body_hi": "ब्रह्मा से लेकर घास के एक तिनके तक, जिन शर्तों में कोई चीज़ मिलती है वे सब कल्पना हैं। उन्हें भेदकर देखो, और जो दिखता है वह तुम्हारी अपनी आत्मा है — पूरी, एक आत्मा बनकर खड़ी, और उसके पास कुछ नहीं।",
+   "commentary_en": "Down to a blade of grass, and the range is the point. The conditions are not just the grand ones — the roles of gods and men — but the smallest ones too, and the verse will not let a man keep one of them as real.",
+   "commentary_hi": "'घास के एक तिनके तक', और यही फैलाव असली बात है। ये शर्तें सिर्फ़ बड़ी-बड़ी नहीं हैं — देवताओं और मनुष्यों की भूमिकाएँ — सबसे छोटी भी हैं, और श्लोक आदमी को एक भी असली रखने नहीं देता।"
+  },
+  {
+   "id": 20856,
+   "number": "1.20",
+   "body_en": "He is Brahma himself. He is Vishnu himself. He is Indra, he is Shiva — he is this whole world, all of it. There is nothing at all that is not him.",
+   "body_hi": "वही ब्रह्मा है। वही विष्णु है। वही इन्द्र है, वही शिव — वही यह पूरा संसार है, सब कुछ। ऐसा कुछ भी नहीं जो उससे अलग हो।",
+   "commentary_en": "The names go by and the sentence does not change shape, which is what makes the last line land. The list is not a list of gods who are also him; it is one thing being pointed at under every name that people use.",
+   "commentary_hi": "नाम बदलते जाते हैं और वाक्य का ढाँचा नहीं बदलता — और इसी से आख़िरी पंक्ति बैठती है। यह उन देवताओं की सूची नहीं है जो उसी के भी हैं; यह एक ही चीज़ की तरफ़ इशारा है, हर उस नाम के नीचे जो लोग इस्तेमाल करते हैं।"
+  },
+  {
+   "id": 20857,
+   "number": "1.21",
+   "body_en": "A man has laid a great many unreal things on his own self. When he has thrown all of them off, what is left is the supreme brahman — and it is himself.",
+   "body_hi": "आदमी ने अपनी आत्मा पर बहुत सी झूठी चीज़ें चढ़ा रखी हैं। जब वह उन सबको उतार फेंकता है, तो जो बचता है वही परब्रह्म है — और वह ख़ुद वही है।",
+   "commentary_en": "Nothing is added anywhere in this book. Every instruction is a taking away, and the result is always described as something a man already was. That is why the last clause has to be said at all: the finding is not news.",
+   "commentary_hi": "इस पूरी किताब में कहीं कुछ जोड़ा नहीं जाता। हर निर्देश हटाने का है, और नतीजा हमेशा वही बताया जाता है जो आदमी पहले से था। इसीलिए आख़िरी बात कहनी ही पड़ती है: जो मिला वह कोई नई ख़बर नहीं है।"
+  },
+  {
+   "id": 20858,
+   "number": "1.22",
+   "body_en": "This business of calling it the universe is a construction built on something that is not there, raised on one single thing. Where there is no change and no shape and nothing to set it apart — how could there be a difference?",
+   "body_hi": "'संसार' कहने का यह सारा काम उस चीज़ पर खड़ा किया गया है जो है ही नहीं, और बनाया गया है एक ही चीज़ पर। जहाँ कोई बदलाव नहीं, कोई आकार नहीं, और अलग करने को कुछ नहीं — वहाँ फ़र्क़ कहाँ से आए?",
+   "commentary_en": "The question is not answered, and it is asked twice in the next two verses in the same words. A difference needs two things and a line between them, and the verse has just removed every candidate for where that line could be drawn.",
+   "commentary_hi": "सवाल का जवाब नहीं दिया जाता, और अगले दो श्लोकों में वही सवाल वही शब्दों में फिर पूछा जाता है। फ़र्क़ के लिए दो चीज़ें चाहिए और बीच में एक लकीर — और श्लोक ने अभी वह हर जगह हटा दी है जहाँ वह लकीर खींची जा सकती थी।"
+  },
+  {
+   "id": 20859,
+   "number": "1.23",
+   "body_en": "The seer, the seeing, and the thing seen, and all the rest of it — in that awareness there is none of it. It has no sickness in it. It is as full as an ocean of ages, full to the brim and past it.",
+   "body_hi": "देखने वाला, देखना, और जो देखा जाता है, और यह सारा बाक़ी — उस चेतना में इनमें से कुछ भी नहीं है। उसमें कोई रोग नहीं है। वह युगों के समुद्र जितनी भरी है, किनारे तक और उसके पार तक।",
+   "commentary_en": "The three parts of seeing are named and then taken away together, which is the pattern of the whole book. Nothing is being said against the seer or the seen. It is that this awareness has no seam in it where a division into three could run.",
+   "commentary_hi": "देखने के तीनों हिस्से गिनकर एक साथ हटा दिए जाते हैं, और पूरी किताब का यही ढाँचा है। देखने वाले या देखे जाने के ख़िलाफ़ कुछ नहीं कहा जा रहा। बात यह है कि इस चेतना में कोई ऐसा जोड़ नहीं जिस पर तीन का बँटवारा चल सके।"
+  },
+  {
+   "id": 20860,
+   "number": "1.24",
+   "body_en": "Darkness goes into that the way it goes into light, and with it the whole cause of a man being fooled. That is the second-less, the highest, the thing with nothing to set it apart — so where could a difference be?",
+   "body_hi": "अंधेरा उसमें ऐसे ही मिल जाता है जैसे उजाले में, और उसके साथ भ्रम की पूरी जड़ भी। वही अद्वितीय है, वही परम, वही जिसमें अलग करने को कुछ नहीं — तो फ़र्क़ कहाँ होगा?",
+   "commentary_en": "The question comes back for the second time, having been asked in the same words two verses apart. By now it should be clear that it is not a question the reader is expected to answer, but one the text keeps putting down in front of him.",
+   "commentary_hi": "दो श्लोक के फ़ासले पर वही सवाल वही शब्दों में दूसरी बार आता है। अब तक साफ़ हो जाना चाहिए कि यह ऐसा सवाल नहीं जिसका जवाब पाठक से चाहा जा रहा हो — यह वह सवाल है जिसे पाठ बार-बार उसके सामने रखता जाता है।"
+  },
+  {
+   "id": 20861,
+   "number": "1.25",
+   "body_en": "In that highest thing, which is one self and nothing else, how would a man who splits things even find a place to sit? In deep sleep, where there is nothing but being happy — by what has a difference ever been seen there?",
+   "body_hi": "उस परम में, जो एक आत्मा है और कुछ नहीं, बाँटने वाला आदमी बैठेगा ही कहाँ? सुषुप्ति में, जहाँ सुख के सिवा कुछ नहीं — वहाँ फ़र्क़ किसने कभी देखा?",
+   "commentary_en": "Deep sleep is the proof that is always in a man's pocket. Everyone has been in a state with no divisions in it and no unhappiness, and everyone came back out of it and never thought to ask who was there. The verse asks.",
+   "commentary_hi": "सुषुप्ति वह सबूत है जो हर आदमी की जेब में पहले से है। हर कोई ऐसी हालत में रह चुका है जिसमें न कोई बँटवारा था न कोई दुख — और हर कोई उससे लौटकर आया और कभी पूछा ही नहीं कि वहाँ था कौन। श्लोक पूछता है।"
+  },
+  {
+   "id": 20862,
+   "number": "1.26",
+   "body_en": "This whole business of splitting things is rooted in the mind; take the mind out and there is none of it left. So the mind has to be brought to rest in the supreme self, which is what faces inward.",
+   "body_hi": "बाँटने का यह पूरा काम मन की जड़ से उगता है; मन हटाओ तो इसका कुछ भी नहीं बचता। इसलिए मन को उस परमात्मा में जमाना पड़ता है, जो भीतर की तरफ़ मुँह किए है।",
+   "commentary_en": "Rooted in the mind — so the mind is not the enemy here, it is the soil. The instruction is not to clear the mind of its contents but to move the whole thing, roots included, to a different ground.",
+   "commentary_hi": "'मन की जड़ से' — यानी मन यहाँ दुश्मन नहीं, मिट्टी है। निर्देश मन के भीतर का सामान साफ़ करने का नहीं, पूरे मन को जड़ समेत दूसरी ज़मीन पर उठा ले जाने का है।"
+  },
+  {
+   "id": 20863,
+   "number": "1.27",
+   "body_en": "Know the self for what it is by its own nature — bliss with no break in it. Then the taste of that bliss is what you live on, outside and inside, in the self.",
+   "body_hi": "आत्मा को उसके अपने स्वभाव से पहचानो — ऐसा आनंद जिसमें कहीं टूट नहीं। फिर उसी आनंद का स्वाद तुम्हारा भोजन बन जाता है, बाहर भी और भीतर भी, आत्मा में।",
+   "commentary_en": "By its own nature, and not by anything a man does to it — the phrase is doing the work in this verse. The bliss is not produced by the knowing. The knowing is what stops a man from missing it, outside and inside alike.",
+   "commentary_hi": "'उसके अपने स्वभाव से', न कि उस किसी चीज़ से जो आदमी उसके साथ करता है — इस श्लोक में असली काम यही पद कर रहा है। आनंद जानने से बनता नहीं। जानना सिर्फ़ यह रोकता है कि आदमी उसे चूके — बाहर भी और भीतर भी।"
+  },
+  {
+   "id": 20864,
+   "number": "1.28",
+   "body_en": "Dispassion ripens into understanding. Understanding ripens into settling down. And what settling down ripens into is peace that comes of tasting your own bliss — that is its fruit, and there is no other.",
+   "body_hi": "वैराग्य पककर बोध बनता है। बोध पककर उपरति बनता है। और उपरति पककर जो बनती है वह अपने ही आनंद के स्वाद से आई शांति है — यही उसका फल है, और दूसरा कोई नहीं।",
+   "commentary_en": "A chain of four with a fruit at the end of it, and the fruit is not a new state. Each stage is what the one before it turns into when it is left alone long enough, which means none of them can be skipped by wanting the last one.",
+   "commentary_hi": "चार की एक कड़ी, और आख़िर में एक फल — और वह फल कोई नई हालत नहीं है। हर पड़ाव वही है जो उससे पहले वाला, काफ़ी देर छोड़ दिए जाने पर, बन जाता है — यानी आख़िरी वाले की चाहत से कोई पड़ाव लाँघा नहीं जा सकता।"
+  },
+  {
+   "id": 20865,
+   "number": "1.29",
+   "body_en": "If the ones that come after do not arrive, the one before them was no use. And what does arrive, when everything has come to a stop, is the last contentment and a joy that has nothing to compare it to.",
+   "body_hi": "अगर बाद वाले न आएँ, तो पहले वाले का कोई फल नहीं। और जो आता है, जब सब कुछ थम जाता है, वह है आख़िरी तृप्ति और ऐसा आनंद जिससे किसी और की तुलना ही नहीं।",
+   "commentary_en": "A hard sentence about the earlier stages: if the chain does not carry through, the earlier links were wasted. It is the same warning as the moss and the slackness, said about practice rather than about standing.",
+   "commentary_hi": "पहले के पड़ावों के बारे में कड़ी बात: अगर कड़ी आगे नहीं पहुँचती, तो पहली कड़ियाँ बेकार गईं। यह वही चेतावनी है जो काई और ढीले पड़ने के बारे में कही गई थी — फ़र्क़ बस इतना कि यह टिके रहने के बारे में नहीं, अभ्यास के बारे में है।"
+  },
+  {
+   "id": 20866,
+   "number": "1.30",
+   "body_en": "That one has maya for a condition and is the womb the world comes out of. Knowing everything is among the marks of it. It is shot through with not being seen face to face, and its own self is what is real. And it is the thing the word that points at.",
+   "body_hi": "वह माया को अपनी शर्त बनाए हुए है और संसार जिस गर्भ से निकलता है वही है। सब कुछ जानना उसके लक्षणों में से है। वह आमने-सामने न दिखने से भरा है, और उसका अपना स्वरूप ही सत्य है। और वही वह है जिसकी तरफ़ 'वह' शब्द इशारा करता है।",
+   "commentary_en": "The verse is a definition of what the word that stands for, in the sentence a teacher gives a student. It is being built up piece by piece out of its marks so that when the word comes, it has something to land on.",
+   "commentary_hi": "यह श्लोक उस बात की परिभाषा है जिसकी तरफ़ 'वह' शब्द इशारा करता है — उस वाक्य में जो गुरु शिष्य को देता है। उसे लक्षण-दर-लक्षण जोड़ा जा रहा है ताकि जब शब्द आए, तो उसके उतरने को कुछ हो।"
+  },
+  {
+   "id": 20867,
+   "number": "1.31",
+   "body_en": "It shines as the thing a man leans on whenever he says I or thinks I. It is awareness mixed through with the inner instrument. And it is the thing the word that points at you.",
+   "body_hi": "जब भी आदमी 'मैं' कहता या सोचता है, वह उसी को टेक बनाकर टिकता है और वही चमकता है। वह अंतःकरण के साथ मिली हुई चेतना है। और वही वह है जिसकी तरफ़ 'तुम' शब्द इशारा करता है।",
+   "commentary_en": "The two words are now defined, one from the side of the world and one from the side of the man, and the definitions are built so that they can be laid over each other. The I a man says without thinking is the same thing the first word was pointing at.",
+   "commentary_hi": "अब दोनों शब्द तय हो चुके हैं — एक संसार की तरफ़ से, एक आदमी की तरफ़ से — और दोनों को ऐसा बनाया गया है कि एक-दूसरे पर रखे जा सकें। जो 'मैं' आदमी बिना सोचे कहता है, वही वह चीज़ है जिसकी तरफ़ पहला शब्द इशारा कर रहा था।"
+  },
+  {
+   "id": 20868,
+   "number": "1.32",
+   "body_en": "Set aside maya and set aside ignorance — the two conditions, one belonging to the supreme and one to the living soul. What is left over and can be made out is the supreme brahman, unbroken, being and awareness and bliss.",
+   "body_hi": "माया को हटा दो और अज्ञान को हटा दो — ये दो शर्तें, एक परम की और एक जीव की। जो बच जाता है और जिसे पहचाना जा सकता है वही परब्रह्म है — अखंड, सत्, चित्, आनंद।",
+   "commentary_en": "One condition belongs to each side, and both are removed together, which is the only way the two words can be made to mean one thing. Left over is what the whole book has been pointing at, and it is described in three words rather than one.",
+   "commentary_hi": "एक शर्त हर तरफ़ की, और दोनों एक साथ हटाई जाती हैं — यही अकेला तरीक़ा है जिससे दोनों शब्दों को एक अर्थ का बनाया जा सकता है। बचता वही है जिसकी तरफ़ पूरी किताब इशारा करती रही, और उसे एक नहीं, तीन शब्दों में बताया गया है।"
+  },
+  {
+   "id": 20869,
+   "number": "1.33",
+   "body_en": "Following the meaning through the words the way they are meant — that is hearing. Following it through again once reasoning has made it believable — that is thinking it over.",
+   "body_hi": "शब्दों के पीछे-पीछे उनके मतलब तक पहुँचना, जैसा वे कहे गए हैं — यही श्रवण है। और जब तर्क उसे भरोसे लायक़ बना दे, तो उसी मतलब तक दोबारा पहुँचना — यही मनन है।",
+   "commentary_en": "Hearing is not sitting in a room while somebody talks. The verse defines it as following the meaning through the words, and it defines thinking as doing it a second time once reasoning has caught up. Both are work, and the second is not a repeat of the first.",
+   "commentary_hi": "श्रवण का मतलब कमरे में बैठे रहना नहीं कि कोई बोलता रहे। श्लोक उसे शब्दों के पीछे-पीछे मतलब तक पहुँचना कहता है, और मनन को वही काम दूसरी बार करना, जब तर्क उस तक आ पहुँचे। दोनों काम हैं, और दूसरा पहले की दोहराई नहीं है।"
+  },
+  {
+   "id": 20870,
+   "number": "1.34",
+   "body_en": "And then, on that meaning, once the mind has been set down in it and no doubt is left, the mind goes to one point and stays. That is what is called dwelling on it.",
+   "body_hi": "और फिर उसी मतलब पर, जब मन उसमें जम चुका हो और कोई शक न बचा हो, मन एक ही बिंदु पर जाकर टिक जाता है। इसी को निदिध्यासन कहते हैं।",
+   "commentary_en": "The third of the three, and the definition turns on no doubt being left. Dwelling on it is not the same as struggling with it. It is what a mind does with a thing it has stopped arguing about.",
+   "commentary_hi": "तीनों में से तीसरा, और परिभाषा इस पर टिकी है कि कोई शक न बचा हो। निदिध्यासन उससे लड़ते रहना नहीं है। यह वह है जो मन ऐसी चीज़ के साथ करता है जिस पर उसने बहस करना छोड़ दिया हो।"
+  },
+  {
+   "id": 20871,
+   "number": "1.35",
+   "body_en": "Let go of the one meditating and let go of the meditating, one after the other, until the thing meditated on is the only thing in range. Then the mind is a lamp in a place with no wind. That is what is called samadhi.",
+   "body_hi": "ध्यान करने वाले को छोड़ दो और ध्यान को भी छोड़ दो, एक के बाद एक, ताकि जिसका ध्यान किया जा रहा है वही अकेला बचे। तब मन वैसा हो जाता है जैसा बिना हवा की जगह में दीपक। इसी को समाधि कहते हैं।",
+   "commentary_en": "The meditator goes and then the meditating goes, in that order, and what is left is not an empty mind but a single thing it rests on. The lamp in a windless place is a flame that is not being held steady by anybody — there is simply nothing moving the air.",
+   "commentary_hi": "पहले ध्याता जाता है, फिर ध्यान, इसी क्रम में — और बचता है ख़ाली मन नहीं, एक अकेली चीज़ जिस पर वह टिका है। बिना हवा की जगह का दीपक वह लौ है जिसे कोई थामे हुए नहीं है — बस हवा को हिलाने वाला कोई नहीं बचा।"
+  },
+  {
+   "id": 20872,
+   "number": "1.36",
+   "body_en": "Even at that time the mind is still working, though the workings are not noticed and they have the self for their object. They are worked out afterwards from remembering — a man comes up out of it and finds that they had come up too.",
+   "body_hi": "उस समय भी मन का काम चलता रहता है, चाहे वे हलचलें पकड़ में न आएँ और उनका विषय आत्मा ही हो। बाद में उन्हें याद के सहारे निकाला जाता है — आदमी उस हालत से उठता है और पाता है कि वे भी उठी थीं।",
+   "commentary_en": "An unusually careful observation for this literature. Even in samadhi the mind has not stopped; it is turned on the self and running unnoticed, and the only evidence for it is the memory a man has afterwards of something having gone on.",
+   "commentary_hi": "इस साहित्य के लिहाज़ से यह असामान्य रूप से बारीक बात है। समाधि में भी मन रुका नहीं होता; वह आत्मा पर मुड़ा हुआ बिना पकड़ में आए चलता रहता है, और उसका एक ही सबूत है — बाद में आदमी की वह याद कि कुछ चल रहा था।"
+  },
+  {
+   "id": 20873,
+   "number": "1.37",
+   "body_en": "In this round of birth and death, which has no beginning anybody can find, the deeds a man has piled up run into the crores. By this they come apart and dissolve, and what grows in their place is clean dharma.",
+   "body_hi": "जन्म-मरण के इस चक्र में, जिसका आदि किसी को नहीं मिलता, आदमी ने जो कर्म जोड़े हैं वे करोड़ों में हैं। इससे वे बिखरकर घुल जाते हैं, और उनकी जगह जो उगता है वह शुद्ध धर्म है।",
+   "commentary_en": "The number is not there to be counted. It is there to say that the pile cannot be worked off deed by deed, which is why the text does not recommend working it off. Something else dissolves it, and dharma grows in the space that opens up.",
+   "commentary_hi": "यह गिनती गिनने के लिए नहीं है। यह कहने के लिए है कि इस ढेर को एक-एक कर्म चुकाकर नहीं निपटाया जा सकता — इसीलिए पाठ चुकाने की सलाह नहीं देता। उसे कोई और चीज़ घोलती है, और जो जगह खुलती है उसमें धर्म उग आता है।"
+  },
+  {
+   "id": 20874,
+   "number": "1.38",
+   "body_en": "The best of those who know yoga call this samadhi the raincloud of dharma. What comes down out of it is the nectar of dharma — in streams, thousands of them at a time.",
+   "body_hi": "योग के जानने वालों में जो सबसे अच्छे हैं वे इस समाधि को धर्म का बादल कहते हैं। उसमें से जो उतरता है वह धर्म का अमृत है — धाराओं में, एक बार में हज़ारों।",
+   "commentary_en": "A cloud does not decide to rain on anybody. It gathers, and then what it has gathered comes down over whatever is underneath. That is the figure being used for what samadhi does with the deeds of a lifetime.",
+   "commentary_hi": "बादल किसी पर बरसने का फ़ैसला नहीं करता। वह इकट्ठा होता है, और फिर जो इकट्ठा किया है वह नीचे जो कुछ है उस पर उतर आता है। समाधि जीवन भर के कर्मों के साथ जो करती है, उसके लिए यही तसवीर इस्तेमाल हुई है।"
+  },
+  {
+   "id": 20875,
+   "number": "1.39",
+   "body_en": "By this the whole net of a man's habits is melted down, with nothing of it left over — and the heap of deeds that goes by the name of merit and sin is pulled up with its roots still on it.",
+   "body_hi": "इससे आदमी की आदतों का पूरा जाल गलकर बह जाता है, कुछ भी बचा नहीं रहता — और जिस ढेर को पुण्य और पाप कहा जाता है वह जड़ों समेत उखड़ आता है।",
+   "commentary_en": "Merit and sin are named together and pulled up together, which is the part that gets skipped when this literature is summarised. The good deeds are as much of a root system as the bad ones, and a man is held by both.",
+   "commentary_hi": "पुण्य और पाप का नाम साथ लिया गया है और वे साथ ही उखाड़े जाते हैं — और इस साहित्य का सार बताते वक़्त यही हिस्सा छोड़ दिया जाता है। अच्छे कर्म भी उतनी ही जड़ें हैं जितनी बुरे, और आदमी दोनों से बाँधा हुआ है।"
+  },
+  {
+   "id": 20876,
+   "number": "1.40",
+   "body_en": "The sentence, which was nothing but true all along, had been showing him something he could only take on report. Now nothing stands in its way, and what it gives birth to is knowing the thing the way a man knows a fruit lying in his own palm.",
+   "body_hi": "वह वाक्य, जो शुरू से सच के सिवा कुछ नहीं था, उसे अब तक ऐसा कुछ दिखा रहा था जिसे वह सुनी-सुनाई बात की तरह ही ले सकता था। अब उसके रास्ते में कुछ नहीं है, और वह जिसे जन्म देता है वह ऐसा जानना है जैसे आदमी अपनी ही हथेली पर रखे फल को जानता है।",
+   "commentary_en": "A fruit in the palm — the oldest image for direct knowing, and it is chosen because a fruit in the hand is not a thing anybody argues about. The sentence was true before too. What changed is that nothing is in the way of it now.",
+   "commentary_hi": "हथेली पर रखा फल — सीधे जानने की सबसे पुरानी तसवीर, और वह इसीलिए चुनी गई है कि हाथ में रखे फल पर कोई बहस नहीं करता। वाक्य पहले भी सच था। फ़र्क़ यह पड़ा कि अब उसके रास्ते में कुछ नहीं है।"
+  },
+  {
+   "id": 20877,
+   "number": "1.41",
+   "body_en": "When the habits do not come up any more in front of a thing that could be enjoyed — that is as far as dispassion goes. And when the sense of being an I stops arising at all — that is the far edge of understanding.",
+   "body_hi": "जब भोगने लायक़ किसी चीज़ के सामने आदतें उठना ही बंद कर दें — वैराग्य वहीं तक जाता है। और जब 'मैं' का भाव उठना ही बंद हो जाए — बोध की आख़िरी हद वही है।",
+   "commentary_en": "Two measures, and both are stated as an absence of something arising rather than as a strength a man has built. Dispassion is not tested by what he refuses; it is tested by what does not come up in him to refuse.",
+   "commentary_hi": "दो नाप, और दोनों किसी चीज़ के न उठने से बताए गए हैं, न कि किसी ऐसी ताक़त से जो आदमी ने जोड़ी हो। वैराग्य की परीक्षा इससे नहीं होती कि वह क्या ठुकराता है; इससे होती है कि ठुकराने के लिए उसके भीतर उठता क्या नहीं।"
+  },
+  {
+   "id": 20878,
+   "number": "1.42",
+   "body_en": "When a working that has dissolved does not come up again — that is the boundary of settling down. This is the ascetic whose knowing stands still, and he is the one who lives on bliss that does not go away.",
+   "body_hi": "जो हलचल घुल चुकी है वह फिर न उठे — उपरति की हद यही है। यही वह संन्यासी है जिसका ज्ञान अटल खड़ा है, और वही है जो कभी न जाने वाले आनंद पर जीता है।",
+   "commentary_en": "Three measures now, one for each of the three stages, and all three are boundaries rather than achievements. The man is described by what has stopped happening in him, and then by the one thing he lives on.",
+   "commentary_hi": "अब तीन नाप हुए, तीनों पड़ावों के लिए एक-एक, और तीनों हदें हैं, हासिल नहीं। आदमी को उससे बताया गया है जो उसके भीतर होना बंद हो चुका, और फिर उस एक चीज़ से जिस पर वह जीता है।"
+  },
+  {
+   "id": 20879,
+   "number": "1.43",
+   "body_en": "His self has melted into brahman and there is nothing left in it that changes or acts. Brahman and the self have both been cleaned of what was laid on them, and he has gone down into the one being they turn out to have.",
+   "body_hi": "उसकी आत्मा ब्रह्म में घुल गई है और उसमें ऐसा कुछ नहीं बचा जो बदलता या करता हो। ब्रह्म और आत्मा — दोनों पर जो चढ़ा था वह धुल चुका, और वह उस एक होने में उतर गया है जो वे निकलते हैं।",
+   "commentary_en": "Both sides are cleaned, which the book has now said three times in different words. It matters because a man usually assumes only his own side needs work, and that brahman is waiting on the other side already correct.",
+   "commentary_hi": "दोनों तरफ़ धुलती हैं — किताब यह बात अब तीन बार अलग-अलग शब्दों में कह चुकी है। यह मायने रखता है, क्योंकि आदमी आम तौर पर मान लेता है कि काम सिर्फ़ उसकी तरफ़ का है, और ब्रह्म उस तरफ़ पहले से ठीक बैठा इंतज़ार कर रहा है।"
+  },
+  {
+   "id": 20880,
+   "number": "1.44",
+   "body_en": "A working with no dividing in it, made of awareness and nothing else, is what gets called wisdom. The man who has that all the time is held to be free while he is still alive.",
+   "body_hi": "ऐसी हलचल जिसमें कोई बँटवारा नहीं, जो चेतना के सिवा किसी चीज़ से नहीं बनी — उसी को प्रज्ञा कहा जाता है। जिस आदमी में वह हर समय रहती है उसे जीते-जी मुक्त माना जाता है।",
+   "commentary_en": "The first of four verses that end the same way. Each one names a different mark and then says the same thing about the man who has it, and the repetition is the text's own — it is building a portrait by circling the same phrase four times.",
+   "commentary_hi": "उन चार श्लोकों में पहला जो एक ही तरह ख़त्म होते हैं। हर एक अलग लक्षण बताता है और फिर उस आदमी के बारे में वही बात कहता है — और यह दोहराव पाठ का अपना है; वह एक ही पद के चार चक्कर लगाकर एक तसवीर बना रहा है।"
+  },
+  {
+   "id": 20881,
+   "number": "1.45",
+   "body_en": "The sense of I in the body and the senses, and the sense of this in everything else — the man in whom neither of them comes up anywhere is held to be free while he is still alive.",
+   "body_hi": "देह और इन्द्रियों में 'मैं' का भाव, और बाक़ी हर चीज़ में 'यह' का भाव — जिस आदमी में ये दोनों कहीं उठते ही नहीं, उसे जीते-जी मुक्त माना जाता है।",
+   "commentary_en": "The pair is exact: I on this side, this on that side, and the line between them is what a life is built on. The man being described has not learned to manage the line. It does not appear in him.",
+   "commentary_hi": "जोड़ा एकदम सटीक है: इस तरफ़ 'मैं', उस तरफ़ 'यह', और इन दोनों के बीच की लकीर पर ही एक ज़िंदगी खड़ी होती है। जिस आदमी की बात हो रही है उसने इस लकीर को सँभालना नहीं सीखा। वह उसमें बनती ही नहीं।"
+  },
+  {
+   "id": 20882,
+   "number": "1.46",
+   "body_en": "Between the inward self and brahman there is no gap, and none between brahman and everything it has put out. The man who makes that out with his wisdom is held to be free while he is still alive.",
+   "body_hi": "भीतर की आत्मा और ब्रह्म के बीच कोई फ़ासला नहीं, और ब्रह्म और उसकी रची हुई हर चीज़ के बीच भी नहीं। जो आदमी इसे अपनी प्रज्ञा से पहचान लेता है, उसे जीते-जी मुक्त माना जाता है।",
+   "commentary_en": "Two gaps closed in one sentence, and the second is the harder one. Most readers will grant that the self is brahman and still keep the world at a distance from it, and this verse takes that last distance away.",
+   "commentary_hi": "एक ही वाक्य में दो फ़ासले बंद होते हैं, और दूसरा ज़्यादा कठिन है। ज़्यादातर पढ़ने वाले यह मान लेंगे कि आत्मा ब्रह्म है, और फिर भी संसार को उससे कुछ दूर रखे रहेंगे — और यह श्लोक वह आख़िरी दूरी भी हटा देता है।"
+  },
+  {
+   "id": 20883,
+   "number": "1.47",
+   "body_en": "Good men treat him well and bad men give him trouble, and it comes out the same in him. The man who is like that is held to be free while he is still alive.",
+   "body_hi": "भले लोग उसका आदर करते हैं और बुरे लोग उसे सताते हैं, और उसके भीतर दोनों का एक ही हिसाब निकलता है। जो आदमी ऐसा है, उसे जीते-जी मुक्त माना जाता है।",
+   "commentary_en": "The last of the four, and the only one that can be checked from outside. Three verses of inner marks, and then a test anybody watching could apply: what happens in him when he is honoured, and what happens when he is hurt.",
+   "commentary_hi": "चारों में आख़िरी, और अकेला ऐसा जिसे बाहर से जाँचा जा सकता है। तीन श्लोक भीतरी लक्षणों के, और फिर एक कसौटी जो देखने वाला कोई भी लगा सकता है: उसका आदर हो तो उसके भीतर क्या होता है, और चोट पहुँचे तो क्या होता है।"
+  },
+  {
+   "id": 20884,
+   "number": "1.48",
+   "body_en": "For a man who has made out what brahman is, the round of birth and death is not what it was before. And if it is, then he has not made out what being brahman means — he is still facing outward.",
+   "body_hi": "जिस आदमी ने ब्रह्म को पहचान लिया, उसके लिए जन्म-मरण का चक्र वैसा नहीं रहता जैसा पहले था। और अगर वैसा ही है, तो उसने ब्रह्म होने को पहचाना ही नहीं — उसका मुँह अब भी बाहर की तरफ़ है।",
+   "commentary_en": "A test with no way around it. The claim is checked against the man's own experience of ordinary life, and if that has not changed, the text says plainly that the knowing did not happen. Nobody is given the benefit of the doubt.",
+   "commentary_hi": "ऐसी कसौटी जिससे बचने का कोई रास्ता नहीं। दावे को आदमी के अपने रोज़ के अनुभव पर जाँचा जाता है, और अगर वह नहीं बदला, तो पाठ साफ़ कह देता है कि जानना हुआ ही नहीं। यहाँ किसी को रियायत नहीं दी जाती।"
+  },
+  {
+   "id": 20885,
+   "number": "1.49",
+   "body_en": "As long as pleasure and the rest of it are still being felt, that much is taken to be the deeds already set going. A fruit shows up because something was done first; nothing anywhere bears fruit without that.",
+   "body_hi": "जब तक सुख वग़ैरह महसूस हो रहा है, उतने को पहले से चल पड़े कर्म माना जाता है। फल इसलिए आता है कि पहले कुछ किया गया था; बिना उसके कहीं कुछ फल नहीं देता।",
+   "commentary_en": "The reasoning runs backwards from the feeling to the cause. Something is still being felt, so something must still be running its course — and that leftover is what the word for it names. The next several verses argue about how much weight it can carry.",
+   "commentary_hi": "दलील अनुभव से पीछे कारण की तरफ़ चलती है। कुछ अब भी महसूस हो रहा है, तो कुछ अब भी अपना रास्ता पूरा कर रहा होगा — और उसी बचे हुए को यह शब्द नाम देता है। आगे के कई श्लोक इस पर बहस करते हैं कि उस पर कितना बोझ रखा जा सकता है।"
+  },
+  {
+   "id": 20886,
+   "number": "1.50",
+   "body_en": "From knowing that brahman is what I am, everything gathered over hundreds of crores of ages dissolves — the way what a man did in a dream dissolves when he wakes up.",
+   "body_hi": "'मैं ब्रह्म हूँ' — यह जान लेने से सैकड़ों करोड़ युगों में जो जमा हुआ वह घुल जाता है — वैसे ही जैसे नींद खुलने पर सपने में किया हुआ घुल जाता है।",
+   "commentary_en": "The dream comparison is doing something precise. A man who wakes does not have to undo what he did in the dream, and he is not forgiven for it either. The deeds were never of the kind that could be carried into the morning.",
+   "commentary_hi": "सपने की उपमा बहुत ठीक काम कर रही है। जो आदमी जागता है उसे सपने में किया हुआ पलटना नहीं पड़ता, और उसे उसकी माफ़ी भी नहीं दी जाती। वे कर्म ऐसे ही नहीं थे कि सुबह तक साथ आ सकें।"
+  },
+  {
+   "id": 20887,
+   "number": "1.51",
+   "body_en": "Once a man has fully understood that he is unattached and stands apart, the way the sky does, then nothing sticks to him — not one thing, not at any time, whatever deeds are still to come.",
+   "body_hi": "जब आदमी पूरी तरह समझ लेता है कि वह असंग है और अलग खड़ा है, जैसे आकाश खड़ा रहता है, तब उससे कुछ चिपकता नहीं — एक चीज़ भी नहीं, किसी भी समय, आगे आने वाले कर्म चाहे जो हों।",
+   "commentary_en": "Deeds still to come, not deeds already done — this is the harder claim and the text makes it deliberately. The reason is in the comparison: the sky is not made unattached by what happens in it, and it was not attached before either.",
+   "commentary_hi": "आगे आने वाले कर्म, पहले हो चुके कर्म नहीं — यह ज़्यादा भारी दावा है और पाठ उसे जान-बूझकर करता है। वजह उपमा में ही है: आकाश उसमें जो होता है उससे असंग नहीं बनता, और वह पहले भी संग में नहीं था।"
+  },
+  {
+   "id": 20888,
+   "number": "1.52",
+   "body_en": "The sky is not touched by the smell of liquor just because a pot of it stood there. In the same way the self is not touched by what belongs to a thing merely because that thing was laid over it.",
+   "body_hi": "आकाश शराब की गंध से इसलिए नहीं लिप्त हो जाता कि उसका घड़ा वहाँ रखा था। उसी तरह आत्मा किसी चीज़ के गुणों से इसलिए लिप्त नहीं होती कि वह चीज़ उस पर चढ़ा दी गई थी।",
+   "commentary_en": "The example is chosen to be unpleasant on purpose. Whatever the pot held, the space it occupied is not carrying any of it afterwards, and the pot did not have to be a clean one for that to be so.",
+   "commentary_hi": "उदाहरण जान-बूझकर बेढंगा चुना गया है। घड़े में जो कुछ था, उसने जो जगह घेरी थी वह बाद में उसमें से कुछ भी नहीं ढोती — और इसके लिए घड़े को साफ़ होने की ज़रूरत भी नहीं थी।"
+  },
+  {
+   "id": 20889,
+   "number": "1.53",
+   "body_en": "A deed set going before knowing came up is not undone by knowing. It does not go without handing over its fruit, any more than an arrow already loosed at a mark comes to a stop.",
+   "body_hi": "जो कर्म ज्ञान से पहले चल पड़ा, वह ज्ञान से मिटता नहीं। वह अपना फल सौंपे बिना जाता नहीं — जैसे निशाने की तरफ़ छूटा हुआ तीर बीच में रुक नहीं जाता।",
+   "commentary_en": "The arrow is the standard image for this and the next verse takes it further than the tradition usually does. Notice that the text is arguing against itself here — three verses ago nothing stuck to the man at all.",
+   "commentary_hi": "तीर इस बात की चलती हुई तसवीर है, और अगला श्लोक उसे परंपरा से भी आगे ले जाता है। ध्यान दें कि यहाँ पाठ अपने ही ख़िलाफ़ बहस कर रहा है — तीन श्लोक पहले उस आदमी से कुछ भी नहीं चिपकता था।"
+  },
+  {
+   "id": 20890,
+   "number": "1.54",
+   "body_en": "An arrow was let go in the belief that a tiger was standing there. Afterwards it turns out to be a cow. The arrow does not stop for that. It goes on and splits the mark with everything it had behind it.",
+   "body_hi": "तीर यह समझकर छोड़ा गया था कि वहाँ बाघ खड़ा है। बाद में पता चलता है कि वह गाय है। तीर इसके लिए रुकता नहीं। वह चलता जाता है और अपने पूरे ज़ोर के साथ निशाने को चीर देता है।",
+   "commentary_en": "The example is brutal and it is meant to be. Knowing arrives too late to change anything about the arrow, and the man who let it go is not being blamed. What the verse says is that being right afterwards does not call anything back.",
+   "commentary_hi": "उदाहरण निर्दयी है और जान-बूझकर है। ज्ञान इतनी देर से आता है कि तीर के बारे में कुछ बदल नहीं सकता, और छोड़ने वाले आदमी पर दोष नहीं रखा जा रहा। श्लोक यह कह रहा है कि बाद में सही निकलने से कोई चीज़ वापस नहीं बुलाई जाती।"
+  },
+  {
+   "id": 20891,
+   "number": "1.55",
+   "body_en": "I do not grow old, I do not die — the man who gets to his own self that way, and stays there as that self, where would he get the notion of deeds already set going from?",
+   "body_hi": "मैं बूढ़ा नहीं होता, मैं मरता नहीं — जो आदमी इस तरह अपनी आत्मा तक पहुँचता है और उसी आत्मा के रूप में टिका रहता है, उसे पहले से चल पड़े कर्मों की धारणा कहाँ से मिलेगी?",
+   "commentary_en": "And now the turn. The arrow verses were the objection, and this is the answer: the whole idea of a deed still running its course needs somebody it is running toward. Take away the man who ages, and there is nothing for the fruit to land on.",
+   "commentary_hi": "और अब मोड़। तीर वाले श्लोक आपत्ति थे, और यह जवाब है: चल पड़े कर्म की पूरी धारणा को कोई ऐसा चाहिए जिसकी तरफ़ वह चल रहा हो। जो आदमी बूढ़ा होता है उसे हटा दो, और फल के उतरने के लिए कुछ बचता ही नहीं।"
+  },
+  {
+   "id": 20892,
+   "number": "1.56",
+   "body_en": "Deeds set going hold up only where a man stands as the body. Standing as the body is not something anybody wants for him. So let the deeds set going be dropped as well.",
+   "body_hi": "पहले से चल पड़े कर्म वहीं टिकते हैं जहाँ आदमी देह के रूप में खड़ा है। देह के रूप में खड़ा रहना उसके लिए कोई चाहता ही नहीं। तो चल पड़े कर्मों को भी गिरा दो।",
+   "commentary_en": "The argument in three steps, and it is clean. The doctrine requires the body-identification to be real; nobody in this tradition wants the body-identification to be real; so the doctrine goes with it.",
+   "commentary_hi": "तीन क़दमों में दलील, और साफ़-सुथरी। इस सिद्धांत को चलने के लिए देह-भाव को असली मानना पड़ता है; इस परंपरा में देह-भाव को असली कोई नहीं चाहता; तो सिद्धांत भी उसके साथ ही जाता है।"
+  },
+  {
+   "id": 20893,
+   "number": "1.57",
+   "body_en": "Even the notion that deeds are still running their course is one more thing this body has got wrong.",
+   "body_hi": "यह धारणा भी कि कर्म अब भी अपना रास्ता पूरा कर रहे हैं, इस देह की एक और भूल ही है।",
+   "commentary_en": "One line, and it settles the argument. The doctrine is not refuted on its own terms; it is relocated. It belongs to the same error as the body it depends on.",
+   "commentary_hi": "एक पंक्ति, और बहस निपट जाती है। सिद्धांत को उसकी ही शर्तों पर नहीं काटा जाता; उसे जगह बदलकर रख दिया जाता है। वह उसी भूल का हिस्सा है जिस देह पर वह टिका है।"
+  },
+  {
+   "id": 20894,
+   "number": "1.58",
+   "body_en": "Where would something laid on top of another thing get a reality of its own from? Where would something that is not true get a birth? What has never been born — how would it come apart? And for something that is not there at all, where would deeds already set going come from?",
+   "body_hi": "जो चीज़ किसी दूसरी चीज़ पर चढ़ाई गई है उसे अपनी सच्चाई कहाँ से मिलेगी? जो सच नहीं है उसका जन्म कहाँ से होगा? जो कभी जन्मा ही नहीं — वह बिखरेगा कैसे? और जो है ही नहीं, उसके लिए पहले से चल पड़े कर्म कहाँ से आएँगे?",
+   "commentary_en": "Four questions in a row, each one built on the one before, and none of them answered. The last is the one the whole stretch has been walking toward, and by the time it arrives there is nothing left standing that could answer it.",
+   "commentary_hi": "एक के बाद एक चार सवाल, हर एक पिछले पर खड़ा, और किसी का जवाब नहीं। आख़िरी वही है जिसकी तरफ़ यह पूरा हिस्सा चलता आया है, और जब वह आता है तब जवाब देने के लिए कुछ खड़ा ही नहीं बचा।"
+  },
+  {
+   "id": 20895,
+   "number": "1.59",
+   "body_en": "If knowing dissolves what ignorance produced, roots and all, then how does this body go on standing? There are slow-witted men who have that doubt, and to settle them the scripture speaks of deeds already set going — speaking from the way things look from outside.",
+   "body_hi": "अगर ज्ञान उस सबको जड़ समेत घोल देता है जो अज्ञान ने पैदा किया, तो यह देह खड़ी कैसे रहती है? कुछ मंदबुद्धि लोगों को यह शक होता है, और उन्हें समझाने के लिए श्रुति चल पड़े कर्मों की बात करती है — बाहर से चीज़ें जैसी दिखती हैं, वहाँ से बोलते हुए।",
+   "commentary_en": "The verse says outright that the doctrine is a concession, given to people who are stuck on an obvious question. It is a remarkable thing for a scripture to say about its own vocabulary, and it is said without embarrassment.",
+   "commentary_hi": "श्लोक साफ़ कहता है कि यह सिद्धांत एक रियायत है, उन लोगों के लिए जो एक सीधे सवाल पर अटक गए हैं। किसी शास्त्र का अपनी ही शब्दावली के बारे में यह कहना असामान्य है, और वह इसे बिना किसी झिझक के कहता है।"
+  },
+  {
+   "id": 20896,
+   "number": "1.60",
+   "body_en": "It is not said to teach men of understanding that the body and the rest are real. That thing is full to the edges, with no start and no finish, past measuring, and nothing in it turns into anything else.",
+   "body_hi": "यह समझदारों को यह सिखाने के लिए नहीं कहा गया कि देह वग़ैरह असली हैं। वह चीज़ किनारों तक भरी है, न उसका आदि है न अंत, वह नाप के परे है, और उसमें कुछ किसी और चीज़ में बदलता नहीं।",
+   "commentary_en": "The concession is withdrawn in the same breath, and then the text turns away from the argument entirely. From here to the end of the book it stops explaining and starts describing, and the change of register is abrupt.",
+   "commentary_hi": "रियायत उसी साँस में वापस ले ली जाती है, और फिर पाठ बहस से पूरी तरह मुँह मोड़ लेता है। यहाँ से किताब के अंत तक वह समझाना छोड़ देता है और बताना शुरू करता है, और यह बदलाव अचानक है।"
+  },
+  {
+   "id": 20897,
+   "number": "1.61",
+   "body_en": "Solid being, solid awareness, everlasting, solid bliss, never wearing down; turned inward, one taste all through, full, with no end to it, and facing every way at once.",
+   "body_hi": "ठोस सत्, ठोस चित्, सनातन, ठोस आनंद, कभी न घिसने वाला; भीतर की तरफ़ मुड़ा, आदि से अंत तक एक ही स्वाद, पूरा, अनंत, और एक साथ हर तरफ़ मुँह किए हुए।",
+   "commentary_en": "A list with no verb in it, and it runs for four verses. Nothing is being asserted and nothing argued. The text has finished reasoning and is now simply putting words down beside each other, and the effect is closer to a chant than to a definition.",
+   "commentary_hi": "ऐसी सूची जिसमें कोई क्रिया नहीं, और वह चार श्लोक तक चलती है। न कुछ दावा किया जा रहा है न किसी बात पर बहस। पाठ तर्क करना पूरा कर चुका है और अब बस शब्दों को एक-दूसरे के बग़ल में रख रहा है — और इसका असर परिभाषा से ज़्यादा किसी जाप जैसा है।"
+  },
+  {
+   "id": 20898,
+   "number": "1.62",
+   "body_en": "Not to be given up, not to be taken up, not to be set anywhere, with nothing to rest on; no strands in it, no doing, fine past holding, with no dividing in it, and not a mark on it.",
+   "body_hi": "छोड़ने के लायक़ नहीं, लेने के लायक़ नहीं, कहीं रखने के लायक़ नहीं, और टिकने के लिए उसे कुछ चाहिए नहीं; उसमें कोई गुण नहीं, कोई कर्म नहीं, वह पकड़ में न आने की हद तक सूक्ष्म है, उसमें कोई बँटवारा नहीं, और उस पर एक दाग़ नहीं।",
+   "commentary_en": "Not to be given up and not to be taken up, in the same line. Both moves are ruled out at once, which leaves a reader with nothing to do about it — and that is the point of a list built entirely out of negatives.",
+   "commentary_hi": "एक ही पंक्ति में 'छोड़ने लायक़ नहीं' और 'लेने लायक़ नहीं'। दोनों हरकतें एक साथ रोक दी जाती हैं, और पढ़ने वाले के पास इस बारे में करने को कुछ नहीं बचता — और पूरी तरह नकार से बनी सूची का मक़सद यही है।"
+  },
+  {
+   "id": 20899,
+   "number": "1.63",
+   "body_en": "Its own form cannot be set down; it is not in reach of the mind or of speech. Rich in being, standing up by itself, clean, awake, and not to be seen by the mind.",
+   "body_hi": "उसका अपना रूप लिखा नहीं जा सकता; वह न मन की पहुँच में है न वाणी की। सत् से भरा, अपने ही बल पर खड़ा, निर्मल, जागा हुआ, और मन से देखा न जा सकने वाला।",
+   "commentary_en": "Not in reach of speech, said in a book made of speech. This literature knows exactly what it is doing when it says that, which is why the sentences here have stopped trying to define and are simply circling.",
+   "commentary_hi": "'वाणी की पहुँच में नहीं' — और यह उस किताब में कहा जा रहा है जो वाणी से ही बनी है। यह साहित्य जानता है कि वह ऐसा कहते हुए क्या कर रहा है — इसीलिए यहाँ के वाक्य परिभाषा देने की कोशिश छोड़ चुके हैं और बस चक्कर लगा रहे हैं।"
+  },
+  {
+   "id": 20900,
+   "number": "1.64",
+   "body_en": "Know your own self by your own taste of it, and know it whole and unbroken. Then you are done — sit at your ease in the self, as the self, where nothing divides.",
+   "body_hi": "अपनी आत्मा को अपने ही अनुभव से जानो, और उसे पूरी और अखंड जानो। फिर तुम पूरे हो गए — आत्मा में, आत्मा के रूप में, चैन से बैठो, जहाँ कोई बँटवारा नहीं।",
+   "commentary_en": "The four-verse list ends and the book turns and speaks to the reader again. What it asks for is not agreement with anything in the list. It is one's own taste of it, which is the same instrument named at the beginning.",
+   "commentary_hi": "चार श्लोक की सूची ख़त्म होती है और किताब पलटकर फिर पढ़ने वाले से बात करती है। वह इस सूची की किसी बात से सहमति नहीं माँग रही। वह अपना अनुभव माँग रही है — वही साधन जिसका नाम शुरू में लिया गया था।"
+  },
+  {
+   "id": 20901,
+   "number": "1.65",
+   "body_en": "Where has it gone? Who carried it off? Where did this world dissolve into? I was looking straight at it a moment ago. It is not there. Was there ever anything so astonishing?",
+   "body_hi": "कहाँ चला गया? कौन उठा ले गया? यह संसार घुलकर कहाँ गया? अभी तो मैं उसे सीधे देख रहा था। वह नहीं है। इससे हैरान करने वाली बात कभी हुई भी है?",
+   "commentary_en": "The voice changes completely. Four questions in a rush, and not one of them is a philosophical question — they are what a man says out loud when he has put something down and cannot find it. The astonishment is the point.",
+   "commentary_hi": "आवाज़ पूरी तरह बदल जाती है। एक साँस में चार सवाल, और इनमें एक भी दार्शनिक सवाल नहीं है — ये वे बातें हैं जो आदमी ज़ोर से कहता है जब उसने कोई चीज़ कहीं रखी हो और वह मिल न रही हो। यही हैरानी असली बात है।"
+  },
+  {
+   "id": 20902,
+   "number": "1.66",
+   "body_en": "What is there to give up, what to take on, what else is there, what could stand out from anything — in a great sea of brahman, filled with the nectar of bliss that has no break in it?",
+   "body_hi": "छोड़ने को क्या है, लेने को क्या, और क्या है, और किसी चीज़ से अलग दिखने को क्या — ब्रह्म के उस महासागर में, जो ऐसे आनंद के अमृत से भरा है जिसमें कहीं टूट नहीं?",
+   "commentary_en": "The same pair as before — giving up and taking on — now asked as a question rather than stated as a denial. Nothing in a sea stands out from the sea, and there is nowhere in it to put anything down.",
+   "commentary_hi": "वही जोड़ा जो पहले आया था — छोड़ना और लेना — अब नकार की तरह नहीं, सवाल की तरह पूछा गया है। समुद्र में कोई चीज़ समुद्र से अलग नहीं दिखती, और उसमें कहीं कुछ रखने की जगह भी नहीं।"
+  },
+  {
+   "id": 20903,
+   "number": "1.67",
+   "body_en": "I do not see a thing here, I do not hear anything, I do not know anything. I am there by my own self, in the form of bliss that stays — and that is the whole of what marks me out.",
+   "body_hi": "मुझे यहाँ कुछ दिखता नहीं, कुछ सुनाई नहीं देता, कुछ जानने में नहीं आता। मैं अपनी ही आत्मा से हूँ, ऐसे आनंद के रूप में जो टिका रहता है — और मेरा लक्षण बस इतना ही है।",
+   "commentary_en": "The negatives are now in the first person, which is the difference between the list four verses ago and this. It is no longer a description of something. It is a man reporting what he finds when he looks.",
+   "commentary_hi": "अब नकार पहले पुरुष में हैं, और चार श्लोक पहले की सूची और इसमें यही फ़र्क़ है। यह अब किसी चीज़ का वर्णन नहीं है। यह एक आदमी की रिपोर्ट है कि देखने पर उसे क्या मिलता है।"
+  },
+  {
+   "id": 20904,
+   "number": "1.68",
+   "body_en": "I am not attached to anything. I have no body. I have no mark on me. I am Hari. I am quiet through and through. I have no end. I am full to the edges and I have been here from of old.",
+   "body_hi": "मैं किसी चीज़ से बँधा नहीं। मेरी देह नहीं। मुझ पर कोई चिह्न नहीं। मैं हरि हूँ। मैं पूरा-पूरा शांत हूँ। मेरा अंत नहीं। मैं किनारों तक भरा हूँ और पुराने से पुराने समय से यहीं हूँ।",
+   "commentary_en": "Every clause in this verse and the next begins the same way in the Sanskrit — I am, I am, I am. The repetition is the text's own device and it runs to the end of the book, hammering a first person into place where a moment ago there was nothing at all.",
+   "commentary_hi": "इस श्लोक और अगले का हर पद संस्कृत में एक ही तरह शुरू होता है — मैं, मैं, मैं। यह दोहराव पाठ का अपना है और किताब के अंत तक चलता है, एक 'मैं' को वहाँ ठोंक-ठोंककर बैठाता हुआ जहाँ एक पल पहले कुछ भी नहीं था।"
+  },
+  {
+   "id": 20905,
+   "number": "1.69",
+   "body_en": "I do nothing. I enjoy nothing. Nothing in me turns into anything else and nothing in me wears down. My own form is awareness, and it is clean. I am alone, and I am the one who is always at peace.",
+   "body_hi": "मैं करता नहीं। मैं भोगता नहीं। मुझमें कुछ किसी और चीज़ में बदलता नहीं और मुझमें कुछ घिसता नहीं। मेरा अपना रूप चेतना है, और वह निर्मल है। मैं अकेला हूँ, और मैं वही हूँ जो सदा शांत है।",
+   "commentary_en": "The last of the I-verses, and it ends on a name of Shiva the way the one before ended on a name of Vishnu. The two names sit in the same slot in the same sentence, doing the same work, and nothing is made of the difference.",
+   "commentary_hi": "'मैं' वाले श्लोकों में आख़िरी, और यह शिव के एक नाम पर ख़त्म होता है, जैसे पिछला विष्णु के एक नाम पर हुआ था। दोनों नाम एक ही वाक्य की एक ही जगह पर बैठे हैं, एक ही काम करते हुए, और इस फ़र्क़ का कोई मुद्दा नहीं बनाया जाता।"
+  },
+  {
+   "id": 20906,
+   "number": "1.70",
+   "body_en": "This knowledge he gave to Apantaratama. Apantaratama gave it to Brahma. Brahma gave it to Ghora Angirasa. Ghora Angirasa gave it to Raikva. Raikva gave it to Rama. Rama gave it to every being there is. This is the instruction that puts the fire out, the instruction of the Veda, the instruction of the Veda. That is the secret teaching.",
+   "body_hi": "यह विद्या उन्होंने अपान्तरतम को दी। अपान्तरतम ने ब्रह्मा को दी। ब्रह्मा ने घोर आंगिरस को दी। घोर आंगिरस ने रैक्व को दी। रैक्व ने राम को दी। राम ने हर प्राणी को दी। यही वह अनुशासन है जो आग बुझा देता है, वेद का अनुशासन, वेद का अनुशासन। यही उपनिषद् है।",
+   "commentary_en": "The line of teachers ends with a name giving it to every being there is, which breaks the line rather than continuing it. After that the last phrase is said twice, which is how these texts mark that a book has finished.",
+   "commentary_hi": "गुरुओं की यह क़तार एक ऐसे नाम पर ख़त्म होती है जो उसे हर प्राणी को दे देता है — यानी क़तार आगे नहीं बढ़ती, टूट जाती है। उसके बाद आख़िरी पद दो बार कहा जाता है, और ये पाठ इसी तरह बताते हैं कि किताब पूरी हो गई।"
+  }
+ ]
+}
