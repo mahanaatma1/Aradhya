@@ -1,0 +1,394 @@
+{
+ "slug": "katha",
+ "title_en": "Katha Upanishad",
+ "title_hi": "कठ उपनिषद्",
+ "book_id": 66,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 22590,
+   "number": "1.1",
+   "body_en": "Vajashravasa, they say, gave away everything he had. And he had a son whose name was Nachiketa.",
+   "body_hi": "वाजश्रवस ने, कहा जाता है, अपना सब कुछ दान कर दिया। और उसका एक बेटा था जिसका नाम नचिकेता था।",
+   "commentary_en": "The book opens like a story and stays one for a while. A man gives away his whole estate, which is the most serious thing a householder can do, and the trouble starts immediately.",
+   "commentary_hi": "किताब कहानी की तरह खुलती है और कुछ देर कहानी ही रहती है। एक आदमी अपनी पूरी जायदाद दान कर देता है — गृहस्थ के लिए इससे बड़ी बात कोई नहीं — और मुसीबत उसी वक़्त शुरू हो जाती है।"
+  },
+  {
+   "id": 22591,
+   "number": "1.2",
+   "body_en": "The boy was still small when the gifts were being led away. Something came over him as he watched — a kind of trust, a kind of seriousness — and he began to turn it over in his mind.",
+   "body_hi": "लड़का अभी छोटा ही था जब दान की चीज़ें बाहर ले जाई जा रही थीं। उसे देखते हुए उस पर कुछ छा गया — एक तरह का भरोसा, एक तरह की गंभीरता — और वह मन ही मन इसे पलटने लगा।",
+   "commentary_en": "Faith is what the Sanskrit says, and it is not comfortable faith. Nothing has been promised to him and there is nothing yet to believe in. He simply takes the whole business seriously, at an age when nobody expects it.",
+   "commentary_hi": "संस्कृत में 'श्रद्धा' लिखा है, और यह ऐसी श्रद्धा नहीं जिसमें आराम हो। उससे न कुछ वादा किया गया है, न अभी मानने को कुछ है। वह बस पूरे मामले को गंभीरता से लेता है, ऐसी उम्र में जब कोई इसकी उम्मीद नहीं करता।"
+  },
+  {
+   "id": 22592,
+   "number": "1.3",
+   "body_en": "His thought was this. The worlds a man wins by giving away cattle that have already drunk their water, already eaten their grass, already been milked, and are past bearing — those worlds have no joy in them either.",
+   "body_hi": "उसका मन यह था — जो आदमी ऐसी गायें दान करता है जो पानी पी चुकी हैं, घास खा चुकी हैं, दूध दे चुकी हैं और बच्चे देने लायक़ नहीं रहीं — वह जो लोक पाता है, उन लोकों में भी कोई सुख नहीं होता।",
+   "commentary_en": "The boy has looked at what is actually being given. Cattle that have nothing left to give. And he draws the obvious conclusion about what such a gift can be worth — a conclusion about his father's sincerity, drawn in front of the guests and the priests.",
+   "commentary_hi": "लड़के ने देख लिया है कि असल में दिया क्या जा रहा है — ऐसी गायें जिनमें देने को कुछ बचा ही नहीं। और वह इससे सीधा नतीजा निकाल लेता है कि ऐसा दान कितने काम का होगा — यह नतीजा उसके पिता की नीयत के बारे में है, और निकाला गया है मेहमानों और पुरोहितों के सामने।"
+  },
+  {
+   "id": 22593,
+   "number": "1.4",
+   "body_en": "So the boy asked his father outright: and who is going to take me? Nothing came back the first time. He put the same question again, and again after that. Then his father, worn past bearing, snapped out the words: to Death — I hand you over to Death.",
+   "body_hi": "तो लड़के ने सीधे अपने पिता से पूछा — और मुझे ले जाएगा कौन? पहली बार कोई जवाब नहीं आया। वही सवाल उसने दोबारा रखा, और उसके बाद एक बार और। तब पिता, सब्र के आख़िरी छोर पर, झटके से बोले — मृत्यु को। तुझे मृत्यु के हवाले करता हूँ।",
+   "commentary_en": "He questions the gift three times, which in this world is the point at which a demand must be answered, and his father answers it in anger. The story the whole book rests on turns on one sentence said by a man who did not mean it, to a boy who takes his father at his word.",
+   "commentary_hi": "वह दान के बारे में तीन बार पूछता है, और इस दुनिया में तीसरी बार के बाद जवाब देना पड़ता ही है — और उसका पिता ग़ुस्से में जवाब दे देता है। पूरी किताब जिस एक बात पर टिकी है वह कही गई उस आदमी से है जिसका मतलब वह नहीं था, उस लड़के से जो अपने बाप की बात को मुँह का शब्द मान लेता है।"
+  },
+  {
+   "id": 22594,
+   "number": "1.5",
+   "body_en": "Nachiketa thought it over: among a great many who go, I seem to be the one going ahead of them, and I am one of the middle of that crowd. So whatever Death means to do with me today, he has done it to plenty of others already, and it is only my turn.",
+   "body_hi": "नचिकेता ने सोच-विचार किया — जो इतने लोग जाते हैं, उनमें मैं सबसे आगे जाने वाला लगता हूँ, और उसी भीड़ के बीच का एक हूँ। तो आज मृत्यु मेरे साथ जो कुछ करना चाहता है, वह बहुतों के साथ कर चुका है, और अब बस मेरी बारी है।",
+   "commentary_en": "He does not run and he does not argue. He works out that a man handed over is one of a long line of men handed over, and then asks what the transaction is actually for. It is a curiously practical reaction for a child who has just been given away.",
+   "commentary_hi": "वह न भागता है न बहस करता है। वह यह समझ लेता है कि जिसे सौंप दिया गया है वह ऐसे ही सौंपे गए लोगों की एक लंबी क़तार में से एक है, और फिर पूछता है कि इस सौदे का मतलब आख़िर क्या है। जिस बच्चे को अभी-अभी दान कर दिया गया है, उसके लिए यह हैरान करने वाली व्यावहारिक प्रतिक्रिया है।"
+  },
+  {
+   "id": 22595,
+   "number": "1.6",
+   "body_en": "Follow with your eyes how the men before us went, and then turn and look at how the men after us go. A man ripens like grain, and like grain he comes up again.",
+   "body_hi": "जो हमसे पहले के लोग थे, उनके जीवन पर नज़र डालो, और फिर पलटकर देखो कि हमारे बाद वाले कैसे जीते हैं। आदमी अनाज की तरह पकता है, और अनाज की तरह फिर उग आता है।",
+   "commentary_en": "The first thing he says at Death's door is that he has already understood the pattern. Every man before him has died and every man after him will. He arrives having done the thinking, which is why the teaching he gets is not a consolation.",
+   "commentary_hi": "मृत्यु के दरवाज़े पर वह पहली बात यह कहता है कि वह यह ढाँचा पहले ही समझ चुका है। उससे पहले का हर आदमी मरा है और उसके बाद का हर आदमी मरेगा। वह सोच-विचार करके आया है, इसीलिए जो उपदेश उसे मिलता है वह तसल्ली नहीं है।"
+  },
+  {
+   "id": 22596,
+   "number": "1.7",
+   "body_en": "A brahmin comes into a house as a guest, and a guest is fire. A household makes its peace with him. So bring water, O Vaivasvata.",
+   "body_hi": "ब्राह्मण घर में मेहमान बनकर आता है, और मेहमान आग है। घर वाले उससे अपनी शांति बनाते हैं। तो पानी लाओ, हे वैवस्वत।",
+   "commentary_en": "He is standing outside a house he has walked three days to reach, and instead of knocking he tells the owner what hospitality requires. Then he waits, and nobody offers him anything for three nights.",
+   "commentary_hi": "वह उस घर के बाहर खड़ा है जहाँ पहुँचने के लिए तीन दिन चला है, और दस्तक देने के बजाय वह घर के मालिक को बताता है कि मेहमानदारी में क्या करना होता है। फिर वह इंतज़ार करता है, और तीन रात तक कोई उसे कुछ नहीं देता।"
+  },
+  {
+   "id": 22597,
+   "number": "1.8",
+   "body_en": "Hopes, and expectations, and the company of good men; offerings and works of charity, sons and cattle, all of it — a man of small understanding has every one of these cut away from him when a brahmin sits in his house and goes unfed.",
+   "body_hi": "आशाएँ, और उम्मीदें, और सत्पुरुषों का साथ; यज्ञ और दान के काम, बेटे और पशु — यह सब — जिस आदमी की समझ छोटी है, उसके घर में ब्राह्मण बैठा रहे और भूखा रहे, तो उसका यह सब कट जाता है।",
+   "commentary_en": "A hard sentence, and it lands on Yama, not on the boy. The most powerful being in the story has been caught out on the oldest obligation there is, and the text lets him be in the wrong for three nights before he says a word.",
+   "commentary_hi": "कड़ा वाक्य, और यह यम पर पड़ता है, लड़के पर नहीं। कहानी का सबसे ताक़तवर जीव सबसे पुराने फ़र्ज़ पर पकड़ा गया है, और पाठ उसे तीन रात ग़लत में रहने देता है, एक शब्द कहने से पहले।"
+  },
+  {
+   "id": 22598,
+   "number": "1.9",
+   "body_en": "Death said: Three nights you have stayed in my house and eaten nothing, O brahmin, and a guest is to be honoured. Homage to you. Let it go well with me. So choose three boons.",
+   "body_hi": "मृत्यु ने कहा — तीन रात तुम मेरे घर में रहे और कुछ नहीं खाया, हे ब्राह्मण, और मेहमान का सम्मान होता है। तुम्हें नमस्कार। मेरा भला हो। तो तीन वर माँगो।",
+   "commentary_en": "Homage to you, and let it go well with me — the god of death says both in one breath. He is not apologising out of kindness. An unfed guest in the house is a debt that falls on the host, and he wants it settled.",
+   "commentary_hi": "तुम्हें नमस्कार, और मेरा भला हो — मृत्यु के देवता एक ही साँस में दोनों कहते हैं। वे दया से माफ़ी नहीं माँग रहे। घर में भूखा मेहमान वह क़र्ज़ है जो मालिक पर पड़ता है, और वे उसे चुकाना चाहते हैं।"
+  },
+  {
+   "id": 22599,
+   "number": "1.10",
+   "body_en": "As the first of the three, let Gautama be calm in his mind and good-humoured; let his anger against me go; let him know me again for what I am and speak to me as one you have let go home. That is the first boon I choose.",
+   "body_hi": "तीनों में से पहला यह — गौतम का मन शांत हो और वे ख़ुशमिज़ाज हों; मुझ पर उनका ग़ुस्सा उतर जाए; वे मुझे फिर वैसा ही पहचानें जैसा मैं हूँ और मुझसे ऐसे बोलें जैसे आपने मुझे घर के लिए छोड़ दिया हो। यही पहला वर माँगता हूँ।",
+   "commentary_en": "He could have asked for anything on the first boon. He asks for his father's peace of mind, and for his father to recognise him — which is a request that his father be freed of something, and also, quietly, that he be taken back.",
+   "commentary_hi": "पहले वर में वह जो चाहता कोई भी चीज़ माँग सकता था। वह अपने पिता के मन की शांति माँगता है, और यह भी कि उसके पिता उसे पहचान लें — यानी एक तरफ़ वह अपने पिता के लिए कुछ छुड़वा रहा है, और चुपचाप यह भी कि उसे वापस ले लिया जाए।"
+  },
+  {
+   "id": 22600,
+   "number": "1.11",
+   "body_en": "Let him sleep in peace, his anger gone, Auddalaki Aruni, seeing me released out of the mouth of death and talking with me again the way he used to.",
+   "body_hi": "वे चैन से सोएँ, ग़ुस्सा उतर चुका हो, औद्दालकि आरुणि, मुझे मृत्यु के मुँह से छूटा हुआ देखकर और फिर पहले की तरह मुझसे बातें करते हुए।",
+   "commentary_en": "Released out of the mouth of death — he uses the phrase about himself while he is standing in front of Death, and asks that his father be told it. The second half of the sentence is a son arranging to be reported safe.",
+   "commentary_hi": "मृत्यु के मुँह से छूटा हुआ — यह बात वह अपने बारे में कहता है जबकि वह ख़ुद मृत्यु के सामने खड़ा है, और माँगता है कि यह बात उसके पिता को बताई जाए। आधा वाक्य यह है कि एक बेटा अपने सलामत होने की ख़बर भिजवाने का इंतज़ाम कर रहा है।"
+  },
+  {
+   "id": 22601,
+   "number": "1.12",
+   "body_en": "In the heaven world there is no fear of anything at all. You are not there, and so nobody there is afraid of growing old. Hunger and thirst are crossed over. Grief is behind. A man takes his delight in the heaven world.",
+   "body_hi": "स्वर्ग लोक में किसी बात का डर नहीं है। तुम वहाँ नहीं हो, और इसीलिए वहाँ कोई बूढ़ा होने से नहीं डरता। भूख और प्यास पार हो चुकी हैं। शोक पीछे रह गया। आदमी स्वर्ग लोक में आनंद लेता है।",
+   "commentary_en": "You are not there — said to Death's face. The reason there is no fear in heaven is given as the absence of Death himself, and it is not said as an insult. It is the plainest thing a boy could say to the one who has him.",
+   "commentary_hi": "'तुम वहाँ नहीं हो' — यह मृत्यु के मुँह पर कहा गया है। स्वर्ग में डर के न होने की वजह यही बताई गई है कि वहाँ मृत्यु ख़ुद नहीं है, और यह अपमान की तरह नहीं कहा गया। जिसके हाथ में वह है, उससे एक लड़का इससे ज़्यादा सीधी बात क्या कहता।"
+  },
+  {
+   "id": 22602,
+   "number": "1.13",
+   "body_en": "You know the fire that leads to heaven, O Death. Tell it to me, who trust you. The people in the heaven worlds come into what does not die. That is what I choose as the second boon.",
+   "body_hi": "स्वर्ग ले जाने वाली आग तुम जानते हो, हे मृत्यु। मुझे बताओ, जो तुम पर भरोसा करता हूँ। स्वर्ग लोकों के लोग उस तक पहुँचते हैं जो मरता नहीं। यही दूसरा वर माँगता हूँ।",
+   "commentary_en": "The second boon is asking for a technique, and this is the only place in the book where something is asked for that can be taught. Everything after this is a question that cannot.",
+   "commentary_hi": "दूसरा वर एक विधि माँग रहा है, और पूरी किताब में यही एक जगह है जहाँ ऐसी चीज़ माँगी जाती है जिसे सिखाया जा सकता है। इसके बाद जो कुछ है वह ऐसा सवाल है जिसे सिखाया नहीं जा सकता।"
+  },
+  {
+   "id": 22603,
+   "number": "1.14",
+   "body_en": "Death said: I will tell it to you, and take it in from me — the fire that leads to heaven, Nachiketa, knowing it as it is. Know it as the winning of worlds without end, and as the footing, the one hidden away in the cave.",
+   "body_hi": "मृत्यु ने कहा — मैं तुम्हें बताऊँगा, और इसे मुझसे ले लो — स्वर्ग ले जाने वाली आग, नचिकेता, जैसी वह है वैसी जानकर। इसे अनंत लोकों की प्राप्ति जानो, और उस टेक को, जो गुफा में छिपा रखा है।",
+   "commentary_en": "The footing hidden in the cave is the first appearance of the image the whole Upanishad runs on. A fire that is also a foundation, kept somewhere inside a person, is what the second half of the book keeps telling you to go and find.",
+   "commentary_hi": "'गुफा में छिपा टेक' — वह तसवीर पहली बार यहाँ आती है जिस पर पूरा उपनिषद चलता है। एक आग जो नींव भी है, और आदमी के भीतर कहीं रखी है — किताब का दूसरा आधा बार-बार यही कहता है कि जाकर उसे ढूँढ़ो।"
+  },
+  {
+   "id": 22604,
+   "number": "1.15",
+   "body_en": "He told him about that fire, the beginning of worlds — how many bricks go into it, and in what order, and how it is laid. And Nachiketa repeated the whole of it back exactly as it had been given. Then Death, pleased, spoke to him again.",
+   "body_hi": "उन्होंने उसे वह आग बताई, जो लोकों का आदि है — उसमें कितनी ईंटें लगती हैं, किस क्रम में, और वह कैसे जमाई जाती है। और नचिकेता ने पूरा का पूरा ठीक वैसे ही लौटाकर कह दिया जैसे उसे दिया गया था। तब मृत्यु का मन खिल उठा, और वे उससे फिर बोले।",
+   "commentary_en": "He recites it back and gets it right, and that is what unlocks the rest. The book is telling you what kind of student it wants: not the one who is moved by it, the one who can repeat it exactly.",
+   "commentary_hi": "वह उसे लौटाकर कहता है और ठीक कहता है, और यही आगे का रास्ता खोलता है। किताब बता रही है कि उसे कैसा विद्यार्थी चाहिए: वह नहीं जो भावुक हो जाए, वह जो ज्यों-का-त्यों दोहरा सके।"
+  },
+  {
+   "id": 22605,
+   "number": "1.16",
+   "body_en": "The great-souled one, his mind now at ease, said to him: I give you one more thing today. This fire will be known by your name. And take from me this garland of many shapes.",
+   "body_hi": "संतुष्ट मन से महात्मा ने उससे कहा — आज एक और वर तुम्हारे नाम। यह आग तुम्हारे ही नाम से पहचानी जाएगी। और यह कई रूपों वाली माला भी मुझसे ले जाओ।",
+   "commentary_en": "A gift given for the recitation rather than for the choosing, and it is the one thing Nachiketa carries out of the story that other people can use. Whatever else he is said to have brought back, the fire is the part that stayed in the world.",
+   "commentary_hi": "यह उपहार माँगने के लिए नहीं, दोहराने के लिए दिया गया है, और यही वह अकेली चीज़ है जो नचिकेता इस कहानी से बाहर लाता है और जिससे दूसरे लोग काम ले सकते हैं। और चाहे उसके बारे में जो कुछ कहा जाए, यह आग ही वह हिस्सा है जो दुनिया में रह गया।"
+  },
+  {
+   "id": 22606,
+   "number": "1.17",
+   "body_en": "A man who has come to the place where the three meet, who does the three works, crosses birth and death. Knowing that god, born of brahman, the one to be praised, and having seen him plain, a man comes to the last peace there is.",
+   "body_hi": "जो आदमी उस जगह आ पहुँचा जहाँ तीनों मिलती हैं, और जो तीनों काम करता है, वह जन्म और मृत्यु के पार निकल जाता है। उस देवता को जानकर, जो ब्रह्म से जन्मा है, जो स्तुति के योग्य है, और उसे साफ़ देखकर, आदमी उस आख़िरी शांति तक पहुँचता है।",
+   "commentary_en": "The three are the three fires, or the three nights, or the three boons — the text does not pin it down and by now does not need to. The pattern is that a man who has gone through the whole of something gets out the far side of being born.",
+   "commentary_hi": "तीनों से मतलब तीन अग्नियाँ, या तीन रातें, या तीन वर — पाठ इसे तय नहीं करता और अब उसे तय करने की ज़रूरत भी नहीं। ढाँचा यह है कि जो आदमी किसी चीज़ के पूरे से गुज़र जाता है, वह जन्म लेने के उस पार निकल जाता है।"
+  },
+  {
+   "id": 22607,
+   "number": "1.18",
+   "body_en": "A man who knows these three things and lays the Nachiketa fire, having pushed the snares of death away in front of him, goes beyond grief and takes his delight in the heaven world.",
+   "body_hi": "जो आदमी इन तीनों को जानता है और नचिकेता की आग जमाता है, वह मृत्यु के फंदों को अपने आगे से धकेल देता है, शोक के पार निकल जाता है, और स्वर्ग लोक में आनंद लेता है।",
+   "commentary_en": "Snares of death pushed away in front of him — the image is of a man walking and shoving obstacles out of his own path as he goes. Not escaping anything. Clearing ground.",
+   "commentary_hi": "'मृत्यु के फंदे अपने आगे से धकेल देना' — तसवीर ऐसे आदमी की है जो चलता जाता है और चलते-चलते अपने रास्ते की अड़चनें हटाता जाता है। किसी चीज़ से भागना नहीं। रास्ता साफ़ करना।"
+  },
+  {
+   "id": 22608,
+   "number": "1.19",
+   "body_en": "Death said: Then from now on, Nachiketa, this fire goes by your name — the one that lifts a man to the heaven worlds, which was what your second asking won. Men will call it the Nachiketa fire. Of the three, one is still unspoken. Bring it.",
+   "body_hi": "मृत्यु ने कहा — तो अब से, नचिकेता, यह आग तुम्हारे नाम से चलेगी — वह जो आदमी को स्वर्ग लोकों तक उठाती है, और जो तुम्हारी दूसरी माँग ने जीती थी। लोग इसे नचिकेता की आग कहेंगे। तीनों में से एक अभी बोला नहीं गया। उसे लाओ।",
+   "commentary_en": "He names the fire after the boy and hands him the whole thing, and then asks for the third question. For the length of one sentence the story could stop here and everyone would be satisfied.",
+   "commentary_hi": "वे आग का नाम लड़के के नाम पर रख देते हैं और पूरी चीज़ उसे सौंप देते हैं, और फिर तीसरा सवाल माँगते हैं। एक वाक्य के लिए कहानी यहीं रुक सकती थी और सब ख़ुश होते।"
+  },
+  {
+   "id": 22609,
+   "number": "1.20",
+   "body_en": "Nachiketa said: There is something men cannot settle. When a man has died, one side says he goes on being, and another says that is the end of him. This is what I want to have from you. Set it out for me. That is the last of the three.",
+   "body_hi": "नचिकेता ने कहा — एक बात है जिसे लोग तय नहीं कर पाते। आदमी जब मर जाता है, तो एक पक्ष कहता है वह बना रहता है, दूसरा कहता है उसका वहीं अंत हो गया। यही बात मुझे तुमसे चाहिए। इसे खोलकर रख दो। तीनों में से यही आख़िरी है।",
+   "commentary_en": "The question the book exists for, and it is asked plainly, without metaphysics. He does not ask what the self is. He asks whether a man who has died is or is not, and he has been standing in Death's house for three days while he worked up to it.",
+   "commentary_hi": "वह सवाल जिसके लिए यह किताब है, और वह सीधे-सीधे पूछा गया है, बिना किसी दार्शनिक लपेट के। वह यह नहीं पूछता कि आत्मा क्या है। वह पूछता है कि मरा हुआ आदमी है या नहीं — और यह पूछने तक पहुँचने में उसने मृत्यु के घर में तीन दिन लगा दिए।"
+  },
+  {
+   "id": 22610,
+   "number": "1.21",
+   "body_en": "Death said: Even the gods had doubts about this before now, and it is not an easy thing to know. This dharma is a fine one. Choose another boon, Nachiketa. Do not press me on it. Let me off from this one.",
+   "body_hi": "मृत्यु ने कहा — इस बारे में देवताओं को भी पहले शक हुआ है, और यह जानने में आसान चीज़ नहीं है। यह धर्म बहुत बारीक है। कोई और वर माँगो, नचिकेता। इस पर मुझे मत दबाओ। इससे मुझे छोड़ दो।",
+   "commentary_en": "Death flinches. The being who ends everything, who is being asked the one question he exists to answer, says it is too subtle and asks to be let off. Any answer he gives will be worse than the question.",
+   "commentary_hi": "मृत्यु हिचकते हैं। वह जो सब कुछ ख़त्म करता है, जिससे वही एक सवाल पूछा जा रहा है जिसका जवाब देने के लिए वह है, वह कहता है कि बात बहुत बारीक है और वह इससे छूटना चाहता है। वह जो भी जवाब देगा, वह सवाल से छोटा पड़ेगा।"
+  },
+  {
+   "id": 22611,
+   "number": "1.22",
+   "body_en": "Nachiketa said: Even the gods had their doubts — and you say it cannot easily be known. And there is no one else to tell me, no other like you. No other boon is worth the same as this one.",
+   "body_hi": "नचिकेता ने कहा — देवताओं को भी शक हुआ था — और आप कहते हैं कि यह आसानी से जाना नहीं जा सकता। और मुझे बताने वाला कोई दूसरा नहीं, आप जैसा कोई नहीं। इसके बराबर कोई और वर है ही नहीं।",
+   "commentary_en": "He turns the refusal into his argument. If it is that hard and even the gods stumbled on it, then there is nobody else to ask — so the difficulty is not a reason to drop it, it is the reason to stay. This is the moment the story actually turns.",
+   "commentary_hi": "वह इनकार को ही अपनी दलील बना लेता है। अगर बात इतनी कठिन है और देवता भी उस पर ठिठके, तो पूछने को कोई दूसरा है ही नहीं — यानी कठिनाई छोड़ देने की वजह नहीं, रुके रहने की वजह है। कहानी यहीं से असल में मुड़ती है।"
+  },
+  {
+   "id": 22612,
+   "number": "1.23",
+   "body_en": "Death said: Ask for sons and grandsons who live a hundred years. Ask for cattle by the thousand, elephants, gold, horses. Ask for a great stretch of the earth. And live yourself as many autumns as you could wish for.",
+   "body_hi": "मृत्यु ने कहा — ऐसे बेटे और पोते माँगो जो सौ साल जिएँ। हज़ारों पशु माँगो, हाथी, सोना, घोड़े। धरती का एक बड़ा टुकड़ा माँगो। और ख़ुद उतने पतझड़ जीओ जितने तुम चाहो।",
+   "commentary_en": "He offers the whole list of things a man in that world wants, and every item is something that belongs to the first half of the story and cannot survive the question. He is answering the third boon with the second boon, on a larger scale.",
+   "commentary_hi": "वे उस दुनिया की हर वह चीज़ माँगने को रख देते हैं जो आदमी को चाहिए, और हर चीज़ उसी पहले हिस्से की है जो इस सवाल के सामने टिक नहीं सकती। वे तीसरे वर का जवाब दूसरा वर देकर दे रहे हैं, बस बड़े पैमाने पर।"
+  },
+  {
+   "id": 22613,
+   "number": "1.24",
+   "body_en": "If you think of any boon as equal to that, ask for wealth and a long life. Be a great man across the earth, Nachiketa. I will make you one who has his share of every desire there is.",
+   "body_hi": "अगर तुम किसी वर को उसके बराबर समझो, तो धन और लंबी उम्र माँगो। धरती भर में एक बड़े आदमी बनो, नचिकेता। मैं तुम्हें हर चाह में से हिस्सा पाने वाला बना दूँगा।",
+   "commentary_en": "Be a great man across the earth — said to a boy who has been given away and has nothing, by the one being in the story who can actually deliver it. It is a serious offer and it is meant seriously, which is why it has to be refused seriously.",
+   "commentary_hi": "'धरती भर में बड़े आदमी बनो' — यह उस लड़के से कहा जा रहा है जो दान कर दिया गया है और जिसके पास कुछ नहीं है, और कहने वाला कहानी का वह अकेला जीव है जो यह सचमुच दे सकता है। यह गंभीर पेशकश है और गंभीरता से की गई है, इसीलिए इसका इनकार भी गंभीरता से करना पड़ता है।"
+  },
+  {
+   "id": 22614,
+   "number": "1.25",
+   "body_en": "Whatever desires are hard to get in this world of mortals, ask for all of them just as you please. Here are women, and chariots to carry them, and music to go with them — the like of these are not to be had by men. Be waited on by them, and they are mine to give you. Only do not ask me about dying, Nachiketa.",
+   "body_hi": "इस मर्त्य लोक में जो भी चाहें मुश्किल से मिलती हैं, वे सब जैसी चाहो माँग लो। ये रानियाँ, और उन्हें ढोने वाले रथ, और उनके साथ बाजे — ऐसी चीज़ें आदमियों को मिलती ही नहीं। इनसे तुम्हारी सेवा कराई जाए, और ये देने में मेरे ही हाथ हैं। बस मरने के बारे में मुझसे मत पूछो, नचिकेता।",
+   "commentary_en": "The richest offer in the book, and it ends with the same six words as every other attempt. He is not bribing him to be quiet. He is describing everything that becomes worthless the moment the third question is answered, and hoping the boy will not notice.",
+   "commentary_hi": "किताब की सबसे भारी पेशकश, और वह भी उन्हीं शब्दों पर ख़त्म होती है जिन पर बाक़ी हर कोशिश। वे उसे चुप कराने के लिए रिश्वत नहीं दे रहे। वे वह सब दिखा रहे हैं जो तीसरे सवाल का जवाब मिलते ही बेकार हो जाता है, और उम्मीद कर रहे हैं कि लड़का ध्यान नहीं देगा।"
+  },
+  {
+   "id": 22615,
+   "number": "1.26",
+   "body_en": "Nachiketa said: These are tomorrow's things, O Death, and they wear out the strength of every sense a man has. Even a whole life is a small thing. Keep your chariots, keep your dancing and your songs.",
+   "body_hi": "नचिकेता ने कहा — ये सब कल की चीज़ें हैं, हे मृत्यु, और ये आदमी की हर इन्द्रिय का बल घिस देती हैं। पूरी ज़िंदगी भी एक छोटी चीज़ है। तुम्हारे रथ तुम्हारे, तुम्हारे नाच-गाने तुम्हारे।",
+   "commentary_en": "Tomorrow's things — the phrase is the whole refusal in two words. Everything on offer is something that will be over, and he has just spent three days in the company of the man who ends things.",
+   "commentary_hi": "'कल की चीज़ें' — दो शब्दों में पूरा इनकार। जो कुछ भी रखा गया है वह सब ऐसा है जो ख़त्म हो जाएगा — और उसने यह तीन दिन उसी के साथ बिताए हैं जो चीज़ें ख़त्म करता है।"
+  },
+  {
+   "id": 22616,
+   "number": "1.27",
+   "body_en": "A man is not to be made content with wealth. We will have wealth, if only we catch sight of you. And we will live just as long as you are in charge. But the boon I have to choose is that one, and no other.",
+   "body_hi": "आदमी धन से संतुष्ट होने वाला नहीं है। धन हमें मिल भी जाएगा, अगर हम तुम्हें एक बार देख लें। और हम तभी तक जिएँगे जब तक तुम्हारा राज है। पर मुझे जो वर माँगना है वह वही है, और कोई नहीं।",
+   "commentary_en": "Two of the plainest sentences in the book, and both are arguments. Wealth does not satisfy — that is a claim about what a man is. And we will live as long as you are in charge, said to Death, means: I know exactly how long my life is worth.",
+   "commentary_hi": "किताब के दो सबसे सीधे वाक्य, और दोनों दलीलें हैं। धन संतुष्ट नहीं करता — यह आदमी के स्वभाव के बारे में बात है। और 'जब तक तुम्हारा राज है' मृत्यु से कहा गया मतलब यह है: मुझे ठीक-ठीक पता है कि मेरी ज़िंदगी कितनी की है।"
+  },
+  {
+   "id": 22617,
+   "number": "1.28",
+   "body_en": "What aging mortal, having come close to the ones who do not age and do not die, would choose to live long — knowing what he knows, and having weighed the whole business of beauty and pleasure?",
+   "body_hi": "कौन बूढ़ा होता मर्त्य, उनके पास पहुँचकर जो न बूढ़े होते हैं न मरते हैं, लंबी उम्र चुनना चाहेगा — यह जानते हुए जो वह जानता है, और रूप और सुख के पूरे मामले को तौल चुकने के बाद?",
+   "commentary_en": "He says the two things that do not age are nearby, and that he is standing among them, and then asks what long life would be for. The verse is a question and he does not bother to answer it.",
+   "commentary_hi": "वह कहता है कि जो दो चीज़ें बूढ़ी नहीं होतीं वे पास ही हैं, और वह उनके बीच खड़ा है, और फिर पूछता है कि लंबी उम्र आख़िर किस काम की। यह श्लोक एक सवाल है और वह उसका जवाब देने की ज़हमत नहीं उठाता।"
+  },
+  {
+   "id": 22618,
+   "number": "1.29",
+   "body_en": "Tell me about the thing they doubt, O Death, and about the great matter that lies beyond. Tell me that boon of yours that has gone into the hidden. Nachiketa chooses nothing else.",
+   "body_hi": "जिस बात पर वे शक करते हैं वह मुझे बताओ, हे मृत्यु, और वह बड़ा मामला जो परले पार है। मुझे तुम्हारा वह वर बताओ जो छिपे हुए में चला गया है। नचिकेता और कुछ नहीं चुनता।",
+   "commentary_en": "And that is the last thing he says for the rest of the book. From here to the end it is Death talking, which is what the boy's stubbornness bought him — the answer was never going to come from the man who asked.",
+   "commentary_hi": "और पूरी किताब में यह उसकी आख़िरी बात है। यहाँ से अंत तक बोलते मृत्यु हैं — और लड़के की हठ ने यही ख़रीदा — जवाब उससे कभी आने वाला नहीं था जिसने सवाल पूछा।"
+  },
+  {
+   "id": 22619,
+   "number": "2.1",
+   "body_en": "Death said: The good is one thing and the pleasant is another, and they pull a man two ways. The one who takes the good comes out well. The one who takes the pleasant misses the whole point of being here.",
+   "body_hi": "मृत्यु ने कहा — श्रेय एक चीज़ है और प्रेय दूसरी, और ये आदमी को दो तरफ़ खींचती हैं। जो श्रेय पकड़ता है वह भला होता है। जो प्रेय पकड़ता है वह यहाँ होने का पूरा मतलब खो देता है।",
+   "commentary_en": "The teaching opens with the choice Nachiketa just made, described in general terms, and does not name him. He refused the pleasant three times in a row and now has to sit and hear what that is called.",
+   "commentary_hi": "उपदेश उसी चुनाव से शुरू होता है जो नचिकेता ने अभी किया, सामान्य शब्दों में, और उसका नाम लिए बिना। उसने प्रेय को लगातार तीन बार ठुकराया, और अब उसे बैठकर यह सुनना है कि इस चुनाव का नाम क्या है।"
+  },
+  {
+   "id": 22620,
+   "number": "2.2",
+   "body_en": "Both come to a man, and having looked them over, a man sorts them out. The one who has his wits about him picks the good over the pleasant. A fool, for the sake of keeping and enjoying, picks the pleasant.",
+   "body_hi": "दोनों आदमी के पास आती हैं, और दोनों को देख-भालकर आदमी उनमें फ़र्क़ करता है। जिसकी समझ लगी रहती है वह प्रेय के बदले श्रेय चुनता है। मूर्ख, बचाने और भोगने की ख़ातिर, प्रेय चुनता है।",
+   "commentary_en": "Both come to a man — the choice is not between something present and something absent. They arrive together and always have, which is why this is a sorting job and not a search.",
+   "commentary_hi": "'दोनों आदमी के पास आती हैं' — चुनाव ऐसा नहीं है कि एक चीज़ सामने हो और दूसरी कहीं और। दोनों साथ-साथ आती हैं और हमेशा आती आई हैं, इसीलिए यह ढूँढ़ने का काम नहीं, छाँटने का काम है।"
+  },
+  {
+   "id": 22621,
+   "number": "2.3",
+   "body_en": "You have passed over these desires, and you have passed over the ones that look attractive, every one of them, and you have not walked into the road that leads to wealth, where a great many men drown. This is that.",
+   "body_hi": "तुम इन चाहों के पार निकल आए, और जो चाहें सुंदर दिखती हैं उन सब के भी पार, और तुम उस रास्ते पर नहीं चले जो धन की तरफ़ जाता है, जहाँ बहुत से लोग डूबते हैं। यह वही है।",
+   "commentary_en": "The refrain lands for the first time: this is that. It closes a verse about Nachiketa himself rather than about the self, which sets the pattern — the formula is not a riddle to solve, it is a pointer saying that what just got described is what the whole book is about.",
+   "commentary_hi": "पहली बार वही टेक आता है: यह वही है। यह उस श्लोक के अंत में आता है जो नचिकेता के बारे में है, आत्मा के बारे में नहीं — और यही ढाँचा बन जाता है। यह पहेली नहीं है जिसे बूझना हो, यह इशारा है कि अभी जो कहा गया वही पूरी किताब का विषय है।"
+  },
+  {
+   "id": 22622,
+   "number": "2.4",
+   "body_en": "The thing that is far off and the thing that is very close; the thing that is old and the thing that is always new; it sits at the back of everything, and it goes through everything. This is that.",
+   "body_hi": "वह जो बहुत दूर है और वह जो बहुत पास है; वह जो पुराना है और वह जो सदा नया है; वह हर चीज़ के पीछे बैठा है, और हर चीज़ में से जाता है। यह वही है।",
+   "commentary_en": "Pairs of opposites, and no resolution offered for any of them. The point of the verse is that one thing is on both sides of every pair, and the refrain says look at the thing, not the pair.",
+   "commentary_hi": "उलटे जोड़े, और किसी का कोई हल नहीं दिया जा रहा। श्लोक का मतलब यह है कि एक ही चीज़ हर जोड़े के दोनों तरफ़ है, और टेक कहती है कि जोड़े को नहीं, चीज़ को देखो।"
+  },
+  {
+   "id": 22623,
+   "number": "2.5",
+   "body_en": "The seer of what was said and what is being said — the one who has seen both — is not the same as the man who talks about it. The wise man knows the self to be other than what is right in front of him, and he does not grieve. This is that.",
+   "body_hi": "जो कहा गया और जो कहा जा रहा है — दोनों को जिसने देख लिया — वह उस आदमी जैसा नहीं है जो इन सबकी बातें करता है। बुद्धिमान आत्मा को उससे और ही जानता है जो उसके ठीक सामने है, और वह शोक नहीं करता। यह वही है।",
+   "commentary_en": "The distinction being drawn is between a man who has understood and a man who can explain it, and the text is clear that they are not the same man. Talking well about the self is not evidence of anything.",
+   "commentary_hi": "यहाँ फ़र्क़ यह खींचा जा रहा है कि जिसने समझ लिया और जो समझा सकता है — दोनों एक आदमी नहीं हैं, और पाठ इसे साफ़ कहता है। आत्मा के बारे में अच्छा बोलना किसी चीज़ का सबूत नहीं।"
+  },
+  {
+   "id": 22624,
+   "number": "2.6",
+   "body_en": "The one who has known that near thing that the senses cannot reach, the one who makes form appear and disappear, the one who is the stability behind everything — that man is the maker of his own joy, and not the man who keeps talking about other joys. This is that.",
+   "body_hi": "जिसने उस पास की चीज़ को जान लिया जहाँ इन्द्रियाँ नहीं पहुँचतीं, जो रूप को बनाता और मिटाता है, जो हर चीज़ के पीछे की टिकाऊ चीज़ है — वही आदमी अपने आनंद का बनाने वाला है, वह नहीं जो दूसरे आनंदों की बातें करता रहता है। यह वही है।",
+   "commentary_en": "Maker of his own joy — the sentence is the answer to what he refused in the first part. Yama offered him joy made and delivered by somebody else, and this is the one that no one can hand over.",
+   "commentary_hi": "'अपने आनंद का बनाने वाला' — यह वाक्य उस बात का जवाब है जिसे उसने पहले हिस्से में ठुकराया था। यम ने उसे बना-बनाया आनंद दिया था, किसी और के हाथ का, और यह वह है जो कोई किसी को नहीं दे सकता।"
+  },
+  {
+   "id": 22625,
+   "number": "2.7",
+   "body_en": "The one who was there before the senses were, and who stays steady after everything they carry has come and gone, and who is the ground of it all — the wise man sees that one and does not grieve. This is that.",
+   "body_hi": "जो इन्द्रियों से पहले था, और जो वह सब आ-जा चुकने के बाद भी टिका रहता है जो वे ढोती हैं, और जो इन सबका आधार है — बुद्धिमान उसी को देखता है, और शोक नहीं करता। यह वही है।",
+   "commentary_en": "Before and after — the verse stretches a single thing across the entire span of a sense life, and then simply says that a man who sees it stops grieving. No technique is offered, because seeing is the whole of it.",
+   "commentary_hi": "पहले और बाद — यह श्लोक एक ही चीज़ को इन्द्रिय-जीवन के पूरे फैलाव पर तान देता है, और फिर यूँ ही कह देता है कि जो उसे देख लेता है, उसका शोक उतर जाता है। कोई तरीक़ा नहीं बताया जाता, क्योंकि देख लेना ही पूरी बात है।"
+  },
+  {
+   "id": 22626,
+   "number": "2.8",
+   "body_en": "A man who can see the separate self, the one lying hidden in the middle of the crowd, has to have worked to bring it up out of the senses. The one who gets there is freed from joy and sadness. This is that.",
+   "body_hi": "जो आदमी उस अलग आत्मा को देख सकता है, जो भीड़ के बीच में छिपी पड़ी है, उसे उसका काम करना पड़ता है ताकि वह इन्द्रियों के बीच से उसे ऊपर उठा लाए। जो वहाँ पहुँच जाता है वह सुख-दुःख से छूट जाता है। यह वही है।",
+   "commentary_en": "Lying hidden in the middle of the crowd, and it has to be brought up. The self is not described as something you uncover by looking harder at the world — it is described as buried under what the senses are already full of.",
+   "commentary_hi": "'भीड़ के बीच छिपी पड़ी है', और उसे ऊपर उठाना पड़ता है। आत्मा को ऐसा नहीं बताया गया जो दुनिया को और ध्यान से देखने पर मिल जाए — उसे ऐसा बताया गया है जो उसी के नीचे दबा है जिससे इन्द्रियाँ पहले से भरी हैं।"
+  },
+  {
+   "id": 22627,
+   "number": "2.9",
+   "body_en": "The priest of the sacrifice, the one who lives in the gap between the two, the one who is the guest, the one who is in the fire, the one who is that lamp of hospitality which comes into the house fastest of all — he is in the sky and he is in the whole span of it. This is that.",
+   "body_hi": "यज्ञ का पुरोहित, जो दोनों के बीच के फ़ासले में रहता है, जो मेहमान है, जो आग में है, जो वह अतिथि-दीप है जो सबसे जल्दी घर में आता है — वह आकाश में है और आकाश के पूरे फैलाव में है। यह वही है।",
+   "commentary_en": "The verse goes back to the beginning and finds the same thing in the ritual the boy came from: in the fire he was named after, in the guest who was left unfed. Nothing in the story is outside what is being described.",
+   "commentary_hi": "यह श्लोक शुरुआत पर लौटता है और उसी चीज़ को उस यज्ञ में पाता है जहाँ से लड़का आया था: उस आग में जिसका नाम उसके नाम पर पड़ा, उस मेहमान में जिसे भूखा छोड़ दिया गया। कहानी में कुछ भी इस बात के बाहर नहीं है जो बताई जा रही है।"
+  },
+  {
+   "id": 22628,
+   "number": "2.10",
+   "body_en": "Look at the difference there is in what people see. Whoever looks at the world as if there were many separate things in it keeps going from death to death. Seeing the many is what makes a man afraid.",
+   "body_hi": "देखो कि लोगों की दृष्टि में कितना फ़र्क़ है। जो दुनिया को ऐसे देखता है जैसे उसमें बहुत सी अलग-अलग चीज़ें हों, वह मृत्यु से मृत्यु को जाता रहता है। बहुत को देखना ही वह चीज़ है जो आदमी को डराती है।",
+   "commentary_en": "Not many births and deaths. The same one, endlessly — a man goes on dying for as long as the world looks to him like a pile of separate things, because everything in such a world is on its way out.",
+   "commentary_hi": "यहाँ कई जन्म-मरण की बात नहीं है। वही एक, बार-बार — आदमी तब तक मरता जाता है जब तक दुनिया उसे अलग-अलग चीज़ों के ढेर जैसी दिखती है, क्योंकि ऐसी दुनिया में हर चीज़ जाती हुई ही है।"
+  },
+  {
+   "id": 22629,
+   "number": "2.11",
+   "body_en": "A man made of the world stays with the world and does not last. He has to be held onto, and what holds him is the one who is not made of anything. A man who has seen this plainly stops being afraid of anything at all.",
+   "body_hi": "दुनिया से बना आदमी दुनिया के साथ रहता है और टिकता नहीं। उसे थामे रखना पड़ता है, और जो उसे थामे रखता है वह वह है जो किसी चीज़ से नहीं बना। जिसने यह साफ़ देख लिया, उसे किसी बात का डर नहीं रहता।",
+   "commentary_en": "The two halves of this verse are the two halves of the book: the part about the world, which does not last, and the part about what holds it, which is the question about the man who has died. Both are answered by the same look.",
+   "commentary_hi": "इस श्लोक के दो हिस्से किताब के दो हिस्से हैं: दुनिया की बात, जो टिकती नहीं, और उस चीज़ की बात जो उसे थामे रखती है — और वही वह सवाल है जो मरे हुए आदमी के बारे में था। दोनों का जवाब एक ही दृष्टि से मिलता है।"
+  },
+  {
+   "id": 22630,
+   "number": "2.12",
+   "body_en": "When a man has understood the one that sits inside him, the one whose shape cannot be fixed, the one who is neither right nor left, neither short nor long, then he is finished with the fear of tomorrow. This is that.",
+   "body_hi": "जब आदमी उस एक को समझ लेता है जो उसके भीतर बैठा है, जिसका कोई आकार टिकता नहीं, जो न दाएँ है न बाएँ, न छोटा है न लंबा, तब उसका कल का डर ख़त्म हो जाता है। यह वही है।",
+   "commentary_en": "Neither short nor long — the verse takes apart the ways a thing can be located and leaves nothing to point at. What is left is still the thing itself, and the refrain closes the verse before the mind can ask where it went.",
+   "commentary_hi": "'न छोटा न लंबा' — श्लोक हर उस तरीक़े को खोलकर रख देता है जिससे किसी चीज़ का पता लगाया जा सकता है, और इशारा करने को कुछ बचता ही नहीं। बचती है तो वह चीज़ ख़ुद, और टेक वहीं श्लोक बंद कर देती है, इससे पहले कि मन पूछे कि वह गई कहाँ।"
+  },
+  {
+   "id": 22631,
+   "number": "2.13",
+   "body_en": "The one whose size is smaller than small and larger than large is the one who has settled in a man's own heart — hidden there. A man who has let go of wanting and of being unhappy sees that greatness and is at rest. This is that.",
+   "body_hi": "जो छोटे से छोटा है और बड़े से बड़ा है, वही वह है जो आदमी के अपने हृदय में बैठा है — वहीं छिपा हुआ। जिसने चाहना और दुखी होना छोड़ दिया है, वह उस महिमा को देखता है और शांत हो जाता है। यह वही है।",
+   "commentary_en": "Smaller than small and larger than large, in the heart. The size words cancel each other, and what is being said is that a man is carrying something in him that no measurement applies to, and is unhappy for want of it.",
+   "commentary_hi": "'छोटे से छोटा और बड़े से बड़ा', और वह भी हृदय में। दोनों आकार-शब्द एक-दूसरे को काट देते हैं, और कहा यह जा रहा है कि आदमी अपने भीतर कुछ ऐसा ढो रहा है जिस पर कोई नाप लागू नहीं होता, और उसी के बिना दुखी है।"
+  },
+  {
+   "id": 22632,
+   "number": "2.14",
+   "body_en": "The self that is not a man's own — how is it to be known? Not by instruction, not by thinking it through, not by hearing a great deal about it. It is found by the man it picks, and the self shows itself to him.",
+   "body_hi": "वह आत्मा जो आदमी की अपनी नहीं है — उसे कैसे जाना जाए? न उपदेश से, न सोच-विचार से, न उसके बारे में बहुत सुनने से। वह उसी को मिलती है जिसे वह चुन लेती है, और आत्मा उसे अपने आप दिख जाती है।",
+   "commentary_en": "Not by instruction, and the sentence is being spoken by an instructor to a student who has earned his attention. It is not a dismissal of teaching. It is a warning that the last step is not something anybody can walk for you, including Death.",
+   "commentary_hi": "न उपदेश से — और यह वाक्य उसी की ज़बान से निकल रहा है जो उपदेश दे रहा है, उस शिष्य के सामने जिसने उसका ध्यान कमाया है। यह सीखने की बात को ठुकराना नहीं है। यह चेतावनी है कि आख़िरी क़दम कोई किसी की तरफ़ से नहीं चल सकता, मृत्यु भी नहीं।"
+  },
+  {
+   "id": 22633,
+   "number": "2.15",
+   "body_en": "A man who has not turned away from doing wrong, who has not come to a still place in himself, who has not settled his mind and has not calmed down — a man like that cannot get at it by knowing it.",
+   "body_hi": "जो आदमी बुरा करने से न हटा हो, जो अपने भीतर किसी ठहरी हुई जगह पर न पहुँचा हो, जिसका मन न जमा हो और जो शांत न हुआ हो — ऐसा आदमी इसे जानकर भी इसे पा नहीं सकता।",
+   "commentary_en": "Four conditions, and none of them is intellectual. The book has just said that thinking will not get you there, and now names what will: conduct, stillness, a settled mind, calm. It is not information that is missing.",
+   "commentary_hi": "चार शर्तें, और इनमें एक भी दिमाग़ी नहीं है। किताब अभी कह चुकी कि सोच-विचार से वहाँ नहीं पहुँचा जा सकता, और अब बता रही है कि किससे पहुँचा जाता है: आचरण से, ठहराव से, जमे मन से, शांति से। कमी जानकारी की नहीं है।"
+  },
+  {
+   "id": 22634,
+   "number": "2.16",
+   "body_en": "A hundred and one channels run out of the heart. One of them goes up, through the crown of the head. Going up by that one, a man reaches what does not die. The rest, going out the other ways, take him away from it.",
+   "body_hi": "हृदय से एक सौ एक नाड़ियाँ निकलती हैं। इनमें एक ऊपर जाती है, सिर के ऊपर से। उसी से ऊपर जाकर आदमी उस तक पहुँचता है जो मरता नहीं। बाक़ी, दूसरे रास्तों से बाहर जाकर, उसे उससे दूर ले जाती हैं।",
+   "commentary_en": "The anatomy is of its time and the numbers are not the point. What the verse is doing is giving the earlier instruction a direction: of all the ways out of a man, one leads somewhere that is not further out.",
+   "commentary_hi": "यह शरीर-विज्ञान अपने ज़माने का है और गिनती यहाँ असली बात नहीं है। श्लोक जो कर रहा है वह यह कि पिछले उपदेश को एक दिशा दे रहा है: आदमी से बाहर निकलने के जितने रास्ते हैं, उनमें एक ऐसी जगह ले जाता है जो और बाहर नहीं है।"
+  },
+  {
+   "id": 22635,
+   "number": "2.17",
+   "body_en": "The one who is the size of a thumb, the person who sits in the middle of a man, the one who is the master of what has been and what is to come — a man holds on from that one, and does not shrink from it. He knows it for what it is: bright, and what does not die.",
+   "body_hi": "जो अंगूठे के बराबर है, वह पुरुष जो आदमी के बीच में बैठा है, जो बीते हुए और आने वाले का स्वामी है — आदमी उसी से थमा रहता है, और उससे नहीं हटता। वह उसे वैसा ही जान लेता है: उजला, और जो मरता नहीं।",
+   "commentary_en": "Thumb-sized, in the middle of a man, and master of past and future — three descriptions that do not fit together, which is the method. The image is small enough to hold and the thing being described is not something that has a size.",
+   "commentary_hi": "'अंगूठे के बराबर', 'आदमी के बीच', और 'बीते-आने वाले का स्वामी' — तीन बातें जो एक-दूसरे पर नहीं बैठतीं, और यही तरीक़ा है। तसवीर इतनी छोटी है कि हाथ में आ जाए, और जिसकी बात हो रही है वह ऐसी चीज़ नहीं जिसका कोई नाप हो।"
+  },
+  {
+   "id": 22636,
+   "number": "2.18",
+   "body_en": "The person, the size of a thumb, is the one who is in a man. He is the lord of what has been and what is to come, and today he is the same as tomorrow. Nachiketa, having been taught by Death, obtained the pure knowledge and became free of dust and free of death.",
+   "body_hi": "वह पुरुष, अंगूठे के बराबर, वही है जो आदमी के भीतर है। वह बीते हुए और आने वाले का स्वामी है, और आज वही है जो कल है। नचिकेता ने, मृत्यु से सीखकर, वह शुद्ध ज्ञान पाया और धूल से छूटा और मृत्यु से छूटा।",
+   "commentary_en": "Free of dust and free of death, and the book closes on the boy rather than on the doctrine. The last thing told is not what he learned but what it did to him — which is the same move the story made at the start, when a small boy took his father's angry sentence seriously.",
+   "commentary_hi": "'धूल से छूटा और मृत्यु से छूटा' — और किताब सिद्धांत पर नहीं, लड़के पर बंद होती है। आख़िर में यह नहीं बताया जाता कि उसने क्या सीखा, यह बताया जाता है कि उसका क्या हुआ — और यही काम कहानी ने शुरू में किया था, जब एक छोटे लड़के ने अपने बाप का ग़ुस्से में कहा वाक्य गंभीरता से ले लिया था।"
+  },
+  {
+   "id": 22637,
+   "number": "2.19",
+   "body_en": "Let that one protect us both together. Let that one enjoy both together. Let us do a man's work together. Let what we have studied be strong. Let us not dislike each other. Peace, peace, peace.",
+   "body_hi": "वह हम दोनों की साथ-साथ रक्षा करे। वह हम दोनों का साथ-साथ भला करे। हम दोनों मिलकर पुरुषार्थ में लगें। जो हमने पढ़ा है वह बलवान हो। हम एक-दूसरे से द्वेष न करें। शांति, शांति, शांति।",
+   "commentary_en": "The peace invocation that closes many Upanishads, and here it lands differently. It asks that two people who have studied together not come to dislike each other — which, after a book that has been one boy and one god arguing for its whole length, is a request you can hear.",
+   "commentary_hi": "यह वह शांति-वचन है जो बहुत से उपनिषदों को बंद करता है, और यहाँ यह और तरह से पड़ता है। इसमें माँगा जाता है कि जो दो लोग मिलकर पढ़े हैं वे एक-दूसरे से द्वेष न करें — और पूरी किताब एक लड़के और एक देवता की बहस के बाद, यह माँग अलग सुनाई देती है।"
+  }
+ ]
+}
