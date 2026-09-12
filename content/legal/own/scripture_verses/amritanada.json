@@ -1,0 +1,322 @@
+{
+ "slug": "amritanada",
+ "title_en": "Amritanada Upanishad",
+ "title_hi": "अमृतनाद उपनिषद्",
+ "book_id": 31,
+ "scripture": "upanishads",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. The fixture carries no commentary for this book; ours is added, not replaced. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 21039,
+   "number": "1.1",
+   "body_en": "A sharp man goes through the texts, and then goes over them again and again; and once he has understood the highest brahman for himself, he lets the whole lot of them go the way a man lets go of a burning brand.",
+   "body_hi": "तेज़ दिमाग़ वाला आदमी शास्त्रों को पढ़ता है, और फिर उन्हें बार-बार दोहराता है; और जब वह सबसे ऊँचे ब्रह्म को ख़ुद समझ लेता है, तो उन सबको वैसे ही छोड़ देता है जैसे कोई जलती हुई मशाल हाथ से छोड़ देता है।",
+   "commentary_en": "A burning brand is a sharper image than it looks. You do not put one down carefully to use later — you are holding the wrong end of it sooner or later, and the only sensible thing is to throw it. Whatever the texts were for, this book says they become something you cannot go on carrying.",
+   "commentary_hi": "जलती मशाल का चित्र जितना लगता है उससे कहीं तीखा है। उसे आप सँभालकर नीचे नहीं रखते कि बाद में काम आएगी — देर-सबेर वह हाथ जलाएगी ही, और समझदारी बस उसे फेंक देने में है। शास्त्र जिस काम के लिए भी थे, यह किताब कहती है कि एक वक़्त के बाद वे ऐसी चीज़ हो जाते हैं जिन्हें ढोया नहीं जा सकता।"
+  },
+  {
+   "id": 21040,
+   "number": "1.2",
+   "body_en": "He climbs into om as a man climbs into a chariot, and he puts Vishnu up in front to drive it. He is out looking for the standing-place that is the world of brahman, and he is bent on doing his worship to Rudra.",
+   "body_hi": "वह ॐ पर ऐसे सवार होता है जैसे कोई रथ पर सवार होता है, और आगे विष्णु को सारथी बिठा देता है। वह उस पद की तलाश में निकला है जो ब्रह्मलोक है, और रुद्र की आराधना पर टिका हुआ है।",
+   "commentary_en": "Two gods in one verse, and no argument made about which of them outranks the other. The book is interested in the vehicle and the road, and it names whatever names the reader already keeps — a habit worth noticing in a text this technical.",
+   "commentary_hi": "एक ही श्लोक में दो देवता, और इस पर कोई बहस नहीं कि इनमें बड़ा कौन है। किताब की दिलचस्पी सवारी और रास्ते में है, और वह वही नाम लेती है जो पाठक पहले से रखता आया है — इतने तकनीकी पाठ में यह आदत ध्यान देने लायक़ है।"
+  },
+  {
+   "id": 21041,
+   "number": "1.3",
+   "body_en": "You go by the chariot for as far as you are on a road that a chariot can take. Once he has come to the place where the chariot road runs out, he steps down off it and goes on.",
+   "body_hi": "रथ से आप वहीं तक जाते हैं जहाँ तक ऐसी सड़क है जिस पर रथ चल सके। जिस जगह रथ की सड़क ख़त्म होती है, वहाँ पहुँचकर वह उससे उतरता है और आगे बढ़ जाता है।",
+   "commentary_en": "This is the verse that keeps the previous one honest. Om, Vishnu, Rudra, the whole equipage — all of it has a range, and the text says where the range ends rather than pretending it does not.",
+   "commentary_hi": "यही वह श्लोक है जो पिछले को ईमानदार बनाए रखता है। ॐ, विष्णु, रुद्र, पूरा लवाज़मा — इन सबकी एक हद है, और पाठ यह दिखावा करने के बजाय कि हद है ही नहीं, बता देता है कि वह कहाँ आती है।"
+  },
+  {
+   "id": 21042,
+   "number": "1.4",
+   "body_en": "Leaving behind the step that still has a measure and a mark about it, with the sound and the consonant taken out of it, by way of the m that carries no vowel he goes on to the step that is finer than fine.",
+   "body_hi": "जिस पद पर अब भी कोई मात्रा और कोई चिह्न बचा है उसे पीछे छोड़कर, जिसमें से ध्वनि और व्यंजन निकाल लिए गए हों, उस म के रास्ते जिसके साथ कोई स्वर नहीं — वह उस पद तक चला जाता है जो सूक्ष्म से भी सूक्ष्म है।",
+   "commentary_en": "The syllable is being taken apart from the outside in, and each thing stripped off it is something a mouth does. What is left at the end is a nasal with nothing to sound it — as close to the edge of speech as a description can get and still be a description.",
+   "commentary_hi": "अक्षर को बाहर से भीतर की ओर खोला जा रहा है, और उस पर से जो-जो हटाया जाता है वह हर बार मुँह का किया हुआ कुछ है। आख़िर में जो बचता है वह एक अनुनासिक है जिसे बजाने को कुछ नहीं — वाणी के किनारे के इतने पास, जितने पास कोई ब्योरा जाकर भी ब्योरा बना रह सकता है।"
+  },
+  {
+   "id": 21043,
+   "number": "1.5",
+   "body_en": "There are five things the senses take in, beginning with sound, and besides them there is the mind, which will not keep still for a moment. A man should think of all of them as rays thrown out by his own self. That is what goes by the name of the drawing-back.",
+   "body_hi": "इंद्रियाँ जो पाँच चीज़ें भीतर लेती हैं, जिनमें पहली ध्वनि है, और उनके अलावा मन, जो पल भर टिकता नहीं — आदमी को इन सबको अपने ही आत्मा से फूटी किरणों की तरह सोचना चाहिए। इसी का नाम प्रत्याहार है।",
+   "commentary_en": "Six things going out, and the instruction is not to cut them off but to trace them back to where they started. That is a different operation from shutting the eyes, and the rest of the book depends on the difference.",
+   "commentary_hi": "छह चीज़ें बाहर जा रही हैं, और निर्देश उन्हें काटने का नहीं, बल्कि वहाँ तक पीछे ले जाने का है जहाँ से वे चलीं। यह आँख मूँद लेने से अलग काम है, और किताब का बाक़ी हिस्सा इसी फ़र्क़ पर टिका है।"
+  },
+  {
+   "id": 21044,
+   "number": "1.6",
+   "body_en": "Drawing back; and meditating; and the working of the breath; and holding a thing steady; and reasoning it out; and settling wholly into it. Yoga is spoken of as having six limbs, and those are the six of them.",
+   "body_hi": "प्रत्याहार; और ध्यान; और प्राणायाम; और धारणा; और तर्क; और समाधि। योग को छह अंगों वाला कहा जाता है, और वे छह ये हैं।",
+   "commentary_en": "Six limbs, not the eight that most readers will have met elsewhere. The two missing are the ones about conduct, and what has been put in their place is reasoning — which tells you what kind of reader this book thought it had.",
+   "commentary_hi": "छह अंग, वे आठ नहीं जिनसे ज़्यादातर पाठक कहीं और मिल चुके होंगे। जो दो ग़ायब हैं वे आचरण वाले हैं, और उनकी जगह तर्क रखा गया है — इससे पता चलता है कि यह किताब अपने पाठक को किस तरह का आदमी मानती थी।"
+  },
+  {
+   "id": 21045,
+   "number": "1.7",
+   "body_en": "The way the dirt in ore dug out of a mountain gets burnt off it when the bellows are worked, that is how the faults the senses have made get burnt off by keeping a hold on the breath.",
+   "body_hi": "पहाड़ से निकाली गई धातु में जो मैल होता है वह धौंकनी चलाने से जल जाता है; ठीक वैसे ही इंद्रियों के किए हुए दोष साँस पर पकड़ रखने से जल जाते हैं।",
+   "commentary_en": "Smelting is the right comparison and not a flattering one. Nothing is added to the ore and nothing good in it is made; heat is applied until what was never metal stops being there.",
+   "commentary_hi": "धातु गलाना सही तुलना है, और चापलूसी वाली नहीं। अयस्क में कुछ जोड़ा नहीं जाता और उसके भीतर का अच्छा हिस्सा बनाया नहीं जाता; बस आँच दी जाती रहती है जब तक जो कभी धातु था ही नहीं वह रह न जाए।"
+  },
+  {
+   "id": 21046,
+   "number": "1.8",
+   "body_en": "With the workings of the breath let him burn the faults away; with the holdings steady, the stain that comes of doing wrong; with the drawing-back, his mixing in with things; and with meditation, whatever there is in him that is not the lord's.",
+   "body_hi": "प्राणायामों से वह दोषों को जला दे; धारणाओं से वह दाग़ जो ग़लत करने से पड़ता है; प्रत्याहार से चीज़ों के साथ अपनी मिलावट; और ध्यान से वह सब जो उसके भीतर ईश्वर का नहीं है।",
+   "commentary_en": "Four limbs and four jobs, matched off one to one, and the fourth is left deliberately wide. Everything not the lord's covers more ground than the three named faults put together, which is why it is given to the limb that takes longest.",
+   "commentary_hi": "चार अंग और चार काम, एक-एक करके मिलाए हुए, और चौथा जान-बूझकर चौड़ा छोड़ा गया है। 'जो ईश्वर का नहीं' में उन तीन नामज़द दोषों से कहीं ज़्यादा समा जाता है, इसीलिए यह उस अंग को सौंपा गया है जिसमें सबसे ज़्यादा समय लगता है।"
+  },
+  {
+   "id": 21047,
+   "number": "1.9",
+   "body_en": "He has to bring the stain of his wrongdoing down to nothing at all first; and after that, and not one moment before it, what he turns over in his mind is the bright thing.",
+   "body_hi": "पहले उसे अपने किए का दाग़ घिसकर बिलकुल ख़त्म कर देना है; और उसके बाद, उससे एक पल पहले नहीं, जो वह मन में उलटता-पलटता है वह उजली चीज़ है।",
+   "commentary_en": "A single line, and its whole weight is on the ordering. The book is about to spend twenty verses on technique, and it stops here to say that none of the technique is to be started early.",
+   "commentary_hi": "एक ही पंक्ति, और उसका सारा वज़न क्रम पर है। किताब अब बीस श्लोक तकनीक पर ख़र्च करने वाली है, और यहाँ रुककर कह देती है कि उस तकनीक में से कुछ भी वक़्त से पहले शुरू नहीं करना है।"
+  },
+  {
+   "id": 21048,
+   "number": "1.10",
+   "body_en": "The bright thing; and the emptying out; and along with them the drawing in of the air. Three workings of the breath have been laid down, and they are the emptying, the filling, and the holding.",
+   "body_hi": "उजली चीज़; और बाहर निकाल देना; और इनके साथ हवा को भीतर खींच लेना। प्राणायाम तीन बताए गए हैं, और वे हैं रेचक, पूरक और कुम्भक।",
+   "commentary_en": "The bright thing carries over from the line before, which is how this text ties one verse to the next. What follows is a piece of plain instruction, and the three names are about to be defined one at a time.",
+   "commentary_hi": "'उजली चीज़' पिछली पंक्ति से चली आ रही है — यह पाठ एक श्लोक को अगले से इसी तरह बाँधता है। इसके बाद जो आता है वह सीधा निर्देश है, और तीनों नामों की परिभाषा एक-एक करके अभी दी जाएगी।"
+  },
+  {
+   "id": 21049,
+   "number": "1.11",
+   "body_en": "With the calls that go in front of it, with om set at its head, and with the verse that is said after it, let him recite the Gayatri three times over while his breath is drawn out long. That is what goes by the name of a working of the breath.",
+   "body_hi": "जो पुकारें उसके आगे लगती हैं उनके साथ, ॐ को सिरे पर रखकर, और जो श्लोक बाद में कहा जाता है उसके साथ, वह गायत्री को तीन बार दोहराए, और इस बीच उसकी साँस लंबी खिंची रहे। इसी का नाम प्राणायाम है।",
+   "commentary_en": "Here the breath is counted out by a text rather than by a number, which is the older way of doing it. The length of the exercise is whatever the recitation takes, so it comes out the same for anybody who knows the words.",
+   "commentary_hi": "यहाँ साँस को किसी संख्या से नहीं, एक पाठ से नापा जा रहा है, और यही पुराना तरीक़ा है। अभ्यास की लंबाई उतनी ही है जितनी उस पाठ में लगती है, इसलिए जिसे शब्द आते हैं उस हर आदमी के लिए वह बराबर बैठती है।"
+  },
+  {
+   "id": 21050,
+   "number": "1.12",
+   "body_en": "Throwing the air up and out, making the room inside empty and leaving nothing of himself in it, let him join himself to that emptiness. That is the mark of the emptying out.",
+   "body_hi": "हवा को ऊपर उठाकर बाहर फेंकते हुए, भीतर की जगह को ख़ाली करके और उसमें अपना कुछ न छोड़ते हुए, वह ख़ुद को उसी ख़ालीपन से जोड़ ले। रेचक का चिह्न यही है।",
+   "commentary_en": "Note that the instruction does not stop at the mechanical part. The air goes out and then something is asked of the man in the gap it leaves, and the gap is the point of the exercise rather than a side effect of it.",
+   "commentary_hi": "ध्यान दीजिए कि निर्देश मशीनी हिस्से पर रुकता नहीं। हवा बाहर जाती है और फिर जो ख़ाली जगह बचती है उसमें आदमी से कुछ माँगा जाता है, और वह ख़ाली जगह अभ्यास का मक़सद है, उसका कोई बचा-खुचा असर नहीं।"
+  },
+  {
+   "id": 21051,
+   "number": "1.13",
+   "body_en": "A man draws water up through the hollow stem of a lotus with his mouth. The air is to be taken in on that pattern. That is the mark of the filling.",
+   "body_hi": "आदमी कमल की खोखली डंडी से मुँह लगाकर पानी ऊपर खींचता है। हवा को इसी ढंग से भीतर लेना है। पूरक का चिह्न यही है।",
+   "commentary_en": "Anybody who has drunk through a stem knows what is being described: slow, even, and quiet, because hurry breaks the column and you get air instead of water. The comparison carries the whole instruction without a word of theory.",
+   "commentary_hi": "जिसने कभी डंडी से पीया है वह जानता है कि बात क्या हो रही है: धीरे, बराबर और चुपचाप, क्योंकि जल्दबाज़ी में धार टूट जाती है और पानी की जगह हवा आती है। यह तुलना पूरा निर्देश उठा ले जाती है, बिना एक शब्द सिद्धांत के।"
+  },
+  {
+   "id": 21052,
+   "number": "1.14",
+   "body_en": "He should not breathe upward and he should not breathe down, and he should not let a limb of his stir. Let him hold himself in exactly that condition. That is the mark of the holding.",
+   "body_hi": "वह न ऊपर की साँस ले और न नीचे की, और अपना कोई अंग हिलने न दे। वह ख़ुद को ठीक उसी हालत में थामे रखे। कुम्भक का चिह्न यही है।",
+   "commentary_en": "The stillness of the limbs is put in the same sentence as the stillness of the breath and given equal weight. A man holding his breath while fidgeting has not done the exercise at all, on this description.",
+   "commentary_hi": "अंगों की स्थिरता को साँस की स्थिरता वाले उसी वाक्य में रखा गया है और बराबर वज़न दिया गया है। इस ब्योरे के हिसाब से जो आदमी साँस रोककर हिलता-डुलता रहता है, उसने अभ्यास किया ही नहीं।"
+  },
+  {
+   "id": 21053,
+   "number": "1.15",
+   "body_en": "Look at shapes the way a blind man looks at them; hear a sound the way a deaf man hears it; look at that body of yours the way you would look at a log. That is the mark of the man who has come to rest.",
+   "body_hi": "रूपों को ऐसे देखो जैसे कोई अंधा उन्हें देखता है; ध्वनि को ऐसे सुनो जैसे कोई बहरा उसे सुनता है; अपने उस शरीर को ऐसे देखो जैसे तुम किसी लकड़ी के कुंदे को देखते। जो शांत हो चुका है, उसका चिह्न यही है।",
+   "commentary_en": "The verse switches to the second person for three lines and then goes back, which is unusual here and probably deliberate. The third comparison is the hard one: the first two ask you to stop taking things in, the third asks you to keep looking and see a piece of wood.",
+   "commentary_hi": "श्लोक तीन पंक्तियों के लिए 'तुम' पर आ जाता है और फिर लौट जाता है, जो यहाँ असामान्य है और शायद जान-बूझकर है। तीसरी तुलना ही कठिन है: पहली दो कहती हैं कि चीज़ें भीतर लेना बंद करो, तीसरी कहती है कि देखते रहो और लकड़ी का टुकड़ा देखो।"
+  },
+  {
+   "id": 21054,
+   "number": "1.16",
+   "body_en": "Having worked out for himself that the mind is the thing that makes the plans, the man with sense gathers it back in towards the self; and the self held that way is what is famed as the holding steady.",
+   "body_hi": "यह ख़ुद समझ लेने के बाद कि योजनाएँ बनाने वाली चीज़ मन है, समझदार आदमी उसे समेटकर आत्मा की ओर ले आता है; और आत्मा को उस तरह थामे रखना ही धारणा के नाम से जाना जाता है।",
+   "commentary_en": "The definition is in two movements and the first one is a piece of understanding, not an exercise. Until a man has seen where his plans are being made, there is nothing for him to gather in.",
+   "commentary_hi": "परिभाषा दो हिस्सों में है और पहला हिस्सा समझ है, अभ्यास नहीं। जब तक आदमी ने यह देख नहीं लिया कि उसकी योजनाएँ कहाँ बन रही हैं, तब तक समेटने को उसके पास कुछ है ही नहीं।"
+  },
+  {
+   "id": 21055,
+   "number": "1.17",
+   "body_en": "Turning a thing over for yourself in a way that does not run against what has come down to you — that is called the reasoning. And the condition a man reaches, on reaching which he takes everything as level with everything else — that is what is famed as the settling in.",
+   "body_hi": "किसी बात को ख़ुद इस तरह सोच-विचार लेना कि वह परंपरा से जो चला आया है उससे टकराए नहीं — इसे तर्क कहते हैं। और वह हालत जिस पर पहुँचकर आदमी हर चीज़ को हर दूसरी चीज़ के बराबर मानने लगे — उसी को समाधि के नाम से जाना जाता है।",
+   "commentary_en": "Two of the six limbs get defined in one verse, and the pairing is not accidental. Reasoning is given a boundary and no more; the state that follows it is given no method at all, only a test you can apply afterwards.",
+   "commentary_hi": "छह में से दो अंगों की परिभाषा एक ही श्लोक में आती है, और यह जोड़ी संयोग से नहीं बनी। तर्क को बस एक हद दी गई है और उससे ज़्यादा कुछ नहीं; जो हालत उसके बाद आती है उसके लिए कोई तरीक़ा नहीं दिया गया, सिर्फ़ एक कसौटी दी गई है जो बाद में लगाई जा सके।"
+  },
+  {
+   "id": 21056,
+   "number": "1.18",
+   "body_en": "On a patch of ground that is level and pleasant to be on and has nothing wrong with it, he puts up a guard for himself made out of his own mind, and says his words over inside the circle.",
+   "body_hi": "ज़मीन के ऐसे टुकड़े पर जो समतल हो, जहाँ बैठना अच्छा लगे और जिसमें कोई खोट न हो, वह अपने ही मन से बना एक पहरा अपने चारों ओर खड़ा करता है, और मंडल के भीतर अपने शब्द दोहराता है।",
+   "commentary_en": "A guard made out of the mind is exactly as odd as it sounds, and this book has already told us why it works: the mind is what goes out towards things, so a mind turned to guarding is a mind not going anywhere.",
+   "commentary_hi": "मन से बना पहरा उतना ही अजीब है जितना सुनने में लगता है, और यह किताब पहले ही बता चुकी है कि वह काम क्यों करता है: मन ही है जो चीज़ों की ओर बाहर जाता है, तो पहरे पर लगा मन वह मन है जो कहीं जा नहीं रहा।"
+  },
+  {
+   "id": 21057,
+   "number": "1.19",
+   "body_en": "The lotus, or else the svastika, or else the one they call the auspicious seat: having tied himself properly into one of these postures for yoga, he sits with his face towards the north.",
+   "body_hi": "पद्मासन, या स्वस्तिकासन, या फिर वह जिसे भद्रासन कहते हैं: इन्हीं में से किसी एक योगासन में ख़ुद को ठीक से बाँधकर, वह उत्तर की ओर मुँह करके बैठता है।",
+   "commentary_en": "Three postures offered and no reason given to prefer one over another, which is a small kindness on the part of the text. What is not offered as a choice is the direction, and the verse gives no reason for that either.",
+   "commentary_hi": "तीन आसन दिए गए हैं और यह कारण नहीं बताया गया कि एक को दूसरे पर क्यों चुनें — पाठ की यह छोटी-सी उदारता है। जो चुनने को नहीं दिया गया वह दिशा है, और श्लोक उसका भी कोई कारण नहीं देता।"
+  },
+  {
+   "id": 21058,
+   "number": "1.20",
+   "body_en": "Shutting one side of the nose with a finger, he pulls the wind in and holds the fire down by it, and he keeps his thinking on the sound and on nothing besides.",
+   "body_hi": "उँगली से नाक का एक छेद बंद करके, वह हवा को भीतर खींचता है और उसी से आग को दबाए रखता है, और अपनी सोच ध्वनि पर टिकाए रखता है, और किसी चीज़ पर नहीं।",
+   "commentary_en": "Three things are happening at once and only one of them is mechanical. The finger and the wind are easy to get right on the first day; keeping the thinking where it has been put is the part that takes the three months promised later on.",
+   "commentary_hi": "तीन चीज़ें एक साथ हो रही हैं और उनमें से मशीनी सिर्फ़ एक है। उँगली और हवा पहले ही दिन ठीक हो जाती हैं; सोच को जहाँ रखा गया है वहीं रखे रहना — यही वह हिस्सा है जिसमें आगे बताए गए तीन महीने लगते हैं।"
+  },
+  {
+   "id": 21059,
+   "number": "1.21",
+   "body_en": "Om, that one syllable, is brahman; with a single om of it let him empty himself out. By that mantra out of heaven, said over many times, he brings about the falling away of the dirt that lies on his self.",
+   "body_hi": "ॐ, वह एक अक्षर, ब्रह्म है; उसी के एक ॐ से वह अपने को ख़ाली कर ले। दिव्य मंत्र को बार-बार कहते हुए वह अपने आत्मा पर पड़े मैल को झड़ जाने देता है।",
+   "commentary_en": "The syllable is doing two jobs in one line — it is what the man is aiming at and it is the tool he works with. Nothing in this book is ever only equipment, and nothing in it is only the goal.",
+   "commentary_hi": "एक ही पंक्ति में यह अक्षर दो काम कर रहा है — वह वही है जिसकी ओर आदमी बढ़ रहा है, और वही औज़ार भी है जिससे वह काम करता है। इस किताब में कोई चीज़ कभी सिर्फ़ साज़-सामान नहीं होती, और कोई चीज़ सिर्फ़ मंज़िल नहीं होती।"
+  },
+  {
+   "id": 21060,
+   "number": "1.22",
+   "body_en": "After that the learned man who knows his mantra should meditate, going by the order that has already been set out. The measure of it runs from the coarse to what is coarser still, and it is begun from above the navel.",
+   "body_hi": "इसके बाद वह विद्वान, जो अपना मंत्र जानता है, ध्यान करे — उसी क्रम से जो पहले बताया जा चुका है। इसकी मात्रा स्थूल से और भी स्थूल तक जाती है, और शुरुआत नाभि के ऊपर से की जाती है।",
+   "commentary_en": "Coarse and then coarser still is not the direction a reader expects, and the text does not explain it. Most likely the meditation is being built downward into the body first so that there is something solid to refine later.",
+   "commentary_hi": "स्थूल और फिर उससे भी स्थूल — यह वह दिशा नहीं जिसकी पाठक उम्मीद करता है, और पाठ इसे समझाता नहीं। सबसे ज़्यादा संभावना यही है कि ध्यान को पहले शरीर में नीचे की ओर गाढ़ा किया जा रहा है, ताकि बाद में महीन करने को कुछ ठोस मौजूद रहे।"
+  },
+  {
+   "id": 21061,
+   "number": "1.23",
+   "body_en": "The man of large understanding gives up looking sideways, and looking up, and looking down. Standing where he stands and not shaking on it, he should work at his yoga every day of his life.",
+   "body_hi": "बड़ी समझ वाला आदमी तिरछा देखना छोड़ देता है, और ऊपर देखना, और नीचे देखना। जहाँ खड़ा है वहीं जमकर और बिना डगमगाए, वह अपने योग का अभ्यास जीवन भर रोज़ करे।",
+   "commentary_en": "Three directions named and the fourth left out, which is the one he is expected to be looking in. The book states prohibitions and lets the reader work out the remainder, a habit it keeps up throughout.",
+   "commentary_hi": "तीन दिशाएँ गिनाई गईं और चौथी छोड़ दी गई — वही जिसमें उससे देखते रहने की उम्मीद है। किताब मनाही बताती है और बचा हुआ हिस्सा पाठक पर छोड़ देती है, और यह आदत वह आख़िर तक निभाती है।"
+  },
+  {
+   "id": 21062,
+   "number": "1.24",
+   "body_en": "Not shaking for as long as a beat lasts, and the yoking of the holding steady onto that: the yoga comes to twelve measures, and that is what is remembered as the rule so far as time goes.",
+   "body_hi": "एक ताल जितनी देर टिके उतनी देर न डगमगाना, और उसी पर धारणा को जोड़ देना: योग बारह मात्राओं का बैठता है, और समय के मामले में नियम यही याद रखा गया है।",
+   "commentary_en": "A beat is a unit anybody can keep without a device, which is why it was used. The whole prescription comes to a few seconds, and the difficulty was never the length of it.",
+   "commentary_hi": "ताल ऐसी इकाई है जिसे कोई भी बिना किसी यंत्र के गिन सकता है, इसीलिए वह बरती गई। पूरा नुस्ख़ा कुछ ही पलों का बैठता है, और मुश्किल कभी उसकी लंबाई थी ही नहीं।"
+  },
+  {
+   "id": 21063,
+   "number": "1.25",
+   "body_en": "No voicing in it, and no consonant, and no vowel; nothing of the throat about it, nor of the palate, nor of the lips, nor of the nose; no r has been born in it, and both of the breathed sounds are kept out — that is the syllable which never once runs away.",
+   "body_hi": "उसमें न घोष है, न व्यंजन, न स्वर; न कंठ का कुछ, न तालु का, न होंठ का, न नाक का; उसमें कोई र जन्मा नहीं, और दोनों ऊष्म ध्वनियाँ बाहर रखी गई हैं — वही अक्षर है जो एक बार भी बहकर बीतता नहीं।",
+   "commentary_en": "Every item on this list is a term out of the grammarians, and the verse uses their apparatus to describe something none of it can reach. The joke in the last words is old: the word for a syllable is also the word for what does not run out.",
+   "commentary_hi": "इस सूची की हर चीज़ वैयाकरणों का शब्द है, और श्लोक उन्हीं का साज़-सामान लेकर उस चीज़ का ब्योरा देता है जहाँ तक वह साज़-सामान पहुँच ही नहीं सकता। आख़िरी शब्दों का खेल पुराना है: अक्षर का मतलब वर्ण भी है और वह भी जो क्षय को न प्राप्त हो।"
+  },
+  {
+   "id": 21064,
+   "number": "1.26",
+   "body_en": "Whatever it is that a man makes out his road by, it is along that same thing that his breath travels. So he should work at it daily, for the sake of getting along the road that is the right one.",
+   "body_hi": "आदमी जिस चीज़ के सहारे अपना रास्ता पहचानता है, उसी के साथ-साथ उसकी साँस चलती है। इसलिए वह रोज़ उसका अभ्यास करे, ताकि जो सही रास्ता है उस पर चल सके।",
+   "commentary_en": "The claim is that attention and breath run together, and it is put as a bare observation rather than argued. Everything the book has said about breathing depends on it being true.",
+   "commentary_hi": "दावा यह है कि ध्यान और साँस साथ-साथ चलते हैं, और इसे तर्क की तरह नहीं, एक सीधी देखी हुई बात की तरह रखा गया है। साँस के बारे में किताब ने अब तक जो कुछ कहा है वह सब इसी के सच होने पर टिका है।"
+  },
+  {
+   "id": 21065,
+   "number": "1.27",
+   "body_en": "The door at the heart, and the door the air goes by, and past that the door at the crown of the head; the door that opens on freedom, and the passage, and the hollow — all of these they know as the circle.",
+   "body_hi": "हृदय का द्वार, और वह द्वार जिससे हवा जाती है, और उससे आगे सिर के ऊपर का द्वार; वह द्वार जो मुक्ति पर खुलता है, और वह बिल, और वह खोखल — इन सबको वे मंडल के नाम से जानते हैं।",
+   "commentary_en": "Six names for what the last line says is one thing. The circle of the previous verses turns out to have been the whole passage, named differently at each place a man might notice it.",
+   "commentary_hi": "छह नाम, और आख़िरी पंक्ति कहती है कि चीज़ एक ही है। पिछले श्लोकों का मंडल असल में पूरा मार्ग निकलता है, जिसे हर उस जगह पर अलग नाम दिया गया है जहाँ आदमी उसे महसूस कर सकता है।"
+  },
+  {
+   "id": 21066,
+   "number": "1.28",
+   "body_en": "Being afraid; and losing his temper; and not bothering to get up; and sleeping too much and staying awake too long; and eating too much and not eating at all — the man at his yoga should keep clear of these, and should keep clear of them always.",
+   "body_hi": "डरना; और ग़ुस्सा करना; और उठने का मन न होना; और बहुत ज़्यादा सोना और बहुत देर तक जागते रहना; और बहुत ज़्यादा खाना और बिलकुल न खाना — योगी को इनसे बचना चाहिए, और हमेशा बचना चाहिए।",
+   "commentary_en": "Four of the seven come in pairs of opposites, and that is the shape of the whole list: too much and too little are the same fault twice over. Only fear and temper stand alone, and there is no opposite of them worth warning a man against.",
+   "commentary_hi": "सात में से चार जोड़ों में आते हैं, और पूरी सूची की शक्ल यही है: बहुत ज़्यादा और बहुत कम एक ही दोष के दो रूप हैं। सिर्फ़ डर और ग़ुस्सा अकेले खड़े हैं, और इनका कोई ऐसा उलटा नहीं जिससे आदमी को चेताया जाए।"
+  },
+  {
+   "id": 21067,
+   "number": "1.29",
+   "body_en": "For a man who works at it by this method, properly and daily and in the order laid down, knowledge comes up of its own accord inside three months, and there is nothing doubtful about that.",
+   "body_hi": "जो आदमी इसी विधि से, ठीक तरह और रोज़ और बताए गए क्रम में अभ्यास करता है, उसके भीतर तीन महीने में ज्ञान अपने आप उग आता है, और इसमें संदेह करने लायक़ कुछ नहीं।",
+   "commentary_en": "Of its own accord is the phrase that matters. Everything before this has been something to do; what the doing produces is not itself produced by doing, and the text is careful about the difference.",
+   "commentary_hi": "'अपने आप' ही वह वाक्यांश है जो मायने रखता है। इससे पहले जो कुछ था वह करने की चीज़ थी; करने से जो निकलता है वह ख़ुद करने से नहीं बनता, और पाठ इस फ़र्क़ को लेकर सावधान है।"
+  },
+  {
+   "id": 21068,
+   "number": "1.30",
+   "body_en": "By four months he sees the gods; by five he has a stride to match theirs; and if he wants it he comes into the state of standing alone, in the sixth month, and there is nothing doubtful about that either.",
+   "body_hi": "चार महीने में वह देवताओं को देख लेता है; पाँच में उसकी चाल उनके बराबर हो जाती है; और अगर वह चाहे तो छठे महीने में उस हालत तक पहुँच जाता है जिसमें वह अकेला रह जाता है, और इसमें भी संदेह करने लायक़ कुछ नहीं।",
+   "commentary_en": "If he wants it is a strange condition to attach to the last item, since the two before it are simply reported as happening. What the verse implies is that the end of this road is the only part of it a man still gets a say in.",
+   "commentary_hi": "'अगर वह चाहे' आख़िरी बात के साथ जुड़ी हुई अजीब शर्त है, क्योंकि उससे पहले की दोनों बातें तो बस होती हुई बताई गई हैं। श्लोक का इशारा यह है कि इस रास्ते का अंत ही उसका इकलौता हिस्सा है जिसमें आदमी की अब भी कुछ चलती है।"
+  },
+  {
+   "id": 21069,
+   "number": "1.31",
+   "body_en": "What belongs to earth is given five of the measures to itself; what belongs to water is given one fewer, which makes four; the one that belongs to fire is reckoned at three; and the one that belongs to wind drops down as far as two.",
+   "body_hi": "पृथ्वी वाले हिस्से के खाते में पाँच मात्राएँ रखी जाती हैं; जल वाले को उनसे एक कम, यानी चार मिलती हैं; अग्नि वाला तीन पर आकर गिना जाता है; और वायु वाला उतरकर दो पर आ जाता है।",
+   "commentary_en": "The elements are put in the order everybody used and the counts come down one at a time, so the scheme can be held in the head without writing it out. What is being measured is the length a man dwells on each of them.",
+   "commentary_hi": "तत्व उसी क्रम में रखे गए हैं जो सब बरतते थे, और गिनती एक-एक करके घटती जाती है, ताकि पूरा ढाँचा लिखे बिना दिमाग़ में टिका रहे। जो नापा जा रहा है वह यह है कि आदमी इनमें से हर एक पर कितनी देर ठहरता है।"
+  },
+  {
+   "id": 21070,
+   "number": "1.32",
+   "body_en": "Space in the same way takes one of them, and what he should be dwelling on is the half measure that is left over. Having got the thing to come off, he should then do his thinking with the mind, by the self and inside the self.",
+   "body_hi": "आकाश उसी तरह एक मात्रा लेता है, और जो आधी मात्रा बची रह जाती है उसी पर उसे ठहरना है। जब यह बात सध जाए, तब वह मन से सोचे — आत्मा के द्वारा और आत्मा के भीतर।",
+   "commentary_en": "The series runs five, four, three, two, one, and then stops being a series. The half measure has no element attached to it, and that is where the man is told to stay.",
+   "commentary_hi": "क्रम पाँच, चार, तीन, दो, एक चलता है और फिर क्रम रहता ही नहीं। जो आधी मात्रा है उसके साथ कोई तत्व जुड़ा नहीं, और आदमी से ठहरने को वहीं कहा गया है।"
+  },
+  {
+   "id": 21071,
+   "number": "1.33",
+   "body_en": "The breath measures thirty of the joints of a finger, and there is a place where it has been given its footing. It is this that goes under the name of the breath, and it is as far as the outer breath reaches.",
+   "body_hi": "साँस उँगली के तीस पोरों जितनी लंबी है, और एक जगह है जहाँ उसे उसका आधार दिया गया है। इसी को साँस के नाम से जाना जाता है, और बाहरी साँस की पहुँच यहीं तक है।",
+   "commentary_en": "A finger joint was the unit anybody carried on their own hand, so the figure could be checked without apparatus. What the measurement is of is how far the breath travels out from the body before it turns.",
+   "commentary_hi": "उँगली का पोर वह इकाई थी जो हर किसी के अपने हाथ पर मौजूद रहती थी, इसलिए यह नाप बिना किसी यंत्र के जाँचा जा सकता था। नापा यह जा रहा है कि साँस शरीर से बाहर कितनी दूर तक जाकर लौटती है।"
+  },
+  {
+   "id": 21072,
+   "number": "1.34",
+   "body_en": "Start at eighty; add a hundred onto it; put thirteen thousand over that; and set a lakh above the whole of it. What has been counted up in that fashion is how many out-breaths a man lets go, taken across one day together with the night that belongs to it.",
+   "body_hi": "अस्सी से शुरू कीजिए; उसमें सौ जोड़ दीजिए; उसके ऊपर तेरह हज़ार रखिए; और इन सबके ऊपर एक लाख। इस तरह जो गिनती बनती है, उतनी ही साँसें आदमी बाहर छोड़ता है, एक दिन और उसके साथ लगी रात भर में।",
+   "commentary_en": "Added up as the words stand, this comes to one hundred and thirteen thousand one hundred and eighty, which works out at about seventy-nine breaths a minute — a good deal faster than other texts count, and faster than a man at rest actually breathes. The figure is given here as the verse gives it.",
+   "commentary_hi": "शब्द जैसे हैं वैसे जोड़ें तो यह एक लाख तेरह हज़ार एक सौ अस्सी बैठता है, यानी क़रीब उनासी साँस प्रति मिनट — दूसरे ग्रंथों की गिनती से काफ़ी तेज़, और आराम से बैठे आदमी की असल साँस से भी तेज़। आँकड़ा यहाँ वैसा ही दिया गया है जैसा श्लोक देता है।"
+  },
+  {
+   "id": 21073,
+   "number": "1.35",
+   "body_en": "Prana comes first, and the place it keeps is at the heart; apana, next after it, is down at the fundament; samana is in the region of the navel; udana has taken up its lodging in the throat.",
+   "body_hi": "प्राण पहला है, और उसकी जगह हृदय में है; अपान, उसके बाद, नीचे गुदा में है; समान नाभि के इलाक़े में है; उदान ने कंठ में अपना ठिकाना बना रखा है।",
+   "commentary_en": "Four winds and four addresses, running from the chest down and then back up to the throat. The scheme is anatomical in form and functional in what it is actually tracking: each name stands for a direction something moves in.",
+   "commentary_hi": "चार वायु और चार पते, छाती से नीचे की ओर चलते हुए और फिर कंठ तक वापस ऊपर। ढाँचा देखने में शरीर-रचना का है, पर असल में जो दर्ज किया जा रहा है वह काम है: हर नाम एक दिशा के लिए खड़ा है जिसमें कोई चीज़ चलती है।"
+  },
+  {
+   "id": 21074,
+   "number": "1.36",
+   "body_en": "Vyana keeps to every limb there is, spread right through and standing at its post at all times. And now the colours of the five, taking prana and the ones after it in their order.",
+   "body_hi": "व्यान हर अंग में रहता है, पूरे शरीर में फैला हुआ और हर वक़्त अपनी जगह पर तैनात। और अब उन पाँचों के रंग, प्राण और उसके बाद वालों को क्रम से लेते हुए।",
+   "commentary_en": "The fifth wind is the one with no address, because its address is everywhere. Having finished with where they sit, the text turns to what they look like, which is the part a man is expected to verify for himself.",
+   "commentary_hi": "पाँचवीं वायु वही है जिसका कोई पता नहीं, क्योंकि उसका पता हर जगह है। कौन कहाँ बैठता है यह बताकर पाठ इस ओर मुड़ता है कि वे दिखते कैसे हैं — और यही वह हिस्सा है जिसे आदमी से ख़ुद जाँचने की उम्मीद की जाती है।"
+  },
+  {
+   "id": 21075,
+   "number": "1.37",
+   "body_en": "The wind called prana is famed as red in its colour and like a jewel to look at. Apana, in the middle of it, has the glow of the small scarlet beetle that comes out when the rains do.",
+   "body_hi": "जिस वायु को प्राण कहते हैं वह रंग में लाल बताई गई है और देखने में किसी रत्न जैसी। अपान, उसके बीच में, उस छोटे लाल कीड़े की-सी आभा रखता है जो बारिश के साथ निकल आता है।",
+   "commentary_en": "The scarlet beetle of the rains is a comparison anybody in that country could check in season, and it is a stronger red than the jewel of the first line. The two reds are being told apart, not run together.",
+   "commentary_hi": "बारिश में निकलने वाला लाल कीड़ा ऐसी तुलना है जिसे उस देश में कोई भी मौसम आने पर जाँच सकता था, और वह पहली पंक्ति के रत्न से ज़्यादा गाढ़ा लाल है। दोनों लालों को अलग किया जा रहा है, मिलाया नहीं जा रहा।"
+  },
+  {
+   "id": 21076,
+   "number": "1.38",
+   "body_en": "Samana, in between the two of them, has a shine on it as white as the milk of a cow. Udana is pale all through, and vyana carries the same glow that a flame does.",
+   "body_hi": "समान, उन दोनों के बीच में, ऐसी सफ़ेद चमक रखता है जैसी गाय के दूध की होती है। उदान पूरा का पूरा पीला-सफ़ेद है, और व्यान में वही आभा है जो लौ में होती है।",
+   "commentary_en": "Five winds and five colours, and every comparison is to something ordinary — a jewel, an insect, milk, a flame. Nothing here has to be imagined; a man could have all five in front of him in a day.",
+   "commentary_hi": "पाँच वायु और पाँच रंग, और हर तुलना किसी रोज़मर्रा की चीज़ से है — एक रत्न, एक कीड़ा, दूध, एक लौ। यहाँ कुछ भी कल्पना से नहीं गढ़ना पड़ता; आदमी एक ही दिन में पाँचों अपने सामने रख सकता था।"
+  },
+  {
+   "id": 21077,
+   "number": "1.39",
+   "body_en": "The man whose wind has broken through this circle and gone up to the crown of him — let him die wherever he may and whenever he may, he is not born over again. He is not born over again. That is the hidden teaching.",
+   "body_hi": "जिस आदमी की वायु इस मंडल को भेदकर उसके सिर के ऊपर चली गई हो — वह कहीं भी और कभी भी मरे, वह दोबारा जन्म नहीं लेता। वह दोबारा जन्म नहीं लेता। यही वह गुह्य शिक्षा है।",
+   "commentary_en": "The last line is said twice, which is how these texts mark that they have ended. What is promised is oddly indifferent to circumstance: not a good death, not a death in the right place, just a death after which nothing follows.",
+   "commentary_hi": "आख़िरी पंक्ति दो बार कही गई है — इन ग्रंथों में समाप्ति का निशान यही है। जो वादा किया गया है वह हालात से अजीब तरह बेपरवाह है: अच्छी मौत नहीं, सही जगह पर मौत नहीं, बस एक ऐसी मौत जिसके बाद कुछ नहीं आता।"
+  }
+ ]
+}
