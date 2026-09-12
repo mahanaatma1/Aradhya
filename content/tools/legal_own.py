@@ -12,6 +12,7 @@ row it supersedes.
     py -m content.tools.legal_own dump  bgc_1     # source Sanskrit to author against
     py -m content.tools.legal_own check bgc_1     # coverage + distinctness
     py -m content.tools.legal_own collisions bgc_1  # which of our words overlap
+    py -m content.tools.legal_own collisions bgc_1 0.25  # ... including near misses
     py -m content.tools.legal_own status          # progress across all 130 books
 
 `check` is the interesting one: it scores each authored string against the
@@ -552,12 +553,18 @@ def cmd_check(slug: str) -> int:
     return 0
 
 
-def cmd_collisions(slug: str) -> int:
+def cmd_collisions(slug: str, floor: float | None = None) -> int:
     """List the expressive words our text shares with the fixture's, and nothing else.
 
     Deliberately does not print the fixture's prose. Seeing their sentence is
     what produces a paraphrase of it; seeing only the overlapping word choices
     is enough to re-say the verse in our own words.
+
+    With no floor, reports only strings that actually trip the gate. Pass a
+    floor (`collisions bgc_8 0.25`) to also see strings that pass but sit near
+    the bar -- chapter 10 taught us that a ratio climbing toward the threshold
+    is usually our own prose going too literal, and it is worth catching that
+    before it crosses rather than after.
     """
     conn = _db()
     book_id, title = _book(conn, slug)
@@ -577,7 +584,8 @@ def cmd_collisions(slug: str) -> int:
             if not s[field] or not (row.get(field) or "").strip():
                 continue
             ratio, run, n = _similarity(row[field], s[field], deva, latin)
-            if n >= MIN_N and not _too_close(ratio, run, n):
+            flagged = n < MIN_N or _too_close(ratio, run, n)
+            if not flagged and not (floor is not None and ratio >= floor):
                 continue
             mine = _expressive(row[field], deva, latin)
             shared = [w for w in mine if w in set(_expressive(s[field], deva, latin))]
@@ -707,8 +715,8 @@ def main(argv: list[str]) -> int:
         return 0
     if cmd == "check" and len(argv) == 3:
         return cmd_check(argv[2])
-    if cmd == "collisions" and len(argv) == 3:
-        return cmd_collisions(argv[2])
+    if cmd == "collisions" and len(argv) in (3, 4):
+        return cmd_collisions(argv[2], float(argv[3]) if len(argv) == 4 else None)
     if cmd == "status":
         return cmd_status()
     if cmd == "selftest":
