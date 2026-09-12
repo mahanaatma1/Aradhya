@@ -200,6 +200,130 @@ TARGETS = {
 }
 
 
+# ---------------------------------------------------------------------------
+# archive.org whole-book fetches (festival sources).
+#
+# These are scanned/OCR'd books, not the hand-marked-up HTML sacred-texts.com
+# serves, so they arrive as one flat _djvu.txt per book rather than a page per
+# chapter -- fetching and splitting them is a different shape of problem from
+# everything above, kept separate rather than forced through the same
+# per-chapter TARGETS/INDEXES machinery.
+#
+# Both identifiers here were WRONG in the source registry when this was
+# written (hindureligiousye00undeuoft and hinduholidaysce00guptgoog 404 --
+# archive.org's metadata API returns {} for a dead identifier, not an error,
+# which is easy to mistake for a transient outage). The real identifiers were
+# found via the advancedsearch API by title+creator and confirmed against the
+# registry's own recorded edition/publisher/year before use.
+ARCHIVE_ORG_BOOKS = {
+    # Underhill splits into 8 numbered chapters -- "CHAPTER    I" etc. appear
+    # verbatim in the OCR and are unambiguous, so each chapter is fetched as
+    # its own citable unit, matching how every other multi-chapter source in
+    # this file is split.
+    "underhill-hindu-year": {
+        "identifier": "thehindureligiou00undeuoft",
+        "split": "chapter",
+    },
+    # Gupte is an A-Z dictionary of festival/vrat entries, not chapters -- the
+    # citable unit is the headword itself (already what festivals.jsonl's
+    # source_chapter_or_section field holds for these rows), so the body is
+    # kept as one whole file rather than force-split on a structure the OCR
+    # does not mark. Front matter (title/preface/appendix) and the back INDEX
+    # are excluded by line range so a citation never points at a page number
+    # cross-reference instead of an actual entry.
+    "gupte-hindu-holidays": {
+        "identifier": "cu31924024133922",
+        "split": "whole",
+        "body_start_pattern": r"^Akshaya-Tritiya\s*—",
+        "body_end_pattern": r"^INDEX AND GLOSSARY",
+    },
+}
+
+
+def fetch_archive_org_books(prior: dict[str, str]) -> tuple[list[dict], list[tuple[str, str, str]]]:
+    """Fetch each ARCHIVE_ORG_BOOKS entry's full text and split per its rule.
+
+    Returns (manifest_entries, failures), same shape `main()` already uses for
+    the sacred-texts.com fetch so both can be appended to one manifest/run.
+    """
+    manifest: list[dict] = []
+    failed: list[tuple[str, str, str]] = []
+
+    for source, cfg in ARCHIVE_ORG_BOOKS.items():
+        outdir = RAW / source
+        outdir.mkdir(parents=True, exist_ok=True)
+        ident = cfg["identifier"]
+        raw_cache = outdir / "_raw_djvu.txt"
+
+        if raw_cache.exists():
+            full = raw_cache.read_text(encoding='utf-8')
+        else:
+            url = f"https://archive.org/download/{ident}/{ident}_djvu.txt"
+            try:
+                req = urllib.request.Request(url, headers={'User-Agent': UA})
+                with urllib.request.urlopen(req, timeout=90) as r:
+                    full = r.read().decode('utf-8', 'replace')
+            except Exception as e:                          # noqa: BLE001
+                print(f"  FAIL {source} ({ident}): {type(e).__name__}")
+                failed.append((source, ident, type(e).__name__))
+                time.sleep(1.5)
+                continue
+            raw_cache.write_text(full, encoding='utf-8')
+            time.sleep(1.5)
+
+        if cfg["split"] == "chapter":
+            # "CHAPTER    I" / "CHAPTER  VI" -- whitespace between the word and
+            # the numeral is not fixed-width in the OCR, so it is matched
+            # loosely rather than assumed.
+            marks = list(re.finditer(r'^CHAPTER\s+([IVXLC]+)\s*$', full, re.M))
+            if not marks:
+                print(f"  FAIL {source}: no chapter markers found in OCR text")
+                failed.append((source, ident, "NoChapterMarkers"))
+                continue
+            for i, m in enumerate(marks):
+                start = m.start()
+                end = marks[i + 1].start() if i + 1 < len(marks) else len(full)
+                body = full[start:end].strip()
+                label = f"Chapter {m.group(1)}"
+                name = f"chapter_{m.group(1)}.txt"
+                dest = outdir / name
+                dest.write_text(body, encoding='utf-8')
+                sha = hashlib.sha256(body.encode('utf-8')).hexdigest()
+                path = f"{source}/{name}"
+                manifest.append({
+                    "source_slug": source, "path": path,
+                    "label": prior.get(path, label),
+                    "label_verified": path in prior,
+                    "file": str(dest.relative_to(RAW)),
+                    "chars": len(body), "sha256": sha,
+                })
+                print(f"  {source:<22} {label:<32} {len(body):>7} chars")
+        else:  # "whole"
+            start_m = re.search(cfg["body_start_pattern"], full, re.M)
+            end_m = re.search(cfg["body_end_pattern"], full, re.M)
+            if not start_m or not end_m or end_m.start() <= start_m.start():
+                print(f"  FAIL {source}: body start/end markers not found")
+                failed.append((source, ident, "NoBodyMarkers"))
+                continue
+            body = full[start_m.start():end_m.start()].strip()
+            label = "Dictionary body (Akshaya-Tritiya .. end)"
+            name = "body.txt"
+            dest = outdir / name
+            dest.write_text(body, encoding='utf-8')
+            sha = hashlib.sha256(body.encode('utf-8')).hexdigest()
+            path = f"{source}/{name}"
+            manifest.append({
+                "source_slug": source, "path": path,
+                "label": prior.get(path, label),
+                "label_verified": path in prior,
+                "file": str(dest.relative_to(RAW)),
+                "chars": len(body), "sha256": sha,
+            })
+            print(f"  {source:<22} {label:<32} {len(body):>7} chars")
+
+    return manifest, failed
+
+
 def strip_html(raw: str) -> str:
     raw = re.sub(r'(?is)<(script|style|head).*?</\1>', ' ', raw)
     txt = re.sub(r'<[^>]+>', ' ', raw)
@@ -392,6 +516,10 @@ def main() -> int:
                              "file": str(dest.relative_to(RAW)),
                              "chars": len(body), "sha256": sha})
             print(f"  {source:<22} {label:<32} {len(body):>7} chars")
+
+    archive_manifest, archive_failed = fetch_archive_org_books(prior)
+    manifest.extend(archive_manifest)
+    failed.extend(archive_failed)
 
     (RAW / 'manifest.json').write_text(
         json.dumps(manifest, ensure_ascii=False, indent=1), encoding='utf-8')
