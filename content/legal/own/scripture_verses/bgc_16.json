@@ -1,0 +1,202 @@
+{
+ "slug": "bgc_16",
+ "title_en": "Daivasura Sampad Vibhaga Yoga",
+ "title_hi": "दैवासुर सम्पद् विभाग योग",
+ "book_id": 16,
+ "scripture": "bhagavad-gita",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, with our own commentary. Replaces the fixture rows of the same id for release gate RG-01. The Sanskrit and its transliteration are public domain, carried over by the build rather than restated here.",
+ "rows": [
+  {
+   "id": 572,
+   "number": "16.1",
+   "body_en": "The Blessed One said: Afraid of nothing. Clean the whole way through. Settled into knowing, and into the work that goes with knowing. He gives things away. He keeps a hand on himself. He makes his offering, reads what he ought to read, does without when doing without is called for, and there is no bend in him.",
+   "body_hi": "श्रीभगवान ने कहा — किसी चीज़ से डर नहीं। भीतर तक साफ़। जानने में जमा हुआ, और उस काम में भी जो जानने के साथ आता है। वह देता है। वह अपने ऊपर हाथ रखे रहता है। वह अपनी आहुति डालता है, जो पढ़ना चाहिए वह पढ़ता है, जहाँ बिना रहना पड़े वहाँ बिना रह लेता है, और उसमें कहीं कोई टेढ़ नहीं।",
+   "commentary_en": "What follows over three verses is a list of about twenty-six things, and it is worth counting how few of them are religious observances. Two, on a generous reading. The rest are ways of behaving when somebody else is in the room.",
+   "commentary_hi": "आगे तीन श्लोकों में जो आता है वह लगभग छब्बीस चीज़ों की सूची है, और गिनने लायक़ यह है कि उनमें धार्मिक कर्मकांड कितने कम हैं। उदारता से गिनें तो दो। बाक़ी सब यह है कि जब कमरे में कोई और हो तो आदमी कैसे पेश आता है।"
+  },
+  {
+   "id": 573,
+   "number": "16.2",
+   "body_en": "He does no harm and he tells the truth. Anger gets no grip on him. He lets things go; he is quiet; he does not carry stories about people. Anything alive has his kindness, and what is not his he does not look at twice. He is gentle. He can still be ashamed of himself. He does not fidget his way through a life.",
+   "body_hi": "वह किसी को चोट नहीं पहुँचाता और सच बोलता है। ग़ुस्सा उस पर पकड़ नहीं बना पाता। वह चीज़ें छोड़ देता है; वह शांत है; वह लोगों की कहानियाँ इधर-उधर नहीं ढोता। जो भी जीवित है उस पर उसकी दया है, और जो उसका नहीं उसकी ओर वह दोबारा नहीं देखता। वह नरम है। उसे अपने पर शर्म अब भी आ सकती है। वह पूरी ज़िन्दगी छटपटाते हुए नहीं काटता।",
+   "commentary_en": "He can still be ashamed of himself is an odd thing to find on a list of virtues, and it is doing real work there. The man is not being described as faultless. He is being described as somebody in whom the capacity to mind a fault has not died.",
+   "commentary_hi": "'उसे अपने पर शर्म अब भी आ सकती है' — गुणों की सूची में यह अजीब चीज़ है, और वहाँ वह सचमुच काम कर रही है। आदमी को निर्दोष नहीं बताया जा रहा। उसे ऐसा बताया जा रहा है जिसके भीतर अपनी ग़लती चुभने की ताक़त अभी मरी नहीं है।"
+  },
+  {
+   "id": 574,
+   "number": "16.3",
+   "body_en": "There is a heat in him. He bears what has to be borne, and he holds. He is clean. There is no double dealing in him, and he does not make too much of himself. These are what a man comes with, Bharata, when he is born to the side of the gods.",
+   "body_hi": "उसमें एक आँच है। जो सहना पड़े वह सह लेता है, और टिका रहता है। वह साफ़ है। उसमें दोगलापन नहीं, और वह अपने को कुछ ज़्यादा नहीं बनाता। ये वे चीज़ें हैं, भारत, जो आदमी अपने साथ लेकर आता है जब वह देवताओं के पाले में जन्मता है।",
+   "commentary_en": "Comes with, not earns. The whole list has been put as an inheritance rather than an achievement, which is a strange way to praise anybody and sets up the reassurance two verses on.",
+   "commentary_hi": "'लेकर आता है', कमाता नहीं। पूरी सूची उपलब्धि की तरह नहीं, विरासत की तरह रखी गई है — किसी की तारीफ़ करने का यह अजीब तरीक़ा है, और दो श्लोक बाद जो तसल्ली आती है, उसकी ज़मीन यहीं बनती है।"
+  },
+  {
+   "id": 575,
+   "number": "16.4",
+   "body_en": "Putting on a show. Swagger. A high opinion of himself. Anger. A rough way with people. And knowing nothing, Partha — that is what a man comes with when he is born to the other side.",
+   "body_hi": "दिखावा। अकड़। अपने बारे में ऊँची राय। ग़ुस्सा। लोगों के साथ खुरदरा बरताव। और कुछ न जानना, पार्थ — यही वह अपने साथ लाता है जो दूसरे पाले में जन्मता है।",
+   "commentary_en": "Six against twenty-six. The book is not being even-handed, and the lopsidedness is deliberate: the second list is short because it does not need to be long. One of these is enough to be going on with.",
+   "commentary_hi": "छब्बीस के सामने छह। किताब यहाँ बराबरी नहीं कर रही, और यह असंतुलन जानबूझकर है: दूसरी सूची छोटी इसलिए है कि उसे लंबा होने की ज़रूरत नहीं। इनमें से एक भी काफ़ी है।"
+  },
+  {
+   "id": 576,
+   "number": "16.5",
+   "body_en": "The first lot lets a man out. The second ties him up. Do not take it to heart, Pandava — you were born to the first.",
+   "body_hi": "पहला जत्था आदमी को छोड़ देता है। दूसरा उसे बाँध देता है। दिल पर मत लो, पाण्डव — तुम पहले वाले में जन्मे हो।",
+   "commentary_en": "Arjuna has not said anything. He has just heard six faults read out and gone quiet, and Krishna answers the question he did not ask. It is one of the most human moments in the dialogue, and it is easy to read straight past.",
+   "commentary_hi": "अर्जुन ने कुछ कहा नहीं है। उसने अभी-अभी छह दोष गिने जाते सुने हैं और चुप हो गया है, और कृष्ण उस सवाल का जवाब दे देते हैं जो उसने पूछा ही नहीं। पूरे संवाद के सबसे मनुष्य-जैसे क्षणों में यह एक है, और इसे पढ़ते हुए निकल जाना आसान है।"
+  },
+  {
+   "id": 577,
+   "number": "16.6",
+   "body_en": "Two kinds of creature are made in this world, the godly and the other. I have gone through the first at length. Now hear the second from me, Partha.",
+   "body_hi": "इस दुनिया में दो तरह के जीव बने हैं, देवताओं वाले और दूसरे वाले। पहले वालों की बात मैं खोलकर कह चुका। अब दूसरों की मुझसे सुनो, पार्थ।",
+   "commentary_en": "At length describes three verses. What comes next, offered as the shorter half of the pair, runs to fifteen. The chapter is more interested in the second kind than it admits.",
+   "commentary_hi": "'खोलकर' तीन श्लोकों के बारे में कहा जा रहा है। इसके बाद जो आता है — और वह जोड़ी का छोटा हिस्सा बताकर दिया जाता है — पंद्रह श्लोक चलता है। अध्याय की दिलचस्पी दूसरी क़िस्म में उससे ज़्यादा है जितनी वह मानता है।"
+  },
+  {
+   "id": 578,
+   "number": "16.7",
+   "body_en": "Men of that sort do not know what to go at and what to leave alone. You will not find them clean, you will not find them behaving well, and you will not find the truth in them.",
+   "body_hi": "उस क़िस्म के आदमी को यह पहचानना ही नहीं आता कि किस पर जाना है और किसे छोड़ देना है। साफ़-सफ़ाई उसके पास नहीं मिलेगी, ठीक चलन उसके पास नहीं मिलेगा, और सच तो बिलकुल नहीं।",
+   "commentary_en": "The first thing named is not cruelty but the inability to tell going-at from leaving-alone. Everything the chapter goes on to describe follows from that one missing judgement.",
+   "commentary_hi": "पहली चीज़ जो गिनाई जाती है वह क्रूरता नहीं है, बल्कि यह न पहचान पाना कि किस पर जाना है और किसे छोड़ देना है। आगे अध्याय जो कुछ बताता है, वह सब उसी एक ग़ायब समझ से निकलता है।"
+  },
+  {
+   "id": 579,
+   "number": "16.8",
+   "body_en": "There is no truth in the world, they say, and nothing underneath it, and nobody in charge. Nothing made it out of anything else. What could have got it going, they ask, except wanting?",
+   "body_hi": "वे कहते हैं दुनिया में सच है ही नहीं, इसके नीचे कुछ नहीं, और कोई हाँकने वाला नहीं। इसे किसी ने किसी चीज़ से बनाया नहीं। और इसे चलाया किस चीज़ ने होगा, वे पूछते हैं, सिवाय चाहत के?",
+   "commentary_en": "This is a rival position, and the book states it clearly enough that a reader could hold it. Nothing here is a caricature. That is why the next verse has to attack the men rather than the argument.",
+   "commentary_hi": "यह सामने वाले का पक्ष है, और किताब उसे इतने साफ़ ढंग से रखती है कि पढ़ने वाला उसे अपना भी सकता है। यहाँ कुछ भी मज़ाक़ बनाकर नहीं रखा गया। इसीलिए अगले श्लोक को दलील पर नहीं, आदमियों पर हमला करना पड़ता है।"
+  },
+  {
+   "id": 580,
+   "number": "16.9",
+   "body_en": "Propped on that, with themselves lost and not much in their heads, they come out doing savage things — no good to anybody, and the world is the worse for them.",
+   "body_hi": "उसी के सहारे टिके, अपने को गँवाए हुए और दिमाग़ में ज़्यादा कुछ लिए बिना, वे बाहर निकलते हैं और वहशी काम करते हैं — किसी के काम के नहीं, और दुनिया उनसे बिगड़ती है।",
+   "commentary_en": "Themselves lost is the phrase to keep hold of. The damage is not something they do while remaining intact; it is what is left once there is nobody home.",
+   "commentary_hi": "'अपने को गँवाए हुए' — यही वाक्यांश पकड़ने लायक़ है। नुक़सान ऐसा नहीं है जो वे सही-सलामत रहते हुए करते हों; वह वही है जो तब बचता है जब भीतर कोई रहा ही नहीं।"
+  },
+  {
+   "id": 581,
+   "number": "16.10",
+   "body_en": "They lean on a wanting that will not fill, and they are full of show and swagger and their own importance. In the fog they take hold of things that are not so, and go to work on vows that will not bear looking at.",
+   "body_hi": "वे ऐसी चाह के सहारे हैं जो कभी भरती नहीं, और दिखावे, अकड़ और अपने बड़प्पन से लबालब हैं। कुहासे में वे उन बातों को पकड़ लेते हैं जो हैं ही नहीं, और ऐसे व्रत लेकर काम पर लग जाते हैं जिन्हें देखा भी न जाए।",
+   "commentary_en": "Vows, note — not appetites. The man in this portrait is disciplined. He has undertakings and he keeps them; the trouble is what he has undertaken.",
+   "commentary_hi": "ध्यान दीजिए, व्रत — भूख नहीं। इस चित्र वाला आदमी अनुशासित है। उसने कुछ ठाना है और वह उसे निभाता भी है; दिक़्क़त यह है कि उसने ठाना क्या है।"
+  },
+  {
+   "id": 582,
+   "number": "16.11",
+   "body_en": "A worry with no bottom to it stays with them to the last day. Getting what they want and having it is the whole of the point, and they have settled it between themselves that there is nothing else.",
+   "body_hi": "एक ऐसी चिन्ता जिसका तला नहीं, आख़िरी दिन तक उनके साथ रहती है। जो चाहिए वह मिल जाए और भोग लिया जाए — बस इतना ही मतलब है, और वे आपस में तय कर चुके हैं कि इससे आगे कुछ है ही नहीं।",
+   "commentary_en": "The two halves of the verse belong together. The worry has no bottom because of the conclusion they came to, not alongside it: a man who has decided this is the whole of it has nowhere to put anything that will not fit.",
+   "commentary_hi": "श्लोक के दोनों आधे एक साथ के हैं। चिन्ता का तला इसलिए नहीं है कि उन्होंने वह नतीजा निकाल लिया — उसके साथ-साथ नहीं, उसी की वजह से: जिस आदमी ने तय कर लिया कि बस इतना ही है, उसके पास उस चीज़ को रखने की जगह नहीं बचती जो इसमें अँटती नहीं।"
+  },
+  {
+   "id": 583,
+   "number": "16.12",
+   "body_en": "A hundred ropes of hope have them tied. Wanting and anger are what they answer to. And to have what they want they go after money, by whatever crooked road it takes.",
+   "body_hi": "उम्मीद की सौ रस्सियाँ उन्हें बाँधे हुए हैं। चाह और ग़ुस्सा — वे इन्हीं की सुनते हैं। और जो चाहिए वह मिल जाए, इसके लिए वे पैसे के पीछे जाते हैं, रास्ता चाहे कितना ही टेढ़ा हो।",
+   "commentary_en": "Hope as a rope. The book is not being clever here -- it means that expecting a particular future is one of the things that holds a man where he is.",
+   "commentary_hi": "उम्मीद एक रस्सी की तरह। किताब यहाँ चतुराई नहीं कर रही — उसका मतलब है कि किसी ख़ास आने वाले कल की आस लगाए रखना उन्हीं चीज़ों में से है जो आदमी को वहीं का वहीं थामे रखती हैं।"
+  },
+  {
+   "id": 584,
+   "number": "16.13",
+   "body_en": "\"This came in today. That one I will have — I have set my heart on it. This much is mine already, and this much more is on its way.\"",
+   "body_hi": "\"यह आज हाथ आया। वह भी ले लूँगा — मन उसी पर लगा है। इतना तो मेरा है ही, और इतना और आ रहा है।\"",
+   "commentary_en": "The chapter stops describing him here and lets him talk. Three verses of it, in his own voice, and no comment attached until he has finished.",
+   "commentary_hi": "यहाँ अध्याय उसका वर्णन करना बंद कर देता है और उसे बोलने देता है। तीन श्लोक, उसकी अपनी आवाज़ में, और जब तक वह कह न ले तब तक कोई टिप्पणी नहीं।"
+  },
+  {
+   "id": 585,
+   "number": "16.14",
+   "body_en": "\"That enemy I finished. I will finish the others too. I am the one in charge here, I am the one who gets the good of it. I have arrived, I am strong, I am a happy man.\"",
+   "body_hi": "\"उस दुश्मन को मैंने निपटा दिया। बाक़ियों को भी निपटा दूँगा। यहाँ हुक्म मेरा चलता है, और इसका फ़ायदा भी मेरा है। मैं पहुँच चुका, मैं ताक़तवर हूँ, मैं सुखी आदमी हूँ।\"",
+   "commentary_en": "A man on a battlefield, counting enemies killed and enemies still to kill, is being quoted as the type of everything wrong. Arjuna is standing on a battlefield while he listens to it.",
+   "commentary_hi": "युद्ध के मैदान पर खड़ा एक आदमी, मारे गए दुश्मन और अभी मारे जाने वाले दुश्मन गिनता हुआ, यहाँ हर ग़लत चीज़ की मिसाल बनाकर उद्धृत किया जा रहा है। और जो यह सुन रहा है, वह ख़ुद युद्ध के मैदान पर खड़ा है।"
+  },
+  {
+   "id": 586,
+   "number": "16.15",
+   "body_en": "\"I have money, and family behind me. Who is there to touch me? I will hold the sacrifice, I will hand out the gifts, I will have a fine time.\" That is how they talk, with the not-knowing sitting on them.",
+   "body_hi": "\"मेरे पास पैसा है, और पीछे ख़ानदान। मेरे बराबर कौन है? मैं यज्ञ कराऊँगा, दान दूँगा, ख़ूब मज़े करूँगा।\" वे ऐसे ही बोलते हैं, और न-जानना उन पर बैठा रहता है।",
+   "commentary_en": "He intends to sacrifice, and he intends to give. The man being held up as the opposite of a religious man is not irreligious at all -- his piety is simply another line in the same inventory as the money and the dead enemies.",
+   "commentary_hi": "वह यज्ञ भी कराएगा, और दान भी देगा। जिस आदमी को धार्मिक आदमी के उलट बताकर खड़ा किया गया है, वह अधार्मिक है ही नहीं — उसकी धार्मिकता उसी बही का एक और खाता है जिसमें पैसा और मरे हुए दुश्मन लिखे हैं।"
+  },
+  {
+   "id": 587,
+   "number": "16.16",
+   "body_en": "Pulled to pieces by a mind going in too many directions, with the netting of it all round them, stuck fast to the having of what they want, they come down into a hell that is not clean.",
+   "body_hi": "बहुत सारी दिशाओं में जाते मन से चिथड़े हुए, चारों ओर उसी का जाल, और जो चाहिए उसे पा लेने से चिपके हुए — वे एक ऐसे नरक में आ गिरते हैं जो साफ़ नहीं है।",
+   "commentary_en": "Pulled to pieces, after three verses in which he sounded entirely sure of himself. The confidence and the coming apart are the same condition seen from outside and from within.",
+   "commentary_hi": "'चिथड़े हुए' — और यह उन तीन श्लोकों के बाद, जिनमें वह अपने बारे में पूरी तरह आश्वस्त सुनाई देता है। वह भरोसा और यह बिखरना एक ही हालत है, एक बार बाहर से देखी गई और एक बार भीतर से।"
+  },
+  {
+   "id": 588,
+   "number": "16.17",
+   "body_en": "They think well of themselves and they will not bend. Money has made them proud and a little drunk. What they hold are offerings in name, for the look of the thing, with none of it done the way it is meant to be done.",
+   "body_hi": "वे अपने को बड़ा मानते हैं और झुकते नहीं। पैसे ने उन्हें घमंडी और थोड़ा मदहोश कर रखा है। वे जो कराते हैं वे नाम के यज्ञ हैं, दिखाने भर को, और उनमें कुछ भी उस तरह नहीं होता जैसे होना चाहिए।",
+   "commentary_en": "This is the verse 16.15 was waiting for. He said he would hold the sacrifice; here is the sacrifice he holds.",
+   "commentary_hi": "16.15 इसी श्लोक का इंतज़ार कर रहा था। उसने कहा था कि वह यज्ञ कराएगा; यह रहा वह यज्ञ जो वह कराता है।"
+  },
+  {
+   "id": 589,
+   "number": "16.18",
+   "body_en": "Leaning on the sense of being an I, on force, on swagger, on wanting, on anger — they have it in for me, in their own bodies and in everyone else's, and there is spite in everything they say.",
+   "body_hi": "'मैं' के भाव पर टिके, ताक़त पर, अकड़ पर, चाह पर, ग़ुस्से पर — वे मुझसे बैर रखते हैं, अपनी देह में भी और सबकी देह में भी, और उनकी हर बात में जलन है।",
+   "commentary_en": "In their own bodies as well. A man with contempt for what is in other people is holding the same thing in contempt where it sits in him, whether or not he has noticed he is doing it.",
+   "commentary_hi": "अपनी देह में भी। जिस आदमी को दूसरों के भीतर की चीज़ से नफ़रत है, वह उसी चीज़ से नफ़रत कर रहा है जो उसके अपने भीतर बैठी है — चाहे उसने यह देखा हो या न देखा हो।"
+  },
+  {
+   "id": 590,
+   "number": "16.19",
+   "body_en": "Men like that — full of hate, cruel with it, the lowest sort there is — I throw back, over and over, into the rounds, into births on that same side and no other.",
+   "body_hi": "ऐसे लोग — नफ़रत से भरे, उसी के साथ क्रूर, सबसे नीची क़िस्म के — मैं उन्हें बार-बार वापस फेंक देता हूँ, चक्करों में, उसी पाले के जन्मों में और किसी में नहीं।",
+   "commentary_en": "The hardest thing Krishna says anywhere in the book, and it should not be softened. Note the mechanism, though: as at 14.15, the sentence is more of the same. They are not sent somewhere strange. They are sent back to the company they picked.",
+   "commentary_hi": "पूरी किताब में कृष्ण जो सबसे कठोर बात कहते हैं वह यही है, और इसे नरम नहीं करना चाहिए। पर तरीक़े पर ध्यान दीजिए: 14.15 की तरह, सज़ा वही चीज़ और ज़्यादा है। उन्हें कहीं अनजानी जगह नहीं भेजा जाता। उन्हें उसी संगत में लौटा दिया जाता है जो उन्होंने ख़ुद चुनी थी।"
+  },
+  {
+   "id": 591,
+   "number": "16.20",
+   "body_en": "Born on that side, in the fog, one life after another — they never once get as far as me, son of Kunti, and from there they go down further still.",
+   "body_hi": "उसी पाले में जन्मे, कुहासे में, एक जन्म के बाद दूसरा — वे एक बार भी मुझ तक नहीं पहुँच पाते, कुन्तीपुत्र, और वहाँ से और नीचे चले जाते हैं।",
+   "commentary_en": "Fifteen verses of this, and it has been getting steadily further from anything a reader would apply to himself. The next verse pulls the whole thing back.",
+   "commentary_hi": "पंद्रह श्लोक इसी के, और यह लगातार उस चीज़ से दूर होता गया है जिसे पढ़ने वाला अपने ऊपर लगाए। अगला श्लोक पूरी बात को वापस खींच लेता है।"
+  },
+  {
+   "id": 592,
+   "number": "16.21",
+   "body_en": "There are three doors into that hell, and a man is undone through each of them: wanting, anger, and greed. So let all three go.",
+   "body_hi": "उस नरक में तीन दरवाज़े हैं, और आदमी हर एक से बर्बाद होता है: चाह, ग़ुस्सा और लालच। तो तीनों को जाने दो।",
+   "commentary_en": "Here is why the portrait was drawn. Fifteen verses about monsters come down to three ordinary words, and there is nobody reading this who does not recognise all three. The first two were named as the enemy back at 3.37; greed is the addition.",
+   "commentary_hi": "वह चित्र बनाया ही इसलिए गया था। पंद्रह श्लोक राक्षसों के, और वे सिमटकर तीन साधारण शब्द रह जाते हैं — और इसे पढ़ने वाला कोई नहीं जो तीनों को न पहचानता हो। पहले दो को 3.37 में ही दुश्मन कहा जा चुका था; लालच यहाँ जुड़ा है।"
+  },
+  {
+   "id": 593,
+   "number": "16.22",
+   "body_en": "A man who has got clear of those three dark doors, son of Kunti, starts doing what is actually good for him, and from there he goes the whole way up.",
+   "body_hi": "जो आदमी अँधेरे के उन तीन दरवाज़ों से छूट गया, कुन्तीपुत्र, वह वही करने लगता है जो सचमुच उसके भले का है, और वहाँ से वह पूरा ऊपर तक जाता है।",
+   "commentary_en": "What is actually good for him -- as against what he wanted, which is what the three doors were made of. The distinction is the whole difference between the two kinds of men this chapter has been sorting.",
+   "commentary_hi": "'जो सचमुच उसके भले का है' — उसके सामने जो उसे चाहिए था, और तीनों दरवाज़े उसी के बने थे। यही फ़र्क़ उन दो क़िस्म के आदमियों के बीच का पूरा फ़र्क़ है जिन्हें यह अध्याय छाँटता रहा है।"
+  },
+  {
+   "id": 594,
+   "number": "16.23",
+   "body_en": "Throw out what the books lay down, go by whatever you happen to want, and you will not arrive, you will not be happy, and you will not get the whole way up.",
+   "body_hi": "जो किताबों में तय है उसे बाहर फेंक दो, और जो मन में आए उसी से चलो — तो न पहुँचोगे, न सुखी होगे, और न पूरा ऊपर तक जाओगे।",
+   "commentary_en": "This is the most conservative sentence in the Gita, and it sits badly beside 2.42, where Krishna was scathing about men who can quote the Veda and understand nothing, and worse beside 18.66, where he will tell Arjuna to let every rule go and come to him. The book holds all three. It is more honest to say so than to reconcile them.",
+   "commentary_hi": "गीता का सबसे रूढ़िवादी वाक्य यही है, और यह 2.42 के बग़ल में अटपटा बैठता है, जहाँ कृष्ण उन लोगों पर तीखे थे जो वेद सुना सकते हैं और समझते कुछ नहीं — और 18.66 के बग़ल में और भी बुरा, जहाँ वे अर्जुन से कहेंगे कि हर नियम छोड़कर मेरे पास आ जाओ। किताब तीनों को साथ रखती है। इन्हें आपस में मिलाने की कोशिश करने से बेहतर यही कहना है।"
+  },
+  {
+   "id": 595,
+   "number": "16.24",
+   "body_en": "So when the question is what to do and what to leave, let the books be what you measure by. Find out what they lay down, and then do the work that is in front of you.",
+   "body_hi": "तो जब सवाल यह हो कि क्या करना है और क्या छोड़ना है, तब किताबों को ही पैमाना बनाओ। पता करो कि उनमें क्या तय है, और फिर वह काम करो जो तुम्हारे सामने है।",
+   "commentary_en": "The chapter opened by asking what to go at and what to leave alone, and ends by handing over a way of deciding it. Whether it is the right way is a question the book will reopen twice more before it closes.",
+   "commentary_hi": "अध्याय यह पूछते हुए खुला था कि किस पर जाना है और किसे छोड़ देना है, और ख़त्म होता है यह तय करने का तरीक़ा थमाते हुए। यह तरीक़ा ठीक है या नहीं, यह सवाल किताब बंद होने से पहले दो बार और खोलेगी।"
+  }
+ ]
+}
