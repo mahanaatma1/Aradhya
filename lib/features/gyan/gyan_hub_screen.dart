@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../ui/components/components.dart';
+import '../../ui/motion/motion.dart';
+import '../../ui/tokens/tokens.dart';
+
 import '../../app/theme/app_colors.dart';
-import '../../app/theme/app_theme.dart';
-import '../../app/theme/category_colors.dart';
 import '../../core/providers/app_providers.dart';
 import 'gyan_modules.dart';
 import 'gyan_motifs.dart';
@@ -86,20 +88,22 @@ class GyanHubScreen extends ConsumerWidget {
         .where((m) => m.id != 'journey' && !clustered.contains(m.id))
         .toList();
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(hi ? 'ज्ञान' : 'Gyan'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search_rounded),
-            tooltip: hi ? 'खोजें' : 'Search',
-            onPressed: () => context.push('/search'),
-          ),
-        ],
-      ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(0, 8, 0, 28),
-        children: [
+    return AppScaffold(
+      slivers: [
+        AppTopBar(
+          title: hi ? 'ज्ञान' : 'Gyan',
+          leading: const SizedBox(width: Space.x4),
+          actions: [
+            IconCircleButton(
+              icon: Icons.search_rounded,
+              tooltip: hi ? 'खोजें' : 'Search',
+              size: 40,
+              onPressed: () => context.push('/search'),
+            ),
+          ],
+        ),
+        SliverToBoxAdapter(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
           const Padding(
             padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
             child: _LivingHero(),
@@ -131,8 +135,8 @@ class GyanHubScreen extends ConsumerWidget {
               hi: hi,
               railIndex: _clusters.length,
             ),
-        ],
-      ),
+        ])),
+      ],
     );
   }
 }
@@ -218,13 +222,18 @@ class _LivingHeroState extends State<_LivingHero>
         padding: const EdgeInsets.fromLTRB(22, 24, 22, 24),
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xFF3E7F8E), Color(0xFF1D4552)],
+            colors: [Palette.violet500, Palette.violet800],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
         ),
         child: Stack(
           children: [
+            Positioned.fill(
+              child: ParticleField(
+                emitters: [Emitters.stars(color: ColorTokens.dark.gold, rate: 2)],
+              ),
+            ),
             // A slow-drifting glow — the thing that makes the hero read as
             // "alive" the instant the screen opens, before any tap.
             AnimatedBuilder(
@@ -239,7 +248,7 @@ class _LivingHeroState extends State<_LivingHero>
                     height: 160,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: AppColors.goldBright.withValues(alpha: 0.14),
+                      color: context.colors.gold.withValues(alpha: 0.16),
                     ),
                   ),
                 );
@@ -284,20 +293,15 @@ class _HeroText extends ConsumerWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(lang ? 'ज्ञान' : 'GYAN',
-            style: const TextStyle(
-                letterSpacing: 4,
-                fontWeight: FontWeight.w700,
-                fontSize: 12,
-                color: AppColors.goldBright)),
+        Eyebrow(lang ? 'ज्ञान' : 'GYAN', color: context.colors.gold),
         const SizedBox(height: 6),
         Text(lang ? 'सनातन का संसार' : 'The world of Sanatan',
             style: const TextStyle(
                 fontFamily: AppFonts.display,
-                fontWeight: FontWeight.w700,
+                fontFamilyFallback: AppFonts.fallback,
                 fontSize: 28,
                 height: 1.08,
-                color: Color(0xFFFCEFE2))),
+                color: Palette.cream100)),
         const SizedBox(height: 8),
         Text(
           lang
@@ -306,7 +310,7 @@ class _HeroText extends ConsumerWidget {
           style: TextStyle(
               fontSize: 13,
               height: 1.3,
-              color: const Color(0xFFFCEFE2).withValues(alpha: 0.82)),
+              color: Palette.cream100.withValues(alpha: 0.82)),
         ),
       ],
     );

@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../ui/components/components.dart';
+import '../../ui/motion/motion.dart';
+import '../../ui/tokens/tokens.dart';
+
 import '../../app/theme/app_colors.dart';
-import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../l10n/app_localizations.dart';
 import '../astrology/astro_chart.dart';
@@ -26,13 +29,11 @@ class JyotishHubScreen extends ConsumerWidget {
     final birth = ref.watch(birthDetailsProvider);
     final chart = ref.watch(chartProvider);
 
-    return Scaffold(
-      appBar: AppBar(title: Text(t.catAstrology)),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-        children: [
-          _CosmicHero(hi: hi),
-          const SizedBox(height: 16),
+    return AppScaffold(
+      slivers: [
+        AppTopBar(title: t.catAstrology, leading: const SizedBox(width: Space.x4)),
+        SliverPage(children: [
+          Reveal(child: _CosmicHero(hi: hi)),
 
           if (birth != null && chart != null)
             _YourChartCard(name: birth.name, chart: chart, hi: hi),
@@ -90,8 +91,8 @@ class JyotishHubScreen extends ConsumerWidget {
                     fontSize: 12,
                     color: scheme.onSurface.withValues(alpha: 0.5))),
           ),
-        ],
-      ),
+        ]),
+      ],
     );
   }
 }
@@ -111,11 +112,16 @@ class _CosmicHero extends StatelessWidget {
             child: DecoratedBox(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Color(0xFF3B2A63), Color(0xFF7A2E52), Color(0xFF9C5A28)],
+                  colors: [Palette.violet700, Palette.magenta600, Palette.flame600],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
               ),
+            ),
+          ),
+          Positioned.fill(
+            child: ParticleField(
+              emitters: [Emitters.stars(color: ColorTokens.dark.gold, rate: 3)],
             ),
           ),
           // Chakra motif, bleeding off the right edge
@@ -137,20 +143,15 @@ class _CosmicHero extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(hi ? 'ज्योतिष' : 'JYOTISH',
-                    style: TextStyle(
-                        letterSpacing: 4,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 12,
-                        color: AppColors.goldBright)),
+                Eyebrow(hi ? 'ज्योतिष' : 'JYOTISH', color: context.colors.gold),
                 const SizedBox(height: 6),
                 Text(hi ? 'आपकी ज्योतिष गाथा' : 'Your Cosmic Story',
                     style: const TextStyle(
                         fontFamily: AppFonts.display,
-                        fontWeight: FontWeight.w700,
+                        fontFamilyFallback: AppFonts.fallback,
                         fontSize: 30,
                         height: 1.05,
-                        color: Color(0xFFFCEFE2))),
+                        color: Palette.cream100)),
                 const SizedBox(height: 8),
                 Text(
                     hi
@@ -159,7 +160,7 @@ class _CosmicHero extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 13,
                         height: 1.3,
-                        color: const Color(0xFFFCEFE2).withValues(alpha: 0.82))),
+                        color: Palette.cream100.withValues(alpha: 0.82))),
               ],
             ),
           ),
