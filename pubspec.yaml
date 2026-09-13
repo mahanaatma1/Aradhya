@@ -33,7 +33,7 @@ dependencies:
   # Open temple map links / external URLs
   url_launcher: ^6.3.1
   # i18n message formatting
-  intl: any
+  intl: ^0.20.2
   home_widget: ^0.9.3
   sweph: ^3.2.1+2.10.3
   flutter_tts: ^4.2.5

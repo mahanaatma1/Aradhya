@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'dart:io';
+import 'dart:isolate';
 import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart' show FlutterError, debugPrint;
@@ -6,6 +8,23 @@ import 'package:flutter/services.dart' show rootBundle, ByteData;
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+
+import '../platform/platform_bridge.dart';
+
+/// Thrown before a first-launch copy when the device cannot hold the
+/// inflated database. Surfaced as a bilingual "not enough storage" screen.
+class InsufficientStorageException implements Exception {
+  final int needed;
+  final int free;
+  const InsufficientStorageException({required this.needed, required this.free});
+
+  int get shortfallMb =>
+      ((needed * 1.1 + 20 * 1024 * 1024 - free) / (1024 * 1024)).ceil();
+
+  @override
+  String toString() =>
+      'InsufficientStorageException(need ${needed >> 20} MB, free ${free >> 20} MB)';
+}
 
 /// Opens the read-only content databases that ship bundled in the app.
 ///
@@ -101,8 +120,19 @@ class ContentDatabase {
     return ContentDatabase._(db, gyanAttached: attached);
   }
 
+  /// Progress of the current first-launch copy, 0..1. Emits nothing when no
+  /// copy is running; the splash shows a ring while it is.
+  static Stream<double> get progress => _progress.stream;
+  static final _progress = StreamController<double>.broadcast();
+
   /// Copies a bundled asset into [dir] if it is missing or its version marker
   /// does not match, and returns the on-disk path.
+  ///
+  /// The gzip is inflated in a worker isolate and streamed straight to disk,
+  /// so the peak allocation is the compressed asset (~10 MB), not the 37 MB
+  /// database. Free space is checked first; the file is written as `.part`
+  /// and renamed, and the marker is written last, so an interrupted copy just
+  /// runs again instead of trusting a half-written file.
   static Future<String> _materialise({
     required String dir,
     required String asset,
@@ -114,27 +144,71 @@ class ContentDatabase {
     final marker = File('$dest.version');
 
     final cached = await marker.exists() ? await marker.readAsString() : '';
+    if (await file.exists() && cached == version) return dest;
 
-    if (!await file.exists() || cached != version) {
-      // Prefer a gzipped asset when one is bundled. SQLite files compress
-      // about 4:1, which takes 55 MB of database out of the download without
-      // changing anything on disk after the copy. Falls back to the plain
-      // asset so a build that has not been compressed still works.
-      Uint8List bytes;
-      try {
-        final gz = await rootBundle.load('$asset.gz');
-        bytes = Uint8List.fromList(gzip.decode(
-            gz.buffer.asUint8List(gz.offsetInBytes, gz.lengthInBytes)));
-      } on FlutterError {
-        final ByteData data = await rootBundle.load(asset);
-        bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
-      }
-      await file.writeAsBytes(bytes, flush: true);
-      // Written last: a crash between the two leaves the marker stale and the
-      // copy simply runs again, rather than trusting a half-written file.
-      await marker.writeAsString(version);
+    ByteData data;
+    var gzipped = true;
+    try {
+      data = await rootBundle.load('$asset.gz');
+    } on FlutterError {
+      data = await rootBundle.load(asset);
+      gzipped = false;
     }
+    final bytes =
+        data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+    final inflated = gzipped ? gzipInflatedSize(bytes) : bytes.length;
+
+    final free = await PlatformBridge.freeDiskBytes(dir);
+    if (free != null && free < inflated * 1.1 + 20 * 1024 * 1024) {
+      throw InsufficientStorageException(needed: inflated, free: free);
+    }
+
+    final part = File('$dest.part');
+    if (await part.exists()) await part.delete();
+    final transfer = TransferableTypedData.fromList([bytes]);
+    _progress.add(0);
+    final poll = Timer.periodic(const Duration(milliseconds: 100), (_) async {
+      if (await part.exists()) {
+        _progress.add(((await part.length()) / inflated).clamp(0.0, 0.99));
+      }
+    });
+    try {
+      await Isolate.run(() => _inflateToFile(transfer, part.path, gzipped));
+    } finally {
+      poll.cancel();
+    }
+    await part.rename(dest);
+    await marker.writeAsString(version);
+    _progress.add(1);
     return dest;
+  }
+
+  static Future<void> _inflateToFile(
+      TransferableTypedData transfer, String path, bool gzipped) async {
+    final data = transfer.materialize().asUint8List();
+    final sink = File(path).openWrite();
+    if (!gzipped) {
+      sink.add(data);
+      await sink.close();
+      return;
+    }
+    const chunk = 256 * 1024;
+    final chunks = <List<int>>[
+      for (var i = 0; i < data.length; i += chunk)
+        Uint8List.sublistView(
+            data, i, i + chunk > data.length ? data.length : i + chunk),
+    ];
+    await Stream<List<int>>.fromIterable(chunks)
+        .transform(gzip.decoder)
+        .pipe(sink);
+  }
+
+  /// The uncompressed size a gzip stream declares (ISIZE, last four bytes,
+  /// little-endian; exact for anything under 4 GB).
+  static int gzipInflatedSize(Uint8List gz) {
+    if (gz.length < 4) return gz.length;
+    final n = gz.length;
+    return gz[n - 4] | (gz[n - 3] << 8) | (gz[n - 2] << 16) | (gz[n - 1] << 24);
   }
 
   Future<List<Map<String, Object?>>> query(
