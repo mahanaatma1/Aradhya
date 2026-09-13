@@ -69,7 +69,21 @@ def image_size(path: Path) -> tuple[int | None, int | None]:
             pass
 
     if data[:4] == b"RIFF" and data[8:12] == b"WEBP":
-        return (None, None)  # several sub-formats; not worth parsing here
+        chunk = data[12:16]
+        if chunk == b"VP8X" and len(data) >= 30:
+            w = 1 + int.from_bytes(data[24:27], "little")
+            h = 1 + int.from_bytes(data[27:30], "little")
+            return (w, h)
+        if chunk == b"VP8L" and len(data) >= 25:
+            b = data[21:25]
+            w = 1 + (b[0] | ((b[1] & 0x3F) << 8))
+            h = 1 + ((b[1] >> 6) | (b[2] << 2) | ((b[3] & 0x0F) << 10))
+            return (w, h)
+        if chunk == b"VP8 " and len(data) >= 30:
+            w = struct.unpack("<H", data[26:28])[0] & 0x3FFF
+            h = struct.unpack("<H", data[28:30])[0] & 0x3FFF
+            return (w, h)
+        return (None, None)
 
     return (None, None)
 

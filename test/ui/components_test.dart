@@ -71,12 +71,16 @@ void main() {
     await pumpGallery(tester, hindi: false, dark: false, scale: 1.0, width: 390);
     final scrollable = find.byType(Scrollable).first;
     await tester.dragUntilVisible(find.text('Open sheet'), scrollable, const Offset(0, -300));
-    await tester.pumpAndSettle();
+    await tester.pump(const Duration(milliseconds: 700));
     await tester.tap(find.text('Open sheet'));
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 700));
+    await tester.pump(const Duration(milliseconds: 700));
     expect(find.text('Choose a voice'), findsOneWidget);
     await tester.tap(find.text('Hindi (offline)'));
-    await tester.pumpAndSettle();
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.pump(const Duration(milliseconds: 400));
     expect(find.text('Choose a voice'), findsNothing);
   });
 }

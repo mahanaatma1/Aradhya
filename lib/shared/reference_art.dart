@@ -30,42 +30,42 @@ String? _deityStem(String name) {
 /// Full-body deity illustration (transparent background) for the Mandir idol.
 String? deityImage(String name) {
   final s = _deityStem(name);
-  return s == null ? null : 'assets/images/$s.png';
+  return s == null ? null : 'assets/images/$s.webp';
 }
 
 /// Circular deity avatar (the `p…` variant) for pickers and chips.
 String? deityAvatar(String name) {
   final s = _deityStem(name);
-  return s == null ? null : 'assets/images/p$s.png';
+  return s == null ? null : 'assets/images/p$s.webp';
 }
 
 /// The 16:9 banner illustration for a Stories emotion, or null.
 String? emotionImage(String en) {
   final n = en.toLowerCase();
   const set = {'anger', 'joy', 'peace', 'love', 'fear', 'faith'};
-  return set.contains(n) ? 'assets/images/$n.png' : null;
+  return set.contains(n) ? 'assets/images/$n.webp' : null;
 }
 
 /// Scripture scene illustration for a known scripture key.
 String? scriptureImage(String key) => switch (key) {
-      'gita' => 'assets/images/bhagavadgita.jpg',
-      'ramayana' => 'assets/images/ramayana.jpg',
-      'upanishads' => 'assets/images/upanishads.jpg',
-      'mahabharata' => 'assets/images/mahabharata.jpg',
+      'gita' => 'assets/images/bhagavadgita.webp',
+      'ramayana' => 'assets/images/ramayana.webp',
+      'upanishads' => 'assets/images/upanishads.webp',
+      'mahabharata' => 'assets/images/mahabharata.webp',
       _ => null,
     };
 
 /// Home "Spiritual Enlightenment" card art. NOTE: Ishvarvaani placeholders —
 /// replace with our own art before store submission (same gate as the rest).
-const mantrasImage = 'assets/images/mantras.jpg';
-const aartisImage = 'assets/images/aartis.jpg';
+const mantrasImage = 'assets/images/mantras.webp';
+const aartisImage = 'assets/images/aartis.webp';
 
 /// Full-bleed background art.
-const quizBg = 'assets/images/quiz_bg.jpg';
+const quizBg = 'assets/images/quiz_bg.webp';
 
 /// Badge art for Home's Engage & Learn tiles.
-const japaBadge = 'assets/images/japa_badge.png';
+const japaBadge = 'assets/images/japa_badge.webp';
 
 /// Offering item art for the Mandir.
-const bhogImage = 'assets/images/bhog.png';
-const diyaOnImage = 'assets/images/ondiya.png';
+const bhogImage = 'assets/images/bhog.webp';
+const diyaOnImage = 'assets/images/ondiya.webp';
