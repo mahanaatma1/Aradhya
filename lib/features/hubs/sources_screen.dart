@@ -179,9 +179,8 @@ class _FontsCard extends StatelessWidget {
   const _FontsCard({required this.hi});
 
   static const _fonts = <(String, String)>[
-    ('Eczar', 'Rosetta Type Foundry'),
-    ('Ramaraja', 'Silicon Andhra / Sorkin Type'),
-    ('Inter', 'The Inter Project Authors'),
+    ('Yatra One', 'Catherine Leigh Schmidt / Google Fonts'),
+    ('Poppins', 'Indian Type Foundry'),
     ('Noto Sans Devanagari', 'The Noto Project Authors (Google)'),
   ];
 

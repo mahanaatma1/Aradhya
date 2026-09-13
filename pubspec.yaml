@@ -78,15 +78,19 @@ flutter:
     - assets/fonts/LICENSES/
 
   fonts:
-    - family: Eczar
+    - family: YatraOne
       fonts:
-        - asset: assets/fonts/Eczar.ttf
-    - family: Ramaraja
+        - asset: assets/fonts/YatraOne-Regular.ttf
+    - family: Poppins
       fonts:
-        - asset: assets/fonts/Ramaraja-Regular.ttf
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter.ttf
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
     - family: NotoSansDevanagari
       fonts:
         - asset: assets/fonts/NotoSansDevanagari.ttf

@@ -1,49 +1,39 @@
-import 'package:flutter/material.dart';
 
-/// Raw brand palette — the "Sandhyā" identity (2026 rebrand off Ishvarvaani's
-/// terracotta/cream/gold, which these constants used to hold verbatim).
-/// Built from the two hours the app is actually used in: before sunrise,
-/// after sunset. See reference/DESIGN-TOKENS.md for the retired palette this
-/// replaces. Constant *names* are kept stable across the rebrand — only the
-/// hex values changed — since ~170 call sites reference them by name;
-/// screens should still prefer [Theme.of(context)] / [CategoryColors] over
-/// reaching for these directly.
+import '../../ui/tokens/palette.dart';
+
+/// Legacy palette facade. Every member is deprecated: screens migrate to
+/// `context.colors.<role>` (see `lib/ui/tokens/tokens.dart`). Values are the
+/// light-theme Utsav tokens so un-migrated screens already wear the identity;
+/// they are NOT dark-mode aware, which is why migration is still required.
 class AppColors {
   AppColors._();
 
-  // Grounds — light. Warm paper, not the old cream (which read as the same
-  // "temple brochure" warm-cream cluster common to devotional apps).
-  static const paper = Color(0xFFF7F5F2);
-  static const kraft = Color(0xFFEFEBE4);
-  static const kraft2 = Color(0xFFF1E9DD);
-  static const cardLight = Color(0xFFFFFFFF);
+  static const _d = 'Use context.colors.<role> from lib/ui/tokens/tokens.dart';
 
-  // Grounds — dark. Ink is the blended pink/orange/red/yellow warm dark —
-  // the "sandhyā" anchor color — not a neutral near-black.
-  static const paperDark = Color(0xFF22110D);
-  static const kraftDark = Color(0xFF2C1712);
-  static const kraft2Dark = Color(0xFF351C15);
-  static const cardDark = Color(0xFF3A1A16);
+  @Deprecated(_d) static const paper = Palette.ivory100;
+  @Deprecated(_d) static const kraft = Palette.ivory200;
+  @Deprecated(_d) static const kraft2 = Palette.ivory300;
+  @Deprecated(_d) static const cardLight = Palette.white;
 
-  // Ink / text
-  static const inkLight = Color(0xFF241713);
-  static const inkSoftLight = Color(0xFF6B5B52);
-  static const inkFaintLight = Color(0xFFA89A8F);
-  static const inkDark = Color(0xFFF7EFE6);
-  static const inkSoftDark = Color(0xFFD9C2B4);
-  static const inkFaintDark = Color(0xFF9C8B80);
+  @Deprecated(_d) static const paperDark = Palette.night900;
+  @Deprecated(_d) static const kraftDark = Palette.night800;
+  @Deprecated(_d) static const kraft2Dark = Palette.night700;
+  @Deprecated(_d) static const cardDark = Palette.night800;
 
-  // Brand. `terracotta` is now brass — the primary accent — kept under its
-  // old name so every existing call site re-themes without a rename pass.
-  static const terracotta = Color(0xFFC97A3E);
-  static const terracottaDark = Color(0xFF9C5A28);
-  static const terracottaBright = Color(0xFFE8B98A); // dark-theme accent
-  static const gold = Color(0xFF9C5A28);
-  static const goldBright = Color(0xFFC97A3E);
+  @Deprecated(_d) static const inkLight = Palette.plum900;
+  @Deprecated(_d) static const inkSoftLight = Palette.plum700;
+  @Deprecated(_d) static const inkFaintLight = Palette.plum500;
+  @Deprecated(_d) static const inkDark = Palette.cream100;
+  @Deprecated(_d) static const inkSoftDark = Palette.cream300;
+  @Deprecated(_d) static const inkFaintDark = Palette.cream500;
 
-  // Jewel accents. `dharmaPurple`/`deityRose`/`sacredGreen` keep their old
-  // names (Astrology/Knowledge violet, Devotion ember, Sadhana sage).
-  static const dharmaPurple = Color(0xFF6C5A9C);
-  static const deityRose = Color(0xFFD9748C);
-  static const sacredGreen = Color(0xFF5E8C74);
+  @Deprecated(_d) static const terracotta = Palette.vermilion500;
+  @Deprecated(_d) static const terracottaDark = Palette.vermilion600;
+  @Deprecated(_d) static const terracottaBright = Palette.vermilion300;
+  @Deprecated(_d) static const gold = Palette.marigold600;
+  @Deprecated(_d) static const goldBright = Palette.marigold500;
+
+  @Deprecated(_d) static const dharmaPurple = Palette.violet500;
+  @Deprecated(_d) static const deityRose = Palette.magenta500;
+  @Deprecated(_d) static const sacredGreen = Palette.tulsi500;
 }
