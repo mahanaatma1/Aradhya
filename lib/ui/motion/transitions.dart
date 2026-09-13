@@ -33,10 +33,10 @@ class AppPage<T> extends CustomTransitionPage<T> {
           transitionDuration: Motion.slow,
           reverseTransitionDuration: Motion.base,
           transitionsBuilder: (context, animation, secondary, child) =>
-              _build(context, kind, animation, secondary, child),
+              build(context, kind, animation, secondary, child),
         );
 
-  static Widget _build(
+  static Widget build(
     BuildContext context,
     AppTransition kind,
     Animation<double> animation,
@@ -85,4 +85,21 @@ class AppPage<T> extends CustomTransitionPage<T> {
         return FadeTransition(opacity: enter, child: child);
     }
   }
+}
+
+/// Theme-level default for every `builder:` route: shared-axis X push that
+/// honours [MotionScope], so the 60+ plain routes need no per-route page.
+class AppPageTransitions extends PageTransitionsBuilder {
+  const AppPageTransitions();
+
+  @override
+  Widget buildTransitions<T>(
+    PageRoute<T> route,
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) =>
+      AppPage.build(
+          context, AppTransition.sharedAxisX, animation, secondaryAnimation, child);
 }

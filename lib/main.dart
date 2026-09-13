@@ -16,6 +16,7 @@ import 'features/astrology/sweph_ephemeris.dart';
 import 'l10n/app_localizations.dart';
 import 'shared/widgets/language_fab.dart';
 import 'ui/motion/motion_scope.dart';
+import 'ui/motion/particle_field.dart' show MotionLifecycle;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -115,7 +116,7 @@ class _LangFabOverlayState extends State<_LangFabOverlay> {
     final minY = media.padding.top + 8;
     final maxY = size.height - _fab - media.padding.bottom - 8;
     // Default resting spot: bottom-right, above the nav bar.
-    final def = Offset(maxX - 6, maxY - 88);
+    final def = Offset(maxX - 6, maxY - 100);
     final raw = _pos ?? def;
     final pos = Offset(raw.dx.clamp(minX, maxX), raw.dy.clamp(minY, maxY));
 
@@ -182,11 +183,13 @@ class _DivyaVaaniAppState extends ConsumerState<DivyaVaaniApp> {
       // every screen is bilingual. Hidden on the splash & onboarding (which
       // have their own language step).
       builder: (context, child) => MotionScopeHost(
-        child: Stack(
-          children: [
-            ?child,
-            const _LangFabOverlay(),
-          ],
+        child: MotionLifecycle(
+          child: Stack(
+            children: [
+              ?child,
+              const _LangFabOverlay(),
+            ],
+          ),
         ),
       ),
     );

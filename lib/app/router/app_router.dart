@@ -195,8 +195,12 @@ final appRouter = GoRouter(
   routes: [
     GoRoute(path: '/splash', builder: (c, s) => const SplashScreen()),
     GoRoute(path: '/onboarding', builder: (c, s) => const OnboardingScreen()),
-    StatefulShellRoute.indexedStack(
+    StatefulShellRoute(
       builder: (context, state, navShell) => NavScaffold(navShell: navShell),
+      // Hidden tabs are muted (TickerMode off) and offstage, so ambient
+      // motion on Home does not keep running behind the other four tabs.
+      navigatorContainerBuilder: (context, navShell, children) =>
+          ShellBranches(index: navShell.currentIndex, children: children),
       branches: [
         StatefulShellBranch(routes: [
           GoRoute(path: '/', builder: (c, s) => const HomeScreen()),

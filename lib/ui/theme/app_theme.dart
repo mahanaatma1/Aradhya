@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../motion/transitions.dart';
 import '../tokens/tokens.dart';
 
 /// Builds the two [ThemeData]s from the token sets. Cached: `MaterialApp`
@@ -65,11 +66,11 @@ class AppTheme {
         CategoryColors.standard,
       ],
       pageTransitionsTheme: const PageTransitionsTheme(builders: {
-        TargetPlatform.android: _FadeSlidePageTransitions(),
-        TargetPlatform.iOS: _FadeSlidePageTransitions(),
-        TargetPlatform.macOS: _FadeSlidePageTransitions(),
-        TargetPlatform.windows: _FadeSlidePageTransitions(),
-        TargetPlatform.linux: _FadeSlidePageTransitions(),
+        TargetPlatform.android: AppPageTransitions(),
+        TargetPlatform.iOS: AppPageTransitions(),
+        TargetPlatform.macOS: AppPageTransitions(),
+        TargetPlatform.windows: AppPageTransitions(),
+        TargetPlatform.linux: AppPageTransitions(),
       }),
     );
 
@@ -156,37 +157,6 @@ class AppTheme {
       progressIndicatorTheme: ProgressIndicatorThemeData(
         color: c.accent,
         linearTrackColor: c.surfaceSunken,
-      ),
-    );
-  }
-}
-
-/// Default route transition until the motion kit's `AppPage` replaces it:
-/// a short fade with a 3.5% upward slide.
-class _FadeSlidePageTransitions extends PageTransitionsBuilder {
-  const _FadeSlidePageTransitions();
-
-  @override
-  Widget buildTransitions<T>(
-    PageRoute<T> route,
-    BuildContext context,
-    Animation<double> animation,
-    Animation<double> secondaryAnimation,
-    Widget child,
-  ) {
-    final curved = CurvedAnimation(
-      parent: animation,
-      curve: Motion.standard,
-      reverseCurve: Motion.exit,
-    );
-    return FadeTransition(
-      opacity: curved,
-      child: SlideTransition(
-        position: Tween<Offset>(
-          begin: const Offset(0, 0.035),
-          end: Offset.zero,
-        ).animate(curved),
-        child: child,
       ),
     );
   }
