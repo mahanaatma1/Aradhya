@@ -4,7 +4,7 @@ import Reveal from '../ui/Reveal.jsx';
 import Button from '../ui/Button.jsx';
 import Mandala from '../art/Mandala.jsx';
 import { appConfig } from '../../config/appConfig.js';
-import { getStats } from '../../services/contentService.js';
+import { getStats, contentKeys } from '../../services/contentService.js';
 import useAsync from '../../hooks/useAsync.js';
 
 /**
@@ -35,7 +35,7 @@ const POINTS = [
 ];
 
 export default function OfflineFirst() {
-  const { data: stats } = useAsync(() => getStats(), []);
+  const { data: stats } = useAsync(() => getStats(), [], { preloadKey: contentKeys.stats });
 
   return (
     <section className="relative overflow-hidden py-section">

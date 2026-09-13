@@ -56,7 +56,7 @@ final kOfferings = <Offering>[
     icon: Icons.rice_bowl_rounded,
     image: bhogImage,
     cost: 3,
-    color: const Color(0xFFB48B3E),
+    color: const Color(0xFFE8B347),
   ),
   const Offering(
     key: 'dhoop',

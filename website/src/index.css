@@ -198,17 +198,40 @@
     mask-image: linear-gradient(to right, transparent, black 18px, black calc(100% - 24px), transparent);
   }
 
-  /* Scroll-reveal: elements start shifted, the observer adds .is-in. */
-  .reveal {
+  /*
+   * Scroll-reveal: elements start shifted, the observer adds .is-in.
+   *
+   * Gated on `html.js`, which main.jsx's bootstrap sets. Without that gate every
+   * revealed section would be `opacity: 0` in the prerendered HTML with nothing
+   * to ever turn it on — so a reader with JavaScript off, or a crawler that
+   * applies CSS but runs no script, would be served a page of invisible text.
+   * The gate makes the animation an enhancement rather than a precondition for
+   * seeing the content.
+   */
+  .js .reveal {
     opacity: 0;
     transform: translateY(16px);
     transition:
       opacity 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
       transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
   }
-  .reveal.is-in {
+  .js .reveal.is-in {
     opacity: 1;
     transform: none;
+  }
+
+  /*
+   * Theme-conditional content, chosen by CSS rather than by JSX.
+   *
+   * `html[data-theme]` is the source of truth for the theme (set before first
+   * paint by the inline script in index.html), so a control that differs between
+   * light and dark renders both halves and hides one here. That keeps React's
+   * output theme-independent, which is what lets prerendered pages hydrate — see
+   * components/layout/ThemeToggle.jsx.
+   */
+  :root[data-theme='dark'] .theme-light-only,
+  :root:not([data-theme='dark']) .theme-dark-only {
+    display: none;
   }
 }
 
@@ -344,6 +367,8 @@
     animation-delay: 0ms !important;
     transition-duration: 0.001ms !important;
   }
+  /* Beats `.js .reveal` despite the lower specificity: that rule is in
+     @layer utilities and this block is unlayered, and unlayered wins. */
   .reveal {
     opacity: 1;
     transform: none;

@@ -426,7 +426,7 @@ class _SoulTab extends StatelessWidget {
   const _SoulTab({required this.chart, required this.birth, required this.hi});
 
   String _p(String key) => planetInfo[key]!.name(hi);
-  static const _rose = Color(0xFF9C2950);
+  static const _rose = Color(0xFFD9748C);
 
   @override
   Widget build(BuildContext context) {

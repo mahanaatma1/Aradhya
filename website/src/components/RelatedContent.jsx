@@ -1,6 +1,6 @@
 import EntityCard from './cards/EntityCard.jsx';
 import { CardGridSkeleton } from './ui/States.jsx';
-import { getRelated } from '../services/contentService.js';
+import { getRelated, contentKeys } from '../services/contentService.js';
 import useAsync from '../hooks/useAsync.js';
 
 /**
@@ -17,7 +17,9 @@ export default function RelatedContent({
   limit = 8,
   className = '',
 }) {
-  const { data, loading } = useAsync(() => getRelated(slug, limit), [slug, limit]);
+  const { data, loading } = useAsync(() => getRelated(slug, limit), [slug, limit], {
+    preloadKey: contentKeys.related(slug, limit),
+  });
 
   if (loading) return <CardGridSkeleton count={4} className="sm:grid-cols-2" />;
   if (!data?.length) return null;

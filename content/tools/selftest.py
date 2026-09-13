@@ -122,6 +122,20 @@ CASES: list[tuple[str, str, list[dict], bool]] = [
     ("schema rejects bad kind", "schema", [entity("k1", kind="wizard")], False),
     ("no sources at all", "schema", [entity("s1", sources=[])], False),
 
+    # The collision the kind-bucketed duplicate-title check cannot see. Both
+    # rows below are individually valid and their titles differ ("Bhadra" vs
+    # "Bhadra-2"), so nothing else in the gate has anything to say about them --
+    # which is exactly how twelve of these shipped.
+    ("importer collision counter", "collision-suffix",
+     [entity("bhadra"), entity("bhadra-2")], False),
+    # And the case it must stay quiet about. The narrative files number their own
+    # rows -- kuru-day-08, kuru-day-09 -- so a trailing counter is only
+    # suspicious when the un-suffixed slug ALSO exists. A first draft of the
+    # duplicate scan matched the bare shape instead and drowned in 1400 false
+    # positives, of which twelve mattered.
+    ("a numbered slug with no base slug is fine", "",
+     [entity("kuru-day-08"), entity("kuru-day-09")], False),
+
     # The cited chapter must be re-readable on disk, not merely named. Both
     # sources below are registered and legitimate; the difference is that one
     # has been fetched to content/raw/ and the other has not, which is the

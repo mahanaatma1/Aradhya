@@ -4,7 +4,7 @@ import Reveal from '../ui/Reveal.jsx';
 import Section from '../ui/Section.jsx';
 import { Badge } from '../ui/Chip.jsx';
 import { CardSkeleton } from '../ui/States.jsx';
-import { getQuiz, getRiddles, getTrivia } from '../../services/contentService.js';
+import { getQuiz, getRiddles, getTrivia, allSync, contentKeys } from '../../services/contentService.js';
 import useAsync from '../../hooks/useAsync.js';
 
 /**
@@ -16,8 +16,9 @@ import useAsync from '../../hooks/useAsync.js';
  */
 export default function LearnByPlay() {
   const { data, loading } = useAsync(
-    () => Promise.all([getQuiz(1), getTrivia(2), getRiddles(1)]),
+    () => allSync([getQuiz(1), getTrivia(2), getRiddles(1)]),
     [],
+    { preloadKey: contentKeys.homePlay },
   );
 
   const [quiz, trivia, riddles] = data ?? [];

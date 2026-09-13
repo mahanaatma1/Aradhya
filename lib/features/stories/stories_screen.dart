@@ -274,10 +274,10 @@ const _cardPalette = <Color>[
   Color(0xFFC0392B), // ember red
   Color(0xFF2E8B8B), // teal
   Color(0xFFC79200), // gold
-  Color(0xFF9C2950), // rose
+  Color(0xFFD9748C), // rose
   Color(0xFF4A4A8A), // indigo
-  Color(0xFF25533F), // deep green
-  Color(0xFF5A2EA8), // violet
+  Color(0xFF5E8C74), // deep green
+  Color(0xFF6C5A9C), // violet
   Color(0xFFB4611E), // amber-brown
 ];
 

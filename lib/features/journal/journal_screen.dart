@@ -92,7 +92,7 @@ class _PromptCard extends ConsumerWidget {
       // personal features.
       stitchColor: AppColors.goldBright.withValues(alpha: 0.75),
       gradient: const LinearGradient(
-        colors: [Color(0xFF3F7A5E), Color(0xFF25533F)],
+        colors: [Color(0xFF3F7A5E), Color(0xFF5E8C74)],
         begin: Alignment.topLeft,
         end: Alignment.bottomRight,
       ),
@@ -141,7 +141,7 @@ class _PromptCard extends ConsumerWidget {
                   label: Text(hindi ? 'उत्तर लिखें' : 'Write on this'),
                   style: FilledButton.styleFrom(
                     backgroundColor: Colors.white,
-                    foregroundColor: const Color(0xFF25533F),
+                    foregroundColor: const Color(0xFF5E8C74),
                   ),
                 ),
               ),
@@ -372,7 +372,7 @@ class _HeatmapState extends ConsumerState<_Heatmap> {
 
     Color cell(int n) => n == 0
         ? scheme.outline.withValues(alpha: 0.12)
-        : const Color(0xFF25533F)
+        : const Color(0xFF5E8C74)
             .withValues(alpha: (0.35 + 0.2 * n).clamp(0.35, 1.0));
 
     return Column(

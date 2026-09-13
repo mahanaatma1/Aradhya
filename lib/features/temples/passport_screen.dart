@@ -17,7 +17,7 @@ import 'passport_sections.dart';
 import 'passport_stamp.dart';
 
 const _accent = Color(0xFF8A6A4F);
-const _gold = Color(0xFFC08A2E);
+const _gold = Color(0xFFC97A3E); // brass foil, was gold-leaf
 
 /// My Yatra — a pilgrimage passport, built to read like one.
 ///

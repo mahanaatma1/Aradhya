@@ -2,13 +2,15 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import 'stitched_border.dart';
 
 /// The Aradhya logo — a lotus in terracotta + gold on a warm cream tile with
 /// the signature dashed "stitched" outline. Drawn (not an asset) so it stays
 /// crisp at every size.
+///
+/// Deliberately painted from its own literal colors rather than [AppColors]
+/// — the mark should not shift if the app's theme palette changes later.
 class AppLogo extends StatelessWidget {
   final double size;
 
@@ -34,11 +36,11 @@ class AppLogo extends StatelessWidget {
       width: size,
       height: size,
       decoration: BoxDecoration(
-        color: AppColors.kraft2,
+        color: const Color(0xFFFBEFDD), // logo's own cream, not the app theme
         borderRadius: BorderRadius.circular(radius),
         boxShadow: [
           BoxShadow(
-            color: AppColors.terracotta.withValues(alpha: 0.22),
+            color: const Color(0xFFA73015).withValues(alpha: 0.22),
             blurRadius: size * 0.2,
             offset: Offset(0, size * 0.08),
           ),
@@ -46,7 +48,7 @@ class AppLogo extends StatelessWidget {
       ),
       child: CustomPaint(
         foregroundPainter: StitchedBorderPainter(
-          color: AppColors.terracotta.withValues(alpha: 0.38),
+          color: const Color(0xFFA73015).withValues(alpha: 0.38),
           inset: size * 0.11,
           radius: radius * 0.62,
           strokeWidth: size * 0.014,
@@ -88,7 +90,7 @@ class _LotusPainter extends CustomPainter {
       ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
 
     final gold = fill([const Color(0xFFEFCB6A), const Color(0xFFB48B3E)]);
-    final terra = fill([const Color(0xFFB23A18), AppColors.terracottaDark]);
+    final terra = fill([const Color(0xFFB23A18), const Color(0xFF6E1F10)]);
     final terraCore =
         fill([const Color(0xFF9A2E12), const Color(0xFF6E1F10)]);
 

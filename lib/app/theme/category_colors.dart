@@ -53,20 +53,30 @@ class CategoryColors extends ThemeExtension<CategoryColors> {
     required this.sadhana,
   });
 
+  // Sandhyā rebrand: every gradient below is drawn from one of four families
+  // (brass, ember, sage, violet) plus two muted extensions (indigo, umber)
+  // used only where a fifth/sixth hue is truly needed to stay distinguishable.
+  // Previously each category had an unrelated hue of its own — 13 different
+  // colors that never read as one designed app. Categories in the same
+  // register now share a family and differ by depth/warmth, not by hue:
+  // Scriptures/Katha/Epics/Temples (brass-toned — the "text & place" group),
+  // Aartis/Mantras/Panchang (ember-toned — the "devotional practice" group),
+  // Quiz/Sadhana (sage — the "practice & play" group),
+  // Astrology/Gyan/Srishty/Personality (violet — the "knowledge" group).
   static const standard = CategoryColors(
-    scriptures: CategoryStyle([Color(0xFFA73015), Color(0xFF6E1F10)]),
-    aartis: CategoryStyle([Color(0xFFD4AF37), Color(0xFFA54325)]),
-    mantras: CategoryStyle([Color(0xFFC7567F), Color(0xFF7C1F44)]),
-    quiz: CategoryStyle([Color(0xFF3E8E6E), Color(0xFF204B39)]),
-    astrology: CategoryStyle([Color(0xFF8B6AC7), Color(0xFF4A2493)]),
-    panchang: CategoryStyle([Color(0xFFE0762A), Color(0xFFA7430F)]),
-    katha: CategoryStyle([Color(0xFF5C6BC0), Color(0xFF2F3B8E)]),
-    personality: CategoryStyle([Color(0xFFA85A8C), Color(0xFF5C2549)]),
-    temples: CategoryStyle([Color(0xFF9C7A3C), Color(0xFF5C3B28)]),
-    gyan: CategoryStyle([Color(0xFF3E7F8E), Color(0xFF1D4552)]),
-    srishty: CategoryStyle([Color(0xFF4A3A7A), Color(0xFF1E1440)]),
+    scriptures: CategoryStyle([Color(0xFFC97A3E), Color(0xFF6E3A1F)]),
+    aartis: CategoryStyle([Color(0xFFE39B6B), Color(0xFF9C5A28)]),
+    mantras: CategoryStyle([Color(0xFFD9748C), Color(0xFF7C2E44)]),
+    quiz: CategoryStyle([Color(0xFF6FA88C), Color(0xFF2F5E48)]),
+    astrology: CategoryStyle([Color(0xFF8778B8), Color(0xFF4E3F78)]),
+    panchang: CategoryStyle([Color(0xFFD9748C), Color(0xFFA5445C)]),
+    katha: CategoryStyle([Color(0xFF9C8250), Color(0xFF5C4A28)]),
+    personality: CategoryStyle([Color(0xFF6C5A9C), Color(0xFF3F3363)]),
+    temples: CategoryStyle([Color(0xFF9C5A28), Color(0xFF4A2E18)]),
+    gyan: CategoryStyle([Color(0xFF6C5A9C), Color(0xFF352A54)]),
+    srishty: CategoryStyle([Color(0xFF4E3F78), Color(0xFF241C3E)]),
     epics: CategoryStyle([Color(0xFF8A6A4F), Color(0xFF4A3220)]),
-    sadhana: CategoryStyle([Color(0xFF3F7A5E), Color(0xFF25533F)]),
+    sadhana: CategoryStyle([Color(0xFF5E8C74), Color(0xFF33543F)]),
   );
 
   @override

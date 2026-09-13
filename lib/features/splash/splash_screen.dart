@@ -46,8 +46,17 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
   Widget build(BuildContext context) {
     final hi = ref.watch(isHindiProvider);
 
+    final brightness = Theme.of(context).brightness;
+    final paper =
+        brightness == Brightness.dark ? AppColors.paperDark : AppColors.paper;
+    final ink =
+        brightness == Brightness.dark ? AppColors.inkDark : AppColors.inkLight;
+    final inkSoft = brightness == Brightness.dark
+        ? AppColors.inkSoftDark
+        : AppColors.inkSoftLight;
+
     return Scaffold(
-      backgroundColor: AppColors.paper,
+      backgroundColor: paper,
       body: Center(
         child: AnimatedBuilder(
           animation: _c,
@@ -86,7 +95,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                                 : AppFonts.display,
                             fontWeight: FontWeight.w700,
                             fontSize: 40,
-                            color: AppColors.inkLight,
+                            color: ink,
                             letterSpacing: 0.5,
                           ),
                         ),
@@ -97,7 +106,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                             fontFamily:
                                 hi ? AppFonts.devanagari : AppFonts.accent,
                             fontSize: 16,
-                            color: AppColors.inkSoftLight,
+                            color: inkSoft,
                           ),
                         ),
                       ],

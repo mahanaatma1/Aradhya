@@ -98,7 +98,7 @@ class _TodayRing extends ConsumerWidget {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF3F7A5E), Color(0xFF25533F)],
+          colors: [Color(0xFF3F7A5E), Color(0xFF5E8C74)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -322,7 +322,7 @@ class _HabitsRow extends ConsumerWidget {
     final s = ref.watch(practiceSummaryProvider('habits')).valueOrNull;
     final doneToday = ref.watch(habitsProvider).length;
     final scheme = Theme.of(context).colorScheme;
-    const color = Color(0xFF5A2EA8);
+    const color = Color(0xFF6C5A9C);
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
@@ -470,7 +470,7 @@ class _YearHeatmap extends StatelessWidget {
                               borderRadius: BorderRadius.circular(2),
                               color: n == 0
                                   ? scheme.outline.withValues(alpha: 0.12)
-                                  : const Color(0xFF25533F).withValues(
+                                  : const Color(0xFF5E8C74).withValues(
                                       alpha:
                                           (0.3 + 0.12 * n).clamp(0.3, 1.0)),
                             ),
@@ -553,7 +553,7 @@ class _MilestoneRail extends ConsumerWidget {
                     height: 1.2,
                     fontWeight: earned ? FontWeight.w700 : FontWeight.w500,
                     color: earned
-                        ? AppColors.inkLight
+                        ? scheme.onSurface
                         : scheme.onSurface.withValues(alpha: 0.5),
                   ),
                 ),

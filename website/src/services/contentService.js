@@ -25,6 +25,16 @@ import {
 let indexPromise = null;
 
 /**
+ * The built index, the moment it exists.
+ *
+ * Its purpose is to let the accessors below answer *synchronously* once the
+ * content is in memory. That matters in exactly one place: the build's server
+ * render, where the whole set is loaded up front, so every page can render its
+ * real content on the first pass instead of a skeleton. See services/preload.js.
+ */
+let readyIndex = null;
+
+/**
  * Kick the content chunk off early (called once on app mount) so the first
  * keystroke in the hero search has nothing to wait for.
  */
@@ -39,10 +49,42 @@ async function loadContent() {
 }
 
 function getIndex() {
+  if (readyIndex) return readyIndex;
   if (!indexPromise) {
-    indexPromise = loadContent().then(buildIndex);
+    indexPromise = loadContent().then((data) => {
+      readyIndex = buildIndex(data);
+      return readyIndex;
+    });
   }
   return indexPromise;
+}
+
+/**
+ * Run `fn` against the index — synchronously if the index is already built,
+ * otherwise once it is.
+ *
+ * Every accessor goes through this, which is why they return `T | Promise<T>`
+ * rather than always a promise. Callers are unaffected: `await` on a plain value
+ * yields the value. What it buys is a synchronous first render when the data is
+ * already there, and nothing changes for a live HTTP backend — `readyIndex`
+ * simply stays null until the first response lands, so every call is a promise.
+ */
+function withIndex(fn) {
+  const idx = readyIndex;
+  return idx ? fn(idx) : getIndex().then(fn);
+}
+
+/**
+ * `Promise.all` that stays synchronous when nothing is pending.
+ *
+ * Several pages need two or three accessors at once. Wrapping those in
+ * `Promise.all` would make the combined result a promise even when every part
+ * resolved instantly, which would cost those pages the synchronous first render
+ * that `withIndex` just bought them. Same call shape, same result, minus the
+ * unnecessary tick.
+ */
+export function allSync(values) {
+  return values.some((v) => typeof v?.then === 'function') ? Promise.all(values) : values;
 }
 
 /* ------------------------------------------------------------ record shaping */
@@ -331,39 +373,75 @@ function buildIndex(data) {
 
 /* ----------------------------------------------------------------- accessors */
 
+/**
+ * Preload keys — one per `useAsync` call site that opts into build-time inlining.
+ *
+ * A page passes one of these as its `preloadKey`; the build records what that
+ * call resolved to and writes it into the page's HTML under the same string, and
+ * the browser reads it back before React mounts. They are named after call sites
+ * rather than accessors because that is what they identify: several pages bundle
+ * two or three accessors into one call, and three separate places ask for
+ * `stats` with the identical loader and should share one entry.
+ *
+ * Kept here, beside the accessors, so a key and the call it names cannot drift.
+ */
+export const contentKeys = {
+  // Content detail — the 242 pages this matters most for.
+  record: (slug) => `record:${slug}`,
+  related: (slug, limit) => `related:${slug}:${limit}`,
+
+  // Listing and section pages.
+  explore: (facet, sort) => `explore:${facet}:${sort}`,
+  epicPage: (epic) => `epicPage:${epic}`,
+  storiesPage: 'storiesPage',
+  scripturesPage: 'scripturesPage',
+  templesPage: 'templesPage',
+  journeysPage: 'journeysPage',
+  aboutPage: 'aboutPage',
+
+  // Home. `stats` and `graph` are each asked for by more than one component.
+  stats: 'stats',
+  graph: 'graph',
+  homeEpics: 'homeEpics',
+  homeTemples: 'homeTemples',
+  homeJourneys: 'homeJourneys',
+  homeScriptures: 'homeScriptures',
+  homePlay: 'homePlay',
+};
+
 /** Full record for a `/explore/:slug` page, or null when the slug is unknown. */
-export async function getRecord(slug) {
-  const idx = await getIndex();
-  return idx.detailBySlug.get(slug) ?? null;
+export function getRecord(slug) {
+  return withIndex((idx) => idx.detailBySlug.get(slug) ?? null);
 }
 
 /**
  * Browse listing.
  * @param {{facet?: string, tag?: string, kinds?: string[], limit?: number, sort?: 'importance'|'title'}} opts
  */
-export async function listRecords(opts = {}) {
+export function listRecords(opts = {}) {
   const { facet, tag, kinds, limit, sort = 'importance' } = opts;
-  const idx = await getIndex();
+  return withIndex((idx) => {
+    let rows = idx.all;
+    if (kinds?.length) rows = rows.filter((r) => kinds.includes(r.kind));
+    if (facet && facet !== 'all') rows = rows.filter((r) => r.facet === facet);
+    if (tag) rows = rows.filter((r) => r.tags?.includes(tag));
 
-  let rows = idx.all;
-  if (kinds?.length) rows = rows.filter((r) => kinds.includes(r.kind));
-  if (facet && facet !== 'all') rows = rows.filter((r) => r.facet === facet);
-  if (tag) rows = rows.filter((r) => r.tags?.includes(tag));
-
-  rows = [...rows].sort(
-    sort === 'title'
-      ? (a, b) => a.title.localeCompare(b.title)
-      : (a, b) => a.importance - b.importance || a.title.localeCompare(b.title),
-  );
-  return limit ? rows.slice(0, limit) : rows;
+    rows = [...rows].sort(
+      sort === 'title'
+        ? (a, b) => a.title.localeCompare(b.title)
+        : (a, b) => a.importance - b.importance || a.title.localeCompare(b.title),
+    );
+    return limit ? rows.slice(0, limit) : rows;
+  });
 }
 
 /** How many records sit behind each facet — drives the counts on the tabs. */
-export async function getFacetCounts() {
-  const idx = await getIndex();
-  const counts = { all: idx.all.length };
-  for (const r of idx.all) counts[r.facet] = (counts[r.facet] ?? 0) + 1;
-  return counts;
+export function getFacetCounts() {
+  return withIndex((idx) => {
+    const counts = { all: idx.all.length };
+    for (const r of idx.all) counts[r.facet] = (counts[r.facet] ?? 0) + 1;
+    return counts;
+  });
 }
 
 /**
@@ -371,71 +449,104 @@ export async function getFacetCounts() {
  * label), then narrative appearances, festivals, and finally shared-tag
  * neighbours to fill the row.
  */
-export async function getRelated(slug, limit = 8) {
-  const idx = await getIndex();
-  const seen = new Set([slug]);
-  const out = [];
+export function getRelated(slug, limit = 8) {
+  return withIndex((idx) => {
+    const seen = new Set([slug]);
+    const out = [];
 
-  const push = (record, relation) => {
-    if (!record || seen.has(record.slug) || out.length >= limit) return;
-    seen.add(record.slug);
-    out.push(relation ? { ...record, relation } : record);
-  };
+    const push = (record, relation) => {
+      if (!record || seen.has(record.slug) || out.length >= limit) return;
+      seen.add(record.slug);
+      out.push(relation ? { ...record, relation } : record);
+    };
 
-  for (const edge of idx.adjacency.get(slug) ?? []) {
-    push(idx.entityBySlug.get(edge.slug), {
-      type: edge.type,
-      inverse: edge.inverse,
-    });
-  }
-  for (const scene of idx.appearances.get(slug) ?? []) {
-    push(scene, { type: 'appears_in', inverse: true });
-  }
-  for (const festival of idx.festivalsByDeity.get(slug) ?? []) {
-    push(festival, { type: 'kept_for', inverse: true });
-  }
+    for (const edge of idx.adjacency.get(slug) ?? []) {
+      push(idx.entityBySlug.get(edge.slug), {
+        type: edge.type,
+        inverse: edge.inverse,
+      });
+    }
+    for (const scene of idx.appearances.get(slug) ?? []) {
+      push(scene, { type: 'appears_in', inverse: true });
+    }
+    for (const festival of idx.festivalsByDeity.get(slug) ?? []) {
+      push(festival, { type: 'kept_for', inverse: true });
+    }
 
-  if (out.length < limit) {
-    const self = idx.detailBySlug.get(slug);
-    for (const tag of self?.tags ?? []) {
-      for (const neighbour of idx.byTag.get(tag) ?? []) {
-        push(neighbour, null);
+    if (out.length < limit) {
+      const self = idx.detailBySlug.get(slug);
+      for (const tag of self?.tags ?? []) {
+        for (const neighbour of idx.byTag.get(tag) ?? []) {
+          push(neighbour, null);
+        }
       }
     }
-  }
-  return out.slice(0, limit);
+    return out.slice(0, limit);
+  });
 }
 
-/** Scenes for an epic, already in reading order, grouped by book then arc. */
-export async function getEpic(epic) {
-  const idx = await getIndex();
+/**
+ * An epic at a glance: its label, what it contains, and its principal cast.
+ *
+ * Split from `getEpic` because the pages that show an epic *card* — the home
+ * showcase and /stories — need three integers and a handful of faces, while the
+ * full structure below is 50 kB of nested scenes per epic. Returning the tree to
+ * render `books.length` meant those two pages carried ~124 kB of prerendered
+ * data they never read.
+ */
+export function getEpicSummary(epic) {
+  return withIndex((idx) => {
+    const { scenes, arcs, ...summary } = summarise(idx, epic);
+    return summary;
+  });
+}
+
+/**
+ * The shared half of both accessors.
+ *
+ * Returns `scenes` and `arcs` alongside the summary because `getEpic` needs them
+ * to build its tree — both callers drop them, which is the whole point: those two
+ * arrays are the 50 kB per epic that the summary exists to avoid.
+ */
+function summarise(idx, epic) {
   const scenes = idx.scenes.filter((s) => s.epic === epic);
   const arcs = idx.arcs.filter((a) => a.epic === epic);
-
-  const books = [];
-  for (const arc of arcs) {
-    let book = books.find((b) => b.no === arc.bookNo);
-    if (!book) {
-      book = { no: arc.bookNo, label: arc.book, arcs: [] };
-      books.push(book);
-    }
-    book.arcs.push({
-      ...arc,
-      scenes: scenes
-        .filter((s) => s.arcSlug === arc.slug)
-        .sort((a, b) => (a.seq ?? 0) - (b.seq ?? 0)),
-    });
-  }
 
   return {
     epic,
     label: EPIC_LABELS[epic] ?? epic,
-    books,
+    bookCount: new Set(arcs.map((a) => a.bookNo)).size,
     sceneCount: scenes.length,
     arcCount: arcs.length,
     /** Principal cast, most-referenced first — the faces of the epic. */
     cast: castOf(idx, scenes, 12),
+    scenes,
+    arcs,
   };
+}
+
+/** Scenes for an epic, already in reading order, grouped by book then arc. */
+export function getEpic(epic) {
+  return withIndex((idx) => {
+    const { scenes, arcs, ...summary } = summarise(idx, epic);
+
+    const books = [];
+    for (const arc of arcs) {
+      let book = books.find((b) => b.no === arc.bookNo);
+      if (!book) {
+        book = { no: arc.bookNo, label: arc.book, arcs: [] };
+        books.push(book);
+      }
+      book.arcs.push({
+        ...arc,
+        scenes: scenes
+          .filter((s) => s.arcSlug === arc.slug)
+          .sort((a, b) => (a.seq ?? 0) - (b.seq ?? 0)),
+      });
+    }
+
+    return { ...summary, books };
+  });
 }
 
 function castOf(idx, scenes, limit) {
@@ -453,24 +564,20 @@ function castOf(idx, scenes, limit) {
     .slice(0, limit);
 }
 
-export async function getJourneys(limit) {
-  const idx = await getIndex();
-  return limit ? idx.journeys.slice(0, limit) : idx.journeys;
+export function getJourneys(limit) {
+  return withIndex((idx) => (limit ? idx.journeys.slice(0, limit) : idx.journeys));
 }
 
-export async function getFestivals(limit) {
-  const idx = await getIndex();
-  return limit ? idx.festivals.slice(0, limit) : idx.festivals;
+export function getFestivals(limit) {
+  return withIndex((idx) => (limit ? idx.festivals.slice(0, limit) : idx.festivals));
 }
 
-export async function getCollections() {
-  const idx = await getIndex();
-  return idx.collections;
+export function getCollections() {
+  return withIndex((idx) => idx.collections);
 }
 
-export async function getPractices() {
-  const idx = await getIndex();
-  return idx.practices;
+export function getPractices() {
+  return withIndex((idx) => idx.practices);
 }
 
 /**
@@ -480,34 +587,33 @@ export async function getPractices() {
  * this function is the seam to widen, and TempleCard already renders a
  * `location` field when one is present.
  */
-export async function getTemples(limit) {
-  const idx = await getIndex();
-  const rows = idx.entities
-    .filter((e) => e.facet === 'temples')
-    .sort((a, b) => a.importance - b.importance || a.title.localeCompare(b.title));
-  return limit ? rows.slice(0, limit) : rows;
+export function getTemples(limit) {
+  return withIndex((idx) => {
+    const rows = idx.entities
+      .filter((e) => e.facet === 'temples')
+      .sort((a, b) => a.importance - b.importance || a.title.localeCompare(b.title));
+    return limit ? rows.slice(0, limit) : rows;
+  });
 }
 
 /** Sacred geography that is not a tirtha — rivers and mountains. */
-export async function getSacredGeography(limit) {
-  const idx = await getIndex();
-  const rows = idx.entities.filter((e) => e.facet === 'places');
-  return limit ? rows.slice(0, limit) : rows;
+export function getSacredGeography(limit) {
+  return withIndex((idx) => {
+    const rows = idx.entities.filter((e) => e.facet === 'places');
+    return limit ? rows.slice(0, limit) : rows;
+  });
 }
 
-export async function getQuiz(limit = 1) {
-  const idx = await getIndex();
-  return idx.quiz.slice(0, limit);
+export function getQuiz(limit = 1) {
+  return withIndex((idx) => idx.quiz.slice(0, limit));
 }
 
-export async function getTrivia(limit = 3) {
-  const idx = await getIndex();
-  return idx.trivia.slice(0, limit);
+export function getTrivia(limit = 3) {
+  return withIndex((idx) => idx.trivia.slice(0, limit));
 }
 
-export async function getRiddles(limit = 1) {
-  const idx = await getIndex();
-  return idx.riddles.slice(0, limit);
+export function getRiddles(limit = 1) {
+  return withIndex((idx) => idx.riddles.slice(0, limit));
 }
 
 /**
@@ -530,47 +636,47 @@ const GRAPH_CLUSTERS = [
   },
 ];
 
-export async function getGraphClusters() {
-  const idx = await getIndex();
-  return GRAPH_CLUSTERS.map((cluster) => {
-    const centre = idx.detailBySlug.get(cluster.centre);
-    const nodes = cluster.nodes
-      .map((slug) => idx.detailBySlug.get(slug))
-      .filter(Boolean)
-      .map((record) => ({
-        ...record,
-        edge: (idx.adjacency.get(cluster.centre) ?? []).find((e) => e.slug === record.slug)?.type,
-      }));
-    return { ...cluster, centre, nodes };
-  }).filter((c) => c.centre && c.nodes.length >= 3);
+export function getGraphClusters() {
+  return withIndex((idx) =>
+    GRAPH_CLUSTERS.map((cluster) => {
+      const centre = idx.detailBySlug.get(cluster.centre);
+      const nodes = cluster.nodes
+        .map((slug) => idx.detailBySlug.get(slug))
+        .filter(Boolean)
+        .map((record) => ({
+          ...record,
+          edge: (idx.adjacency.get(cluster.centre) ?? []).find((e) => e.slug === record.slug)?.type,
+        }));
+      return { ...cluster, centre, nodes };
+    }).filter((c) => c.centre && c.nodes.length >= 3),
+  );
 }
 
 /** Counts used as trust signals ("174 entities, every row cited"). */
-export async function getStats() {
-  const idx = await getIndex();
-  const cited = idx.entities.filter((e) => e.source).length;
-  return {
+export function getStats() {
+  return withIndex((idx) => ({
     entities: idx.entities.length,
     scenes: idx.scenes.length,
     arcs: idx.arcs.length,
     festivals: idx.festivals.length,
     journeys: idx.journeys.length,
     relations: idx.raw.relations.length,
-    cited,
-  };
+    cited: idx.entities.filter((e) => e.source).length,
+  }));
 }
 
 /** Distinct primary sources behind the set — shown on /about. */
-export async function getSources() {
-  const idx = await getIndex();
-  const tally = new Map();
-  for (const r of [...idx.entities, ...idx.scenes]) {
-    if (!r.source?.label) continue;
-    tally.set(r.source.label, (tally.get(r.source.label) ?? 0) + 1);
-  }
-  return [...tally.entries()]
-    .sort((a, b) => b[1] - a[1])
-    .map(([label, count]) => ({ label, count }));
+export function getSources() {
+  return withIndex((idx) => {
+    const tally = new Map();
+    for (const r of [...idx.entities, ...idx.scenes]) {
+      if (!r.source?.label) continue;
+      tally.set(r.source.label, (tally.get(r.source.label) ?? 0) + 1);
+    }
+    return [...tally.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([label, count]) => ({ label, count }));
+  });
 }
 
 /** Internal: searchService needs the built index. Not part of the public API. */

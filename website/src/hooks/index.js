@@ -1,4 +1,13 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+
+/**
+ * `useLayoutEffect` in the browser, `useEffect` on the server.
+ *
+ * The build renders these components in Node, where a layout effect never runs
+ * and React warns about it. Swapping the import there keeps the console clean
+ * without giving up the pre-paint timing that matters in the browser.
+ */
+const useIsomorphicLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect;
 
 /** Debounce a fast-changing value (search input) before it triggers work. */
 export function useDebounced(value, delay = 180) {
@@ -10,12 +19,25 @@ export function useDebounced(value, delay = 180) {
   return debounced;
 }
 
-/** Reactive media query. */
+/**
+ * Reactive media query.
+ *
+ * The first render always reports `false`, never the live value, even though
+ * `matchMedia` is available in the browser at that point. That is deliberate:
+ * prerendered pages hydrate, and Node has no viewport, so reading the real value
+ * on render one would make the client's first output disagree with the HTML the
+ * build wrote — React would then discard the server markup for that subtree.
+ * Reporting `false` on both sides keeps them identical.
+ *
+ * The correction runs in a layout effect, so it lands before the browser paints
+ * and the swap is not visible. Components that branch on this therefore render
+ * their narrow layout once, invisibly, before settling — which is also the
+ * layout a crawler reading the static HTML gets, and for a graph or a rail that
+ * is the more readable of the two.
+ */
 export function useMediaQuery(query) {
-  const [matches, setMatches] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia(query).matches,
-  );
-  useEffect(() => {
+  const [matches, setMatches] = useState(false);
+  useIsomorphicLayoutEffect(() => {
     const mq = window.matchMedia(query);
     const onChange = (e) => setMatches(e.matches);
     setMatches(mq.matches);
@@ -25,8 +47,8 @@ export function useMediaQuery(query) {
   return matches;
 }
 
-export const usePrefersReducedMotion = () =>
-  useMediaQuery('(prefers-reduced-motion: reduce)');
+export const usePrefersReducedMotion = () => useMediaQuery('(prefers-reduced-motion: reduce)');
+
 
 /** True once the page has scrolled past `threshold` — drives the nav treatment. */
 export function useScrolled(threshold = 12) {
@@ -114,25 +136,37 @@ export function useDismiss(active, onDismiss) {
 /** Light/dark, persisted. Mirrors the app, which follows the system by default. */
 const THEME_KEY = 'aradhya-theme';
 
+/**
+ * The theme switch.
+ *
+ * Note what this deliberately does *not* return: the current theme. There is no
+ * React state here at all, because `html[data-theme]` is already the single
+ * source of truth — the inline script in index.html sets it before first paint
+ * and every themed style reads it. Mirroring it into state bought nothing and
+ * cost correctness twice over: the initialiser touched `document`, which the
+ * build's server render cannot do, and any component that rendered off the
+ * mirror would emit light-theme markup on the server and dark-theme markup on
+ * the client, breaking hydration on a prerendered page.
+ *
+ * So a control that needs to look different per theme does it in CSS, keyed on
+ * that attribute (see `.theme-light-only` / `.theme-dark-only` in index.css).
+ * That renders correctly before React mounts, rather than one frame after it.
+ */
 export function useTheme() {
-  const [theme, setTheme] = useState(
-    () => document.documentElement.dataset.theme || 'light',
-  );
-
-  const apply = useCallback((next) => {
+  const setTheme = useCallback((next) => {
     document.documentElement.dataset.theme = next;
     try {
       localStorage.setItem(THEME_KEY, next);
     } catch {
-      /* private mode — the in-memory value still works for this session */
+      /* private mode — the attribute still holds for this session */
     }
-    setTheme(next);
   }, []);
 
-  const toggle = useCallback(
-    () => apply(theme === 'dark' ? 'light' : 'dark'),
-    [apply, theme],
-  );
+  // Read at click time rather than from a render-time snapshot, so this stays
+  // right even if something else changed the attribute.
+  const toggle = useCallback(() => {
+    setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+  }, [setTheme]);
 
-  return { theme, setTheme: apply, toggle, isDark: theme === 'dark' };
+  return { setTheme, toggle };
 }

@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Download, Menu, Moon, Search, Sun, X } from 'lucide-react';
+import { Download, Menu, Search, X } from 'lucide-react';
 import Wordmark from '../art/Wordmark.jsx';
+import ThemeToggle from './ThemeToggle.jsx';
 import Button from '../ui/Button.jsx';
 import SearchBox from '../search/SearchBox.jsx';
 import { primaryNav, routes } from '../../config/routes.js';
 import { appConfig } from '../../config/appConfig.js';
-import { useLockBodyScroll, useScrolled, useTheme } from '../../hooks/index.js';
+import { useLockBodyScroll, useScrolled } from '../../hooks/index.js';
 
 /**
  * Sticky header.
@@ -18,7 +19,6 @@ import { useLockBodyScroll, useScrolled, useTheme } from '../../hooks/index.js';
 export default function Navbar() {
   const scrolled = useScrolled(10);
   const location = useLocation();
-  const { isDark, toggle } = useTheme();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -126,15 +126,10 @@ export default function Navbar() {
                 </button>
               )}
 
-              <button
-                type="button"
-                onClick={toggle}
-                aria-label={isDark ? 'Switch to light reading' : 'Switch to dark reading'}
+              <ThemeToggle
                 className="hidden h-10 w-10 items-center justify-center rounded-full text-ink-soft
                            transition-colors duration-200 hover:bg-ink/[0.05] hover:text-ink sm:flex"
-              >
-                {isDark ? <Sun size={17} strokeWidth={1.9} /> : <Moon size={17} strokeWidth={1.9} />}
-              </button>
+              />
 
               <Button href="#get-the-app" size="sm" icon={Download} className="hidden sm:inline-flex">
                 Get the App
@@ -206,15 +201,11 @@ export default function Navbar() {
               <Button href="#get-the-app" size="md" icon={Download} className="flex-1">
                 Get the App
               </Button>
-              <button
-                type="button"
-                onClick={toggle}
-                aria-label={isDark ? 'Switch to light reading' : 'Switch to dark reading'}
+              <ThemeToggle
+                size={18}
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full
                            border border-ink/15 text-ink-soft transition-colors hover:text-ink"
-              >
-                {isDark ? <Sun size={18} strokeWidth={1.9} /> : <Moon size={18} strokeWidth={1.9} />}
-              </button>
+              />
             </div>
           </div>
         </nav>

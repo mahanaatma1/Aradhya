@@ -11,7 +11,7 @@ import 'passport_stamp.dart';
 
 const _cover = Color(0xFF5C2E1E);
 const _coverDeep = Color(0xFF3A1B10);
-const _emboss = Color(0xFFD9A441);
+const _emboss = Color(0xFFC97A3E); // brass foil, was gold-leaf
 
 /// The passport cover, embossed the way a real one is.
 ///
@@ -522,7 +522,7 @@ class PassportShareCard extends StatelessWidget {
       padding: const EdgeInsets.all(18),
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [Color(0xFFFDF8F5), Color(0xFFF0E2D2)],
+          colors: [Color(0xFFF7F5F2), Color(0xFFF0E2D2)],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
         ),
@@ -595,7 +595,7 @@ class PassportShareCard extends StatelessWidget {
                         fontFamily: AppFonts.display,
                         fontSize: 17,
                         fontWeight: FontWeight.w700,
-                        color: Color(0xFFC08A2E),
+                        color: Color(0xFFC97A3E),
                       ),
                     ),
                   ],

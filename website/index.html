@@ -4,35 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <title>Aradhya — Explore India's Spiritual Wisdom</title>
+    <!-- The home page's tags, kept identical to PAGE_META['/'] in
+         src/config/seo.js so the shell, the prerender and the runtime hook all
+         say the same thing. -->
+    <title>Aradhya — Explore. Understand. Practice.</title>
     <meta
       name="description"
-      content="Scriptures, stories, temples, traditions and daily practices — thoughtfully brought together in one offline spiritual companion."
+      content="Search India’s spiritual heritage — scriptures, the Ramayana and Mahabharata, deities, sacred places, festivals and daily practice. Every entry keeps its source. Free, offline app for Android and iOS."
     />
     <link rel="canonical" href="https://aradhya.app/" />
     <meta name="theme-color" content="#FDF8F5" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1A110C" media="(prefers-color-scheme: dark)" />
     <meta name="color-scheme" content="light dark" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph. These are the shell's defaults; scripts/prerender.mjs
+         replaces them per URL at build time and hooks/useSeo.js replaces them
+         per route at runtime. Both read src/config/seo.js — edit the copy
+         there, not here. -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Aradhya" />
-    <meta property="og:title" content="Aradhya — Explore India's Spiritual Wisdom" />
+    <meta property="og:title" content="Aradhya — Explore. Understand. Practice." />
     <meta
       property="og:description"
-      content="Scriptures, stories, temples, traditions and daily practices — thoughtfully brought together in one offline spiritual companion."
+      content="Search India’s spiritual heritage — scriptures, the Ramayana and Mahabharata, deities, sacred places, festivals and daily practice. Every entry keeps its source. Free, offline app for Android and iOS."
     />
     <meta property="og:url" content="https://aradhya.app/" />
     <meta property="og:image" content="https://aradhya.app/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Aradhya — Explore India's Spiritual Wisdom" />
+    <meta property="og:image:alt" content="Aradhya — Explore India’s Spiritual Wisdom" />
     <meta property="og:locale" content="en_IN" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aradhya — Explore India's Spiritual Wisdom" />
+    <meta name="twitter:title" content="Aradhya — Explore. Understand. Practice." />
     <meta
       name="twitter:description"
-      content="Scriptures, stories, temples, traditions and daily practices — in one offline spiritual companion."
+      content="Search India’s spiritual heritage — scriptures, the Ramayana and Mahabharata, deities, sacred places, festivals and daily practice. Every entry keeps its source. Free, offline app for Android and iOS."
     />
     <meta name="twitter:image" content="https://aradhya.app/og-image.png" />
 
@@ -49,17 +55,19 @@
       href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500&display=swap"
     />
 
-    <script type="application/ld+json">
+    <!-- Carries the id useSeo replaces, so the home page ends up with one
+         structured-data block rather than this one plus the app's. -->
+    <script type="application/ld+json" id="aradhya-jsonld">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Aradhya",
         "alternateName": "आराध्य",
-        "url": "https://aradhya.app/",
+        "url": "https://aradhya.app",
         "description": "An offline-first Indian spiritual knowledge and practice app — scriptures, epics, temples, festivals and daily sadhana.",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": "https://aradhya.app/search?q={search_term_string}" },
+          "target": "https://aradhya.app/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
@@ -75,16 +83,35 @@
         } catch (e) {
           document.documentElement.dataset.theme = 'light';
         }
+        // Arms the scroll-reveal animation (see `.js .reveal` in src/index.css).
+        // It has to happen here rather than in main.jsx: prerendered pages ship
+        // their body text in the HTML, so adding the class after the bundle
+        // loads would hide content that had already painted. Gating on this
+        // class instead of applying the animation unconditionally is what keeps
+        // that text visible to a reader with scripting off.
+        document.documentElement.classList.add('js');
       })();
     </script>
   </head>
   <body>
     <div id="root"></div>
     <noscript>
-      Aradhya is an offline-first Indian spiritual knowledge app covering scriptures, the Ramayana and
-      Mahabharata, deities, temples, festivals and daily practice. Please enable JavaScript to browse,
-      or find Aradhya on the Google Play Store and the App Store.
+      <!-- Accurate for the built site, not for `npm run dev`: scripts/prerender.mjs
+           writes each page's body into its own HTML file, and every link is a real
+           anchor to another such file, so reading and browsing work without
+           JavaScript. Search is the part that does not — it runs in the browser
+           against the downloaded index. -->
+      You can read and browse Aradhya without JavaScript. Search needs it — enable JavaScript, or
+      use the app for the full offline library.
     </noscript>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- onerror drops the reveal gate if this bundle never arrives, so a
+         prerendered page stays readable instead of holding its text at
+         opacity 0 forever. It covers a failed fetch, not a runtime throw
+         inside the module. -->
+    <script
+      type="module"
+      src="/src/main.jsx"
+      onerror="document.documentElement.classList.remove('js')"
+    ></script>
   </body>
 </html>

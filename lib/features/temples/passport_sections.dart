@@ -9,7 +9,7 @@ import 'passport_providers.dart';
 import 'passport_stamp.dart';
 
 const _accent = Color(0xFF8A6A4F);
-const _gold = Color(0xFFC08A2E);
+const _gold = Color(0xFFC97A3E); // brass foil, was gold-leaf
 const _ink = Color(0xFF3A2A18);
 
 /// A section heading with an optional way through to the full list.
@@ -372,7 +372,7 @@ class _Seal extends StatelessWidget {
         shape: BoxShape.circle,
         gradient: on
             ? const LinearGradient(
-                colors: [Color(0xFFF0D28A), Color(0xFFC08A2E)],
+                colors: [Color(0xFFE8B98A), Color(0xFFC97A3E)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               )

@@ -111,8 +111,8 @@ class _PanchangWidgetView extends StatelessWidget {
   const _PanchangWidgetView(
       {required this.p, required this.hi, this.festival});
 
-  static const _bg = Color(0xFFF5EEE1);
-  static const _accent = Color(0xFFBE5A24);
+  static const _bg = Color(0xFFF7F5F2);
+  static const _accent = Color(0xFFC97A3E);
   static const _ink = Color(0xFF3A2A20);
   static const _label = Color(0xFF9C8B79);
   static const _muted = Color(0xFFAD9C89);
@@ -288,7 +288,7 @@ class _VerseWidgetView extends StatelessWidget {
   final bool hi;
   const _VerseWidgetView({required this.quote, required this.hi});
 
-  static const _on = Color(0xFFFDEEDE);
+  static const _on = Color(0xFFF7EFE6);
 
   @override
   Widget build(BuildContext context) {
@@ -296,7 +296,7 @@ class _VerseWidgetView extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFFA73015), Color(0xFF6E1F10)],
+            colors: [Color(0xFFC97A3E), Color(0xFF9C5A28)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),

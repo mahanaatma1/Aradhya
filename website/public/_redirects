@@ -1,0 +1,11 @@
+# SPA fallback for Netlify and Cloudflare Pages.
+#
+# Prerendered routes (see scripts/prerender.mjs) are real files and are served
+# directly — this rule only catches what has no file: /search, a mistyped URL, a
+# slug that left the content set. 200 rather than 302 so the URL the visitor
+# typed is the URL the router sees.
+#
+# Other hosts: Vercel uses vercel.json rewrites, Firebase uses firebase.json,
+# nginx uses `try_files $uri $uri/ /index.html`, and GitHub Pages falls back to
+# the dist/404.html the prerender writes. Any one of them is enough.
+/*  /index.html  200

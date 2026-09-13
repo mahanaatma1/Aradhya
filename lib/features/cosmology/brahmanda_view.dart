@@ -116,7 +116,7 @@ class _BrahmandaPainter extends CustomPainter {
   // Warm, not spacey. The screen sits beside cream cards everywhere else in
   // the app, and an indigo starfield made cosmology look like astronomy.
   static const _shell = Color(0xFF8A6A4F);
-  static const _gold = Color(0xFFD9A441);
+  static const _gold = Color(0xFFC97A3E);
   static const _up = Color(0xFFC9873F);
   static const _down = Color(0xFF6E5A4E);
   static const _ink = Color(0xFF3A2A18);
@@ -216,7 +216,7 @@ class _BrahmandaPainter extends CustomPainter {
 
   /// Meru at the centre, which is where every account puts it.
   void _meru(Canvas canvas, Offset c, double r) {
-    canvas.drawCircle(c, r, Paint()..color = const Color(0xFFFDF8F5));
+    canvas.drawCircle(c, r, Paint()..color = const Color(0xFFF7F5F2));
     canvas.drawCircle(
         c,
         r,

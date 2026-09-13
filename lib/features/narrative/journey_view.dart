@@ -240,7 +240,9 @@ class _SceneCard extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
             color: read
-                ? AppColors.kraft.withValues(alpha: 0.5)
+                ? (scheme.brightness == Brightness.dark
+                    ? scheme.surfaceContainerHighest.withValues(alpha: 0.5)
+                    : AppColors.kraft.withValues(alpha: 0.5))
                 : scheme.surface,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
@@ -262,11 +264,12 @@ class _SceneCard extends StatelessWidget {
               const SizedBox(height: 3),
               Text(
                 scene.title(hindi),
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: AppFonts.display,
                   fontWeight: FontWeight.w700,
                   fontSize: 15.5,
                   height: 1.2,
+                  color: scheme.onSurface,
                 ),
               ),
               const SizedBox(height: 5),

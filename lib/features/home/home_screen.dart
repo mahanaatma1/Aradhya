@@ -5,13 +5,14 @@ import 'package:intl/intl.dart';
 
 import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
-import '../gyan/gyan_home_section.dart';
 import '../mandir/mandir_models.dart';
 import '../sadhana/sadhana_models.dart' show kPractices;
-import '../sadhana/sadhana_providers.dart' show practicesDoneTodayProvider;
+import '../sadhana/sadhana_providers.dart'
+    show practicesDoneTodayProvider, sadhanaByDayProvider;
 import '../../core/providers/app_providers.dart';
 import '../../core/user/reading_progress.dart';
 import '../../core/user/streak.dart';
+import '../../core/user/user_prefs.dart' show dayStamp;
 import '../../shared/currency_icons.dart';
 import '../../shared/reference_art.dart';
 import '../../shared/widgets/app_logo.dart';
@@ -101,35 +102,48 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
             ),
 
+            // ---- Room 1: Today — the time-sensitive, date-driven cards.
+            // Grouped under one label because all four answer the same
+            // question ("what's happening right now?"), where before they
+            // were five separately-titled cards indistinguishable from
+            // everything else on the page.
+            _RoomLabel(hi ? 'आज' : 'Today', dot: AppColors.deityRose),
+
             // Upcoming / today's festival (only when one is near).
-            const _FestivalBanner(),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 6),
+              child: _FestivalBanner(),
+            ),
 
             // Panchang teaser.
             const Padding(
-              padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 6),
               child: _PanchangCard(),
             ),
 
             // Daily Rashifal teaser — glance at the selected sign's day.
             const Padding(
-              padding: EdgeInsets.fromLTRB(16, 6, 16, 6),
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 6),
               child: _RashifalCard(),
             ),
 
             // Mandir — the day's shrine, before the learning tiles.
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 6),
               child: _MandirCard(hi: hi),
             ),
 
             // Sadhana — today's practice, one tap from the daily view.
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 6),
               child: _SadhanaCard(hi: hi),
             ),
 
-            // Engage & Learn — Quiz · Japa · Breathing · Riddles.
-            _SectionTitle(hi ? 'अभ्यास और ज्ञान' : 'Engage & Learn'),
+            // ---- Room 2: Explore & Learn — discretionary, mood-driven.
+            // Nothing here is time-bound, so it reads as an open invitation
+            // rather than a checklist, distinct from Today's urgency.
+            _RoomLabel(hi ? 'अभ्यास और ज्ञान' : 'Explore & Learn',
+                dot: AppColors.dharmaPurple),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
               child: GridView.count(
@@ -181,8 +195,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
             ),
 
-            // Explore Gyan — entry point to the 14 knowledge modules.
-            const GyanHomeSection(),
+            // Explore Gyan is intentionally NOT here — it already has its own
+            // bottom-nav tab (see NavScaffold), so a second full rail on Home
+            // was pure duplication, not a second way in.
 
             // Continue reading — the single most direct path back into the
             // exact verse someone left off at, rather than making them
@@ -194,47 +209,53 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               child: _ContinueReadingCard(),
             ),
 
-            // Scriptures — one per row, each opening its chapters directly.
+            // ---- Room 3: Scriptures & Wisdom — the app's actual library.
+            // Previously five unrelated cards (scriptures, mantras/aartis,
+            // puja vidhi, habits, stories) each announced by their own small
+            // heading or none at all; now one room, sub-headed per shelf.
+            _RoomLabel(hi ? 'ग्रंथ और ज्ञान' : 'Scriptures & Wisdom',
+                dot: AppColors.terracotta),
             _SectionTitle(hi ? 'ग्रंथ' : 'Scriptures'),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-              child: Column(
-                children: [
-                  _ScriptureCard(
-                    title: hi ? 'भगवद्गीता' : 'Bhagavad Gita',
-                    subtitle: hi
-                        ? 'श्रीकृष्ण द्वारा अर्जुन को दिए कालजयी उपदेश जानें'
-                        : 'Discover the timeless teachings of Krishna to Arjuna',
-                    image: scriptureImage('gita'),
-                    color: AppColors.gold,
-                    onTap: () => openScripture('bhagavad-gita'),
-                  ),
-                  const SizedBox(height: 12),
-                  _ScriptureCard(
-                    title: hi ? 'रामायण' : 'Ramayana',
-                    subtitle: hi
-                        ? 'धर्म की इस महागाथा में श्रीराम की यात्रा के साथ चलें'
-                        : 'Follow the journey of Rama in this epic tale of dharma',
-                    image: scriptureImage('ramayana'),
-                    color: AppColors.terracotta,
-                    onTap: () => openScripture('valmiki-ramayana'),
-                  ),
-                  const SizedBox(height: 12),
-                  _ScriptureCard(
-                    title: hi ? 'उपनिषद्' : 'Upanishads',
-                    subtitle: hi
-                        ? 'उपनिषदों के गूढ़ ज्ञान की गहराइयों में उतरें'
-                        : 'Dive into the profound wisdom of the Upanishads',
-                    image: scriptureImage('upanishads'),
-                    color: AppColors.sacredGreen,
-                    onTap: () => openScripture('upanishads'),
-                  ),
-                ],
-              ),
+            _ScriptureCarousel(
+              hi: hi,
+              scriptures: [
+                _ScriptureSpec(
+                  title: hi ? 'भगवद्गीता' : 'Bhagavad Gita',
+                  kicker: hi ? '18 अध्याय · 701 श्लोक' : '18 chapters · 701 verses',
+                  subtitle: hi
+                      ? 'श्रीकृष्ण द्वारा अर्जुन को दिए कालजयी उपदेश जानें'
+                      : "Krishna's timeless teachings to Arjuna",
+                  image: scriptureImage('gita'),
+                  color: AppColors.gold,
+                  onTap: () => openScripture('bhagavad-gita'),
+                ),
+                _ScriptureSpec(
+                  title: hi ? 'रामायण' : 'Ramayana',
+                  kicker: hi ? '7 काण्ड' : '7 kandas',
+                  subtitle: hi
+                      ? 'धर्म की इस महागाथा में श्रीराम की यात्रा'
+                      : "Rama's journey through this epic of dharma",
+                  image: scriptureImage('ramayana'),
+                  color: AppColors.terracotta,
+                  onTap: () => openScripture('valmiki-ramayana'),
+                ),
+                _ScriptureSpec(
+                  title: hi ? 'उपनिषद्' : 'Upanishads',
+                  kicker: hi ? 'गूढ़ ज्ञान' : 'Deep wisdom',
+                  subtitle: hi
+                      ? 'सरल भाषा में उपनिषदों का गहन ज्ञान'
+                      : 'Deep wisdom, in plain modern language',
+                  image: scriptureImage('upanishads'),
+                  color: AppColors.sacredGreen,
+                  onTap: () => openScripture('upanishads'),
+                ),
+              ],
             ),
 
-            // Spiritual Enlightenment — Mantras · Aartis.
-            _SectionTitle(hi ? 'आध्यात्मिक ज्ञान' : 'Spiritual Enlightenment'),
+            // Mantras · Aartis — a shelf inside Scriptures & Wisdom, not its
+            // own room: downgraded from a full _SectionTitle to a subtler
+            // in-room heading so the room reads as one place, not five.
+            _SubShelfLabel(hi ? 'आध्यात्मिक ज्ञान' : 'Spiritual Enlightenment'),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
               child: Row(
@@ -303,8 +324,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
             ),
 
-            // Stories — color-coded emotion tiles.
-            _SectionTitle(hi ? 'कथाएँ' : 'Stories'),
+            // Stories — color-coded emotion tiles. Another shelf, same room.
+            _SubShelfLabel(hi ? 'कथाएँ' : 'Stories'),
             Padding(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
               child: GridView.count(
@@ -348,9 +369,9 @@ const _emotions = <_Emotion>[
   _Emotion('Anger', 'क्रोध', Color(0xFFC0392B)),
   _Emotion('Joy', 'आनंद', Color(0xFFDDA000)),
   _Emotion('Peace', 'शांति', Color(0xFF2E8B8B)),
-  _Emotion('Love', 'प्रेम', Color(0xFF9C2950)),
+  _Emotion('Love', 'प्रेम', Color(0xFFD9748C)),
   _Emotion('Fear', 'भय', Color(0xFF4A4A8A)),
-  _Emotion('Faith', 'श्रद्धा', Color(0xFF25533F)),
+  _Emotion('Faith', 'श्रद्धा', Color(0xFF5E8C74)),
 ];
 
 class _Header extends ConsumerWidget {
@@ -457,6 +478,69 @@ class _SectionTitle extends StatelessWidget {
   }
 }
 
+/// A small uppercase room label — "Today" / "Explore & Learn" / "Scriptures
+/// & Wisdom" — with a colored dot naming that room's own accent. Unlike
+/// [_SectionTitle] (which announces one card, e.g. "Scriptures"), this marks
+/// the start of a *group* of otherwise unrelated cards so the long Home
+/// scroll reads as a few rooms instead of one flat list.
+class _RoomLabel extends StatelessWidget {
+  final String text;
+  final Color dot;
+  const _RoomLabel(this.text, {required this.dot});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 22, 18, 10),
+      child: Row(
+        children: [
+          Container(
+            width: 7,
+            height: 7,
+            decoration: BoxDecoration(color: dot, shape: BoxShape.circle),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            text.toUpperCase(),
+            style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 0.9,
+              color: scheme.onSurface.withValues(alpha: 0.5),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// A quiet in-room heading — "Mantras · Aartis", "Stories" — for a shelf
+/// that lives inside a room already announced by [_RoomLabel]. Smaller and
+/// left-aligned rather than [_SectionTitle]'s centered display type, so it
+/// reads as "still the same room, next shelf" instead of a new section.
+class _SubShelfLabel extends StatelessWidget {
+  final String text;
+  const _SubShelfLabel(this.text);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(18, 14, 18, 8),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontFamily: AppFonts.display,
+          fontWeight: FontWeight.w700,
+          fontSize: 16,
+          color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.85),
+        ),
+      ),
+    );
+  }
+}
+
 /// A big color-coded tile for the Engage & Learn grid.
 class _EngageTile extends StatelessWidget {
   final String? image; // badge art in the corner
@@ -548,106 +632,170 @@ class _EngageTile extends StatelessWidget {
 /// A scripture row card: the illustration sits on the left, framed by the
 /// signature dashed "stitched" border on its outer edge, with the title and a
 /// one-line description on the right.
-class _ScriptureCard extends StatelessWidget {
+/// One scripture's carousel-card content — a plain data holder so
+/// [_ScriptureCarousel] can lay all three out identically.
+class _ScriptureSpec {
   final String title;
+  final String kicker;
   final String subtitle;
   final String? image;
   final Color color;
   final VoidCallback onTap;
-  const _ScriptureCard(
-      {required this.title,
-      required this.subtitle,
-      this.image,
-      required this.color,
-      required this.onTap});
+  const _ScriptureSpec({
+    required this.title,
+    required this.kicker,
+    required this.subtitle,
+    this.image,
+    required this.color,
+    required this.onTap,
+  });
+}
+
+/// The app's three headline scriptures as a swipeable, full-bleed carousel
+/// with a dot pager — replaces three stacked list rows, which buried Ramayana
+/// and Upanishads below the fold and gave none of the three room to feel like
+/// the centrepiece texts they are.
+class _ScriptureCarousel extends StatefulWidget {
+  final bool hi;
+  final List<_ScriptureSpec> scriptures;
+  const _ScriptureCarousel({required this.hi, required this.scriptures});
+
+  @override
+  State<_ScriptureCarousel> createState() => _ScriptureCarouselState();
+}
+
+class _ScriptureCarouselState extends State<_ScriptureCarousel> {
+  late final PageController _controller =
+      PageController(viewportFraction: 0.82);
+  double _page = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(() {
+      setState(() => _page = _controller.page ?? 0);
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    return Column(
+      children: [
+        SizedBox(
+          height: 190,
+          child: PageView.builder(
+            controller: _controller,
+            padEnds: false,
+            itemCount: widget.scriptures.length,
+            itemBuilder: (context, i) {
+              final s = widget.scriptures[i];
+              return Padding(
+                padding: EdgeInsets.only(
+                  left: i == 0 ? 16 : 8,
+                  right: i == widget.scriptures.length - 1 ? 16 : 8,
+                ),
+                child: _ScriptureSlide(spec: s),
+              );
+            },
+          ),
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(widget.scriptures.length, (i) {
+            final active = (_page.round() == i);
+            return AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              margin: const EdgeInsets.symmetric(horizontal: 3),
+              width: active ? 18 : 6,
+              height: 6,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(3),
+                color: active
+                    ? widget.scriptures[i].color
+                    : widget.scriptures[i].color.withValues(alpha: 0.28),
+              ),
+            );
+          }),
+        ),
+      ],
+    );
+  }
+}
+
+class _ScriptureSlide extends StatelessWidget {
+  final _ScriptureSpec spec;
+  const _ScriptureSlide({required this.spec});
+
+  @override
+  Widget build(BuildContext context) {
     return Material(
       color: Colors.transparent,
+      borderRadius: BorderRadius.circular(22),
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
-        borderRadius: BorderRadius.circular(18),
-        onTap: onTap,
-        child: Container(
-          padding: const EdgeInsets.all(12),
+        onTap: spec.onTap,
+        child: Ink(
           decoration: BoxDecoration(
-            // Light, per-scripture tint (each card a different soft colour).
-            color: Color.alphaBlend(
-                color.withValues(alpha: 0.13), scheme.surface),
-            borderRadius: BorderRadius.circular(18),
-            border: Border.all(color: color.withValues(alpha: 0.30)),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.05),
-                blurRadius: 10,
-                offset: const Offset(0, 3),
-              ),
-            ],
+            color: spec.color,
+            image: spec.image == null
+                ? null
+                : DecorationImage(
+                    image: AssetImage(spec.image!),
+                    fit: BoxFit.cover,
+                    onError: (_, _) {},
+                  ),
           ),
-          child: Row(
-            children: [
-              // Illustration on the left. The stitched border is drawn on the
-              // outer edge (inset ~2) while the image is padded inwards, so the
-              // stitch frames the picture instead of sitting over it. Its colour
-              // matches the "Scriptures" heading (theme primary).
-              SizedBox(
-                width: 88,
-                height: 88,
-                child: CustomPaint(
-                  foregroundPainter: StitchedBorderPainter(
-                    color: scheme.primary,
-                    inset: 2,
-                    radius: 14,
-                    strokeWidth: 1.4,
-                    dash: 4.5,
-                    gap: 3.5,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(9),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: image != null
-                          ? Image.asset(image!,
-                              fit: BoxFit.cover,
-                              errorBuilder: (_, _, _) =>
-                                  ColoredBox(color: color))
-                          : ColoredBox(color: color),
-                    ),
-                  ),
-                ),
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withValues(alpha: 0),
+                  Colors.black.withValues(alpha: 0.15),
+                  Colors.black.withValues(alpha: 0.82),
+                ],
+                stops: const [0.0, 0.45, 1.0],
               ),
-              const SizedBox(width: 14),
-              // Title + one-line description on the right.
-              Expanded(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: const TextStyle(
+            ),
+            padding: const EdgeInsets.all(16),
+            alignment: Alignment.bottomLeft,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(spec.kicker.toUpperCase(),
+                    style: TextStyle(
+                        fontSize: 10,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white.withValues(alpha: 0.85))),
+                const SizedBox(height: 4),
+                Text(spec.title,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
                         fontFamily: AppFonts.display,
                         fontWeight: FontWeight.w700,
-                        fontSize: 19,
-                        height: 1.2,
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      subtitle,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 12.5,
+                        fontSize: 21,
+                        color: Colors.white)),
+                const SizedBox(height: 4),
+                Text(spec.subtitle,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        fontSize: 12,
                         height: 1.3,
-                        color: scheme.onSurface.withValues(alpha: 0.6),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+                        color: Colors.white.withValues(alpha: 0.85))),
+              ],
+            ),
           ),
         ),
       ),
@@ -809,70 +957,140 @@ class _WideCard extends StatelessWidget {
 }
 
 /// The featured "Discover Your Soul Path" personality-test card.
+/// An invitation to the personality quiz, not a settings-style row — the
+/// gradient, the large serif title and the pill CTA are meant to read like
+/// the opener screen of the quiz itself, so tapping in feels like starting
+/// something rather than merely navigating.
 class _SoulPathCard extends StatelessWidget {
   final bool hi;
   final VoidCallback onTap;
   const _SoulPathCard({required this.hi, required this.onTap});
+
+  static const _questionCount = 8;
 
   @override
   Widget build(BuildContext context) {
     return Material(
       color: Colors.transparent,
       child: InkWell(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(22),
         onTap: onTap,
         child: Ink(
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              colors: [Color(0xFF5A2EA8), Color(0xFF3B2A63)],
+              colors: [AppColors.dharmaPurple, Color(0xFF3B2A63)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(22),
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(18),
-            child: Row(
-              children: [
-                Container(
-                  width: 52,
-                  height: 52,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.18),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: const Icon(Icons.psychology_rounded,
-                      color: Colors.white, size: 28),
+          child: Stack(
+            children: [
+              // A faint oversized glyph bleeding off the corner — the same
+              // "quiet ornament" trick the app already uses on hero cards,
+              // so this reads as a considered surface, not a flat banner.
+              Positioned(
+                right: -8,
+                bottom: -14,
+                child: Opacity(
+                  opacity: 0.12,
+                  child: Text('☾',
+                      style: TextStyle(
+                          fontSize: 92,
+                          fontFamily: AppFonts.display,
+                          color: Colors.white)),
                 ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                          hi
-                              ? 'अपना आध्यात्मिक मार्ग जानें'
-                              : 'Discover Your Soul Path',
-                          style: const TextStyle(
-                              fontFamily: AppFonts.display,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 18,
-                              color: Colors.white)),
-                      const SizedBox(height: 2),
-                      Text(
-                          hi
-                              ? 'व्यक्तित्व परीक्षण · 8 प्रश्न'
-                              : 'Personality test · 8 questions',
-                          style: TextStyle(
-                              fontSize: 12.5,
-                              color: Colors.white.withValues(alpha: 0.85))),
-                    ],
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                        (hi
+                                ? 'व्यक्तित्व · 2 मिनट'
+                                : 'Personality · 2 min')
+                            .toUpperCase(),
+                        style: TextStyle(
+                            fontSize: 10.5,
+                            letterSpacing: 1.1,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white.withValues(alpha: 0.72))),
+                    const SizedBox(height: 6),
+                    Text(
+                        hi
+                            ? 'अपना आध्यात्मिक\nमार्ग जानें'
+                            : 'Discover Your\nSoul Path',
+                        style: const TextStyle(
+                            fontFamily: AppFonts.display,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 22,
+                            height: 1.15,
+                            color: Colors.white)),
+                    const SizedBox(height: 6),
+                    Text(
+                        hi
+                            ? 'त्रिगुण पर आधारित 8 प्रश्न'
+                            : '8 questions, rooted in the three gunas',
+                        style: TextStyle(
+                            fontSize: 12.5,
+                            color: Colors.white.withValues(alpha: 0.78))),
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        Row(
+                          children: List.generate(
+                            _questionCount,
+                            (i) => Padding(
+                              padding: const EdgeInsets.only(right: 4),
+                              child: Container(
+                                width: 6,
+                                height: 6,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color:
+                                      Colors.white.withValues(alpha: 0.3),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                            hi
+                                ? '$_questionCount प्रश्न'
+                                : '$_questionCount questions',
+                            style: TextStyle(
+                                fontSize: 11,
+                                color: Colors.white.withValues(alpha: 0.6))),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 18, vertical: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.16),
+                        borderRadius: BorderRadius.circular(999),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(hi ? 'शुरू करें' : 'Begin',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 13.5,
+                                  color: Colors.white)),
+                          const SizedBox(width: 6),
+                          const Icon(Icons.arrow_forward_rounded,
+                              size: 16, color: Colors.white),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
-                const Icon(Icons.chevron_right_rounded, color: Colors.white),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
@@ -891,6 +1109,11 @@ class _DidYouKnowCard extends ConsumerStatefulWidget {
 class _DidYouKnowCardState extends ConsumerState<_DidYouKnowCard> {
   int _i = 0;
 
+  /// How many progress dots to draw. Capped rather than one-per-fact: with
+  /// hundreds of trivia rows, a literal dot per fact would be meaningless
+  /// noise — this just signals "there's a deck here, keep tapping."
+  static const _maxDots = 5;
+
   @override
   Widget build(BuildContext context) {
     final hi = ref.watch(isHindiProvider);
@@ -903,35 +1126,69 @@ class _DidYouKnowCardState extends ConsumerState<_DidYouKnowCard> {
       orElse: () => null,
     );
     final count = trivia.maybeWhen(data: (f) => f.length, orElse: () => 0);
+    final dots = count < _maxDots ? count : _maxDots;
 
     return StitchedCard(
-      background: AppColors.kraft2,
+      background: scheme.brightness == Brightness.dark
+          ? scheme.surfaceContainerHighest
+          : AppColors.kraft2,
       stitchColor: AppColors.terracotta.withValues(alpha: 0.4),
-      radius: 18,
-      padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+      radius: 20,
+      padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(hi ? 'क्या आप जानते हैं?' : 'DID YOU KNOW?',
-              style: TextStyle(
-                  fontSize: 11,
-                  letterSpacing: 1.5,
-                  fontWeight: FontWeight.w700,
-                  color: AppColors.terracotta.withValues(alpha: 0.9))),
-          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  const Text('✨', style: TextStyle(fontSize: 14)),
+                  const SizedBox(width: 6),
+                  Text(hi ? 'क्या आप जानते हैं?' : 'DID YOU KNOW',
+                      style: TextStyle(
+                          fontSize: 10.5,
+                          letterSpacing: 1.2,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.terracotta.withValues(alpha: 0.9))),
+                ],
+              ),
+              if (dots > 1)
+                Row(
+                  children: List.generate(
+                    dots,
+                    (i) => Padding(
+                      padding: const EdgeInsets.only(left: 4),
+                      child: Container(
+                        width: 14,
+                        height: 3,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(2),
+                          color: i == _i % dots
+                              ? AppColors.terracotta
+                              : AppColors.terracotta.withValues(alpha: 0.25),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 14),
           Text(
             fact ?? (hi ? 'रोचक तथ्य लोड हो रहे…' : 'Loading facts…'),
             style: TextStyle(
-                fontSize: 14.5,
-                height: 1.4,
-                fontFamily: hi ? AppFonts.devanagari : AppFonts.body,
-                color: scheme.onSurface.withValues(alpha: 0.85)),
+                fontFamily: AppFonts.display,
+                fontWeight: FontWeight.w600,
+                fontSize: 16.5,
+                height: 1.42,
+                color: scheme.onSurface.withValues(alpha: 0.92)),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 16),
           Align(
             alignment: Alignment.centerLeft,
             child: Material(
-              color: AppColors.terracotta.withValues(alpha: 0.10),
+              color: AppColors.terracotta.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(999),
               child: InkWell(
                 borderRadius: BorderRadius.circular(999),
@@ -940,18 +1197,18 @@ class _DidYouKnowCardState extends ConsumerState<_DidYouKnowCard> {
                     : () => setState(() => _i = (_i + 1) % count),
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                      const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.autorenew_rounded,
-                          size: 16, color: AppColors.terracotta),
-                      const SizedBox(width: 6),
-                      Text(hi ? 'बदलें' : 'Change',
+                      Text(hi ? 'अगला तथ्य' : 'Next fact',
                           style: const TextStyle(
                               fontWeight: FontWeight.w700,
                               fontSize: 13,
                               color: AppColors.terracotta)),
+                      const SizedBox(width: 6),
+                      const Icon(Icons.arrow_forward_rounded,
+                          size: 15, color: AppColors.terracotta),
                     ],
                   ),
                 ),
@@ -1043,11 +1300,14 @@ class _StoryTile extends StatelessWidget {
 class _PanchangCard extends ConsumerWidget {
   const _PanchangCard();
 
-  static const _bg = Color(0xFFF5EEE1);
-  static const _accent = Color(0xFFBE5A24);
-  static const _ink = Color(0xFF3A2A20);
-  static const _label = Color(0xFF9C8B79);
-  static const _muted = Color(0xFFAD9C89);
+  static const _accent = AppColors.terracotta; // brass — this room's color
+
+  static Color _bg(ColorScheme s) =>
+      s.brightness == Brightness.dark ? AppColors.kraft2Dark : AppColors.paper;
+  static Color _ink(ColorScheme s) => s.onSurface;
+  static Color _label(ColorScheme s) => s.onSurface.withValues(alpha: 0.5);
+  static Color _muted(ColorScheme s) => s.onSurface.withValues(alpha: 0.4);
+  static Color _dash(ColorScheme s) => s.onSurface.withValues(alpha: 0.14);
 
   static const _weekdaysEn = [
     'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'
@@ -1073,6 +1333,7 @@ class _PanchangCard extends ConsumerWidget {
     final hi = ref.watch(isHindiProvider);
     final p = ref.watch(panchangProvider);
     final now = DateTime.now();
+    final scheme = Theme.of(context).colorScheme;
 
     final waxing = p.paksha.en.toLowerCase().contains('shukla');
     final moonPhase = waxing
@@ -1086,17 +1347,11 @@ class _PanchangCard extends ConsumerWidget {
       }
     }
 
-    return Container(
-      decoration: BoxDecoration(
-        color: _bg,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.black.withValues(alpha: 0.06),
-              blurRadius: 12,
-              offset: const Offset(0, 4)),
-        ],
-      ),
+    return StitchedCard(
+      background: _bg(scheme),
+      stitchColor: _accent.withValues(alpha: 0.45),
+      radius: 20,
+      padding: EdgeInsets.zero,
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -1129,11 +1384,11 @@ class _PanchangCard extends ConsumerWidget {
                           '${hi ? p.vara(true) : _weekdaysEn[now.weekday - 1]}, ${(hi ? _monthsHi : _monthsEn)[now.month - 1]} ${now.year}',
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontFamily: AppFonts.display,
                               fontWeight: FontWeight.w700,
                               fontSize: 17,
-                              color: _ink)),
+                              color: _ink(scheme))),
                       const SizedBox(height: 3),
                       Row(
                         children: [
@@ -1149,8 +1404,8 @@ class _PanchangCard extends ConsumerWidget {
                                 '${p.month(hi)} · ${p.paksha(hi)} ($moonPhase)',
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
-                                style: const TextStyle(
-                                    fontSize: 12.5, color: _label)),
+                                style: TextStyle(
+                                    fontSize: 12.5, color: _label(scheme))),
                           ),
                         ],
                       ),
@@ -1159,33 +1414,98 @@ class _PanchangCard extends ConsumerWidget {
                 ),
               ],
             ),
-            const _DashedLine(color: Color(0xFFCBBBA0)),
-            // Tithi · Nakshatra · Yoga on one line.
-            Row(children: [
-              _element(hi ? 'तिथि' : 'Tithi', p.tithi, hi),
-              _element(hi ? 'नक्षत्र' : 'Nakshatra', p.nakshatra, hi),
-              _element(hi ? 'योग' : 'Yoga', p.yoga, hi),
-            ]),
-            const SizedBox(height: 14),
-            // Karana · Rahu Kaal on one line (Rahu Kaal gets half the width).
-            Row(children: [
-              _element(hi ? 'करण' : 'Karana', p.karana, hi),
-              _cell(
-                hi ? 'राहु काल' : 'Rahu Kaal',
-                rahu == null
-                    ? '—'
-                    : '${_time(rahu.start)}–${_time(rahu.end)}',
-                null,
+            _DashedLine(color: _dash(scheme)),
+            // Tithi leads as the hero fact — that's the one thing a reader
+            // actually opens this card to check ("what day is it, for
+            // fasting/puja purposes") — everything else demotes beneath it.
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  width: 46,
+                  height: 46,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    gradient: RadialGradient(
+                      center: const Alignment(-0.3, -0.3),
+                      colors: waxing
+                          ? const [
+                              Color(0xFFFCEFD8),
+                              Color(0xFFE8B98A),
+                              Color(0xFF9C5A28)
+                            ]
+                          : [
+                              scheme.onSurface.withValues(alpha: 0.5),
+                              scheme.onSurface.withValues(alpha: 0.28),
+                              scheme.onSurface.withValues(alpha: 0.16),
+                            ],
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(p.tithi.current(hi),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              fontFamily: AppFonts.display,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 22,
+                              color: _ink(scheme))),
+                      Text(
+                          '${p.tithi.endTime == null ? (hi ? 'पूरे दिन' : 'all day') : '${hi ? 'तक ' : 'till '}${_time(p.tithi.endTime)}'} · ${p.nakshatra.current(hi)} ${hi ? 'नक्षत्र' : 'nakshatra'}',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 12, color: _label(scheme))),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            // A sunrise-to-sunset day bar with Rahu Kaal marked as a hazard
+            // zone — a window a reader can *see*, not decode from a label.
+            _DayBar(
+              scheme: scheme,
+              hi: hi,
+              sunrise: p.sunrise,
+              sunset: p.sunset,
+              rahuStart: rahu?.start,
+              rahuEnd: rahu?.end,
+            ),
+            const SizedBox(height: 10),
+            if (rahu != null)
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 1),
+                    child: Icon(Icons.warning_amber_rounded,
+                        size: 14, color: scheme.error),
+                  ),
+                  const SizedBox(width: 5),
+                  Expanded(
+                    child: Text(
+                        '${hi ? 'राहु काल' : 'Rahu Kaal'} ${_time(rahu.start)}–${_time(rahu.end)} — ${hi ? 'नई शुरुआत से बचें' : 'avoid new beginnings'}',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            fontSize: 11.5,
+                            height: 1.3,
+                            fontWeight: FontWeight.w600,
+                            color: scheme.error)),
+                  ),
+                ],
               ),
-            ]),
-            const _DashedLine(color: Color(0xFFCBBBA0)),
-            // Sunrise · Sunset · Add-to-widget.
+            _DashedLine(color: _dash(scheme)),
+            // Yoga · Karana · Add-to-widget — demoted to a compact strip.
             Row(children: [
-              _stat(Icons.wb_sunny_rounded, hi ? 'सूर्योदय' : 'Sunrise',
-                  _time(p.sunrise)),
-              _stat(Icons.wb_twilight_rounded, hi ? 'सूर्यास्त' : 'Sunset',
-                  _time(p.sunset)),
-              _widgetOption(hi, () => pinPanchangWidget(ref)),
+              _element(scheme, hi ? 'योग' : 'Yoga', p.yoga, hi),
+              _element(scheme, hi ? 'करण' : 'Karana', p.karana, hi),
+              _widgetOption(scheme, hi, () => pinPanchangWidget(ref)),
             ]),
             const SizedBox(height: 14),
             // ---- Actions ----
@@ -1214,7 +1534,9 @@ class _PanchangCard extends ConsumerWidget {
     );
   }
 
-  static Widget _element(String label, dynamic el, bool hi) => _cell(
+  static Widget _element(ColorScheme s, String label, dynamic el, bool hi) =>
+      _cell(
+        s,
         label,
         el.current(hi),
         el.endTime == null
@@ -1223,36 +1545,38 @@ class _PanchangCard extends ConsumerWidget {
       );
 
   /// A labelled cell — LABEL / value / optional sub-line.
-  static Widget _cell(String label, String value, String? sub) => Expanded(
+  static Widget _cell(ColorScheme s, String label, String value, String? sub) =>
+      Expanded(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(label.toUpperCase(),
-                style: const TextStyle(
+                style: TextStyle(
                     fontSize: 10.5,
                     letterSpacing: 1,
                     fontWeight: FontWeight.w700,
-                    color: _label)),
+                    color: _label(s))),
             const SizedBox(height: 2),
             Text(value,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
-                style: const TextStyle(
+                style: TextStyle(
                     fontFamily: AppFonts.display,
                     fontWeight: FontWeight.w600,
                     fontSize: 17,
-                    color: _ink)),
+                    color: _ink(s))),
             if (sub != null && sub.isNotEmpty)
               Text(sub,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(fontSize: 11.5, color: _muted)),
+                  style: TextStyle(fontSize: 11.5, color: _muted(s))),
           ],
         ),
       );
 
   /// The "add to home-screen widget" slot (shown beside sunrise/sunset).
-  static Widget _widgetOption(bool hi, VoidCallback onTap) => Expanded(
+  static Widget _widgetOption(ColorScheme s, bool hi, VoidCallback onTap) =>
+      Expanded(
         child: InkWell(
           borderRadius: BorderRadius.circular(10),
           onTap: onTap,
@@ -1266,11 +1590,11 @@ class _PanchangCard extends ConsumerWidget {
                   child: Text(hi ? 'विजेट' : 'WIDGET',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 9.5,
                           letterSpacing: 0.6,
                           fontWeight: FontWeight.w700,
-                          color: _label)),
+                          color: _label(s))),
                 ),
               ]),
               const SizedBox(height: 2),
@@ -1281,40 +1605,6 @@ class _PanchangCard extends ConsumerWidget {
                       fontWeight: FontWeight.w700, fontSize: 13, color: _accent)),
             ],
           ),
-        ),
-      );
-
-  static Widget _stat(IconData icon, String label, String value,
-          {bool small = false}) =>
-      Expanded(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(icon, size: 14, color: _accent),
-                const SizedBox(width: 4),
-                Flexible(
-                  child: Text(label.toUpperCase(),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                          fontSize: 9.5,
-                          letterSpacing: 0.6,
-                          fontWeight: FontWeight.w700,
-                          color: _label)),
-                ),
-              ],
-            ),
-            const SizedBox(height: 2),
-            Text(value,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: small ? 12 : 14,
-                    color: _ink)),
-          ],
         ),
       );
 
@@ -1351,20 +1641,135 @@ class _PanchangCard extends ConsumerWidget {
       );
 }
 
+/// A sunrise-to-sunset bar with Rahu Kaal shaded on it as a hazard zone —
+/// turns "avoid this window" into something seen at a glance rather than a
+/// time range that has to be read and mentally placed in the day.
+class _DayBar extends StatelessWidget {
+  final ColorScheme scheme;
+  final bool hi;
+  final DateTime? sunrise;
+  final DateTime? sunset;
+  final DateTime? rahuStart;
+  final DateTime? rahuEnd;
+
+  const _DayBar({
+    required this.scheme,
+    required this.hi,
+    required this.sunrise,
+    required this.sunset,
+    required this.rahuStart,
+    required this.rahuEnd,
+  });
+
+  static String _time(DateTime? d) {
+    if (d == null) return '—';
+    final h = d.hour % 12 == 0 ? 12 : d.hour % 12;
+    final ap = d.hour < 12 ? 'AM' : 'PM';
+    return '$h:${d.minute.toString().padLeft(2, '0')} $ap';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final rise = sunrise ?? DateTime.now();
+    final set = sunset ?? rise.add(const Duration(hours: 12));
+    final totalMin = set.difference(rise).inMinutes.clamp(1, 24 * 60);
+    double frac(DateTime? d) {
+      if (d == null) return 0;
+      return (d.difference(rise).inMinutes / totalMin).clamp(0.0, 1.0);
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(hi ? 'सूर्योदय ${_time(sunrise)}' : 'Sunrise ${_time(sunrise)}',
+                style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w700,
+                    color: scheme.onSurface.withValues(alpha: 0.5))),
+            Text(hi ? 'सूर्यास्त ${_time(sunset)}' : 'Sunset ${_time(sunset)}',
+                style: TextStyle(
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w700,
+                    color: scheme.onSurface.withValues(alpha: 0.5))),
+          ],
+        ),
+        const SizedBox(height: 6),
+        SizedBox(
+          height: 12,
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              final w = constraints.maxWidth;
+              return Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    height: 10,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(99),
+                      gradient: LinearGradient(colors: [
+                        AppColors.terracottaBright,
+                        const Color(0xFFF4D9A8),
+                        const Color(0xFFF4D9A8),
+                        scheme.onSurface.withValues(alpha: 0.35),
+                      ]),
+                    ),
+                  ),
+                  if (rahuStart != null && rahuEnd != null)
+                    Positioned(
+                      left: (frac(rahuStart) * w).clamp(0, w - 4),
+                      width:
+                          ((frac(rahuEnd) - frac(rahuStart)) * w).clamp(4, w),
+                      top: -2,
+                      child: Container(
+                        height: 14,
+                        decoration: BoxDecoration(
+                          color: scheme.error.withValues(alpha: 0.85),
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(color: _bg(scheme), width: 2),
+                        ),
+                      ),
+                    ),
+                ],
+              );
+            },
+          ),
+        ),
+      ],
+    );
+  }
+
+  static Color _bg(ColorScheme s) =>
+      s.brightness == Brightness.dark ? AppColors.kraft2Dark : AppColors.paper;
+}
+
 /// A one-glance daily Rashifal teaser for the reader's selected moon sign —
 /// sign glyph, today's star rating and the one-line Chandra-gochar reading.
 /// Taps through to the full Rashifal tab. Computed on-device (no birth data).
 class _RashifalCard extends ConsumerWidget {
   const _RashifalCard();
 
-  static const _bg = Color(0xFFF3ECFA); // soft violet-cream (astrology accent)
-  static const _accent = AppColors.dharmaPurple;
-  static const _ink = Color(0xFF3A2A20);
-  static const _label = Color(0xFF9C8B79);
+  static const _accent = AppColors.dharmaPurple; // violet — this room's color
+
+  static Color _bg(ColorScheme s) =>
+      s.brightness == Brightness.dark ? AppColors.kraft2Dark : AppColors.paper;
+  static Color _ink(ColorScheme s) => s.onSurface;
+  static Color _label(ColorScheme s) => s.onSurface.withValues(alpha: 0.5);
+
+  /// A coarse 1-5 star read straight off the same [Verdict] the badge used
+  /// to show as text — no invented precision, just that tone made visual.
+  static int _stars(Verdict v) => switch (v) {
+        Verdict.favourable => 4,
+        Verdict.mixed => 3,
+        Verdict.challenging => 2,
+      };
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final hi = ref.watch(isHindiProvider);
+    final scheme = Theme.of(context).colorScheme;
     final moonRashi = ref.watch(transitMoonRashiProvider);
     final rashi = ref.watch(selectedRashiProvider);
     final house = gocharHouseFrom(rashi, moonRashi);
@@ -1375,19 +1780,12 @@ class _RashifalCard extends ConsumerWidget {
       Verdict.mixed => AppColors.gold,
       Verdict.challenging => AppColors.terracotta,
     };
+    final stars = _stars(verdict);
 
-    return Container(
-      decoration: BoxDecoration(
-        color: _bg,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.black.withValues(alpha: 0.06),
-              blurRadius: 12,
-              offset: const Offset(0, 4)),
-        ],
-      ),
-      padding: const EdgeInsets.all(16),
+    return StitchedCard(
+      background: _bg(scheme),
+      stitchColor: _accent.withValues(alpha: 0.45),
+      radius: 20,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -1395,92 +1793,88 @@ class _RashifalCard extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 52,
-                height: 52,
+                width: 58,
+                height: 58,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: _accent.withValues(alpha: 0.14),
-                  borderRadius: BorderRadius.circular(14),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [_accent, _accent.withValues(alpha: 0.7)],
+                  ),
+                  borderRadius: BorderRadius.circular(18),
+                  boxShadow: [
+                    BoxShadow(
+                        color: _accent.withValues(alpha: 0.35),
+                        blurRadius: 14,
+                        offset: const Offset(0, 5)),
+                  ],
                 ),
-                child: RashiGlyph(index: rashi, size: 28),
+                child: RashiGlyph(index: rashi, size: 30),
               ),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                        (hi ? 'आज का राशिफल' : "Today's Rashifal").toUpperCase(),
-                        style: const TextStyle(
-                            fontSize: 10.5,
-                            letterSpacing: 1,
+                    // The verdict itself leads — that's the one thing a
+                    // reader actually wants to know at a glance.
+                    Text(cVerdictLabels[verdict.index].call(hi),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                            fontFamily: AppFonts.display,
                             fontWeight: FontWeight.w700,
-                            color: _label)),
-                    const SizedBox(height: 3),
-                    Row(children: [
-                      Flexible(
-                        child: Text(signNames[rashi].call(hi),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: const TextStyle(
-                                fontFamily: AppFonts.display,
-                                fontWeight: FontWeight.w700,
-                                fontSize: 18,
-                                color: _ink)),
-                      ),
-                      const SizedBox(width: 8),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 3),
-                        decoration: BoxDecoration(
-                          color: vColor.withValues(alpha: 0.14),
-                          borderRadius: BorderRadius.circular(999),
+                            fontSize: 19,
+                            color: vColor)),
+                    const SizedBox(height: 2),
+                    Text(
+                        hi
+                            ? '${signNames[rashi].call(hi)} के लिए · आज'
+                            : 'for ${signNames[rashi].call(hi)} · today',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 12, color: _label(scheme))),
+                    const SizedBox(height: 6),
+                    Row(
+                      children: List.generate(
+                        5,
+                        (i) => Icon(
+                          i < stars ? Icons.star_rounded : Icons.star_outline_rounded,
+                          size: 15,
+                          color: i < stars
+                              ? const Color(0xFFD9A441)
+                              : _label(scheme),
                         ),
-                        child: Text(cVerdictLabels[verdict.index].call(hi),
-                            style: TextStyle(
-                                fontSize: 10.5,
-                                fontWeight: FontWeight.w700,
-                                color: vColor)),
                       ),
-                    ]),
+                    ),
                   ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 14),
           Text(line,
               style: TextStyle(
                   fontSize: 13.5,
                   height: 1.4,
-                  color: _ink.withValues(alpha: 0.78))),
+                  color: _ink(scheme).withValues(alpha: 0.82))),
           const SizedBox(height: 12),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: Material(
-              color: _accent.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(12),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(12),
-                onTap: () => context.push('/cosmos'),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16, vertical: 10),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(hi ? 'और जानें' : 'Know more',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.w700,
-                              fontSize: 13,
-                              color: _accent)),
-                      const SizedBox(width: 5),
-                      const Icon(Icons.arrow_forward_rounded,
-                          size: 16, color: _accent),
-                    ],
-                  ),
-                ),
-              ),
+          InkWell(
+            borderRadius: BorderRadius.circular(4),
+            onTap: () => context.push('/cosmos'),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(hi ? 'पूर्ण विवरण' : 'Full reading',
+                    style: const TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 13,
+                        color: _accent)),
+                const SizedBox(width: 5),
+                const Icon(Icons.arrow_forward_rounded,
+                    size: 16, color: _accent),
+              ],
             ),
           ),
         ],
@@ -1513,57 +1907,78 @@ class _FestivalBanner extends ConsumerWidget {
         : (hi ? 'आगामी पर्व' : 'Upcoming Festival');
 
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 6, 16, 6),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 6),
       child: InkWell(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(20),
         // Opens the Explorer rather than a one-off sheet: the same festival
         // leads that list, and from there the whole year is reachable.
         onTap: () => context.push('/festivals'),
         child: Container(
-          padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(
             gradient: LinearGradient(colors: [
               scheme.primary.withValues(alpha: 0.14),
               scheme.secondary.withValues(alpha: 0.08),
             ]),
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(20),
             border: Border.all(color: scheme.primary.withValues(alpha: 0.25)),
           ),
-          child: Row(children: [
-            const Text('🪔', style: TextStyle(fontSize: 24)),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(heading.toUpperCase(),
+          child: CustomPaint(
+            foregroundPainter: StitchedBorderPainter(
+              color: scheme.primary.withValues(alpha: 0.4),
+              radius: 13,
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const Text('🪔', style: TextStyle(fontSize: 24)),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(heading.toUpperCase(),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              fontSize: 10.5,
+                              letterSpacing: 1,
+                              fontWeight: FontWeight.w700,
+                              color: scheme.onSurface.withValues(alpha: 0.55))),
+                      const SizedBox(height: 2),
+                      Text(next.hit.name(hi),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                              fontFamily: AppFonts.display,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              height: 1.15)),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: scheme.primary.withValues(alpha: 0.14),
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(when,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(
-                          fontSize: 10.5,
-                          letterSpacing: 1,
                           fontWeight: FontWeight.w700,
-                          color: scheme.onSurface.withValues(alpha: 0.55))),
-                  const SizedBox(height: 2),
-                  Text(next.hit.name(hi),
-                      style: const TextStyle(
-                          fontFamily: AppFonts.display,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 17)),
-                ],
+                          fontSize: 12.5,
+                          color: scheme.primary)),
+                ),
+              ],
               ),
             ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              decoration: BoxDecoration(
-                color: scheme.primary.withValues(alpha: 0.14),
-                borderRadius: BorderRadius.circular(999),
-              ),
-              child: Text(when,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 12.5,
-                      color: scheme.primary)),
-            ),
-          ]),
+          ),
         ),
       ),
     );
@@ -1642,57 +2057,86 @@ class _MandirCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       onTap: () => context.push('/mandir'),
       child: Container(
-        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
-            colors: [Color(0xFF6E1F10), Color(0xFF3A1608)],
+            colors: [Color(0xFF4A251F), Color(0xFF241713)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Row(
-          children: [
-            Container(
-              width: 46,
-              height: 46,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.16),
-                borderRadius: BorderRadius.circular(14),
+        child: CustomPaint(
+          foregroundPainter: StitchedBorderPainter(
+            color: const Color(0xFFE8B347).withValues(alpha: 0.45),
+            radius: 13,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+            children: [
+              // A living diya rather than a static temple icon — a warm glow
+              // when the offering window is open, dimmed when it is not, so
+              // the one thing that actually changes hour to hour is visible
+              // before a reader even reads the caption.
+              SizedBox(
+                width: 52,
+                height: 52,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    if (free)
+                      Container(
+                        width: 52,
+                        height: 52,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          gradient: RadialGradient(colors: [
+                            const Color(0xFFE8B347).withValues(alpha: 0.35),
+                            const Color(0xFFE8B347).withValues(alpha: 0),
+                          ]),
+                        ),
+                      ),
+                    Text('🪔',
+                        style: TextStyle(
+                            fontSize: 28,
+                            color: free
+                                ? null
+                                : Colors.white.withValues(alpha: 0.4))),
+                  ],
+                ),
               ),
-              child: const Icon(Icons.temple_hindu_rounded,
-                  color: Color(0xFFE6C34A), size: 24),
-            ),
-            const SizedBox(width: 14),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(hi ? 'मंदिर' : 'Mandir',
-                      style: const TextStyle(
-                          fontFamily: AppFonts.display,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 19,
-                          color: Color(0xFFFCEFE2))),
-                  const SizedBox(height: 3),
-                  Text(
-                    free
-                        ? (hi
-                            ? 'अर्पण का समय खुला है'
-                            : 'The offering window is open')
-                        : (hi ? 'दर्शन करें' : 'Visit the shrine'),
-                    style: TextStyle(
-                      fontSize: 12.5,
-                      color: free
-                          ? const Color(0xFF8FD6A8)
-                          : const Color(0xFFFCEFE2).withValues(alpha: 0.8),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(hi ? 'मंदिर' : 'Mandir',
+                        style: const TextStyle(
+                            fontFamily: AppFonts.display,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 19,
+                            color: Color(0xFFFCEFE2))),
+                    const SizedBox(height: 3),
+                    Text(
+                      free
+                          ? (hi
+                              ? 'अर्पण का समय खुला है'
+                              : 'The offering window is open')
+                          : (hi ? 'दर्शन करें' : 'Visit the shrine'),
+                      style: TextStyle(
+                        fontSize: 12.5,
+                        color: free
+                            ? const Color(0xFFE8B347)
+                            : const Color(0xFFFCEFE2).withValues(alpha: 0.8),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
+              const Icon(Icons.chevron_right_rounded, color: Color(0xFFE6C34A)),
+            ],
             ),
-            const Icon(Icons.chevron_right_rounded, color: Color(0xFFE6C34A)),
-          ],
+          ),
         ),
       ),
     );
@@ -1809,15 +2253,28 @@ class _SadhanaCard extends ConsumerWidget {
   final bool hi;
   const _SadhanaCard({required this.hi});
 
+  static const _accent = AppColors.sacredGreen; // sage — this room's color
+  static const _ring = Color(0xFF8FDDDF);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final done = ref.watch(practicesDoneTodayProvider).valueOrNull ?? 0;
+    final byDay = ref.watch(sadhanaByDayProvider).valueOrNull ?? const {};
     final total = kPractices.length;
+    final today = dayStamp();
+    final doneKeys = {
+      for (final e in byDay.entries)
+        if ((e.value[today] ?? 0) > 0) e.key,
+    };
+    final nextUp = [
+      for (final p in kPractices)
+        if (!doneKeys.contains(p.key)) p.label(hi),
+    ];
+
     return InkWell(
       borderRadius: BorderRadius.circular(20),
       onTap: () => context.push('/sadhana'),
       child: Container(
-        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [Color(0xFF2F5D6B), Color(0xFF16323C)],
@@ -1826,48 +2283,92 @@ class _SadhanaCard extends ConsumerWidget {
           ),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Row(
-          children: [
-            Container(
-              width: 46,
-              height: 46,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.16),
-                borderRadius: BorderRadius.circular(14),
-              ),
-              child: const Icon(Icons.self_improvement_rounded,
-                  color: Color(0xFF8FDDDF), size: 24),
-            ),
-            const SizedBox(width: 14),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(hi ? 'साधना' : 'Sadhana',
-                      style: const TextStyle(
-                          fontFamily: AppFonts.display,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 19,
-                          color: Color(0xFFFCEFE2))),
-                  const SizedBox(height: 3),
-                  Text(
-                    done > 0
-                        ? (hi
-                            ? 'आज $total में से $done अभ्यास पूर्ण'
-                            : '$done of $total practices done today')
-                        : (hi ? 'आज का अभ्यास शुरू करें' : 'Begin today\'s practice'),
-                    style: TextStyle(
-                      fontSize: 12.5,
-                      color: done > 0
-                          ? const Color(0xFF8FDDDF)
-                          : const Color(0xFFFCEFE2).withValues(alpha: 0.8),
+        child: CustomPaint(
+          foregroundPainter: StitchedBorderPainter(
+            color: _accent.withValues(alpha: 0.45),
+            radius: 13,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+            children: [
+              // A real ring showing done/total, not a static icon.
+              SizedBox(
+                width: 52,
+                height: 52,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    SizedBox(
+                      width: 52,
+                      height: 52,
+                      child: CircularProgressIndicator(
+                        value: total == 0 ? 0 : done / total,
+                        strokeWidth: 5,
+                        strokeCap: StrokeCap.round,
+                        backgroundColor: Colors.white.withValues(alpha: 0.14),
+                        valueColor: const AlwaysStoppedAnimation(_ring),
+                      ),
                     ),
-                  ),
-                ],
+                    Text('$done/$total',
+                        style: const TextStyle(
+                            fontFamily: AppFonts.display,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 14,
+                            color: Color(0xFFFCEFE2))),
+                  ],
+                ),
               ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(hi ? 'आज का अभ्यास' : "Today's practice",
+                        style: const TextStyle(
+                            fontFamily: AppFonts.display,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 17,
+                            color: Color(0xFFFCEFE2))),
+                    const SizedBox(height: 7),
+                    // A dot per practice — done ones filled — instead of a
+                    // sentence spelling out the same count in words.
+                    Row(
+                      children: [
+                        for (final p in kPractices)
+                          Padding(
+                            padding: const EdgeInsets.only(right: 6),
+                            child: Container(
+                              width: 9,
+                              height: 9,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: doneKeys.contains(p.key)
+                                    ? _ring
+                                    : Colors.white.withValues(alpha: 0.18),
+                              ),
+                            ),
+                          ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      nextUp.isEmpty
+                          ? (hi ? 'सभी अभ्यास पूर्ण 🎉' : 'All done today 🎉')
+                          : '${hi ? 'शेष' : 'Next'}: ${nextUp.join(' · ')}',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontSize: 11.5,
+                          color: const Color(0xFFFCEFE2).withValues(alpha: 0.72)),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_right_rounded, color: Color(0xFF8FDDDF)),
+            ],
             ),
-            const Icon(Icons.chevron_right_rounded, color: Color(0xFF8FDDDF)),
-          ],
+          ),
         ),
       ),
     );

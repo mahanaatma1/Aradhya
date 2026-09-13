@@ -3,7 +3,7 @@ import EntityCard from '../cards/EntityCard.jsx';
 import CardRail from '../ui/CardRail.jsx';
 import Reveal from '../ui/Reveal.jsx';
 import Section from '../ui/Section.jsx';
-import { getEpic } from '../../services/contentService.js';
+import { getEpicSummary, allSync, contentKeys } from '../../services/contentService.js';
 import { routes } from '../../config/routes.js';
 import useAsync from '../../hooks/useAsync.js';
 
@@ -16,8 +16,9 @@ import useAsync from '../../hooks/useAsync.js';
  */
 export default function EpicsShowcase() {
   const { data, loading } = useAsync(
-    () => Promise.all([getEpic('ramayana'), getEpic('mahabharata')]),
+    () => allSync([getEpicSummary('ramayana'), getEpicSummary('mahabharata')]),
     [],
+    { preloadKey: contentKeys.homeEpics },
   );
 
   const [ramayana, mahabharata] = data ?? [];
@@ -77,7 +78,7 @@ export default function EpicsShowcase() {
 function metaFor(epic) {
   if (!epic) return [];
   return [
-    { label: 'Books', value: epic.books.length },
+    { label: 'Books', value: epic.bookCount },
     { label: 'Arcs', value: epic.arcCount },
     { label: 'Events', value: epic.sceneCount },
   ];

@@ -3,7 +3,7 @@ import EntityCard from '../components/cards/EntityCard.jsx';
 import PageHeader from '../components/ui/PageHeader.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
 import { CardSkeleton } from '../components/ui/States.jsx';
-import { getEpic } from '../services/contentService.js';
+import { getEpicSummary, allSync, contentKeys } from '../services/contentService.js';
 import { PAGE_META } from '../config/seo.js';
 import { routes } from '../config/routes.js';
 import useAsync from '../hooks/useAsync.js';
@@ -14,8 +14,9 @@ export default function Stories() {
   useSeo(PAGE_META[routes.stories]);
 
   const { data, loading } = useAsync(
-    () => Promise.all([getEpic('ramayana'), getEpic('mahabharata')]),
+    () => allSync([getEpicSummary('ramayana'), getEpicSummary('mahabharata')]),
     [],
+    { preloadKey: contentKeys.storiesPage },
   );
   const [ramayana, mahabharata] = data ?? [];
 
@@ -56,12 +57,12 @@ export default function Stories() {
               <Reveal>
                 <StoryCard
                   to={routes.ramayana}
-                  eyebrow={`${ramayana.books.length} books`}
+                  eyebrow={`${ramayana.bookCount} books`}
                   title="Ramayana"
                   titleHi="रामायण"
                   blurb="Exile, abduction and return — read as a sequence of events, each with its cast and its source."
                   meta={[
-                    { label: 'Books', value: ramayana.books.length },
+                    { label: 'Books', value: ramayana.bookCount },
                     { label: 'Arcs', value: ramayana.arcCount },
                     { label: 'Events', value: ramayana.sceneCount },
                   ]}
@@ -73,12 +74,12 @@ export default function Stories() {
               <Reveal delay={90}>
                 <StoryCard
                   to={routes.mahabharata}
-                  eyebrow={`${mahabharata.books.length} books`}
+                  eyebrow={`${mahabharata.bookCount} books`}
                   title="Mahabharata"
                   titleHi="महाभारत"
                   blurb="A quarrel over a throne that becomes a question about duty — including the words spoken between two armies."
                   meta={[
-                    { label: 'Books', value: mahabharata.books.length },
+                    { label: 'Books', value: mahabharata.bookCount },
                     { label: 'Arcs', value: mahabharata.arcCount },
                     { label: 'Events', value: mahabharata.sceneCount },
                   ]}

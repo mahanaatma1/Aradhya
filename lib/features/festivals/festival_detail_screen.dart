@@ -12,8 +12,8 @@ import 'festival_providers.dart';
 import 'festival_reminder.dart';
 import 'festivals_screen.dart' show ruleLabel;
 
-const _accent = Color(0xFFE0762A);
-const _accentDeep = Color(0xFFA7430F);
+const _accent = Color(0xFFD9748C);
+const _accentDeep = Color(0xFFA5445C);
 
 /// Festival slug -> `puja_vidhi.id` in the legacy `content.sqlite` corpus.
 ///

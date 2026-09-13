@@ -7,7 +7,7 @@ import RelatedContent from '../components/RelatedContent.jsx';
 import { ContinueInAradhya } from '../components/app/MobileAppCTA.jsx';
 import { CardGridSkeleton, ErrorState, Skeleton } from '../components/ui/States.jsx';
 import NotFound from './NotFound.jsx';
-import { getRecord } from '../services/contentService.js';
+import { getRecord, contentKeys } from '../services/contentService.js';
 import { gradientFor } from '../config/taxonomy.js';
 import { routes } from '../config/routes.js';
 import { appConfig } from '../config/appConfig.js';
@@ -27,7 +27,12 @@ import useSeo from '../hooks/useSeo.js';
  */
 export default function EntityDetail() {
   const { slug } = useParams();
-  const { data: record, loading, error, reload } = useAsync(() => getRecord(slug), [slug]);
+  const {
+    data: record,
+    loading,
+    error,
+    reload,
+  } = useAsync(() => getRecord(slug), [slug], { preloadKey: contentKeys.record(slug) });
 
   useSeo({
     title: record?.title,

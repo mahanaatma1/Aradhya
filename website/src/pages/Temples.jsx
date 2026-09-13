@@ -4,7 +4,12 @@ import PageHeader from '../components/ui/PageHeader.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
 import { ContentNote } from '../components/ui/SourceNote.jsx';
 import { CardGridSkeleton } from '../components/ui/States.jsx';
-import { getSacredGeography, getTemples } from '../services/contentService.js';
+import {
+  getSacredGeography,
+  getTemples,
+  allSync,
+  contentKeys,
+} from '../services/contentService.js';
 import { PAGE_META } from '../config/seo.js';
 import { routes } from '../config/routes.js';
 import useAsync from '../hooks/useAsync.js';
@@ -22,8 +27,9 @@ export default function Temples() {
   useSeo(PAGE_META[routes.temples]);
 
   const { data, loading } = useAsync(
-    () => Promise.all([getTemples(), getSacredGeography()]),
+    () => allSync([getTemples(), getSacredGeography()]),
     [],
+    { preloadKey: contentKeys.templesPage },
   );
   const [tirthas, geography] = data ?? [];
 

@@ -61,7 +61,7 @@ class JyotishHubScreen extends ConsumerWidget {
             subtitle: hi
                 ? 'अष्टकूट गुण मिलान — दो कुंडलियों के बीच 36 अंकों का मिलान'
                 : 'Ashtakoot Guna Milan — 36-point match between two charts',
-            gradient: const [Color(0xFFD68AA6), Color(0xFF9C2950)],
+            gradient: const [Color(0xFFD68AA6), Color(0xFFD9748C)],
             circle: const Color(0xFFE7A9BF),
             buttonLabel: hi ? 'मिलान करें' : 'Match Pair',
             onTap: () => context.push('/astrology/milan'),
@@ -111,7 +111,7 @@ class _CosmicHero extends StatelessWidget {
             child: DecoratedBox(
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Color(0xFF3B2A63), Color(0xFF7A2E52), Color(0xFFB23A18)],
+                  colors: [Color(0xFF3B2A63), Color(0xFF7A2E52), Color(0xFF9C5A28)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),

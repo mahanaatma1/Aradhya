@@ -4,7 +4,7 @@ import PageHeader from '../components/ui/PageHeader.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
 import { ContentNote } from '../components/ui/SourceNote.jsx';
 import { CardGridSkeleton } from '../components/ui/States.jsx';
-import { getCollections, listRecords } from '../services/contentService.js';
+import { getCollections, listRecords, allSync, contentKeys } from '../services/contentService.js';
 import { PAGE_META } from '../config/seo.js';
 import { routes } from '../config/routes.js';
 import useAsync from '../hooks/useAsync.js';
@@ -21,8 +21,9 @@ export default function Scriptures() {
   useSeo(PAGE_META[routes.scriptures]);
 
   const { data, loading } = useAsync(
-    () => Promise.all([getCollections(), listRecords({ facet: 'scriptures', kinds: ['entity'] })]),
+    () => allSync([getCollections(), listRecords({ facet: 'scriptures', kinds: ['entity'] })]),
     [],
+    { preloadKey: contentKeys.scripturesPage },
   );
   const [collections, texts] = data ?? [];
 

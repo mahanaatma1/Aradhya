@@ -20,8 +20,8 @@ class KurukshetraScreen extends ConsumerWidget {
   /// Kaurava commanders in the order they held the post.
   static const _phases = <(String, String, String, Color)>[
     ('bhishma', 'Bhishma', 'भीष्म', Color(0xFF8A6A4F)),
-    ('drona', 'Drona', 'द्रोण', Color(0xFFA7430F)),
-    ('karna', 'Karna', 'कर्ण', Color(0xFF9C2950)),
+    ('drona', 'Drona', 'द्रोण', Color(0xFF6C5A9C)),
+    ('karna', 'Karna', 'कर्ण', Color(0xFFD9748C)),
     ('shalya', 'Shalya', 'शल्य', Color(0xFF4A3220)),
   ];
 

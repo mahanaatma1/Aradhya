@@ -5,7 +5,7 @@ import Section from '../components/ui/Section.jsx';
 import LearnByPlay from '../components/home/LearnByPlay.jsx';
 import { CardGridSkeleton } from '../components/ui/States.jsx';
 import { ContentNote } from '../components/ui/SourceNote.jsx';
-import { getJourneys } from '../services/contentService.js';
+import { getJourneys, contentKeys } from '../services/contentService.js';
 import { LEVEL_LABELS } from '../config/taxonomy.js';
 import { PAGE_META } from '../config/seo.js';
 import { routes } from '../config/routes.js';
@@ -22,7 +22,9 @@ import useSeo from '../hooks/useSeo.js';
 export default function Journeys() {
   useSeo(PAGE_META[routes.journeys]);
 
-  const { data: journeys, loading } = useAsync(() => getJourneys(), []);
+  const { data: journeys, loading } = useAsync(() => getJourneys(), [], {
+    preloadKey: contentKeys.journeysPage,
+  });
 
   const levels = journeys
     ? Object.keys(LEVEL_LABELS)

@@ -2,26 +2,26 @@
 /**
  * Writes real per-URL HTML for every route in the sitemap.
  *
- * What this does and does not do, precisely:
+ * Each URL gets its own file containing:
  *
- *   It does  — give each URL its own file with the correct <title>, description,
- *              canonical, Open Graph, Twitter card and JSON-LD baked into the
- *              HTML, so a crawler or a chat client that never runs JavaScript
- *              still sees the right thing for that URL. Share a link to
- *              /explore/hanuman and the unfurl says Hanuman.
- *
- *   It does not — prerender the body. Every page still ships the same empty
- *              #root and paints from JavaScript. Real body HTML needs the data
- *              available synchronously on first render, which is a data-layer
- *              change (per-page inlining plus hydration), not a build step. See
- *              the README's known-limitations section.
+ *   - its own <title>, description, canonical, Open Graph, Twitter card and
+ *     JSON-LD, so a crawler or chat client that never runs JavaScript still sees
+ *     the right thing for that URL. Share /explore/hanuman and the unfurl says
+ *     Hanuman.
+ *   - the page's rendered body, and the data it was rendered from, so that same
+ *     reader gets the actual article text rather than an empty #root.
  *
  * The tags come from config/seo.js — the same module hooks/useSeo.js uses at
  * runtime — so what a crawler reads before hydration and what it reads after
- * cannot disagree.
+ * cannot disagree. The body comes from src/entry-server.jsx via the dist-ssr
+ * bundle, which also *verifies* that the inlined data reproduces the HTML it
+ * writes; a page that fails that check is shipped as the plain shell instead of
+ * published in a state the browser would tear down on hydration.
  *
- * Runs after `vite build` (which is what produces the dist/index.html shell this
- * reads); `npm run prerender` runs it on its own against an existing build.
+ * Runs after `vite build` and `vite build --ssr` (which produce the
+ * dist/index.html shell and the dist-ssr renderer this reads). `npm run
+ * prerender` runs it on its own against an existing build; without dist-ssr it
+ * degrades to metadata only and says so.
  */
 
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -33,101 +33,33 @@ import { EPICS } from '../src/config/epics.js';
 import { PAGE_META, buildMeta, entityJsonLd, siteJsonLd } from '../src/config/seo.js';
 import { getRecord } from '../src/services/contentService.js';
 import { entities, festivals, journeys } from '../src/data/mockContent.js';
+// The pure string half of this script, kept separate so it is testable: this
+// file runs the whole build on import, which a test cannot do. See
+// scripts/lib/head.test.mjs.
+import { outputPathFor, renderMeta, shellTemplate, stripOwnedTags } from './lib/head.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const distDir = join(here, '..', 'dist');
 const shellPath = join(distDir, 'index.html');
 
-/** Escape for an attribute value or text node. */
-function esc(value) {
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
 /**
- * Tokenise the head tags this script owns.
+ * Ceiling on a page's inlined data, in bytes.
  *
- * Attribute regions allow quoted strings so a `>` inside a description does not
- * end the tag early. Only <meta>, <link> and the two element pairs we replace
- * are matched; everything else in the shell is left untouched.
+ * The payload duplicates content that is also in the rendered HTML, so a page
+ * whose data is enormous pays twice for one page's worth of text. Past this
+ * point that trade stops being worth it and the page ships as the shell — it
+ * still works, it just paints from JavaScript as the whole site used to.
+ *
+ * In practice this catches /explore, which renders the entire content set in one
+ * grid. Every entry in that grid has its own prerendered page, so what is lost
+ * is a page of links rather than a page of prose. Detail pages — the 242 URLs
+ * this feature exists for — sit around 6 kB.
  */
-const TAG_RE = new RegExp(
-  [
-    // <meta …> / <link …>
-    '<(meta|link)\\b((?:[^>"\']|"[^"]*"|\'[^\']*\')*)>',
-    // <title>…</title> / <script …>…</script>
-    '<(title|script)\\b((?:[^>"\']|"[^"]*"|\'[^\']*\')*)>([\\s\\S]*?)</\\3\\s*>',
-  ].join('|'),
-  'gi',
-);
+const MAX_PRELOAD_BYTES = 128 * 1024;
 
-/** True for a tag whose job this script has taken over. */
-function isOwnedTag(name, attrs) {
-  if (name === 'title') return true;
-  if (name === 'script') return /type\s*=\s*["']application\/ld\+json["']/i.test(attrs);
-  if (name === 'link') return /rel\s*=\s*["']canonical["']/i.test(attrs);
-  if (name === 'meta') {
-    return (
-      /name\s*=\s*["'](description|robots)["']/i.test(attrs) ||
-      /property\s*=\s*["']og:/i.test(attrs) ||
-      /name\s*=\s*["']twitter:/i.test(attrs)
-    );
-  }
-  return false;
-}
-
-/**
- * Strip the tags this script owns out of the shell's <head>, and report how many
- * went. The count is asserted by the caller: a shell that stopped containing a
- * <title> would otherwise silently produce pages with two of them.
- */
-function stripOwnedTags(html) {
-  const headEnd = html.indexOf('</head>');
-  if (headEnd === -1) throw new Error('dist/index.html has no </head> — is this a Vite build?');
-
-  let removed = 0;
-  const head = html.slice(0, headEnd).replace(TAG_RE, (match, tag, attrs, pair, pairAttrs) => {
-    const name = (tag ?? pair).toLowerCase();
-    if (!isOwnedTag(name, tag ? attrs : pairAttrs)) return match;
-    removed += 1;
-    return '';
-  });
-
-  // Collapse the blank lines the removals left behind.
-  return { html: head.replace(/\r?\n[ \t]*(?=\r?\n)/g, '') + html.slice(headEnd), removed };
-}
-
-/** Render one page's head tags as HTML, in a stable order. */
-function renderMeta(meta, jsonLd) {
-  const lines = [`<title>${esc(meta.title)}</title>`];
-  for (const [name, content] of Object.entries(meta.names)) {
-    lines.push(`<meta name="${name}" content="${esc(content)}" />`);
-  }
-  for (const [property, content] of Object.entries(meta.properties)) {
-    lines.push(`<meta property="${property}" content="${esc(content)}" />`);
-  }
-  lines.push(`<link rel="canonical" href="${esc(meta.canonical)}" />`);
-  if (jsonLd) {
-    // The id is what useSeo replaces on hydration, so the page never ends up
-    // holding two structured-data blocks.
-    lines.push(
-      '<script type="application/ld+json" id="aradhya-jsonld">' +
-        // </script> cannot appear inside a script element, and JSON has no other
-        // way out of it.
-        JSON.stringify(jsonLd).replace(/</g, '\\u003c') +
-        '</script>',
-    );
-  }
-  return lines.map((line) => `    ${line}`).join('\n');
-}
-
-/** Where a route's file goes: '/' → dist/index.html, '/about' → dist/about/index.html. */
-function outputPathFor(pathname) {
-  if (pathname === '/') return shellPath;
-  return join(distDir, ...pathname.replace(/^\/+|\/+$/g, '').split('/'), 'index.html');
+/** Where a route's file goes, for this build's dist/. */
+function outputPath(pathname) {
+  return outputPathFor(distDir, pathname);
 }
 
 /**
@@ -183,6 +115,22 @@ async function collectPages() {
   return { pages, missing };
 }
 
+/**
+ * The SSR renderer, or null when it has not been built.
+ *
+ * Kept optional so `npm run prerender` still works on its own — it degrades to
+ * the metadata-only behaviour this script had before bodies were rendered, which
+ * is a fine outcome for a quick re-run, and a loud one for a real build.
+ */
+async function loadRenderer() {
+  try {
+    return await import('../dist-ssr/entry-server.js');
+  } catch (error) {
+    if (error?.code !== 'ERR_MODULE_NOT_FOUND') throw error;
+    return null;
+  }
+}
+
 const shell = readFileSync(shellPath, 'utf8');
 const { html: stripped, removed } = stripOwnedTags(shell);
 
@@ -194,26 +142,123 @@ if (removed === 0) {
   );
 }
 
-const marker = stripped.indexOf('</head>');
-const before = stripped.slice(0, marker).replace(/[ \t]+$/, '');
-const after = stripped.slice(marker);
+/**
+ * Cut the shell into the pieces every page is assembled from, and get back the
+ * function that puts one together. Throws if the shell no longer has the
+ * markers this script writes into — see scripts/lib/head.mjs.
+ */
+const assemble = shellTemplate(stripped);
+
+const renderer = await loadRenderer();
 const { pages, missing } = await collectPages();
+
+/** Pages that got metadata but no body, and why. */
+const shellOnly = [];
+let bodyCount = 0;
+let payloadBytes = 0;
 
 for (const page of pages) {
   const meta = buildMeta({ ...page.meta, pathname: page.pathname });
-  const html = `${before}${renderMeta(meta, page.jsonLd)}\n  ${after}`;
+  const head = renderMeta(meta, page.jsonLd);
 
-  const outFile = outputPathFor(page.pathname);
+  let body = '';
+  let payload = '';
+
+  if (renderer) {
+    let result;
+    try {
+      result = await renderer.renderRoute(page.pathname);
+    } catch (error) {
+      // One page that throws should cost that page its body, not the build its
+      // other 253 pages. The reason is reported at the end.
+      shellOnly.push({ pathname: page.pathname, why: `threw: ${error.message}` });
+      result = null;
+    }
+
+    if (result) {
+      const json = renderer.preloadScript(result.preload);
+      const bytes = Buffer.byteLength(json, 'utf8');
+
+      if (result.suspended) {
+        shellOnly.push({ pathname: page.pathname, why: 'a route chunk never resolved' });
+      } else if (!result.reproducible) {
+        // The page rendered, but rendering it again from only the inlined data
+        // produced different HTML — so the browser could not reproduce this
+        // markup and React would discard it. Shipping the shell is the correct
+        // outcome; this is a bug to fix, not a limit to accept.
+        shellOnly.push({ pathname: page.pathname, why: 'inlined data did not reproduce the body' });
+      } else if (bytes > MAX_PRELOAD_BYTES) {
+        shellOnly.push({
+          pathname: page.pathname,
+          why: `payload ${(bytes / 1024).toFixed(0)} kB over the ${MAX_PRELOAD_BYTES / 1024} kB budget`,
+        });
+      } else {
+        body = result.html;
+        payload = `\n    ${json}`;
+        bodyCount += 1;
+        payloadBytes += bytes;
+      }
+    }
+  }
+
+  const outFile = outputPath(page.pathname);
   mkdirSync(dirname(outFile), { recursive: true });
-  writeFileSync(outFile, html, 'utf8');
+  writeFileSync(outFile, assemble(head, body, payload), 'utf8');
 }
+
+/**
+ * dist/404.html — the SPA fallback.
+ *
+ * This site is a client-rendered SPA, so a URL that has no prerendered file
+ * (`/search`, a mistyped path, a slug removed from the content set) still has to
+ * reach the router. Most static hosts serve 404.html for an unmatched path, and
+ * because the shell boots the router the visitor lands on the real 404 page
+ * rather than the host's.
+ *
+ * Deliberately body-less, unlike every other page here: this one file answers
+ * every unmatched URL, so any body it carried would be the wrong page's content
+ * for all but one of them.
+ *
+ * Marked noindex, since a crawler that gets here reached a URL that does not
+ * exist, and given no canonical — for the same reason. useSeo sets both
+ * correctly once the router resolves. A host that supports rewrites
+ * (`try_files $uri $uri/ /index.html`) can use those instead; this file is the
+ * fallback that needs no configuration.
+ */
+const notFoundMeta = buildMeta({
+  title: 'Not found',
+  description: 'That page doesn’t exist. Search Aradhya’s library instead.',
+  noindex: true,
+});
+writeFileSync(
+  join(distDir, '404.html'),
+  assemble(renderMeta(notFoundMeta, null, { canonical: false }), '', ''),
+  'utf8',
+);
 
 const staticCount = staticSitemapEntries.length;
 console.log(
   `prerender — ${pages.length} pages ` +
-    `(${staticCount} static, ${pages.length - staticCount} content), ` +
+    `(${staticCount} static, ${pages.length - staticCount} content) + 404.html, ` +
     `${removed} shell tags replaced → dist/`,
 );
+
+if (!renderer) {
+  console.warn(
+    'prerender — no dist-ssr/ bundle, so these pages carry metadata only and no ' +
+      'body. Run `npm run build:ssr` (or `npm run build`) for the full output.',
+  );
+} else {
+  console.log(
+    `prerender — ${bodyCount}/${pages.length} pages with rendered bodies, ` +
+      `${(payloadBytes / 1024).toFixed(0)} kB of inlined data ` +
+      `(avg ${(payloadBytes / Math.max(bodyCount, 1) / 1024).toFixed(1)} kB/page)`,
+  );
+  for (const { pathname, why } of shellOnly) {
+    console.warn(`prerender — ${pathname}: shell only, ${why}`);
+  }
+}
+
 if (missing.length) {
   console.warn(
     `prerender — ${missing.length} slug(s) in the content set do not resolve to a ` +

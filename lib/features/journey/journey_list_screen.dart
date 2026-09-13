@@ -208,13 +208,13 @@ class _PathCard extends ConsumerWidget {
               Row(
                 children: [
                   const Icon(Icons.check_circle_rounded,
-                      size: 18, color: Color(0xFF25533F)),
+                      size: 18, color: Color(0xFF5E8C74)),
                   const SizedBox(width: 6),
                   Text(hindi ? 'पूर्ण' : 'Completed',
                       style: const TextStyle(
                           fontSize: 12.5,
                           fontWeight: FontWeight.w700,
-                          color: Color(0xFF25533F))),
+                          color: Color(0xFF5E8C74))),
                 ],
               ),
             ],

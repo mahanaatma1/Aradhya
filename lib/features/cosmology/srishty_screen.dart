@@ -48,7 +48,7 @@ class _SrishtyScreenState extends ConsumerState<SrishtyScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFFFDF8F5), Color(0xFFF6EADF), Color(0xFFEFE0D2)],
+            colors: [Color(0xFFF7F5F2), Color(0xFFF6EADF), Color(0xFFEFE0D2)],
           ),
         ),
         child: SafeArea(
@@ -341,7 +341,7 @@ class _RailPainter extends CustomPainter {
     required this.hollow,
   });
 
-  static const _gold = Color(0xFFC08A2E);
+  static const _gold = Color(0xFFC97A3E);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -359,7 +359,7 @@ class _RailPainter extends CustomPainter {
     final r = isEarth ? 8.0 : 5.5;
     if (hollow) {
       canvas.drawCircle(Offset(x, nodeY), r,
-          Paint()..color = const Color(0xFFFDF8F5));
+          Paint()..color = const Color(0xFFF7F5F2));
       canvas.drawCircle(
           Offset(x, nodeY),
           r,

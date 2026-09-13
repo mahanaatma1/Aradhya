@@ -4,7 +4,7 @@ import PageHeader from '../components/ui/PageHeader.jsx';
 import Section from '../components/ui/Section.jsx';
 import Reveal from '../components/ui/Reveal.jsx';
 import { RowSkeleton } from '../components/ui/States.jsx';
-import { getSources, getStats } from '../services/contentService.js';
+import { getSources, getStats, allSync, contentKeys } from '../services/contentService.js';
 import { appConfig } from '../config/appConfig.js';
 import { PAGE_META } from '../config/seo.js';
 import { routes } from '../config/routes.js';
@@ -39,7 +39,9 @@ const PRINCIPLES = [
 export default function About() {
   useSeo(PAGE_META[routes.about]);
 
-  const { data, loading } = useAsync(() => Promise.all([getStats(), getSources()]), []);
+  const { data, loading } = useAsync(() => allSync([getStats(), getSources()]), [], {
+    preloadKey: contentKeys.aboutPage,
+  });
   const [stats, sources] = data ?? [];
 
   return (

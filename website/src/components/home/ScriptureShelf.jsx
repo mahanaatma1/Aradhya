@@ -4,7 +4,7 @@ import ScriptureCard from '../cards/ScriptureCard.jsx';
 import CardRail from '../ui/CardRail.jsx';
 import Reveal from '../ui/Reveal.jsx';
 import Section from '../ui/Section.jsx';
-import { getCollections, getTrivia } from '../../services/contentService.js';
+import { getCollections, getTrivia, allSync, contentKeys } from '../../services/contentService.js';
 import { routes } from '../../config/routes.js';
 import useAsync from '../../hooks/useAsync.js';
 
@@ -18,8 +18,9 @@ import useAsync from '../../hooks/useAsync.js';
  */
 export default function ScriptureShelf() {
   const { data, loading } = useAsync(
-    () => Promise.all([getCollections(), getTrivia(1)]),
+    () => allSync([getCollections(), getTrivia(1)]),
     [],
+    { preloadKey: contentKeys.homeScriptures },
   );
 
   const [collections, trivia] = data ?? [];

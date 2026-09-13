@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../app/theme/app_colors.dart';
 import '../../app/theme/app_theme.dart';
 import '../../app/theme/category_colors.dart';
 import '../../core/providers/app_providers.dart';
@@ -533,19 +534,23 @@ class _InterpretationPanel extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color(0xFFF7ECDC).withValues(alpha: 0.55),
+        color: scheme.brightness == Brightness.dark
+            ? scheme.surfaceContainerHighest.withValues(alpha: 0.55)
+            : AppColors.kraft.withValues(alpha: 0.55),
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: const Color(0xFFB48B3E).withValues(alpha: 0.3)),
+        border: Border.all(color: AppColors.terracotta.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(title,
-              style: const TextStyle(
+              style: TextStyle(
                   fontSize: 12,
                   letterSpacing: 0.6,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xFF8A6A2E))),
+                  color: scheme.brightness == Brightness.dark
+                      ? AppColors.goldBright
+                      : const Color(0xFF8A6A2E))),
           const SizedBox(height: 6),
           Text(body,
               style: TextStyle(

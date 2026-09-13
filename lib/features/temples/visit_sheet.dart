@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'passport_providers.dart';
 
-const _gold = Color(0xFFC08A2E);
+const _gold = Color(0xFFC97A3E);
 
 /// Record what a visit was like: when, a note, and how it felt.
 ///

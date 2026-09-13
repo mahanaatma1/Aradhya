@@ -9,7 +9,7 @@ import 'passport_providers.dart';
 import 'passport_stamp.dart';
 
 const _accent = Color(0xFF8A6A4F);
-const _gold = Color(0xFFC08A2E);
+const _gold = Color(0xFFC97A3E);
 
 /// One collection: the temples of a traditional set, visited or not.
 class CollectionScreen extends ConsumerWidget {

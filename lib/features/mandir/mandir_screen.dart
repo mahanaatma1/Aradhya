@@ -233,7 +233,7 @@ class _MandirScreenState extends ConsumerState<MandirScreen>
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFF2A1206), Color(0xFF6E1F10), Color(0xFF3A1608)],
+            colors: [Color(0xFF22110D), Color(0xFF4A251F), Color(0xFF3A1A16)],
           ),
         ),
         child: SafeArea(

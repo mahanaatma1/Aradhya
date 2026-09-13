@@ -10,7 +10,7 @@ import 'passport_sections.dart';
 import 'passport_stamp.dart';
 
 const _accent = Color(0xFF8A6A4F);
-const _gold = Color(0xFFC08A2E);
+const _gold = Color(0xFFC97A3E); // brass foil, was gold-leaf
 const _ink = Color(0xFF3A2A18);
 
 /// The whole journey, oldest visit at the bottom.

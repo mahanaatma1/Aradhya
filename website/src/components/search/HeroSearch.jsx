@@ -5,7 +5,7 @@ import Button from '../ui/Button.jsx';
 import { Chip } from '../ui/Chip.jsx';
 import Mandala from '../art/Mandala.jsx';
 import { EXAMPLE_QUERIES } from '../../services/searchService.js';
-import { getStats } from '../../services/contentService.js';
+import { getStats, contentKeys } from '../../services/contentService.js';
 import { routes } from '../../config/routes.js';
 import { appConfig } from '../../config/appConfig.js';
 import useAsync from '../../hooks/useAsync.js';
@@ -19,7 +19,7 @@ import useAsync from '../../hooks/useAsync.js';
  * opacity behind a soft radial fade.
  */
 export default function HeroSearch() {
-  const { data: stats } = useAsync(() => getStats(), []);
+  const { data: stats } = useAsync(() => getStats(), [], { preloadKey: contentKeys.stats });
 
   return (
     <section className="relative overflow-hidden pb-16 pt-28 sm:pb-20 sm:pt-32 lg:pt-40">

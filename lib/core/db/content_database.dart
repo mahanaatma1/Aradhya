@@ -50,7 +50,7 @@ class ContentDatabase {
   /// Version of the bundled `gyan.sqlite`. Rewritten automatically by
   /// `content/tools/build.py`; do not edit by hand, and keep the trailing
   /// marker comment intact — the build script matches on it.
-  static const gyanAssetVersion = '1.0.0+20260906.3ccebd2'; // BUILD_STAMP:gyan
+  static const gyanAssetVersion = '1.0.0+20260912.2861beb'; // BUILD_STAMP:gyan
 
   static Future<ContentDatabase> open() async {
     final dir = await getApplicationDocumentsDirectory();
@@ -68,14 +68,32 @@ class ContentDatabase {
     // legacy corpus rather than taking the whole app down.
     var attached = false;
     try {
-      final gyanPath = await _materialise(
-        dir: dir.path,
-        asset: _gyanAsset,
-        fileName: _gyanFile,
-        version: gyanAssetVersion,
-      );
-      await db.execute('ATTACH DATABASE ? AS gyan', [gyanPath]);
-      attached = true;
+      // sqflite's `openReadOnlyDatabase` is single-instance per path: if the
+      // native connection for `contentPath` is still alive from a previous
+      // `open()` (the app process survives across what looks like a fresh
+      // launch — Android keeps it around unless force-stopped, and hot
+      // restart during development does the same), this call returns that
+      // *same* connection, which already has `gyan` attached. Attaching it
+      // again throws "database gyan is already in use" and — because this
+      // whole block is deliberately degrade-not-crash — every gyan-backed
+      // feature (festivals, search, related content, the whole Gyan hub)
+      // then silently goes empty with nothing in the UI explaining why.
+      // Checking first makes re-opening idempotent instead of failing.
+      final already = await db.rawQuery('PRAGMA database_list');
+      final hasGyan =
+          already.any((row) => (row['name'] as String?) == 'gyan');
+      if (hasGyan) {
+        attached = true;
+      } else {
+        final gyanPath = await _materialise(
+          dir: dir.path,
+          asset: _gyanAsset,
+          fileName: _gyanFile,
+          version: gyanAssetVersion,
+        );
+        await db.execute('ATTACH DATABASE ? AS gyan', [gyanPath]);
+        attached = true;
+      }
     } catch (e) {
       debugPrint('ContentDatabase: gyan.sqlite unavailable ($e)');
     }

@@ -166,7 +166,15 @@ def describe(slug: str, kind: str) -> tuple[str, str]:
     en_parts.append(base[0])
     hi_parts.append(base[1])
 
-    ps = [title_of[p] for p in parents.get(slug, []) if p in title_of][:2]
+    # `dict.fromkeys` is load-bearing, not tidiness. `parents[slug]` is fed by
+    # two branches above -- P22/P25 inverted (`dasharatha father_of rama`) and
+    # P40 direct (`rama child_of dasharatha`) -- and Wikidata states both
+    # directions, so a single father arrives twice and read "Child of Dasharatha
+    # and Dasharatha." That was in 41 shipped descriptions. The spouse path
+    # below already deduplicated; this one did not, which is why only the parent
+    # sentence doubled.
+    ps = [title_of[p] for p in dict.fromkeys(parents.get(slug, []))
+          if p in title_of][:2]
     if ps:
         en_parts.append("Child of " + " and ".join(p[0] for p in ps) + ".")
         hi_parts.append(" \u0914\u0930 ".join(p[1] for p in ps)

@@ -8,11 +8,11 @@ import '../../core/providers/app_providers.dart';
 import '../../core/user/visited.dart';
 import '../../shared/widgets/source_chip.dart';
 import '../related/related_rail.dart';
+import 'temple_illustrations.dart';
 import 'temple_map.dart';
 import 'temple_models.dart';
 import 'temple_providers.dart';
 import 'visit_sheet.dart';
-import 'temple_style.dart';
 
 /// One anchored section of the detail page.
 class _Section {
@@ -22,9 +22,9 @@ class _Section {
   const _Section(this.id, this.label, this.child);
 }
 
-/// Temple detail — reference-styled visitor guide with a tinted hero, quick
-/// facts, and a sticky pill tab bar that scroll-spies the sections below and
-/// auto-scrolls to a section when its pill is tapped.
+/// Temple detail — reference-styled visitor guide with an illustrated cover
+/// hero, quick facts, and a sticky pill tab bar that scroll-spies the
+/// sections below and auto-scrolls to a section when its pill is tapped.
 class TempleDetailScreen extends ConsumerStatefulWidget {
   final Temple temple;
   const TempleDetailScreen({super.key, required this.temple});
@@ -97,7 +97,6 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
     final hi = ref.watch(isHindiProvider);
     final visited = ref.watch(visitedProvider).contains(t.id);
     final scheme = Theme.of(context).colorScheme;
-    final tint = templeTint(t);
     final hasMap = (t.mapsLink != null && t.mapsLink!.isNotEmpty) ||
         (t.lat != null && t.lon != null);
 
@@ -107,38 +106,32 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
 
     return Scaffold(
       body: SafeArea(
+        top: false,
         child: CustomScrollView(
           controller: _controller,
           slivers: [
+            // The illustrated cover doubles as the top bar's backdrop — back
+            // and share sit directly on the art, matching how a real detail
+            // page's hero photo works, instead of a separate icon row above a
+            // separately-tinted box (which is what put mismatched 12px/16px
+            // insets on screen as a visible seam between the two).
             SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(12, 8, 12, 4),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    _RoundBtn(
-                      icon: Icons.arrow_back_ios_new_rounded,
-                      onTap: () => Navigator.of(context).maybePop(),
-                    ),
-                    if (hasMap)
-                      _RoundBtn(
-                        icon: Icons.ios_share_rounded,
-                        color: scheme.secondary,
-                        onTap: () => _openMap(context, t),
-                      ),
-                  ],
-                ),
+              child: _CoverHero(
+                temple: t,
+                hi: hi,
+                hasMap: hasMap,
+                topInset: MediaQuery.of(context).padding.top,
+                onBack: () => Navigator.of(context).maybePop(),
+                onMap: hasMap ? () => _openMap(context, t) : null,
               ),
             ),
 
             // A visit is worth more than a tick. Once marked, offer the note
             // and rating the passport can show -- full width, on its own row.
-            // It cannot live in the row of round buttons above: a button asked
-            // for Size.fromHeight there is asked for infinite width.
             if (visited)
               SliverToBoxAdapter(
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                  padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
                   child: OutlinedButton.icon(
                     onPressed: () => showVisitSheet(context, ref, t.id, hi),
                     icon: const Icon(Icons.edit_note_rounded, size: 18),
@@ -153,13 +146,7 @@ class _TempleDetailScreenState extends ConsumerState<TempleDetailScreen> {
               ),
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 6, 16, 12),
-                child: _Hero(temple: t, tint: tint, hi: hi, hasMap: hasMap),
-              ),
-            ),
-            SliverToBoxAdapter(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
+                padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
                 child: _QuickFacts(temple: t, hi: hi),
               ),
             ),
@@ -585,141 +572,186 @@ BoxDecoration _cardDeco(BuildContext context) {
   );
 }
 
-class _RoundBtn extends StatelessWidget {
-  final IconData icon;
-  final Color? color;
-  final VoidCallback onTap;
-  const _RoundBtn({required this.icon, this.color, required this.onTap});
+/// The detail page's illustrated cover — the drawn architecture-family
+/// silhouette fills the banner, with back/share sitting directly on it (so
+/// there is one continuous surface, not a floating icon row above a
+/// separately-inset box) and the name/deity/tags overlaid at the bottom, the
+/// same overlay pattern the directory's own cards use.
+class _CoverHero extends StatelessWidget {
+  final Temple temple;
+  final bool hi;
+  final bool hasMap;
+  final double topInset;
+  final VoidCallback onBack;
+  final VoidCallback? onMap;
+  const _CoverHero({
+    required this.temple,
+    required this.hi,
+    required this.hasMap,
+    required this.topInset,
+    required this.onBack,
+    this.onMap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final archetype = TempleArchetype.of(temple);
+    final sky = templeSkyColors(temple);
+    return SizedBox(
+      height: 300 + topInset,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          TempleIllustration(archetype: archetype, colors: sky),
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withValues(alpha: 0.32),
+                  Colors.black.withValues(alpha: 0),
+                  Colors.black.withValues(alpha: 0.7),
+                ],
+                stops: const [0.0, 0.32, 1.0],
+              ),
+            ),
+          ),
+          Positioned(
+            left: 12,
+            right: 12,
+            top: topInset + 8,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _CoverBtn(
+                    icon: Icons.arrow_back_ios_new_rounded, onTap: onBack),
+                if (hasMap)
+                  _CoverBtn(icon: Icons.ios_share_rounded, onTap: onMap!),
+              ],
+            ),
+          ),
+          Positioned(
+            left: 20,
+            right: 20,
+            bottom: 20,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(temple.name(hi),
+                    style: const TextStyle(
+                        fontFamily: AppFonts.display,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 26,
+                        height: 1.1,
+                        color: Color(0xFFFFF6EE))),
+                if (temple.deity(hi) != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 4),
+                    child: Text(temple.deity(hi)!,
+                        style: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xFFFBE6D6))),
+                  ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    const Icon(Icons.place_rounded,
+                        size: 15, color: Color(0xFFFBE6D6)),
+                    const SizedBox(width: 5),
+                    Expanded(
+                      child: Text(
+                        temple.place.isNotEmpty
+                            ? temple.place
+                            : (temple.locationEn ?? ''),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                            fontSize: 14, color: Color(0xFFFBE6D6)),
+                      ),
+                    ),
+                    if (hasMap)
+                      TextButton.icon(
+                        onPressed: onMap,
+                        icon: const Icon(Icons.map_rounded,
+                            size: 16, color: Color(0xFFFFF6EE)),
+                        label: Text(hi ? 'नक्शा' : 'Map',
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFFFFF6EE))),
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.white.withValues(alpha: 0.16),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 12, vertical: 8),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(999)),
+                        ),
+                      ),
+                  ],
+                ),
+                if (temple.tags.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final tag in temple.tags.take(3))
+                        _CoverTagChip(tag: tag)
+                    ],
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _CoverBtn extends StatelessWidget {
+  final IconData icon;
+  final VoidCallback onTap;
+  const _CoverBtn({required this.icon, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
     return Material(
-      color: scheme.surface,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      elevation: 1.5,
-      shadowColor: Colors.black.withValues(alpha: 0.15),
+      color: Colors.black.withValues(alpha: 0.28),
+      shape: const CircleBorder(),
+      clipBehavior: Clip.antiAlias,
       child: InkWell(
-        borderRadius: BorderRadius.circular(14),
         onTap: onTap,
         child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Icon(icon, size: 20, color: color ?? scheme.onSurface),
+          padding: const EdgeInsets.all(10),
+          child: Icon(icon, size: 19, color: const Color(0xFFFFF6EE)),
         ),
       ),
     );
   }
 }
 
-class _Hero extends StatelessWidget {
-  final Temple temple;
-  final Color tint;
-  final bool hi;
-  final bool hasMap;
-  const _Hero(
-      {required this.temple,
-      required this.tint,
-      required this.hi,
-      required this.hasMap});
+/// A tag chip tuned for sitting directly on the illustrated cover — pale
+/// glass rather than [TagChip]'s surface-toned pill, which read as a muddy
+/// smear over the artwork.
+class _CoverTagChip extends StatelessWidget {
+  final String tag;
+  const _CoverTagChip({required this.tag});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 5),
       decoration: BoxDecoration(
-        color: tint.withValues(alpha: 0.18),
-        borderRadius: BorderRadius.circular(22),
+        color: Colors.white.withValues(alpha: 0.2),
+        borderRadius: BorderRadius.circular(999),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: 60,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: tint,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: const Icon(Icons.temple_hindu_rounded,
-                    color: Color(0xFFFFF8EF), size: 32),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(temple.name(hi),
-                        style: const TextStyle(
-                            fontFamily: AppFonts.display,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 24,
-                            height: 1.1)),
-                    if (temple.deity(hi) != null)
-                      Padding(
-                        padding: const EdgeInsets.only(top: 4),
-                        child: Text(temple.deity(hi)!,
-                            style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w600,
-                                color: tint)),
-                      ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 18),
-          Row(
-            children: [
-              Expanded(
-                child: Row(
-                  children: [
-                    Container(
-                      width: 9,
-                      height: 9,
-                      decoration:
-                          BoxDecoration(color: tint, shape: BoxShape.circle),
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        temple.place.isNotEmpty
-                            ? temple.place
-                            : (temple.locationEn ?? ''),
-                        style: const TextStyle(fontSize: 15),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              if (hasMap)
-                FilledButton(
-                  onPressed: () => _openMap(context, temple),
-                  style: FilledButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.primary,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 12),
-                  ),
-                  child: Text(hi ? 'नक्शे में खोलें' : 'Open in Maps',
-                      style: const TextStyle(fontWeight: FontWeight.w700)),
-                ),
-            ],
-          ),
-          if (temple.tags.isNotEmpty) ...[
-            const SizedBox(height: 16),
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              children: [
-                for (final tag in temple.tags.take(4)) TagChip(tag: tag)
-              ],
-            ),
-          ],
-        ],
-      ),
+      child: Text(tagLabel(tag),
+          style: const TextStyle(
+              fontSize: 11.5,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFFFFF6EE))),
     );
   }
 }

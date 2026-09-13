@@ -1,6 +1,6 @@
 import KnowledgeGraph from '../graph/KnowledgeGraph.jsx';
 import Section from '../ui/Section.jsx';
-import { getStats } from '../../services/contentService.js';
+import { getStats, contentKeys } from '../../services/contentService.js';
 import useAsync from '../../hooks/useAsync.js';
 
 /**
@@ -10,7 +10,7 @@ import useAsync from '../../hooks/useAsync.js';
  * supplies the framing and the counted line underneath it.
  */
 export default function Connections() {
-  const { data: stats } = useAsync(() => getStats(), []);
+  const { data: stats } = useAsync(() => getStats(), [], { preloadKey: contentKeys.stats });
 
   return (
     <Section

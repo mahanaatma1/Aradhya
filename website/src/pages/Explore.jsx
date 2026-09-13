@@ -4,7 +4,7 @@ import EntityCard from '../components/cards/EntityCard.jsx';
 import PageHeader from '../components/ui/PageHeader.jsx';
 import Chip from '../components/ui/Chip.jsx';
 import { CardGridSkeleton, EmptyState, ErrorState } from '../components/ui/States.jsx';
-import { getFacetCounts, listRecords } from '../services/contentService.js';
+import { getFacetCounts, listRecords, allSync, contentKeys } from '../services/contentService.js';
 import { FACETS, facetLabel } from '../config/taxonomy.js';
 import { PAGE_META } from '../config/seo.js';
 import { routes } from '../config/routes.js';
@@ -36,8 +36,9 @@ export default function Explore() {
   );
 
   const { data, loading, error, reload } = useAsync(
-    () => Promise.all([listRecords({ facet, sort }), getFacetCounts()]),
+    () => allSync([listRecords({ facet, sort }), getFacetCounts()]),
     [facet, sort],
+    { preloadKey: contentKeys.explore(facet, sort) },
   );
   const [records, counts] = data ?? [];
 

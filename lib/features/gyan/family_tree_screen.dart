@@ -714,7 +714,7 @@ class _PersonCard extends StatelessWidget {
         constraints: const BoxConstraints(minWidth: 96, maxWidth: 150),
         padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 9),
         decoration: BoxDecoration(
-          color: AppColors.cardLight,
+          color: scheme.surface,
           borderRadius: BorderRadius.circular(13),
           border: Border.all(color: AppColors.gold.withValues(alpha: 0.45)),
         ),
@@ -726,12 +726,12 @@ class _PersonCard extends StatelessWidget {
               textAlign: TextAlign.center,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
+              style: TextStyle(
                 fontFamily: AppFonts.display,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
                 height: 1.15,
-                color: AppColors.inkLight,
+                color: scheme.onSurface,
               ),
             ),
             if (relation.tradition != null && relation.tradition!.isNotEmpty)

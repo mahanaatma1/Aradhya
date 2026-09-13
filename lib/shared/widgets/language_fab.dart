@@ -13,8 +13,8 @@ import 'stitched_border.dart';
 class LanguageFab extends ConsumerWidget {
   const LanguageFab({super.key});
 
-  // Cream used for the stitch + label, matching the Verse-of-the-Day card.
-  static const _cream = Color(0xFFFDEEDE);
+  // Warm paper used for the stitch + label, matching the Verse-of-the-Day card.
+  static const _cream = Color(0xFFF7EFE6);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

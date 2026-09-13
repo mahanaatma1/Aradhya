@@ -47,7 +47,7 @@ class _YugaScreenState extends ConsumerState<YugaScreen> {
 
   /// Gold → bronze → copper → ash. The order is the point.
   static const _ageColors = [
-    Color(0xFFD9A441),
+    Color(0xFFC97A3E),
     Color(0xFFC07A3E),
     Color(0xFF9C5A3C),
     Color(0xFF6E5A4E),
@@ -262,14 +262,14 @@ class _WheelPainter extends CustomPainter {
 
     // The hub, punched out so the wheel reads as a ring of ages.
     canvas.drawCircle(centre, radius * 0.42,
-        Paint()..color = const Color(0xFFFDF8F5));
+        Paint()..color = const Color(0xFFF7F5F2));
     canvas.drawCircle(
         centre,
         radius * 0.42,
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1.2
-          ..color = const Color(0xFFD9A441).withValues(alpha: 0.5));
+          ..color = const Color(0xFFC97A3E).withValues(alpha: 0.5));
   }
 
   @override
@@ -577,7 +577,7 @@ class _ZoomOut extends StatelessWidget {
                   height: 26,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFD9A441).withValues(alpha: 0.14),
+                    color: const Color(0xFFC97A3E).withValues(alpha: 0.14),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text('${i + 1}',

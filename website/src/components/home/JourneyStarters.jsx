@@ -1,7 +1,7 @@
 import JourneyCard from '../cards/JourneyCard.jsx';
 import CardRail from '../ui/CardRail.jsx';
 import Section from '../ui/Section.jsx';
-import { getJourneys } from '../../services/contentService.js';
+import { getJourneys, contentKeys } from '../../services/contentService.js';
 import { routes } from '../../config/routes.js';
 import useAsync from '../../hooks/useAsync.js';
 
@@ -15,7 +15,9 @@ import useAsync from '../../hooks/useAsync.js';
  * becoming a two-up grid that leaves one orphan.
  */
 export default function JourneyStarters() {
-  const { data: journeys, loading } = useAsync(() => getJourneys(3), []);
+  const { data: journeys, loading } = useAsync(() => getJourneys(3), [], {
+    preloadKey: contentKeys.homeJourneys,
+  });
 
   const rail = {
     label: 'Journeys',

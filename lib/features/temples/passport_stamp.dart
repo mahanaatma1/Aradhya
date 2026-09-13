@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 
 const kStampInk = Color(0xFF8A3B2A);
-const kStampGold = Color(0xFFC08A2E);
+const kStampGold = Color(0xFFC97A3E);
 const kPaper = Color(0xFFF7EDDF);
 const kPaperDeep = Color(0xFFEADCC7);
 

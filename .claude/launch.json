@@ -8,6 +8,12 @@
       "port": 5180
     },
     {
+      "name": "aradhya-website-built",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "serve", "--prefix", "website"],
+      "port": 5183
+    },
+    {
       "name": "art-sheet",
       "runtimeExecutable": "py",
       "runtimeArgs": ["-m", "http.server", "5181", "--directory", "assets/art"],

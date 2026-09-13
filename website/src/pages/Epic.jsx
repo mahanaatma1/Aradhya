@@ -8,7 +8,7 @@ import Chip from '../components/ui/Chip.jsx';
 import Glyph from '../components/art/Glyph.jsx';
 import { ContinueInAradhya } from '../components/app/MobileAppCTA.jsx';
 import { CardSkeleton, EmptyState, ErrorState, RowSkeleton } from '../components/ui/States.jsx';
-import { getEpic, listRecords } from '../services/contentService.js';
+import { getEpic, listRecords, allSync, contentKeys } from '../services/contentService.js';
 import { appConfig } from '../config/appConfig.js';
 import { EPICS } from '../config/epics.js';
 import useAsync from '../hooks/useAsync.js';
@@ -29,8 +29,9 @@ export default function Epic({ epic }) {
   const config = EPICS[epic];
 
   const { data, loading, error, reload } = useAsync(
-    () => Promise.all([getEpic(epic), listRecords({ tag: epic, kinds: ['entity'] })]),
+    () => allSync([getEpic(epic), listRecords({ tag: epic, kinds: ['entity'] })]),
     [epic],
+    { preloadKey: contentKeys.epicPage(epic) },
   );
   const [structure, people] = data ?? [];
 
@@ -54,7 +55,7 @@ export default function Epic({ epic }) {
     () =>
       structure
         ? [
-            `${structure.books.length} books`,
+            `${structure.bookCount} books`,
             `${structure.arcCount} arcs`,
             `${structure.sceneCount} events`,
           ]

@@ -437,6 +437,48 @@ def check_duplicates(rows: list[Row], rep: Report) -> None:
                 alias_owner[f] = r
 
 
+def check_collision_suffix(rows: list[Row], rep: Report) -> None:
+    """An importer-generated `<base>-N` slug beside an existing `<base>` (error).
+
+    This is the one defect class `duplicate-title` above is structurally unable
+    to see, because that check buckets by kind. The Wikidata pull stamped every
+    row it imported `kind: human`, so `Rama` the deity and `Rama` the human went
+    into different buckets and the collision passed. Twelve of these shipped.
+
+    The `-N` suffix is not a naming choice; it is the importer saying "this slug
+    was taken" and moving on. Every consequence of that flowed downstream:
+
+      * Rama was split in half. Genealogy -- father, sons, four siblings -- sat
+        on `rama-2` at importance 3, while the teaching, dynasty and avatara
+        edges sat on `rama` at importance 1. The canonical Rama's family tree
+        showed no family, and the P0 degree count under-reported both halves.
+      * `kali` was listed as a zero-degree P0 entity and blamed on a missing
+        source. Its eight edges existed, on `kali-2`.
+      * `gandiva-2` was a bow filed as `human`; `lanka-2` was an island filed as
+        `human`. The kind came from the importer, not from the figure.
+
+    A suffix pair is *either* one figure split in two (merge) *or* two figures
+    that share a name (disambiguate the titles, drop the counter). Both are
+    fine outcomes and neither is decidable here -- Q1580107 (कलि, "demon") and
+    Q14589610 vs Q760003 (two of Bhadra's namesakes) turned out to be genuine
+    homonyms, and merging them would have been the worse error. So this is an
+    error rather than a warning: it demands a human decision, and the point is
+    that it cannot be left undecided.
+    """
+    slugs = {r.slug for r in rows if r.slug}
+    for r in rows:
+        m = re.fullmatch(r"(.+?)-(\d+)", r.slug or "")
+        if not m or m.group(1) not in slugs:
+            continue
+        base = m.group(1)
+        rep.add("error", "collision-suffix",
+                f"slug '{r.slug}' is an importer collision counter beside "
+                f"'{base}', which also exists -- merge them if they are one "
+                f"figure, or give each a distinguishing slug and title if they "
+                f"are namesakes, but do not ship the counter",
+                file=r.rel, line=r.line, module=r.module)
+
+
 def check_module_rules(rows: list[Row], rep: Report) -> None:
     """9. vidya caution required. 10. festival region required.
     12. relation inverse materialisable (warning)."""
@@ -932,6 +974,7 @@ def run(strict: bool = False, skip_index_check: bool = False) -> Report:
         check_sources(rows, rep, known, registry)
         check_links(rows, rep)
         check_duplicates(rows, rep)
+        check_collision_suffix(rows, rep)
         check_module_rules(rows, rep)
         check_bilingual(rows, rep, strict)
         check_quick_summary(rows, rep, strict)

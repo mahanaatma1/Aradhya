@@ -207,7 +207,7 @@ class _ReflectionPanel extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFFFDF8F5),
+        color: const Color(0xFFF7F5F2),
         borderRadius: BorderRadius.circular(18),
       ),
       child: Column(

@@ -2,7 +2,7 @@ import TempleCard from '../cards/TempleCard.jsx';
 import CardRail from '../ui/CardRail.jsx';
 import Section from '../ui/Section.jsx';
 import { ContentNote } from '../ui/SourceNote.jsx';
-import { getTemples } from '../../services/contentService.js';
+import { getTemples, contentKeys } from '../../services/contentService.js';
 import { routes } from '../../config/routes.js';
 import useAsync from '../../hooks/useAsync.js';
 
@@ -16,7 +16,9 @@ import useAsync from '../../hooks/useAsync.js';
  * the end says so rather than implying a complete temple directory.
  */
 export default function TempleRail() {
-  const { data: temples, loading } = useAsync(() => getTemples(10), []);
+  const { data: temples, loading } = useAsync(() => getTemples(10), [], {
+    preloadKey: contentKeys.homeTemples,
+  });
 
   const rail = {
     label: 'Sacred places',

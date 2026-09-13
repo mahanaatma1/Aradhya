@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Glyph from '../art/Glyph.jsx';
 import { CardSkeleton } from '../ui/States.jsx';
 import { gradientFor, relationLabel } from '../../config/taxonomy.js';
-import { getGraphClusters } from '../../services/contentService.js';
+import { getGraphClusters, contentKeys } from '../../services/contentService.js';
 import { useMediaQuery } from '../../hooks/index.js';
 import useAsync from '../../hooks/useAsync.js';
 
@@ -69,7 +69,9 @@ function NodeChip({ record, relation, dimmed, onFocus, onBlur, small = false }) 
 }
 
 export default function KnowledgeGraph() {
-  const { data: clusters, loading } = useAsync(() => getGraphClusters(), []);
+  const { data: clusters, loading } = useAsync(() => getGraphClusters(), [], {
+    preloadKey: contentKeys.graph,
+  });
   const [which, setWhich] = useState(0);
   const [hovered, setHovered] = useState(-1);
   const wide = useMediaQuery('(min-width: 768px)');
