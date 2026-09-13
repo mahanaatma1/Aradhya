@@ -36,6 +36,9 @@ DateTime? _parse(String stamp) {
 /// Shared preference keys, kept in one place.
 class PrefKeys {
   PrefKeys._();
+  static const motionLevel = 'motion_level';
+  static const perfTier = 'perf_tier';
+  static const perfTierBuild = 'perf_tier_build';
   static const streakCount = 'streak_count';
   static const streakLast = 'streak_last';
   static const points = 'points'; // Punya — lifetime merit (never spent)

@@ -15,6 +15,7 @@ import 'core/user/user_prefs.dart';
 import 'features/astrology/sweph_ephemeris.dart';
 import 'l10n/app_localizations.dart';
 import 'shared/widgets/language_fab.dart';
+import 'ui/motion/motion_scope.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -180,11 +181,13 @@ class _DivyaVaaniAppState extends ConsumerState<DivyaVaaniApp> {
       // A global floating language switch on top of every content screen —
       // every screen is bilingual. Hidden on the splash & onboarding (which
       // have their own language step).
-      builder: (context, child) => Stack(
-        children: [
-          ?child,
-          const _LangFabOverlay(),
-        ],
+      builder: (context, child) => MotionScopeHost(
+        child: Stack(
+          children: [
+            ?child,
+            const _LangFabOverlay(),
+          ],
+        ),
       ),
     );
   }
