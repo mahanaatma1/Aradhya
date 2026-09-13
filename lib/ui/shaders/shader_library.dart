@@ -6,10 +6,10 @@ import '../motion/motion_scope.dart';
 
 /// Bundled fragment shaders (see pubspec `flutter: shaders:`).
 enum ShaderId {
-  utsavSky('shaders/utsav_sky.frag'),
-  goldShimmer('shaders/gold_shimmer.frag'),
-  glowBloom('shaders/glow_bloom.frag'),
-  stars('shaders/stars.frag');
+  utsavSky('assets/shaders/utsav_sky.frag'),
+  goldShimmer('assets/shaders/gold_shimmer.frag'),
+  glowBloom('assets/shaders/glow_bloom.frag'),
+  stars('assets/shaders/stars.frag');
 
   const ShaderId(this.asset);
   final String asset;

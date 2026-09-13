@@ -523,7 +523,7 @@ class _SkylinePainter extends CustomPainter {
       (0.90, 0.68, 0.06), (0.96, 0.80, 0.04),
     ];
     for (final (x, top, ww) in units) {
-      final x0 = x * w, x1 = (x + ww) * w, y = base - (1 - top) * h * 0.42;
+      final x0 = x * w, x1 = (x + ww) * w, y = base - (1 - top) * h * 0.2;
       p.lineTo(x0, y + 6);
       p.lineTo(x0 + (x1 - x0) / 2, y);
       p.lineTo(x1, y + 6);
