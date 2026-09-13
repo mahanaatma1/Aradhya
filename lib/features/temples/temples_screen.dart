@@ -5,12 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../ui/components/components.dart' hide AsyncView;
+import '../../ui/tokens/tokens.dart';
+
 import '../../app/theme/app_colors.dart';
-import '../../app/theme/app_theme.dart';
 import '../../core/providers/app_providers.dart';
 import '../../core/user/visited.dart';
 import '../../shared/widgets/async_view.dart';
-import '../../shared/widgets/skeleton.dart';
 import 'temple_illustrations.dart';
 import 'temple_map.dart';
 import 'temple_models.dart';
@@ -57,9 +58,10 @@ class _TemplesScreenState extends ConsumerState<TemplesScreen> {
     final hi = ref.watch(isHindiProvider);
     final temples = ref.watch(templesProvider);
     final visited = ref.watch(visitedProvider);
-    final scheme = Theme.of(context).colorScheme;
 
     return Scaffold(
+      extendBody: true,
+      backgroundColor: context.colors.canvas,
       body: SafeArea(
         bottom: false,
         child: AsyncView(
@@ -108,39 +110,14 @@ class _TemplesScreenState extends ConsumerState<TemplesScreen> {
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
-                    child: InkWell(
-                      borderRadius: BorderRadius.circular(12),
-                      onTap: () => context.push('/passport'),
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 9),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFC97A3E).withValues(alpha: 0.10),
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                              color: const Color(0xFFC97A3E)
-                                  .withValues(alpha: 0.35)),
-                        ),
-                        child: Row(
-                          children: [
-                            const Icon(Icons.temple_hindu_rounded,
-                                size: 17, color: Color(0xFF8A6A4F)),
-                            const SizedBox(width: 9),
-                            Expanded(
-                              child: Text(
-                                hi
-                                    ? 'मेरी यात्रा — दर्शन किए मंदिर और संग्रह'
-                                    : 'My Yatra — visits and collections',
-                                style: const TextStyle(
-                                    fontSize: 12.5,
-                                    fontWeight: FontWeight.w600,
-                                    color: Color(0xFF8A6A4F)),
-                              ),
-                            ),
-                            const Icon(Icons.chevron_right_rounded,
-                                size: 18, color: Color(0xFF8A6A4F)),
-                          ],
-                        ),
+                    child: SurfaceCard(
+                      padding: EdgeInsets.zero,
+                      radius: Radii.md,
+                      child: NavRow(
+                        title: hi ? 'मेरी यात्रा' : 'My Yatra',
+                        subtitle: hi ? 'दर्शन किए मंदिर और संग्रह' : 'Visits and collections',
+                        leading: Icon(Icons.temple_hindu_rounded, color: context.colors.accent),
+                        onTap: () => context.push('/passport'),
                       ),
                     ),
                   ),
@@ -158,34 +135,23 @@ class _TemplesScreenState extends ConsumerState<TemplesScreen> {
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(20, 14, 20, 8),
-                    child: Text(
+                    child: Eyebrow(
                       hi
                           ? '${filtered.length} मंदिर'
                           : '${filtered.length} ${filtered.length == 1 ? 'temple' : 'temples'}',
-                      style: TextStyle(
-                        fontSize: 12.5,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 0.3,
-                        color: scheme.onSurface.withValues(alpha: 0.45),
-                      ),
                     ),
                   ),
                 ),
                 if (filtered.isEmpty)
                   SliverToBoxAdapter(
-                    child: Padding(
-                      padding: const EdgeInsets.all(48),
-                      child: Center(
-                        child: Text(hi ? 'कुछ नहीं मिला' : 'Nothing found',
-                            style: TextStyle(
-                                color: scheme.onSurface
-                                    .withValues(alpha: 0.5))),
-                      ),
+                    child: EmptyState(
+                      title: hi ? 'कुछ नहीं मिला' : 'Nothing found',
+                      body: hi ? 'कोई और नाम या फ़िल्टर आज़माएँ' : 'Try another name or filter',
                     ),
                   )
                 else
                   SliverPadding(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 28),
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 110),
                     sliver: SliverList.separated(
                       itemCount: filtered.length,
                       separatorBuilder: (_, _) => const SizedBox(height: 18),
@@ -217,9 +183,8 @@ class _TemplesScreenState extends ConsumerState<TemplesScreen> {
 Future<void> _openMap(BuildContext context, Temple t) async {
   final ok = await openTempleMap(t);
   if (!ok && context.mounted) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('Could not open the map for this temple')),
-    );
+    showAppSnack(context, 'Could not open the map for this temple',
+        kind: NoticeKind.warning);
   }
 }
 
@@ -505,45 +470,33 @@ class _Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
+    final c = context.colors;
+    final tt = Theme.of(context).textTheme;
     return Padding(
-      padding: const EdgeInsets.fromLTRB(4, 6, 20, 12),
+      padding: const EdgeInsets.fromLTRB(Space.x4, Space.x3, Space.x4, Space.x3),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          IconButton(
-            icon: Icon(Icons.arrow_back_ios_new_rounded,
-                color: scheme.primary, size: 20),
-            onPressed: () => Navigator.of(context).maybePop(),
-          ),
           Container(
-            width: 56,
-            height: 56,
+            width: 52,
+            height: 52,
             decoration: BoxDecoration(
-              color: AppColors.gold,
-              borderRadius: BorderRadius.circular(16),
+              gradient: LinearGradient(colors: c.goldGradient),
+              borderRadius: Radii.rMd,
+              boxShadow: context.elevation.rest,
             ),
-            child: const Icon(Icons.temple_hindu_rounded,
-                color: Color(0xFFFFF8EF), size: 30),
+            child: const Icon(Icons.temple_hindu_rounded, color: Palette.plum900, size: 28),
           ),
-          const SizedBox(width: 14),
+          const SizedBox(width: Space.x3),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(hi ? 'मंदिर निर्देशिका' : 'Temple Directory',
-                    style: const TextStyle(
-                        fontFamily: AppFonts.display,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 24)),
-                Text(
-                    hi
-                        ? '$count मंदिर · भारत भर में'
-                        : '$count temples · across India',
-                    style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: scheme.secondary)),
+                ScriptText(hi ? 'मंदिर निर्देशिका' : 'Temple Directory',
+                    style: tt.headlineSmall?.copyWith(color: c.ink)),
+                ScriptText(
+                  hi ? '$count मंदिर · भारत भर में' : '$count temples · across India',
+                  style: tt.bodySmall?.copyWith(color: c.inkFaint),
+                ),
               ],
             ),
           ),
@@ -560,28 +513,11 @@ class _SearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 12),
-      child: Material(
-        elevation: 1.5,
-        shadowColor: Colors.black.withValues(alpha: 0.15),
-        borderRadius: BorderRadius.circular(28),
-        color: scheme.surface,
-        child: TextField(
-          onChanged: onChanged,
-          decoration: InputDecoration(
-            hintText: hi
-                ? 'मंदिर, देवता, स्थान खोजें…'
-                : 'Search temples, deities, locations…',
-            prefixIcon: Icon(Icons.search_rounded, color: scheme.secondary),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(28),
-              borderSide: BorderSide.none,
-            ),
-            contentPadding: const EdgeInsets.symmetric(vertical: 16),
-          ),
-        ),
+      child: AppSearchField(
+        onChanged: onChanged,
+        hint: hi ? 'मंदिर, देवता, स्थान खोजें…' : 'Search temples, deities, locations…',
       ),
     );
   }
@@ -603,83 +539,24 @@ class _FilterBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 44,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        children: [
-          for (var i = 0; i < _filters.length; i++)
-            _Pill(
-              label: hi ? _filters[i].hi : _filters[i].en,
-              icon: _filters[i].icon,
-              selected: i == selected && !visitedOnly,
-              onTap: () => onSelect(i),
-            ),
-          _Pill(
-            label: hi ? 'गए हुए' : 'Visited',
-            icon: Icons.check_circle_outline_rounded,
-            selected: visitedOnly,
-            onTap: onVisited,
+    return ChipRow(
+      children: [
+        for (var i = 0; i < _filters.length; i++)
+          ChoiceChipX(
+            label: hi ? _filters[i].hi : _filters[i].en,
+            icon: _filters[i].icon,
+            selected: i == selected && !visitedOnly,
+            tint: context.colors.gold,
+            onTap: () => onSelect(i),
           ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Pill extends StatelessWidget {
-  final String label;
-  final IconData icon;
-  final bool selected;
-  final VoidCallback onTap;
-  const _Pill(
-      {required this.label,
-      required this.icon,
-      required this.selected,
-      required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
-    return Padding(
-      padding: const EdgeInsets.only(right: 10),
-      child: Material(
-        color: selected ? AppColors.gold : scheme.surface,
-        shape: StadiumBorder(
-          side: BorderSide(
-            color: selected
-                ? AppColors.gold
-                : scheme.onSurface.withValues(alpha: 0.15),
-          ),
+        ChoiceChipX(
+          label: hi ? 'गए हुए' : 'Visited',
+          icon: Icons.check_circle_outline_rounded,
+          selected: visitedOnly,
+          tint: context.colors.tulsi,
+          onTap: onVisited,
         ),
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: onTap,
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 180),
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(icon,
-                    size: 15,
-                    color: selected
-                        ? const Color(0xFFFFF8EF)
-                        : scheme.onSurface.withValues(alpha: 0.55)),
-                const SizedBox(width: 6),
-                Text(label,
-                    style: TextStyle(
-                        fontSize: 13.5,
-                        fontWeight: FontWeight.w700,
-                        color: selected
-                            ? const Color(0xFFFFF8EF)
-                            : scheme.onSurface.withValues(alpha: 0.8))),
-              ],
-            ),
-          ),
-        ),
-      ),
+      ],
     );
   }
 }
