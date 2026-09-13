@@ -77,4 +77,24 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('108'), findsOneWidget);
   });
+
+  testWidgets('ParticleField renders the fallback under reduced motion', (tester) async {
+    final off = MotionSettings.resolve(systemReduce: true, level: MotionLevel.full, tier: PerfTier.high);
+    await tester.pumpWidget(host(off, SizedBox(
+      width: 200, height: 200,
+      child: ParticleField(emitters: [Emitters.petals()], fallback: const Text('static')),
+    )));
+    expect(find.text('static'), findsOneWidget);
+    expect(find.descendant(of: find.byType(ParticleField), matching: find.byType(CustomPaint)), findsNothing);
+  });
+
+  testWidgets('ParticleField ticks and paints when motion is on', (tester) async {
+    await tester.pumpWidget(host(MotionSettings.full, SizedBox(
+      width: 200, height: 200,
+      child: ParticleField(emitters: [Emitters.sparkleBurst(count: 10)]),
+    )));
+    await tester.pump(const Duration(milliseconds: 16));
+    await tester.pump(const Duration(milliseconds: 16));
+    expect(find.byType(CustomPaint), findsWidgets);
+  });
 }

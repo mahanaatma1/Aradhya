@@ -63,6 +63,12 @@ flutter:
   uses-material-design: true
   generate: true
 
+  shaders:
+    - assets/shaders/utsav_sky.frag
+    - assets/shaders/gold_shimmer.frag
+    - assets/shaders/glow_bloom.frag
+    - assets/shaders/stars.frag
+
   assets:
     # Databases ship GZIPPED and are inflated during the one-time copy into
     # the documents directory. SQLite compresses about 4:1, which takes ~40 MB

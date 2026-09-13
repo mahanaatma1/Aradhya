@@ -20,6 +20,7 @@ class _KitGalleryScreenState extends ConsumerState<KitGalleryScreen> {
   int _tab = 0;
   bool _toggle = true;
   double _progress = 0.62;
+  int _burst = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -178,6 +179,42 @@ class _KitGalleryScreenState extends ConsumerState<KitGalleryScreen> {
                 NavRow(title: 'Hindi (offline)', onTap: () => Navigator.pop(context)),
                 NavRow(title: 'English (offline)', onTap: () => Navigator.pop(context)),
               ]),
+            ),
+          ),
+          const SectionHeader(title: 'Particles & shaders', padding: EdgeInsets.zero),
+          SizedBox(
+            height: 180,
+            child: ClipRRect(
+              borderRadius: Radii.rLg,
+              child: ShaderSurface(
+                id: ShaderId.utsavSky,
+                colors: c.skyGradient,
+                params: const [0.4],
+                fallback: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: c.skyGradient,
+                    ),
+                  ),
+                ),
+                child: ParticleField(
+                  key: ValueKey(_burst),
+                  emitters: [
+                    Emitters.stars(color: c.inkOnDeep),
+                    Emitters.petals(color: c.gold),
+                    if (_burst > 0) Emitters.sparkleBurst(color: c.gold),
+                  ],
+                  child: Center(
+                    child: PrimaryButton(
+                      label: hi ? 'चमक' : 'Sparkle',
+                      icon: Icons.auto_awesome_rounded,
+                      onPressed: () => setState(() => _burst++),
+                    ),
+                  ),
+                ),
+              ),
             ),
           ),
           RevealList(children: [
