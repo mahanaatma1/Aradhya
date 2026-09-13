@@ -72,6 +72,7 @@ import '../../features/temples/collection_screen.dart';
 import '../../features/temples/passport_pages.dart';
 import '../../features/temples/passport_screen.dart';
 import '../../features/temples/temples_screen.dart';
+import '../../ui/debug/kit_gallery_screen.dart';
 import '../shell/nav_scaffold.dart';
 
 /// Whether the user has completed onboarding. Set from prefs in `main()` before
@@ -293,6 +294,11 @@ final appRouter = GoRouter(
       GoRoute(
         path: '/debug/notifications',
         builder: (c, s) => const NotificationTestScreen(),
+      ),
+    if (kDebugMode)
+      GoRoute(
+        path: '/debug/kit',
+        builder: (c, s) => const KitGalleryScreen(),
       ),
 
 
