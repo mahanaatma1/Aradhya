@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:divyavaani/core/platform/platform_bridge.dart';
 import 'package:divyavaani/ui/motion/motion.dart';
+import 'package:divyavaani/ui/theme/app_theme.dart';
 
 void main() {
   group('MotionSettings.resolve', () {
@@ -96,5 +97,28 @@ void main() {
     await tester.pump(const Duration(milliseconds: 16));
     await tester.pump(const Duration(milliseconds: 16));
     expect(find.byType(CustomPaint), findsWidgets);
+  });
+
+  testWidgets('AppTheme route transition builds while pushing and popping', (tester) async {
+    await tester.pumpWidget(MaterialApp(
+      theme: AppTheme.light(),
+      home: Builder(builder: (context) => Scaffold(
+        body: TextButton(
+          onPressed: () => Navigator.of(context).push(
+              MaterialPageRoute(builder: (_) => const Scaffold(body: Text('second')))),
+          child: const Text('go'),
+        ),
+      )),
+    ));
+    await tester.tap(find.text('go'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(find.text('second'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+    Navigator.of(tester.element(find.text('second'))).pop();
+    await tester.pump(const Duration(milliseconds: 100));
+    await tester.pump(const Duration(milliseconds: 400));
+    expect(tester.takeException(), isNull);
   });
 }

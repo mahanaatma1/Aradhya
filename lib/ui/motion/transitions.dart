@@ -55,9 +55,8 @@ class AppPage<T> extends CustomTransitionPage<T> {
     switch (kind) {
       case AppTransition.sharedAxisX:
         return SlideTransition(
-          position: Tween(begin: const Offset(-0.18, 0), end: Offset.zero)
-              .animate(leave)
-              .drive(Tween(begin: Offset.zero, end: const Offset(-0.18, 0))),
+          position: Tween(begin: Offset.zero, end: const Offset(-0.18, 0))
+              .animate(leave),
           child: FadeTransition(
             opacity: Tween(begin: 1.0, end: 0.7).animate(leave),
             child: SlideTransition(
