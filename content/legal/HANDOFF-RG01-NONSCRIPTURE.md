@@ -492,11 +492,31 @@ checked:
 - **Underhill and Gupte** give the date, the fast and the significance for many
   Ekadashis — the observance, never the story.
 
-**If you want to unblock these**, the search that might still pay off is a
-pre-1929 Indian-press English Padma Purana (the era when Dutt, Ganguli and
-Wilson were publishing) in HathiTrust or a university catalogue rather than
-archive.org. Until such an edition is found and added to SOURCES.md, the 26
-Ekadashi rows are out of scope.
+**Second search, 2026-09-14 — also negative.** The owner asked for a harder
+look before accepting the block. Everything below was checked and ruled out:
+
+- **Sacred Books of the Hindus** (Panini Office, Allahabad, 1911-1920s, 30 vols,
+  all PD) — the most promising lead, since it is exactly the right era and
+  carries Puranas. It has Garuda (vol. 9, Wood & Subrahmanyam 1911), Matsya
+  (vol. 17, 1916-17) and Devi Bhagavatam (vol. 26). **No Padma Purana, no
+  Skanda, no Brahma Vaivarta.**
+- **Matsya Purana**, Taluqdar of Oudh 1916, chapters 1-128 — searched the text.
+  Contains the Madana Dvadasi fast (ch. VII) in detail but **no Ekadashi at
+  all**, named or otherwise.
+- **Brahma Vaivarta Purana**, Rajendra Nath Sen, Panini Office 1920 — genuinely
+  PD and in English, but the archive.org OCR is too corrupted to confirm
+  Ekadashi content either way. If anyone wants one more attempt, a clean scan of
+  Sen 1920 is the single remaining candidate worth the effort.
+- **"Ekadashi Mahatmya", Jagaditechhu Press 1890** — right era, wrong language:
+  the scan is **Marathi in Devanagari**, not English. A translator could work
+  from it, but that is a different project.
+- **Skanda Purana** — its Ekadashi chapter exists, but every English translation
+  is modern (Motilal Banarsidass); wisdomlib hosts that same text.
+
+Conclusion: no public-domain English source for the Ekadashi origin narratives
+was found in two searches. Unless someone turns up a clean Sen 1920 scan that
+proves to carry them, **the 26 Ekadashi rows are out of scope** and the owner
+has ruled out shipping a reduced version.
 
 **Consequence for the fixture:** `main.kathas` cannot be fully retired while
 these 26 have no replacement. Either the fixture keeps shipping for them alone
