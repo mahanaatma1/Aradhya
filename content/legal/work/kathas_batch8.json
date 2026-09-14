@@ -1,0 +1,223 @@
+{
+  "_note": "RG-01 batch 8 — NEW kathas for festivals that had none. These have no fixture row (legacy_id null), so they add to the collection rather than replacing anything. Written from cited PD sources where the narrative is textual, and as our own tellings of tradition where it is not.",
+  "rows": [
+    {
+      "slug": "narasimha-jayanti",
+      "legacy_id": null,
+      "title_en": "Narasimha Jayanti: Neither Man Nor Beast, at Neither Day Nor Night",
+      "title_hi": "नृसिंह जयंती: न मनुष्य न पशु, न दिन न रात",
+      "deity_en": ["Narasimha", "Vishnu", "Hiranyakashipu", "Prahlada"],
+      "deity_hi": ["नरसिंह", "विष्णु", "हिरण्यकशिपु", "प्रह्लाद"],
+      "festival_slug": "narasimha-jayanti",
+      "entity_slugs": ["narasimha", "vishnu", "hiranyakashipu", "prahlada"],
+      "when_en": "Vaishakha, Shukla Paksha, fourteenth tithi — and kept at dusk, not at midday or midnight, because the hour is part of the story.",
+      "when_hi": "वैशाख मास, शुक्ल पक्ष, चतुर्दशी — और यह संध्या-वेला में मनाया जाता है, दोपहर या अर्धरात्रि में नहीं, क्योंकि वह घड़ी ही कथा का अंग है।",
+
+      "summary_en": "A king secures a death that cannot happen — not by man or beast, indoors or out, by day or night, on earth or in the air, by any weapon. The answer arrives through every gap at once.",
+      "summary_hi": "एक राजा ऐसी मृत्यु से सुरक्षा पा लेता है जो घट ही न सके — न मनुष्य से न पशु से, न भीतर न बाहर, न दिन में न रात में, न भूमि पर न आकाश में, किसी शस्त्र से नहीं। उत्तर एक साथ हर छिद्र से आता है।",
+
+      "body_en": "Hiranyakashipu's boon is the most carefully drafted wish in the whole tradition, and it is worth reading it the way a lawyer would, because that is how he wrote it.\n\nHe did not ask to be immortal. That request is refused as a matter of course and he knew it. What he asked for instead was a list of exclusions, and he worked hard on the list. Let me not be killed by any man or any animal. Not inside a house or outside one. Not by day and not by night. Not on the ground and not in the air. Not by any weapon made. Not by god, demon or spirit.\n\nGo through it and you will find he has closed every door he could think of. What he has actually done, though, is something subtler and more revealing. He has made an exhaustive list of the ways the world works — and a list like that is a portrait of the person's imagination. He could not conceive of a thing that was neither man nor animal, so he did not exclude it. He thought in categories, and he assumed reality did too.\n\nThen he spent years using the boon exactly as you would expect, and torturing his own son over it, which is the story kept on Holi.\n\nThe answer came at the end of a day. Prahlada had said, again, that Vishnu was everywhere, and his father — who had heard this for the last time — pointed at a pillar in the hall and asked whether Vishnu was in that too. The boy said yes. So the king struck the pillar, and the pillar split.\n\nWhat came out of it was neither a man nor an animal: a body that was human below and lion above, so that no category held. It took him at the threshold of the hall — neither inside nor out. It was the hour when the sun has set but night has not begun, which is neither day nor night. It set him across its own lap, so he was neither on the ground nor lifted into the air. And it used no weapon at all, only claws, which nobody makes.\n\nEvery condition was met and every condition was met at once. That is the detail that makes this story land rather than feel like a riddle solved on a technicality — it is not one loophole exploited, it is the whole architecture of his thinking coming apart at the same moment.\n\nThe festival is kept at dusk for exactly that reason. It is one of a very small number of observances timed to a threshold rather than a clock: the sandhya, the seam of the day, when it is honestly neither one thing nor the other. Most fasts are broken at moonrise or sunrise. This one belongs to the hour that belongs to neither.\n\nAnd there is a gentler thing sitting underneath, which the fierce images tend to hide. Nothing in the story happens until Prahlada is asked a direct question and answers it honestly, knowing what the answer will cost him. He says Vishnu is in the pillar. He is not making a prediction or issuing a threat. He is simply saying the same thing he has always said, one more time, to the person most likely to hurt him for it — and the pillar splits because he was right.",
+
+      "body_hi": "हिरण्यकशिपु का वरदान पूरी परंपरा की सबसे सावधानी से लिखी गई माँग है, और उसे वैसे ही पढ़ना चाहिए जैसे कोई वकील पढ़े, क्योंकि उसने लिखा भी वैसे ही था।\n\nउसने अमरता नहीं माँगी। वह माँग सदा अस्वीकार होती है और यह वह जानता था। उसने इसके बजाय अपवादों की एक सूची माँगी, और उस सूची पर उसने बहुत परिश्रम किया। मुझे न कोई मनुष्य मार सके न कोई पशु। न घर के भीतर न बाहर। न दिन में न रात में। न भूमि पर न आकाश में। न किसी बने हुए शस्त्र से। न देवता से, न दानव से, न प्रेत से।\n\nइसे पढ़िए तो दिखेगा कि उसने हर वह द्वार बंद कर दिया जो उसे सूझ सका। पर उसने वस्तुतः जो किया वह अधिक सूक्ष्म और अधिक उद्घाटक है। उसने संसार के चलने के तरीकों की एक पूरी सूची बना दी — और ऐसी सूची उस व्यक्ति की कल्पना का चित्र होती है। वह ऐसी वस्तु की कल्पना ही नहीं कर सका जो न मनुष्य हो न पशु, सो उसने उसे बाहर रखा ही नहीं। वह श्रेणियों में सोचता था, और उसने मान लिया कि यथार्थ भी वैसे ही सोचता है।\n\nफिर उसने वर्षों वह वरदान ठीक वैसे ही बरता जैसी अपेक्षा की जाए, और उसी के बल पर अपने पुत्र को सताया — वही कथा जो होली पर कही जाती है।\n\nउत्तर एक दिन के अंत में आया। प्रह्लाद ने फिर कहा था कि विष्णु हर कहीं हैं, और उसके पिता ने — जो यह अंतिम बार सुन चुका था — सभा के एक स्तंभ की ओर इशारा करके पूछा कि क्या विष्णु इसमें भी हैं। बालक ने कहा, हाँ। सो राजा ने स्तंभ पर प्रहार किया, और स्तंभ फट गया।\n\nउसमें से जो निकला वह न मनुष्य था न पशु: नीचे से मानव और ऊपर से सिंह ऐसी देह, कि कोई श्रेणी टिके ही नहीं। उसने उसे सभा की देहली पर पकड़ा — न भीतर, न बाहर। वह वही घड़ी थी जब सूर्य अस्त हो चुका है पर रात आरंभ नहीं हुई, जो न दिन है न रात। उसने उसे अपनी जाँघों पर रखा, सो वह न भूमि पर था न आकाश में उठा हुआ। और उसने कोई शस्त्र नहीं बरता, केवल नख, जिन्हें कोई बनाता नहीं।\n\nहर शर्त पूरी हुई और हर शर्त एक ही साथ पूरी हुई। यही वह ब्योरा है जो इस कथा को किसी तकनीकी छूट से सुलझी पहेली जैसा नहीं रहने देता — यह एक छिद्र का उपयोग नहीं है, यह उसकी पूरी सोच के ढाँचे का एक ही क्षण में बिखर जाना है।\n\nपर्व ठीक इसी कारण संध्या-वेला में मनाया जाता है। यह उन बहुत थोड़े अनुष्ठानों में है जो किसी घड़ी से नहीं, किसी संधि से बँधे हैं: संध्या, दिन की सीवन, जब वह सचमुच न यह होता है न वह। अधिकांश व्रत चंद्रोदय या सूर्योदय पर खुलते हैं। यह उस घड़ी का है जो किसी की नहीं।\n\nऔर इसके नीचे एक कोमल बात बैठी है, जिसे उग्र प्रतिमाएँ प्रायः ढक देती हैं। कथा में कुछ भी तब तक नहीं होता जब तक प्रह्लाद से सीधा प्रश्न न पूछा जाए और वह उसका ईमानदार उत्तर न दे, यह जानते हुए कि उस उत्तर का मूल्य क्या होगा। वह कहता है कि विष्णु स्तंभ में हैं। वह न कोई भविष्यवाणी कर रहा है न कोई धमकी दे रहा है। वह बस वही बात एक बार और कह रहा है जो वह सदा कहता आया है — उसी व्यक्ति से जो उसके लिए उसे सबसे अधिक चोट पहुँचा सकता है — और स्तंभ इसलिए फटता है क्योंकि वह सही था।",
+
+      "vrat_vidhi_en": "The fast is kept through the day and broken after the worship at dusk — not at sunset exactly, but in the sandhya, the stretch when the light has gone and the dark has not arrived. The hour is the whole point of this observance.\n\nBathe at midday and take the vow. Through the day take only water, or fruit and milk; grain is left out.\n\nThe worship is offered in the evening, at the threshold hour. Where a household keeps the full form, the offerings are made at the doorway rather than in the worship room, which remembers where he was taken.\n\nNarasimha is offered red flowers, sandal, coconut and panchamrit. A lamp of ghee is lit and not moved until the worship is finished.\n\nThe fast is broken after that worship, in the evening, and not carried through to the next morning as most fasts are.\n\nThe day is also kept for protection from fear, and in many households something is given away for a child — this is the deity people turn to for someone smaller than themselves who is in trouble.",
+      "vrat_vidhi_hi": "व्रत दिन भर चलता है और संध्या के पूजन के बाद खोला जाता है — ठीक सूर्यास्त पर नहीं, बल्कि संध्या-वेला में, उस अवधि में जब प्रकाश जा चुका है और अंधकार आया नहीं। यह घड़ी ही इस व्रत का पूरा मर्म है।\n\nदोपहर में स्नान कर संकल्प लें। दिन भर केवल जल लें, या फल और दूध; अन्न वर्जित है।\n\nपूजन संध्या को, उसी संधि-वेला में होता है। जहाँ पूर्ण विधि रखी जाती है वहाँ अर्पण पूजा-कक्ष में नहीं, द्वार पर किया जाता है, जो यह स्मरण कराता है कि उसे कहाँ पकड़ा गया था।\n\nनरसिंह को लाल पुष्प, चंदन, नारियल और पंचामृत अर्पित होते हैं। घी का दीप जलाया जाता है और पूजन पूरा होने तक हटाया नहीं जाता।\n\nव्रत उसी पूजन के बाद, संध्या को खोला जाता है, और अधिकांश व्रतों की तरह अगली सुबह तक नहीं खींचा जाता।\n\nयह दिन भय से रक्षा के लिए भी रखा जाता है, और बहुत घरों में किसी संतान के निमित्त दान किया जाता है — यही वह देवता हैं जिनकी ओर लोग तब मुड़ते हैं जब अपने से छोटा कोई संकट में हो।",
+
+      "phala_en": "The day is kept for protection — particularly for children, and for anyone up against something much larger than themselves. What it promises is not strength to match the threat but that the threat's own arrangements can fail.",
+      "phala_hi": "यह दिन रक्षा के लिए रखा जाता है — विशेषकर संतान के लिए, और उस किसी के लिए भी जो अपने से कहीं बड़ी वस्तु के सामने खड़ा हो। यह उस संकट जितना बल देने का वचन नहीं देता, बल्कि यह कि संकट की अपनी व्यवस्थाएँ भी विफल हो सकती हैं।",
+
+      "moral_en": "Hiranyakashipu's list of exclusions is a portrait of what he could imagine. He was not undone by a stronger force but by a possibility that had never occurred to him — and a man who cannot imagine being wrong leaves that gap in everything he builds.",
+      "moral_hi": "हिरण्यकशिपु की अपवाद-सूची इस बात का चित्र है कि वह क्या-क्या सोच सकता था। उसे किसी बड़े बल ने नहीं हराया, बल्कि ऐसी सँभावना ने जो उसे कभी सूझी ही नहीं — और जो व्यक्ति अपने गलत होने की कल्पना नहीं कर सकता, वह यही छिद्र अपनी हर रचना में छोड़ जाता है।",
+
+      "key_moments_en": [
+        "Hiranyakashipu does not ask for immortality, which is never granted, but for a list of exclusions.",
+        "Not by man or animal, indoors or out, by day or night, on the ground or in the air, by any weapon made.",
+        "The list is exhaustive of everything he could imagine — and that is precisely its flaw.",
+        "For years he uses the boon as such boons are used, and tortures his own son over it.",
+        "Prahlada says again that Vishnu is everywhere; his father points at a pillar and asks if he is in that.",
+        "The boy says yes. The king strikes the pillar and it splits.",
+        "What comes out is human below and lion above — neither man nor animal.",
+        "He is taken at the threshold, neither inside nor outside, in the dusk that is neither day nor night.",
+        "He is set across its lap, neither on the ground nor in the air, and killed with claws, which nobody makes.",
+        "Every condition of the boon is satisfied in the same moment."
+      ],
+      "key_moments_hi": [
+        "हिरण्यकशिपु अमरता नहीं माँगता, जो कभी दी नहीं जाती, बल्कि अपवादों की एक सूची माँगता है।",
+        "न मनुष्य से न पशु से, न भीतर न बाहर, न दिन में न रात में, न भूमि पर न आकाश में, किसी बने शस्त्र से नहीं।",
+        "वह सूची उस सबको समेट लेती है जो वह सोच सकता था — और यही उसकी त्रुटि है।",
+        "वर्षों वह उस वरदान को वैसे ही बरतता है जैसे बरते जाते हैं, और उसी बल पर अपने पुत्र को सताता है।",
+        "प्रह्लाद फिर कहता है कि विष्णु हर कहीं हैं; पिता स्तंभ की ओर इशारा कर पूछता है कि क्या उसमें भी।",
+        "बालक कहता है, हाँ। राजा स्तंभ पर प्रहार करता है और वह फट जाता है।",
+        "जो निकलता है वह नीचे से मानव और ऊपर से सिंह है — न मनुष्य, न पशु।",
+        "वह देहली पर पकड़ा जाता है, न भीतर न बाहर, उस संध्या में जो न दिन है न रात।",
+        "उसे जाँघों पर रखा जाता है, न भूमि पर न आकाश में, और नखों से मारा जाता है, जिन्हें कोई बनाता नहीं।",
+        "वरदान की हर शर्त एक ही क्षण में पूरी हो जाती है।"
+      ],
+
+      "reflection_en": "He listed every way he could imagine being killed, and was killed by the one way he could not imagine. What are you certain is impossible?",
+      "reflection_hi": "उसने वे सब तरीके गिना दिए जिनसे मारा जाना वह सोच सकता था, और मारा उसी तरीके से गया जिसे वह सोच ही नहीं सका। आप किस बात को असँभव मानकर निश्चिंत हैं?",
+
+      "themes_en": ["a loophole", "categories", "thresholds", "protecting a child", "the limits of imagination"],
+      "themes_hi": ["वरदान का छिद्र", "श्रेणियाँ", "संधि-वेला", "संतान की रक्षा", "कल्पना की सीमा"],
+
+      "order_no": 200,
+      "primary_source_name": "The Vishnu Purana, tr. Horace Hayman Wilson",
+      "primary_source_ref": "Book I, Chapters XVII-XX",
+      "verification_status": "verified",
+      "claim_type": "textual",
+      "source_quality": "primary",
+      "sources": [
+        {"source_id": "wilson-vishnu-purana", "ref": "Book I, Chapters XVII-XX", "is_primary": 1,
+         "note": "The boon, Prahlada's persistence, and the man-lion form. Related to the Holika Dahan katha, which covers the same cycle from Prahlada's side."},
+        {"source_id": "underhill-hindu-year", "ref": "Narasimha Jayanti", "is_primary": 0,
+         "note": "The date and the observance kept at dusk rather than at midday or midnight."}
+      ]
+    },
+
+    {
+      "slug": "raksha-bandhan",
+      "legacy_id": null,
+      "title_en": "Raksha Bandhan: A Thread That Is a Promise",
+      "title_hi": "रक्षाबंधन: वह धागा जो वचन है",
+      "deity_en": ["Indra", "Indrani", "Krishna", "Draupadi"],
+      "deity_hi": ["इन्द्र", "इन्द्राणी", "कृष्ण", "द्रौपदी"],
+      "festival_slug": "raksha-bandhan",
+      "entity_slugs": ["indra", "krishna", "draupadi"],
+      "when_en": "Shravana, Shukla Paksha, Purnima — the full moon at the height of the rains. Sisters tie the thread in the morning, before the household eats.",
+      "when_hi": "श्रावण मास, शुक्ल पक्ष, पूर्णिमा — वर्षा के चरम की पूर्णिमा। बहनें सुबह, घर के भोजन से पहले धागा बाँधती हैं।",
+
+      "summary_en": "The oldest version of this day is not about brothers at all. It is about a thread tied by someone who cannot fight, on someone who is about to — and the obligation that runs backwards along it.",
+      "summary_hi": "इस दिन का सबसे प्राचीन रूप भाइयों के विषय में है ही नहीं। वह उस धागे के विषय में है जो कोई ऐसा बाँधता है जो लड़ नहीं सकता, उस पर जो लड़ने जा रहा है — और उस दायित्व के विषय में जो उसी धागे से उलटा लौटता है।",
+
+      "body_en": "The oldest telling has nothing to do with brothers and sisters, and it is worth starting there, because it explains the shape of the thing better than the familiar version does.\n\nIndra was losing a war and had been losing it long enough that the outcome looked settled. His wife took a thread, said over it what she wanted for him, and tied it on his wrist before he went out. He went back and the war turned.\n\nThat is all. No weapon changes hands, no boon is granted, nothing about the battle is altered by force. Somebody who was not going to be in the fight sent something with the person who was.\n\nThe second story people tell is about Krishna and Draupadi, and it works the same way from the other end. Krishna cut his hand — on the discus, in most tellings — and it was bleeding, and Draupadi tore a strip off her own sari and bound it without making anything of it. It was an ordinary kindness done quickly. And years later, when she was in a court full of men who would not stand up for her, what came was cloth without end. The tradition connects those two things directly. The strip of cloth she gave came back as the cloth that saved her.\n\nWhat both stories have in common is the direction of the obligation. A thread goes one way and a debt goes the other. The person who ties it is the one without power in the situation — a wife who cannot fight a war, a woman in a hall where nobody will speak for her — and the tying is a claim on somebody who can.\n\nThat is what makes the modern form of the day more serious than it looks. A sister ties a thread on her brother's wrist and he gives her something and everybody eats sweets, and it can pass as a pleasant morning. But what is actually being done is that a woman is publicly naming a man as answerable for her. The thread is small and costs nothing, and it is not a gift. It is a marker of a promise that has been placed on him, in front of the family, once a year, for as long as both of them live.\n\nThere is a practical history underneath it that the tradition has never hidden. A rakhi could be sent to a man who was not a relative at all — a neighbour, a ruler, a stranger whose protection a woman needed — and receiving it created the obligation just as firmly. Women have used this day to make claims on people who had no other reason to look after them, and the custom held because everyone understood what accepting the thread meant.\n\nThe day falls on the full moon of Shravana, when the rains are heaviest and the year is at its most uncertain, and along the coast the same morning is used to make an offering to the sea before the fishing season opens. Both are the same gesture: something small tied or thrown, at the point where the coming months cannot be predicted, by people asking to be looked after.",
+
+      "body_hi": "सबसे प्राचीन कथा का भाई-बहन से कोई संबंध नहीं है, और आरंभ वहीं से करना चाहिए, क्योंकि वह इस बात का आकार परिचित रूप से बेहतर समझाती है।\n\nइन्द्र एक युद्ध हार रहे थे और इतने समय से हार रहे थे कि परिणाम तय लगने लगा था। उनकी पत्नी ने एक धागा लिया, उस पर वह कहा जो वे उनके लिए चाहती थीं, और जाने से पहले उनकी कलाई पर बाँध दिया। वे लौटे और युद्ध पलट गया।\n\nबस इतना। कोई शस्त्र हाथ नहीं बदलता, कोई वरदान नहीं मिलता, युद्ध में बल से कुछ नहीं बदला जाता। जो व्यक्ति उस लड़ाई में जाने वाला नहीं था, उसने उसके साथ कुछ भेज दिया जो जा रहा था।\n\nदूसरी कथा जो लोग कहते हैं वह कृष्ण और द्रौपदी की है, और वह दूसरे सिरे से वैसे ही काम करती है। कृष्ण का हाथ कट गया — अधिकांश कथाओं में चक्र से — और उससे रक्त बह रहा था, और द्रौपदी ने अपनी साड़ी से एक पट्टी फाड़कर बिना कुछ कहे बाँध दी। वह जल्दी में की गई साधारण करुणा थी। और वर्षों बाद, जब वह ऐसी सभा में थी जो पुरुषों से भरी थी और जिनमें कोई उसके लिए खड़ा नहीं हुआ, तो जो आया वह अनंत वस्त्र था। परंपरा इन दोनों को सीधे जोड़ती है। जो पट्टी उसने दी थी वही वस्त्र बनकर लौटी जिसने उसे बचाया।\n\nदोनों कथाओं में जो साझा है वह दायित्व की दिशा है। धागा एक ओर जाता है और ऋण दूसरी ओर। जो बाँधता है वही उस स्थिति में शक्तिहीन है — एक पत्नी जो युद्ध नहीं लड़ सकती, एक स्त्री जिस सभा में कोई उसके लिए नहीं बोलेगा — और बाँधना उस पर दावा है जो कर सकता है।\n\nयही इस दिन के आधुनिक रूप को उससे अधिक गंभीर बनाता है जितना वह दिखता है। बहन भाई की कलाई पर धागा बाँधती है और वह उसे कुछ देता है और सब मिठाई खाते हैं, और यह एक सुखद सुबह की तरह बीत सकता है। पर वस्तुतः जो हो रहा है वह यह है कि एक स्त्री सार्वजनिक रूप से एक पुरुष को अपने लिए उत्तरदायी घोषित कर रही है। धागा छोटा है और उसमें कुछ खर्च नहीं होता, और वह भेंट नहीं है। वह उस वचन का चिह्न है जो उस पर रखा गया है — परिवार के सामने, वर्ष में एक बार, जब तक दोनों जीवित हैं।\n\nइसके नीचे एक व्यावहारिक इतिहास है जिसे परंपरा ने कभी छिपाया नहीं। राखी ऐसे व्यक्ति को भी भेजी जा सकती थी जो संबंधी था ही नहीं — कोई पड़ोसी, कोई शासक, कोई अपरिचित जिसकी रक्षा किसी स्त्री को चाहिए थी — और उसे स्वीकार करना उतना ही दृढ़ दायित्व बना देता था। स्त्रियों ने इस दिन का उपयोग उन लोगों पर दावा करने के लिए किया है जिनके पास उनकी देखभाल का और कोई कारण नहीं था, और यह प्रथा इसलिए टिकी क्योंकि सब समझते थे कि धागा स्वीकार करने का अर्थ क्या है।\n\nयह दिन श्रावण की पूर्णिमा को पड़ता है, जब वर्षा सबसे प्रबल होती है और वर्ष सबसे अनिश्चित, और तटों पर उसी सुबह मछली के मौसम से पहले समुद्र को अर्पण किया जाता है। दोनों एक ही भाव हैं: कुछ छोटा, बाँधा या फेंका हुआ, ठीक उस बिंदु पर जहाँ आने वाले महीनों का अनुमान नहीं लगाया जा सकता, उन लोगों द्वारा जो सँभाले जाने की प्रार्थना कर रहे हैं।",
+
+      "vrat_vidhi_en": "There is no fast, though many sisters do not eat until the thread has been tied.\n\nThe thread is prepared in the morning along with a thali holding roli, rice, a lamp, and something sweet. Many families make or choose the rakhi rather than buying whatever is nearest, and older households keep the previous year's threads rather than discarding them.\n\nThe brother sits facing east. The sister marks his forehead with roli and rice, ties the thread on his right wrist, does aarti with the lamp, and feeds him a sweet by hand.\n\nHe gives her something in return, and what is given matters less than that it is given in front of the family — the gift is the public half of the promise.\n\nWhere a brother is not present the thread is sent, and it carries the same weight on arrival. A woman with no brother may tie it on whoever stands in that place for her, and the tradition has always allowed this without treating it as second best.\n\nAlong the coast the same morning is Narali Purnima: a coconut is offered to the sea before the fishing boats go out for the first time after the monsoon.",
+      "vrat_vidhi_hi": "कोई उपवास नहीं है, यद्यपि बहुत बहनें धागा बाँधने तक कुछ नहीं खातीं।\n\nसुबह धागा तैयार किया जाता है और साथ में थाली — रोली, अक्षत, दीप और कुछ मीठा। बहुत परिवार राखी बनाते या चुनकर लाते हैं, जो सामने मिल जाए वह नहीं, और पुराने घरों में पिछले वर्ष की राखियाँ फेंकी नहीं, सँभालकर रखी जाती हैं।\n\nभाई पूर्व की ओर मुख करके बैठता है। बहन रोली और अक्षत से उसका तिलक करती है, दाहिनी कलाई पर धागा बाँधती है, दीप से आरती उतारती है, और अपने हाथ से मिठाई खिलाती है।\n\nवह बदले में उसे कुछ देता है, और क्या दिया गया यह उतना महत्वपूर्ण नहीं जितना यह कि परिवार के सामने दिया गया — भेंट उस वचन का सार्वजनिक आधा हिस्सा है।\n\nजहाँ भाई उपस्थित न हो वहाँ धागा भेजा जाता है, और पहुँचने पर उसका भार वही रहता है। जिस स्त्री का भाई न हो, वह उसे बाँध सकती है जो उसके लिए उस स्थान पर खड़ा हो, और परंपरा ने इसे सदा स्वीकार किया है, किसी दूसरे दर्जे की तरह नहीं।\n\nतटों पर वही सुबह नारली पूर्णिमा है: वर्षा के बाद पहली बार नावें निकलने से पहले समुद्र को नारियल अर्पित किया जाता है।",
+
+      "phala_en": "The day is kept for a brother's long life and for the tie itself. The older sense is more exact: the thread is a request for protection made by someone who cannot provide their own, and the answer to it is the obligation the other person takes on by accepting it.",
+      "phala_hi": "यह दिन भाई की दीर्घायु और उस संबंध के लिए रखा जाता है। पुराना भाव अधिक सटीक है: वह धागा उस व्यक्ति की रक्षा-याचना है जो अपनी रक्षा स्वयं नहीं कर सकता, और उसका उत्तर वह दायित्व है जो दूसरा उसे स्वीकार करके अपने ऊपर लेता है।",
+
+      "moral_en": "The thread costs nothing and carries everything. What is exchanged is not the rakhi but the acceptance of it — and the person doing the tying is always the one with less power in the arrangement.",
+      "moral_hi": "उस धागे में कुछ खर्च नहीं होता और वह सब कुछ ढोता है। विनिमय राखी का नहीं, उसे स्वीकार करने का है — और बाँधने वाला सदा वही होता है जिसके पास उस व्यवस्था में कम शक्ति है।",
+
+      "key_moments_en": [
+        "In the oldest telling Indra is losing a war and the outcome looks settled.",
+        "His wife speaks over a thread and ties it on his wrist before he goes out.",
+        "He returns to the fight and it turns — no weapon given, nothing altered by force.",
+        "In the second story Krishna's hand is cut and bleeding.",
+        "Draupadi tears a strip from her own sari and binds it without making anything of it.",
+        "Years later, in a court where no man will stand for her, cloth comes without end.",
+        "The tradition connects the two directly: what she gave came back as what saved her.",
+        "In both, the one who ties the thread is the one without power in the situation.",
+        "A rakhi could be sent to a neighbour, a ruler, or a stranger — and accepting it bound him the same.",
+        "The day falls at the height of the rains, when the coming months cannot be predicted."
+      ],
+      "key_moments_hi": [
+        "सबसे प्राचीन कथा में इन्द्र युद्ध हार रहे हैं और परिणाम तय लगने लगा है।",
+        "उनकी पत्नी एक धागे पर अभिमंत्रण कर उसे जाने से पहले उनकी कलाई पर बाँध देती हैं।",
+        "वे युद्ध में लौटते हैं और वह पलट जाता है — न शस्त्र दिया गया, न बल से कुछ बदला गया।",
+        "दूसरी कथा में कृष्ण का हाथ कट जाता है और उससे रक्त बहता है।",
+        "द्रौपदी अपनी साड़ी से पट्टी फाड़कर बिना कुछ कहे बाँध देती है।",
+        "वर्षों बाद, ऐसी सभा में जहाँ कोई पुरुष उसके लिए खड़ा नहीं होता, अनंत वस्त्र आता है।",
+        "परंपरा दोनों को सीधे जोड़ती है: जो उसने दिया था वही लौटकर उसे बचाता है।",
+        "दोनों में, धागा बाँधने वाला वही है जिसके पास उस स्थिति में शक्ति नहीं।",
+        "राखी किसी पड़ोसी, शासक या अपरिचित को भी भेजी जा सकती थी — और स्वीकारने पर वह उतना ही बँध जाता था।",
+        "यह दिन वर्षा के चरम पर पड़ता है, जब आने वाले महीनों का अनुमान नहीं लगाया जा सकता।"
+      ],
+
+      "reflection_en": "Accepting the thread is what creates the obligation, not tying it. Who has placed something like that on you, and did you notice at the time?",
+      "reflection_hi": "दायित्व धागा बाँधने से नहीं, उसे स्वीकार करने से बनता है। किसने आप पर ऐसा कुछ रखा है, और क्या आपने उस समय उसे पहचाना था?",
+
+      "themes_en": ["protection", "obligation", "brothers and sisters", "the powerless asking", "a small thing"],
+      "themes_hi": ["रक्षा", "दायित्व", "भाई-बहन", "निर्बल की याचना", "एक छोटी वस्तु"],
+
+      "order_no": 210,
+      "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+      "primary_source_ref": "Raksha Bandhan; Narali Purnima",
+      "verification_status": "verified",
+      "claim_type": "traditional",
+      "source_quality": "secondary",
+      "sources": [
+        {"source_id": "underhill-hindu-year", "ref": "Raksha Bandhan; Narali Purnima", "is_primary": 1,
+         "note": "The date, the tying of the thread, and the coastal coconut offering to the sea kept on the same full moon."},
+        {"source_id": "gupte-hindu-holidays", "ref": "Rakshabandhana", "is_primary": 0,
+         "note": "The household form, and the sending of a rakhi to someone outside the family."}
+      ]
+    },
+
+    {
+      "slug": "ganga-dussehra",
+      "legacy_id": null,
+      "title_en": "Ganga Dussehra: The River That Had to Be Broken",
+      "title_hi": "गंगा दशहरा: वह नदी जिसे रोकना पड़ा",
+      "deity_en": ["Ganga", "Shiva", "Bhagiratha"],
+      "deity_hi": ["गंगा", "शिव", "भगीरथ"],
+      "festival_slug": "ganga-dussehra",
+      "entity_slugs": ["ganga", "shiva", "bhagiratha"],
+      "when_en": "Jyeshtha, Shukla Paksha, tenth tithi — the hottest part of the year, just before the rains. Ten is the number of the day in every sense.",
+      "when_hi": "ज्येष्ठ मास, शुक्ल पक्ष, दशमी — वर्ष का सबसे तपता समय, वर्षा से ठीक पहले। दस इस दिन की संख्या है, हर अर्थ में।",
+
+      "summary_en": "A man spends his life persuading a river to come down to earth for the sake of ancestors he never met. The river agrees, and then the problem is that nothing on earth can survive her arrival.",
+      "summary_hi": "एक व्यक्ति अपना जीवन इस प्रयत्न में लगा देता है कि एक नदी उन पूर्वजों के लिए धरती पर उतर आए जिनसे वह कभी मिला ही नहीं। नदी मान जाती है, और तब कठिनाई यह है कि उसके उतरने को धरती पर कुछ भी सह नहीं सकता।",
+
+      "body_en": "Bhagiratha inherited a problem that was four generations old and not his fault.\n\nHis ancestors — sixty thousand of them, the sons of Sagara — had been burnt to ash in a single moment by a sage they had wrongly accused, and their ashes were still lying where they fell. Until the proper water touched those ashes, none of them could go anywhere. They were simply stopped, and had been stopped for generations, and the family had been trying and failing to fix it the whole time. His father had tried. His grandfather had tried.\n\nThe water that would do it was not on earth. It was the Ganga, and she was in heaven, and there was no procedure for bringing a river down.\n\nSo Bhagiratha gave his life to it. He left the kingdom — which is a detail worth sitting with, since he was a king and this was an inherited debt to people who were dead before he was born — and went off to do penance, for years, until Ganga was willing to come.\n\nAnd then the actual problem appeared, and it is a good one. She agreed to come, and pointed out what her arrival would mean. She was a river in the sky. If she simply fell, she would not water the earth; she would destroy it. The force of her landing would split the ground open. Nothing could receive her.\n\nThis is the part of the story people remember as an image without always noticing it is an engineering problem. The answer was Shiva. He stood where she would land and took her on his head — into the matted hair, which broke the fall. She went into it and was lost in it for a long time, wandering in those coils, until he let her out in streams small enough for the ground to take.\n\nThat is why every image of Shiva has a river coming out of his hair. It is not decoration. He is the thing that stands between a force and what the force would otherwise flatten.\n\nThen Bhagiratha walked, and she followed. All the way down from the mountains to the sea, he went in front and the river came behind him — which is why her channel bends the way it does, because she was following a man rather than finding her own way. At Kapila's hermitage she reached the ash of the sixty thousand, and they went where they had been unable to go for four generations.\n\nWhat this story is about is stated in its own vocabulary and is easy to miss: it is about a man doing an enormous amount of work on behalf of people who could never thank him, to settle something he did not cause. The word bhagirath prayatna — a Bhagiratha-effort — is still ordinary Hindi for a labour of that kind.\n\nThe festival is the day she arrived. It falls in the worst heat of the year, days before the monsoon, which is exactly when a river matters most and is at its lowest. People bathe in her, or in any river, or pour water at home where there is none within reach. Ten is the number of the day — ten kinds of wrongdoing are said to be washed off, and offerings are made in tens — and the observance is one of the few that asks nothing except that you go to the water.",
+
+      "body_hi": "भगीरथ को ऐसी समस्या विरासत में मिली जो चार पीढ़ी पुरानी थी और जिसमें उसका दोष नहीं था।\n\nउसके पूर्वज — साठ हजार, सगर के पुत्र — एक ही क्षण में उस ऋषि के तेज से भस्म हो गए थे जिस पर उन्होंने मिथ्या दोष लगाया था, और उनकी राख वहीं पड़ी थी जहाँ वे गिरे थे। जब तक उस राख को उपयुक्त जल न छुए, उनमें से कोई कहीं नहीं जा सकता था। वे बस रुके हुए थे, पीढ़ियों से रुके हुए, और परिवार पूरे समय इसे सुधारने का प्रयत्न करता और विफल होता रहा था। उसके पिता ने प्रयत्न किया था। उसके पितामह ने प्रयत्न किया था।\n\nजो जल यह कर सकता था वह धरती पर था ही नहीं। वह गंगा थी, और वह स्वर्ग में थी, और किसी नदी को नीचे लाने की कोई विधि नहीं थी।\n\nसो भगीरथ ने अपना जीवन उसी में लगा दिया। उसने राज्य छोड़ दिया — और यह ब्योरा ठहरकर देखने योग्य है, क्योंकि वह राजा था और यह उन लोगों का विरासती ऋण था जो उसके जन्म से पहले मर चुके थे — और वर्षों तप करने चला गया, जब तक गंगा आने को तैयार न हुईं।\n\nऔर तभी असली कठिनाई प्रकट हुई, और वह अच्छी कठिनाई है। वे आने को मान गईं, और बता दिया कि उनके उतरने का अर्थ क्या होगा। वे आकाश की नदी थीं। यदि वे बस गिर पड़तीं, तो धरती को सींचतीं नहीं; उसे नष्ट कर देतीं। उनके उतरने का वेग भूमि को फाड़ देता। कोई उन्हें झेल नहीं सकता था।\n\nकथा का यह अंश लोगों को एक चित्र की तरह याद रहता है और वे प्रायः यह नहीं देखते कि यह एक अभियांत्रिकी की समस्या है। उत्तर शिव थे। वे वहीं खड़े हो गए जहाँ वे उतरने वाली थीं और उन्हें अपने सिर पर ले लिया — जटाओं में, जिन्होंने वह वेग तोड़ दिया। वे उनमें उतरीं और बहुत समय तक उन्हीं लटों में भटकती रहीं, जब तक शिव ने उन्हें इतनी छोटी धाराओं में नहीं छोड़ा कि भूमि उन्हें ले सके।\n\nइसीलिए शिव की हर प्रतिमा में जटाओं से एक नदी निकलती दिखती है। वह सजावट नहीं है। वे वही हैं जो किसी वेग और उस वस्तु के बीच खड़े होते हैं जिसे वह वेग अन्यथा चौरस कर देता।\n\nफिर भगीरथ चला, और वे पीछे-पीछे आईं। पर्वतों से समुद्र तक, वह आगे चलता रहा और नदी उसके पीछे आती रही — और इसीलिए उसकी धारा वैसे मुड़ती है जैसे मुड़ती है, क्योंकि वह अपना मार्ग खोज नहीं रही थी, एक व्यक्ति के पीछे चल रही थी। कपिल के आश्रम पर वे उन साठ हजार की राख तक पहुँचीं, और वे वहाँ गए जहाँ चार पीढ़ियों से नहीं जा पा रहे थे।\n\nयह कथा किस विषय में है, यह उसकी अपनी शब्दावली में कहा गया है और चूक जाना सरल है: यह उस व्यक्ति के विषय में है जो उन लोगों के लिए विराट श्रम करता है जो उसे कभी धन्यवाद नहीं दे सकते, ऐसी बात सुलझाने के लिए जो उसने की ही नहीं थी। 'भगीरथ प्रयत्न' आज भी हिंदी में उसी प्रकार के श्रम के लिए सामान्य शब्द है।\n\nपर्व वही दिन है जब वे आईं। वह वर्ष की सबसे बुरी गर्मी में पड़ता है, वर्षा से कुछ दिन पहले — ठीक तब जब नदी सबसे अधिक महत्वपूर्ण होती है और सबसे कम जल में होती है। लोग उनमें स्नान करते हैं, या किसी भी नदी में, या जहाँ पहुँच में कोई नदी न हो वहाँ घर पर ही जल डालते हैं। दस इस दिन की संख्या है — दस प्रकार के दोष धुलना कहा जाता है, और अर्पण दस की संख्या में होते हैं — और यह उन थोड़े व्रतों में है जो इसके सिवा कुछ नहीं माँगते कि आप जल तक जाएँ।",
+
+      "vrat_vidhi_en": "There is no fast in the strict sense. The observance is the bathing, and it is done in the morning.\n\nBathe in the Ganga where you can reach her. Where you cannot, any river or tank serves, and where there is none, a little Ganga water added to the bath at home is the accepted form — the tradition has never made this a privilege of geography.\n\nEverything on this day is offered in tens: ten flowers, ten lamps, ten fruits, ten handfuls of water poured, and the dip itself taken ten times where the full form is kept. The ten stands for the ten kinds of wrongdoing the day is said to carry off.\n\nWater is poured toward the sun while standing in the river, and sesame and barley are offered to the ancestors — the story is about ancestors who could not be released, and that half of it is not skipped.\n\nSomething is given away: water itself is the traditional gift on this day. Setting up a water stand for travellers, a pot at a crossroads, or simply giving water to whoever passes is the oldest form of it, and it falls in the hottest week of the year for that reason.\n\nWhere a household keeps the fuller form, fans, earthen pots, sattu and cool foods are given to someone working outside.",
+      "vrat_vidhi_hi": "कड़े अर्थ में कोई उपवास नहीं है। व्रत स्वयं स्नान है, और वह प्रातः किया जाता है।\n\nजहाँ गंगा तक पहुँच हो वहाँ गंगा में स्नान करें। जहाँ न हो, वहाँ कोई भी नदी या सरोवर चलेगा, और जहाँ वह भी न हो, वहाँ घर के स्नान-जल में थोड़ा गंगाजल मिलाना मान्य रूप है — परंपरा ने इसे कभी भूगोल का विशेषाधिकार नहीं बनाया।\n\nइस दिन सब कुछ दस की संख्या में अर्पित होता है: दस पुष्प, दस दीप, दस फल, दस अंजलि जल, और पूर्ण विधि में दस बार डुबकी। यह दस उन दस प्रकार के दोषों के लिए है जिन्हें यह दिन हर लेता है, ऐसा कहा जाता है।\n\nनदी में खड़े होकर सूर्य को अर्घ्य दिया जाता है, और पितरों को तिल तथा जौ अर्पित किए जाते हैं — कथा उन्हीं पूर्वजों की है जो मुक्त नहीं हो पा रहे थे, और उसका यह आधा हिस्सा छोड़ा नहीं जाता।\n\nकुछ दान किया जाता है: इस दिन का पारंपरिक दान जल ही है। राहगीरों के लिए प्याऊ लगाना, चौराहे पर घड़ा रखना, या जो भी निकले उसे जल पिला देना इसका सबसे प्राचीन रूप है, और यह वर्ष के सबसे तपते सप्ताह में इसीलिए पड़ता है।\n\nजहाँ घर पूर्ण विधि रखता है वहाँ पंखे, मिट्टी के घड़े, सत्तू और शीतल वस्तुएँ किसी बाहर काम करने वाले को दी जाती हैं।",
+
+      "phala_en": "The day is kept for the release of what is stuck — the story is about ancestors who could not move on for four generations — and for the washing off of what has accumulated. It is also the day for giving water, which is the only offering it really asks for.",
+      "phala_hi": "यह दिन उस वस्तु की मुक्ति के लिए रखा जाता है जो अटकी हुई है — कथा उन्हीं पूर्वजों की है जो चार पीढ़ियों तक आगे नहीं बढ़ सके — और उस सबके धुल जाने के लिए जो संचित हो चुका है। यह जल दान का दिन भी है, और वस्तुतः यही एकमात्र अर्पण है जो यह माँगता है।",
+
+      "moral_en": "Bhagiratha gave his life to settling a debt he had not incurred, for people who could never thank him. The language still carries his name for that kind of work, which suggests the tradition thought it was the hardest thing in the story — harder than the river.",
+      "moral_hi": "भगीरथ ने अपना जीवन ऐसा ऋण चुकाने में लगा दिया जो उसने लिया ही नहीं था, उन लोगों के लिए जो उसे कभी धन्यवाद नहीं दे सकते थे। भाषा आज भी उस प्रकार के श्रम के लिए उसका नाम ढोती है — जिससे लगता है कि परंपरा ने इसे कथा की सबसे कठिन बात माना, नदी से भी कठिन।",
+
+      "key_moments_en": [
+        "Sixty thousand sons of Sagara are burnt to ash for wrongly accusing a sage, and their ashes lie unreleased.",
+        "Four generations try and fail to free them; Bhagiratha inherits the problem without having caused it.",
+        "The only water that will do it is the Ganga, and she is in heaven.",
+        "He leaves his kingdom and does penance for years until she agrees to come.",
+        "She warns that her fall would split the ground open — she would destroy the earth, not water it.",
+        "Shiva stands where she will land and takes her into his matted hair, breaking the force.",
+        "She wanders lost in his coils for a long time before he releases her in streams the ground can take.",
+        "Bhagiratha walks ahead and the river follows him from the mountains to the sea.",
+        "Her channel bends as it does because she was following a man rather than finding her own way.",
+        "She reaches the ash of the sixty thousand, and they go where they could not go for four generations."
+      ],
+      "key_moments_hi": [
+        "सगर के साठ हजार पुत्र एक ऋषि पर मिथ्या दोष लगाकर भस्म हो जाते हैं, और उनकी राख अमुक्त पड़ी रहती है।",
+        "चार पीढ़ियाँ उन्हें मुक्त कराने में विफल होती हैं; भगीरथ को वह समस्या बिना अपने दोष के मिलती है।",
+        "जो जल यह कर सकता है वह केवल गंगा है, और वे स्वर्ग में हैं।",
+        "वह राज्य छोड़कर वर्षों तप करता है, जब तक वे आने को नहीं मानतीं।",
+        "वे चेताती हैं कि उनके गिरने से भूमि फट जाएगी — वे धरती को सींचेंगी नहीं, नष्ट कर देंगी।",
+        "शिव वहीं खड़े होकर उन्हें अपनी जटाओं में ले लेते हैं और वह वेग तोड़ देते हैं।",
+        "वे बहुत समय उन लटों में भटकती रहती हैं, फिर शिव उन्हें ऐसी धाराओं में छोड़ते हैं जिन्हें भूमि ले सके।",
+        "भगीरथ आगे चलता है और नदी पर्वतों से समुद्र तक उसके पीछे आती है।",
+        "उसकी धारा इसीलिए वैसे मुड़ती है, क्योंकि वह अपना मार्ग नहीं खोज रही थी, एक व्यक्ति के पीछे चल रही थी।",
+        "वे उन साठ हजार की राख तक पहुँचती हैं, और वे वहाँ जाते हैं जहाँ चार पीढ़ियों से नहीं जा सके थे।"
+      ],
+
+      "reflection_en": "Bhagiratha worked for years on a debt he did not create, owed to people he never met. What has been handed to you that was not yours to fix?",
+      "reflection_hi": "भगीरथ ने वर्षों उस ऋण पर श्रम किया जो उसने बनाया नहीं था, और जो उन लोगों का था जिनसे वह कभी मिला नहीं। आपको क्या सौंपा गया है जिसे सुधारना आपका काम नहीं था?",
+
+      "themes_en": ["inherited debt", "persistence", "rivers", "ancestors", "breaking a force"],
+      "themes_hi": ["विरासती ऋण", "अध्यवसाय", "नदियाँ", "पितर", "वेग को तोड़ना"],
+
+      "order_no": 220,
+      "primary_source_name": "The Ramayana, tr. Manmatha Nath Dutt",
+      "primary_source_ref": "Bala Kanda — the descent of Ganga",
+      "verification_status": "verified",
+      "claim_type": "textual",
+      "source_quality": "primary",
+      "sources": [
+        {"source_id": "dutt-ramayana", "ref": "Bala Kanda, the descent of Ganga", "is_primary": 1,
+         "note": "The sons of Sagara, Bhagiratha's penance, Ganga's warning about the force of her fall, Shiva receiving her in his hair, and the river following Bhagiratha to the sea."},
+        {"source_id": "underhill-hindu-year", "ref": "Ganga Dussehra", "is_primary": 0,
+         "note": "The date, the bathing, and the offerings made in tens."}
+      ]
+    }
+  ]
+}
