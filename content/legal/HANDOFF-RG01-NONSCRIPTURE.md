@@ -604,4 +604,41 @@ project owner, not a research problem:
 3. **Ship 12 and drop the rest**, which leaves `content.sqlite` undeletable
    unless the app drops those entries too.
 
-Do not quietly pick one. Each has a different legal and editorial shape.
+### RULING, 2026-09-14: write them as our own tellings
+
+The project owner chose option 2, and extended it to the Ekadashis as well:
+**take the traditional subject matter and write it in our own words.** The
+reasoning is sound and worth restating, because it is the same reasoning that
+governs the whole of RG-01.
+
+A vrat katha is not owned by anyone. The Sakat Chauth potter, Santoshi Maa's
+daughter-in-law, the Ekadashi kings -- these are traditional narratives that
+have been retold by every generation that kept the fast. What was never ours
+was **Ishvarvaani's particular wording of them**, and that is the only thing
+RG-01 was ever about. Writing our own telling of a traditional story is exactly
+what the tradition itself does.
+
+So the rule for these 45 rows:
+
+1. **Take the subject matter, never the sentences.** Work from what the
+   tradition holds -- who the people are, what happens, what the observance is
+   -- and write it fresh, at the same bar as the 12 already done.
+2. **Cite honestly.** `primary_source_name` is "Traditional vrat katha, oral
+   tradition" rather than a book we did not use. Do not invent a citation, and
+   do not cite Underhill or Gupte for a narrative they do not contain -- they
+   may still be cited for the observance where they genuinely cover it.
+3. **Set `claim_type` to `traditional`** and `source_quality` to NULL, so the
+   content health report can tell these apart from the textually-sourced rows
+   at a glance. `verification_status` stays `unverified` unless a named source
+   actually backs the row.
+4. **The distinctness gate still applies and still matters.** These are scored
+   against the fixture row exactly as the others are. Writing our own telling of
+   a shared story is legitimate; drifting back toward their phrasing is not, and
+   the gate is what proves the difference.
+5. **Invent nothing.** A retelling may set a scene and give a character an inner
+   life. It may not add a character, a place name, a number or a boon the
+   tradition does not have. The earlier rule stands: enriching is telling fully,
+   not making things up.
+
+This unblocks all 45 rows. It does not lower the bar -- it removes a
+requirement (a pre-1929 English book) that was never the actual legal test.

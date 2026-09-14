@@ -1,0 +1,217 @@
+{
+  "_note": "RG-01 batch 6 — folk vrat kathas. These are traditional oral narratives with no pre-1929 English source; per the owner's ruling of 2026-09-14 they are written as our own tellings of the tradition's own subject matter. claim_type is traditional and no book is cited for the narrative. Fixture rows not opened while writing; the distinctness gate still applies and still passes.",
+  "rows": [
+    {
+      "slug": "sakat-chauth",
+      "legacy_id": 1,
+      "title_en": "Sakat Chauth: The Kiln and the Widow's Son",
+      "title_hi": "सकट चौथ: भट्ठा और विधवा का बेटा",
+      "deity_en": ["Ganesha", "Sakat Mata"],
+      "deity_hi": ["गणेश", "सकट माता"],
+      "festival_slug": null,
+      "entity_slugs": ["ganesha"],
+      "when_en": "Magha, Krishna Paksha, fourth tithi — deep winter. The fast is broken at moonrise, which on this tithi comes late in the night.",
+      "when_hi": "माघ मास, कृष्ण पक्ष, चतुर्थी — कड़ाके की सर्दी में। व्रत चंद्रोदय पर खोला जाता है, जो इस तिथि पर रात गए होता है।",
+
+      "summary_en": "A town decides that its kiln will only fire if a child is put into it, and takes them one household at a time. When the turn reaches a widow with one son, she has nothing to fight it with except a night of prayer.",
+      "summary_hi": "एक नगर तय कर लेता है कि उसका भट्ठा तभी पकेगा जब उसमें एक बालक डाला जाए, और वह बारी-बारी हर घर से बालक लेता है। जब बारी उस विधवा तक पहुँचती है जिसका एक ही बेटा है, तो उसके पास लड़ने को रात भर की प्रार्थना के सिवा कुछ नहीं।",
+
+      "body_en": "The potter's trouble was ordinary at first. He built his kiln, stacked it, fired it, and when he opened it the pots were still soft — not cracked, not burnt, simply unfinished, as though the heat had never reached them. He did it again and the same thing happened. A potter whose kiln will not fire has no trade, so he went to the king.\n\nWhat happened next is the part of this story that should be read slowly, because it is not really about a kiln.\n\nThe king referred it to his priest, and the priest gave an answer. He said the kiln needed a child. Put one in each time it is lit, he said, and the pots will harden.\n\nAnd the town did it.\n\nNot in a frenzy — that is the horror of it. By order, in turn, one household at a time, the way a tax is collected. A list, presumably. A knock at a particular door on a particular morning. Somebody wrote down whose turn it was next. The story does not describe anyone objecting, and the silence is doing work: a whole town found this survivable as long as it was somebody else's turn, and kept its pottery trade going on those terms for however long it lasted.\n\nThen the turn came to an old woman who had nothing except one son.\n\nShe had no standing to refuse. She was a widow in a town that had already agreed to this, and there was nobody to appeal to, since the order came from the king and the reasoning from the priest. What she had was the day: it happened to be the fourth of the dark fortnight of Magha, the day she kept for Ganesha, the day mothers keep for their children.\n\nSo she did the only two things available to her. She gave her son a betel nut and a few blades of durva grass — the grass that is Ganesha's, the least valuable thing anyone owns, a weed from the roadside — and told him to keep hold of them. Then she let him go, because she could not stop it.\n\nAnd she spent the night doing what she would have done anyway. She made a small Ganesha out of clay with her hands, and set it down, and sat with it until morning. She did not sleep. It is worth noticing that the story gives her no special power and no vision. It gives her a lump of clay, a night, and a fast she was already keeping.\n\nIn the morning the potter opened the kiln, and the boy was sitting in it, alive.\n\nAnd so were all the others. Every child the town had put into that fire came out of it, on the same morning, together. The story does not explain the mechanism and is not interested in it. What it shows is the town standing in front of the kiln looking at the children it had agreed to burn.\n\nWhat mothers keep from this is a fast on that day, and it is one of the harder ones — no food and no water through a winter day, broken only when the moon finally comes up. The offering is sesame and jaggery, pounded and pressed into a mound, and durva grass, and a clay Ganesha made by hand rather than bought.\n\nThe details of the offering are the story. Sesame and jaggery are winter food, cheap, what a poor household actually has. Durva is a weed. The clay figure is made with fingers by whoever is fasting. Nothing in the rite costs anything, and that is deliberate — the woman it remembers had nothing to give and gave it anyway, and the tradition has never upgraded her offering into something more respectable.",
+
+      "body_hi": "कुम्हार की कठिनाई पहले साधारण ही थी। उसने भट्ठा लगाया, बर्तन चुने, आग दी, और खोलने पर बर्तन कच्चे ही निकले — न चटके, न जले, बस अधपके, मानो आँच उन तक पहुँची ही न हो। उसने फिर किया और वही हुआ। जिस कुम्हार का भट्ठा न पके उसका धंधा ही नहीं बचता, सो वह राजा के पास गया।\n\nआगे जो हुआ उसे धीरे पढ़ना चाहिए, क्योंकि यह कथा असल में भट्ठे की है ही नहीं।\n\nराजा ने बात अपने पुरोहित को सौंपी, और पुरोहित ने उत्तर दिया। उसने कहा कि भट्ठे को एक बालक चाहिए। हर बार आग देते समय एक डाल दो, उसने कहा, बर्तन पक जाएँगे।\n\nऔर नगर ने वैसा किया।\n\nकिसी उन्माद में नहीं — भयावह बात यही है। आदेश से, बारी-बारी, एक घर से एक, जैसे कोई कर वसूला जाता है। कोई सूची रही होगी। किसी नियत सुबह किसी नियत द्वार पर दस्तक। किसी ने लिखकर रखा होगा कि अगली बारी किसकी है। कथा किसी के विरोध का वर्णन नहीं करती, और वह चुप्पी अपना काम कर रही है: एक पूरे नगर ने इसे तब तक सहने योग्य पाया जब तक बारी किसी और की थी, और उन्हीं शर्तों पर अपना कुम्हारी का धंधा चलाता रहा।\n\nफिर बारी उस बूढ़ी स्त्री तक आई जिसके पास एक बेटे के सिवा कुछ नहीं था।\n\nमना करने का उसके पास कोई आधार नहीं था। वह ऐसे नगर की विधवा थी जो इस पर पहले ही सहमत हो चुका था, और गुहार लगाने को कोई नहीं था, क्योंकि आदेश राजा का था और तर्क पुरोहित का। उसके पास जो था वह वह दिन था: संयोग से वह माघ के कृष्ण पक्ष की चतुर्थी थी, वही दिन जो वह गणेश के लिए रखती थी, वही दिन जो माताएँ अपनी संतान के लिए रखती हैं।\n\nसो उसने वे दो ही काम किए जो उसके वश में थे। उसने बेटे को एक सुपारी और दूब की कुछ पत्तियाँ दीं — वही घास जो गणेश की है, किसी के पास की सबसे कम मूल्य वाली वस्तु, सड़क किनारे की घास — और कहा कि इन्हें थामे रखना। फिर उसने उसे जाने दिया, क्योंकि वह रोक नहीं सकती थी।\n\nऔर उसने रात वही करते हुए बिताई जो वह वैसे भी करती। उसने अपने हाथों से मिट्टी के छोटे गणेश बनाए, उन्हें रखा, और सुबह तक उनके पास बैठी रही। वह सोई नहीं। ध्यान देने योग्य है कि कथा उसे कोई विशेष शक्ति नहीं देती, कोई दर्शन नहीं देती। वह उसे मिट्टी का एक लौंदा, एक रात, और वह व्रत देती है जो वह पहले से रख रही थी।\n\nसुबह कुम्हार ने भट्ठा खोला, और बालक उसमें बैठा था, जीवित।\n\nऔर बाकी सब भी। नगर ने उस आग में जितने बच्चे डाले थे, सब उसी सुबह, साथ-साथ बाहर आए। कथा इसकी युक्ति नहीं समझाती और उसमें उसकी रुचि भी नहीं है। वह जो दिखाती है वह यह है: पूरा नगर भट्ठे के सामने खड़ा उन बच्चों को देख रहा है जिन्हें जलाने पर वह सहमत हो चुका था।\n\nमाताएँ इसमें से जो सँजोती हैं वह उस दिन का व्रत है, और वह कठिन व्रतों में है — सर्दी के पूरे दिन बिना अन्न और बिना जल, और तभी खुलता है जब चंद्रमा अंततः निकलता है। भोग है तिल और गुड़, कूटकर ढेर में बाँधे हुए, और दूब, और हाथ से बनाए गए मिट्टी के गणेश, खरीदे हुए नहीं।\n\nभोग का ब्योरा ही कथा है। तिल और गुड़ सर्दी का भोजन है, सस्ता, वही जो किसी निर्धन घर में सचमुच होता है। दूब घास है। मिट्टी की मूर्ति व्रत रखने वाला अपनी उँगलियों से बनाता है। इस विधान में कुछ भी मूल्यवान नहीं है, और यह जानबूझकर है — जिस स्त्री की यह स्मृति है उसके पास देने को कुछ नहीं था और उसने फिर भी दिया, और परंपरा ने कभी उसके अर्पण को अधिक सम्मानजनक वस्तु में बदला नहीं।",
+
+      "vrat_vidhi_en": "The fast is kept by mothers for their children and runs from sunrise until moonrise, without food and without water. On this tithi in Magha the moon rises late — often after nine — so it is a long day in cold weather.\n\nBathe in the morning and take the vow, naming the child or children it is kept for.\n\nA Ganesha is made by hand from clay or from cow dung and installed on a wooden seat. Made, not bought: this is the one detail of the rite that everybody keeps.\n\nThe offering is tilkut — sesame pounded with jaggery and pressed together — along with durva grass, usually twenty-one blades, and a few whole sesame laddus. Sugarcane, sweet potato and winter root vegetables are set out where they are the custom.\n\nIn the evening the women of the household gather and the story is told before the moon comes up.\n\nAt moonrise water is offered to the moon, then to Ganesha. The fast is broken on the tilkut. In many families the mother feeds the child first from the offering before she eats anything herself.",
+      "vrat_vidhi_hi": "यह व्रत माताएँ अपनी संतान के लिए रखती हैं और यह सूर्योदय से चंद्रोदय तक, बिना अन्न और बिना जल चलता है। माघ की इस तिथि पर चंद्रमा देर से निकलता है — प्रायः नौ बजे के बाद — सो यह सर्दी में लंबा दिन होता है।\n\nप्रातः स्नान कर संकल्प लें, और उस संतान का नाम लें जिसके लिए व्रत है।\n\nमिट्टी या गोबर से हाथ द्वारा गणेश बनाकर लकड़ी की चौकी पर स्थापित किए जाते हैं। बनाए हुए, खरीदे हुए नहीं: विधि का यही एक ब्योरा है जिसे सब निभाते हैं।\n\nभोग है तिलकुट — तिल को गुड़ के साथ कूटकर बाँधा हुआ — साथ में दूब, प्रायः इक्कीस दल, और कुछ साबुत तिल के लड्डू। जहाँ रीति हो वहाँ गन्ना, शकरकंद और सर्दी की जड़ वाली सब्जियाँ भी रखी जाती हैं।\n\nसंध्या को घर की स्त्रियाँ एकत्र होती हैं और चंद्रोदय से पहले कथा कही जाती है।\n\nचंद्रोदय पर चंद्रमा को अर्घ्य दिया जाता है, फिर गणेश को। व्रत तिलकुट पर खोला जाता है। बहुत परिवारों में माँ स्वयं कुछ खाने से पहले उसी भोग से संतान को खिलाती है।",
+
+      "phala_en": "The fast is kept for children — their health, and their getting through whatever is in front of them. The name says it: sakat means the trouble, and the day is kept for its removal. It is the fast of a mother who cannot fix the situation herself.",
+      "phala_hi": "यह व्रत संतान के लिए रखा जाता है — उनके स्वास्थ्य के लिए, और इसके लिए कि जो उनके सामने है उससे वे पार पा जाएँ। नाम ही यह कहता है: सकट अर्थात् संकट, और यह दिन उसी के निवारण के लिए है। यह उस माँ का व्रत है जो स्थिति स्वयं ठीक नहीं कर सकती।",
+
+      "moral_en": "The town is not wicked in any dramatic way. It is a place where a terrible thing was made official, so everybody could take part in it while feeling they had merely complied. The one person who breaks with it has no power at all — only a night, a handful of clay, and refusal to give up on her own child.",
+      "moral_hi": "वह नगर किसी नाटकीय अर्थ में दुष्ट नहीं है। वह ऐसी जगह है जहाँ एक भयानक बात को आधिकारिक बना दिया गया, ताकि सब उसमें भाग ले सकें और फिर भी लगे कि उन्होंने केवल आदेश माना। जो एक व्यक्ति उससे टूटती है उसके पास कोई शक्ति नहीं — केवल एक रात, मुट्ठी भर मिट्टी, और अपनी संतान पर से आशा न छोड़ना।",
+
+      "key_moments_en": [
+        "A potter's kiln stops firing; the pots come out soft however long he heats them.",
+        "The king refers the matter to his priest, who says the kiln needs a child.",
+        "The town complies by order, one household at a time, the way a tax is collected.",
+        "Nobody in the story objects, and the silence is the point.",
+        "The turn reaches an old widow whose only son is all she has.",
+        "It falls on the fourth of the dark fortnight of Magha — the day she already keeps for Ganesha.",
+        "She gives the boy a betel nut and a few blades of durva grass to hold, and lets him go.",
+        "Through the night she shapes a small Ganesha from clay with her hands and sits with it, not sleeping.",
+        "In the morning the potter opens the kiln and the boy is sitting inside it alive.",
+        "So is every other child the town had put in the fire, all of them returned on the same morning."
+      ],
+      "key_moments_hi": [
+        "कुम्हार का भट्ठा पकना बंद कर देता है; कितनी भी आँच दे, बर्तन कच्चे निकलते हैं।",
+        "राजा बात पुरोहित को सौंपता है, जो कहता है कि भट्ठे को एक बालक चाहिए।",
+        "नगर आदेश मानकर, एक-एक घर से बारी-बारी, वैसे ही पालन करता है जैसे कर वसूला जाता हो।",
+        "कथा में कोई विरोध नहीं करता, और वही चुप्पी इसका मर्म है।",
+        "बारी उस बूढ़ी विधवा तक आती है जिसके पास इकलौते बेटे के सिवा कुछ नहीं।",
+        "वह दिन माघ कृष्ण पक्ष की चतुर्थी है — वही दिन जो वह पहले से गणेश के लिए रखती है।",
+        "वह बेटे को थामने के लिए एक सुपारी और दूब की कुछ पत्तियाँ देती है, और जाने देती है।",
+        "रात भर वह अपने हाथों से मिट्टी के छोटे गणेश गढ़कर उनके पास बैठी रहती है, सोती नहीं।",
+        "सुबह कुम्हार भट्ठा खोलता है और बालक उसमें जीवित बैठा है।",
+        "और वे सब भी, जिन्हें नगर ने आग में डाला था — सब उसी सुबह लौट आते हैं।"
+      ],
+
+      "reflection_en": "Nobody in the town objected while it was somebody else's turn. What makes a terrible thing easier to accept once it has been made official?",
+      "reflection_hi": "जब तक बारी किसी और की थी, नगर में किसी ने आपत्ति नहीं की। कोई भयानक बात आधिकारिक बन जाने पर स्वीकार करना सरल क्यों हो जाता है?",
+
+      "themes_en": ["mothers", "children", "a town's silence", "the poorest offering", "refusal"],
+      "themes_hi": ["माताएँ", "संतान", "नगर की चुप्पी", "निर्धनतम अर्पण", "इनकार"],
+
+      "order_no": 130,
+      "primary_source_name": "Traditional vrat katha, oral tradition",
+      "primary_source_ref": "Sakat Chauth / Sankashti Chaturthi",
+      "verification_status": "unverified",
+      "claim_type": "traditional",
+      "source_quality": null,
+      "sources": [
+        {"source_id": "oral-tradition", "ref": "Sakat Chauth / Sankashti Chaturthi", "is_primary": 1,
+         "note": "Our own telling of a traditional vrat katha. No pre-1929 English source carries the narrative: Underhill omits it entirely and Gupte names Sankashti Chaturthi as ritual procedure only. The observance details -- tilkut, durva, the hand-made clay image, moonrise -- are the living practice."}
+      ]
+    },
+
+    {
+      "slug": "santoshi-maa-vrat",
+      "legacy_id": 42,
+      "title_en": "Santoshi Maa: Sixteen Fridays and a Bowl of Sour Food",
+      "title_hi": "संतोषी माता: सोलह शुक्रवार और एक कटोरी खटाई",
+      "deity_en": ["Santoshi Maa", "Ganesha"],
+      "deity_hi": ["संतोषी माता", "गणेश"],
+      "festival_slug": null,
+      "entity_slugs": ["ganesha"],
+      "when_en": "Any Friday, kept for sixteen consecutive weeks. The observance ends with an udyapan, and nothing sour is eaten in the house on any of those days.",
+      "when_hi": "कोई भी शुक्रवार, लगातार सोलह सप्ताह। व्रत का समापन उद्यापन से होता है, और उन सभी दिनों घर में खटाई नहीं खाई जाती।",
+
+      "summary_en": "The youngest of seven brothers is fed on leftovers and leaves the country. His wife, kept in the house as unpaid labour, finds a fast being kept in the forest and starts keeping it.",
+      "summary_hi": "सात भाइयों में सबसे छोटे को बचा-खुचा खिलाया जाता है और वह परदेस चला जाता है। उसकी पत्नी, जिसे घर में बेगार की तरह रखा जाता है, वन में रखा जा रहा एक व्रत देखती है और स्वयं रखने लगती है।",
+
+      "body_en": "There were seven sons and six of them earned. The mother fed those six properly and gave the seventh what was left on the plates, and she did it every day, and everybody in the house could see it.\n\nHe did not know for a long time. He found out the way people find these things out — he came back at the wrong hour, or somebody said something, and then he could not unsee it. And what he did was leave. Not in a rage; he simply understood what his position in that house was and that nothing would change it, and he went abroad to work.\n\nHe did not take his wife. That is the hinge of the whole story, and it is left deliberately unexplained: whether he could not, or did not think to, or meant to send for her later. What is certain is that she was left in a house where the only person with any reason to protect her had gone.\n\nSo they used her. She was put to the heaviest work — hauling wood, grinding, water — and fed on husk bread and water from the pot the animals drank from. She slept where she was told. There was no dramatic cruelty in it, just an arrangement that everybody found convenient, repeated daily for years.\n\nShe found the fast by accident. Out in the forest cutting wood she came on a group of women doing something together — a small worship, jaggery and roasted gram set out, no priest and nothing expensive — and she stopped and watched and asked what it was. They told her: Santoshi Maa, sixteen Fridays, and this is all you need. Jaggery and gram, a lamp, and the story. Nothing sour, by anyone in the house, on the day.\n\nThe cheapness matters. A woman with no money and no standing could keep this, and that is precisely why this fast spread the way it did.\n\nShe kept it, sixteen Fridays, and in that time her husband wrote, and then sent money, and then came home with enough that the house had to treat her differently. She had the udyapan to do — the closing ceremony that finishes a vrat — and she invited the household's children and fed them, which is how it is done.\n\nAnd the sisters-in-law put something sour in the food.\n\nThey did it for the ordinary reason people do things like that: she had come up in the world and they had not, and they had spent years with her beneath them. The children ate tamarind, or were given money and bought something sour with it, and asked for it at the meal — and the vrat was broken on its last day, on the one condition it had.\n\nHer husband was arrested almost immediately, on a charge that came out of nowhere.\n\nShe worked out what had happened and did the only thing available: she kept it again. She apologised and began the udyapan over, and this time she watched the food herself, every dish, and made sure no one ate anything sour in that house on that day. Her husband was released and came home.\n\nWhat this story is actually about is not sour food. It is about a woman with no leverage at all finding one practice she could do without permission, money or anyone's help, and being sabotaged in it by the people who had been living off her — and simply starting again. The condition of the fast, that nobody in the house eats anything sour, quietly requires the household to participate. She could keep the first fifteen Fridays alone. The last one needed them, and the first time, they would not.",
+
+      "body_hi": "सात बेटे थे और उनमें छह कमाते थे। माँ उन छह को ठीक से खिलाती और सातवें को वह देती जो थालियों में बच जाता — और यह वह रोज करती थी, और घर में सब यह देख सकते थे।\n\nउसे बहुत समय तक पता नहीं चला। पता वैसे ही चला जैसे ऐसी बातें चलती हैं — वह गलत समय पर लौट आया, या किसी ने कुछ कह दिया, और फिर वह उसे अनदेखा नहीं कर सका। और उसने जो किया वह था चले जाना। क्रोध में नहीं; उसने बस समझ लिया कि उस घर में उसकी जगह क्या है और यह कभी बदलेगा नहीं, और वह कमाने परदेस चला गया।\n\nवह अपनी पत्नी को साथ नहीं ले गया। पूरी कथा यहीं मुड़ती है, और इसे जानबूझकर अस्पष्ट छोड़ा गया है: वह ले जा नहीं सका, या उसे सूझा नहीं, या वह बाद में बुलाना चाहता था। निश्चित इतना है कि वह ऐसे घर में छूट गई जहाँ उसकी रक्षा का कारण रखने वाला एकमात्र व्यक्ति चला गया था।\n\nसो उन्होंने उसका उपयोग किया। उसे सबसे भारी काम पर लगाया गया — लकड़ी ढोना, पीसना, पानी — और उसे भूसी की रोटी और उसी हौद का पानी दिया गया जिससे पशु पीते थे। वह वहीं सोती जहाँ कहा जाता। इसमें कोई नाटकीय क्रूरता नहीं थी, बस एक व्यवस्था जो सबको सुविधाजनक लगती थी, और जो वर्षों रोज दोहराई जाती रही।\n\nव्रत उसे संयोग से मिला। वन में लकड़ी काटते हुए उसने कुछ स्त्रियों को साथ मिलकर कुछ करते देखा — छोटी-सी पूजा, रखा हुआ गुड़ और भुना चना, न कोई पंडित न कोई महँगी वस्तु — और वह रुककर देखती रही और पूछा कि यह क्या है। उन्होंने बताया: संतोषी माता, सोलह शुक्रवार, और बस इतना ही चाहिए। गुड़ और चना, एक दीप, और कथा। और उस दिन घर में कोई खटाई न खाए।\n\nइसका सस्ता होना महत्वपूर्ण है। बिना धन और बिना किसी हैसियत वाली स्त्री इसे रख सकती थी, और ठीक इसी कारण यह व्रत जैसे फैला वैसे फैला।\n\nउसने इसे रखा, सोलह शुक्रवार, और उसी बीच उसके पति का पत्र आया, फिर धन आया, और फिर वह इतना लेकर लौटा कि घर को उसके साथ अलग व्यवहार करना पड़ा। अब उसे उद्यापन करना था — वह समापन जो व्रत को पूरा करता है — और उसने घर के बच्चों को बुलाकर भोजन कराया, जैसे किया जाता है।\n\nऔर जेठानियों ने भोजन में खटाई मिला दी।\n\nउन्होंने वह उसी साधारण कारण से किया जिससे लोग ऐसी बातें करते हैं: वह ऊपर उठ गई थी और वे नहीं, और उन्होंने वर्षों उसे अपने से नीचे देखा था। बच्चों ने इमली खाई, या उन्हें पैसे देकर कुछ खट्टा मँगवा दिया गया, और उन्होंने भोजन में वही माँगा — और व्रत अपने अंतिम दिन, अपनी उस एकमात्र शर्त पर टूट गया।\n\nउसका पति लगभग तुरंत बंदी बना लिया गया, ऐसे आरोप में जो कहीं से नहीं आया था।\n\nउसने समझ लिया कि क्या हुआ है और वही किया जो उसके वश में था: उसने फिर से रखा। उसने क्षमा माँगी और उद्यापन दोबारा आरंभ किया, और इस बार उसने भोजन स्वयं देखा, हर वस्तु, और यह सुनिश्चित किया कि उस दिन उस घर में कोई खटाई न खाए। उसका पति छूटकर घर आ गया।\n\nयह कथा असल में खटाई के विषय में नहीं है। यह उस स्त्री के विषय में है जिसके पास कोई बल नहीं था और जिसे एक ऐसा उपाय मिला जिसे वह बिना अनुमति, बिना धन और बिना किसी की सहायता के कर सकती थी — और जिसे उन्हीं लोगों ने बिगाड़ा जो उसी के श्रम पर जी रहे थे — और जिसने बस फिर से आरंभ कर दिया। व्रत की वह शर्त, कि घर में कोई खटाई न खाए, चुपचाप पूरे घर की भागीदारी माँगती है। पहले पंद्रह शुक्रवार वह अकेले रख सकती थी। अंतिम को उनकी आवश्यकता थी, और पहली बार, उन्होंने नहीं दी।",
+
+      "vrat_vidhi_en": "The fast is kept on Fridays, sixteen in a row, and is broken in the afternoon after the worship. It is deliberately one of the cheapest observances there is and is not meant to be made expensive.\n\nBathe in the morning and take the vow, naming what it is being kept for. Through the day most keep to one meal, taken after the worship.\n\nThe offering is jaggery and roasted gram — gur and chana — and nothing more elaborate is required. A pot of water is set with a bowl of raw sugar on top, a lamp is lit, and marigolds are used where they are available.\n\nThe story is read or told at the worship each Friday, and water from the pot is sprinkled over the household afterwards.\n\n**Nothing sour is eaten by anyone in the house on that day** — not by the person fasting and not by anyone else. No tamarind, no lemon, no curd that has turned. This is the one strict condition of the vrat and it is what the story turns on.\n\nOn the sixteenth Friday the udyapan is done. Eight boys are invited and fed a meal of kheer, puri and chana, and given something before they leave. The food is checked by the person fasting rather than left to others. Nothing sour goes on the table and nothing sour is brought into the house that day.",
+      "vrat_vidhi_hi": "यह व्रत शुक्रवार को रखा जाता है, लगातार सोलह, और पूजन के बाद दोपहर में खोला जाता है। यह जानबूझकर सबसे सस्ते व्रतों में से एक है और इसे महँगा बनाना अभीष्ट नहीं है।\n\nप्रातः स्नान कर संकल्प लें, और बताएँ कि व्रत किसलिए है। दिन भर अधिकांश लोग एक ही समय भोजन करते हैं, पूजन के बाद।\n\nभोग है गुड़ और भुना चना — और इससे अधिक विस्तृत कुछ आवश्यक नहीं। जल का कलश रखकर उस पर गुड़ का कटोरा रखा जाता है, दीप जलाया जाता है, और जहाँ मिलें वहाँ गेंदे के फूल।\n\nहर शुक्रवार पूजन में कथा पढ़ी या कही जाती है, और बाद में कलश का जल घर भर में छिड़का जाता है।\n\n**उस दिन घर में कोई भी खटाई नहीं खाता** — न व्रत रखने वाला, न कोई और। न इमली, न नींबू, न फटा हुआ दही। यही इस व्रत की एकमात्र कठोर शर्त है और कथा इसी पर घूमती है।\n\nसोलहवें शुक्रवार को उद्यापन होता है। आठ बालक बुलाकर खीर, पूरी और चने का भोजन कराया जाता है, और जाते समय कुछ भेंट दी जाती है। भोजन व्रत रखने वाला स्वयं देखता है, दूसरों पर नहीं छोड़ता। उस दिन न कुछ खट्टा परोसा जाता है और न घर में लाया जाता है।",
+
+      "phala_en": "The vrat is kept for what the name says — santosh, contentment, and the circumstances that make it possible. In practice it is kept for work, for a household's income, and for someone away from home to come back.",
+      "phala_hi": "यह व्रत उसी के लिए रखा जाता है जो नाम कहता है — संतोष, और वे परिस्थितियाँ जो उसे सँभव बनाती हैं। व्यवहार में इसे काम के लिए, घर की आय के लिए, और परदेस गए किसी के लौट आने के लिए रखा जाता है।",
+
+      "moral_en": "She could keep fifteen Fridays by herself. The sixteenth required the household not to eat something sour for one day, and the first time they would not manage it. The fast's real condition was never the tamarind — it was whether the people around her would give her that much.",
+      "moral_hi": "पंद्रह शुक्रवार वह अकेले रख सकती थी। सोलहवें के लिए आवश्यक था कि घर एक दिन कुछ खट्टा न खाए, और पहली बार वे इतना भी न कर सके। व्रत की असली शर्त कभी इमली नहीं थी — शर्त यह थी कि उसके आसपास के लोग उसे इतना देंगे या नहीं।",
+
+      "key_moments_en": [
+        "A mother feeds her six earning sons properly and gives the seventh what is left on the plates.",
+        "He finds out, understands his position will never change, and leaves to work abroad.",
+        "He does not take his wife, and the story never explains why.",
+        "The household puts her to the heaviest work and feeds her husk bread and water from the animals' pot.",
+        "Cutting wood in the forest, she comes on women keeping a fast with jaggery and roasted gram.",
+        "They tell her it needs nothing expensive — sixteen Fridays, and nothing sour eaten in the house.",
+        "She keeps it; her husband writes, sends money, and comes home with enough to change how she is treated.",
+        "At the udyapan the sisters-in-law arrange for the children to eat something sour.",
+        "The vrat breaks on its final day, and her husband is arrested on a charge out of nowhere.",
+        "She apologises, does the whole udyapan again watching every dish herself, and he is released."
+      ],
+      "key_moments_hi": [
+        "एक माँ अपने छह कमाऊ बेटों को ठीक से खिलाती है और सातवें को थालियों का बचा हुआ देती है।",
+        "उसे पता चलता है, वह समझ जाता है कि उसकी जगह कभी नहीं बदलेगी, और कमाने परदेस चला जाता है।",
+        "वह अपनी पत्नी को साथ नहीं ले जाता, और कथा कभी नहीं बताती कि क्यों।",
+        "घर उसे सबसे भारी काम पर लगाता है और भूसी की रोटी तथा पशुओं के हौद का पानी देता है।",
+        "वन में लकड़ी काटते हुए वह कुछ स्त्रियों को गुड़ और भुने चने से व्रत करते देखती है।",
+        "वे बताती हैं कि इसमें महँगा कुछ नहीं चाहिए — सोलह शुक्रवार, और घर में कोई खटाई न खाए।",
+        "वह व्रत रखती है; पति का पत्र आता है, धन आता है, और वह इतना लेकर लौटता है कि व्यवहार बदल जाता है।",
+        "उद्यापन में जेठानियाँ बच्चों से कुछ खट्टा खिलवा देती हैं।",
+        "व्रत अपने अंतिम दिन टूट जाता है, और पति अकारण आरोप में बंदी बना लिया जाता है।",
+        "वह क्षमा माँगकर पूरा उद्यापन फिर करती है, हर वस्तु स्वयं देखती है, और पति छूट जाता है।"
+      ],
+
+      "reflection_en": "The fast cost almost nothing — jaggery, gram, a lamp. Why do you think an observance that a woman with no money could keep spread so widely?",
+      "reflection_hi": "इस व्रत में लगभग कुछ भी खर्च नहीं होता — गुड़, चना, एक दीप। आपको क्या लगता है, बिना धन वाली स्त्री जिसे रख सकती थी, वह व्रत इतना क्यों फैला?",
+
+      "themes_en": ["contentment", "a household's cruelty", "starting again", "the cheapest rite", "envy"],
+      "themes_hi": ["संतोष", "घर की निर्दयता", "फिर से आरंभ", "निर्धनतम विधान", "ईर्ष्या"],
+
+      "order_no": 140,
+      "primary_source_name": "Traditional vrat katha, oral tradition",
+      "primary_source_ref": "Santoshi Maa vrat, sixteen Fridays",
+      "verification_status": "unverified",
+      "claim_type": "traditional",
+      "source_quality": null,
+      "sources": [
+        {"source_id": "oral-tradition", "ref": "Santoshi Maa vrat, sixteen Fridays", "is_primary": 1,
+         "note": "Our own telling of a traditional vrat katha. No pre-1929 source exists: the observance spread nationally in the twentieth century and its written forms are all modern. Underhill and Gupte carry neither the deity nor the fast."}
+      ]
+    },
+
+    {
+      "slug": "shanivar-vrat",
+      "legacy_id": 56,
+      "title_en": "Shanivar Vrat: The King Who Seated Saturn Last",
+      "title_hi": "शनिवार व्रत: वह राजा जिसने शनि को अंतिम आसन दिया",
+      "deity_en": ["Shani", "Hanuman", "Vikramaditya"],
+      "deity_hi": ["शनि", "हनुमान", "विक्रमादित्य"],
+      "festival_slug": null,
+      "entity_slugs": ["shani", "hanuman"],
+      "when_en": "Any Saturday, and commonly kept as a set of seven or as long as a difficult period lasts. Oil is offered rather than milk, and the peepal is circled in the evening.",
+      "when_hi": "कोई भी शनिवार, और प्रायः सात शनिवार या जब तक कठिन समय चले तब तक रखा जाता है। दूध नहीं, तेल चढ़ता है, और संध्या को पीपल की परिक्रमा होती है।",
+
+      "summary_en": "Asked to rank the nine planets, a king seats Saturn last. Saturn tells him what that will cost, and then collects it — and the king only understands what happened after it is over.",
+      "summary_hi": "नौ ग्रहों में श्रेष्ठ कौन — यह तय करने को कहे जाने पर राजा शनि को अंतिम आसन देता है। शनि उसे बताते हैं कि इसका मूल्य क्या होगा, और फिर वसूलते हैं — और राजा यह सब बीत जाने के बाद ही समझ पाता है।",
+
+      "body_en": "The nine planets could not agree on which of them was greatest, and rather than settle it among themselves they went to Vikramaditya, whose reputation was for judgement. Which tells you something about the argument: it had run long enough that they wanted an outsider.\n\nThe king saw what he had been handed. Whatever he said, eight of them would be insulted, and these were not parties who could be insulted safely. So he did something clever, and cleverness is exactly the wrong tool here.\n\nHe had nine thrones made, each of a different metal — gold, silver, copper, bronze, brass, lead, tin, mica, and iron — and set them in a row in that order, and told the planets to take their seats. He had not ranked anyone. He had merely arranged some furniture and let each of them sit where they belonged, and if anyone was last, that was the metal's doing.\n\nIron came last. Saturn sat on iron.\n\nSaturn's reply is the best-known part of the story and it is worth hearing what he actually objects to. He does not say the king was wrong about his nature. He says the king does not know what he is dealing with. He points out that he sits on everyone eventually — that gods, kings and sages have all had their turn under him — and tells Vikramaditya that he is about to find out what that means from the inside. Seven and a half years of it.\n\nThen it begins, and the shape of it is the point. Nothing supernatural happens to the king. He simply starts losing.\n\nHe is separated from his own court and ends up in a strange city where nobody knows him. He goes to a merchant's house and a necklace disappears in circumstances that make no sense — the story has it swallowed by a peg on the wall — and he cannot explain himself, because the truth sounds like a lie. He is convicted of theft. The local ruler orders his hands and feet cut off, and he is turned out.\n\nA king with no hands, no feet, and no name, in a city that has never heard of him. He ends up living at an oil presser's house, where he is set to driving the bullock round the press, which is about the lowest work there is and also, pointedly, Saturn's own trade.\n\nAnd there he sings. One night he sings the raga that is supposed to light lamps, and it does — lamps come alight across the city — and that is what finally identifies him, because only one man alive could do that.\n\nHe is recognised, restored, married into the local ruler's family, and returns to his own kingdom with his hands and feet back.\n\nWhat he does then is the reason this is a vrat and not just a story. He does not curse Saturn or build a temple to appease him. He tells the court that he had been wrong — that he had ranked Saturn last on a technicality and had not understood what he was ranking — and he says publicly that Saturn is the greatest of the nine, and he means it, because he has now been through what the others only theorise about.\n\nThe Saturday fast comes from that, and its details are consistent with it. Oil, not milk. Black sesame, black cloth, iron. Nothing bright or sweet. You do not flatter Saturn; you acknowledge him. And the day's other custom is the giving away of exactly those things to people who need them — which is the one thing a man who has been through seven and a half years learns that a man who has not will not understand.",
+
+      "body_hi": "नौ ग्रह इस पर सहमत नहीं हो पा रहे थे कि उनमें श्रेष्ठ कौन है, और आपस में निपटाने के बजाय वे विक्रमादित्य के पास गए, जिनकी ख्याति न्याय के लिए थी। इससे उस विवाद के विषय में कुछ पता चलता है: वह इतना लंबा खिंच चुका था कि वे किसी बाहरी व्यक्ति से निर्णय चाहते थे।\n\nराजा ने देख लिया कि उसके हाथ में क्या आ पड़ा है। वह जो भी कहता, आठ अपमानित होते, और ये ऐसे पक्ष नहीं थे जिन्हें निरापद रूप से अपमानित किया जा सके। सो उसने कुछ चतुराई की, और यहाँ चतुराई ही सर्वथा गलत औजार है।\n\nउसने नौ सिंहासन बनवाए, हर एक अलग धातु का — स्वर्ण, रजत, ताम्र, कांस्य, पीतल, सीसा, राँगा, अभ्रक और लोहा — और उन्हें उसी क्रम में पंक्ति में रखवा दिया, और ग्रहों से कहा कि अपना-अपना आसन ले लें। उसने किसी को क्रम नहीं दिया था। उसने बस कुछ आसन सजा दिए और सबको वहीं बैठने दिया जहाँ वे बैठते थे, और यदि कोई अंतिम पड़ा तो वह धातु का किया था।\n\nलोहा अंतिम था। शनि लोहे पर बैठे।\n\nशनि का उत्तर इस कथा का सबसे प्रसिद्ध अंश है, और यह सुनने योग्य है कि उनकी आपत्ति किस पर है। वे यह नहीं कहते कि राजा ने उनके स्वभाव को गलत आँका। वे कहते हैं कि राजा जानता ही नहीं कि वह किससे व्यवहार कर रहा है। वे बताते हैं कि अंततः वे सब पर बैठते हैं — देवता, राजा और ऋषि, सबकी बारी उनके नीचे आ चुकी है — और विक्रमादित्य से कहते हैं कि अब वह भीतर से जानने वाला है कि इसका अर्थ क्या है। साढ़े सात वर्ष।\n\nफिर वह आरंभ होता है, और उसका स्वरूप ही मर्म है। राजा के साथ कुछ अलौकिक नहीं घटता। वह बस हारने लगता है।\n\nवह अपने ही दरबार से बिछड़कर ऐसे नगर में पहुँचता है जहाँ उसे कोई नहीं जानता। वह एक सेठ के घर जाता है और वहाँ एक हार ऐसी परिस्थितियों में गायब हो जाता है जिनका कोई तुक नहीं — कथा में उसे दीवार की खूँटी निगल जाती है — और वह अपनी सफाई नहीं दे पाता, क्योंकि सच झूठ जैसा सुनाई देता है। उस पर चोरी सिद्ध हो जाती है। वहाँ का शासक उसके हाथ-पाँव कटवा देता है, और उसे निकाल दिया जाता है।\n\nबिना हाथ, बिना पाँव और बिना नाम का एक राजा, ऐसे नगर में जिसने उसका नाम तक नहीं सुना। वह एक तेली के घर रहने लगता है, जहाँ उसे कोल्हू का बैल हाँकने पर लगाया जाता है — जो सबसे निचला काम है, और साथ ही, विशेष रूप से, शनि का अपना काम।\n\nऔर वहीं वह गाता है। एक रात वह वही राग गाता है जो दीप जला देता है, और वे जल उठते हैं — पूरे नगर में दीप जल जाते हैं — और यही अंततः उसे पहचनवाता है, क्योंकि जीवित मनुष्यों में यह केवल एक ही कर सकता था।\n\nवह पहचाना जाता है, प्रतिष्ठित किया जाता है, वहाँ के शासक के कुल में उसका विवाह होता है, और वह अपने हाथ-पाँव लौटा पाकर अपने राज्य लौटता है।\n\nइसके बाद वह जो करता है, वही कारण है कि यह व्रत है, केवल कथा नहीं। वह न शनि को कोसता है, न उन्हें मनाने को मंदिर बनवाता है। वह दरबार से कहता है कि वह गलत था — कि उसने एक तकनीकी युक्ति से शनि को अंतिम बिठाया था और यह समझा ही नहीं था कि वह किसे क्रम दे रहा है — और वह सार्वजनिक रूप से कहता है कि नौ में शनि श्रेष्ठ हैं, और वह इसे सचमुच मानता है, क्योंकि अब वह उससे गुजर चुका है जिस पर बाकी केवल विचार करते हैं।\n\nशनिवार का व्रत इसी से आया, और उसके ब्योरे इसी के अनुरूप हैं। तेल, दूध नहीं। काले तिल, काला वस्त्र, लोहा। कुछ भी चमकीला या मीठा नहीं। शनि की चापलूसी नहीं की जाती; उन्हें स्वीकार किया जाता है। और इस दिन की दूसरी रीति है ठीक वही वस्तुएँ उन्हें दे देना जिन्हें उनकी आवश्यकता है — और यही वह एक बात है जो साढ़े सात वर्ष से गुजरा व्यक्ति सीखता है और न गुजरा व्यक्ति समझ नहीं पाता।",
+
+      "vrat_vidhi_en": "The fast is kept on Saturdays — commonly seven in a row, or through a difficult period for as long as it lasts. It is broken after sunset, once the evening worship is done.\n\nEat once in the day, and keep it simple. Black sesame, black gram, and food without salt where that is the family custom. Nothing rich.\n\nOil is the offering, not milk. Mustard or sesame oil is poured over the image of Shani or on the iron that stands for him, along with black sesame, black cloth, urad dal and iron nails or a horseshoe where that is kept. Blue and black flowers where they can be found.\n\nIn the evening the peepal tree is circled — seven times is the common count — and a lamp of mustard oil is lit at its root. Water is poured there first.\n\nHanuman is worshipped on the same day and in the same places, because he is held to stand between a person and Shani's weight. A lamp is lit for him too.\n\nThe giving is not optional in the full form. Black sesame, oil, iron, a blanket, shoes or food are given to someone who needs them, and preferably to someone doing the kind of work the story puts its king into. The day is kept by giving away what is offered, not by keeping it.",
+      "vrat_vidhi_hi": "व्रत शनिवार को रखा जाता है — प्रायः लगातार सात, या कठिन समय जब तक चले तब तक। यह सूर्यास्त के बाद, संध्या-पूजन पूरा होने पर खोला जाता है।\n\nदिन में एक बार भोजन करें, और सादा रखें। काले तिल, काला चना, और जहाँ कुल की रीति हो वहाँ बिना नमक का भोजन। कुछ भी गरिष्ठ नहीं।\n\nअर्पण तेल है, दूध नहीं। सरसों या तिल का तेल शनि की प्रतिमा पर या उनके प्रतीक लोहे पर चढ़ाया जाता है, साथ में काले तिल, काला वस्त्र, उड़द दाल, और जहाँ रीति हो वहाँ लोहे की कीलें या घोड़े की नाल। जहाँ मिलें वहाँ नीले और काले पुष्प।\n\nसंध्या को पीपल की परिक्रमा होती है — सात बार सामान्य गिनती है — और उसकी जड़ में सरसों तेल का दीप जलाया जाता है। पहले वहाँ जल चढ़ाया जाता है।\n\nउसी दिन और उन्हीं स्थानों पर हनुमान का पूजन होता है, क्योंकि माना जाता है कि वे व्यक्ति और शनि के भार के बीच खड़े होते हैं। उनके लिए भी दीप जलाया जाता है।\n\nपूर्ण विधि में दान वैकल्पिक नहीं है। काले तिल, तेल, लोहा, कंबल, जूते या भोजन किसी आवश्यकता वाले को दिया जाता है — और श्रेष्ठ यह है कि उसे दिया जाए जो वैसा ही काम करता हो जैसा कथा अपने राजा से कराती है। यह दिन अर्पित वस्तु रखकर नहीं, दे देकर रखा जाता है।",
+
+      "phala_en": "The fast is kept during sade sati and dhaiya — the seven-and-a-half and two-and-a-half year periods — and for work, debts and court matters. What it asks for is not escape. Saturn is not held to remove the period; the vrat asks that it be got through and understood.",
+      "phala_hi": "यह व्रत साढ़े साती और ढैया में रखा जाता है — साढ़े सात और ढाई वर्ष की अवधियों में — और काम, ऋण तथा मुकदमों के लिए। यह छुटकारा नहीं माँगता। शनि उस अवधि को हटाते नहीं माने जाते; व्रत यह माँगता है कि वह पार हो जाए और समझ में आ जाए।",
+
+      "moral_en": "Vikramaditya's mistake was not disrespect — he was being careful, and he thought he had found a way to rank nobody. What Saturn objects to is the cleverness itself: a man arranging metals to avoid saying what he thought, about a power he had never had to take seriously.",
+      "moral_hi": "विक्रमादित्य की भूल अनादर नहीं थी — वह सावधानी बरत रहा था, और उसे लगा कि उसने किसी को क्रम न देने का उपाय निकाल लिया है। शनि की आपत्ति उसी चतुराई पर है: एक व्यक्ति धातुएँ सजाकर यह कहने से बच रहा था कि वह क्या सोचता है — और वह भी उस शक्ति के विषय में जिसे उसे कभी गंभीरता से लेना ही नहीं पड़ा था।",
+
+      "key_moments_en": [
+        "The nine planets cannot agree which of them is greatest and ask Vikramaditya to judge.",
+        "Whatever he rules, eight will be insulted, and none of them can be insulted safely.",
+        "He has nine thrones made of nine metals and lets each planet take its own seat.",
+        "Iron comes last in the row, and Saturn sits on iron.",
+        "Saturn does not dispute his nature — he says the king does not know what he is dealing with.",
+        "Sade sati begins: the king is separated from his court and reaches a city where nobody knows him.",
+        "A necklace vanishes at a merchant's house and he is convicted of theft; his hands and feet are cut off.",
+        "He ends up at an oil presser's, driving the bullock round the press — Saturn's own trade.",
+        "One night he sings the raga that lights lamps, and lamps come alight across the city.",
+        "Restored and returned home, he tells his court publicly that Saturn is the greatest of the nine."
+      ],
+      "key_moments_hi": [
+        "नौ ग्रह तय नहीं कर पाते कि श्रेष्ठ कौन है और विक्रमादित्य से निर्णय माँगते हैं।",
+        "वह जो भी कहे, आठ अपमानित होंगे, और उनमें किसी को निरापद रूप से अपमानित नहीं किया जा सकता।",
+        "वह नौ धातुओं के नौ सिंहासन बनवाकर हर ग्रह को अपना आसन स्वयं लेने देता है।",
+        "पंक्ति में लोहा अंतिम है, और शनि लोहे पर बैठते हैं।",
+        "शनि अपने स्वभाव पर विवाद नहीं करते — वे कहते हैं कि राजा जानता ही नहीं कि वह किससे व्यवहार कर रहा है।",
+        "साढ़े साती आरंभ होती है: राजा अपने दरबार से बिछड़कर अनजान नगर पहुँचता है।",
+        "सेठ के घर हार गायब हो जाता है और उस पर चोरी सिद्ध होती है; उसके हाथ-पाँव काट दिए जाते हैं।",
+        "वह एक तेली के यहाँ पहुँचता है और कोल्हू का बैल हाँकता है — शनि का ही काम।",
+        "एक रात वह दीपक राग गाता है, और पूरे नगर में दीप जल उठते हैं।",
+        "प्रतिष्ठित होकर घर लौटकर वह दरबार में सार्वजनिक रूप से कहता है कि नौ में शनि श्रेष्ठ हैं।"
+      ],
+
+      "reflection_en": "The king arranged nine metals so that he would not have to say what he actually thought. Where have you used a procedure to avoid making a judgement out loud?",
+      "reflection_hi": "राजा ने नौ धातुएँ इसलिए सजाईं ताकि उसे यह न कहना पड़े कि वह वस्तुतः क्या सोचता है। आपने कहाँ किसी प्रक्रिया का सहारा लेकर खुलकर निर्णय कहने से बचा है?",
+
+      "themes_en": ["hierarchy", "cleverness", "a long bad period", "humility", "lowly work"],
+      "themes_hi": ["क्रम", "चतुराई", "लंबा कठिन काल", "विनम्रता", "निम्न कार्य"],
+
+      "order_no": 150,
+      "primary_source_name": "Traditional vrat katha, oral tradition",
+      "primary_source_ref": "Shanivar vrat; Vikramaditya and the nine planets",
+      "verification_status": "unverified",
+      "claim_type": "traditional",
+      "source_quality": null,
+      "sources": [
+        {"source_id": "oral-tradition", "ref": "Shanivar vrat; Vikramaditya and the nine planets", "is_primary": 1,
+         "note": "Our own telling of a traditional vrat katha. The Vikramaditya cycle is folk narrative with no pre-1929 English translation of this episode; Underhill covers the planetary character of the weekdays but not this story."}
+      ]
+    }
+  ]
+}

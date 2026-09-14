@@ -98,5 +98,10 @@
     "fixture_en_chars": 1017,
     "ratio_vs_fixture": 6.2,
     "hi_en_ratio": 0.89
-  }
+  },
+  "primary_source_name": "The Mahabharata of Krishna-Dwaipayana Vyasa, tr. Kisari Mohan Ganguli",
+  "primary_source_ref": "Vana Parva, Pativrata-mahatmya Parva, Sections CCXCII-CCXCVIII",
+  "verification_status": "verified",
+  "claim_type": "textual",
+  "source_quality": "primary"
 }
