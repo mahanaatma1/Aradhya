@@ -1,0 +1,150 @@
+{
+  "_note": "RG-01 batch 3 — written from cited public-domain sources. Fixture rows not opened while writing; legacy_id records which row each retires. Titles are ours.",
+  "rows": [
+    {
+      "slug": "janmashtami",
+      "legacy_id": 37,
+      "title_en": "Janmashtami: The Night the Prison Opened",
+      "title_hi": "जन्माष्टमी: वह रात जब कारागार खुल गया",
+      "deity_en": ["Krishna", "Devaki", "Vasudeva", "Kansa", "Yashoda"],
+      "deity_hi": ["कृष्ण", "देवकी", "वसुदेव", "कंस", "यशोदा"],
+      "festival_slug": "janmashtami",
+      "entity_slugs": ["krishna", "devaki", "vasudeva", "kansa", "yashoda", "balarama"],
+      "when_en": "Bhadrapada, Krishna Paksha, eighth tithi — the eighth night of the dark fortnight in the rains. The birth is kept at midnight, not at dawn.",
+      "when_hi": "भाद्रपद मास, कृष्ण पक्ष, अष्टमी — वर्षा ऋतु में कृष्ण पक्ष की आठवीं रात। जन्म भोर में नहीं, अर्धरात्रि में मनाया जाता है।",
+
+      "summary_en": "A king is told his sister's eighth child will kill him, so he locks her up and kills the children as they come. The eighth one is born at midnight, and the locks fall open.",
+      "summary_hi": "एक राजा को बताया जाता है कि उसकी बहन का आठवाँ पुत्र उसका काल बनेगा, सो वह उसे बंदी बनाकर जन्मते ही उसके बच्चों को मारता जाता है। आठवाँ अर्धरात्रि में जन्मता है, और ताले स्वयं खुल जाते हैं।",
+
+      "body_en": "Kansa was driving his sister's wedding chariot himself, which tells you they were close before any of this. Devaki had married Vasudeva and her brother was taking her to her husband's house in person, pleased with the day. Then a voice out of the sky told him that this woman's eighth child would be his death.\n\nHe pulled the chariot up and drew his sword on her on the spot. Vasudeva talked him out of it — not by disputing the prophecy but by bargaining inside it. The voice had said her eighth child. So keep us, he said, and take every child as it is born, and you lose nothing. Kansa accepted, which is the first sign of what he had become: a man who would rather imprison his sister for life than take one chance.\n\nThey were put in a cell in Mathura and the children came, and each one was taken. The story does not spend words on this and it does not need to; what it is describing is a couple who have a child every year and lose it every year, six times, in a room they cannot leave. The seventh did not arrive the ordinary way — that pregnancy was moved, before term, to Rohini in another household, and the boy born there was Balarama, and Kansa was told the child had miscarried.\n\nThe eighth came on the eighth night of the dark fortnight of Bhadrapada, at midnight, in the rain.\n\nWhat happened then is described very plainly in the old accounts, and the plainness is what makes it land. The guards went to sleep where they stood. The doors of the prison opened. The chains came off. Nobody fought anybody; the entire apparatus of a paranoid king simply stopped working for a few hours, and a man was left standing in an open cell with a newborn in his arms and no one watching him.\n\nSo Vasudeva walked out. He went down to the Yamuna in the dark, in monsoon rain, carrying his son, and the river — which in Bhadrapada is at its most dangerous — let him across. On the other side at Gokula he found Nanda's house asleep and Yashoda just delivered of a daughter, and too exhausted to know what was happening around her. He put his son down beside her and picked up the girl and carried her back to the cell, and the doors shut, and the chains went back on, and the guards woke.\n\nWhen Kansa came for the eighth child he found a daughter, which was not what the voice had said, and killed her anyway. The story gives her a last act: as he took her she slipped out of his hands and rose, and told him the one who would end him was already born and already elsewhere. That is the worst moment of Kansa's life — not the prophecy, but learning he had spent years killing children for nothing and had missed the one that counted.\n\nThe boy grew up in Gokula as a cowherd's son and nobody there knew any of this. He was raised by Yashoda, who thought he was hers. That is the arrangement the whole festival sits on: the most guarded child in the world spent his childhood being ordinary, in a village, with a woman who was not his mother and loved him as if she were.\n\nThe night is kept awake until midnight because the birth was at midnight. Houses set up a cradle and rock it at the hour. Children are dressed as him. In Maharashtra and Gujarat the next day brings the dahi handi — a pot of curd hung far too high, and a human pyramid built up to break it, which remembers not the birth but the boy who came after: the one who stole butter, who was caught constantly, and whom nobody could stay angry at.",
+
+      "body_hi": "कंस स्वयं अपनी बहन का रथ हाँक रहा था — इतने से ही पता चलता है कि इस सब से पहले वे निकट थे। देवकी का विवाह वसुदेव से हुआ था और भाई उसे स्वयं ससुराल पहुँचाने जा रहा था, उस दिन से प्रसन्न। तभी आकाश से एक वाणी ने कहा कि इसी स्त्री का आठवाँ पुत्र उसकी मृत्यु होगा।\n\nउसने रथ रोका और वहीं बहन पर तलवार तान दी। वसुदेव ने उसे रोका — भविष्यवाणी को झुठलाकर नहीं, बल्कि उसी के भीतर सौदा करके। वाणी ने आठवाँ पुत्र कहा था। सो उन्होंने कहा: हमें रख लो, और जो भी संतान जन्मे उसे ले लेना, तुम्हारा कुछ नहीं जाएगा। कंस मान गया — और यही पहला संकेत है कि वह क्या बन चुका था: ऐसा व्यक्ति जो एक भी जोखिम लेने के बजाय अपनी बहन को आजीवन कारागार में डालना बेहतर समझे।\n\nउन्हें मथुरा की एक कोठरी में डाल दिया गया और संतानें जन्मती गईं, और हर एक ले ली गई। कथा इस पर शब्द खर्च नहीं करती, और आवश्यकता भी नहीं; वह जो वर्णन कर रही है वह यह है — एक दंपति जिसके यहाँ हर वर्ष संतान होती है और हर वर्ष छिन जाती है, छह बार, ऐसे कक्ष में जिससे वे निकल नहीं सकते। सातवीं संतान सामान्य रूप से नहीं आई — वह गर्भ समय से पहले दूसरे घर में रोहिणी को स्थानांतरित हुआ, और वहाँ जन्मा बालक बलराम था, और कंस को बताया गया कि गर्भ गिर गया।\n\nआठवाँ भाद्रपद के कृष्ण पक्ष की आठवीं रात आया, अर्धरात्रि में, वर्षा के बीच।\n\nफिर जो हुआ, प्राचीन वर्णन उसे बहुत सीधे कहते हैं, और वही सीधापन उसे प्रभावी बनाता है। पहरेदार जहाँ खड़े थे वहीं सो गए। कारागार के द्वार खुल गए। बेड़ियाँ गिर गईं। किसी ने किसी से युद्ध नहीं किया; एक भयग्रस्त राजा का पूरा तंत्र बस कुछ घंटों के लिए काम करना बंद कर गया, और एक व्यक्ति खुली कोठरी में नवजात को गोद में लिए खड़ा रह गया, और उसे देखने वाला कोई नहीं था।\n\nसो वसुदेव बाहर निकल आए। वे अँधेरे में, वर्षा में, पुत्र को लिए यमुना तक गए — और वह नदी, जो भाद्रपद में सबसे भयंकर होती है, उन्हें पार जाने देती है। दूसरे तट पर गोकुल में उन्होंने नंद का घर सोया हुआ पाया और यशोदा को, जिसे अभी-अभी एक कन्या हुई थी और जो इतनी थकी थी कि आसपास का कुछ जानती ही नहीं थी। उन्होंने अपना पुत्र उसके पास रख दिया और कन्या उठाकर कोठरी लौट आए, और द्वार बंद हो गए, बेड़ियाँ वापस पड़ गईं, और पहरेदार जाग गए।\n\nकंस आठवीं संतान लेने आया तो उसे कन्या मिली, जो वाणी के कहे से भिन्न थी, और उसने फिर भी उसे मारना चाहा। कथा उसे एक अंतिम कर्म देती है: उठाते ही वह उसके हाथों से छूटकर ऊपर उठ गई और बोली कि जो उसका अंत करेगा वह जन्म ले चुका है और अन्यत्र है। कंस के जीवन का सबसे बुरा क्षण वही है — भविष्यवाणी नहीं, बल्कि यह जानना कि उसने वर्षों व्यर्थ बच्चों को मारा और जो गिनती का था उसे चूक गया।\n\nवह बालक गोकुल में एक ग्वाले के पुत्र की तरह बड़ा हुआ और वहाँ किसी को इसमें से कुछ नहीं पता था। उसे यशोदा ने पाला, जो उसे अपना ही समझती थी। पूरा पर्व इसी व्यवस्था पर टिका है: संसार का सबसे पहरे में रखा गया बालक अपना बचपन एक गाँव में साधारण होकर बिताता है, ऐसी स्त्री के पास जो उसकी माँ नहीं थी और उसे वैसे ही प्रेम करती थी जैसे होती।\n\nरात अर्धरात्रि तक जागकर काटी जाती है क्योंकि जन्म अर्धरात्रि में हुआ था। घरों में झूला सजाया जाता है और उसी घड़ी झुलाया जाता है। बच्चों को उसी का वेश पहनाया जाता है। महाराष्ट्र और गुजरात में अगले दिन दही हांडी होती है — दही की मटकी बहुत ऊँची टाँगकर मानव-मीनार बनाकर तोड़ी जाती है, जो जन्म को नहीं, उसके बाद के बालक को स्मरण करती है: वह जो माखन चुराता था, बार-बार पकड़ा जाता था, और जिस पर कोई देर तक रुष्ट नहीं रह पाता था।",
+
+      "vrat_vidhi_en": "The fast runs the whole day and is broken at midnight, not at sunrise — this is one of the few observances timed to an hour rather than a sunrise, because the birth was at an hour.\n\nBathe in the morning and take the vow. Through the day most keep to fruit, milk and water; some keep it without water until the moment of the birth. Grain is left out.\n\nThrough the evening the house is made ready: a cradle is set up, and a small image of the child placed in it. Households that keep the full form wash the image with panchamrit — milk, curd, ghee, honey and sugar — then with water, dress it, and lay it in the cradle.\n\nAt midnight the cradle is rocked, a conch is blown where there is one, and the birth is announced. The offerings are what a child would be given: butter, curd, makhana, and sweets, with tulsi leaves.\n\nThe fast is broken then, on that offering, and not before. In many houses the night is kept awake with singing until it is done.",
+      "vrat_vidhi_hi": "व्रत पूरे दिन चलता है और अर्धरात्रि में खोला जाता है, सूर्योदय पर नहीं — यह उन थोड़े व्रतों में है जो सूर्योदय के बजाय एक घड़ी से बँधे हैं, क्योंकि जन्म एक घड़ी में हुआ था।\n\nप्रातः स्नान कर संकल्प लें। दिन भर अधिकांश लोग फल, दूध और जल पर रहते हैं; कुछ जन्म की घड़ी तक निर्जल रहते हैं। अन्न वर्जित है।\n\nसंध्या से घर तैयार होता है: झूला सजाया जाता है और उसमें बाल-स्वरूप की छोटी प्रतिमा रखी जाती है। पूर्ण विधि रखने वाले घरों में प्रतिमा का पंचामृत से अभिषेक होता है — दूध, दही, घी, मधु और शर्करा — फिर जल से, फिर वस्त्र पहनाकर झूले में लिटाया जाता है।\n\nअर्धरात्रि में झूला झुलाया जाता है, जहाँ शंख हो वहाँ शंख बजता है, और जन्म की घोषणा होती है। भोग वही होता है जो किसी शिशु को दिया जाए: माखन, दही, मखाना और मिष्ठान्न, तुलसीदल सहित।\n\nव्रत तभी, उसी भोग पर खोला जाता है, उससे पहले नहीं। बहुत घरों में तब तक रात भजन गाते हुए जागकर काटी जाती है।",
+
+      "phala_en": "The night is kept for children and for the household that holds them. The older sense sits closer to the story: it is kept by people who have had something taken, or fear they might, and it remembers a night when the thing that had all the power simply fell asleep.",
+      "phala_hi": "यह रात संतान के लिए और उस घर के लिए रखी जाती है जो उन्हें सँभालता है। पुराना भाव कथा के अधिक निकट है: इसे वे रखते हैं जिनसे कुछ छिन चुका है, या जिन्हें छिनने का भय है — और यह उस रात को स्मरण करती है जब सारी शक्ति जिसके पास थी, वह बस सो गई।",
+
+      "moral_en": "Kansa does everything a frightened man with total power can do — imprisons, watches, kills for years — and it fails in one night without a fight. The story's quiet claim is that what he was trying to prevent was never the kind of thing guards can stop.",
+      "moral_hi": "कंस वह सब करता है जो पूर्ण सत्ता वाला भयभीत व्यक्ति कर सकता है — बंदी बनाता है, पहरा बिठाता है, वर्षों मारता है — और वह सब एक रात में, बिना किसी युद्ध के विफल हो जाता है। कथा का शांत दावा यह है कि जिसे वह रोकना चाहता था, वह कभी उस प्रकार की वस्तु थी ही नहीं जिसे पहरेदार रोक सकें।",
+
+      "key_moments_en": [
+        "Kansa drives his sister Devaki's wedding chariot himself, and a voice from the sky names her eighth child as his death.",
+        "He draws his sword on her; Vasudeva bargains inside the prophecy — keep us, and take every child instead.",
+        "The couple are imprisoned at Mathura, and six children are born and taken.",
+        "The seventh pregnancy is moved to Rohini in another household; that child is Balarama.",
+        "The eighth is born at midnight on the eighth night of the dark fortnight of Bhadrapada.",
+        "The guards fall asleep where they stand, the doors open, and the chains come off.",
+        "Vasudeva carries the newborn out into monsoon rain, and the Yamuna lets him across.",
+        "At Gokula he exchanges his son for Yashoda's newborn daughter and returns to the cell.",
+        "Kansa finds a daughter; as he seizes her she rises and tells him the child is born and elsewhere.",
+        "Krishna grows up a cowherd's son in Gokula, raised by a woman who believes he is hers."
+      ],
+      "key_moments_hi": [
+        "कंस स्वयं बहन देवकी का विवाह-रथ हाँकता है, और आकाशवाणी उसके आठवें पुत्र को उसकी मृत्यु बताती है।",
+        "वह उस पर तलवार तानता है; वसुदेव भविष्यवाणी के भीतर ही सौदा करते हैं — हमें रख लो, हर संतान ले लेना।",
+        "दंपति मथुरा में बंदी बनाए जाते हैं, और छह संतानें जन्मकर छीन ली जाती हैं।",
+        "सातवाँ गर्भ दूसरे घर में रोहिणी को स्थानांतरित होता है; वही बालक बलराम है।",
+        "आठवाँ भाद्रपद कृष्ण पक्ष की आठवीं रात, अर्धरात्रि में जन्मता है।",
+        "पहरेदार जहाँ खड़े हैं वहीं सो जाते हैं, द्वार खुल जाते हैं, बेड़ियाँ गिर जाती हैं।",
+        "वसुदेव नवजात को लेकर वर्षा में बाहर निकलते हैं, और यमुना उन्हें पार जाने देती है।",
+        "गोकुल में वे अपना पुत्र यशोदा की नवजात कन्या से बदलकर कोठरी लौट आते हैं।",
+        "कंस को कन्या मिलती है; पकड़ते ही वह ऊपर उठकर कहती है कि बालक जन्म ले चुका है और अन्यत्र है।",
+        "कृष्ण गोकुल में ग्वाले के पुत्र की तरह बड़े होते हैं, उस स्त्री के पाले हुए जो उन्हें अपना ही मानती है।"
+      ],
+
+      "reflection_en": "Vasudeva walked out of an open prison in the middle of the night and handed his son to strangers to keep him alive. What does it cost to save a child by giving him away?",
+      "reflection_hi": "वसुदेव आधी रात खुले कारागार से निकले और अपने पुत्र को जीवित रखने के लिए परायों को सौंप आए। किसी संतान को देकर बचाने का मूल्य क्या होता है?",
+
+      "themes_en": ["birth", "fear", "prophecy", "mothers", "escape"],
+      "themes_hi": ["जन्म", "भय", "भविष्यवाणी", "मातृत्व", "पलायन"],
+
+      "order_no": 60,
+      "primary_source_name": "The Vishnu Purana, tr. Horace Hayman Wilson",
+      "primary_source_ref": "Book V, Chapters I-III",
+      "verification_status": "verified",
+      "claim_type": "textual",
+      "source_quality": "primary",
+      "sources": [
+        {"source_id": "wilson-vishnu-purana", "ref": "Book V, Chapters I-III", "is_primary": 1,
+         "note": "The prophecy at the wedding, Vasudeva's bargain, the six children, Balarama's transfer to Rohini, the sleeping guards and opened doors, and the exchange at Gokula."},
+        {"source_id": "underhill-hindu-year", "ref": "Janmashtami", "is_primary": 0,
+         "note": "The midnight timing, the cradle, and the fast broken at the hour of the birth rather than at sunrise."}
+      ]
+    },
+
+    {
+      "slug": "dussehra",
+      "legacy_id": 50,
+      "title_en": "Dussehra: The Tenth Day",
+      "title_hi": "दशहरा: दसवाँ दिन",
+      "deity_en": ["Rama", "Ravana", "Sita", "Durga"],
+      "deity_hi": ["राम", "रावण", "सीता", "दुर्गा"],
+      "festival_slug": "dussehra",
+      "entity_slugs": ["rama", "ravana", "sita", "lakshmana", "hanuman", "vibhishana", "durga"],
+      "when_en": "Ashwin, Shukla Paksha, tenth tithi — the day after Navratri ends. It is not one of the nine; it is what follows them.",
+      "when_hi": "आश्विन मास, शुक्ल पक्ष, दशमी — नवरात्रि समाप्त होने के अगले दिन। यह नौ में से नहीं है; यह उनके बाद आता है।",
+
+      "summary_en": "Two victories fall on the same day and the festival keeps both: Rama's over Ravana in the south, Durga's over Mahishasura in the east. Both took ten days, and both ended on this one.",
+      "summary_hi": "दो विजय एक ही दिन पड़ती हैं और पर्व दोनों को सँजोता है: दक्षिण में रावण पर राम की, पूर्व में महिषासुर पर दुर्गा की। दोनों दस दिन चलीं, और दोनों इसी दिन समाप्त हुईं।",
+
+      "body_en": "The war had gone on long enough that both sides had lost the people they could least afford to lose. Ravana's son Indrajit was dead. His brother Kumbhakarna, woken out of his enormous sleep to fight, was dead. What was left was Ravana himself, and Ravana was not losing.\n\nThe difficulty was not his strength, though he had that. It was that he could not be finished. Rama would strike a head from his shoulders and another would be there; wounds that should have ended him closed. A fight like that has a particular exhaustion to it — not being overpowered, but landing blow after blow that ought to work and watching them not work.\n\nWhat broke it came from inside Ravana's own house. Vibhishana, his brother, had argued in the Lanka court that taking another man's wife was indefensible and that the war would destroy them all; he had been shouted down and had gone over to Rama. He knew what everyone in that family knew, and he said it: the thing keeping Ravana alive was held in his navel, and while it was there nothing would kill him.\n\nRama took the arrow he had been given for exactly this kind of moment and put it through the navel, and Ravana came down.\n\nThe story does not treat this as a clean triumph, and it is worth saying so plainly, because the festival's bonfires can make it sound like one. Ravana was a scholar, a devotee of Shiva, a ruler whose city was famously magnificent, and a man whose own brother had told him to his face that he was wrong and had not been listened to. The Ramayana gives him a funeral. Vibhishana at first refuses to perform the rites for a brother who behaved as his did, and Rama tells him to do it anyway — that enmity ends at death, and the man is now as much Vibhishana's brother as he ever was. That instruction is part of the tenth day too, and it is the part the effigies leave out.\n\nIn eastern India the day is the end of a different ten. There the nine nights were Durga's fight with Mahishasura, the shape-shifter who could not be caught in a form, and the tenth is when it finished. In Bengal the images that have been worshipped for days are carried to the river and let go — the goddess is not put away in a cupboard, she is given back to the water — and that is a stranger and sadder ending than a burning effigy.\n\nBoth endings sit on the same date and the festival holds them together without much strain, because they are the same shape: a long contest against something that would not stay down, finished on the tenth day.\n\nWhat gets done on it varies more than almost any other festival. In the north, effigies of Ravana, Kumbhakarna and Indrajit are built tall, packed with fireworks, and burned at dusk after a Ramlila that has been running for days. In the east, the images go to the river. In Maharashtra and the south, leaves of the shami tree are exchanged — the tree the Pandavas hid their weapons in during their last year of exile, taken down and used again on this day — and tools, books and instruments are laid out and honoured before work resumes. A carpenter's plane, a student's books and a soldier's sword all get the same treatment.\n\nThat last custom is the clue to what the day actually is. It sits at the end of the rains, when the fighting season and the working season both open again. Whatever was put away is taken out. The tenth day is the day you start.",
+
+      "body_hi": "युद्ध इतना लंबा खिंच चुका था कि दोनों पक्ष उन्हें खो चुके थे जिन्हें खोना वे सबसे कम सह सकते थे। रावण का पुत्र इंद्रजित मारा जा चुका था। उसका भाई कुम्भकर्ण, जिसे उसकी विराट निद्रा से जगाकर युद्ध में उतारा गया था, मारा जा चुका था। शेष था स्वयं रावण, और रावण हार नहीं रहा था।\n\nकठिनाई उसका बल नहीं थी, यद्यपि वह भी था। कठिनाई यह थी कि उसका अंत ही नहीं होता था। राम उसके कंधों से एक सिर काटते और वहाँ दूसरा होता; जो घाव उसे समाप्त कर देने चाहिए थे वे भर जाते। ऐसे युद्ध की थकान अलग प्रकार की होती है — पराजित होने की नहीं, बल्कि बार-बार वह प्रहार करने की जो लगना चाहिए और उसे न लगते देखने की।\n\nजिसने यह गतिरोध तोड़ा वह रावण के अपने घर से आया। उसके भाई विभीषण ने लंका की सभा में कहा था कि दूसरे की पत्नी हरण करना किसी तर्क से उचित नहीं और यह युद्ध सबको ले डूबेगा; उसे चुप करा दिया गया था और वह राम के पास चला आया था। वह वही जानता था जो उस कुल में सब जानते थे, और उसने कह दिया: रावण को जीवित रखने वाली वस्तु उसकी नाभि में है, और जब तक वह वहाँ है उसे कुछ नहीं मार सकता।\n\nराम ने वह बाण उठाया जो ठीक ऐसे ही क्षण के लिए उन्हें मिला था, उसे नाभि के पार उतारा, और रावण गिर पड़ा।\n\nकथा इसे निर्मल विजय की तरह नहीं लेती, और यह स्पष्ट कह देना चाहिए, क्योंकि पर्व की ज्वालाएँ इसे वैसा ही सुना देती हैं। रावण विद्वान था, शिव का भक्त था, ऐसा शासक जिसकी नगरी अपनी भव्यता के लिए प्रसिद्ध थी, और ऐसा व्यक्ति जिसे उसके अपने भाई ने मुँह पर कहा था कि वह गलत है और जिसने सुना नहीं। रामायण उसे अंतिम संस्कार देती है। विभीषण पहले ऐसे भाई की क्रिया करने से मना करता है जिसने वैसा आचरण किया; राम उससे कहते हैं कि फिर भी करो — कि बैर मृत्यु पर समाप्त हो जाता है, और वह व्यक्ति अब भी उतना ही उसका भाई है जितना कभी था। यह आदेश भी दसवें दिन का अंग है, और पुतले इसी अंश को छोड़ देते हैं।\n\nपूर्वी भारत में यह दिन एक भिन्न दस का अंत है। वहाँ वे नौ रातें महिषासुर से दुर्गा का युद्ध थीं — वह रूप बदलने वाला जो किसी रूप में पकड़ा नहीं जाता था — और दसवाँ दिन वह है जब वह समाप्त हुआ। बंगाल में जिन प्रतिमाओं की दिनों पूजा हुई, वे नदी तक ले जाकर विसर्जित की जाती हैं — देवी को आलमारी में नहीं रखा जाता, उन्हें जल को लौटा दिया जाता है — और यह किसी जलते पुतले से कहीं अधिक विचित्र और उदास अंत है।\n\nदोनों अंत एक ही तिथि पर बैठते हैं और पर्व दोनों को बिना खिंचाव के थामे रहता है, क्योंकि आकार दोनों का एक ही है: किसी ऐसी वस्तु से लंबा संघर्ष जो गिरकर गिरी नहीं रहती, और जो दसवें दिन समाप्त होता है।\n\nइस दिन क्या किया जाता है, यह लगभग किसी भी अन्य पर्व से अधिक भिन्न-भिन्न है। उत्तर में रावण, कुम्भकर्ण और इंद्रजित के ऊँचे पुतले बनते हैं, आतिशबाजी से भरे जाते हैं, और दिनों से चल रही रामलीला के बाद संध्या को जलाए जाते हैं। पूर्व में प्रतिमाएँ नदी जाती हैं। महाराष्ट्र और दक्षिण में शमी वृक्ष के पत्ते बाँटे जाते हैं — वही वृक्ष जिसमें पांडवों ने अज्ञातवास के वर्ष अपने शस्त्र छिपाए थे, और इसी दिन उतारकर फिर उठाए थे — और औजार, पुस्तकें तथा वाद्य सजाकर पूजे जाते हैं, उसके बाद ही काम फिर आरंभ होता है। बढ़ई का रंदा, विद्यार्थी की पुस्तकें और सैनिक की तलवार — तीनों को एक जैसा सम्मान मिलता है।\n\nयही अंतिम प्रथा इस दिन का असली अर्थ बताती है। यह वर्षा के अंत पर बैठा है, जब युद्ध की ऋतु और काम की ऋतु दोनों फिर खुलती हैं। जो कुछ रख दिया गया था, वह निकाला जाता है। दसवाँ दिन आरंभ करने का दिन है।",
+
+      "vrat_vidhi_en": "There is no fast on the tenth day itself — for those who kept the nine nights of Navratri, this is the day the fast ends, and the mood turns from restraint to setting out.\n\nWhat is done in the morning is the honouring of tools. Everything the household works with is cleaned and laid out: implements, machines, instruments, account books, a student's books, a driver's vehicle. They are marked with turmeric and vermilion, given flowers and a lamp, and left unused until the worship is done. Nothing is worked with until it has been honoured.\n\nWhere the shami tree grows, its leaves are gathered and exchanged between households and elders, hand to hand, as a greeting for the day.\n\nIn the afternoon or at dusk the public part begins — the Ramlila's last act and the burning of the effigies in the north; in the east, the images carried to the river and let go.\n\nThe day closes with the young touching the feet of their elders and being given the shami leaves, and with food shared out. Where Navratri's barley was sown nine days earlier, the green shoots are cut and given out now.",
+      "vrat_vidhi_hi": "दसवें दिन कोई उपवास नहीं होता — जिन्होंने नवरात्रि की नौ रातें रखीं, उनके लिए यही वह दिन है जब व्रत पूरा होता है, और भाव संयम से हटकर प्रस्थान का हो जाता है।\n\nसुबह जो किया जाता है वह है औजारों का सम्मान। घर जिससे भी काम करता है, वह सब साफ करके सजाया जाता है: उपकरण, यंत्र, वाद्य, बही-खाते, विद्यार्थी की पुस्तकें, चालक का वाहन। उन पर हल्दी और रोली लगाई जाती है, फूल और दीप दिए जाते हैं, और पूजन पूरा होने तक उनका उपयोग नहीं होता। कोई वस्तु सम्मान पाए बिना काम में नहीं ली जाती।\n\nजहाँ शमी वृक्ष होता है, वहाँ उसके पत्ते तोड़कर घरों और बड़ों के बीच हाथोंहाथ बाँटे जाते हैं, उस दिन के अभिवादन की तरह।\n\nदोपहर बाद या संध्या को सार्वजनिक भाग आरंभ होता है — उत्तर में रामलीला का अंतिम अंक और पुतलों का दहन; पूर्व में प्रतिमाओं का नदी तक ले जाकर विसर्जन।\n\nदिन का अंत छोटों के बड़ों के चरण छूने और शमी-पत्र पाने से होता है, और भोजन बाँटने से। जहाँ नौ दिन पहले नवरात्रि का जौ बोया गया था, वहाँ वे हरे अंकुर अब काटकर बाँटे जाते हैं।",
+
+      "phala_en": "The day is kept for beginnings — a new venture, a first lesson, a journey, work resumed. Traditionally nothing started on this day needs a separate auspicious hour; the day itself is held to be one.",
+      "phala_hi": "यह दिन आरंभ के लिए रखा जाता है — नया उद्यम, पहली शिक्षा, यात्रा, फिर से शुरू होता काम। परंपरा में इस दिन आरंभ की गई किसी वस्तु के लिए अलग मुहूर्त नहीं देखा जाता; दिन स्वयं मुहूर्त माना गया है।",
+
+      "moral_en": "Ravana is not brought down by a better warrior. He is brought down by the one person who told him the truth and was ignored. And when he falls, Rama orders his funeral performed — the day is a victory, but the text will not let it be a gloating one.",
+      "moral_hi": "रावण किसी श्रेष्ठ योद्धा से नहीं गिरता। वह उस एक व्यक्ति से गिरता है जिसने उसे सच कहा था और जिसे अनसुना कर दिया गया। और जब वह गिरता है, राम उसका अंतिम संस्कार कराने का आदेश देते हैं — यह दिन विजय का है, पर पाठ उसे अहंकार का दिन नहीं बनने देता।",
+
+      "key_moments_en": [
+        "By the tenth day both sides have lost their greatest fighters; Indrajit and Kumbhakarna are dead.",
+        "Ravana cannot be finished — heads struck off are replaced, and fatal wounds close.",
+        "Vibhishana, who had told his brother in open court that the war was indefensible, had crossed to Rama.",
+        "He names what everyone in that family knew: what keeps Ravana alive is held in his navel.",
+        "Rama sends the arrow through the navel and Ravana falls.",
+        "Vibhishana refuses to perform his brother's rites; Rama tells him enmity ends at death.",
+        "In the east the same day ends Durga's nine-night fight with Mahishasura.",
+        "In Bengal the images worshipped for days are carried to the river and given back to the water.",
+        "In the north effigies of Ravana, Kumbhakarna and Indrajit are burned at dusk after the Ramlila.",
+        "In the west and south shami leaves are exchanged, and every tool, book and instrument is honoured before work resumes."
+      ],
+      "key_moments_hi": [
+        "दसवें दिन तक दोनों पक्ष अपने श्रेष्ठतम योद्धा खो चुके हैं; इंद्रजित और कुम्भकर्ण मारे जा चुके हैं।",
+        "रावण का अंत ही नहीं होता — कटे सिर की जगह दूसरा आ जाता है, और प्राणघातक घाव भर जाते हैं।",
+        "विभीषण, जिसने भरी सभा में भाई से कहा था कि यह युद्ध अनुचित है, राम के पास चला आया था।",
+        "वह वही बताता है जो उस कुल में सब जानते थे: रावण को जीवित रखने वाली वस्तु उसकी नाभि में है।",
+        "राम बाण नाभि के पार उतारते हैं और रावण गिर पड़ता है।",
+        "विभीषण भाई की क्रिया करने से मना करता है; राम कहते हैं कि बैर मृत्यु पर समाप्त हो जाता है।",
+        "पूर्व में यही दिन महिषासुर से दुर्गा के नौ-रात्रि युद्ध का अंत है।",
+        "बंगाल में दिनों पूजी गई प्रतिमाएँ नदी तक ले जाकर जल को लौटा दी जाती हैं।",
+        "उत्तर में रामलीला के बाद संध्या को रावण, कुम्भकर्ण और इंद्रजित के पुतले जलाए जाते हैं।",
+        "पश्चिम और दक्षिण में शमी-पत्र बाँटे जाते हैं, और काम फिर आरंभ होने से पहले हर औजार, पुस्तक और वाद्य पूजे जाते हैं।"
+      ],
+
+      "reflection_en": "Rama orders the funeral rites for the man he has just killed, over the objection of that man's own brother. What is he protecting by insisting on it?",
+      "reflection_hi": "राम उसी व्यक्ति का अंतिम संस्कार कराने का आदेश देते हैं जिसे उन्होंने अभी मारा है — और वह भी उसके अपने भाई की आपत्ति के विरुद्ध। इस आग्रह से वे किस वस्तु की रक्षा कर रहे हैं?",
+
+      "themes_en": ["victory", "war", "brothers", "beginnings", "the end of the rains"],
+      "themes_hi": ["विजय", "युद्ध", "भाई", "आरंभ", "वर्षा का अंत"],
+
+      "order_no": 70,
+      "primary_source_name": "The Ramayana, tr. Manmatha Nath Dutt",
+      "primary_source_ref": "Yuddha Kanda",
+      "verification_status": "verified",
+      "claim_type": "textual",
+      "source_quality": "primary",
+      "sources": [
+        {"source_id": "dutt-ramayana", "ref": "Yuddha Kanda", "is_primary": 1,
+         "note": "The deaths of Indrajit and Kumbhakarna, Ravana's regenerating heads, Vibhishana's crossing and counsel, the arrow to the navel, and Rama's instruction that Ravana's rites be performed."},
+        {"source_id": "underhill-hindu-year", "ref": "Dussehra / Vijayadashami", "is_primary": 0,
+         "note": "The regional forms: effigies in the north, immersion in the east, shami leaves and the honouring of tools in the west and south."}
+      ]
+    }
+  ]
+}

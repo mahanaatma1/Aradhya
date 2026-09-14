@@ -1,0 +1,150 @@
+{
+  "_note": "RG-01 batch 4 — written from cited public-domain sources. Fixture rows not opened while writing; legacy_id records which row each retires. Titles are ours.",
+  "rows": [
+    {
+      "slug": "bhai-dooj",
+      "legacy_id": 7,
+      "title_en": "Bhai Dooj: The Day Death Came to Lunch",
+      "title_hi": "भाई दूज: वह दिन जब मृत्यु भोजन पर आई",
+      "deity_en": ["Yama", "Yamuna", "Surya"],
+      "deity_hi": ["यम", "यमुना", "सूर्य"],
+      "festival_slug": "bhai-dooj",
+      "entity_slugs": ["yama", "yamuna", "surya"],
+      "when_en": "Kartika, Shukla Paksha, second tithi — two days after Diwali. Sisters keep it for brothers; brothers travel to reach them.",
+      "when_hi": "कार्तिक मास, शुक्ल पक्ष, द्वितीया — दीपावली के दो दिन बाद। बहनें भाइयों के लिए यह दिन रखती हैं; भाई उन तक पहुँचने के लिए यात्रा करते हैं।",
+
+      "summary_en": "Yama and Yamuna are brother and sister. She keeps inviting him to eat with her; he keeps not coming, because of what his work is. One year he goes.",
+      "summary_hi": "यम और यमुना भाई-बहन हैं। वह उन्हें बार-बार भोजन पर बुलाती है; वे बार-बार नहीं आते, अपने काम के कारण। एक वर्ष वे चले आते हैं।",
+
+      "body_en": "Yama and Yamuna were the children of the sun. They grew up together and then their lives went in directions that do not meet: she became a river, and he became the one who comes for everybody at the end.\n\nShe kept asking him to come and eat at her house. Not for any occasion — the ordinary invitation a sister makes to a brother who is always busy. And he kept not coming, year after year, and the reason is the whole story. It was not that he did not want to. It was that a god of death has a difficult relationship with hospitality. Nobody invites him anywhere. Nobody is glad to see him arrive. He spends his existence being the worst thing that happens to people, and he had got used to the idea that this was simply what he was for.\n\nOne day he thought about it differently. He had been turning over the fact that no one ever wanted him in their house, and then he remembered that someone did — had, repeatedly, for years, with no motive except that she was his sister and would like to see him. And he thought: I should go.\n\nSo on the second day of the bright fortnight of Kartika he went to Yamuna's house, and what happened there is the part worth dwelling on, because nothing dramatic occurs in it. She was overjoyed. She came out to meet him. She washed his feet and sat him down and put a mark on his forehead with her finger, and then she fed him — properly, the way you feed someone who never comes, everything at once, too much of it.\n\nAnd Yama, who is the most feared figure in the entire tradition, sat in his sister's house and ate his lunch and was made a fuss of, and the story says he was pleased in a way he had not been in a long time.\n\nWhen he got up to go he offered her a boon, as gods do. What she asked for has two halves and the second is the generous one. First: come back. Come every year on this day. Second — and she could have asked for anything — let this work for everyone. Let any brother who comes to his sister's house on this day and takes a mark from her hand and eats her food be free of the fear of you.\n\nHe said yes.\n\nThat is the whole story, and its smallness is the point. There is no demon in it and nobody is saved from anything by force. A woman feeds her brother lunch and asks that the arrangement be extended to everybody, and death agrees, because for one afternoon he had been treated as a brother rather than as a function.\n\nWhat the day asks of people is correspondingly small and slightly demanding: the brother has to travel. The sister does not go to him; he comes to her house, which in most families means he is the one who has to make the effort, take the day, cross the distance. That is the actual content of the festival. A woman marks her brother's forehead, feeds him, and is given something in return, and the obligation the day creates is that he turns up.\n\nThe Yamuna is still there, and in Mathura the old form of the day is to bathe in it with your brother or sister — the river and the god, in one place, being visited the way she asked to be.",
+
+      "body_hi": "यम और यमुना सूर्य की संतानें थे। वे साथ बड़े हुए और फिर उनके जीवन ऐसी दिशाओं में चले गए जो मिलती नहीं: वह नदी बन गई, और वे वह बन गए जो अंत में सबके पास आते हैं।\n\nवह उन्हें अपने घर भोजन पर बुलाती रही। किसी अवसर पर नहीं — वही साधारण निमंत्रण जो बहन उस भाई को देती है जो सदा व्यस्त रहता है। और वे वर्षों नहीं आते रहे, और इसका कारण ही पूरी कथा है। ऐसा नहीं था कि वे आना नहीं चाहते थे। बात यह थी कि मृत्यु के देवता का आतिथ्य से संबंध कठिन होता है। उन्हें कोई कहीं नहीं बुलाता। उनके आने से कोई प्रसन्न नहीं होता। वे अपना पूरा अस्तित्व लोगों के साथ घटने वाली सबसे बुरी बात बनकर बिताते हैं, और वे इस विचार के अभ्यस्त हो चुके थे कि वे इसी के लिए हैं।\n\nएक दिन उन्होंने इसे दूसरी तरह सोचा। वे इसी बात को उलट-पलट रहे थे कि उन्हें कोई अपने घर नहीं चाहता — और तभी उन्हें याद आया कि एक व्यक्ति चाहता है; वर्षों से, बार-बार, बिना किसी स्वार्थ के, केवल इसलिए कि वह उनकी बहन है और उनसे मिलना चाहती है। और उन्होंने सोचा: मुझे जाना चाहिए।\n\nसो कार्तिक के शुक्ल पक्ष की द्वितीया को वे यमुना के घर गए, और वहाँ जो हुआ वही ठहरकर देखने योग्य है, क्योंकि उसमें नाटकीय कुछ भी नहीं होता। वह आनंद से भर गई। वह उन्हें लेने बाहर आई। उसने उनके चरण धोए, उन्हें बिठाया, अपनी उँगली से उनके माथे पर तिलक किया, और फिर उन्हें खिलाया — ठीक से, जैसे उसे खिलाया जाता है जो कभी नहीं आता, सब कुछ एक साथ, आवश्यकता से बहुत अधिक।\n\nऔर यम, जो पूरी परंपरा में सबसे भयभीत करने वाली आकृति हैं, अपनी बहन के घर बैठकर भोजन करते रहे और उनका लाड़ होता रहा — और कथा कहती है कि वे ऐसे प्रसन्न हुए जैसे बहुत समय से नहीं हुए थे।\n\nचलते समय उन्होंने उसे वर देना चाहा, जैसे देवता देते हैं। उसने जो माँगा उसके दो भाग हैं, और दूसरा भाग उदार है। पहला: फिर आना। हर वर्ष इसी दिन आना। दूसरा — और वह कुछ भी माँग सकती थी — यह सबके लिए हो जाए। जो भी भाई इस दिन अपनी बहन के घर आए, उसके हाथ का तिलक ले और उसका भोजन करे, वह आपके भय से मुक्त रहे।\n\nउन्होंने 'तथास्तु' कहा।\n\nयही पूरी कथा है, और उसका छोटा होना ही उसका अर्थ है। इसमें कोई असुर नहीं है और कोई किसी को बल से नहीं बचाता। एक स्त्री अपने भाई को भोजन कराती है और माँगती है कि यह व्यवस्था सबके लिए लागू हो जाए, और मृत्यु मान जाती है — क्योंकि एक दोपहर उसके साथ किसी कार्य की तरह नहीं, भाई की तरह व्यवहार हुआ था।\n\nयह दिन लोगों से जो माँगता है वह उतना ही छोटा और थोड़ा कठिन है: भाई को यात्रा करनी पड़ती है। बहन उसके पास नहीं जाती; वह बहन के घर आता है, जिसका अधिकांश परिवारों में अर्थ है कि श्रम उसी को करना है — दिन निकालना, दूरी पार करना। पर्व की वास्तविक सामग्री यही है। एक स्त्री भाई के माथे पर तिलक करती है, उसे खिलाती है, और बदले में उसे कुछ मिलता है; और यह दिन जो दायित्व बनाता है वह यह है कि वह पहुँचे।\n\nयमुना आज भी है, और मथुरा में इस दिन का पुराना रूप यह है कि भाई-बहन साथ उसमें स्नान करें — नदी और देवता, एक ही स्थान पर, ठीक वैसे ही मिलते हुए जैसा उसने माँगा था।",
+
+      "vrat_vidhi_en": "There is no fast for the brother. Many sisters keep one until the tilak is done and the brother has eaten, and break it with him.\n\nThe brother travels to the sister's house — this direction matters and is not reversed. Where a woman has no brother, or he cannot come, the moon is addressed as brother instead, which is an old and accepted form and not a substitute for a missing thing.\n\nA seat is prepared and marked on the floor, and the brother is sat facing east or north. The sister washes his feet, or touches water to them.\n\nThe tilak is made with her finger: roli and rice, sometimes with curd or sandal. She ties a thread at his wrist where that is the custom, does aarti with a lamp, and gives him a sweet by hand.\n\nThen he eats, and it is meant to be a real meal cooked for him, with whatever he is known to like. He gives her a gift before leaving. In Mathura, brother and sister bathe in the Yamuna together where they can get to it.",
+      "vrat_vidhi_hi": "भाई के लिए कोई उपवास नहीं है। बहुत बहनें तिलक होने और भाई के भोजन कर लेने तक व्रत रखती हैं, और उसी के साथ खोलती हैं।\n\nभाई बहन के घर जाता है — यह दिशा महत्वपूर्ण है और उलटी नहीं की जाती। जिस स्त्री का भाई न हो, या न आ सके, वह चंद्रमा को भाई मानकर तिलक करती है; यह प्राचीन और मान्य रूप है, किसी अभाव की भरपाई मात्र नहीं।\n\nभूमि पर आसन बनाकर चौक पूरा जाता है, और भाई को पूर्व या उत्तर की ओर मुख करके बिठाया जाता है। बहन उसके चरण धोती है, या जल स्पर्श कराती है।\n\nतिलक वह अपनी उँगली से करती है: रोली और अक्षत, कहीं दही या चंदन के साथ। जहाँ रीति हो वहाँ कलाई पर सूत बाँधती है, दीप से आरती उतारती है, और अपने हाथ से मिष्ठान्न खिलाती है।\n\nफिर वह भोजन करता है, और वह उसी के लिए पकाया गया वास्तविक भोजन होना चाहिए, उसकी पसंद की वस्तुओं सहित। जाते समय वह बहन को भेंट देता है। मथुरा में, जहाँ सँभव हो, भाई-बहन साथ यमुना में स्नान करते हैं।",
+
+      "phala_en": "The day is kept for a brother's long life and for the tie itself. What Yamuna actually asked for was freedom from the fear of death for every brother who comes — so the promise attached to the day is less about long life than about not being afraid.",
+      "phala_hi": "यह दिन भाई की दीर्घायु के लिए और उस संबंध के लिए रखा जाता है। यमुना ने वस्तुतः जो माँगा वह था — हर आने वाले भाई के लिए मृत्यु के भय से मुक्ति; सो इस दिन से जुड़ा वचन दीर्घायु से कम और निर्भयता से अधिक है।",
+
+      "moral_en": "Yamuna had one boon and could have asked for anything. She asked that her brother visit, and then that every brother be covered by the same protection. The story's quiet point is that she did not treat the favour as hers to keep.",
+      "moral_hi": "यमुना के पास एक वर था और वह कुछ भी माँग सकती थी। उसने माँगा कि भाई आता रहे, और फिर यह कि वही रक्षा हर भाई को मिले। कथा की शांत बात यही है कि उसने उस कृपा को अपने पास रखने योग्य वस्तु नहीं समझा।",
+
+      "key_moments_en": [
+        "Yama and Yamuna are born to the sun and grow up together.",
+        "Their lives separate: she becomes a river, he becomes the one who comes for everyone.",
+        "She invites him to eat at her house, year after year, and he never comes.",
+        "The reason is not reluctance: nobody invites death anywhere, and he has accepted that.",
+        "He realises one person has been asking for years, with no motive but wanting to see him.",
+        "On the second day of the bright fortnight of Kartika, he goes.",
+        "She washes his feet, marks his forehead with her finger, and feeds him far too much.",
+        "Yama, most feared of all, is fussed over in his sister's house and is pleased.",
+        "Offered a boon, she asks first that he return every year on this day.",
+        "Then she asks that every brother who comes and takes a mark from his sister be free of the fear of him — and he agrees."
+      ],
+      "key_moments_hi": [
+        "यम और यमुना सूर्य की संतानें हैं और साथ बड़े होते हैं।",
+        "उनके जीवन अलग हो जाते हैं: वह नदी बन जाती है, वे सबके अंत में आने वाले बन जाते हैं।",
+        "वह उन्हें वर्षों अपने घर भोजन पर बुलाती है, और वे कभी नहीं आते।",
+        "कारण अनिच्छा नहीं है: मृत्यु को कोई कहीं नहीं बुलाता, और वे इसे स्वीकार कर चुके हैं।",
+        "उन्हें समझ आता है कि एक व्यक्ति वर्षों से बुला रहा है, केवल मिलने की इच्छा से।",
+        "कार्तिक शुक्ल द्वितीया को वे जाते हैं।",
+        "वह उनके चरण धोती है, उँगली से माथे पर तिलक करती है, और आवश्यकता से कहीं अधिक खिलाती है।",
+        "सबसे भयभीत करने वाले यम अपनी बहन के घर लाड़ पाते हैं और प्रसन्न होते हैं।",
+        "वर मिलने पर वह पहले माँगती है कि वे हर वर्ष इसी दिन आएँ।",
+        "फिर माँगती है कि जो भी भाई आकर बहन का तिलक ले, वह उनके भय से मुक्त रहे — और वे मान जाते हैं।"
+      ],
+
+      "reflection_en": "Yama had spent his whole existence being the person nobody wants to see. What changed for him was one lunch. What does that say about being welcomed?",
+      "reflection_hi": "यम ने अपना पूरा अस्तित्व वह व्यक्ति बनकर बिताया जिसे कोई देखना नहीं चाहता। उन्हें बदला एक भोजन ने। स्वागत पाए जाने के विषय में यह क्या कहता है?",
+
+      "themes_en": ["brothers and sisters", "hospitality", "death", "welcome", "a gift passed on"],
+      "themes_hi": ["भाई-बहन", "आतिथ्य", "मृत्यु", "स्वागत", "आगे बढ़ाया गया वर"],
+
+      "order_no": 80,
+      "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+      "primary_source_ref": "Bhai Dooj / Yama Dvitiya",
+      "verification_status": "verified",
+      "claim_type": "traditional",
+      "source_quality": "secondary",
+      "sources": [
+        {"source_id": "underhill-hindu-year", "ref": "Bhai Dooj / Yama Dvitiya", "is_primary": 1,
+         "note": "The date, the visit of Yama to Yamuna, the tilak and meal, and the Mathura custom of bathing in the Yamuna."},
+        {"source_id": "gupte-hindu-holidays", "ref": "Bhratri Dvitiya", "is_primary": 0,
+         "note": "The household form and the moon-as-brother variant where a woman has no brother present."}
+      ]
+    },
+
+    {
+      "slug": "ganesh-chaturthi",
+      "legacy_id": 38,
+      "title_en": "Ganesh Chaturthi: Why Nobody Looks at the Moon",
+      "title_hi": "गणेश चतुर्थी: इस रात चंद्रमा क्यों नहीं देखा जाता",
+      "deity_en": ["Ganesha", "Chandra"],
+      "deity_hi": ["गणेश", "चंद्र"],
+      "festival_slug": "ganesh-chaturthi",
+      "entity_slugs": ["ganesha", "chandra", "parvati", "shiva"],
+      "when_en": "Bhadrapada, Shukla Paksha, fourth tithi — ten days of installation ending in immersion. The moon is not looked at on the fourth night.",
+      "when_hi": "भाद्रपद मास, शुक्ल पक्ष, चतुर्थी — दस दिन की स्थापना, जिसका अंत विसर्जन में होता है। चतुर्थी की रात चंद्रमा नहीं देखा जाता।",
+
+      "summary_en": "Ganesha falls off his mouse and the moon laughs at how he looks. The curse that follows is the reason one night a year is spent deliberately not looking up.",
+      "summary_hi": "गणेश अपने मूषक से गिर पड़ते हैं और चंद्रमा उनके रूप पर हँस देता है। उसके बाद मिला शाप ही वह कारण है कि वर्ष में एक रात जानबूझकर ऊपर नहीं देखा जाता।",
+
+      "body_en": "Ganesha had been fed well, which is usually where his stories start. He was going home at night on his mouse, comfortably full, and the mouse — being a mouse — saw a snake in the path and bolted. Ganesha came off and landed on the ground, and the offerings he was carrying went everywhere.\n\nFrom above, the moon watched this happen and laughed out loud.\n\nIt matters what he was laughing at. Not the fall — the shape of the person who fell. The elephant head, the belly, the round body coming off a mouse in the road. Chandra is the handsomest of the gods and is known for knowing it, and what came out of him was the laughter of someone beautiful at someone who is not.\n\nGanesha got up and cursed him, and the curse fits the crime exactly. You are proud of being looked at, he said. Then nobody will look at you. Anyone who does will be accused of something they did not do, and will not be believed when they deny it.\n\nThat is a heavier punishment than it sounds. Being disbelieved is a particular kind of misery — not being punished for a thing you did, but carrying a suspicion you cannot argue your way out of. Ganesha, who was laughed at over his appearance, answered with a curse about reputation. He made the moon's beauty into the thing nobody could safely look at.\n\nThe moon went dark and stayed dark, and the world noticed immediately, because a moon is not decorative — the tides, the calendar, the nights people travel by all depend on it. The other gods came and asked Ganesha to take it back.\n\nHe would not take it back, and this is the detail the story is careful about: a curse, once spoken, is not unsaid. What he did instead was narrow it. The moon would have his light again, but not all at once — he would lose it and regain it every month, waxing and waning forever, which is why the moon does that. And the full weight of the curse would fall on one night only: the fourth of the bright fortnight of Bhadrapada, the night of his own festival. Look at the moon then and the old penalty still applies.\n\nSo the festival carries an instruction that no other festival has. On its first night, you do not look up.\n\nThere is a way out, and it is characteristic. If you see the moon by accident, you are not finished — you tell the story of the Syamantaka jewel, in which Krishna himself was accused of a theft he did not commit and had to clear his name by finding the real thief. Hearing about someone else who was wrongly accused and was eventually believed is the remedy. The tradition treats a false accusation as something you survive by knowing it has happened before.\n\nThe ten days that follow are the part most people know. An image is brought home or installed in the street, treated as a guest for ten days — woken, fed, shown things, sat with — and then on the tenth day carried to water and let go. The same figure who is fussed over for ten days is dissolved at the end of them, and the crowd that carries him out says, come back early next year.",
+
+      "body_hi": "गणेश को अच्छा भोजन कराया गया था — उनकी कथाएँ प्रायः यहीं से आरंभ होती हैं। वे रात में अपने मूषक पर सवार घर लौट रहे थे, तृप्त और संतुष्ट, और मूषक ने — मूषक होने के नाते — मार्ग में साँप देखा और भड़क गया। गणेश गिर पड़े और भूमि पर आ रहे, और साथ लाया प्रसाद चारों ओर बिखर गया।\n\nऊपर से चंद्रमा ने यह देखा और खिलखिलाकर हँस पड़ा।\n\nवह किस पर हँसा, यह महत्वपूर्ण है। गिरने पर नहीं — गिरने वाले के रूप पर। गजमुख, वह उदर, वह गोल देह जो बीच रास्ते एक चूहे से लुढ़क गई। चंद्र देवताओं में सबसे सुंदर है और यह जानने के लिए प्रसिद्ध है, और उससे जो निकला वह किसी सुंदर व्यक्ति की उस पर हँसी थी जो सुंदर नहीं है।\n\nगणेश उठे और उसे शाप दिया, और शाप अपराध पर ठीक बैठता है। उन्होंने कहा — तुम्हें देखे जाने का अभिमान है। तो अब तुम्हें कोई नहीं देखेगा। जो देखेगा, उस पर वह दोष लगेगा जो उसने किया ही नहीं, और इनकार करने पर उसकी बात मानी नहीं जाएगी।\n\nयह दंड जितना सुनाई देता है उससे भारी है। अविश्वसनीय ठहरा दिया जाना एक विशेष प्रकार का कष्ट है — किए हुए काम का दंड नहीं, बल्कि ऐसा संदेह ढोना जिससे तर्क करके निकला नहीं जा सकता। गणेश, जिन पर उनके रूप को लेकर हँसा गया, उन्होंने उत्तर में प्रतिष्ठा का शाप दिया। उन्होंने चंद्रमा के सौंदर्य को वही वस्तु बना दिया जिसे कोई निर्भय होकर देख न सके।\n\nचंद्रमा बुझ गया और बुझा ही रहा, और संसार ने तुरंत यह जाना — क्योंकि चंद्रमा सजावट नहीं है: ज्वार, पंचांग, और जिन रातों में लोग यात्रा करते हैं, सब उस पर टिके हैं। अन्य देवता आए और गणेश से शाप वापस लेने को कहा।\n\nउन्होंने वापस नहीं लिया, और कथा इस विवरण पर सावधान है: एक बार कहा गया शाप अनकहा नहीं होता। उन्होंने जो किया वह था उसे सीमित कर देना। चंद्रमा को प्रकाश फिर मिलेगा, पर एक साथ नहीं — वह हर मास उसे खोएगा और पाएगा, सदा घटता-बढ़ता रहेगा, और इसी कारण चंद्रमा ऐसा करता है। और शाप का पूरा भार केवल एक रात पर पड़ेगा: भाद्रपद शुक्ल चतुर्थी, उन्हीं के पर्व की रात। उस रात चंद्रमा देखने पर पुराना दंड आज भी लागू है।\n\nसो इस पर्व के साथ एक निर्देश जुड़ा है जो किसी और पर्व के साथ नहीं है। इसकी पहली रात, ऊपर नहीं देखा जाता।\n\nइससे निकलने का एक मार्ग भी है, और वह इसी कथा जैसा है। यदि चंद्रमा अनजाने दिख जाए तो सब समाप्त नहीं हुआ — तब स्यमंतक मणि की कथा सुनी जाती है, जिसमें स्वयं कृष्ण पर ऐसी चोरी का दोष लगा जो उन्होंने की नहीं थी, और उन्हें असली चोर ढूँढ़कर अपना नाम निर्दोष सिद्ध करना पड़ा। किसी और के मिथ्या दोष में फँसकर अंततः सच्चा सिद्ध होने की कथा सुनना ही उपाय है। परंपरा मिथ्या आरोप को ऐसी वस्तु मानती है जिससे यह जानकर पार पाया जाता है कि ऐसा पहले भी हुआ है।\n\nउसके बाद के दस दिन वही हैं जिन्हें अधिकांश लोग जानते हैं। प्रतिमा घर लाई जाती है या गली में स्थापित होती है, और दस दिन अतिथि की तरह रखी जाती है — जगाई जाती है, भोग लगता है, उसे चीजें दिखाई जाती हैं, उसके पास बैठा जाता है — और दसवें दिन जल तक ले जाकर विसर्जित कर दी जाती है। जिस आकृति का दस दिन लाड़ होता है, वही अंत में घुल जाती है, और उसे ले जाने वाली भीड़ कहती है: अगले वर्ष जल्दी आना।",
+
+      "vrat_vidhi_en": "The fast is kept on the fourth day until the evening worship is done, then broken on the offering. Fruit and milk through the day is the common form; some keep it without water until the image has been installed.\n\nThe image is brought home in the morning and installed on a raised seat with a cloth under it, facing east or north. It is treated from that moment as a guest in the house rather than an object: greeted, offered water, seated.\n\nThe worship is offered with durva — the three-bladed grass, twenty-one blades tied in bunches — which is his and is used for almost nothing else. Red flowers, sandal and modaks go with it; twenty-one modaks is the full form. Everything in the offering comes in that count.\n\nAarti is done morning and evening for as many days as the household keeps him, and food is cooked for him each day and shared out after.\n\n**On the fourth night, the moon is not looked at.** If it is seen by accident the remedy is to hear or read the story of the Syamantaka jewel, in which Krishna was wrongly accused and cleared his name.\n\nOn the last day — the tenth for those who keep the full term, or the first, third or fifth for shorter forms — the image is carried to water and immersed, and the household asks him to return the following year.",
+      "vrat_vidhi_hi": "व्रत चतुर्थी को संध्या-पूजन पूरा होने तक रखा जाता है, फिर भोग पर खोला जाता है। दिन भर फल और दूध सामान्य रूप है; कुछ प्रतिमा स्थापित होने तक निर्जल रहते हैं।\n\nप्रतिमा प्रातः घर लाई जाती है और वस्त्र बिछाकर ऊँचे आसन पर, पूर्व या उत्तर की ओर मुख करके स्थापित की जाती है। उसी क्षण से उसके साथ किसी वस्तु की तरह नहीं, घर के अतिथि की तरह व्यवहार होता है: अभिवादन, जल अर्पण, आसन।\n\nपूजन दूर्वा से होता है — तीन दल वाली घास, इक्कीस दलों की गाँठें — जो उन्हीं की है और लगभग किसी और काम नहीं आती। साथ में लाल पुष्प, चंदन और मोदक; पूर्ण विधि में इक्कीस मोदक। भोग की हर वस्तु उसी गिनती में आती है।\n\nजितने दिन घर उन्हें रखता है, प्रातः-संध्या आरती होती है, और प्रतिदिन उनके लिए भोजन बनाकर बाद में बाँटा जाता है।\n\n**चतुर्थी की रात चंद्रमा नहीं देखा जाता।** यदि अनजाने दिख जाए तो उपाय है स्यमंतक मणि की कथा सुनना या पढ़ना, जिसमें कृष्ण पर मिथ्या दोष लगा और उन्होंने अपना नाम निर्दोष सिद्ध किया।\n\nअंतिम दिन — पूर्ण अवधि रखने वालों के लिए दसवाँ, और छोटे रूपों में पहला, तीसरा या पाँचवाँ — प्रतिमा जल तक ले जाकर विसर्जित की जाती है, और घर उनसे अगले वर्ष लौटने की प्रार्थना करता है।",
+
+      "phala_en": "He is called the remover of obstacles and the day is kept before anything that is about to begin — a house, a business, a journey, a wedding. The fourth-day promise is narrower and more practical: protection from being accused of what you did not do.",
+      "phala_hi": "उन्हें विघ्नहर्ता कहा जाता है और यह दिन हर उस वस्तु से पहले रखा जाता है जो आरंभ होने वाली है — घर, व्यवसाय, यात्रा, विवाह। चतुर्थी का वचन अधिक सीमित और अधिक व्यावहारिक है: उस दोष से रक्षा जो आपने किया ही नहीं।",
+
+      "moral_en": "Chandra laughed at how someone looked, and was answered with a curse about how he would be seen. The punishment is exact, and the god who gave it does not undo it — he only limits it, because a thing said cannot be unsaid.",
+      "moral_hi": "चंद्र किसी के रूप पर हँसा, और उत्तर में उसे यह शाप मिला कि उसे कैसे देखा जाएगा। दंड ठीक-ठीक बैठता है, और जिस देवता ने दिया वे उसे मिटाते नहीं — केवल सीमित करते हैं, क्योंकि कही हुई बात अनकही नहीं होती।",
+
+      "key_moments_en": [
+        "Ganesha rides home at night on his mouse after a good meal.",
+        "The mouse sees a snake in the path and bolts; Ganesha falls and his offerings scatter.",
+        "The moon, watching from above, laughs out loud — not at the fall but at the shape of the one who fell.",
+        "Ganesha curses him: you are proud of being looked at, so no one will look at you.",
+        "Anyone who does will be accused of what they did not do, and disbelieved when they deny it.",
+        "The moon goes dark, and the world notices at once — tides, calendar and travel all depend on him.",
+        "The gods ask for the curse to be lifted; Ganesha will not unsay it.",
+        "Instead he narrows it: the moon will wax and wane forever, losing his light and regaining it.",
+        "The full force falls on one night only — the fourth of the bright fortnight of Bhadrapada.",
+        "The remedy for seeing it by accident is to hear how Krishna was wrongly accused over the Syamantaka jewel and cleared his name."
+      ],
+      "key_moments_hi": [
+        "गणेश भोजन के बाद रात में अपने मूषक पर घर लौट रहे हैं।",
+        "मूषक मार्ग में साँप देखकर भड़कता है; गणेश गिर पड़ते हैं और प्रसाद बिखर जाता है।",
+        "ऊपर से देखता चंद्रमा खिलखिलाकर हँसता है — गिरने पर नहीं, गिरने वाले के रूप पर।",
+        "गणेश शाप देते हैं: तुम्हें देखे जाने का अभिमान है, सो तुम्हें कोई नहीं देखेगा।",
+        "जो देखेगा उस पर वह दोष लगेगा जो उसने किया नहीं, और इनकार पर उसकी बात नहीं मानी जाएगी।",
+        "चंद्रमा बुझ जाता है, और संसार तुरंत जान जाता है — ज्वार, पंचांग और यात्रा सब उस पर टिके हैं।",
+        "देवता शाप वापस लेने को कहते हैं; गणेश उसे अनकहा नहीं करते।",
+        "इसके बजाय वे उसे सीमित करते हैं: चंद्रमा सदा घटता-बढ़ता रहेगा, प्रकाश खोता और पाता।",
+        "पूरा भार केवल एक रात पर पड़ता है — भाद्रपद शुक्ल चतुर्थी।",
+        "अनजाने दिख जाने का उपाय है स्यमंतक मणि की कथा सुनना, जिसमें कृष्ण मिथ्या दोष से निर्दोष सिद्ध हुए।"
+      ],
+
+      "reflection_en": "Ganesha could not take the curse back once he had said it, only limit it. Have you ever said something you could only narrow afterwards, never withdraw?",
+      "reflection_hi": "गणेश शाप कह देने के बाद उसे वापस नहीं ले सके, केवल सीमित कर सके। क्या आपने कभी कुछ ऐसा कहा है जिसे बाद में केवल घटाया जा सका, वापस कभी नहीं लिया जा सका?",
+
+      "themes_en": ["mockery", "appearance", "reputation", "a curse narrowed", "beginnings"],
+      "themes_hi": ["उपहास", "रूप", "प्रतिष्ठा", "सीमित किया गया शाप", "आरंभ"],
+
+      "order_no": 90,
+      "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+      "primary_source_ref": "Ganesh Chaturthi",
+      "verification_status": "verified",
+      "claim_type": "traditional",
+      "source_quality": "secondary",
+      "sources": [
+        {"source_id": "underhill-hindu-year", "ref": "Ganesh Chaturthi", "is_primary": 1,
+         "note": "The date, the ten-day installation and immersion, and the prohibition on viewing the moon on the fourth night."},
+        {"source_id": "gupte-hindu-holidays", "ref": "Ganesa Chaturthi", "is_primary": 0,
+         "note": "Durva grass in twenty-one blades, the modak offering, and the Syamantaka remedy for seeing the moon."}
+      ]
+    }
+  ]
+}
