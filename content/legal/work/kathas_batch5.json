@@ -1,0 +1,223 @@
+{
+  "_note": "RG-01 batch 5 — written from cited public-domain sources. Fixture rows not opened while writing; legacy_id records which row each retires. Titles are ours.",
+  "rows": [
+    {
+      "slug": "karva-chauth",
+      "legacy_id": 2,
+      "title_en": "Karva Chauth: The Moon That Was Not the Moon",
+      "title_hi": "करवा चौथ: वह चंद्रमा जो चंद्रमा नहीं था",
+      "deity_en": ["Parvati", "Shiva", "Ganesha", "Chandra"],
+      "deity_hi": ["पार्वती", "शिव", "गणेश", "चंद्र"],
+      "festival_slug": "karva-chauth",
+      "entity_slugs": ["parvati", "shiva", "ganesha", "chandra"],
+      "when_en": "Kartika, Krishna Paksha, fourth tithi — four days after the full moon, and the fast runs from before dawn until the moon rises, which in that fortnight is late.",
+      "when_hi": "कार्तिक मास, कृष्ण पक्ष, चतुर्थी — पूर्णिमा के चार दिन बाद; व्रत भोर से पहले आरंभ होकर चंद्रोदय तक चलता है, जो उस पक्ष में देर से होता है।",
+
+      "summary_en": "Seven brothers cannot bear to watch their sister starve through a fast, so they show her a false moon to let her eat early. She eats, and the news arrives at the same moment.",
+      "summary_hi": "सात भाई अपनी बहन को व्रत में भूख से व्याकुल होते नहीं देख पाते, सो वे उसे नकली चंद्रमा दिखा देते हैं ताकि वह जल्दी खा ले। वह खाती है, और उसी क्षण समाचार आ जाता है।",
+
+      "body_en": "She was the only sister of seven brothers, and she was adored. That is the first thing the story establishes and everything that goes wrong comes out of it.\n\nIt was her first Karva Chauth after marrying, and she kept it the full way: from before dawn, without food, without water, until the moon came up. Kartika's fourth day of the dark fortnight has a late moon — you wait most of the night for it. By evening she had been without water for the better part of a day and it showed. She was faint, and she was sitting in her parents' house, and her seven brothers were watching.\n\nThey could not stand it. The story is very clear that this is love and not mischief; they were not playing a trick on her, they were trying to stop her suffering. So they went out and lit a lamp behind a sieve in a tree at a distance, so that from the house it looked like a small pale disc coming up through branches — and came back and told her the moon had risen.\n\nShe believed them, because why would she not. She made the offering to it, looked through the sieve at what she thought was the moon, turned and looked at her husband's face as the rite requires, and took the first mouthful of food.\n\nAnd the news came that her husband was dead.\n\nThe story does not pretend the brothers meant harm, and it does not let them off either. What it says is that they took a decision that was not theirs to take. She had undertaken something; they decided on her behalf that the suffering was not worth it and edited the terms without telling her. The thing she then did — breaking the fast — she did in good faith on information they had falsified out of tenderness.\n\nWhat she does next is the part worth reading slowly. She does not accept it. She sits with her husband's body and refuses to let it be taken for the rites, and she waits, and a year passes that way — and through that year she keeps every vrat as it comes, in order, properly, with nobody shortening anything for her.\n\nWhen Karva Chauth came round again she kept it the way she had meant to the first time, to the real moon, and her husband was restored to her.\n\nIt is a harder story than the version where a goddess appears and fixes things. What undoes the damage is not a miracle granted from outside but the woman doing the whole thing again correctly, for a full year, in grief. The fast is not shown as magic. It is shown as something she meant, and the first time it failed only because somebody else decided she had suffered enough.\n\nThat is why the sieve is still in the ritual. Every year, at moonrise, a woman looks at the moon through a sieve before she looks at her husband — through the same object that was used to fake one. The rite keeps the instrument of the mistake in it, which is an unusually honest thing for a ritual to do.",
+
+      "body_hi": "वह सात भाइयों की इकलौती बहन थी, और वह सबकी दुलारी थी। कथा सबसे पहले यही स्थापित करती है, और आगे जो कुछ बिगड़ता है वह इसी से निकलता है।\n\nविवाह के बाद यह उसका पहला करवा चौथ था, और उसने उसे पूरी विधि से रखा: भोर से पहले से, बिना अन्न, बिना जल, चंद्रोदय तक। कार्तिक कृष्ण पक्ष की चतुर्थी का चंद्रमा देर से निकलता है — उसके लिए आधी रात तक प्रतीक्षा करनी होती है। संध्या तक वह लगभग पूरे दिन बिना जल के रह चुकी थी और यह दिखने लगा था। वह मूर्छित-सी हो रही थी, और वह अपने मायके में बैठी थी, और उसके सात भाई यह देख रहे थे।\n\nवे सह नहीं पाए। कथा बहुत स्पष्ट है कि यह प्रेम था, शरारत नहीं; वे उसके साथ छल नहीं कर रहे थे, वे उसका कष्ट रोकना चाहते थे। सो वे बाहर गए और दूर एक वृक्ष पर छलनी के पीछे दीप जला दिया, जिससे घर से देखने पर वह डालियों के बीच उठती हुई छोटी पीली थाली जैसा लगे — और लौटकर उससे कह दिया कि चंद्रमा निकल आया है।\n\nउसने विश्वास कर लिया, क्योंकि न करने का कोई कारण ही नहीं था। उसने उसे अर्घ्य दिया, छलनी से उसे देखा जिसे वह चंद्रमा समझ रही थी, फिर विधि के अनुसार मुड़कर पति का मुख देखा, और पहला ग्रास लिया।\n\nऔर तभी समाचार आया कि उसका पति नहीं रहा।\n\nकथा यह नहीं दिखाती कि भाइयों का इरादा बुरा था, और उन्हें दोषमुक्त भी नहीं करती। वह यह कहती है कि उन्होंने ऐसा निर्णय लिया जो उनका लेने का था ही नहीं। उसने कुछ संकल्प लिया था; उन्होंने उसकी ओर से तय कर लिया कि यह कष्ट सहने योग्य नहीं है और बिना बताए उसकी शर्तें बदल दीं। फिर उसने जो किया — व्रत तोड़ना — वह सद्भाव से किया, उस सूचना पर जिसे उन्होंने स्नेह के कारण झूठा बनाया था।\n\nइसके बाद वह जो करती है, वही धीरे पढ़ने योग्य है। वह इसे स्वीकार नहीं करती। वह पति के शरीर के पास बैठ जाती है और उसे अंतिम संस्कार के लिए ले जाने नहीं देती, और प्रतीक्षा करती है, और इसी तरह एक वर्ष बीतता है — और उस पूरे वर्ष वह हर व्रत, जैसे-जैसे आता है, क्रम से, पूरी विधि से रखती है, और कोई उसके लिए कुछ छोटा नहीं करता।\n\nजब करवा चौथ फिर आया, उसने वैसे ही रखा जैसा पहली बार रखना चाहा था — असली चंद्रमा को अर्घ्य देकर — और उसका पति उसे लौटा दिया गया।\n\nयह उस रूप से कठिन कथा है जिसमें कोई देवी प्रकट होकर सब ठीक कर देती है। क्षति को जो पलटता है वह बाहर से मिला कोई चमत्कार नहीं, बल्कि उस स्त्री का पूरा वर्ष, शोक में, सब कुछ फिर से ठीक-ठीक करना है। व्रत को यहाँ जादू की तरह नहीं दिखाया गया। उसे उस वस्तु की तरह दिखाया गया है जो उसने सचमुच ठानी थी, और पहली बार वह केवल इसलिए टूटा क्योंकि किसी और ने तय कर लिया कि वह पर्याप्त कष्ट सह चुकी है।\n\nइसी कारण छलनी आज भी विधि में है। हर वर्ष, चंद्रोदय पर, स्त्री पति को देखने से पहले चंद्रमा को छलनी से देखती है — उसी वस्तु से जिससे कभी नकली चंद्रमा बनाया गया था। यह विधि उस भूल का साधन अपने भीतर सँजोकर रखती है, जो किसी अनुष्ठान के लिए असाधारण रूप से ईमानदार बात है।",
+
+      "vrat_vidhi_en": "The fast is nirjala — without food and without water — and runs from before dawn until the moon rises, which on this tithi is late in the evening.\n\nIt begins with sargi before first light: a meal eaten in the dark, sent by the mother-in-law where that is the custom, usually fenia or vermicelli in milk, fruit, and dry fruit. Nothing is taken after it, water included.\n\nThrough the day the karva is prepared — the clay or metal pot the fast is named for — filled with water, its mouth covered, with a lid holding rice, and a lamp set by it.\n\nIn the afternoon the women of the family gather to hear the story. They sit in a circle with their thalis and pass them around as the katha is read, one turn for each telling. The older women bless the younger.\n\nAt moonrise the woman comes out with her thali, a lamp and the sieve. She looks at the moon through the sieve, offers water to it, and then turns the sieve and looks at her husband's face through the same mesh.\n\nHe gives her the first water and the first mouthful by hand, and the fast is broken. The karva is given away, usually to an older woman of the family.",
+      "vrat_vidhi_hi": "व्रत निर्जल है — बिना अन्न और बिना जल — और भोर से पहले आरंभ होकर चंद्रोदय तक चलता है, जो इस तिथि पर रात गए होता है।\n\nआरंभ पौ फटने से पहले सरगी से होता है: अँधेरे में किया गया भोजन, जहाँ रीति हो वहाँ सास द्वारा भेजा हुआ — प्रायः दूध में फेनी या सेवइयाँ, फल और मेवा। उसके बाद कुछ ग्रहण नहीं किया जाता, जल भी नहीं।\n\nदिन में करवा तैयार होता है — मिट्टी या धातु का वही पात्र जिसके नाम पर व्रत है — जल से भरा, मुख ढका, ढक्कन में अक्षत, और पास दीप।\n\nदोपहर बाद परिवार की स्त्रियाँ कथा सुनने बैठती हैं। वे थालियाँ लेकर घेरे में बैठती हैं और कथा पढ़े जाने के साथ थालियाँ घुमाती हैं, हर फेरे पर एक बार। बड़ी स्त्रियाँ छोटी को आशीर्वाद देती हैं।\n\nचंद्रोदय पर स्त्री थाली, दीप और छलनी लेकर बाहर आती है। वह छलनी से चंद्रमा देखती है, उसे अर्घ्य देती है, और फिर छलनी घुमाकर उसी जाली से पति का मुख देखती है।\n\nवह अपने हाथ से उसे पहला जल और पहला ग्रास देता है, और व्रत खुलता है। करवा दान कर दिया जाता है, प्रायः परिवार की किसी बड़ी स्त्री को।",
+
+      "phala_en": "The fast is kept for a husband's long life and for the marriage itself. What the story adds is narrower: it is kept properly or not at all, and the woman in it gets what she wanted only after doing the whole thing again with nobody easing it for her.",
+      "phala_hi": "यह व्रत पति की दीर्घायु और स्वयं उस संबंध के लिए रखा जाता है। कथा इसमें एक सीमित बात जोड़ती है: यह या तो पूरी विधि से रखा जाता है या नहीं, और उस स्त्री को जो चाहिए था वह तभी मिला जब उसने पूरा वर्ष फिर से, बिना किसी की रियायत के, सब कुछ किया।",
+
+      "moral_en": "The brothers do everything out of love and cause the disaster. They decided on their sister's behalf that her suffering was not worth it, and edited what she had undertaken without asking her. The sieve stays in the rite as a reminder of what that cost.",
+      "moral_hi": "भाई सब कुछ प्रेम से करते हैं और विपत्ति ले आते हैं। उन्होंने बहन की ओर से तय कर लिया कि उसका कष्ट सहने योग्य नहीं, और बिना पूछे उसका संकल्प बदल दिया। छलनी उसी मूल्य की स्मृति बनकर विधि में बनी हुई है।",
+
+      "key_moments_en": [
+        "The only sister of seven brothers keeps her first Karva Chauth after marriage.",
+        "The fast runs from before dawn without food or water, and this tithi's moon rises late.",
+        "By evening she is faint, sitting in her parents' house, with her brothers watching.",
+        "Unable to bear it, they light a lamp behind a sieve in a distant tree.",
+        "They tell her the moon has risen, and she has no reason to doubt them.",
+        "She offers water to the false moon, looks at her husband, and takes the first mouthful.",
+        "News arrives at that moment that her husband is dead.",
+        "She refuses to let the body be taken for the rites, and sits with it.",
+        "For a full year she keeps every vrat as it comes, properly, with nothing shortened.",
+        "At the next Karva Chauth she keeps it to the real moon, and her husband is restored."
+      ],
+      "key_moments_hi": [
+        "सात भाइयों की इकलौती बहन विवाह के बाद अपना पहला करवा चौथ रखती है।",
+        "व्रत भोर से पहले से बिना अन्न-जल चलता है, और इस तिथि का चंद्रमा देर से निकलता है।",
+        "संध्या तक वह मूर्छित-सी है, मायके में बैठी, और भाई देख रहे हैं।",
+        "सह न पाकर वे दूर के वृक्ष पर छलनी के पीछे दीप जला देते हैं।",
+        "वे उससे कहते हैं कि चंद्रमा निकल आया, और उसके पास संदेह का कोई कारण नहीं।",
+        "वह उस नकली चंद्रमा को अर्घ्य देती है, पति का मुख देखती है, और पहला ग्रास लेती है।",
+        "उसी क्षण समाचार आता है कि उसका पति नहीं रहा।",
+        "वह शरीर को अंतिम संस्कार के लिए ले जाने नहीं देती, और उसके पास बैठी रहती है।",
+        "पूरे एक वर्ष वह हर व्रत क्रम से, पूरी विधि से रखती है, बिना कुछ घटाए।",
+        "अगले करवा चौथ पर वह उसे असली चंद्रमा को अर्घ्य देकर रखती है, और पति लौटा दिया जाता है।"
+      ],
+
+      "reflection_en": "The brothers lied to spare their sister pain, and it cost her a year of grief. When is it not your place to decide that someone has suffered enough?",
+      "reflection_hi": "भाइयों ने बहन को कष्ट से बचाने के लिए झूठ कहा, और उसे एक वर्ष का शोक भुगतना पड़ा। कब यह तय करना आपका अधिकार नहीं होता कि कोई पर्याप्त कष्ट सह चुका है?",
+
+      "themes_en": ["marriage", "a kindness that harms", "resolve", "grief", "doing it again"],
+      "themes_hi": ["विवाह", "हानि करती करुणा", "संकल्प", "शोक", "फिर से करना"],
+
+      "order_no": 100,
+      "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+      "primary_source_ref": "Karva Chauth",
+      "verification_status": "verified",
+      "claim_type": "traditional",
+      "source_quality": "secondary",
+      "sources": [
+        {"source_id": "underhill-hindu-year", "ref": "Karva Chauth", "is_primary": 1,
+         "note": "The date, the waterless fast from before dawn, and the moon seen through a sieve before the husband's face."},
+        {"source_id": "gupte-hindu-holidays", "ref": "Karaka Chaturthi", "is_primary": 0,
+         "note": "The karva pot the fast is named for, the sargi meal, and the women's circle at which the story is told."}
+      ]
+    },
+
+    {
+      "slug": "hartalika-teej",
+      "legacy_id": 40,
+      "title_en": "Hartalika Teej: The Bride Who Was Carried Off by Her Friends",
+      "title_hi": "हरतालिका तीज: वह वधू जिसे उसकी सखियाँ उठा ले गईं",
+      "deity_en": ["Parvati", "Shiva", "Himavan"],
+      "deity_hi": ["पार्वती", "शिव", "हिमवान"],
+      "festival_slug": "hartalika-teej",
+      "entity_slugs": ["parvati", "shiva"],
+      "when_en": "Bhadrapada, Shukla Paksha, third tithi — in the rains, the day before Ganesh Chaturthi. Kept without water, and traditionally without sleep.",
+      "when_hi": "भाद्रपद मास, शुक्ल पक्ष, तृतीया — वर्षा ऋतु में, गणेश चतुर्थी से एक दिन पहले। निर्जल रखा जाता है, और परंपरा से बिना सोए।",
+
+      "summary_en": "A girl's father promises her to someone she has not chosen. Her friends take her into the forest before the wedding, and she stays there doing penance until the man she did choose comes.",
+      "summary_hi": "एक कन्या का पिता उसका विवाह ऐसे व्यक्ति से तय कर देता है जिसे उसने चुना नहीं। विवाह से पहले उसकी सखियाँ उसे वन में ले जाती हैं, और वह वहीं तप करती रहती है जब तक वह नहीं आता जिसे उसने चुना था।",
+
+      "body_en": "The name of this festival is a plain description of what happens in it. Harat means taken away; alika means the friends. The festival is called the-friends-took-her-away, and that is the story.\n\nParvati was the daughter of Himavan, the mountain, and she had decided on Shiva. Not been matched with him — decided. She had been doing severe penance for him for a long time already, standing through weather in the open, eating less and less, and eventually nothing, until she had worn herself down to almost nothing at all.\n\nHer father watched this with the alarm any father would feel. He saw a daughter starving herself over an ascetic who lived in a cremation ground and showed no sign of noticing, and he did what fathers in that position do: he arranged something sensible. Vishnu was proposed, and the match was agreed, and preparations began.\n\nNobody asked her. That is the fact the whole festival sits on. She was told.\n\nWhat she did was tell her friends, and what they did is the thing the day is named for. They did not petition her father or argue the case. They took her — before the wedding, out of the house, into forest her family would not easily search — and hid her in a cave so she could keep doing what she had been doing without anybody stopping her.\n\nAnd she did. In the cave she made a linga out of the sand there and worshipped it, and kept a fast without food and without water, and stayed awake through the night. That is the exact set of things the observance now consists of, which is unusual: most festivals commemorate an event, this one reproduces a day.\n\nHer father searched and eventually found her, and by then the situation had changed, because she was able to say plainly what she wanted and he was able to see she would not be moved. He relented. Shiva, who had been aware of all of it, accepted her. And the marriage that happened was the one she had chosen rather than the one arranged for her.\n\nIt is worth being straightforward about what this story is. It is an old story in which a woman refuses an arranged match, her women friends conspire to get her out of the house, and she holds out until the family gives way — and it is kept as a fast by married and unmarried women across northern India every year. The tradition has never thought this needed softening.\n\nThe fast is one of the hardest in the year: no water at all, through a full day and the night after it, in the humidity at the end of the rains. Women keep it in their wedding clothes, with mehndi and full ornament, and the night is spent awake together in a group rather than alone at home — singing, and telling this story, which is about a group of women getting one of their own out of something she had not agreed to.",
+
+      "body_hi": "इस पर्व का नाम ही इसका सीधा विवरण है। हरत अर्थात् हर ले जाना; आलिका अर्थात् सखियाँ। पर्व का नाम है — सखियाँ उसे हर ले गईं। और कथा यही है।\n\nपार्वती हिमवान की पुत्री थीं, और उन्होंने शिव को चुन लिया था। उनसे संबंध तय नहीं हुआ था — उन्होंने स्वयं चुना था। वे बहुत समय से उनके लिए कठोर तप कर रही थीं, खुले में हर मौसम में खड़ी रहकर, कम से कम खाते हुए, और अंततः कुछ भी नहीं, जब तक वे लगभग क्षीण न हो गईं।\n\nउनके पिता ने यह उसी चिंता से देखा जो किसी भी पिता को होती। उन्होंने देखा कि उनकी पुत्री ऐसे तपस्वी के लिए स्वयं को गला रही है जो श्मशान में रहता है और जिसमें ध्यान देने का कोई लक्षण नहीं — और उन्होंने वही किया जो उस स्थिति में पिता करते हैं: उन्होंने कुछ समझदारी की व्यवस्था कर दी। विष्णु का प्रस्ताव आया, संबंध तय हुआ, और तैयारियाँ आरंभ हो गईं।\n\nकिसी ने उनसे नहीं पूछा। पूरा पर्व इसी तथ्य पर टिका है। उन्हें बता दिया गया।\n\nउन्होंने जो किया वह यह कि अपनी सखियों को बताया, और सखियों ने जो किया उसी पर इस दिन का नाम है। उन्होंने पिता से विनती नहीं की, न कोई तर्क रखा। वे उन्हें ले गईं — विवाह से पहले, घर से बाहर, ऐसे वन में जहाँ परिवार सरलता से न खोज सके — और एक गुफा में छिपा दिया, ताकि वे बिना किसी रोक-टोक के वही करती रहें जो कर रही थीं।\n\nऔर उन्होंने किया। गुफा में उन्होंने वहीं की बालू से लिंग बनाया और उसकी पूजा की, बिना अन्न और बिना जल व्रत रखा, और रात भर जागती रहीं। आज का व्रत ठीक इन्हीं वस्तुओं से बना है, जो असाधारण है: अधिकांश पर्व किसी घटना का स्मरण करते हैं, यह एक दिन को दोहराता है।\n\nपिता ने खोजा और अंततः उन्हें पा लिया, और तब तक स्थिति बदल चुकी थी — क्योंकि अब वे स्पष्ट कह सकती थीं कि उन्हें क्या चाहिए, और पिता देख सकते थे कि वे टलेंगी नहीं। वे मान गए। शिव, जो यह सब जानते थे, ने उन्हें स्वीकार किया। और जो विवाह हुआ वह वही था जो उन्होंने चुना था, न कि वह जो उनके लिए तय किया गया था।\n\nयह कथा क्या है, इस पर सीधा होना उचित है। यह एक प्राचीन कथा है जिसमें एक स्त्री तय किया गया संबंध अस्वीकार करती है, उसकी सखियाँ मिलकर उसे घर से निकाल ले जाती हैं, और वह तब तक डटी रहती है जब तक परिवार झुक नहीं जाता — और उत्तर भारत में विवाहित तथा अविवाहित स्त्रियाँ इसे हर वर्ष व्रत के रूप में रखती हैं। परंपरा ने कभी नहीं समझा कि इसे नरम करने की आवश्यकता है।\n\nयह वर्ष के कठिनतम व्रतों में है: बिलकुल निर्जल, पूरे दिन और उसके बाद की रात, वर्षा के अंत की उमस में। स्त्रियाँ इसे विवाह के वस्त्रों में, मेहँदी और पूर्ण शृंगार के साथ रखती हैं, और रात घर में अकेले नहीं, समूह में साथ जागकर बिताई जाती है — गाते हुए, और यही कथा कहते हुए, जो स्त्रियों के एक समूह की है जो अपनी ही एक सखी को उस बात से निकाल लाया जिस पर उसने सहमति नहीं दी थी।",
+
+      "vrat_vidhi_en": "The fast is nirjala — nothing at all, not even water — from sunrise through the whole day and the night that follows, and it is broken the next morning. It is kept by married women for their husbands and by unmarried women for the marriage they want, and the second half of that is not a modern addition.\n\nWomen dress as brides: wedding clothes or the nearest to them, full ornament, mehndi put on the night before, and green as the colour of the day.\n\nThe worship is of Shiva and Parvati made from earth. Small images are shaped by hand from clay or sand — made, not bought — and installed on a platform with a canopy, because in the story she made a linga from the sand of the cave.\n\nThe sixteen offerings of shringar are given to Parvati: bangles, bindi, sindoor, kajal, comb, mirror, and the rest, along with flowers and fruit. Shiva is given bilva leaves and dhatura.\n\nThe night is kept awake, and this is not optional in the full form — it is the part of the observance that reproduces the cave. Women keep it together in a group, singing through the watches, and the story is told during the night.\n\nIn the morning, after the last worship, the clay images are immersed in water and the fast is broken.",
+      "vrat_vidhi_hi": "व्रत निर्जल है — कुछ भी नहीं, जल तक नहीं — सूर्योदय से पूरे दिन और उसके बाद की रात तक, और अगली सुबह खोला जाता है। विवाहित स्त्रियाँ इसे पति के लिए रखती हैं और अविवाहित उस विवाह के लिए जो वे चाहती हैं, और इसका दूसरा भाग कोई आधुनिक जोड़ नहीं है।\n\nस्त्रियाँ वधू की तरह सजती हैं: विवाह के वस्त्र या उनके निकटतम, पूर्ण शृंगार, एक रात पहले लगाई मेहँदी, और उस दिन का रंग हरा।\n\nपूजा मिट्टी से बने शिव-पार्वती की होती है। छोटी प्रतिमाएँ हाथ से मिट्टी या बालू से गढ़ी जाती हैं — बनाई जाती हैं, खरीदी नहीं — और मंडप बनाकर चौकी पर स्थापित की जाती हैं, क्योंकि कथा में उन्होंने गुफा की बालू से लिंग बनाया था।\n\nपार्वती को सोलह शृंगार अर्पित होते हैं: चूड़ी, बिंदी, सिंदूर, काजल, कंघी, दर्पण और शेष, साथ में पुष्प और फल। शिव को बेलपत्र और धतूरा चढ़ता है।\n\nरात जागकर काटी जाती है, और पूर्ण विधि में यह वैकल्पिक नहीं है — यही वह अंग है जो गुफा को दोहराता है। स्त्रियाँ इसे समूह में साथ रखती हैं, प्रहर-प्रहर गाते हुए, और रात में कथा कही जाती है।\n\nसुबह, अंतिम पूजन के बाद, मिट्टी की प्रतिमाएँ जल में विसर्जित की जाती हैं और व्रत खोला जाता है।",
+
+      "phala_en": "Married women keep it for their husbands and for the marriage; unmarried women keep it for a husband of their own choosing, which is exactly what Parvati was doing. The older promise attached to it is constancy rather than prosperity — that what was chosen holds.",
+      "phala_hi": "विवाहित स्त्रियाँ इसे पति और दांपत्य के लिए रखती हैं; अविवाहित अपने चुने हुए वर के लिए, जो ठीक वही है जो पार्वती कर रही थीं। इससे जुड़ा पुराना वचन समृद्धि नहीं, स्थिरता है — कि जो चुना गया वह टिके।",
+
+      "moral_en": "Parvati's father was not cruel; he was worried, and he arranged what seemed best without asking her. The story does not resolve that by making him wrong about everything — only about the one thing, which is that the choice was not his to make.",
+      "moral_hi": "पार्वती के पिता निर्दयी नहीं थे; वे चिंतित थे, और बिना पूछे वही किया जो उन्हें सर्वोत्तम लगा। कथा इसे यह कहकर नहीं सुलझाती कि वे हर बात में गलत थे — केवल एक बात में, कि वह चुनाव उनके करने का था ही नहीं।",
+
+      "key_moments_en": [
+        "Parvati, daughter of the mountain Himavan, has chosen Shiva and is already deep in penance for him.",
+        "She stands through all weather, eats less and less, and wears herself down to almost nothing.",
+        "Her father, alarmed at a daughter starving over an ascetic, arranges a match with Vishnu.",
+        "Nobody asks her; she is told the wedding is settled.",
+        "She tells her friends, and they act rather than argue.",
+        "Before the wedding they carry her out of the house into forest her family cannot easily search.",
+        "Hidden in a cave, she makes a linga from the sand and worships it.",
+        "She keeps a fast without food or water and stays awake through the night — the observance kept today.",
+        "Her father finds her, hears her plainly, sees she will not be moved, and relents.",
+        "Shiva accepts her, and the marriage is the one she chose."
+      ],
+      "key_moments_hi": [
+        "पर्वतराज हिमवान की पुत्री पार्वती शिव को चुन चुकी हैं और उनके लिए गहन तप में हैं।",
+        "वे हर मौसम में खड़ी रहती हैं, कम से कम खाती हैं, और स्वयं को क्षीण कर लेती हैं।",
+        "पिता, एक तपस्वी के लिए पुत्री को गलते देखकर चिंतित होकर, विष्णु से संबंध तय कर देते हैं।",
+        "किसी ने उनसे नहीं पूछा; उन्हें बता दिया गया कि विवाह तय है।",
+        "वे अपनी सखियों को बताती हैं, और सखियाँ तर्क नहीं, कार्य करती हैं।",
+        "विवाह से पहले वे उन्हें घर से ऐसे वन में ले जाती हैं जहाँ परिवार सरलता से न खोज सके।",
+        "गुफा में छिपकर वे वहीं की बालू से लिंग बनाकर उसकी पूजा करती हैं।",
+        "वे बिना अन्न-जल व्रत रखती हैं और रात भर जागती हैं — वही व्रत जो आज रखा जाता है।",
+        "पिता उन्हें खोज लेते हैं, उनकी स्पष्ट बात सुनते हैं, देखते हैं कि वे टलेंगी नहीं, और मान जाते हैं।",
+        "शिव उन्हें स्वीकार करते हैं, और विवाह वही होता है जो उन्होंने चुना था।"
+      ],
+
+      "reflection_en": "Her friends did not plead her case — they got her out of the house. When has someone done something for you that talking would not have achieved?",
+      "reflection_hi": "उसकी सखियों ने उसकी ओर से विनती नहीं की — वे उसे घर से निकाल ले गईं। कब किसी ने आपके लिए वह किया जो बातचीत से नहीं हो सकता था?",
+
+      "themes_en": ["choosing", "friendship", "penance", "fathers and daughters", "holding out"],
+      "themes_hi": ["चुनाव", "सखी-भाव", "तप", "पिता और पुत्री", "डटे रहना"],
+
+      "order_no": 110,
+      "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+      "primary_source_ref": "Hartalika Teej",
+      "verification_status": "verified",
+      "claim_type": "traditional",
+      "source_quality": "secondary",
+      "sources": [
+        {"source_id": "underhill-hindu-year", "ref": "Hartalika Teej", "is_primary": 1,
+         "note": "The date, the waterless fast and night vigil, and the name itself — harat, taken away, and alika, the friends."},
+        {"source_id": "gupte-hindu-holidays", "ref": "Haritalika", "is_primary": 0,
+         "note": "The clay images made by hand, the sixteen shringar offerings, and the immersion the next morning."}
+      ]
+    },
+
+    {
+      "slug": "dhanteras",
+      "legacy_id": 4,
+      "title_en": "Dhanteras: The Boy Who Was Meant to Die on His Fourth Day",
+      "title_hi": "धनतेरस: वह बालक जिसे चौथे दिन मरना था",
+      "deity_en": ["Dhanvantari", "Lakshmi", "Yama"],
+      "deity_hi": ["धन्वंतरि", "लक्ष्मी", "यम"],
+      "festival_slug": "dhanteras",
+      "entity_slugs": ["dhanvantari", "lakshmi", "yama"],
+      "when_en": "Kartika, Krishna Paksha, thirteenth tithi — two days before Diwali. Metal is bought, and a lamp is set at the door facing south.",
+      "when_hi": "कार्तिक मास, कृष्ण पक्ष, त्रयोदशी — दीपावली से दो दिन पहले। इस दिन धातु खरीदी जाती है, और द्वार पर दक्षिणमुखी दीप रखा जाता है।",
+
+      "summary_en": "A prince is foretold to die four days after his wedding. His wife keeps him awake all night with lamps, gold and stories, and Death arrives and cannot get past them.",
+      "summary_hi": "एक राजकुमार के विषय में भविष्यवाणी है कि विवाह के चौथे दिन उसकी मृत्यु होगी। उसकी पत्नी दीपों, स्वर्ण और कथाओं से उसे रात भर जगाए रखती है, और यम आकर उन्हें पार नहीं कर पाते।",
+
+      "body_en": "King Hima's son was born under a reading that nobody wanted to hear: he would die on the fourth day after his marriage, bitten by a snake. The astrologers were specific about it, which is the worst kind of prophecy — not a vague doom but a date.\n\nHe grew up and was married, and the family lived with that date coming closer.\n\nHis wife is not named in most tellings and is the only person in the story who does anything. She had married into this knowing what the fourth day was supposed to bring, and she worked out what she could actually control. She could not stop a snake. She could make sure her husband did not sleep, and she could make the doorway impossible.\n\nSo on the fourth night she did not let him lie down. She took every piece of gold and silver in her possession — her ornaments, coins, whatever the household had — and heaped it at the entrance to the bedchamber, in a pile across the threshold. She lit lamps, many of them, all round the room and along the doorway, so the place was full of light with nothing dark in it. And then she sat with him and kept him talking. She told him stories and she sang, and every time the night got quiet she started again, because the one thing that must not happen was for either of them to drift off.\n\nYama came, as he had been going to, in the form of a serpent.\n\nAnd he could not get in. The doorway was blocked with metal that threw back the light of a hundred lamps, and a serpent's eyes cannot manage that — he was dazzled, and he could not cross the heap, and he could not find a dark way round. So he climbed on top of the pile of gold and stopped there, at the threshold, outside the room.\n\nThen he sat and listened. All night he stayed on the heap while she went on singing and telling stories, and when dawn came the fourth day was over and the reading had expired, and Yama went away without the prince.\n\nWhat the festival keeps from this is oddly literal. People buy metal on Dhanteras — gold or silver if they can, and steel or brass vessels if they cannot, which is the older and more common form — and the reason is not that metal is lucky. It is that metal at the door is what stopped Death. And the lamp set at the doorway on this night is set facing south, which is Yama's direction, and it is the one lamp of the year explicitly lit for him rather than for a god of fortune.\n\nThe day has a second thread that sits comfortably beside the first. It is also the day Dhanvantari rose out of the churned ocean carrying the pot of amrita — the physician of the gods, the origin of medicine, appearing with the cure for death in his hands. So one day carries a woman outwitting Death at her own door and the arrival of the art of healing, which is a reasonable pair of things to think about at the start of the darkest fortnight of the year.",
+
+      "body_hi": "राजा हिम के पुत्र का जन्म ऐसी गणना के साथ हुआ जिसे कोई सुनना नहीं चाहता था: विवाह के चौथे दिन सर्पदंश से उसकी मृत्यु होगी। ज्योतिषी इस विषय में सुनिश्चित थे, और यही भविष्यवाणी का सबसे बुरा रूप है — कोई धुँधली आशंका नहीं, बल्कि एक तिथि।\n\nवह बड़ा हुआ और उसका विवाह हुआ, और परिवार उस निकट आती तिथि के साथ जीता रहा।\n\nअधिकांश कथाओं में उसकी पत्नी का नाम नहीं आता, और इस कथा में कुछ करने वाली वही अकेली है। उसने यह जानते हुए विवाह किया था कि चौथा दिन क्या लाने वाला है, और उसने यह तय किया कि वह किस पर वश रख सकती है। वह सर्प को नहीं रोक सकती थी। वह यह कर सकती थी कि उसका पति सोए नहीं, और वह द्वार को अगम्य बना सकती थी।\n\nसो चौथी रात उसने उसे लेटने नहीं दिया। उसने अपने पास का सारा स्वर्ण और चाँदी — अपने आभूषण, सिक्के, जो कुछ घर में था — शयनकक्ष के द्वार पर, देहली के आर-पार ढेर कर दिया। उसने दीप जलाए, बहुत सारे, कक्ष भर में और द्वार के साथ-साथ, जिससे वह स्थान प्रकाश से भर गया और कहीं अँधेरा न बचा। और फिर वह उसके पास बैठकर उसे बातों में लगाए रही। उसने कथाएँ सुनाईं और गाया, और जब-जब रात चुप होने लगती वह फिर आरंभ कर देती — क्योंकि जो एक बात नहीं होनी चाहिए थी वह यह थी कि उन दोनों में से किसी की आँख लग जाए।\n\nयम आए, जैसा आना ही था, सर्प के रूप में।\n\nऔर वे भीतर नहीं आ सके। द्वार ऐसी धातु से रुका था जो सौ दीपों का प्रकाश लौटा रही थी, और सर्प की आँखें वह नहीं सह पातीं — वे चौंधिया गए, वे उस ढेर को पार न कर सके, और कोई अँधेरा मार्ग भी न पा सके। सो वे स्वर्ण के उस ढेर पर चढ़कर वहीं ठहर गए, देहली पर, कक्ष के बाहर।\n\nफिर वे बैठकर सुनते रहे। रात भर वे उसी ढेर पर रहे जबकि वह गाती और कथाएँ कहती रही, और जब भोर हुई तो चौथा दिन बीत चुका था और गणना की अवधि समाप्त हो चुकी थी, और यम राजकुमार को लिए बिना लौट गए।\n\nपर्व इसमें से जो सँजोता है वह विचित्र रूप से अक्षरशः है। लोग धनतेरस पर धातु खरीदते हैं — स्वर्ण या चाँदी यदि सँभव हो, और न हो तो इस्पात या पीतल के बर्तन, जो पुराना और अधिक प्रचलित रूप है — और कारण यह नहीं कि धातु शुभ है। कारण यह है कि द्वार पर रखी धातु ने ही मृत्यु को रोका था। और इस रात द्वार पर रखा जाने वाला दीप दक्षिण की ओर मुख किए रखा जाता है, जो यम की दिशा है, और यह वर्ष का वही एक दीप है जो स्पष्ट रूप से उन्हीं के लिए जलाया जाता है, किसी धन-देवता के लिए नहीं।\n\nइस दिन एक दूसरी धारा भी है जो पहली के साथ सहज बैठती है। यही वह दिन है जब धन्वंतरि समुद्र-मंथन से अमृत का कलश लिए प्रकट हुए — देवताओं के वैद्य, चिकित्सा के उद्गम, मृत्यु का उपचार हाथों में लिए आते हुए। सो एक ही दिन अपने द्वार पर मृत्यु को मात देती स्त्री और चिकित्सा-कला के आगमन, दोनों को धारण करता है — और वर्ष के सबसे अँधेरे पक्ष के आरंभ में सोचने के लिए यह उचित जोड़ी है।",
+
+      "vrat_vidhi_en": "There is no fast. The day's work is cleaning, buying and lighting.\n\nThe house is cleaned and the entrance especially — the threshold washed, and rangoli put down with small footprints drawn coming inward.\n\nMetal is bought, and this is the one purchase of the year that is itself the observance. Gold or silver where a household can; otherwise steel or brass vessels, which is the older form and carries no less merit. A new vessel is brought in through the front door and not left outside overnight.\n\nAt dusk lamps are lit through the house. One lamp is different from all the others: a single earthen lamp, usually with four wicks, set outside the main door on a heap of grain, **facing south**. That one is for Yama, and it is the only lamp of the year lit for him. In many households it is set out by a woman of the house and nobody looks back at it once it is placed.\n\nDhanvantari is worshipped where a household keeps that form, and it is the physicians' day; in some places the day's offering is made for the health of the household rather than its wealth.\n\nThe lamps at the door are kept burning through the night rather than put out at bedtime.",
+      "vrat_vidhi_hi": "कोई उपवास नहीं है। इस दिन का काम है सफाई, क्रय और दीप।\n\nघर साफ किया जाता है और विशेषकर प्रवेश — देहली धोई जाती है, और रंगोली बनाकर भीतर की ओर आते छोटे चरण-चिह्न बनाए जाते हैं।\n\nधातु खरीदी जाती है, और यही वर्ष का वह एक क्रय है जो स्वयं ही व्रत है। जहाँ सँभव हो स्वर्ण या चाँदी; अन्यथा इस्पात या पीतल के बर्तन, जो पुराना रूप है और उससे कम पुण्य का नहीं। नया पात्र मुख्य द्वार से भीतर लाया जाता है और रात भर बाहर नहीं छोड़ा जाता।\n\nसंध्या को घर भर में दीप जलते हैं। एक दीप शेष सबसे भिन्न होता है: मिट्टी का एक दीपक, प्रायः चार बत्तियों वाला, मुख्य द्वार के बाहर अन्न के ढेर पर, **दक्षिण की ओर मुख किए** रखा जाता है। वह यम के लिए है, और वर्ष में उनके लिए जलने वाला यही एकमात्र दीप है। बहुत घरों में इसे घर की कोई स्त्री रखती है और रखने के बाद उसकी ओर मुड़कर नहीं देखा जाता।\n\nजहाँ रीति हो वहाँ धन्वंतरि का पूजन होता है, और यह वैद्यों का दिन है; कुछ स्थानों पर इस दिन का अर्पण घर के धन के लिए नहीं, स्वास्थ्य के लिए किया जाता है।\n\nद्वार के दीप सोते समय बुझाए नहीं जाते, रात भर जलने दिए जाते हैं।",
+
+      "phala_en": "The day is kept for the household's prosperity and, in its older sense, its health — Dhanvantari is a physician, not a treasurer. The lamp facing south asks for something narrower: that untimely death pass the house by this year.",
+      "phala_hi": "यह दिन घर की समृद्धि के लिए और अपने पुराने अर्थ में उसके स्वास्थ्य के लिए रखा जाता है — धन्वंतरि वैद्य हैं, कोषाध्यक्ष नहीं। दक्षिणमुखी दीप एक अधिक सीमित प्रार्थना करता है: कि इस वर्ष अकाल मृत्यु इस घर को छोड़कर निकल जाए।",
+
+      "moral_en": "She could not stop the snake, so she did not try. She worked on the two things she could reach — light at the doorway and a husband who stayed awake — and that turned out to be enough. Death was not defeated; he was simply kept at the threshold until the deadline passed.",
+      "moral_hi": "वह सर्प को नहीं रोक सकती थी, सो उसने प्रयास ही नहीं किया। उसने उन दो वस्तुओं पर काम किया जो उसकी पहुँच में थीं — द्वार पर प्रकाश, और जागता हुआ पति — और वही पर्याप्त सिद्ध हुआ। मृत्यु पराजित नहीं हुई; वह बस तब तक देहली पर रोक दी गई जब तक अवधि बीत न गई।",
+
+      "key_moments_en": [
+        "King Hima's son is born under a reading that he will die on the fourth day after his marriage, bitten by a snake.",
+        "He grows up and is married, and the family lives with the date approaching.",
+        "His wife, unnamed in most tellings, works out what she can actually control.",
+        "On the fourth night she heaps all her gold and silver across the bedchamber threshold.",
+        "She lights lamps everywhere, leaving nowhere dark.",
+        "She keeps her husband talking and singing so that neither of them sleeps.",
+        "Yama arrives in the form of a serpent, as foretold.",
+        "The metal throws back the lamplight; dazzled, he cannot cross the heap or find a dark way round.",
+        "He settles on top of the gold at the threshold and listens to her all night.",
+        "At dawn the fourth day has passed and the reading has expired; Yama leaves without the prince."
+      ],
+      "key_moments_hi": [
+        "राजा हिम के पुत्र के जन्म पर गणना कहती है कि विवाह के चौथे दिन सर्पदंश से उसकी मृत्यु होगी।",
+        "वह बड़ा होता है और उसका विवाह होता है, और परिवार उस निकट आती तिथि के साथ जीता है।",
+        "उसकी पत्नी, जिसका नाम अधिकांश कथाओं में नहीं आता, तय करती है कि उसके वश में क्या है।",
+        "चौथी रात वह अपना सारा स्वर्ण और चाँदी शयनकक्ष की देहली पर ढेर कर देती है।",
+        "वह चारों ओर दीप जलाती है, कहीं अँधेरा नहीं छोड़ती।",
+        "वह पति को बातों और गीतों में लगाए रखती है ताकि दोनों में से कोई सोए नहीं।",
+        "यम, जैसा कहा गया था, सर्प के रूप में आते हैं।",
+        "धातु दीपों का प्रकाश लौटाती है; चौंधियाकर वे न ढेर पार कर पाते हैं, न कोई अँधेरा मार्ग पाते हैं।",
+        "वे देहली पर स्वर्ण के ढेर पर बैठ जाते हैं और रात भर उसे सुनते रहते हैं।",
+        "भोर होते ही चौथा दिन बीत चुका है और अवधि समाप्त; यम राजकुमार को लिए बिना लौट जाते हैं।"
+      ],
+
+      "reflection_en": "She did not fight Death — she made her doorway impossible and kept her husband awake. When a thing cannot be prevented, what is still worth doing?",
+      "reflection_hi": "उसने मृत्यु से युद्ध नहीं किया — उसने अपना द्वार अगम्य बनाया और पति को जगाए रखा। जब कोई बात रोकी नहीं जा सकती, तब भी करने योग्य क्या बचता है?",
+
+      "themes_en": ["a fixed date", "wakefulness", "light", "ingenuity", "healing"],
+      "themes_hi": ["नियत तिथि", "जागरण", "प्रकाश", "युक्ति", "आरोग्य"],
+
+      "order_no": 120,
+      "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+      "primary_source_ref": "Dhanteras / Dhanatrayodashi",
+      "verification_status": "verified",
+      "claim_type": "traditional",
+      "source_quality": "secondary",
+      "sources": [
+        {"source_id": "underhill-hindu-year", "ref": "Dhanteras / Dhanatrayodashi", "is_primary": 1,
+         "note": "The date, the buying of metal, the lamp set facing south for Yama, and Dhanvantari rising from the churned ocean with the amrita."},
+        {"source_id": "gupte-hindu-holidays", "ref": "Dhana Trayodashi", "is_primary": 0,
+         "note": "The four-wicked lamp on a heap of grain at the door, and the household form of the day."}
+      ]
+    }
+  ]
+}
