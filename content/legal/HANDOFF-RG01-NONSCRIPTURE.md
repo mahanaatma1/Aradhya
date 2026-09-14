@@ -534,3 +534,74 @@ decision, not a content one, and it needs an explicit answer before release.
 
 Start with the 27. They are the larger half, they have no blockers, and Vat
 Savitri is already done as the reference.
+
+---
+
+## 7. Where the remaining kathas can and cannot come from
+
+Checked 2026-09-14 against the actual texts, not from memory. The 57 fixture
+kathas split three ways, and the split is about **what kind of text each story
+lives in**, not about how hard anyone looked.
+
+### Written: 12 rows, all from cited public-domain sources
+
+Vat Savitri, Holika Dahan, Navratri, Govardhan, Maha Shivratri, Janmashtami,
+Dussehra, Bhai Dooj, Ganesh Chaturthi, Karva Chauth, Hartalika Teej, Dhanteras.
+
+These are **Puranic or epic** narratives, which is why they were writable:
+Wilson's Vishnu Purana, Ganguli's Mahabharata and Dutt's Ramayana all carry
+them, and Underhill and Gupte supply the observance. 41,398 chars EN and 37,124
+HI, averaging 3.5x the fixture rows they retire.
+
+### Blocked: 26 Ekadashi rows — Padma Purana, no PD English
+
+See section 6. Two searches, both negative.
+
+### Blocked: 19 rows — folk vrat kathas, not in any PD text
+
+This is a **different** blocker from the Ekadashi one and worth understanding
+separately, because no amount of searching Puranas will fix it.
+
+Sakat Chauth, Ahoi Ashtami, the Diwali Sahukar's-daughter katha, Kajli Teej,
+Santoshi Maa, Satyanarayan, Somvati Amavasya, Purnima, Sawan Somvar, Solah
+Somvar, Vaibhav Lakshmi, Pradosh, and the seven weekday vrats.
+
+What was actually checked:
+
+- **Underhill, The Hindu Religious Year (1921)** — full text searched. Has
+  Somvati Amavasya as a line ("the new moon falling on a Monday, is auspicious
+  for almsgiving") and the planetary character of the weekdays. **Absent:**
+  Sakat Chauth, Ahoi Ashtami, Satyanarayan, Solah Somvar, Santoshi Mata, Kajli
+  Teej, Vaibhav Lakshmi. The book is organised around solar, lunar and planetary
+  festivals, not around women's devotional vrats.
+- **Gupte, Hindu Holidays and Ceremonials (1919)** — full text searched. Names
+  Sankashti Chaturthi, Satya Narayan and Solah Somvar, but as **ritual
+  description only** — no narrative. Its own introduction files them as
+  "women's vratas" and describes procedure rather than story. **Absent:** Sakat
+  Chauth, Ahoi Ashtami, Kajli Teej, the weekday narratives, the Sahukar katha.
+
+**Why:** these are *oral folk* vrat kathas. They are told aloud by women at the
+observance and were largely written down in twentieth-century Hindi pamphlet
+literature — the Gita Press and Lakshmi Prakashan booklets — all of which is
+modern and in copyright. Santoshi Maa is the clearest case: the observance
+spread nationally after a 1975 film. There is no pre-1929 English source
+because these did not enter English-language scholarship at all.
+
+**So the honest position:** 12 of 57 are done. The other 45 are blocked for two
+different reasons, neither of which more searching will solve. What would
+unblock them is a **different kind of source**, and that is a decision for the
+project owner, not a research problem:
+
+1. **A Sanskrit or Hindi PD source plus our own translation.** The 1890
+   Marathi *Ekadashi Mahatmya* scan is real and public domain; so are Devanagari
+   vrat-katha collections of that era. Translating from them is legitimate and
+   is how the Gita work is already being done — but it is a translation project,
+   not a retelling one.
+2. **Author them as our own tellings of oral tradition**, citing the tradition
+   rather than a text. Defensible for genuinely oral material — nobody owns a
+   folk tale — but it cannot be distinctness-checked against a source, so it
+   needs a different review standard.
+3. **Ship 12 and drop the rest**, which leaves `content.sqlite` undeletable
+   unless the app drops those entries too.
+
+Do not quietly pick one. Each has a different legal and editorial shape.
