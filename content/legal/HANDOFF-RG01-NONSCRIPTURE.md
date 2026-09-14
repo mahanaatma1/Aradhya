@@ -465,3 +465,52 @@ tests. A generated quiz question with a wrong answer, or a katha with the wrong
 deity, is worse than a licence problem. Generate only from facts that carry a
 source id, and drop anything you cannot ground — for `quotes` that is explicitly
 expected to cost ~200 rows.
+
+---
+
+## 6. Blocked: the 26 Ekadashi kathas
+
+Searched 2026-09-14, no usable source found. **Do not write these from memory
+and do not paraphrase the fixture.** The project owner has ruled out shipping a
+reduced fallback for them, so they stay unwritten until a source appears.
+
+The narratives (King Vaikhanasa, Prince Lumpaka, Malyavan and Pushpavati, Sage
+Medhavi, the Fowler Krodhana) are **Padma Purana, Uttara Khanda**. What was
+checked:
+
+- **Padma Purana in English** — the only complete translation is Motilal
+  Banarsidass, 1988-1990. In copyright. The unattributed archive.org upload
+  `purana-padma-purana-eng` carries no translator or date and is almost
+  certainly that same text; wisdomlib hosts it too. Not usable.
+- **Manmatha Nath Dutt** (d. 1912, everything PD) translated Markandeya (1896),
+  Bhagavata (1896), Vishnu (1894), Harivamsha (1897), Agni (1903) and Garuda
+  (1908) — **but never the Padma Purana**, and none of the others carries the
+  Ekadashi origin stories.
+- **Garuda Purana**, Dutt 1908 — has "The Ekadashi Vratam" (ch. CXXV) and
+  "Bhaimi Ekadashi and Dvadashi" (ch. CXXVII), but these are *observance rules*,
+  not origin narratives. Useful for `vrat_vidhi_*`, useless for `body_*`.
+- **Underhill and Gupte** give the date, the fast and the significance for many
+  Ekadashis — the observance, never the story.
+
+**If you want to unblock these**, the search that might still pay off is a
+pre-1929 Indian-press English Padma Purana (the era when Dutt, Ganguli and
+Wilson were publishing) in HathiTrust or a university catalogue rather than
+archive.org. Until such an edition is found and added to SOURCES.md, the 26
+Ekadashi rows are out of scope.
+
+**Consequence for the fixture:** `main.kathas` cannot be fully retired while
+these 26 have no replacement. Either the fixture keeps shipping for them alone
+— which does not clear RG-01 — or the app ships without them. That is a product
+decision, not a content one, and it needs an explicit answer before release.
+
+### What IS writable now
+
+| Bucket | Rows | Sources |
+|---|---|---|
+| Epic/Puranic | **27** | Ganguli, Wilson, Dutt-Ramayana, Underhill, Gupte |
+| Folk/local | **4** | Check individually; Underhill/Gupte where they reach |
+| New, no fixture row | **44 candidates** | Underhill (95 festivals), Gupte (15) |
+| Ekadashi | 26 | **BLOCKED** |
+
+Start with the 27. They are the larger half, they have no blockers, and Vat
+Savitri is already done as the reference.
