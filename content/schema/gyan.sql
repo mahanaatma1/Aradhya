@@ -384,6 +384,19 @@ CREATE TABLE qa_pairs (
 );
 CREATE INDEX ix_qa_fold ON qa_pairs(question_fold);
 
+-- RD-02 Word meaning tab: one row per Sanskrit word in a verse, in reading
+-- order. A verse with no rows here just means the tab is still empty for it --
+-- the reader-facing empty state in verse_tabs.dart is unaffected by this table
+-- existing; it starts checking word_meanings once this ships.
+CREATE TABLE word_meanings (
+  id                   INTEGER PRIMARY KEY,
+  scripture_section_id INTEGER NOT NULL,  -- soft link into main.scripture_sections
+  order_no             INTEGER NOT NULL,
+  sanskrit             TEXT NOT NULL,
+  meaning_en           TEXT NOT NULL, meaning_hi TEXT
+);
+CREATE INDEX ix_word_meanings_section ON word_meanings(scripture_section_id, order_no);
+
 -- 4.17 Karma Journal -- the PROMPTS are content; the entries live in
 -- aradhya_user.db and never leave the device.
 CREATE TABLE journal_prompts (
@@ -510,6 +523,57 @@ CREATE TABLE related_edges (
   route       TEXT NOT NULL
 );
 CREATE INDEX ix_related_src ON related_edges(src_src, src_table, src_id, weight DESC);
+
+-- RG-01 kathas. Our own retellings of the vrat kathas, replacing the
+-- Ishvarvaani fixture rows of `main.kathas` one for one (`legacy_id` is the
+-- row each supersedes, so the swap is auditable and reversible).
+--
+-- The fixture carried a title, a deity string and one ~1,000-char body. Three
+-- things are new here and all three are what a reader actually wants:
+--   * `vrat_vidhi_*` -- how the fast is kept. The fixture had nothing at all,
+--     which is the single biggest gap: the app could tell you the story of the
+--     vrat but not how to observe it.
+--   * `key_moments_*` -- JSON array, same shape as narrative_nodes, so a katha
+--     can render the same beat-list UI the epics already use.
+--   * `festival_slug` -- soft link to festivals(slug) rather than a FK, because
+--     a katha may be told for an observance we have no festival row for yet.
+--     Resolved at read time; a miss is an empty rail, not an error.
+--
+-- Every _en column has a _hi twin and both are populated: a row with English
+-- and no Hindi fails review (RG-01 bilingual rule). `body_hi` is a parallel
+-- retelling, not a translation of `body_en`, so the lengths run close but the
+-- sentences do not correspond.
+CREATE TABLE kathas (
+  id                   INTEGER PRIMARY KEY,
+  slug                 TEXT NOT NULL UNIQUE,
+  legacy_id            INTEGER,       -- main.kathas.id this replaces
+  title_en             TEXT NOT NULL, title_hi TEXT NOT NULL,
+  deity_en             TEXT,          deity_hi TEXT,   -- JSON arrays
+  festival_slug        TEXT,          -- soft link to festivals(slug)
+  entity_slugs         TEXT,          -- JSON array, soft links to entities(slug)
+  when_en              TEXT,          when_hi TEXT,
+  summary_en           TEXT NOT NULL, summary_hi TEXT NOT NULL,
+  body_en              TEXT NOT NULL, body_hi TEXT NOT NULL,
+  vrat_vidhi_en        TEXT,          vrat_vidhi_hi TEXT,
+  phala_en             TEXT,          phala_hi TEXT,
+  moral_en             TEXT,          moral_hi TEXT,
+  key_moments_en       TEXT,          key_moments_hi TEXT,  -- JSON arrays
+  reflection_en        TEXT,          reflection_hi TEXT,
+  themes_en            TEXT,          themes_hi TEXT,       -- JSON arrays
+  order_no             INTEGER NOT NULL DEFAULT 0,
+  primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
+  last_verified_at     TEXT,
+  verification_status  TEXT NOT NULL DEFAULT 'unverified'
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
+);
+CREATE INDEX ix_kathas_order ON kathas(order_no);
+CREATE INDEX ix_kathas_festival ON kathas(festival_slug);
+CREATE INDEX ix_kathas_legacy ON kathas(legacy_id);
 
 -- ============================================================================
 -- 5. META
