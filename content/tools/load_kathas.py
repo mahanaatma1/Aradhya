@@ -59,7 +59,7 @@ LISTS = ("deity_en", "deity_hi", "entity_slugs",
 
 def _batches() -> list[dict]:
     rows = []
-    for path in sorted(WORK.glob("kathas_batch*.json")):
+    for path in sorted(WORK.glob("kathas_*.json")):
         rows += json.loads(path.read_text(encoding="utf-8"))["rows"]
     sample = WORK / "SAMPLE_katha_41_vat_savitri.json"
     if sample.exists():
