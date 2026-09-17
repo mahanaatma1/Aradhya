@@ -616,6 +616,66 @@ CREATE TABLE scripture_books (
 );
 CREATE INDEX ix_sbooks_scripture ON scripture_books(scripture_id, order_no);
 
+
+-- RG-01 devotional texts. The Sanskrit and the lyrics are public domain --
+-- the Hanuman Chalisa is Tulsidas c.1600, the Mahamrityunjaya is Rigveda --
+-- so what is replaced here is not the text but the fixture's TRANSCRIPTION of
+-- it: its romanisation, its line breaks, its bracketed repeat markers. The
+-- devanagari is set cleanly and the IAST is generated mechanically from it.
+--
+-- The authored fields are the ones the fixture actually owned: translation_*,
+-- summary_* and how_to_chant_* on mantras. Those are written fresh.
+CREATE TABLE mantras (
+  id                   INTEGER PRIMARY KEY,
+  slug                 TEXT NOT NULL UNIQUE,
+  legacy_id            INTEGER,
+  title_en             TEXT NOT NULL, title_hi TEXT NOT NULL,
+  deity_en             TEXT,          deity_hi TEXT,
+  type_en              TEXT,          type_hi TEXT,
+  sanskrit             TEXT NOT NULL,          -- public domain, set clean
+  iast                 TEXT,                   -- mechanical transform of sanskrit
+  translation_en       TEXT NOT NULL, translation_hi TEXT NOT NULL,
+  summary_en           TEXT,          summary_hi TEXT,
+  how_to_chant_en      TEXT,          how_to_chant_hi TEXT,
+  order_no             INTEGER NOT NULL DEFAULT 0,
+  primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
+  last_verified_at     TEXT,
+  verification_status  TEXT NOT NULL DEFAULT 'unverified'
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
+);
+CREATE INDEX ix_mantras_order ON mantras(order_no);
+
+-- Aartis and chalisas share a shape: a traditional hymn with a deity and two
+-- script renderings. `kind` keeps them in one table rather than two identical
+-- ones, since the reader screen treats them the same way.
+CREATE TABLE devotional_lyrics (
+  id                   INTEGER PRIMARY KEY,
+  slug                 TEXT NOT NULL UNIQUE,
+  legacy_id            INTEGER,
+  kind                 TEXT NOT NULL CHECK (kind IN ('aarti','chalisa')),
+  title_en             TEXT NOT NULL, title_hi TEXT NOT NULL,
+  deity_en             TEXT,          deity_hi TEXT,
+  lyrics_hi            TEXT NOT NULL,          -- devanagari, public domain
+  lyrics_en            TEXT NOT NULL,          -- our romanisation of the same
+  summary_en           TEXT,          summary_hi TEXT,
+  order_no             INTEGER NOT NULL DEFAULT 0,
+  primary_source_name  TEXT, primary_source_ref TEXT,
+  last_verified_at     TEXT,
+  verification_status  TEXT NOT NULL DEFAULT 'unverified'
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
+);
+CREATE INDEX ix_lyrics_kind ON devotional_lyrics(kind, order_no);
+
 -- ============================================================================
 -- 5. META
 --    Stamped by build.py. content_version must equal
