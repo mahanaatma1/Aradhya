@@ -111,7 +111,7 @@
    "vrat_vidhi_en": "The observance is taken up on the first Tuesday of Shravana after a woman's marriage, and kept on every Tuesday of that month for five years.\n\nBathe early and set up Gauri — an image, or the goddess drawn or moulded for the day — in the cleaned part of the house. The married women of the family help with the setting up.\n\nWorship with what the season gives: leaves and flowers of the rains, fruit, a lamp, and preparations made at home rather than bought.\n\nThe fast is light. One meal is taken, of seasonal food, and salt is commonly left out of it. Deprivation is not the point of this day.\n\nIn the evening the other young married women of the neighbourhood are called, and they stay the night. The games belong to the observance and are not an addition to it: circle games, with the songs that go with them, sung back and forth between the women, many of them about husbands and in-laws.\n\nThe vigil runs until morning where it is kept in full. Nobody sleeps, and the household allows it.\n\nAfter five years the observance is formally concluded, usually by giving away what was used for it and by passing the keeping of it on to a woman newly married.",
    "vrat_vidhi_hi": "यह व्रत स्त्री के विवाह के बाद आने वाले श्रावण के पहले मंगलवार से लिया जाता है, और उस मास के प्रत्येक मंगलवार को, पाँच वर्ष तक रखा जाता है।\n\nप्रातः स्नान कर घर के स्वच्छ भाग में गौरी की स्थापना करें — प्रतिमा, या उस दिन के लिए बनाई गई या चित्रित देवी। स्थापना में घर की सुहागिनें सहयोग करती हैं।\n\nपूजन ऋतु की वस्तुओं से हो: वर्षा के पत्ते और पुष्प, फल, दीप, और घर में बना नैवेद्य, बाज़ार का नहीं।\n\nव्रत हल्का है। एक बार ऋतु का भोजन लिया जाता है, और प्रायः उसमें नमक नहीं होता। कष्ट इस दिन का उद्देश्य नहीं।\n\nसंध्या को मुहल्ले की अन्य नवविवाहिताएँ बुलाई जाती हैं, और वे रात रुकती हैं। खेल इस व्रत के अंग हैं, उस पर जोड़ी गई वस्तु नहीं: घेरे के खेल, उनके साथ के गीत, स्त्रियों के बीच आमने-सामने गाए जाते, जिनमें बहुत कुछ पतियों और ससुराल के विषय में होता है।\n\nजहाँ पूरा रूप रखा जाता है वहाँ जागरण प्रातः तक चलता है। कोई नहीं सोता, और घर इसकी अनुमति देता है।\n\nपाँच वर्ष पूरे होने पर व्रत का विधिवत उद्यापन होता है — प्रायः उसमें प्रयुक्त सामग्री दान कर दी जाती है और उसका रखना किसी नवविवाहिता को सौंप दिया जाता है।",
    "phala_en": "It is kept for the long life of the husband and for a marriage that runs well, which is what is asked. What it reliably gives is the other thing: a young woman in a house she does not yet know is handed four or five nights a year in the company of women in exactly her position, with religious sanction that nobody can refuse.",
-   "phala_hi": "यह पति की दीर्घायु और गृहस्थी के सुचारु चलने के लिए रखा जाता है — यही माँगा जाता है। जो यह निश्चित रूप से देता है वह दूसरी वस्तु है: अपरिचित घर में आई युवती को वर्ष में चार-पाँच रातें ठीक अपनी ही स्थिति की स्त्रियों की संगत में मिल जाती हैं, ऐसी धार्मिक स्वीकृति के साथ जिसे कोई मना नहीं कर सकता.",
+   "phala_hi": "यह पति की दीर्घायु और गृहस्थी के सुचारु चलने के लिए रखा जाता है — यही माँगा जाता है। जो यह निश्चित रूप से देता है वह दूसरी वस्तु है: अपरिचित घर में आई युवती को वर्ष में चार-पाँच रातें ठीक अपनी ही स्थिति की स्त्रियों की संगत में मिल जाती हैं, ऐसी धार्मिक स्वीकृति के साथ जिसे कोई मना नहीं कर सकता।",
    "moral_en": "The tradition built an observance for a passage rather than for a lifetime, and ended it when the passage was over. Naming the five hardest years and putting company inside them is a more practical kindness than any amount of advice.",
    "moral_hi": "परंपरा ने आजीवन नहीं, एक संक्रमण के लिए व्रत रचा, और संक्रमण बीतते ही उसे समाप्त कर दिया। सबसे कठिन पाँच वर्षों को पहचानकर उनके भीतर संगत रख देना किसी भी उपदेश से अधिक व्यावहारिक करुणा है।",
    "key_moments_en": [
@@ -2429,6 +2429,254 @@
      "ref": "Gajagauri Vrata, the sun's entry into Hasta",
      "is_primary": 1,
      "note": "The observance only: the elaborate Maharashtrian rite for Gauri kept when the sun enters the Hasta asterism, and the record that its full form is affordable only by the wealthy. No narrative is attached to this rite and none is claimed."
+    }
+   ]
+  },
+  {
+   "slug": "gauri-tritiya",
+   "legacy_id": null,
+   "title_en": "Gauri Tritiya: A Festival That Stops at a Border",
+   "title_hi": "गौरी तृतीया: वह पर्व जो एक सीमा पर रुक जाता है",
+   "deity_en": [
+    "Gauri"
+   ],
+   "deity_hi": [
+    "गौरी"
+   ],
+   "festival_slug": "gauri-tritiya",
+   "entity_slugs": [],
+   "when_en": "Chaitra, Shukla Paksha, third tithi — kept by Brahman women in Maharashtra, little kept in the north, and unknown in Bengal.",
+   "when_hi": "चैत्र मास, शुक्ल पक्ष, तृतीया — महाराष्ट्र की ब्राह्मण स्त्रियाँ रखती हैं, उत्तर में कम प्रचलित, और बंगाल में अज्ञात।",
+   "summary_en": "A spring festival for Gauri as the patron of a marriage that does not end in widowhood — and one of the clearest cases of how regional this calendar actually is.",
+   "summary_hi": "गौरी हेतु वसंत का पर्व, जो अखंड सौभाग्य की अधिष्ठात्री मानी जाती हैं — और इस बात का सबसे स्पष्ट उदाहरण कि यह पंचांग वास्तव में कितना क्षेत्रीय है।",
+   "body_en": "The most useful thing about this day is what it teaches about the calendar itself, so it is worth starting there.\n\nIn Maharashtra this is a real festival with a real following. Go north and it thins out — kept here and there, not widely. Go east to Bengal and it is not kept at all; people there do not know it exists.\n\nThat is the ordinary condition of most of what is in this calendar, and it is worth saying plainly because the usual presentation hides it. A festival list read straight through gives the impression of a single national religious year in which everybody everywhere does the same thing on the same day. Almost nothing is like that. What actually exists is a great many local years that overlap in places — a handful of the very great days kept nearly everywhere, and then hundreds of observances that are the whole of religious life in one district and completely unheard of in the next.\n\nThis day is one of those. It is Maharashtrian, it belongs to Brahman households there in particular, and outside that region it is a name rather than a practice.\n\nWhat is kept is a festival for Gauri, in the first days of the new year — Chaitra is the opening month, and this falls on the third of its bright half, within a few days of the year's beginning. It is a spring day, at the end of the cool weather, before the heat.\n\nShe is worshipped in her aspect as the patron of an unwidowed life. That phrase needs unpacking rather than passing over, because what it names is the single fact that most determined a woman's future in the world these observances come from. A married woman had a place: a household, standing, protection, a role that everyone recognised. A widow, in the stricter arrangements of the period, lost nearly all of it at once — her ornaments, her clothing, her participation in auspicious occasions, and in many communities her standing in the house she had lived in for decades. The difference between the two conditions was not a difference of degree. It was the difference between a life and its remainder.\n\nSo a goddess who is specifically the guardian of the first condition is not being asked for a sentimental blessing. She is being asked for the thing on which a woman's entire security rested — and the request has to be understood in those terms rather than in ours.\n\nThe form of the day is the familiar one for Gauri's festivals in that region, which is hospitality. She is set up in the house, honoured, and married women are invited. The invitation is the substance: the women of the neighbourhood come, they are given a seat, they are given turmeric and vermilion for the forehead, they are fed, and they are sent away with something — a small gift, a sweet, a piece of fruit. The whole event is a household receiving guests properly and treating the reception as worship.\n\nThe swing appears here too, as it does in several of the women's festivals of the region, and there is singing.\n\nAnd there is a thing worth noticing in what such a day does socially, whatever is believed about the goddess. It brings the married women of a locality into each other's houses at fixed points in the year, formally, with a role for each of them and a reason to be there. In an arrangement where a woman's life was largely inside one house, these days were the structure that connected the houses to each other.\n\nAs for its geography — the fact that it stops at a border is not a flaw in the festival. It is what religious practice actually looks like when it grows out of particular places rather than being issued from a centre.",
+   "body_hi": "इस दिन की सबसे उपयोगी बात वह है जो यह स्वयं पंचांग के विषय में सिखाता है, सो आरंभ वहीं से करना चाहिए।\n\nमहाराष्ट्र में यह वास्तविक पर्व है जिसका वास्तविक अनुसरण है। उत्तर की ओर बढ़िए तो यह पतला पड़ जाता है — कहीं-कहीं रखा जाता है, व्यापक रूप से नहीं। पूर्व में बंगाल जाइए तो यह रखा ही नहीं जाता; वहाँ लोग जानते ही नहीं कि यह है।\n\nयही इस पंचांग की अधिकांश वस्तुओं की साधारण स्थिति है, और इसे सीधे कह देना चाहिए क्योंकि प्रचलित प्रस्तुति इसे ढक देती है। पर्वों की सूची सीधे पढ़ने पर यह भ्रम होता है कि एक ही राष्ट्रीय धार्मिक वर्ष है जिसमें हर जगह सब लोग एक ही दिन एक ही काम करते हैं। लगभग कुछ भी ऐसा नहीं है। वास्तव में जो है वह बहुत सारे स्थानीय वर्ष हैं जो कहीं-कहीं ओवरलैप करते हैं — मुट्ठी भर महादिन जो लगभग हर जगह रखे जाते हैं, और फिर सैकड़ों व्रत जो एक जिले का समूचा धार्मिक जीवन हैं और अगले में बिलकुल अनसुने।\n\nयह दिन उन्हीं में है। यह महाराष्ट्रीय है, वहाँ विशेषकर ब्राह्मण घरों का है, और उस क्षेत्र के बाहर यह आचरण नहीं, एक नाम है।\n\nजो रखा जाता है वह गौरी का पर्व है, नववर्ष के पहले दिनों में — चैत्र आरंभ का मास है, और यह उसके शुक्ल पक्ष की तृतीया को, वर्ष के आरंभ के कुछ ही दिन भीतर पड़ता है। यह वसंत का दिन है, शीत की समाप्ति पर, गर्मी से पहले।\n\nउनका पूजन अखंड सौभाग्य की अधिष्ठात्री के रूप में होता है। इस वाक्यांश को टाल देने के बजाय खोलना चाहिए, क्योंकि यह उस एक तथ्य का नाम है जिसने उस संसार में स्त्री का भविष्य सबसे अधिक तय किया जिससे ये व्रत आते हैं। विवाहिता के पास एक स्थान था: घर, प्रतिष्ठा, संरक्षण, और ऐसी भूमिका जिसे सब पहचानते थे। विधवा, उस काल की कठोर व्यवस्थाओं में, यह लगभग सब एक साथ खो देती थी — आभूषण, वस्त्र, मंगल-अवसरों में भागीदारी, और बहुत समुदायों में उस घर में अपना स्थान भी जिसमें वह दशकों रही थी। इन दो स्थितियों का अंतर मात्रा का अंतर नहीं था। वह एक जीवन और उसके शेष का अंतर था।\n\nसो जो देवी विशेष रूप से पहली स्थिति की रक्षिका हैं, उनसे कोई भावुक आशीर्वाद नहीं माँगा जा रहा। उनसे वह वस्तु माँगी जा रही है जिस पर स्त्री की समूची सुरक्षा टिकी थी — और यह माँग हमारी नहीं, उन्हीं शर्तों में समझी जानी चाहिए।\n\nदिन का रूप उस क्षेत्र के गौरी-पर्वों का परिचित रूप है, जो आतिथ्य है। उन्हें घर में स्थापित किया जाता है, सम्मान दिया जाता है, और सुहागिनें बुलाई जाती हैं। निमंत्रण ही सार है: मुहल्ले की स्त्रियाँ आती हैं, उन्हें आसन मिलता है, माथे के लिए हल्दी-कुमकुम मिलता है, भोजन मिलता है, और वे कुछ लेकर विदा होती हैं — छोटा उपहार, मिठाई, कोई फल। पूरा आयोजन एक घर है जो अतिथियों का ठीक से स्वागत करता है और उस स्वागत को ही पूजा मानता है।\n\nझूला यहाँ भी आता है, जैसा उस क्षेत्र के कई स्त्री-पर्वों में, और गान होता है।\n\nऔर देवी के विषय में जो भी माना जाए, ऐसा दिन सामाजिक रूप से जो करता है वह देखने योग्य है। यह किसी क्षेत्र की सुहागिनों को वर्ष के नियत बिंदुओं पर, औपचारिक रूप से, एक-दूसरे के घरों में लाता है — हर एक के लिए एक भूमिका और वहाँ होने का एक कारण लेकर। जिस व्यवस्था में स्त्री का जीवन बड़े हिस्से में एक ही घर के भीतर था, उसमें ये दिन ही वह ढाँचा थे जो घरों को आपस में जोड़ता था।\n\nरही इसकी भौगोलिक सीमा — किसी सीमा पर रुक जाना इस पर्व का दोष नहीं है। धार्मिक आचरण वास्तव में ऐसा ही दिखता है जब वह किसी केंद्र से जारी होने के बजाय विशेष स्थानों से उगता है।",
+   "vrat_vidhi_en": "The day is kept on the third of the bright half of Chaitra, within days of the new year's beginning.\n\nClean the house and set up Gauri in the prepared place — an image, or a figure made for the day, with a cloth and ornaments as the household can manage.\n\nWorship with what the spring gives: flowers, fruit, sandal, a lamp, and a sweet preparation made at home.\n\nInvite the married women of the neighbourhood. The invitation is the substance of the day and not an addition to the worship.\n\nReceive them properly: a seat, turmeric and vermilion for the forehead, a meal, and something sent away with each of them — a small gift, a sweet, a piece of fruit.\n\nA swing is put up where the custom holds, and there is singing in company.\n\nThe fast where one is kept is light, and it is broken after the guests have been fed rather than before.\n\nAt the end the figure is returned to water or earth rather than kept, as with the other Gauri observances of the region.",
+   "vrat_vidhi_hi": "यह दिन चैत्र शुक्ल तृतीया को रखा जाता है, नववर्ष के आरंभ के कुछ ही दिन भीतर।\n\nघर साफ कर तैयार स्थान पर गौरी की स्थापना करें — प्रतिमा, या उसी दिन के लिए बनी मूर्ति, वस्त्र और आभूषणों सहित, जितना घर सँभाल सके।\n\nवसंत जो दे उससे पूजन करें: पुष्प, फल, चंदन, दीप, और घर में बना मीठा नैवेद्य।\n\nमुहल्ले की सुहागिनों को बुलाएँ। यह निमंत्रण इस दिन का सार है, पूजन पर जोड़ी गई वस्तु नहीं।\n\nउनका ठीक से स्वागत करें: आसन, माथे के लिए हल्दी-कुमकुम, भोजन, और हर एक को विदा करते समय कुछ — छोटा उपहार, मिठाई, कोई फल।\n\nजहाँ परंपरा हो वहाँ झूला डाला जाता है, और संगत में गान होता है।\n\nजहाँ व्रत रखा जाता है वह हल्का है, और वह अतिथियों को भोजन कराने से पहले नहीं, बाद में खोला जाता है।\n\nअंत में मूर्ति रखी नहीं जाती, जल या मिट्टी को लौटा दी जाती है, जैसा उस क्षेत्र के अन्य गौरी-व्रतों में।",
+   "phala_en": "The day is kept for a marriage that holds and for the long life of the husband, Gauri being the patron of an unwidowed life. Its other return is the one the neighbourhood sees: the married women of a locality brought into each other's houses formally, at a fixed point in the year.",
+   "phala_hi": "यह दिन टिकाऊ गृहस्थी और पति की दीर्घायु के लिए रखा जाता है, क्योंकि गौरी अखंड सौभाग्य की अधिष्ठात्री हैं। इसका दूसरा प्रतिफल वही है जो मुहल्ला देखता है: क्षेत्र की सुहागिनें वर्ष के नियत बिंदु पर, औपचारिक रूप से, एक-दूसरे के घरों में आ जाती हैं।",
+   "moral_en": "A festival list read straight through suggests one national religious year. What actually exists is many local years that overlap in places — and a day that stops at a border is not a lesser festival, only an honest one about where it came from.",
+   "moral_hi": "पर्वों की सूची सीधे पढ़ने पर एक राष्ट्रीय धार्मिक वर्ष का भ्रम होता है। वास्तव में जो है वह बहुत से स्थानीय वर्ष हैं जो कहीं-कहीं मिलते हैं — और जो दिन किसी सीमा पर रुक जाता है वह छोटा पर्व नहीं, बस अपने उद्गम के विषय में ईमानदार पर्व है।",
+   "key_moments_en": [
+    "In Maharashtra this is a real festival with a real following.",
+    "Further north it thins out, and in Bengal it is not kept at all.",
+    "Most of what is in this calendar is like that — local years that overlap only in places.",
+    "The day falls on the third of Chaitra, within days of the new year's beginning.",
+    "Gauri is worshipped as the patron of an unwidowed life.",
+    "In the arrangements of the period, widowhood cost a woman nearly everything at once.",
+    "So the request is not sentimental; it is for the thing a woman's whole security rested on.",
+    "The form of the day is hospitality: the married women of the neighbourhood are invited.",
+    "They are seated, marked with turmeric and vermilion, fed, and sent away with something.",
+    "Days like this were the structure that connected one household to another."
+   ],
+   "key_moments_hi": [
+    "महाराष्ट्र में यह वास्तविक पर्व है जिसका वास्तविक अनुसरण है।",
+    "उत्तर की ओर यह पतला पड़ जाता है, और बंगाल में यह रखा ही नहीं जाता।",
+    "इस पंचांग की अधिकांश वस्तुएँ ऐसी ही हैं — स्थानीय वर्ष, जो कहीं-कहीं ही मिलते हैं।",
+    "यह दिन चैत्र की तृतीया को पड़ता है, नववर्ष के आरंभ के कुछ ही दिन भीतर।",
+    "गौरी का पूजन अखंड सौभाग्य की अधिष्ठात्री के रूप में होता है।",
+    "उस काल की व्यवस्थाओं में वैधव्य स्त्री से लगभग सब कुछ एक साथ छीन लेता था।",
+    "सो यह माँग भावुक नहीं है; यह उसी वस्तु की है जिस पर स्त्री की समूची सुरक्षा टिकी थी।",
+    "दिन का रूप आतिथ्य है: मुहल्ले की सुहागिनें बुलाई जाती हैं।",
+    "उन्हें आसन, हल्दी-कुमकुम, भोजन मिलता है, और वे कुछ लेकर विदा होती हैं।",
+    "ऐसे दिन ही वह ढाँचा थे जो एक घर को दूसरे से जोड़ता था।"
+   ],
+   "reflection_en": "What do you do because everyone around you does it — and would it seem strange to someone two hundred miles away?",
+   "reflection_hi": "आप ऐसा क्या करते हैं जो इसलिए करते हैं कि आसपास सब करते हैं — और क्या वह दो सौ मील दूर किसी को विचित्र लगेगा?",
+   "themes_en": [
+    "a festival with a border",
+    "the new year's first days",
+    "what widowhood cost",
+    "hospitality as worship",
+    "houses connected to each other"
+   ],
+   "themes_hi": [
+    "सीमा वाला पर्व",
+    "नववर्ष के पहले दिन",
+    "वैधव्य का मूल्य",
+    "आतिथ्य ही पूजा",
+    "एक-दूसरे से जुड़े घर"
+   ],
+   "order_no": 3090,
+   "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+   "primary_source_ref": "Gauri Tritiya, Chaitra sukla third",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": "secondary",
+   "sources": [
+    {
+     "source_id": "underhill-hindu-year",
+     "ref": "Gauri Tritiya, Chaitra sukla third",
+     "is_primary": 1,
+     "note": "The observance only: the Maharashtra Brahman women's festival for Gauri as patron of an unwidowed life on the third of the bright half of Chaitra, its slight observance in the north and its absence in Bengal. No narrative is attached to this day and none is claimed."
+    }
+   ]
+  },
+  {
+   "slug": "madana-trayodashi",
+   "legacy_id": null,
+   "title_en": "Madana Trayodashi: Spring, and the God Who Was Burnt for It",
+   "title_hi": "मदन त्रयोदशी: वसंत, और वह देवता जो उसके लिए भस्म हुए",
+   "deity_en": [
+    "Madana",
+    "Rati"
+   ],
+   "deity_hi": [
+    "मदन",
+    "रति"
+   ],
+   "festival_slug": "madana-trayodashi",
+   "entity_slugs": [],
+   "when_en": "Chaitra, Shukla Paksha, thirteenth tithi — a North Indian spring festival, not kept in Maharashtra, where Holi occupies its place.",
+   "when_hi": "चैत्र मास, शुक्ल पक्ष, त्रयोदशी — उत्तर भारत का वसंतोत्सव, महाराष्ट्र में नहीं मनाया जाता, जहाँ इसका स्थान होली लेती है।",
+   "summary_en": "A spring day for the god of desire and his wife — the pair whose story is the one time in this tradition that love itself was destroyed for interrupting an austerity.",
+   "summary_hi": "काम के देवता और उनकी पत्नी का वसंत-दिवस — वह युगल जिनकी कथा इस परंपरा का वह एक अवसर है जब तप में विघ्न डालने के कारण स्वयं प्रेम ही भस्म कर दिया गया।",
+   "body_en": "Every tradition has to decide what to do about desire, and this one made an unusual decision: it gave desire a god, gave him a wife, gave him a festival in the spring, and also has a famous story in which he is burnt to ash.\n\nBoth things are true at once, and the day is more interesting for it.\n\nThe god is Madana, whose weapons are flowers. He carries a bow of sugarcane strung with bees, and his arrows are blossoms, and where they land a person falls in love. His companion is the spring itself, and his wife is Rati, whose name means delight. It is the lightest and most charming set of attributes any figure in this tradition has.\n\nAnd the story everybody knows about him is this. Shiva was in meditation on the mountain, withdrawn, unreachable, and the world needed him to come back — Parvati was waiting, and there were reasons of consequence that she and Shiva should marry. So Madana was sent to do what he does: to break the meditation by making Shiva feel desire.\n\nHe went, knowing what the risk was. He loosed the arrow. Shiva was disturbed, and opened his eyes, and what came out of them destroyed Madana on the spot. He was burnt to ash where he stood, in front of his own wife.\n\nThe tradition does not treat this as a villain being punished. It treats it as an appalling thing that happened to somebody who was sent to do a job. Rati's grief afterwards is given real weight in the telling — a woman standing in front of the ash of her husband, who was destroyed in the act of doing what he was asked to do. And what follows is not a reversal but a compromise: he is restored, but without a body. He exists and acts and is present everywhere, and cannot be seen. Desire remains in the world and no longer has a form.\n\nThat is a serious piece of thinking dressed as a story, and it is what this spring day sits on.\n\nThe festival itself is not solemn. It is a spring festival on the thirteenth of the bright half of Chaitra, at the start of the new year, when the weather is at its best in the north — the cold gone, the heat not yet arrived, everything flowering. The god of flowers is worshipped with flowers, which is about as coherent as an observance gets. He and Rati are honoured together, as a pair, and that matters: this is not a day for desire in the abstract but for a married couple, one of whom died for the other's errand.\n\nIn the older form, images are set up and decorated with what the season provides, and the worship is public rather than confined to the house. Colour and spring foliage belong to it. Songs belong to it.\n\nAnd there is the geographical note, which the record is careful about: this is a North Indian day and it is not kept in Maharashtra, where Holi has taken its place. That is worth knowing, because Holi has the same season, the same spring energy, and in many places the same burning at the heart of it. The two days are not the same festival, and one region kept one and one the other.\n\nWhat the day is finally for is a thing the tradition is not always comfortable saying out loud: that desire is not an intruder in a good life. It has a god. It has a spring festival. It also has a story in which it was destroyed for arriving at the wrong moment — and both of those are kept in the calendar, on purpose, at the same time.",
+   "body_hi": "हर परंपरा को यह तय करना पड़ता है कि काम के साथ क्या करे, और इसने असामान्य निर्णय लिया: उसने काम को एक देवता दिया, उन्हें पत्नी दी, वसंत में एक पर्व दिया, और साथ ही उसके पास वह प्रसिद्ध कथा भी है जिसमें वे भस्म कर दिए जाते हैं।\n\nदोनों बातें एक साथ सच हैं, और इसी से यह दिन अधिक रोचक है।\n\nदेवता मदन हैं, जिनके अस्त्र पुष्प हैं। उनके पास गन्ने का धनुष है जिसकी प्रत्यंचा भौंरों की है, और उनके बाण पुष्प हैं, और वे जहाँ लगते हैं वहाँ व्यक्ति प्रेम में पड़ जाता है। उनका साथी स्वयं वसंत है, और उनकी पत्नी रति हैं, जिनके नाम का अर्थ आनंद है। इस परंपरा की किसी भी मूर्ति के पास यह सबसे हल्के और सबसे मनोहर लक्षण हैं।\n\nऔर उनके विषय में जो कथा सब जानते हैं वह यह है। शिव पर्वत पर ध्यान में थे, हटे हुए, अगम्य, और संसार को उनका लौटना चाहिए था — पार्वती प्रतीक्षा में थीं, और महत्वपूर्ण कारण थे कि उनका और शिव का विवाह हो। सो मदन को वही करने भेजा गया जो वे करते हैं: शिव में काम जगाकर उनका ध्यान तोड़ना।\n\nवे गए, जोखिम जानते हुए। उन्होंने बाण छोड़ा। शिव विचलित हुए, और उन्होंने आँखें खोलीं, और उनसे जो निकला उसने मदन को वहीं नष्ट कर दिया। वे जहाँ खड़े थे वहीं भस्म हो गए, अपनी ही पत्नी के सामने।\n\nपरंपरा इसे किसी खलनायक के दंड की तरह नहीं लेती। वह इसे एक भयावह घटना की तरह लेती है जो उस व्यक्ति के साथ हुई जिसे काम करने भेजा गया था। इसके बाद रति के शोक को कथन में वास्तविक भार दिया जाता है — एक स्त्री अपने पति की राख के सामने खड़ी, जो उसी काम को करते हुए नष्ट हुआ जो उससे कहा गया था। और आगे जो आता है वह उलटाव नहीं, एक समझौता है: वे लौटाए जाते हैं, पर बिना देह के। वे हैं, काम करते हैं, सर्वत्र उपस्थित हैं, और दिखाई नहीं देते। काम संसार में बना रहता है और उसका कोई रूप नहीं रहता।\n\nयह कथा के वस्त्र पहने हुए गंभीर चिंतन है, और यही वह आधार है जिस पर यह वसंत-दिवस टिका है।\n\nपर्व स्वयं गंभीर नहीं है। यह चैत्र शुक्ल त्रयोदशी का वसंतोत्सव है, नववर्ष के आरंभ में, जब उत्तर में मौसम सर्वोत्तम होता है — शीत बीत चुका, ताप अभी नहीं आया, सब कुछ पुष्पित। पुष्पों के देवता का पूजन पुष्पों से होता है, और किसी व्रत में इससे अधिक संगति संभव नहीं। उनका और रति का सम्मान साथ होता है, युगल के रूप में, और यह महत्वपूर्ण है: यह दिन अमूर्त काम का नहीं, एक विवाहित युगल का है, जिनमें से एक दूसरे के काम के लिए मरा।\n\nपुराने रूप में प्रतिमाएँ स्थापित की जाती हैं और ऋतु की वस्तुओं से सजाई जाती हैं, और पूजन घर तक सीमित नहीं, सार्वजनिक होता है। रंग और वसंत के पत्ते इसके अंग हैं। गीत इसके अंग हैं।\n\nऔर एक भौगोलिक टिप्पणी है, जिसके विषय में अभिलेख सावधान है: यह उत्तर भारत का दिन है और महाराष्ट्र में नहीं रखा जाता, जहाँ इसका स्थान होली ने ले लिया है। यह जानने योग्य है, क्योंकि होली की भी वही ऋतु है, वही वसंत-ऊर्जा, और बहुत जगह उसके केंद्र में भी वही दहन है। ये दोनों एक पर्व नहीं हैं, और एक क्षेत्र ने एक रखा और दूसरे ने दूसरा।\n\nअंततः यह दिन जिसके लिए है वह ऐसी बात है जिसे कहने में परंपरा सदा सहज नहीं होती: कि काम अच्छे जीवन में घुसपैठिया नहीं है। उसके पास देवता है। उसके पास वसंतोत्सव है। उसके पास वह कथा भी है जिसमें वह गलत क्षण पर आने के कारण नष्ट कर दिया गया — और ये दोनों जानबूझकर, एक ही समय, पंचांग में रखे गए हैं।",
+   "vrat_vidhi_en": "The day is kept on the thirteenth of the bright half of Chaitra, in the first days of the new year.\n\nMadana and Rati are worshipped together as a pair, and not separately. The day belongs to the two of them.\n\nSet up the images and decorate them with what the spring gives — blossom above all, and fresh foliage. The god of flowers is offered flowers, and nothing costly is required.\n\nOffer fruit of the season, sandal, and a sweet preparation made at home. Colour belongs to the day and is used freely.\n\nThe worship is not confined to the house where the older form is kept; images are set up publicly and the neighbourhood comes.\n\nThere is singing, and the songs of the day are spring songs rather than solemn ones.\n\nNo fast is required. The day is a festival rather than an austerity, and a proper meal is made of it.\n\nWhere the day is not kept — as in Maharashtra, where Holi occupies its place — the spring observance of that region is kept instead, and the two are not combined.",
+   "vrat_vidhi_hi": "यह दिन चैत्र शुक्ल त्रयोदशी को, नववर्ष के पहले दिनों में रखा जाता है।\n\nमदन और रति का पूजन युगल के रूप में साथ होता है, अलग-अलग नहीं। यह दिन दोनों का है।\n\nप्रतिमाएँ स्थापित कर उन्हें वसंत की वस्तुओं से सजाएँ — सबसे बढ़कर पुष्प, और ताज़े पत्ते। पुष्पों के देवता को पुष्प अर्पित होते हैं, और कुछ भी मूल्यवान आवश्यक नहीं।\n\nऋतु के फल, चंदन, और घर में बना मीठा नैवेद्य अर्पित करें। रंग इस दिन का अंग है और उसका मुक्त प्रयोग होता है।\n\nजहाँ पुराना रूप रखा जाता है वहाँ पूजन घर तक सीमित नहीं; प्रतिमाएँ सार्वजनिक रूप से स्थापित होती हैं और मुहल्ला आता है।\n\nगान होता है, और इस दिन के गीत गंभीर नहीं, वसंत के गीत हैं।\n\nव्रत आवश्यक नहीं। यह दिन तपस्या नहीं, उत्सव है, और इसका विधिवत भोज बनता है।\n\nजहाँ यह दिन नहीं रखा जाता — जैसे महाराष्ट्र में, जहाँ इसका स्थान होली लेती है — वहाँ उसी क्षेत्र का वसंत-पर्व रखा जाता है, और दोनों मिलाए नहीं जाते।",
+   "phala_en": "The day is kept for the spring and for the pair who belong to it, and where anything is asked it is asked for affection that holds in a marriage. There is no austerity in it; the observance is the celebration.",
+   "phala_hi": "यह दिन वसंत के लिए और उस युगल के लिए रखा जाता है जो उसका है, और जहाँ कुछ माँगा जाता है वहाँ गृहस्थी में टिकने वाला स्नेह माँगा जाता है। इसमें तपस्या नहीं है; यह उत्सव ही इसका व्रत है।",
+   "moral_en": "The tradition gave desire a god with a bow of flowers and a spring festival, and also a story in which he was destroyed for arriving at the wrong moment. It kept both, on purpose, and did not resolve them.",
+   "moral_hi": "परंपरा ने काम को पुष्पों के धनुष वाला देवता और वसंतोत्सव दिया, और वह कथा भी जिसमें वे गलत क्षण पर आने के कारण नष्ट कर दिए गए। उसने दोनों जानबूझकर रखे, और उन्हें सुलझाया नहीं।",
+   "key_moments_en": [
+    "Madana's bow is sugarcane strung with bees, and his arrows are blossoms.",
+    "His companion is the spring itself, and his wife is Rati, whose name means delight.",
+    "Shiva was in meditation on the mountain, withdrawn and unreachable.",
+    "Madana was sent to break the meditation by making him feel desire.",
+    "He went knowing the risk, and loosed the arrow.",
+    "Shiva opened his eyes, and what came out of them burnt Madana to ash where he stood.",
+    "It happened in front of his own wife, and her grief is given real weight in the telling.",
+    "He is restored, but without a body — desire remains in the world and has no form.",
+    "The festival itself is not solemn: it falls in the best weather of the northern year.",
+    "It is a North Indian day, and in Maharashtra Holi occupies its place instead."
+   ],
+   "key_moments_hi": [
+    "मदन का धनुष गन्ने का है जिसकी प्रत्यंचा भौंरे हैं, और उनके बाण पुष्प हैं।",
+    "उनका साथी स्वयं वसंत है, और उनकी पत्नी रति हैं, जिनके नाम का अर्थ आनंद है।",
+    "शिव पर्वत पर ध्यान में थे, हटे हुए और अगम्य।",
+    "मदन को भेजा गया कि वे काम जगाकर वह ध्यान तोड़ें।",
+    "वे जोखिम जानते हुए गए, और बाण छोड़ा।",
+    "शिव ने आँखें खोलीं, और उनसे निकली वस्तु ने मदन को वहीं भस्म कर दिया।",
+    "यह उनकी अपनी पत्नी के सामने हुआ, और कथन में उनके शोक को वास्तविक भार मिलता है।",
+    "वे लौटाए जाते हैं, पर बिना देह के — काम संसार में रहता है और उसका रूप नहीं रहता।",
+    "पर्व स्वयं गंभीर नहीं है: यह उत्तरी वर्ष के सर्वोत्तम मौसम में पड़ता है।",
+    "यह उत्तर भारत का दिन है, और महाराष्ट्र में इसका स्थान होली लेती है।"
+   ],
+   "reflection_en": "Something you wanted arrived at exactly the wrong moment and was destroyed for it. Was the wanting the fault, or the timing?",
+   "reflection_hi": "कोई वस्तु जो आप चाहते थे ठीक गलत क्षण पर आई और उसी कारण नष्ट हो गई। दोष चाहने का था, या समय का?",
+   "themes_en": [
+    "a bow made of flowers",
+    "sent to do a job",
+    "a widow in front of ash",
+    "desire without a form",
+    "the best weather of the year"
+   ],
+   "themes_hi": [
+    "पुष्पों का धनुष",
+    "काम पर भेजा गया",
+    "राख के सामने खड़ी पत्नी",
+    "बिना रूप का काम",
+    "वर्ष का सर्वोत्तम मौसम"
+   ],
+   "order_no": 3100,
+   "primary_source_name": "The Hindu Religious Year, Muriel Marion Underhill",
+   "primary_source_ref": "Madana Trayodashi, Chaitra sukla thirteenth",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": "secondary",
+   "sources": [
+    {
+     "source_id": "underhill-hindu-year",
+     "ref": "Madana Trayodashi, Chaitra sukla thirteenth",
+     "is_primary": 1,
+     "note": "The observance only: the North Indian spring festival for Madana and Rati on the thirteenth of the bright half of Chaitra, and the record that it is not kept in Maharashtra where Holi takes its place. No narrative is drawn from this source."
+    },
+    {
+     "source_id": "oral-tradition",
+     "ref": "The burning of Madana",
+     "is_primary": 0,
+     "note": "The narrative summarised here — Madana sent to break Shiva's meditation, the arrow loosed, his burning by the opened eye, Rati's grief and his restoration without a body — is the widely told traditional account associated with this pair, given as tradition rather than from a public-domain text."
+    }
+   ]
+  },
+  {
+   "slug": "kushmanda-navami",
+   "legacy_id": null,
+   "title_en": "Kushmanda Navami: The Gourd Filled With Gold",
+   "title_hi": "कूष्मांड नवमी: स्वर्ण भरा कद्दू",
+   "deity_en": [
+    "the ancestors"
+   ],
+   "deity_hi": [
+    "पितर"
+   ],
+   "festival_slug": "kushmanda-navami",
+   "entity_slugs": [],
+   "when_en": "Kartika, Shukla Paksha, ninth tithi — a day of giving, for the benefit of the household's dead.",
+   "when_hi": "कार्तिक मास, शुक्ल पक्ष, नवमी — दान का दिन, घर के पितरों के निमित्त।",
+   "summary_en": "A gourd is filled with gold and given away to a Brahman, for the merit of the family's ancestors — the plainest vegetable in the field carrying the most valuable thing in the house.",
+   "summary_hi": "एक कद्दू स्वर्ण से भरकर ब्राह्मण को दान किया जाता है, कुल के पितरों के पुण्य हेतु — खेत की सबसे सादी वस्तु घर की सबसे मूल्यवान वस्तु को ढोती हुई।",
+   "body_en": "The instruction for this day is so specific and so odd that it is worth stating before anything else: take a gourd, fill it with gold, and give it away whole.\n\nNot gold on a plate. Not gold in a box. Gold inside a pumpkin, handed over as one object, with nothing taken out of it.\n\nThe day takes its name from that gourd — kushmanda is the pumpkin — and the merit of the giving goes to the household's ancestors. It is a day of giving on behalf of the dead, which is a distinct thing from the offerings of water and food made in the ancestral fortnight. Those feed the dead directly. This one converts a gift made to a living person into something that stands to the credit of people who are gone.\n\nWhy a gourd?\n\nA pumpkin is the least glamorous thing a field produces. It is heavy, it is cheap, it grows on the ground, it keeps for months in a corner, and it is what a household eats when there is nothing else. It is also large and hollow, which makes it the one container a poor field can supply.\n\nSo the gift is deliberately constructed out of the two extremes available to a household. The outside is the plainest thing anyone has, and the inside is the most valuable thing anyone has, and they go together in one hand-off. Whatever the original reasoning, the image is unforgettable, and the tradition has held onto it for exactly that reason.\n\nThere is a second thing in it that is quietly practical. Gold given openly is a display. Gold inside a gourd is not visible — the person receiving it takes away a vegetable, and what is inside it is between the giver, the receiver and nobody else. A gift that cannot be seen cannot be used for reputation. Whether or not that was intended, it is what the form achieves.\n\nAnd the merit does not go to the giver. It goes to the ancestors. So the arrangement is complete in both directions: the giver hands over something of real value, in a way that nobody outside will notice, for the benefit of people who cannot thank them. That is about as close to a disinterested gift as a religious system can specify.\n\nThe record notes that the day's name is connected with a story of two brothers. What that story is, in a form we can vouch for, is not something this row will claim — the day is named for the gourd, the practice is the giving, and inventing a legend to fill the gap would be worse than leaving it open. What can be said honestly is that the name attaches to the vegetable and the observance attaches to the gift.\n\nThe placement in the year fits. Kartika is the month after the fortnight of the ancestors, when the season of the dead has just closed and the great festivals are running. The harvest is in, the gourds are in the store, and a household knows exactly what it has. A day of giving placed there is placed where a household is at its most solvent, which is when giving actually costs something.\n\nAnd where gold is not possible — which is most households, most years — the gourd is given filled with what the house can afford. Grain. Coin. Sweets. The gesture survives the absence of the gold entirely, because the gesture was never really about the metal. It was about handing over the best thing you have inside the plainest thing you have, to someone who will not tell anyone, for the sake of people who are past knowing.",
+   "body_hi": "इस दिन का निर्देश इतना विशिष्ट और इतना विचित्र है कि उसे सबसे पहले कह देना चाहिए: एक कद्दू लीजिए, उसे स्वर्ण से भरिए, और पूरा का पूरा दान कर दीजिए।\n\nथाली में स्वर्ण नहीं। डिब्बे में स्वर्ण नहीं। कद्दू के भीतर स्वर्ण, एक ही वस्तु के रूप में सौंपा हुआ, और उसमें से कुछ निकाले बिना।\n\nदिन का नाम उसी कद्दू से है — कूष्मांड अर्थात कद्दू — और उस दान का पुण्य घर के पितरों को जाता है। यह मृतों के निमित्त दान का दिन है, जो पितृपक्ष के जल और अन्न के अर्पण से भिन्न वस्तु है। वे मृतों को सीधे तृप्त करते हैं। यह किसी जीवित व्यक्ति को दी गई वस्तु को उन लोगों के खाते में डाल देता है जो जा चुके हैं।\n\nकद्दू ही क्यों?\n\nकद्दू खेत की सबसे अ-आकर्षक उपज है। वह भारी है, सस्ता है, भूमि पर उगता है, कोने में मासों टिका रहता है, और वही घर तब खाता है जब और कुछ नहीं होता। वह बड़ा और भीतर से खोखला भी है, जिससे वह वह एक पात्र बन जाता है जो निर्धन खेत दे सकता है।\n\nसो यह दान जानबूझकर घर को उपलब्ध दोनों छोरों से रचा गया है। बाहर वह सबसे सादी वस्तु है जो किसी के पास है, और भीतर वह सबसे मूल्यवान वस्तु जो किसी के पास है, और दोनों एक ही सौंपने में साथ जाती हैं। मूल तर्क जो भी रहा हो, यह चित्र अविस्मरणीय है, और परंपरा ने इसे ठीक इसी कारण पकड़े रखा है।\n\nइसमें एक दूसरी बात है जो चुपचाप व्यावहारिक है। खुलकर दिया गया स्वर्ण प्रदर्शन है। कद्दू के भीतर का स्वर्ण दिखता नहीं — लेने वाला एक सब्ज़ी लेकर जाता है, और उसके भीतर जो है वह देने वाले, लेने वाले और किसी और के बीच नहीं है। जो दान दिखाई न दे उसे प्रतिष्ठा के लिए काम में नहीं लाया जा सकता। यह अभिप्रेत था या नहीं, पर यह रूप वही उपलब्ध कराता है।\n\nऔर पुण्य देने वाले को नहीं जाता। वह पितरों को जाता है। सो व्यवस्था दोनों दिशाओं में पूर्ण है: देने वाला वास्तविक मूल्य की वस्तु सौंपता है, ऐसे ढंग से कि बाहर कोई ध्यान न दे, उन लोगों के लाभ के लिए जो उसे धन्यवाद नहीं दे सकते। किसी धार्मिक व्यवस्था में निष्काम दान की परिभाषा इससे अधिक निकट शायद ही हो।\n\nअभिलेख यह टिप्पणी करता है कि दिन का नाम दो भाइयों की कथा से जुड़ा है। वह कथा क्या है, ऐसे रूप में जिसकी हम पुष्टि कर सकें, यह यह पंक्ति दावा नहीं करेगी — दिन का नाम कद्दू पर है, आचरण दान है, और उस रिक्ति को भरने के लिए कोई कथा गढ़ लेना उसे खुला छोड़ने से बुरा होगा। जो ईमानदारी से कहा जा सकता है वह यह है कि नाम सब्ज़ी से जुड़ा है और व्रत दान से।\n\nवर्ष में इसका स्थान बैठता है। कार्तिक पितृपक्ष के बाद का मास है, जब मृतों की ऋतु अभी-अभी समाप्त हुई है और महापर्व चल रहे हैं। फसल भीतर आ चुकी है, कद्दू भंडार में हैं, और घर ठीक-ठीक जानता है कि उसके पास क्या है। दान का दिन वहाँ रखना उसे वहाँ रखना है जहाँ घर सबसे सक्षम है — और तभी दान का कुछ मूल्य वास्तव में चुकता है।\n\nऔर जहाँ स्वर्ण संभव न हो — जो अधिकांश घरों में, अधिकांश वर्षों में — वहाँ कद्दू उसी से भरकर दिया जाता है जो घर दे सके। अन्न। मुद्रा। मिठाई। स्वर्ण की अनुपस्थिति में भी संकेत पूरा बचा रहता है, क्योंकि संकेत वास्तव में उस धातु के विषय में था ही नहीं। वह इस विषय में था कि आपके पास की सबसे अच्छी वस्तु आपके पास की सबसे सादी वस्तु के भीतर रखकर ऐसे व्यक्ति को सौंप दी जाए जो किसी को बताएगा नहीं, उनके निमित्त जो अब जानने से परे हैं।",
+   "vrat_vidhi_en": "The gift is made on the ninth of the bright half of Kartika, and it is made for the benefit of the household's dead rather than for the giver.\n\nTake a gourd — the ordinary pumpkin of the field, not anything selected for show — and hollow it where the custom requires.\n\nFill it with gold where the household can manage it. Where it cannot, fill it with grain, coin or sweets; the observance is not considered lesser for it.\n\nGive it whole to a Brahman, and take nothing out of it first. The gift is handed over as one object.\n\nThe giving is not announced. What is inside the gourd is between the giver and the receiver, and the form of the gift is what keeps it from becoming a display.\n\nName the dead for whom the merit is intended, during the giving rather than afterwards.\n\nBathe before the gift is made, and take nothing until it has been given.\n\nWhere the fuller form is kept, a meal is also given with it, and something is set aside for the poor on the same day.",
+   "vrat_vidhi_hi": "दान कार्तिक शुक्ल नवमी को किया जाता है, और वह देने वाले के लिए नहीं, घर के पितरों के निमित्त होता है।\n\nएक कद्दू लें — खेत का साधारण कद्दू, दिखावे के लिए चुना हुआ कोई नहीं — और जहाँ परंपरा हो वहाँ उसे भीतर से खाली करें।\n\nजहाँ घर सँभाल सके वहाँ उसे स्वर्ण से भरें। जहाँ न सँभाल सके वहाँ अन्न, मुद्रा या मिठाई से भरें; व्रत इससे कम नहीं माना जाता।\n\nउसे पूरा का पूरा ब्राह्मण को दें, और पहले उसमें से कुछ न निकालें। दान एक ही वस्तु के रूप में सौंपा जाता है।\n\nदान की घोषणा नहीं की जाती। कद्दू के भीतर जो है वह देने वाले और लेने वाले के बीच है, और दान का यही रूप उसे प्रदर्शन बनने से रोकता है।\n\nजिन पितरों के निमित्त पुण्य अभिप्रेत है उनका नाम दान के समय लें, बाद में नहीं।\n\nदान से पहले स्नान करें, और दान हो जाने तक कुछ ग्रहण न करें।\n\nजहाँ पूर्ण रूप रखा जाता है वहाँ उसके साथ भोजन भी कराया जाता है, और उसी दिन निर्धनों के लिए भी कुछ अलग रखा जाता है।",
+   "phala_en": "The merit of the gift is directed to the household's ancestors rather than to the person giving it. What the form guarantees is that the giving cannot be used for reputation — the gift is invisible once it leaves the hand.",
+   "phala_hi": "इस दान का पुण्य देने वाले को नहीं, घर के पितरों को निर्दिष्ट होता है। यह रूप जिसकी गारंटी देता है वह यह है कि इस दान को प्रतिष्ठा के लिए काम में नहीं लाया जा सकता — हाथ से निकलते ही वह दान अदृश्य हो जाता है।",
+   "moral_en": "The best thing you have, inside the plainest thing you have, handed to someone who will not tell anyone, for the sake of people who are past knowing. A religious system can hardly specify a gift more disinterested than that.",
+   "moral_hi": "आपके पास की सबसे अच्छी वस्तु, आपके पास की सबसे सादी वस्तु के भीतर, ऐसे व्यक्ति को सौंपी गई जो किसी को नहीं बताएगा, उनके निमित्त जो अब जानने से परे हैं। कोई धार्मिक व्यवस्था इससे अधिक निष्काम दान शायद ही निर्दिष्ट कर सके।",
+   "key_moments_en": [
+    "The instruction is to take a gourd, fill it with gold, and give it away whole.",
+    "Not gold on a plate or in a box — gold inside a pumpkin, handed over as one object.",
+    "The day takes its name from the gourd itself.",
+    "A pumpkin is the least glamorous thing a field produces, and the one container a poor field can supply.",
+    "The gift is built from the two extremes a household has: the plainest outside, the most valuable inside.",
+    "Gold inside a gourd is not visible, so the giving cannot be used for reputation.",
+    "The merit does not go to the giver; it is directed to the household's dead.",
+    "The day falls in Kartika, just after the fortnight of the ancestors has closed.",
+    "The harvest is in and the gourds are in the store, so the household knows what it has.",
+    "Where gold is impossible the gourd is filled with grain, coin or sweets, and the gesture stands."
+   ],
+   "key_moments_hi": [
+    "निर्देश यह है कि कद्दू लें, उसे स्वर्ण से भरें, और पूरा दान कर दें।",
+    "थाली या डिब्बे में स्वर्ण नहीं — कद्दू के भीतर स्वर्ण, एक ही वस्तु के रूप में सौंपा हुआ।",
+    "दिन का नाम उसी कद्दू से आता है।",
+    "कद्दू खेत की सबसे अ-आकर्षक उपज है, और वह एक पात्र जो निर्धन खेत दे सकता है।",
+    "दान घर के दोनों छोरों से बना है: बाहर सबसे सादा, भीतर सबसे मूल्यवान।",
+    "कद्दू के भीतर का स्वर्ण दिखता नहीं, सो दान प्रतिष्ठा के लिए काम नहीं आ सकता।",
+    "पुण्य देने वाले को नहीं जाता; वह घर के पितरों को निर्दिष्ट होता है।",
+    "यह दिन कार्तिक में पड़ता है, पितृपक्ष के समाप्त होने के ठीक बाद।",
+    "फसल भीतर आ चुकी है और कद्दू भंडार में हैं, सो घर जानता है कि उसके पास क्या है।",
+    "जहाँ स्वर्ण संभव न हो वहाँ कद्दू अन्न, मुद्रा या मिठाई से भरा जाता है, और संकेत बना रहता है।"
+   ],
+   "reflection_en": "When did you last give something away that nobody found out about — and did it feel different from the giving people saw?",
+   "reflection_hi": "आपने अंतिम बार ऐसा क्या दिया जिसका किसी को पता नहीं चला — और क्या वह उस दान से भिन्न लगा जिसे लोगों ने देखा?",
+   "themes_en": [
+    "a gourd and gold",
+    "the plainest carrying the most valuable",
+    "a gift nobody can see",
+    "merit given to the dead",
+    "after the harvest"
+   ],
+   "themes_hi": [
+    "कद्दू और स्वर्ण",
+    "सबसे सादी वस्तु सबसे मूल्यवान को ढोती",
+    "वह दान जो कोई देख न सके",
+    "पितरों को दिया गया पुण्य",
+    "फसल के बाद"
+   ],
+   "order_no": 3110,
+   "primary_source_name": "Hindu Holidays and Ceremonials, B. A. Gupte",
+   "primary_source_ref": "Kushmanda Navami, Kartika sukla ninth",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": "secondary",
+   "sources": [
+    {
+     "source_id": "gupte-hindu-holidays",
+     "ref": "Kushmanda Navami, Kartika sukla ninth",
+     "is_primary": 1,
+     "note": "The observance only: the Kartika day on which a gourd filled with gold is given to a Brahman for ancestral merit, and the record that the day's name is connected with a legend of two brothers. That legend is not recounted here, since no form of it could be verified; the row states the observance and does not supply a narrative."
     }
    ]
   }
