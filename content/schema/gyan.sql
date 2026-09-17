@@ -676,6 +676,82 @@ CREATE TABLE devotional_lyrics (
 );
 CREATE INDEX ix_lyrics_kind ON devotional_lyrics(kind, order_no);
 
+
+-- RG-01 stories. The fixture's 100 rows are Puranic and epic narratives told at
+-- ~1,400 chars -- plot summaries. Ours are full retellings from the cited
+-- public-domain sources, at the same bar as gyan.kathas.
+--
+-- Two fixes to the fixture's shape, both of which the app needed anyway:
+--   * `emotions` was one English-only free-text column with 57 distinct tags,
+--     most used once ("absorption", "exchange", "validation"). A Hindi reader
+--     saw English filter chips. Here it is a JSON array in both scripts, drawn
+--     from a controlled vocabulary so the chips are finite and translatable.
+--   * there was no source column at all. Every row now carries provenance.
+CREATE TABLE stories (
+  id                   INTEGER PRIMARY KEY,
+  slug                 TEXT NOT NULL UNIQUE,
+  legacy_id            INTEGER,          -- main.stories.id this replaces
+  title_en             TEXT NOT NULL, title_hi TEXT NOT NULL,
+  summary_en           TEXT NOT NULL, summary_hi TEXT NOT NULL,
+  body_en              TEXT NOT NULL, body_hi TEXT NOT NULL,
+  moral_en             TEXT,          moral_hi TEXT,
+  reflection_en        TEXT,          reflection_hi TEXT,
+  key_moments_en       TEXT,          key_moments_hi TEXT,   -- JSON arrays
+  emotions_en          TEXT,          emotions_hi TEXT,      -- JSON arrays
+  themes_en            TEXT,          themes_hi TEXT,        -- JSON arrays
+  characters_en        TEXT,          characters_hi TEXT,    -- JSON arrays
+  entity_slugs         TEXT,          -- JSON array, soft links to entities(slug)
+  scripture_ref        TEXT,          -- where in the source it sits
+  order_no             INTEGER NOT NULL DEFAULT 0,
+  primary_source_name  TEXT, primary_source_ref TEXT, primary_source_url TEXT,
+  last_verified_at     TEXT,
+  verification_status  TEXT NOT NULL DEFAULT 'unverified'
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
+);
+CREATE INDEX ix_stories_order ON stories(order_no);
+CREATE INDEX ix_stories_legacy ON stories(legacy_id);
+
+-- RG-01 puja procedures. The fixture had items/vidhi/benefits in English only
+-- -- the Hindi existed solely inside a `data` JSON blob the Dart model never
+-- read -- and vidhi_en was six terse lines. Here every column is bilingual and
+-- the steps are written as instructions a first-timer could actually follow.
+CREATE TABLE puja_vidhi (
+  id                   INTEGER PRIMARY KEY,
+  slug                 TEXT NOT NULL UNIQUE,
+  legacy_id            INTEGER,
+  title_en             TEXT NOT NULL, title_hi TEXT NOT NULL,
+  deity_en             TEXT,          deity_hi TEXT,         -- JSON arrays
+  category_en          TEXT,          category_hi TEXT,
+  when_en              TEXT,          when_hi TEXT,
+  duration_en          TEXT,          duration_hi TEXT,
+  preparation_en       TEXT,          preparation_hi TEXT,
+  items_en             TEXT,          items_hi TEXT,         -- JSON arrays
+  vidhi_en             TEXT NOT NULL, vidhi_hi TEXT NOT NULL,-- JSON arrays of steps
+  key_mantras          TEXT,          -- JSON: [{sanskrit, iast, en, hi}]
+  benefits_en          TEXT,          benefits_hi TEXT,
+  significance_en      TEXT,          significance_hi TEXT,
+  common_mistakes_en   TEXT,          common_mistakes_hi TEXT,
+  regional_variations_en TEXT,        regional_variations_hi TEXT,
+  festival_slug        TEXT,          -- soft link to festivals(slug)
+  order_no             INTEGER NOT NULL DEFAULT 0,
+  primary_source_name  TEXT, primary_source_ref TEXT,
+  last_verified_at     TEXT,
+  verification_status  TEXT NOT NULL DEFAULT 'unverified'
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
+);
+CREATE INDEX ix_puja_order ON puja_vidhi(order_no);
+CREATE INDEX ix_puja_festival ON puja_vidhi(festival_slug);
+
 -- ============================================================================
 -- 5. META
 --    Stamped by build.py. content_version must equal
