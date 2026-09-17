@@ -642,3 +642,32 @@ So the rule for these 45 rows:
 
 This unblocks all 45 rows. It does not lower the bar -- it removes a
 requirement (a pre-1929 English book) that was never the actual legal test.
+
+---
+
+## 8. Deliberately unwritten: 22 devotional texts needing a cited edition
+
+Written 2026-09-17. 25 of 36 mantras and 17 of 28 lyrics are done and live. The
+remaining 22 were **omitted on purpose** under the invent-nothing rule, and the
+reason is worth keeping: setting sacred text from recall risks a wrong syllable,
+and a wrong syllable in a mantra is worse than an absent row.
+
+**Too long to guarantee every syllable** — these run 9 to 60 verses:
+Durga Kavacham, Ganesha Atharvashirsha, Panchamukhi Hanuman Kavacham, Shiva
+Tandava Stotram, Kala Bhairava Ashtakam, Ramashtakam; and the Durga, Ram,
+Vishnu, Shani, Tulsi and Laxmi Chalisas plus Hanuman Bahuk (all 40+ verses).
+
+**No stable standard text** — modern or regional compositions whose variants
+differ substantively, so there is no single correct version to set:
+Shiv Aahvaan, Saraswati Vidya Dana, Sri Lakshminarayana, Parameshwari Devi,
+Shiva Bhakti Stotra; and the aartis for Ahoi Mata, Vaishno Mata, Ekadashi Mata
+and Shakambhari.
+
+**What unblocks them:** a public-domain printed edition in hand rather than
+recall. Gita Press editions are the usual source for all of these. This is a
+transcription pass, not a writing one — the text is public domain, so once an
+edition is open the work is mechanical.
+
+**One row to double-check:** the Ganesh Chalisa was set using the version where
+Parvati insists Shani look at the child after he warns her. That is the standard
+Awadhi text, but shorter retellings drop the detail, so it is worth a second eye.
