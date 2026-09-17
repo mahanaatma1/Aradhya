@@ -1,0 +1,101 @@
+{
+  "_note": "Our own subtitles for the 24 scripture_books that had one. The fixture used a \"The Yoga of X\" pattern throughout; ours say what the chapter does. Bilingual, authored not copied.",
+  "subtitles": {
+    "bgc_1": {
+      "en": "Arjuna Puts Down His Bow",
+      "hi": "अर्जुन का धनुष रख देना"
+    },
+    "bgc_2": {
+      "en": "What Does Not Die",
+      "hi": "जो मरता नहीं"
+    },
+    "bgc_3": {
+      "en": "Doing the Work Anyway",
+      "hi": "फिर भी कर्म करना"
+    },
+    "bgc_4": {
+      "en": "Knowledge, and Letting Go of the Fruit",
+      "hi": "ज्ञान, और फल का त्याग"
+    },
+    "bgc_5": {
+      "en": "Renouncing Without Leaving",
+      "hi": "छोड़े बिना त्याग"
+    },
+    "bgc_6": {
+      "en": "Sitting Still",
+      "hi": "स्थिर होकर बैठना"
+    },
+    "bgc_7": {
+      "en": "Knowing, and Knowing Directly",
+      "hi": "जानना, और साक्षात् जानना"
+    },
+    "bgc_8": {
+      "en": "What Outlasts Everything",
+      "hi": "जो सबके बाद भी रहता है"
+    },
+    "bgc_9": {
+      "en": "The Open Secret",
+      "hi": "खुला रहस्य"
+    },
+    "bgc_10": {
+      "en": "Where to Look for Him",
+      "hi": "उन्हें कहाँ देखें"
+    },
+    "bgc_11": {
+      "en": "Arjuna Sees Everything at Once",
+      "hi": "अर्जुन एक साथ सब कुछ देखता है"
+    },
+    "bgc_12": {
+      "en": "Loving Is Enough",
+      "hi": "प्रेम ही पर्याप्त है"
+    },
+    "bgc_13": {
+      "en": "The Field and the One Who Knows It",
+      "hi": "क्षेत्र और उसे जानने वाला"
+    },
+    "bgc_14": {
+      "en": "The Three Strands",
+      "hi": "तीन गुण"
+    },
+    "bgc_15": {
+      "en": "The Tree With Its Roots Above",
+      "hi": "जिस वृक्ष की जड़ें ऊपर हैं"
+    },
+    "bgc_16": {
+      "en": "Two Kinds of People",
+      "hi": "दो प्रकार के मनुष्य"
+    },
+    "bgc_17": {
+      "en": "You Are What You Trust",
+      "hi": "आप वही हैं जिस पर आपकी श्रद्धा है"
+    },
+    "bgc_18": {
+      "en": "Letting Go, and What Follows",
+      "hi": "त्याग, और उसके बाद"
+    },
+    "balakanda": {
+      "en": "A Childhood in Ayodhya",
+      "hi": "अयोध्या में एक बचपन"
+    },
+    "ayodhaya": {
+      "en": "A Promise Made Long Ago",
+      "hi": "बहुत पहले दिया गया वचन"
+    },
+    "aranya": {
+      "en": "Fourteen Years in the Forest",
+      "hi": "वन में चौदह वर्ष"
+    },
+    "kishkinda": {
+      "en": "An Alliance Among the Vanaras",
+      "hi": "वानरों से मैत्री"
+    },
+    "sundara": {
+      "en": "Hanuman Crosses the Sea",
+      "hi": "हनुमान का समुद्र लाँघना"
+    },
+    "yuddha": {
+      "en": "The War for Lanka",
+      "hi": "लंका का युद्ध"
+    }
+  }
+}

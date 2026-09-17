@@ -575,6 +575,47 @@ CREATE INDEX ix_kathas_order ON kathas(order_no);
 CREATE INDEX ix_kathas_festival ON kathas(festival_slug);
 CREATE INDEX ix_kathas_legacy ON kathas(legacy_id);
 
+
+-- RG-01 reference tables carried over from the fixture. These are facts, not
+-- creative expression: a list of Indian towns with coordinates, and the
+-- traditional names of scriptures and their chapters. Nobody owns any of it, so
+-- these are copied rather than rewritten -- the one exception being the 24
+-- scripture_books subtitles, which ARE a translation choice and are authored
+-- here (see subtitle_en/hi below).
+CREATE TABLE cities (
+  id           INTEGER PRIMARY KEY,
+  name         TEXT NOT NULL,
+  state        TEXT,
+  country      TEXT NOT NULL DEFAULT 'India',
+  lat          REAL NOT NULL,
+  lon          REAL NOT NULL,
+  tz           TEXT NOT NULL DEFAULT 'Asia/Kolkata',
+  utc_offset   REAL NOT NULL DEFAULT 5.5
+);
+CREATE INDEX ix_cities_name ON cities(name);
+CREATE INDEX ix_cities_state ON cities(state);
+
+CREATE TABLE scriptures (
+  id           INTEGER PRIMARY KEY,
+  name_en      TEXT NOT NULL, name_hi TEXT,
+  slug         TEXT NOT NULL UNIQUE,
+  cover        TEXT,
+  order_no     INTEGER NOT NULL DEFAULT 0
+);
+
+-- subtitle_en/hi are ours: "The Yoga of Arjuna's Dejection" is a rendering
+-- choice, not a traditional name, so the 24 non-empty ones are authored rather
+-- than carried over.
+CREATE TABLE scripture_books (
+  id           INTEGER PRIMARY KEY,
+  scripture_id INTEGER NOT NULL REFERENCES scriptures(id),
+  title_en     TEXT NOT NULL, title_hi TEXT,
+  subtitle_en  TEXT,          subtitle_hi TEXT,
+  slug         TEXT NOT NULL UNIQUE,
+  order_no     INTEGER NOT NULL DEFAULT 0
+);
+CREATE INDEX ix_sbooks_scripture ON scripture_books(scripture_id, order_no);
+
 -- ============================================================================
 -- 5. META
 --    Stamped by build.py. content_version must equal
