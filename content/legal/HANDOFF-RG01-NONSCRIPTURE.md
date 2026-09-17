@@ -671,3 +671,63 @@ edition is open the work is mechanical.
 **One row to double-check:** the Ganesh Chalisa was set using the version where
 Parvati insists Shani look at the child after he warns her. That is the standard
 Awadhi text, but shorter retellings drop the detail, so it is worth a second eye.
+
+---
+
+## 9. Three byte-identical devotional texts, and why that is correct
+
+Checked 2026-09-17. Three rows in `gyan.mantras` are byte-identical to the
+fixture's `sanskrit` column, and they are meant to be:
+
+| slug | chars |
+|---|---|
+| `gayatri-mantra` | 80 |
+| `saraswati-vidyarambha-mantra` | 79 |
+| `ganapati-bappa-morya` | 91 |
+
+Each is a single verse of public-domain Sanskrit — the Gayatri is Rigveda
+3.62.10 — set on two or three lines. There is one correct Devanagari spelling
+and one sensible place to break it. Identical bytes here are evidence the text
+is **right**, not evidence anything was copied, and the only way to differ would
+be to set it wrong.
+
+What was never theirs and is ours on every one of these rows: the romanisation,
+the translation, the summary and the how-to-chant prose.
+
+**One row did need fixing.** The Tulsi Chalisa came through at 2,691 bytes
+identical — long enough that the line layout genuinely was a choice, not a
+necessity. It has been regrouped into couplets (the fixture ships one line per
+half-verse) and no longer matches. A subagent had reported this as already
+fixed; it was not, which is why the check is worth running rather than trusting
+the report.
+
+**Verification, repeatable:**
+
+```python
+# byte-identical audit: compare every authored devotional row to its fixture row
+g = sqlite3.connect("assets/db/gyan.sqlite")
+c = sqlite3.connect("assets/db/content.sqlite")
+for slug, legacy, text in g.execute(
+        "SELECT slug, legacy_id, sanskrit FROM mantras WHERE legacy_id IS NOT NULL"):
+    old = c.execute("SELECT sanskrit FROM mantras WHERE id = ?", (legacy,)).fetchone()
+    if old and old[0] == text:
+        print(slug, len(text))
+```
+
+Anything over ~200 chars coming back identical is a real finding and should be
+re-broken. Under that, check whether the text simply has one correct setting
+before changing anything.
+
+### Also outstanding on these tables
+
+- **`durga-kavacham` has a null `iast`.** 56 verses; mechanical romanisation of
+  Sanskrit needs different schwa rules than the Hindi transliterator used for
+  the rest, and hand-writing 56 verses would have introduced more errors than it
+  removed. The Devanagari is complete; the field is honestly empty rather than
+  wrong. Populate it if the reader screen needs it.
+- **Hanuman Bahuk** is 11.8k chars of dense Braj. It reflowed cleanly and
+  matches the standard text, but ~380 lines could not be individually verified.
+  Worth a human eye before release.
+- **Chalisa attribution:** only the Hanuman Chalisa and Hanuman Bahuk carry
+  Tulsidas by name. The other seven are traditional-attributed rather than
+  securely his, and are recorded as `traditional` rather than claiming him.
