@@ -12,18 +12,23 @@ extension LyricsKindX on LyricsKind {
 
 final aartisProvider = FutureProvider<List<DevotionalItem>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
-  final rows = await db.raw.query('aartis', orderBy: 'id');
+  final rows = await db.raw.rawQuery(
+      "SELECT * FROM gyan.devotional_lyrics WHERE kind = 'aarti' "
+      'ORDER BY order_no, id');
   return rows.map(DevotionalItem.fromRow).toList();
 });
 
 final chalisasProvider = FutureProvider<List<DevotionalItem>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
-  final rows = await db.raw.query('chalisas', orderBy: 'id');
+  final rows = await db.raw.rawQuery(
+      "SELECT * FROM gyan.devotional_lyrics WHERE kind = 'chalisa' "
+      'ORDER BY order_no, id');
   return rows.map(DevotionalItem.fromRow).toList();
 });
 
 final mantrasProvider = FutureProvider<List<Mantra>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
-  final rows = await db.raw.query('mantras', orderBy: 'id');
+  final rows = await db.raw.rawQuery(
+      'SELECT * FROM gyan.mantras ORDER BY order_no, id');
   return rows.map(Mantra.fromRow).toList();
 });

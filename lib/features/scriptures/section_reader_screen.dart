@@ -342,23 +342,7 @@ class _ReaderTts {
       await stop();
       return;
     }
-    await _ensure();
-    speaking.value = true;
-    try {
-      final skt = sanskrit?.trim() ?? '';
-      if (skt.isNotEmpty) {
-        applyTtsVoice(_tts, prefs, true); // Sanskrit reads in Hindi
-        await _tts.speak(skt);
-      }
-      // Translation + commentary read in the reader's language.
-      applyTtsVoice(_tts, prefs, hindi);
-      final tr = body?.trim() ?? '';
-      if (speaking.value && tr.isNotEmpty) await _tts.speak(tr);
-      final com = commentary?.trim() ?? '';
-      if (speaking.value && com.isNotEmpty) await _tts.speak(com);
-    } finally {
-      speaking.value = false;
-    }
+    await playVerse(sanskrit, body, commentary, hindi, prefs);
   }
 
   /// Speak one verse and return when it finishes (for continuous auto-play).
@@ -367,17 +351,24 @@ class _ReaderTts {
       bool hindi, SharedPreferences prefs) async {
     await _ensure();
     speaking.value = true;
+    bool live() => speaking.value;
     try {
       final skt = sanskrit?.trim() ?? '';
       if (skt.isNotEmpty) {
-        applyTtsVoice(_tts, prefs, true);
-        await _tts.speak(skt);
+        // Sanskrit reads in Hindi, paced slower than the prose around it.
+        applyTtsVoice(_tts, prefs, true, sanskrit: true);
+        await speakSmooth(_tts, skt, gapMs: 420, keepGoing: live);
       }
+      // Translation + commentary read in the reader's language.
       applyTtsVoice(_tts, prefs, hindi);
       final tr = body?.trim() ?? '';
-      if (speaking.value && tr.isNotEmpty) await _tts.speak(tr);
+      if (live() && tr.isNotEmpty) {
+        await speakSmooth(_tts, tr, keepGoing: live);
+      }
       final com = commentary?.trim() ?? '';
-      if (speaking.value && com.isNotEmpty) await _tts.speak(com);
+      if (live() && com.isNotEmpty) {
+        await speakSmooth(_tts, com, keepGoing: live);
+      }
     } finally {
       speaking.value = false;
     }

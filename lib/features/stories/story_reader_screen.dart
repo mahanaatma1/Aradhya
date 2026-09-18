@@ -168,10 +168,19 @@ class _StoryTts {
     }
     await _ensure();
     speaking.value = true;
+    bool live() => speaking.value;
     try {
       applyTtsVoice(_tts, prefs, hindi);
-      if (title.trim().isNotEmpty) await _tts.speak(title);
-      if (speaking.value && body.trim().isNotEmpty) await _tts.speak(body);
+      if (title.trim().isNotEmpty) {
+        await _tts.speak(title.trim());
+        // A beat after the title, before the story proper.
+        if (live()) {
+          await Future<void>.delayed(const Duration(milliseconds: 400));
+        }
+      }
+      if (live() && body.trim().isNotEmpty) {
+        await speakSmooth(_tts, body.trim(), keepGoing: live);
+      }
     } finally {
       speaking.value = false;
     }

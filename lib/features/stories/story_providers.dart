@@ -5,17 +5,22 @@ import 'story_models.dart';
 
 final storiesProvider = FutureProvider<List<Story>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
-  final rows = await db.raw.query('stories', orderBy: 'id');
+  final rows = await db.raw.rawQuery(
+    'SELECT * FROM gyan.stories ORDER BY order_no, id',
+  );
   return rows.map(Story.fromRow).toList();
 });
 
 /// Vrat kathas, ordered by title.
 ///
-/// This table has always been in the bundled database but nothing read it — the
-/// `/katha` route served `stories`, so 57 kathas shipped invisibly.
+/// Reads `gyan.kathas` (158 rows), not the Ishvarvaani fixture's 57. Every
+/// festival in `gyan.festivals` has one, and each carries its own fast
+/// instructions, key moments and sources — none of which the fixture had.
 final kathasProvider = FutureProvider<List<Story>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
-  final rows = await db.raw.query('kathas', orderBy: 'title_en');
+  final rows = await db.raw.rawQuery(
+    'SELECT * FROM gyan.kathas ORDER BY title_en',
+  );
   return rows.map(Story.fromKathaRow).toList();
 });
 

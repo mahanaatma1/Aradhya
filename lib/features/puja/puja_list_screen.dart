@@ -29,7 +29,7 @@ class PujaListScreen extends ConsumerWidget {
           separatorBuilder: (_, _) => const SizedBox(height: 10),
           itemBuilder: (context, i) {
             final p = list[i];
-            final accent = DeityAccent.of(p.deity);
+            final accent = DeityAccent.of(p.deityEn);
             return Card(
               clipBehavior: Clip.antiAlias,
               child: InkWell(
@@ -57,8 +57,8 @@ class PujaListScreen extends ConsumerWidget {
                                     fontFamily: AppFonts.display,
                                     fontWeight: FontWeight.w600,
                                     fontSize: 17)),
-                            if (p.category != null)
-                              Text(p.category!,
+                            if (p.category(hi) != null)
+                              Text(p.category(hi)!,
                                   style: TextStyle(
                                       fontSize: 13, color: accent.color)),
                           ],

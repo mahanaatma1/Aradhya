@@ -18,7 +18,7 @@ class PujaDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final hi = ref.watch(isHindiProvider);
     final scheme = Theme.of(context).colorScheme;
-    final mantra = puja.mantra;
+    final mantras = puja.mantras;
 
     return Scaffold(
       appBar: AppBar(
@@ -32,10 +32,10 @@ class PujaDetailScreen extends ConsumerWidget {
                   fontFamily: AppFonts.display,
                   fontWeight: FontWeight.w700,
                   fontSize: 24)),
-          if (puja.deity != null)
+          if (puja.deity(hi) != null)
             Padding(
               padding: const EdgeInsets.only(top: 4),
-              child: Text(puja.deity!,
+              child: Text(puja.deity(hi)!,
                   style: TextStyle(color: scheme.primary, fontSize: 14)),
             ),
           const SizedBox(height: 16),
@@ -48,14 +48,14 @@ class PujaDetailScreen extends ConsumerWidget {
                   style: const TextStyle(fontSize: 15, height: 1.55)),
             ),
 
-          if (puja.items.isNotEmpty)
+          if (puja.items(hi).isNotEmpty)
             _Section(
               icon: Icons.checklist_rounded,
               label: hi ? 'सामग्री' : 'Samagri (items)',
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  for (final it in puja.items)
+                  for (final it in puja.items(hi))
                     Padding(
                       padding: const EdgeInsets.only(bottom: 6),
                       child: Row(
@@ -74,14 +74,14 @@ class PujaDetailScreen extends ConsumerWidget {
               ),
             ),
 
-          if (puja.steps.isNotEmpty)
+          if (puja.steps(hi).isNotEmpty)
             _Section(
               icon: Icons.format_list_numbered_rounded,
               label: hi ? 'विधि' : 'Vidhi (steps)',
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  for (var i = 0; i < puja.steps.length; i++)
+                  for (var i = 0; i < puja.steps(hi).length; i++)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10),
                       child: Row(
@@ -99,7 +99,7 @@ class PujaDetailScreen extends ConsumerWidget {
                           ),
                           const SizedBox(width: 12),
                           Expanded(
-                              child: Text(puja.steps[i],
+                              child: Text(puja.steps(hi)[i],
                                   style: const TextStyle(
                                       fontSize: 15, height: 1.45))),
                         ],
@@ -109,42 +109,54 @@ class PujaDetailScreen extends ConsumerWidget {
               ),
             ),
 
-          if (mantra.sanskrit != null) ...[
-            const SizedBox(height: 4),
-            StitchedCard(
-              gradient: const LinearGradient(
-                colors: [AppColors.terracotta, AppColors.terracottaDark],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              stitchColor: Colors.white.withValues(alpha: 0.6),
-              radius: 18,
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  Text(mantra.sanskrit!,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontFamily: AppFonts.devanagari,
-                          fontSize: 18,
-                          height: 1.7,
-                          color: Color(0xFFFDEEDE))),
-                  if (mantra.translation != null) ...[
-                    const SizedBox(height: 10),
-                    Text(mantra.translation!,
+          // A rite can carry more than one mantra; the fixture only had room
+          // for one, stored as a Python-dict-ish string.
+          for (final m in mantras)
+            if (m.sanskrit != null) ...[
+              const SizedBox(height: 4),
+              StitchedCard(
+                gradient: const LinearGradient(
+                  colors: [AppColors.terracotta, AppColors.terracottaDark],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                stitchColor: Colors.white.withValues(alpha: 0.6),
+                radius: 18,
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    Text(m.sanskrit!,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
-                            fontStyle: FontStyle.italic,
-                            fontSize: 13.5,
-                            color: Color(0xFFF6D9C8))),
+                            fontFamily: AppFonts.devanagari,
+                            fontSize: 18,
+                            height: 1.7,
+                            color: Color(0xFFFDEEDE))),
+                    if (m.iast != null) ...[
+                      const SizedBox(height: 6),
+                      Text(m.iast!,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              fontSize: 12.5,
+                              height: 1.5,
+                              color: Color(0xFFF0C9B2))),
+                    ],
+                    if (m.translation(hi) != null) ...[
+                      const SizedBox(height: 10),
+                      Text(m.translation(hi)!,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              fontStyle: FontStyle.italic,
+                              fontSize: 13.5,
+                              color: Color(0xFFF6D9C8))),
+                    ],
                   ],
-                ],
-              ),
+                ),
             ),
             const SizedBox(height: 16),
           ],
 
-          if (puja.benefitsEn != null && puja.benefitsEn!.isNotEmpty)
+          if (puja.benefits(hi)?.isNotEmpty ?? false)
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -160,7 +172,7 @@ class PujaDetailScreen extends ConsumerWidget {
                       size: 18, color: scheme.secondary),
                   const SizedBox(width: 10),
                   Expanded(
-                    child: Text(puja.benefitsEn!,
+                    child: Text(puja.benefits(hi)!,
                         style: const TextStyle(fontSize: 14.5, height: 1.5)),
                   ),
                 ],

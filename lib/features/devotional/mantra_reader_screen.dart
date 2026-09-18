@@ -168,16 +168,18 @@ class _MantraTts {
     }
     await _ensure();
     speaking.value = true;
+    bool live() => speaking.value;
     try {
       final skt = sanskrit?.trim() ?? '';
       if (skt.isNotEmpty) {
-        applyTtsVoice(_tts, prefs, true); // Sanskrit reads in Hindi
-        await _tts.speak(skt);
+        // Sanskrit reads in Hindi, paced slower with a longer breath per line.
+        applyTtsVoice(_tts, prefs, true, sanskrit: true);
+        await speakSmooth(_tts, skt, gapMs: 420, keepGoing: live);
       }
       final m = meaning?.trim() ?? '';
-      if (speaking.value && m.isNotEmpty) {
+      if (live() && m.isNotEmpty) {
         applyTtsVoice(_tts, prefs, hindi);
-        await _tts.speak(m);
+        await speakSmooth(_tts, m, keepGoing: live);
       }
     } finally {
       speaking.value = false;

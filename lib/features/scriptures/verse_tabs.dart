@@ -17,22 +17,20 @@ import 'scripture_models.dart';
 ///
 ///   Meaning       27,890 (100%)  — `body_en` / `body_hi`
 ///   Explanation      701 (3%)    — `commentary_*`, **Bhagavad Gita only**
-///   Word meaning       0          — no column, and no table anywhere
+///   Word meaning     531 (2%)    — `gyan.word_meanings`, Gita chapter 1 only
 ///   Context       always         — position; plus Ask pairs and story events
 ///
-/// So three of the four tabs are empty on every Ramayana and Upanishad verse,
-/// and one of them is empty on all 27,890. That is the honest shape of the
-/// data, and the reason each tab states *why* it is empty rather than showing a
-/// spinner or a shrug: "Coming soon" on a verse of the Yuddha Kanda would be a
-/// promise nobody has undertaken, while "the Gita is the only text here with a
-/// commentary" is a fact the reader can act on.
+/// Word meaning lives in `gyan.sqlite`, keyed on `scripture_section_id` the
+/// way `qa_pairs` already is -- `content.sqlite` is the inherited Ishvarvaani
+/// fixture, read-only to the pipeline and due to be replaced before submission
+/// (RG-01/RG-02), so nothing is added to its `scripture_sections` table.
 ///
-/// Word meaning has no data path at all, not merely no rows. `content.sqlite`
-/// is the inherited Ishvarvaani fixture -- read-only to the pipeline, and due
-/// to be replaced before submission (RG-01/RG-02) -- so nothing may be added to
-/// `scripture_sections`. When word-by-word meanings are authored they will land
-/// in `gyan.sqlite` keyed on `scripture_section_id`, the way `qa_pairs` already
-/// does, and this tab will fill in from there.
+/// So three of the four tabs are empty on every Ramayana and Upanishad verse,
+/// and Word meaning is empty everywhere outside Gita chapter 1 so far. That is
+/// the honest shape of the data, and the reason each tab states *why* it is
+/// empty rather than showing a spinner or a shrug: "Coming soon" on a verse of
+/// the Yuddha Kanda would be a promise nobody has undertaken, while "the Gita
+/// is the only text here with a commentary" is a fact the reader can act on.
 
 /// Which facet the reader is looking at.
 enum ReaderTab {
@@ -135,6 +133,21 @@ final verseContextProvider =
   );
 });
 
+/// The word-by-word gloss for one verse, in reading order. Empty wherever
+/// `gyan.word_meanings` has no rows for this `scriptureSectionId` -- everywhere
+/// but Gita chapter 1, for now.
+final verseWordMeaningsProvider =
+    FutureProvider.family<List<WordMeaning>, int>((ref, sectionId) async {
+  final db = await ref.watch(contentDbProvider.future);
+  if (!db.gyanAttached) return const [];
+
+  final rows = await db.raw.rawQuery('''
+    SELECT sanskrit, meaning_en, meaning_hi FROM gyan.word_meanings
+     WHERE scripture_section_id = ? ORDER BY order_no
+  ''', [sectionId]);
+  return [for (final r in rows) WordMeaning.fromRow(r)];
+});
+
 /// The tab strip. Scrolls horizontally because it has to: four labels, and
 /// "Word meaning" at a 1.6 font scale on a 320dp screen does not fit beside
 /// the other three at any weight (RD-06).
@@ -158,11 +171,11 @@ class VerseTabStrip extends ConsumerWidget {
 
   /// Whether a tab has anything to show for *this* verse. Context always does:
   /// a verse always has a book and a number, even when nothing links to it.
-  bool _filled(ReaderTab tab) => switch (tab) {
+  bool _filled(ReaderTab tab, bool hasWordMeanings) => switch (tab) {
         ReaderTab.meaning => (section.body(hindi) ?? '').trim().isNotEmpty,
         ReaderTab.explanation =>
           (section.commentary(hindi) ?? '').trim().isNotEmpty,
-        ReaderTab.wordMeaning => false,
+        ReaderTab.wordMeaning => hasWordMeanings,
         ReaderTab.context => true,
       };
 
@@ -170,6 +183,9 @@ class VerseTabStrip extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final scheme = Theme.of(context).colorScheme;
     final selected = ref.watch(readerTabProvider);
+    final hasWordMeanings =
+        (ref.watch(verseWordMeaningsProvider(section.id)).valueOrNull ?? [])
+            .isNotEmpty;
 
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
@@ -179,7 +195,7 @@ class VerseTabStrip extends ConsumerWidget {
             _Tab(
               label: tab.label(hindi),
               selected: tab == selected,
-              filled: _filled(tab),
+              filled: _filled(tab, hasWordMeanings),
               scale: scale,
               hindi: hindi,
               onTap: () => ref.read(readerTabProvider.notifier).set(tab),
@@ -305,21 +321,13 @@ class VerseTabPanel extends ConsumerWidget {
             hindi: hindi,
           ),
         ),
-      // RD-02. Always empty, and specific about it: there is no partial data
-      // to wait on and no row to fetch, so the state names the unit of work
-      // instead of implying one is in flight.
-      ReaderTab.wordMeaning => _Absent(
-          icon: Icons.spellcheck_rounded,
-          line: hindi
-              ? 'शब्द-दर-शब्द अर्थ अभी नहीं जोड़ा गया है।'
-              : 'Word-by-word meaning has not been added yet.',
-          detail: hindi
-              ? 'यह पूरे संग्रह के लिए सत्य है — किसी भी श्लोक का शब्दार्थ '
-                  'उपलब्ध नहीं है।'
-              : 'That is true of the whole collection — no verse has a '
-                  'word-by-word breakdown yet.',
-          scale: scale,
+      // RD-02. Renders from gyan.word_meanings where a verse has rows
+      // (Gita chapter 1, so far); the empty state names the gap honestly
+      // rather than implying a fetch is still in flight.
+      ReaderTab.wordMeaning => _WordMeaningPanel(
+          sectionId: section.id,
           hindi: hindi,
+          scale: scale,
         ),
       ReaderTab.context => _ContextPanel(
           section: section,
@@ -331,6 +339,79 @@ class VerseTabPanel extends ConsumerWidget {
           scale: scale,
         ),
     };
+  }
+}
+
+/// The Word meaning tab body: a word-by-word gloss, Sanskrit against its
+/// plain-language meaning, in reading order -- or the honest empty state
+/// when this verse has none yet.
+class _WordMeaningPanel extends ConsumerWidget {
+  final int sectionId;
+  final bool hindi;
+  final double scale;
+  const _WordMeaningPanel({
+    required this.sectionId,
+    required this.hindi,
+    required this.scale,
+  });
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final words = ref.watch(verseWordMeaningsProvider(sectionId)).valueOrNull;
+    if (words == null || words.isEmpty) {
+      return _Absent(
+        icon: Icons.spellcheck_rounded,
+        line: hindi
+            ? 'इस श्लोक का शब्द-दर-शब्द अर्थ अभी नहीं जोड़ा गया है।'
+            : 'Word-by-word meaning has not been added for this verse yet.',
+        detail: hindi
+            ? 'अभी यह केवल भगवद्गीता के पहले अध्याय के लिए उपलब्ध है।'
+            : 'So far this is only available for Bhagavad Gita chapter 1.',
+        scale: scale,
+        hindi: hindi,
+      );
+    }
+    final scheme = Theme.of(context).colorScheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final w in words)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: 108 * scale,
+                  child: Text(
+                    w.sanskrit,
+                    style: TextStyle(
+                      fontFamily: AppFonts.display,
+                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14.5 * scale,
+                      height: 1.5,
+                      color: scheme.primary,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    w.meaning(hindi),
+                    style: TextStyle(
+                      fontFamily: hindi ? AppFonts.devanagari : AppFonts.body,
+                      fontSize: 14.5 * scale,
+                      height: 1.5,
+                      color: scheme.onSurface.withValues(alpha: 0.85),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+      ],
+    );
   }
 }
 

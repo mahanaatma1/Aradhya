@@ -100,3 +100,25 @@ class ScriptureSection {
   String? commentary(bool hi) =>
       (hi && (commentaryHi?.isNotEmpty ?? false)) ? commentaryHi : commentaryEn;
 }
+
+/// One Sanskrit word from the Word meaning tab (RD-02), from `gyan.word_meanings`.
+class WordMeaning {
+  final String sanskrit;
+  final String meaningEn;
+  final String? meaningHi;
+
+  const WordMeaning({
+    required this.sanskrit,
+    required this.meaningEn,
+    this.meaningHi,
+  });
+
+  factory WordMeaning.fromRow(Map<String, Object?> r) => WordMeaning(
+        sanskrit: r['sanskrit'] as String,
+        meaningEn: r['meaning_en'] as String,
+        meaningHi: r['meaning_hi'] as String?,
+      );
+
+  String meaning(bool hi) =>
+      (hi && (meaningHi?.isNotEmpty ?? false)) ? meaningHi! : meaningEn;
+}

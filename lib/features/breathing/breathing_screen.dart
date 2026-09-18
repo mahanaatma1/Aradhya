@@ -224,8 +224,12 @@ class _BreathingScreenState extends ConsumerState<BreathingScreen>
     _tts.speak(s);
   }
 
-  void _applyVoice(bool hi) =>
-      applyTtsVoice(_tts, ref.read(sharedPrefsProvider), hi);
+  void _applyVoice(bool hi) {
+    applyTtsVoice(_tts, ref.read(sharedPrefsProvider), hi);
+    // Breathing cues are paced by the pattern, not by the reader preference, so
+    // restore this screen's own rate after the shared settings are applied.
+    _tts.setSpeechRate(0.42);
+  }
 
   void _startTimer() {
     _timer?.cancel();

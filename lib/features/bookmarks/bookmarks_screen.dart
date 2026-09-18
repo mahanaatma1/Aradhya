@@ -184,19 +184,19 @@ class _BookmarksScreenState extends ConsumerState<BookmarksScreen> {
     switch (b.kind) {
       case 'aarti':
       case 'chalisa':
-        final table = b.kind == 'aarti' ? 'aartis' : 'chalisas';
-        final rows =
-            await db.raw.query(table, where: 'id=?', whereArgs: [b.id]);
+        final rows = await db.raw.rawQuery(
+            'SELECT * FROM gyan.devotional_lyrics WHERE kind = ? AND id = ?',
+            [b.kind, b.id]);
         if (rows.isEmpty || !context.mounted) return;
         context.push('/read-lyrics', extra: DevotionalItem.fromRow(rows.first));
       case 'mantra':
-        final rows =
-            await db.raw.query('mantras', where: 'id=?', whereArgs: [b.id]);
+        final rows = await db.raw
+            .rawQuery('SELECT * FROM gyan.mantras WHERE id = ?', [b.id]);
         if (rows.isEmpty || !context.mounted) return;
         context.push('/read-mantra', extra: Mantra.fromRow(rows.first));
       case 'story':
-        final rows =
-            await db.raw.query('stories', where: 'id=?', whereArgs: [b.id]);
+        final rows = await db.raw
+            .rawQuery('SELECT * FROM gyan.stories WHERE id = ?', [b.id]);
         if (rows.isEmpty || !context.mounted) return;
         context.push('/read-story', extra: Story.fromRow(rows.first));
       default:
