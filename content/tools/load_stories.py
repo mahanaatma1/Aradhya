@@ -194,7 +194,7 @@ def load() -> None:
 
 
 QUOTE_COLS = (
-    "legacy_id", "text_en", "text_hi", "sanskrit", "iast", "source_title_en",
+    "legacy_id", "kind", "text_en", "text_hi", "sanskrit", "iast", "source_title_en",
     "source_title_hi", "verse_ref", "source_slug", "scripture_verse_number",
     "themes_en", "themes_hi", "order_no", "primary_source_name",
     "primary_source_ref", "last_verified_at", "verification_status",
@@ -205,10 +205,12 @@ QUOTE_COLS = (
 def load_quotes() -> None:
     """Load `quotes`, which has no distinctness gate and does not need one.
 
-    These are not rewrites of the fixture's English. Each row carries our own
-    already-authored rendering of a specific verse, so the text is ours by
-    construction and the only thing worth checking is that the citation is real
-    and the row is bilingual.
+    These are not rewrites of the fixture's English. Every row is either our own
+    already-authored rendering of a verse, a line from a story we wrote, or a
+    traditional saying -- so the text is ours or public domain by construction.
+    What is worth checking is that each row is bilingual and carries an
+    attribution, and that a row claiming to be a numbered verse actually has the
+    number.
     """
     rows = _rows("quotes")
     print(f"{len(rows)} quote(s) staged")
@@ -217,10 +219,13 @@ def load_quotes() -> None:
         bad = []
         if not (r.get("text_hi") or "").strip():
             bad.append("no text_hi")
-        if not (r.get("verse_ref") or "").strip():
-            bad.append("no verse_ref")
-        if not (r.get("source_slug") or "").strip():
-            bad.append("no source_slug")
+        if not (r.get("text_en") or "").strip():
+            bad.append("no text_en")
+        # A proverb has no chapter and verse; only a 'verse' row must have one.
+        if r.get("kind", "verse") == "verse" and not (r.get("verse_ref") or "").strip():
+            bad.append("kind=verse but no verse_ref")
+        if not (r.get("source_title_en") or "").strip():
+            bad.append("no source_title_en")
         if bad:
             problems += 1
             print(f"  FAIL  {r.get('verse_ref')}: {bad}")
@@ -228,9 +233,20 @@ def load_quotes() -> None:
         sys.exit(f"{problems} quote(s) failed -- nothing written")
 
     conn = sqlite3.connect(GYAN)
-    sql = (f"INSERT OR REPLACE INTO quotes ({','.join(QUOTE_COLS)}) "
+    sql = (f"INSERT INTO quotes ({','.join(QUOTE_COLS)}) "
            f"VALUES ({','.join('?' * len(QUOTE_COLS))})")
-    conn.executemany(sql, [[r.get(c) for c in QUOTE_COLS] for r in rows])
+    payload = []
+    for r in rows:
+        vals = []
+        for col in QUOTE_COLS:
+            v = r.get(col)
+            if col in ("themes_en", "themes_hi") and v is not None and not isinstance(v, str):
+                v = json.dumps(v, ensure_ascii=False)
+            if col == "kind":
+                v = v or "verse"
+            vals.append(v)
+        payload.append(vals)
+    conn.executemany(sql, payload)
     conn.commit()
     n = conn.execute("SELECT count(*) FROM quotes").fetchone()[0]
     print(f"quotes: {n} row(s)")

@@ -764,18 +764,32 @@ CREATE INDEX ix_puja_festival ON puja_vidhi(festival_slug);
 -- this table holds only quotes we can point at a specific verse in a specific
 -- public-domain edition. Everything else is dropped rather than carried over.
 --
--- `verse_ref` is the locator, `source_slug` the edition it was read in, and
--- `scripture_verse_number` links a Gita quote to the verse our own scripture
--- work already renders -- those 262 are not re-translated here, they cite it.
+-- Quotes are a MIXTURE, not all verses: scripture lines with a chapter and
+-- verse, teachings pulled from the stories and kathas we wrote, and traditional
+-- sayings that have no single author. `kind` says which, and `verse_ref` is
+-- null for everything that is not a numbered verse.
+--
+-- The one rule that holds across all four kinds: the attribution has to be
+-- true. A traditional saying attributed to "Traditional" is honest; the same
+-- line attributed to a named text we cannot check is not, which is why the
+-- fixture's Chanakya Niti and Yoga Vashistha rows were not carried over.
 CREATE TABLE quotes (
   id                   INTEGER PRIMARY KEY,
   legacy_id            INTEGER,
+  -- `kind` is what shape of quote this is, because they are not all verses:
+  --   'verse'      a scripture verse, with verse_ref and Sanskrit
+  --   'teaching'   a line drawn from a story or katha we wrote
+  --   'saying'     a traditional proverb or maxim, no single author
+  --   'invocation' a mantra's meaning, rendered as a line
+  kind                 TEXT NOT NULL DEFAULT 'verse'
+      CHECK (kind IN ('verse','teaching','saying','invocation')),
   text_en              TEXT NOT NULL, text_hi TEXT NOT NULL,
   sanskrit             TEXT,          iast TEXT,
   source_title_en      TEXT NOT NULL, source_title_hi TEXT,
-  verse_ref            TEXT NOT NULL,       -- '2.47', '1.164.46'
-  source_slug          TEXT NOT NULL,       -- FK-ish into sources(slug)
-  scripture_verse_number TEXT,              -- links to our authored Gita verse
+  -- Null for anything that is not a numbered verse. A proverb has no chapter.
+  verse_ref            TEXT,
+  source_slug          TEXT,
+  scripture_verse_number TEXT,
   themes_en            TEXT,          themes_hi TEXT,   -- JSON arrays
   order_no             INTEGER NOT NULL DEFAULT 0,
   primary_source_name  TEXT, primary_source_ref TEXT,
