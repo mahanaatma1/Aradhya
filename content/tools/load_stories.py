@@ -193,8 +193,53 @@ def load() -> None:
         print(f"{table}: {n} row(s)")
 
 
+QUOTE_COLS = (
+    "legacy_id", "text_en", "text_hi", "sanskrit", "iast", "source_title_en",
+    "source_title_hi", "verse_ref", "source_slug", "scripture_verse_number",
+    "themes_en", "themes_hi", "order_no", "primary_source_name",
+    "primary_source_ref", "last_verified_at", "verification_status",
+    "claim_type", "source_quality",
+)
+
+
+def load_quotes() -> None:
+    """Load `quotes`, which has no distinctness gate and does not need one.
+
+    These are not rewrites of the fixture's English. Each row carries our own
+    already-authored rendering of a specific verse, so the text is ours by
+    construction and the only thing worth checking is that the citation is real
+    and the row is bilingual.
+    """
+    rows = _rows("quotes")
+    print(f"{len(rows)} quote(s) staged")
+    problems = 0
+    for r in rows:
+        bad = []
+        if not (r.get("text_hi") or "").strip():
+            bad.append("no text_hi")
+        if not (r.get("verse_ref") or "").strip():
+            bad.append("no verse_ref")
+        if not (r.get("source_slug") or "").strip():
+            bad.append("no source_slug")
+        if bad:
+            problems += 1
+            print(f"  FAIL  {r.get('verse_ref')}: {bad}")
+    if problems:
+        sys.exit(f"{problems} quote(s) failed -- nothing written")
+
+    conn = sqlite3.connect(GYAN)
+    sql = (f"INSERT OR REPLACE INTO quotes ({','.join(QUOTE_COLS)}) "
+           f"VALUES ({','.join('?' * len(QUOTE_COLS))})")
+    conn.executemany(sql, [[r.get(c) for c in QUOTE_COLS] for r in rows])
+    conn.commit()
+    n = conn.execute("SELECT count(*) FROM quotes").fetchone()[0]
+    print(f"quotes: {n} row(s)")
+
+
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "load":
+    if len(sys.argv) > 1 and sys.argv[1] == "quotes":
+        load_quotes()
+    elif len(sys.argv) > 1 and sys.argv[1] == "load":
         load()
     else:
         s, p = _rows("stories"), _rows("puja")

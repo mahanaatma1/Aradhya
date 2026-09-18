@@ -752,6 +752,45 @@ CREATE TABLE puja_vidhi (
 CREATE INDEX ix_puja_order ON puja_vidhi(order_no);
 CREATE INDEX ix_puja_festival ON puja_vidhi(festival_slug);
 
+
+-- RG-01 quotes. The fixture shipped 1,000, and the honest number that can be
+-- grounded is far smaller: 617 of them cite only a book ("Rig Veda",
+-- "Mahabharata") with no chapter or verse, and a further set cite works we hold
+-- no public-domain translation of at all (Yoga Vashistha, Hitopadesha, Chanakya
+-- Niti, Srimad Bhagavatam, the medical samhitas).
+--
+-- A quote whose citation cannot be checked is worse than a missing quote: it
+-- puts words in a scripture's mouth and invites the reader to trust them. So
+-- this table holds only quotes we can point at a specific verse in a specific
+-- public-domain edition. Everything else is dropped rather than carried over.
+--
+-- `verse_ref` is the locator, `source_slug` the edition it was read in, and
+-- `scripture_verse_number` links a Gita quote to the verse our own scripture
+-- work already renders -- those 262 are not re-translated here, they cite it.
+CREATE TABLE quotes (
+  id                   INTEGER PRIMARY KEY,
+  legacy_id            INTEGER,
+  text_en              TEXT NOT NULL, text_hi TEXT NOT NULL,
+  sanskrit             TEXT,          iast TEXT,
+  source_title_en      TEXT NOT NULL, source_title_hi TEXT,
+  verse_ref            TEXT NOT NULL,       -- '2.47', '1.164.46'
+  source_slug          TEXT NOT NULL,       -- FK-ish into sources(slug)
+  scripture_verse_number TEXT,              -- links to our authored Gita verse
+  themes_en            TEXT,          themes_hi TEXT,   -- JSON arrays
+  order_no             INTEGER NOT NULL DEFAULT 0,
+  primary_source_name  TEXT, primary_source_ref TEXT,
+  last_verified_at     TEXT,
+  verification_status  TEXT NOT NULL DEFAULT 'unverified'
+      CHECK (verification_status IN ('unverified','verified','disputed')),
+  claim_type            TEXT CHECK (claim_type IN
+      ('traditional','textual','historical','archaeological',
+       'modern_interpretation','scientific') OR claim_type IS NULL),
+  source_quality        TEXT CHECK (source_quality IN
+      ('primary','secondary','reference') OR source_quality IS NULL)
+);
+CREATE INDEX ix_quotes_order ON quotes(order_no);
+CREATE INDEX ix_quotes_source ON quotes(source_slug);
+
 -- ============================================================================
 -- 5. META
 --    Stamped by build.py. content_version must equal

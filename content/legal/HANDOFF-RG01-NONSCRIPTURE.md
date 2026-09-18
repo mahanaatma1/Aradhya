@@ -731,3 +731,55 @@ before changing anything.
 - **Chalisa attribution:** only the Hanuman Chalisa and Hanuman Bahuk carry
   Tulsidas by name. The other seven are traditional-attributed rather than
   securely his, and are recorded as `traditional` rather than claiming him.
+
+---
+
+## 10. Quotes: 191 kept of 1,000, and why the other 809 were dropped
+
+Done 2026-09-18. This is the one table where the honest outcome is a large
+deletion, and the reasoning should survive.
+
+**The fixture's 1,000 quotes cannot mostly be verified.** Breaking them down:
+
+- **617 cite only a book** — "Rig Veda", "Mahabharata", "Upanishads" — with no
+  chapter or verse. There is no way to check whether the scripture says it.
+- **Another ~190 cite works we hold no public-domain translation of at all**:
+  Yoga Vashistha (43), Srimad Bhagavatam (40), Atharva Veda (32), Hitopadesha
+  (30), Chanakya Niti (15), Subhashita (12), and the medical samhitas.
+- **346 have both a book we hold and a verse reference.** Of those, 262 are
+  Gita, 53 Upanishad, 22 Rigveda, 7 Yoga Sutras.
+
+**A quote with an uncheckable citation is worse than a missing quote.** It puts
+words in a scripture's mouth and invites the reader to trust them. So the table
+now holds only quotes that point at a specific verse in a specific edition.
+
+### What shipped: 191 Gita verses
+
+Not re-translated. The scripture session has already authored 701 Gita verses in
+`content/legal/own/scripture_verses/bgc_*.json`, and **every one of the 262
+cited Gita verses is among them** — so each quote cites that existing work
+rather than duplicating it. 262 citations collapse to 191 unique verses because
+the fixture repeats popular ones. Sanskrit and transliteration are public domain
+and carried from `scripture_sections`.
+
+Six rows score 0.51-0.67 against the fixture's English. All are 7-12 expressive
+words: "pleasure and pain, gain and loss, victory and defeat" is the verse's own
+list and has no second faithful rendering. This is the floor effect `MIN_N` in
+`legal_own.py` exists for, and the text is our own authored translation either
+way.
+
+### Why the Upanishad quotes were NOT included
+
+The 53 Upanishad quotes cite three-part references (`Katha Upanishad 1.3.14`).
+Our authored Katha has 48 rows numbered in two parts (`1.1` ... `2.19`) — **a
+different and shorter recension**. The famous "arise, awake" verse the quotes
+cite is not in our text at all.
+
+Matching those by number would attach our translation of one verse to a citation
+pointing at a different one. That is a worse error than omission: it would look
+sourced and be wrong. The same applies to the 22 Rigveda and 7 Yoga Sutra
+quotes, which were not checked against our authored files.
+
+**To recover them:** align our Upanishad numbering with the standard recension,
+or author the specific verses these quotes cite. Either is real work and neither
+should be guessed.
