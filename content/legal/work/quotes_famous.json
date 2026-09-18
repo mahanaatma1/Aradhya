@@ -1,0 +1,5437 @@
+{
+ "_note": "Famous, recognisable quotes for the app's quote pool. Every attribution here is one we can stand behind: Swami Vivekananda (d.1902) from the Complete Works, Rabindranath Tagore from his OWN English Gitanjali (1912), the 15th-17th century Hindi/Braj poets (Kabir, Tulsidas, Rahim, Mirabai) whose dohas are long public domain, Chanakya Niti verses we are confident of, and traditional Sanskrit subhashitas. Where a saying is genuinely traditional and has no single author, source_title is 'Traditional'/'पारंपरिक' with claim_type 'traditional' and verification_status 'unverified' -- that is honest and deliberate. No line here carries a name we could not confirm; candidates whose authorship we could not confirm were dropped rather than guessed at. Themes are drawn from the fixed twelve.",
+ "rows": [
+  {
+   "kind": "saying",
+   "text_en": "Arise, awake, and stop not till the goal is reached.",
+   "text_hi": "उठो, जागो, और तब तक मत रुको जब तक लक्ष्य प्राप्त न हो जाए।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5000,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora -- his rendering of Katha Upanishad 1.3.14",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Take up one idea. Make that one idea your life -- think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body be full of that idea, and just leave every other idea alone. This is the way to success.",
+   "text_hi": "एक विचार लो। उसी एक विचार को अपना जीवन बना लो -- उसी के बारे में सोचो, उसी का सपना देखो, उसी पर जियो। मस्तिष्क, मांसपेशियाँ, नसें, शरीर का हर हिस्सा उसी विचार से भर जाए, और बाकी हर विचार को छोड़ दो। यही सफलता का मार्ग है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5010,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga and Bhakti-Yoga, 'Work and its Secret'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "All the powers in the universe are already ours. It is we who have put our hands before our eyes and cry that it is dark.",
+   "text_hi": "ब्रह्मांड की सारी शक्तियाँ पहले से ही हमारी हैं। हम ही अपनी आँखों के आगे हाथ रखकर रोते हैं कि अंधेरा है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5020,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'The Powers of the Mind'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The greatest sin is to think yourself weak. Never think there is anything impossible for the soul.",
+   "text_hi": "सबसे बड़ा पाप है स्वयं को कमजोर समझना। कभी मत सोचो कि आत्मा के लिए कुछ भी असंभव है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5030,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Strength is life, weakness is death. Strength is felicity, life eternal, immortal; weakness is constant strain and misery.",
+   "text_hi": "बल ही जीवन है, निर्बलता ही मृत्यु। बल ही सुख है, शाश्वत जीवन, अमरता; निर्बलता निरंतर खिंचाव और दुख है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5040,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'Practical Vedanta'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Expansion is life, contraction is death. Love is life, hatred is death.",
+   "text_hi": "विस्तार ही जीवन है, संकुचन ही मृत्यु। प्रेम ही जीवन है, घृणा ही मृत्यु।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "विवेक"
+   ],
+   "order_no": 5050,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "You cannot believe in God until you believe in yourself.",
+   "text_hi": "जब तक तुम स्वयं पर विश्वास नहीं करते, तब तक ईश्वर पर विश्वास नहीं कर सकते।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "courage"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "साहस"
+   ],
+   "order_no": 5060,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Truth can be stated in a thousand different ways, yet each one can be true.",
+   "text_hi": "सत्य को हजार अलग-अलग तरीकों से कहा जा सकता है, फिर भी हर एक सच हो सकता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 5070,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "They alone live who live for others; the rest are more dead than alive.",
+   "text_hi": "वही जीते हैं जो दूसरों के लिए जीते हैं; बाकी तो जीवित से अधिक मृत हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "love"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "प्रेम"
+   ],
+   "order_no": 5080,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Where can we go to find God if we cannot see Him in our own hearts and in every living being?",
+   "text_hi": "ईश्वर को खोजने कहाँ जाएँ, यदि हम उसे अपने ही हृदय में और हर जीव में नहीं देख पाते?",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 5090,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'Practical Vedanta'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The moment I have realised God sitting in the temple of every human body, the moment I stand in reverence before every human being and see God in him -- that moment I am free from bondage.",
+   "text_hi": "जिस क्षण मैंने हर मनुष्य के शरीर रूपी मंदिर में ईश्वर को बैठा देखा, जिस क्षण मैं हर मनुष्य के सामने श्रद्धा से खड़ा हुआ और उसमें ईश्वर को देखा -- उसी क्षण मैं बंधन से मुक्त हो गया।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "love"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "प्रेम"
+   ],
+   "order_no": 5100,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'The Real Nature of Man'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "We are what our thoughts have made us; so take care about what you think. Words are secondary. Thoughts live; they travel far.",
+   "text_hi": "हम वही हैं जो हमारे विचारों ने हमें बनाया है; इसलिए ध्यान रखो कि तुम क्या सोचते हो। शब्द गौण हैं। विचार जीते हैं; वे दूर तक जाते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 5110,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Stand up, be bold, be strong. Take the whole responsibility on your own shoulders, and know that you are the creator of your own destiny.",
+   "text_hi": "उठो, साहसी बनो, बलवान बनो। पूरी जिम्मेदारी अपने कंधों पर लो, और जान लो कि तुम्हारा भाग्य तुम्हारा ही रचा हुआ है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5120,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'Practical Vedanta'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Be not afraid, for all great power throughout the history of humanity has been with the people.",
+   "text_hi": "डरो मत, क्योंकि मानव इतिहास में सारी बड़ी शक्ति सदा जनता के पास रही है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5130,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. IV, Writings: Prose",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Anything that makes you weak physically, intellectually, and spiritually, reject as poison.",
+   "text_hi": "जो भी तुम्हें शारीरिक, बौद्धिक या आध्यात्मिक रूप से कमजोर बनाए, उसे विष समझकर त्याग दो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5140,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Comfort is no test of truth; truth is often far from being comfortable.",
+   "text_hi": "सुविधा सत्य की कसौटी नहीं है; सत्य अक्सर सुविधाजनक होने से बहुत दूर होता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 5150,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The greatest religion is to be true to your own nature. Have faith in yourselves.",
+   "text_hi": "सबसे बड़ा धर्म है अपने स्वभाव के प्रति सच्चा होना। स्वयं पर श्रद्धा रखो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "विवेक"
+   ],
+   "order_no": 5160,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Never mind failures; they are quite natural, they are the beauty of life, these failures. What would life be without them?",
+   "text_hi": "असफलताओं की चिंता मत करो; वे बिलकुल स्वाभाविक हैं, वे ही जीवन का सौंदर्य हैं। इनके बिना जीवन क्या होता?",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "joy"
+   ],
+   "themes_hi": [
+    "साहस",
+    "आनंद"
+   ],
+   "order_no": 5170,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Even the greatest fool can accomplish a task if it be after his heart. But the intelligent man is he who can convert every work into one that suits his taste.",
+   "text_hi": "बड़े से बड़ा मूर्ख भी वह काम कर लेता है जो उसके मन का हो। बुद्धिमान वही है जो हर काम को अपने मन का बना ले।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 5180,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The world is the great gymnasium where we come to make ourselves strong.",
+   "text_hi": "यह संसार वह विशाल व्यायामशाला है जहाँ हम स्वयं को बलवान बनाने आते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5190,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Each soul is potentially divine. The goal is to manifest this divinity within by controlling nature, external and internal.",
+   "text_hi": "हर आत्मा संभावनारूप से दिव्य है। लक्ष्य है भीतर और बाहर की प्रकृति पर नियंत्रण करके इस दिव्यता को प्रकट करना।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "विवेक"
+   ],
+   "order_no": 5200,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Raja-Yoga, concluding aphorism",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Do this either by work, or worship, or psychic control, or philosophy -- by one, or more, or all of these -- and be free. This is the whole of religion.",
+   "text_hi": "इसे कर्म से करो, या उपासना से, या मन के संयम से, या ज्ञान से -- किसी एक से, या अनेक से, या सभी से -- और मुक्त हो जाओ। यही समूचा धर्म है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "विवेक"
+   ],
+   "order_no": 5210,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Raja-Yoga, concluding aphorism",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "It is our own mental attitude which makes the world what it is for us. Our thoughts make things beautiful, our thoughts make things ugly.",
+   "text_hi": "हमारी अपनी मानसिक दृष्टि ही संसार को वैसा बनाती है जैसा वह हमारे लिए है। हमारे विचार ही वस्तुओं को सुंदर बनाते हैं, हमारे विचार ही उन्हें कुरूप।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "peace"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "शांति"
+   ],
+   "order_no": 5220,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga, 'Karma in its Effect on Character'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Ask nothing; want nothing in return. Give what you have to give; it will come back to you, but do not think of that now.",
+   "text_hi": "कुछ मत माँगो; बदले में कुछ मत चाहो। जो देना है दे दो; वह लौटकर तुम्हारे पास आएगा, पर अभी उसका विचार मत करो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "love"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "प्रेम"
+   ],
+   "order_no": 5230,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga, 'The Secret of Work'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The only way to get to the centre is to work through the circumference; there is no other way.",
+   "text_hi": "केंद्र तक पहुँचने का एक ही रास्ता है -- परिधि से होकर काम करना; और कोई रास्ता नहीं है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "त्याग"
+   ],
+   "order_no": 5240,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Every man should take up his own ideal and endeavour to accomplish it. That is a surer way of progress than taking up other men's ideals.",
+   "text_hi": "हर मनुष्य को अपना ही आदर्श लेकर उसे पूरा करने का प्रयत्न करना चाहिए। दूसरों के आदर्श अपनाने से यह उन्नति का अधिक निश्चित मार्ग है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 5250,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga, 'Each is Great in His Own Place'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Blows are what awaken us and help to break the dream. They show us the insufficiency of this world and make us long to escape.",
+   "text_hi": "चोटें ही हमें जगाती हैं और स्वप्न को तोड़ने में सहायक होती हैं। वे हमें इस संसार की अपूर्णता दिखाती हैं और मुक्ति की चाह जगाती हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 5260,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Fear is death, fear is sin, fear is hell, fear is unrighteousness, fear is wrong life. All the negative thoughts that have come into this world have proceeded from this evil spirit of fear.",
+   "text_hi": "भय ही मृत्यु है, भय ही पाप है, भय ही नरक है, भय ही अधर्म है, भय ही मिथ्या जीवन है। इस संसार में जितने भी नकारात्मक विचार आए हैं, सब इसी भय की दुष्ट आत्मा से निकले हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "fear",
+    "courage"
+   ],
+   "themes_hi": [
+    "भय",
+    "साहस"
+   ],
+   "order_no": 5270,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "This is the great fact: strength is life, weakness is death; strength is bliss, life eternal; weakness is constant strain and misery -- weakness is death.",
+   "text_hi": "यही महान सत्य है: बल जीवन है, निर्बलता मृत्यु; बल आनंद है, शाश्वत जीवन; निर्बलता निरंतर तनाव और दुख है -- निर्बलता ही मृत्यु है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "fear"
+   ],
+   "themes_hi": [
+    "साहस",
+    "भय"
+   ],
+   "order_no": 5280,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'Practical Vedanta, Part II'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Purity, patience, and perseverance overcome all obstacles. All great things must of necessity be slow.",
+   "text_hi": "पवित्रता, धैर्य और अध्यवसाय सारी बाधाओं पर विजय पा लेते हैं। सभी महान कार्य अनिवार्य रूप से धीरे ही होते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "peace"
+   ],
+   "themes_hi": [
+    "साहस",
+    "शांति"
+   ],
+   "order_no": 5290,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VI, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Have faith in yourself -- all power is in you. Be conscious and bring it out. Say, 'I can do everything.'",
+   "text_hi": "स्वयं पर श्रद्धा रखो -- सारी शक्ति तुम्हारे भीतर है। सजग हो जाओ और उसे बाहर लाओ। कहो, 'मैं सब कुछ कर सकता हूँ।'",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "courage"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "साहस"
+   ],
+   "order_no": 5300,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Never say 'no', never say 'I cannot', for you are infinite. Even time and space are as nothing compared with your nature.",
+   "text_hi": "कभी 'नहीं' मत कहो, कभी 'मैं नहीं कर सकता' मत कहो, क्योंकि तुम अनंत हो। तुम्हारे स्वरूप के सामने तो काल और देश भी कुछ नहीं हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "faith"
+   ],
+   "themes_hi": [
+    "साहस",
+    "श्रद्धा"
+   ],
+   "order_no": 5310,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Look upon every man, woman, and everyone as God. You cannot help anyone, you can only serve.",
+   "text_hi": "हर पुरुष, हर स्त्री, हर किसी को ईश्वर मानकर देखो। तुम किसी की सहायता नहीं कर सकते, तुम केवल सेवा कर सकते हो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "love"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "प्रेम"
+   ],
+   "order_no": 5320,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The less passion there is, the better we work. The calmer we are, the better for us and the more the amount of work we can do.",
+   "text_hi": "जितना कम आवेग होगा, उतना ही अच्छा काम होगा। हम जितने शांत होंगे, हमारे लिए उतना ही अच्छा, और उतना ही अधिक काम हम कर सकेंगे।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 5330,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Karma-Yoga, 'The Secret of Work'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Desire, ignorance, and inequality -- this is the trinity of bondage.",
+   "text_hi": "वासना, अज्ञान और असमानता -- यही बंधन की त्रिमूर्ति है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 5340,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Notes from Lectures and Discourses",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Religion is the manifestation of the Divinity already in man. It is realisation, not talk, nor doctrine, nor theories.",
+   "text_hi": "धर्म मनुष्य में पहले से विद्यमान दिव्यता का प्रकट होना है। वह अनुभूति है -- न बातचीत, न सिद्धांत, न कल्पनाएँ।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "devotion"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "भक्ति"
+   ],
+   "order_no": 5350,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. IV, 'The Religion We Are Born In' / Lectures",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Condemn none: if you can stretch out a helping hand, do so. If you cannot, fold your hands, bless your brothers, and let them go their own way.",
+   "text_hi": "किसी की निंदा मत करो: यदि सहायता का हाथ बढ़ा सको तो बढ़ाओ। यदि नहीं, तो हाथ जोड़ो, अपने भाइयों को आशीर्वाद दो, और उन्हें उनकी राह जाने दो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "forgiveness",
+    "love"
+   ],
+   "themes_hi": [
+    "क्षमा",
+    "प्रेम"
+   ],
+   "order_no": 5360,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VI, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The remedy for weakness is not brooding over weakness, but thinking of strength. Teach men of the strength that is already within them.",
+   "text_hi": "निर्बलता का उपाय निर्बलता पर सोचते रहना नहीं, बल का चिंतन करना है। मनुष्यों को उस बल का पाठ पढ़ाओ जो पहले से उनके भीतर है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5370,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Come out into the broad light of day, come out from the little narrow paths, for how can the infinite soul rest content to live and die in small ruts?",
+   "text_hi": "दिन के विस्तृत प्रकाश में बाहर आओ, इन छोटी सँकरी पगडंडियों से बाहर आओ; अनंत आत्मा भला छोटी लीकों में जीने-मरने से कैसे संतुष्ट हो सकती है?",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5380,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "That man has reached immortality who is disturbed by nothing material.",
+   "text_hi": "वह मनुष्य अमरत्व को प्राप्त कर चुका है जिसे कोई भी भौतिक वस्तु विचलित नहीं करती।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 5390,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "As different streams having different sources all mingle their waters in the sea, so the different paths which men take all lead to Thee.",
+   "text_hi": "जैसे भिन्न-भिन्न स्रोतों से निकली नदियाँ अंत में समुद्र में जा मिलती हैं, वैसे ही मनुष्य जिन भिन्न मार्गों को अपनाते हैं, वे सब तुझ तक ही पहुँचते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "devotion"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "भक्ति"
+   ],
+   "order_no": 5400,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Addresses at the Parliament of Religions, Chicago 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Sectarianism, bigotry, and its horrible descendant, fanaticism, have long possessed this beautiful earth.",
+   "text_hi": "सांप्रदायिकता, कट्टरता और उसकी भयानक संतान धर्मांधता ने बहुत लंबे समय तक इस सुंदर पृथ्वी को जकड़ रखा है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 5410,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Addresses at the Parliament of Religions, Chicago 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "We not only tolerate, but we accept as true every religion; and I am proud to belong to a religion which has taught the world both tolerance and universal acceptance.",
+   "text_hi": "हम केवल सहते ही नहीं, बल्कि हर धर्म को सत्य मानकर स्वीकार करते हैं; और मुझे गर्व है कि मैं उस धर्म का हूँ जिसने संसार को सहिष्णुता और सार्वभौमिक स्वीकृति दोनों सिखाईं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "peace"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "शांति"
+   ],
+   "order_no": 5420,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Response to Welcome, Parliament of Religions, Chicago 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Help, and not fight; assimilation, and not destruction; harmony and peace, and not dissension.",
+   "text_hi": "सहायता हो, संघर्ष नहीं; आत्मसात्करण हो, विनाश नहीं; सामंजस्य और शांति हो, फूट नहीं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "love"
+   ],
+   "themes_hi": [
+    "शांति",
+    "प्रेम"
+   ],
+   "order_no": 5430,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Address at the Final Session, Parliament of Religions, Chicago 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The Vedanta teaches that the world is only relatively true, and religion is realising, not believing.",
+   "text_hi": "वेदांत सिखाता है कि यह जगत् केवल सापेक्ष रूप से सत्य है, और धर्म मानना नहीं, अनुभव करना है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 5440,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The greatest help to spiritual life is meditation. In meditation we divest ourselves of all material conditions and feel our divine nature.",
+   "text_hi": "आध्यात्मिक जीवन में सबसे बड़ी सहायता ध्यान है। ध्यान में हम सारी भौतिक स्थितियों को उतार देते हैं और अपने दिव्य स्वरूप का अनुभव करते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "devotion"
+   ],
+   "themes_hi": [
+    "शांति",
+    "भक्ति"
+   ],
+   "order_no": 5450,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The calm man is not one who is dull, but one whose mind is under control, poised and steady like a lamp in a windless place.",
+   "text_hi": "शांत व्यक्ति वह नहीं जो जड़ हो, बल्कि वह जिसका मन वश में हो -- निर्वात स्थान में रखे दीपक की भाँति स्थिर और अविचल।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 5460,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Don't look back -- forward, infinite energy, infinite enthusiasm, infinite daring, and infinite patience -- then alone can great deeds be accomplished.",
+   "text_hi": "पीछे मत देखो -- आगे बढ़ो; अनंत ऊर्जा, अनंत उत्साह, अनंत साहस और अनंत धैर्य -- तभी महान कार्य संपन्न हो सकते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 5470,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VI, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Be free; hope for nothing from anyone. I am sure if you look back upon your lives you will find that you were always vainly trying to get help from others which never came.",
+   "text_hi": "मुक्त रहो; किसी से कोई आशा मत रखो। मुझे विश्वास है कि यदि तुम अपने जीवन पर दृष्टि डालो तो पाओगे कि तुम सदा व्यर्थ ही दूसरों से सहायता चाहते रहे, जो कभी आई ही नहीं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5480,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VIII, Lectures and Discourses",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "All the strength and succour you want is within yourselves. Therefore make your own future.",
+   "text_hi": "जितना बल और जितना सहारा तुम चाहते हो, सब तुम्हारे ही भीतर है। इसलिए अपना भविष्य स्वयं गढ़ो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "faith"
+   ],
+   "themes_hi": [
+    "साहस",
+    "श्रद्धा"
+   ],
+   "order_no": 5490,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VIII, Lectures and Discourses",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Whatever you think, that you will be. If you think yourselves weak, weak you will be; if you think yourselves strong, strong you will be.",
+   "text_hi": "जो तुम सोचोगे, वही बन जाओगे। यदि तुम स्वयं को निर्बल समझोगे, निर्बल हो जाओगे; यदि स्वयं को बलवान समझोगे, बलवान हो जाओगे।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "faith"
+   ],
+   "themes_hi": [
+    "साहस",
+    "श्रद्धा"
+   ],
+   "order_no": 5500,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VIII, Lectures and Discourses",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Learn everything that is good from others, but bring it in, and in your own way absorb it; do not become others.",
+   "text_hi": "दूसरों से जो कुछ अच्छा है सब सीखो, पर उसे भीतर लाकर अपने ढंग से आत्मसात् करो; दूसरे मत बन जाओ।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 5510,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Great work requires great and persistent effort for a long time. Character has to be established through a thousand stumbles.",
+   "text_hi": "महान कार्य के लिए दीर्घकाल तक महान और अविरत परिश्रम चाहिए। चरित्र हजार बार ठोकर खाकर ही बनता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 5520,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Truth, purity, and unselfishness -- wherever these are present, there is no power below or above the sun to crush the possessor thereof.",
+   "text_hi": "सत्य, पवित्रता और निःस्वार्थता -- जहाँ ये हों, वहाँ सूर्य के नीचे या ऊपर ऐसी कोई शक्ति नहीं जो उनके धारक को कुचल सके।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "साहस",
+    "त्याग"
+   ],
+   "order_no": 5530,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Nothing is impossible. There is infinite power in the soul, and it wants only to be awakened.",
+   "text_hi": "कुछ भी असंभव नहीं है। आत्मा में अनंत शक्ति है, वह केवल जागृत होना चाहती है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "faith"
+   ],
+   "themes_hi": [
+    "साहस",
+    "श्रद्धा"
+   ],
+   "order_no": 5540,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'The Powers of the Mind'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The whole of life is only a swan song. Never forget those glorious words that say the essence of this world is death and sorrow.",
+   "text_hi": "समूचा जीवन बस एक विदा-गीत है। उन दीप्त शब्दों को कभी मत भूलो जो कहते हैं कि इस संसार का सार मृत्यु और शोक है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 5550,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VI, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Say not that anyone is a sinner. It is a standing libel on human nature. Come up, O lions, and shake off the delusion that you are sheep.",
+   "text_hi": "किसी को पापी मत कहो। यह मानव स्वभाव पर लगा हुआ स्थायी कलंक है। उठो, हे सिंहो, और इस भ्रम को झटक दो कि तुम भेड़ें हो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "faith"
+   ],
+   "themes_hi": [
+    "साहस",
+    "श्रद्धा"
+   ],
+   "order_no": 5560,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Addresses at the Parliament of Religions, 'Paper on Hinduism'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Ye are the children of God, the sharers of immortal bliss, holy and perfect beings. Ye divinities on earth -- sinners? It is a sin to call a man so.",
+   "text_hi": "तुम ईश्वर की संतान हो, अमर आनंद के भागी, पवित्र और पूर्ण प्राणी। तुम पृथ्वी पर देवता हो -- और पापी? किसी मनुष्य को ऐसा कहना ही पाप है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "joy"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "आनंद"
+   ],
+   "order_no": 5570,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, 'Paper on Hinduism', Parliament of Religions, Chicago 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Love opens the most impossible gates; love is the gate to all the secrets of the universe.",
+   "text_hi": "प्रेम उन द्वारों को भी खोल देता है जो असंभव जान पड़ते हैं; प्रेम ही ब्रह्मांड के समस्त रहस्यों का द्वार है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "devotion"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "भक्ति"
+   ],
+   "order_no": 5580,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "To devote your life to the good of all and to the happiness of all is religion. Whatever you do for your own sake is not religion.",
+   "text_hi": "अपना जीवन सबके हित और सबके सुख को अर्पित कर देना ही धर्म है। जो कुछ तुम अपने लिए करते हो, वह धर्म नहीं है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "devotion"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "भक्ति"
+   ],
+   "order_no": 5590,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Sayings and Utterances",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "When an idea exclusively occupies the mind, it is transformed into an actual physical or mental state.",
+   "text_hi": "जब कोई विचार मन पर अनन्य रूप से छा जाता है, तब वह वास्तविक शारीरिक या मानसिक अवस्था में बदल जाता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 5600,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, Raja-Yoga",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "In one word, this ideal is that you are divine. All differences in this world are of degree, and not of kind, because oneness is the secret of everything.",
+   "text_hi": "एक शब्द में, यही आदर्श है कि तुम दिव्य हो। इस संसार के सारे भेद मात्रा के हैं, प्रकार के नहीं, क्योंकि एकत्व ही हर वस्तु का रहस्य है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 5610,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'Practical Vedanta'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Neither seek nor avoid; take what comes. It is liberty to be affected by nothing; do not merely endure, be unattached.",
+   "text_hi": "न खोजो, न बचो; जो आए उसे लो। किसी से भी प्रभावित न होना ही स्वतंत्रता है; केवल सहो मत, अनासक्त हो जाओ।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 5620,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The knowledge of the past is only useful to teach us what to do now. Let the dead past bury its dead.",
+   "text_hi": "बीते हुए का ज्ञान केवल इसलिए उपयोगी है कि वह हमें सिखाए कि अब क्या करना है। मृत अतीत को अपने मुर्दे स्वयं दफनाने दो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 5630,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Thou art the man, Thou the woman, Thou the young man walking in the strength of youth. Thou art all that exists, wherever we turn.",
+   "text_hi": "तू ही पुरुष है, तू ही स्त्री, तू ही वह तरुण जो यौवन के बल से चलता है। जहाँ भी हम मुड़ें, जो कुछ है वह सब तू ही है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 5640,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, 'Paper on Hinduism' -- his rendering of Shvetashvatara Upanishad 4.3",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Where the mind is without fear and the head is held high; where knowledge is free -- into that heaven of freedom, my Father, let my country awake.",
+   "text_hi": "जहाँ मन भय से मुक्त हो और मस्तक ऊँचा उठा हो; जहाँ ज्ञान स्वतंत्र हो -- हे पिता, स्वतंत्रता के उसी स्वर्ग में मेरा देश जाग उठे।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "fear"
+   ],
+   "themes_hi": [
+    "साहस",
+    "भय"
+   ],
+   "order_no": 5650,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 35",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Where the clear stream of reason has not lost its way into the dreary desert sand of dead habit -- into that heaven of freedom let my country awake.",
+   "text_hi": "जहाँ विवेक की निर्मल धारा मृत रूढ़ियों के नीरस मरुस्थल में अपना मार्ग न खो बैठी हो -- स्वतंत्रता के उसी स्वर्ग में मेरा देश जाग उठे।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 5660,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 35",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Thou hast made me endless, such is thy pleasure. This frail vessel thou emptiest again and again, and fillest it ever with fresh life.",
+   "text_hi": "तूने मुझे अनंत बनाया है, यही तेरा आनंद है। इस दुर्बल पात्र को तू बार-बार रिक्त करता है, और सदा नए जीवन से भर देता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "joy"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "आनंद"
+   ],
+   "order_no": 5670,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 1",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Thy infinite gifts come to me only on these very small hands of mine. Ages pass, and still thou pourest, and still there is room to fill.",
+   "text_hi": "तेरे अनंत उपहार मेरे इन्हीं छोटे-से हाथों में आते हैं। युग बीत जाते हैं, फिर भी तू उँडेलता रहता है, और फिर भी भरने को स्थान बचा रहता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 5680,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 1",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I know not how thou singest, my master! I ever listen in silent amazement. The light of thy music illumines the world.",
+   "text_hi": "हे स्वामी, मैं नहीं जानता तू कैसे गाता है! मैं सदा मौन विस्मय में सुनता रहता हूँ। तेरे संगीत का प्रकाश समूचे संसार को आलोकित करता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "joy"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "आनंद"
+   ],
+   "order_no": 5690,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 3",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Life of my life, I shall ever try to keep my body pure, knowing that thy living touch is upon all my limbs.",
+   "text_hi": "हे मेरे प्राणों के प्राण, मैं सदा अपने शरीर को पवित्र रखने का प्रयत्न करूँगा, यह जानकर कि मेरे प्रत्येक अंग पर तेरा जीवंत स्पर्श है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 5700,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 4",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I shall ever try to drive all evils away from my heart and keep my love in flower, knowing that thou hast thy seat in the inmost shrine of my heart.",
+   "text_hi": "मैं सदा प्रयत्न करूँगा कि हृदय से सारी बुराइयाँ दूर करूँ और अपने प्रेम को खिला रखूँ, यह जानकर कि मेरे हृदय के अंतरतम मंदिर में तेरा आसन है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "devotion"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "भक्ति"
+   ],
+   "order_no": 5710,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 4",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "My song has put off her adornments. She has no pride of dress and decoration. Ornaments would mar our union.",
+   "text_hi": "मेरे गीत ने अपने आभूषण उतार दिए हैं। उसे वस्त्र और शृंगार का कोई गर्व नहीं। आभूषण तो हमारे मिलन में बाधा बनते।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "त्याग"
+   ],
+   "order_no": 5720,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 7",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The child who is decked with prince's robes and who has jewelled chains round his neck loses all pleasure in his play; his dress hampers him at every step.",
+   "text_hi": "जो बालक राजकुमार के वस्त्रों से सजा है और जिसके गले में रत्नों की माला है, उसका खेल का सारा सुख जाता रहता है; उसका पहनावा हर कदम पर उसे बाँधता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "त्याग"
+   ],
+   "order_no": 5730,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 8",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Leave this chanting and singing and telling of beads! Whom dost thou worship in this lonely dark corner of a temple with doors all shut?",
+   "text_hi": "यह जप, यह गान, यह माला फेरना छोड़ दे! मंदिर के इस एकांत अँधेरे कोने में, सारे द्वार बंद किए, तू किसकी उपासना कर रहा है?",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "विवेक"
+   ],
+   "order_no": 5740,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 11",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "He is there where the tiller is tilling the hard ground and where the pathmaker is breaking stones. He is with them in sun and in shower.",
+   "text_hi": "वह वहाँ है जहाँ किसान कठोर भूमि जोत रहा है और जहाँ राह बनाने वाला पत्थर तोड़ रहा है। धूप में और वर्षा में वह उन्हीं के साथ है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "त्याग"
+   ],
+   "order_no": 5750,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 11",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Come out of thy meditations and leave aside thy flowers and incense! What harm is there if thy clothes become tattered and stained?",
+   "text_hi": "अपने ध्यान से बाहर आ, अपने फूल और धूप एक ओर रख दे! यदि तेरे वस्त्र फट जाएँ और मैले हो जाएँ तो क्या हानि है?",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "त्याग"
+   ],
+   "order_no": 5760,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 11",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The time that my journey takes is long and the way of it long. I came out on the chariot of the first gleam of light.",
+   "text_hi": "मेरी यात्रा में लगने वाला समय लंबा है और उसका मार्ग भी लंबा। मैं प्रकाश की पहली किरण के रथ पर सवार होकर निकला था।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 5770,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 12",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The traveller has to knock at every alien door to come to his own, and one has to wander through all the outer worlds to reach the innermost shrine at the end.",
+   "text_hi": "यात्री को अपने घर तक पहुँचने के लिए हर पराए द्वार पर दस्तक देनी पड़ती है, और अंत में अंतरतम मंदिर तक पहुँचने के लिए सारे बाहरी लोकों में भटकना पड़ता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 5780,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 12",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "My eyes strayed far and wide before I shut them and said, 'Here art thou!' The question and the cry, 'Oh, where?' melt into tears of a thousand streams.",
+   "text_hi": "मेरी आँखें दूर-दूर तक भटकती रहीं, फिर मैंने उन्हें मूँदकर कहा, 'तू तो यहीं है!' 'ओह, कहाँ?' का वह प्रश्न और वह पुकार हजार धाराओं के आँसुओं में घुल जाते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "grief"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "शोक"
+   ],
+   "order_no": 5790,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 12",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I have had my invitation to this world's festival, and thus my life has been blessed. My eyes have seen and my ears have heard.",
+   "text_hi": "मुझे इस संसार के उत्सव का निमंत्रण मिला, और इसी से मेरा जीवन धन्य हुआ। मेरी आँखों ने देखा और मेरे कानों ने सुना।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "faith"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "श्रद्धा"
+   ],
+   "order_no": 5800,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 16",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "If thou speakest not I will fill my heart with thy silence and endure it. I will keep still and wait like the night with starry vigil.",
+   "text_hi": "यदि तू न बोले तो मैं अपने हृदय को तेरे मौन से भर लूँगा और उसे सह लूँगा। मैं चुप रहूँगा और तारों भरी रात की तरह जागता हुआ प्रतीक्षा करूँगा।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "peace"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "शांति"
+   ],
+   "order_no": 5810,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 19",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "If the day is done, if birds sing no more, if the wind has flagged tired, then draw the veil of darkness thick upon me.",
+   "text_hi": "यदि दिन बीत चुका है, यदि पक्षी अब नहीं गाते, यदि पवन थककर ठहर गया है, तो अंधकार का घना आवरण मुझ पर डाल दे।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "peace"
+   ],
+   "themes_hi": [
+    "शोक",
+    "शांति"
+   ],
+   "order_no": 5820,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 24",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "In desperate hope I go and search for her in all the corners of my room; I find her not.",
+   "text_hi": "व्याकुल आशा लिए मैं जाता हूँ और अपने कमरे के कोने-कोने में उसे ढूँढ़ता हूँ; वह मुझे कहीं नहीं मिलती।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "love"
+   ],
+   "themes_hi": [
+    "शोक",
+    "प्रेम"
+   ],
+   "order_no": 5830,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 87",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "On the day when death will knock at thy door, what wilt thou offer to him? I will set before my guest the full vessel of my life.",
+   "text_hi": "जिस दिन मृत्यु तेरे द्वार पर दस्तक देगी, तू उसे क्या अर्पित करेगा? मैं अपने अतिथि के सामने अपने जीवन का भरा हुआ पात्र रख दूँगा।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "शोक",
+    "त्याग"
+   ],
+   "order_no": 5840,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 90",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "O thou the last fulfilment of life, Death, my death, come and whisper to me! Day after day have I kept watch for thee.",
+   "text_hi": "हे जीवन की अंतिम परिपूर्ति, हे मृत्यु, मेरी मृत्यु, आ और मेरे कान में कह! दिन-प्रतिदिन मैं तेरी ही प्रतीक्षा करता रहा हूँ।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "faith"
+   ],
+   "themes_hi": [
+    "शोक",
+    "श्रद्धा"
+   ],
+   "order_no": 5850,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 91",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "When I go from hence let this be my parting word, that what I have seen is unsurpassable.",
+   "text_hi": "जब मैं यहाँ से जाऊँ तो मेरा विदा-वचन यही हो कि जो कुछ मैंने देखा, उससे बढ़कर कुछ नहीं है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "grief"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "शोक"
+   ],
+   "order_no": 5860,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 96",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I have tasted of the hidden honey of this lotus that expands on the ocean of light, and thus am I blessed -- let this be my parting word.",
+   "text_hi": "प्रकाश के सागर पर खिलने वाले इस कमल का गुप्त मधु मैंने चख लिया है, और इसी से मैं धन्य हुआ -- यही मेरा विदा-वचन हो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "devotion"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "भक्ति"
+   ],
+   "order_no": 5870,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 96",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Let all my songs gather together their diverse strains into a single current and flow to a sea of silence in one salutation to thee.",
+   "text_hi": "मेरे सारे गीत अपने भिन्न-भिन्न स्वरों को एक ही धारा में समेट लें और तुझे एक प्रणाम करते हुए मौन के सागर में जा मिलें।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "peace"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "शांति"
+   ],
+   "order_no": 5880,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 103",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Like a flock of homesick cranes flying night and day back to their mountain nests, let all my life take its voyage to its eternal home.",
+   "text_hi": "जैसे घर की याद में डूबे सारसों का झुंड रात-दिन उड़कर अपने पर्वत-नीड़ लौटता है, वैसे ही मेरा समूचा जीवन अपने शाश्वत घर की यात्रा पर चल पड़े।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "peace"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "शांति"
+   ],
+   "order_no": 5890,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 103",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "That I want thee, only thee -- let my heart repeat without end. All desires that distract me, day and night, are false and empty to the core.",
+   "text_hi": "मैं तुझे चाहता हूँ, केवल तुझे -- यही मेरा हृदय अनवरत दोहराता रहे। जो कामनाएँ मुझे रात-दिन भटकाती हैं, वे जड़ तक झूठी और खोखली हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "love"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "प्रेम"
+   ],
+   "order_no": 5900,
+   "primary_source_name": "Gitanjali (Song Offerings), 1912 -- Tagore's own English translation",
+   "primary_source_ref": "Gitanjali, song 38",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Tomorrow's work do today, today's work do now -- if the moment is lost and the deluge comes, when will you do it then?",
+   "text_hi": "काल करे सो आज कर, आज करे सो अब।\nपल में परलय होयगी, बहुरि करेगा कब॥",
+   "sanskrit": "काल करे सो आज कर, आज करे सो अब।\nपल में परलय होयगी, बहुरि करेगा कब॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 5910,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I went out looking for the wicked and found no one; when I searched my own heart, no one was worse than me.",
+   "text_hi": "बुरा जो देखन मैं चला, बुरा न मिलिया कोय।\nजो दिल खोजा आपना, मुझसे बुरा न कोय॥",
+   "sanskrit": "बुरा जो देखन मैं चला, बुरा न मिलिया कोय।\nजो दिल खोजा आपना, मुझसे बुरा न कोय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "forgiveness"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "क्षमा"
+   ],
+   "order_no": 5920,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Slowly, slowly, O mind -- everything happens in its own time. Though the gardener waters a hundred pots, fruit comes only in its season.",
+   "text_hi": "धीरे-धीरे रे मना, धीरे सब कुछ होय।\nमाली सींचे सौ घड़ा, ऋतु आए फल होय॥",
+   "sanskrit": "धीरे-धीरे रे मना, धीरे सब कुछ होय।\nमाली सींचे सौ घड़ा, ऋतु आए फल होय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 5930,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Where there is mercy there is faith, where there is greed there is sin; where there is anger there is ruin, where there is forgiveness there is God.",
+   "text_hi": "जहाँ दया तहँ धर्म है, जहाँ लोभ तहँ पाप।\nजहाँ क्रोध तहँ काल है, जहाँ क्षमा तहँ आप॥",
+   "sanskrit": "जहाँ दया तहँ धर्म है, जहाँ लोभ तहँ पाप।\nजहाँ क्रोध तहँ काल है, जहाँ क्षमा तहँ आप॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "forgiveness",
+    "anger"
+   ],
+   "themes_hi": [
+    "क्षमा",
+    "क्रोध"
+   ],
+   "order_no": 5940,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The guru and God both stand before me -- whose feet shall I touch first? I bow to the guru, who showed me the way to God.",
+   "text_hi": "गुरु गोविन्द दोऊ खड़े, काके लागूँ पाँय।\nबलिहारी गुरु आपने, गोविन्द दियो बताय॥",
+   "sanskrit": "गुरु गोविन्द दोऊ खड़े, काके लागूँ पाँय।\nबलिहारी गुरु आपने, गोविन्द दियो बताय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "विवेक"
+   ],
+   "order_no": 5950,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Keep the one who criticises you close at hand -- in his courtyard build your hut; without soap or water he will scrub your nature clean.",
+   "text_hi": "निंदक नियरे राखिए, आँगन कुटी छवाय।\nबिन पानी साबुन बिना, निर्मल करे सुभाय॥",
+   "sanskrit": "निंदक नियरे राखिए, आँगन कुटी छवाय।\nबिन पानी साबुन बिना, निर्मल करे सुभाय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "forgiveness"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "क्षमा"
+   ],
+   "order_no": 5960,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Sweeter than sugar is a gentle word -- it wins the whole world over. Speak such words as leave your own self cool and cool everyone who hears.",
+   "text_hi": "ऐसी बानी बोलिए, मन का आपा खोय।\nऔरन को शीतल करे, आपहु शीतल होय॥",
+   "sanskrit": "ऐसी बानी बोलिए, मन का आपा खोय।\nऔरन को शीतल करे, आपहु शीतल होय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "love"
+   ],
+   "themes_hi": [
+    "शांति",
+    "प्रेम"
+   ],
+   "order_no": 5970,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Kabir stands in the marketplace wishing everyone well -- no friend to any, no foe to any.",
+   "text_hi": "कबीरा खड़ा बाज़ार में, सबकी माँगे खैर।\nना काहू से दोस्ती, ना काहू से बैर॥",
+   "sanskrit": "कबीरा खड़ा बाज़ार में, सबकी माँगे खैर।\nना काहू से दोस्ती, ना काहू से बैर॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "love"
+   ],
+   "themes_hi": [
+    "शांति",
+    "प्रेम"
+   ],
+   "order_no": 5980,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The fish in the water is thirsty -- when I hear that, I laugh. God is inside your own house, and you wander the forest looking for Him.",
+   "text_hi": "पानी में मीन पियासी, मोहे सुन-सुन आवे हाँसी।\nघर में वस्तु नजर नहिं आवे, बन-बन फिरत उदासी॥",
+   "sanskrit": "पानी में मीन पियासी, मोहे सुन-सुन आवे हाँसी।\nघर में वस्तु नजर नहिं आवे, बन-बन फिरत उदासी॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "devotion"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "भक्ति"
+   ],
+   "order_no": 5990,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Do not ask a holy man his caste -- ask him what he knows. The price is of the sword, not of the scabbard it rests in.",
+   "text_hi": "जाति न पूछो साधु की, पूछ लीजिए ज्ञान।\nमोल करो तलवार का, पड़ा रहन दो म्यान॥",
+   "sanskrit": "जाति न पूछो साधु की, पूछ लीजिए ज्ञान।\nमोल करो तलवार का, पड़ा रहन दो म्यान॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6000,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "As long as I was, God was not; now God is, and I am not. The lane of love is so narrow that two cannot fit in it.",
+   "text_hi": "जब मैं था तब हरि नहीं, अब हरि हैं मैं नाहिं।\nप्रेम गली अति साँकरी, तामें दो न समाहिं॥",
+   "sanskrit": "जब मैं था तब हरि नहीं, अब हरि हैं मैं नाहिं।\nप्रेम गली अति साँकरी, तामें दो न समाहिं॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "devotion"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "भक्ति"
+   ],
+   "order_no": 6010,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "What use is the tall palm tree? It gives no shade, and its fruit hangs far beyond reach.",
+   "text_hi": "बड़ा हुआ तो क्या हुआ, जैसे पेड़ खजूर।\nपंथी को छाया नहीं, फल लागे अति दूर॥",
+   "sanskrit": "बड़ा हुआ तो क्या हुआ, जैसे पेड़ खजूर।\nपंथी को छाया नहीं, फल लागे अति दूर॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6020,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "When the mind is a rosary, what need have you of beads? Turn the beads of the heart -- the ones in the hand turn nothing.",
+   "text_hi": "माला फेरत जुग भया, फिरा न मन का फेर।\nकर का मनका डार दे, मन का मनका फेर॥",
+   "sanskrit": "माला फेरत जुग भया, फिरा न मन का फेर।\nकर का मनका डार दे, मन का मनका फेर॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "विवेक"
+   ],
+   "order_no": 6030,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The world dies, and dies again, but no one learns how to die well -- die such a death, Kabir, that you never have to die again.",
+   "text_hi": "मरते-मरते जग मुआ, औसर मुआ न कोय।\nदास कबीरा यों मुआ, बहुरि न मरना होय॥",
+   "sanskrit": "मरते-मरते जग मुआ, औसर मुआ न कोय।\nदास कबीरा यों मुआ, बहुरि न मरना होय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 6040,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The house of love is not your aunt's house -- offer your head, then step inside.",
+   "text_hi": "यह तो घर है प्रेम का, खाला का घर नाहिं।\nसीस उतारे भुइँ धरे, तब पैठे घर माहिं॥",
+   "sanskrit": "यह तो घर है प्रेम का, खाला का घर नाहिं।\nसीस उतारे भुइँ धरे, तब पैठे घर माहिं॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "त्याग"
+   ],
+   "order_no": 6050,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Great good fortune it is to win a human body -- every scripture sings that even the gods find it hard to come by.",
+   "text_hi": "बड़े भाग मानुष तनु पावा।\nसुर दुर्लभ सब ग्रंथन्हि गावा॥",
+   "sanskrit": "बड़े भाग मानुष तनु पावा।\nसुर दुर्लभ सब ग्रंथन्हि गावा॥",
+   "iast": null,
+   "source_title_en": "Tulsidas",
+   "source_title_hi": "तुलसीदास",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "विवेक"
+   ],
+   "order_no": 6060,
+   "primary_source_name": "Ramcharitmanas / Dohavali of Tulsidas",
+   "primary_source_ref": "Ramcharitmanas, Uttar Kanda",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Mercy is the root of all virtue, and pride the root of all sin. Never abandon mercy, says Tulsidas, as long as there is breath in the body.",
+   "text_hi": "दया धर्म का मूल है, पाप मूल अभिमान।\nतुलसी दया न छाँड़िए, जब लग घट में प्राण॥",
+   "sanskrit": "दया धर्म का मूल है, पाप मूल अभिमान।\nतुलसी दया न छाँड़िए, जब लग घट में प्राण॥",
+   "iast": null,
+   "source_title_en": "Tulsidas",
+   "source_title_hi": "तुलसीदास",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "forgiveness",
+    "love"
+   ],
+   "themes_hi": [
+    "क्षमा",
+    "प्रेम"
+   ],
+   "order_no": 6070,
+   "primary_source_name": "Ramcharitmanas / Dohavali of Tulsidas",
+   "primary_source_ref": "Dohavali of Tulsidas",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Set the jewel-lamp of Rama's name upon the threshold of your tongue, says Tulsi, if you want light both inside the house and out.",
+   "text_hi": "राम नाम मनिदीप धरु जीह देहरीं द्वार।\nतुलसी भीतर बाहेरहुँ जौं चाहसि उजिआर॥",
+   "sanskrit": "राम नाम मनिदीप धरु जीह देहरीं द्वार।\nतुलसी भीतर बाहेरहुँ जौं चाहसि उजिआर॥",
+   "iast": null,
+   "source_title_en": "Tulsidas",
+   "source_title_hi": "तुलसीदास",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 6080,
+   "primary_source_name": "Ramcharitmanas / Dohavali of Tulsidas",
+   "primary_source_ref": "Ramcharitmanas, Bal Kanda, doha 21",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "There is no virtue like doing good to others, brother, and no baseness like causing another pain.",
+   "text_hi": "परहित सरिस धर्म नहिं भाई।\nपर पीड़ा सम नहिं अधमाई॥",
+   "sanskrit": "परहित सरिस धर्म नहिं भाई।\nपर पीड़ा सम नहिं अधमाई॥",
+   "iast": null,
+   "source_title_en": "Tulsidas",
+   "source_title_hi": "तुलसीदास",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "त्याग"
+   ],
+   "order_no": 6090,
+   "primary_source_name": "Ramcharitmanas / Dohavali of Tulsidas",
+   "primary_source_ref": "Ramcharitmanas, Uttar Kanda",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "For those whose minds are set on the good of others, there is nothing in this world too hard to obtain.",
+   "text_hi": "परहित बस जिन्ह के मन माहीं।\nतिन्ह कहुँ जग दुर्लभ कछु नाहीं॥",
+   "sanskrit": "परहित बस जिन्ह के मन माहीं।\nतिन्ह कहुँ जग दुर्लभ कछु नाहीं॥",
+   "iast": null,
+   "source_title_en": "Tulsidas",
+   "source_title_hi": "तुलसीदास",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "love"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "प्रेम"
+   ],
+   "order_no": 6100,
+   "primary_source_name": "Ramcharitmanas / Dohavali of Tulsidas",
+   "primary_source_ref": "Ramcharitmanas, Uttar Kanda",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Those who feel no sorrow at the sorrow of a friend -- merely to look upon them is a grievous sin.",
+   "text_hi": "जे न मित्र दुख होहिं दुखारी।\nतिन्हहि बिलोकत पातक भारी॥",
+   "sanskrit": "जे न मित्र दुख होहिं दुखारी।\nतिन्हहि बिलोकत पातक भारी॥",
+   "iast": null,
+   "source_title_en": "Tulsidas",
+   "source_title_hi": "तुलसीदास",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "grief"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "शोक"
+   ],
+   "order_no": 6110,
+   "primary_source_name": "Ramcharitmanas / Dohavali of Tulsidas",
+   "primary_source_ref": "Ramcharitmanas, Kishkindha Kanda",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Keep the thread of love unbroken, Rahim -- once it snaps it will not join again, and if it does, a knot remains.",
+   "text_hi": "रहिमन धागा प्रेम का, मत तोड़ो चटकाय।\nटूटे से फिर ना जुड़े, जुड़े गाँठ पड़ि जाय॥",
+   "sanskrit": "रहिमन धागा प्रेम का, मत तोड़ो चटकाय।\nटूटे से फिर ना जुड़े, जुड़े गाँठ पड़ि जाय॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "forgiveness"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "क्षमा"
+   ],
+   "order_no": 6120,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Big things are not always the useful ones, Rahim -- where a needle serves, what use is a sword?",
+   "text_hi": "रहिमन देखि बड़ेन को, लघु न दीजिए डारि।\nजहाँ काम आवे सुई, कहा करे तरवारि॥",
+   "sanskrit": "रहिमन देखि बड़ेन को, लघु न दीजिए डारि।\nजहाँ काम आवे सुई, कहा करे तरवारि॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6130,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Keep the sorrow of your heart inside, Rahim -- hearing of it, others will mock; no one will come to share it.",
+   "text_hi": "रहिमन निज मन की बिथा, मन ही राखो गोय।\nसुनि इठलैहैं लोग सब, बाँटि न लैहैं कोय॥",
+   "sanskrit": "रहिमन निज मन की बिथा, मन ही राखो गोय।\nसुनि इठलैहैं लोग सब, बाँटि न लैहैं कोय॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 6140,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "A tree does not eat its own fruit, nor a river drink its own water; the noble gather wealth for the sake of others.",
+   "text_hi": "तरुवर फल नहिं खात है, सरवर पियहिं न पान।\nकहि रहीम पर काज हित, संपति संचहिं सुजान॥",
+   "sanskrit": "तरुवर फल नहिं खात है, सरवर पियहिं न पान।\nकहि रहीम पर काज हित, संपति संचहिं सुजान॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "love"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "प्रेम"
+   ],
+   "order_no": 6150,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Those who are truly great do not abandon their nature, Rahim -- the snake may bite, but the sandalwood does not lose its scent.",
+   "text_hi": "जो रहीम उत्तम प्रकृति, का करि सकत कुसंग।\nचंदन विष व्यापत नहीं, लिपटे रहत भुजंग॥",
+   "sanskrit": "जो रहीम उत्तम प्रकृति, का करि सकत कुसंग।\nचंदन विष व्यापत नहीं, लिपटे रहत भुजंग॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "peace"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "शांति"
+   ],
+   "order_no": 6160,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Hardship too is good, Rahim, if it lasts only a few days -- in it you learn who in this world is a friend and who is not.",
+   "text_hi": "रहिमन विपदा हूँ भली, जो थोरे दिन होय।\nहित अनहित या जगत में, जानि परत सब कोय॥",
+   "sanskrit": "रहिमन विपदा हूँ भली, जो थोरे दिन होय।\nहित अनहित या जगत में, जानि परत सब कोय॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "courage"
+   ],
+   "themes_hi": [
+    "शोक",
+    "साहस"
+   ],
+   "order_no": 6170,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Keep your water, says Rahim -- without it all is barren. Once the water is gone, neither pearl, nor man, nor lime can be redeemed.",
+   "text_hi": "रहिमन पानी राखिए, बिन पानी सब सून।\nपानी गए न ऊबरे, मोती मानुष चून॥",
+   "sanskrit": "रहिमन पानी राखिए, बिन पानी सब सून।\nपानी गए न ऊबरे, मोती मानुष चून॥",
+   "iast": null,
+   "source_title_en": "Rahim",
+   "source_title_hi": "रहीम",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "त्याग"
+   ],
+   "order_no": 6180,
+   "primary_source_name": "Rahim ke Dohe (Rahim Satsai tradition)",
+   "primary_source_ref": "Rahim ke Dohe -- widely transmitted doha of Abdul Rahim Khan-i-Khanan",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Mine is Giridhar Gopal and no one else -- he on whose head is the peacock crown, he alone is my husband.",
+   "text_hi": "मेरे तो गिरिधर गोपाल, दूसरो न कोई।\nजाके सिर मोर मुकुट, मेरो पति सोई॥",
+   "sanskrit": "मेरे तो गिरिधर गोपाल, दूसरो न कोई।\nजाके सिर मोर मुकुट, मेरो पति सोई॥",
+   "iast": null,
+   "source_title_en": "Mirabai",
+   "source_title_hi": "मीराबाई",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "love"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "प्रेम"
+   ],
+   "order_no": 6190,
+   "primary_source_name": "Mirabai's padas (bhajan tradition)",
+   "primary_source_ref": "Mirabai pada -- widely transmitted in the bhajan tradition",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I have given up family and honour -- what can anyone do to me now? I have sat down in the company of saints and lost all shame before the world.",
+   "text_hi": "छाँड़ि दई कुल की कानि, कहा करिहै कोई।\nसंतन ढिग बैठि-बैठि, लोक-लाज खोई॥",
+   "sanskrit": "छाँड़ि दई कुल की कानि, कहा करिहै कोई।\nसंतन ढिग बैठि-बैठि, लोक-लाज खोई॥",
+   "iast": null,
+   "source_title_en": "Mirabai",
+   "source_title_hi": "मीराबाई",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "courage"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "साहस"
+   ],
+   "order_no": 6200,
+   "primary_source_name": "Mirabai's padas (bhajan tradition)",
+   "primary_source_ref": "Mirabai pada -- widely transmitted in the bhajan tradition",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "I have wept and watered the vine of love, and now that vine has spread and borne the fruit of bliss.",
+   "text_hi": "अँसुवन जल सींचि-सींचि, प्रेम-बेलि बोई।\nअब तो बेलि फैल गई, आणंद फल होई॥",
+   "sanskrit": "अँसुवन जल सींचि-सींचि, प्रेम-बेलि बोई।\nअब तो बेलि फैल गई, आणंद फल होई॥",
+   "iast": null,
+   "source_title_en": "Mirabai",
+   "source_title_hi": "मीराबाई",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "joy"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "आनंद"
+   ],
+   "order_no": 6210,
+   "primary_source_name": "Mirabai's padas (bhajan tradition)",
+   "primary_source_ref": "Mirabai pada -- widely transmitted in the bhajan tradition",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "O my friend, I have bought Govind -- some say secretly, some say openly; I bought him openly, beating the drum.",
+   "text_hi": "माई री मैं तो लियो गोविन्दो मोल।\nकोई कहै छानै कोई कहै चौड़े, लियो री बजन्ता ढोल॥",
+   "sanskrit": "माई री मैं तो लियो गोविन्दो मोल।\nकोई कहै छानै कोई कहै चौड़े, लियो री बजन्ता ढोल॥",
+   "iast": null,
+   "source_title_en": "Mirabai",
+   "source_title_hi": "मीराबाई",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "courage"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "साहस"
+   ],
+   "order_no": 6220,
+   "primary_source_name": "Mirabai's padas (bhajan tradition)",
+   "primary_source_ref": "Mirabai pada -- widely transmitted in the bhajan tradition",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Mira's Lord is Giridhar Nagar -- I take refuge at his feet again and again.",
+   "text_hi": "मीरा के प्रभु गिरिधर नागर, बार-बार बलि जाऊँ।\nचरण-कमल की शरण गही, और कहीं नहिं जाऊँ॥",
+   "sanskrit": "मीरा के प्रभु गिरिधर नागर, बार-बार बलि जाऊँ।\nचरण-कमल की शरण गही, और कहीं नहिं जाऊँ॥",
+   "iast": null,
+   "source_title_en": "Mirabai",
+   "source_title_hi": "मीराबाई",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 6230,
+   "primary_source_name": "Mirabai's padas (bhajan tradition)",
+   "primary_source_ref": "Mirabai pada -- widely transmitted in the bhajan tradition",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "If seeing the grinding stones turn I began to weep, then nothing that comes between two stones is spared.",
+   "text_hi": "चलती चक्की देखि के, दिया कबीरा रोय।\nदो पाटन के बीच में, साबुत बचा न कोय॥",
+   "sanskrit": "चलती चक्की देखि के, दिया कबीरा रोय।\nदो पाटन के बीच में, साबुत बचा न कोय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 6240,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Kabir asks so little: enough grain for two, and a roof -- let the sadhu be fed and the traveller not turned away.",
+   "text_hi": "साईं इतना दीजिए, जामे कुटुम समाय।\nमैं भी भूखा ना रहूँ, साधु न भूखा जाय॥",
+   "sanskrit": "साईं इतना दीजिए, जामे कुटुम समाय।\nमैं भी भूखा ना रहूँ, साधु न भूखा जाय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "शांति",
+    "त्याग"
+   ],
+   "order_no": 6250,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Do not be too upright: go and look at the forest, and you will see that it is the straight trees that are cut down first, and the crooked ones left standing.",
+   "text_hi": "अति सीधा मत बनो: वन में जाकर देखो, सबसे पहले सीधे वृक्ष ही काटे जाते हैं, और टेढ़े खड़े रह जाते हैं।",
+   "sanskrit": "नातिसरलैर्भवितव्यं गत्वा पश्य वनस्थलीम्।\nछिद्यन्ते सरलास्तत्र कुब्जास्तिष्ठन्ति पादपाः॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6260,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on prudence",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "A wise man should not reveal the loss of wealth, the grief of his heart, the misconduct in his house, nor the fact that he has been cheated.",
+   "text_hi": "बुद्धिमान को धन की हानि, मन का दुख, घर का कलंक और अपने साथ हुए छल को प्रकट नहीं करना चाहिए।",
+   "sanskrit": "अर्थनाशं मनस्तापं गृहे दुश्चरितानि च।\nवञ्चनं चापमानं च मतिमान्न प्रकाशयेत्॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "grief"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "शोक"
+   ],
+   "order_no": 6270,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter 7",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "As a single withered tree, if set aflame, burns down a whole forest, so does one unworthy son destroy an entire family.",
+   "text_hi": "जैसे एक सूखा वृक्ष जलकर पूरे वन को भस्म कर देता है, वैसे ही एक कुपुत्र समूचे कुल का नाश कर देता है।",
+   "sanskrit": "एकेनापि सुवृक्षेण दह्यमानेन वह्निना।\nदह्यते तद्वनं सर्वं कुपुत्रेण कुलं यथा॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 6280,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter 3",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "One good son, learned and virtuous, gladdens the whole family -- as the moon alone lights up the night.",
+   "text_hi": "एक ही सुपुत्र, विद्वान और सदाचारी, समूचे कुल को आनंदित कर देता है -- जैसे अकेला चंद्रमा रात्रि को आलोकित करता है।",
+   "sanskrit": "एकेनापि सुपुत्रेण विद्यायुक्तेन साधुना।\nआह्लादितं कुलं सर्वं यथा चन्द्रेण शर्वरी॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "विवेक"
+   ],
+   "order_no": 6290,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter 3",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Learning is the true friend on a journey, a wife is the friend at home, medicine is the friend of the sick, and righteous conduct the friend after death.",
+   "text_hi": "विद्या ही यात्रा में सच्ची मित्र है, पत्नी घर में मित्र है, औषधि रोगी की मित्र है, और धर्म मृत्यु के बाद का मित्र है।",
+   "sanskrit": "विद्या मित्रं प्रवासेषु भार्या मित्रं गृहेषु च।\nव्याधितस्यौषधं मित्रं धर्मो मित्रं मृतस्य च॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 6300,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on friendship",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "He who is not ashamed to ask, who does not tire of learning, and who serves his teacher gladly -- he alone becomes truly learned.",
+   "text_hi": "जो पूछने में लज्जा नहीं करता, जो सीखते हुए नहीं थकता, और जो गुरु की सेवा प्रसन्नता से करता है -- वही सचमुच विद्वान बनता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "devotion"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "भक्ति"
+   ],
+   "order_no": 6310,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on learning",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Time drinks up the life of every creature; it is time that is awake while all else sleeps -- no one can escape what time has measured out.",
+   "text_hi": "काल हर प्राणी का जीवन पी जाता है; सब सोते हैं तब भी काल जागता है -- काल ने जो नाप रखा है, उससे कोई नहीं बच सकता।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "grief"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "शोक"
+   ],
+   "order_no": 6320,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on time",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Whoever has no wealth of learning has neither beauty, nor youth, nor high birth of any real worth -- these are as flowers without fragrance.",
+   "text_hi": "जिसके पास विद्या का धन नहीं, उसका न रूप सार्थक है, न यौवन, न ऊँचा कुल -- ये सब गंधहीन फूलों के समान हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6330,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on learning",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Do not stay even a day in a place that has no wealthy patron, no learned man, no ruler, no river, and no physician.",
+   "text_hi": "उस स्थान पर एक दिन भी मत रुको जहाँ न धनवान हो, न विद्वान, न शासक, न नदी, और न वैद्य।",
+   "sanskrit": "धनिकः श्रोत्रियो राजा नदी वैद्यस्तु पञ्चमः।\nपञ्च यत्र न विद्यन्ते न तत्र दिवसं वसेत्॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 6340,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter 1",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Test a servant when he is out of work, a relative in misfortune, a friend in adversity, and a wife when your wealth is gone.",
+   "text_hi": "सेवक की परख काम न होने पर करो, संबंधी की विपत्ति में, मित्र की कठिनाई में, और पत्नी की तब जब धन चला जाए।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6350,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on testing character",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The fragrance of flowers spreads only with the wind, but the goodness of a person spreads in every direction.",
+   "text_hi": "फूलों की सुगंध केवल हवा के साथ फैलती है, पर मनुष्य की भलाई चारों दिशाओं में फैलती है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "love"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "प्रेम"
+   ],
+   "order_no": 6360,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on virtue",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Even from poison take nectar, even from a child take good counsel, from an enemy take a lesson, and from filth take gold.",
+   "text_hi": "विष से भी अमृत ले लो, बालक से भी अच्छी सीख ले लो, शत्रु से भी शिक्षा ले लो, और मल से भी सोना ले लो।",
+   "sanskrit": "विषादप्यमृतं ग्राह्यं बालादपि सुभाषितम्।\nअमित्रादपि सद्वृत्तं अमेध्यादपि काञ्चनम्॥",
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6370,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on learning from all",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "There is no austerity like patience, no happiness like contentment, no disease like greed, and no virtue like compassion.",
+   "text_hi": "धैर्य जैसा कोई तप नहीं, संतोष जैसा कोई सुख नहीं, लोभ जैसा कोई रोग नहीं, और दया जैसा कोई धर्म नहीं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "forgiveness"
+   ],
+   "themes_hi": [
+    "शांति",
+    "क्षमा"
+   ],
+   "order_no": 6380,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on virtue",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "A man is great by his deeds, not by his birth; a lamp set on the ground gives more light than a jewel kept hidden in a box.",
+   "text_hi": "मनुष्य अपने कर्मों से बड़ा होता है, जन्म से नहीं; भूमि पर रखा दीपक उस रत्न से अधिक प्रकाश देता है जो पेटी में छिपा हो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 6390,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on character",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Once a task is begun, do not fear failure and do not abandon it -- those who work with steady resolve are the happiest of all.",
+   "text_hi": "कार्य आरंभ कर देने पर असफलता से मत डरो और उसे मत छोड़ो -- जो दृढ़ संकल्प से काम करते हैं, वही सबसे सुखी होते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 6400,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on resolve",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The wise man should give up attachment to what is lost, for grieving over it restores nothing and wastes the strength he still has.",
+   "text_hi": "बुद्धिमान को जो खो गया उसका मोह छोड़ देना चाहिए, क्योंकि शोक से वह लौटता नहीं और बची हुई शक्ति भी नष्ट हो जाती है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Chanakya Niti",
+   "source_title_hi": "चाणक्य नीति",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 6410,
+   "primary_source_name": "Chanakya Niti (Chanakya Nitishastra)",
+   "primary_source_ref": "Chanakya Niti, chapter on detachment",
+   "verification_status": "unverified",
+   "claim_type": "textual",
+   "source_quality": null
+  },
+  {
+   "kind": "verse",
+   "text_en": "This one is a relative, that one a stranger -- so reckon the small-minded. For those of noble conduct, the whole world is one family.",
+   "text_hi": "यह अपना है, वह पराया -- ऐसी गणना संकुचित मन वाले करते हैं। उदार चरित्र वालों के लिए तो सारी पृथ्वी ही एक कुटुंब है।",
+   "sanskrit": "अयं निजः परो वेति गणना लघुचेतसाम्।\nउदारचरितानां तु वसुधैव कुटुम्बकम्॥",
+   "iast": "ayaṃ nijaḥ paro veti gaṇanā laghucetasām |\nudāracaritānāṃ tu vasudhaiva kuṭumbakam ||",
+   "source_title_en": "Maha Upanishad",
+   "source_title_hi": "महा उपनिषद्",
+   "verse_ref": "6.71",
+   "source_slug": null,
+   "scripture_verse_number": "6.71",
+   "themes_en": [
+    "love",
+    "peace"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "शांति"
+   ],
+   "order_no": 6420,
+   "primary_source_name": "Maha Upanishad",
+   "primary_source_ref": "Maha Upanishad 6.71-73",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "verse",
+   "text_en": "Truth alone triumphs, not falsehood. By truth is laid out the path along which the sages, their desires fulfilled, ascend to the highest abode.",
+   "text_hi": "सत्य की ही विजय होती है, असत्य की नहीं। सत्य से ही वह मार्ग बनता है जिससे ऋषिजन, कामनाओं से मुक्त होकर, परम धाम को जाते हैं।",
+   "sanskrit": "सत्यमेव जयते नानृतं सत्येन पन्था विततो देवयानः।",
+   "iast": "satyam eva jayate nānṛtaṃ satyena panthā vitato devayānaḥ |",
+   "source_title_en": "Mundaka Upanishad",
+   "source_title_hi": "मुण्डक उपनिषद्",
+   "verse_ref": "3.1.6",
+   "source_slug": null,
+   "scripture_verse_number": "3.1.6",
+   "themes_en": [
+    "faith",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "विवेक"
+   ],
+   "order_no": 6430,
+   "primary_source_name": "Mundaka Upanishad",
+   "primary_source_ref": "Mundaka Upanishad 3.1.6",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "verse",
+   "text_en": "Lead me from the unreal to the real, from darkness to light, from death to immortality.",
+   "text_hi": "मुझे असत्य से सत्य की ओर ले चल, अंधकार से प्रकाश की ओर, मृत्यु से अमरता की ओर।",
+   "sanskrit": "असतो मा सद्गमय। तमसो मा ज्योतिर्गमय।\nमृत्योर्मा अमृतं गमय॥",
+   "iast": "asato mā sad gamaya | tamaso mā jyotir gamaya |\nmṛtyor mā amṛtaṃ gamaya ||",
+   "source_title_en": "Brihadaranyaka Upanishad",
+   "source_title_hi": "बृहदारण्यक उपनिषद्",
+   "verse_ref": "1.3.28",
+   "source_slug": null,
+   "scripture_verse_number": "1.3.28",
+   "themes_en": [
+    "faith",
+    "peace"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "शांति"
+   ],
+   "order_no": 6440,
+   "primary_source_name": "Brihadaranyaka Upanishad",
+   "primary_source_ref": "Brihadaranyaka Upanishad 1.3.28 (the Pavamana mantra)",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "invocation",
+   "text_en": "May all be happy, may all be free from illness; may all see what is good, and may no one suffer.",
+   "text_hi": "सब सुखी हों, सब निरोग हों; सब कल्याण देखें, और कोई दुख न भोगे।",
+   "sanskrit": "सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः।\nसर्वे भद्राणि पश्यन्तु मा कश्चिद्दुःखभाग्भवेत्॥",
+   "iast": "sarve bhavantu sukhinaḥ sarve santu nirāmayāḥ |\nsarve bhadrāṇi paśyantu mā kaścid duḥkhabhāg bhavet ||",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "love"
+   ],
+   "themes_hi": [
+    "शांति",
+    "प्रेम"
+   ],
+   "order_no": 6450,
+   "primary_source_name": "Traditional Vedic shanti-patha 'sarve bhavantu sukhinah'",
+   "primary_source_ref": "Traditional Vedic shanti-patha 'sarve bhavantu sukhinah'",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "invocation",
+   "text_en": "Om, peace, peace, peace. May that which is full remain full; from the full, the full is taken, and the full alone remains.",
+   "text_hi": "ॐ शांति, शांति, शांति। जो पूर्ण है वह पूर्ण ही रहे; पूर्ण से पूर्ण निकाल लेने पर भी पूर्ण ही शेष रहता है।",
+   "sanskrit": "ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते।\nपूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते॥",
+   "iast": "oṃ pūrṇam adaḥ pūrṇam idaṃ pūrṇāt pūrṇam udacyate |\npūrṇasya pūrṇam ādāya pūrṇam evāvaśiṣyate ||",
+   "source_title_en": "Isha Upanishad",
+   "source_title_hi": "ईश उपनिषद्",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 6460,
+   "primary_source_name": "Isha Upanishad",
+   "primary_source_ref": "Isha Upanishad, shanti-patha (also Brihadaranyaka 5.1.1)",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "verse",
+   "text_en": "Arise, awake, and stop not till the goal is reached -- the path is sharp as a razor's edge, hard to cross, so say the wise.",
+   "text_hi": "उठो, जागो, और श्रेष्ठ पुरुषों के पास जाकर ज्ञान प्राप्त करो -- वह मार्ग छुरे की धार के समान तीक्ष्ण और दुर्गम है, ऐसा ज्ञानी कहते हैं।",
+   "sanskrit": "उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत।\nक्षुरस्य धारा निशिता दुरत्यया दुर्गं पथस्तत्कवयो वदन्ति॥",
+   "iast": "uttiṣṭhata jāgrata prāpya varān nibodhata |\nkṣurasya dhārā niśitā duratyayā durgaṃ pathas tat kavayo vadanti ||",
+   "source_title_en": "Katha Upanishad",
+   "source_title_hi": "कठ उपनिषद्",
+   "verse_ref": "1.3.14",
+   "source_slug": null,
+   "scripture_verse_number": "1.3.14",
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 6470,
+   "primary_source_name": "Katha Upanishad",
+   "primary_source_ref": "Katha Upanishad 1.3.14",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Non-violence is the highest duty -- and so too is the restraint that refuses to answer harm with harm.",
+   "text_hi": "अहिंसा परम धर्म है -- और वह संयम भी, जो हिंसा का उत्तर हिंसा से देने से इनकार करता है।",
+   "sanskrit": "अहिंसा परमो धर्मः।",
+   "iast": "ahiṃsā paramo dharmaḥ |",
+   "source_title_en": "Mahabharata",
+   "source_title_hi": "महाभारत",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "forgiveness"
+   ],
+   "themes_hi": [
+    "शांति",
+    "क्षमा"
+   ],
+   "order_no": 6480,
+   "primary_source_name": "Mahabharata",
+   "primary_source_ref": "Mahabharata, Anushasana Parva 116.37-41 -- 'ahimsa paramo dharmah'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "invocation",
+   "text_en": "May we be protected together, may we be nourished together; may we work together with great vigour, and may our study be brilliant.",
+   "text_hi": "हम साथ रक्षित हों, साथ पोषित हों; हम साथ मिलकर बड़े उत्साह से कार्य करें, और हमारा अध्ययन तेजस्वी हो।",
+   "sanskrit": "ॐ सह नाववतु। सह नौ भुनक्तु। सह वीर्यं करवावहै।\nतेजस्वि नावधीतमस्तु मा विद्विषावहै॥",
+   "iast": "oṃ saha nāv avatu | saha nau bhunaktu | saha vīryaṃ karavāvahai |\ntejasvi nāv adhītam astu mā vidviṣāvahai ||",
+   "source_title_en": "Taittiriya Upanishad",
+   "source_title_hi": "तैत्तिरीय उपनिषद्",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 6490,
+   "primary_source_name": "Taittiriya Upanishad",
+   "primary_source_ref": "Taittiriya Upanishad 2.1.1, shanti-patha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "verse",
+   "text_en": "That thou art -- the self in you is the very same reality that is the ground of all this.",
+   "text_hi": "वह तू है -- तेरे भीतर की आत्मा वही सत्ता है जो इस समस्त जगत् का आधार है।",
+   "sanskrit": "तत्त्वमसि।",
+   "iast": "tat tvam asi |",
+   "source_title_en": "Chandogya Upanishad",
+   "source_title_hi": "छांदोग्य उपनिषद्",
+   "verse_ref": "6.8.7",
+   "source_slug": null,
+   "scripture_verse_number": "6.8.7",
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 6500,
+   "primary_source_name": "Chandogya Upanishad",
+   "primary_source_ref": "Chandogya Upanishad 6.8.7 -- the mahavakya 'tat tvam asi'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "verse",
+   "text_en": "The whole of this is to be covered by the Lord -- whatever moves in this moving world. Enjoy through renunciation; do not covet, for whose is wealth?",
+   "text_hi": "यह सब जो कुछ इस चराचर जगत् में है, ईश्वर से आच्छादित है। त्याग के साथ भोग करो; लोभ मत करो, क्योंकि धन किसका है?",
+   "sanskrit": "ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्।\nतेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद्धनम्॥",
+   "iast": "īśāvāsyam idaṃ sarvaṃ yat kiñca jagatyāṃ jagat |\ntena tyaktena bhuñjīthā mā gṛdhaḥ kasya svid dhanam ||",
+   "source_title_en": "Isha Upanishad",
+   "source_title_hi": "ईश उपनिषद्",
+   "verse_ref": "1",
+   "source_slug": null,
+   "scripture_verse_number": "1",
+   "themes_en": [
+    "sacrifice",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "विवेक"
+   ],
+   "order_no": 6510,
+   "primary_source_name": "Isha Upanishad",
+   "primary_source_ref": "Isha Upanishad 1",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "verse",
+   "text_en": "Where women are honoured, there the gods rejoice; where they are not, all rites bear no fruit.",
+   "text_hi": "जहाँ नारियों का सम्मान होता है, वहाँ देवता प्रसन्न रहते हैं; जहाँ नहीं होता, वहाँ सारे कर्म निष्फल हो जाते हैं।",
+   "sanskrit": "यत्र नार्यस्तु पूज्यन्ते रमन्ते तत्र देवताः।\nयत्रैतास्तु न पूज्यन्ते सर्वास्तत्राफलाः क्रियाः॥",
+   "iast": "yatra nāryas tu pūjyante ramante tatra devatāḥ |\nyatraitās tu na pūjyante sarvās tatrāphalāḥ kriyāḥ ||",
+   "source_title_en": "Manusmriti",
+   "source_title_hi": "मनुस्मृति",
+   "verse_ref": "3.56",
+   "source_slug": null,
+   "scripture_verse_number": "3.56",
+   "themes_en": [
+    "love",
+    "faith"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "श्रद्धा"
+   ],
+   "order_no": 6520,
+   "primary_source_name": "Manusmriti",
+   "primary_source_ref": "Manusmriti 3.56",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The mother and the motherland are greater than heaven itself.",
+   "text_hi": "जननी और जन्मभूमि स्वर्ग से भी बढ़कर हैं -- राम ने लंका का वैभव देखकर लक्ष्मण से यही कहा था।",
+   "sanskrit": "जननी जन्मभूमिश्च स्वर्गादपि गरीयसी।",
+   "iast": "jananī janmabhūmiś ca svargād api garīyasī |",
+   "source_title_en": "Ramayana",
+   "source_title_hi": "रामायण",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "devotion"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "भक्ति"
+   ],
+   "order_no": 6530,
+   "primary_source_name": "Ramayana",
+   "primary_source_ref": "Valmiki Ramayana, Yuddha Kanda -- Rama's words to Lakshmana",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The guru is Brahma, the guru is Vishnu, the guru is Maheshvara; the guru is the supreme reality itself -- to that guru I bow.",
+   "text_hi": "गुरु ब्रह्मा हैं, गुरु विष्णु हैं, गुरु ही महेश्वर हैं; गुरु ही साक्षात् परब्रह्म हैं -- उन गुरु को मेरा प्रणाम।",
+   "sanskrit": "गुरुर्ब्रह्मा गुरुर्विष्णुर्गुरुर्देवो महेश्वरः।\nगुरुः साक्षात् परब्रह्म तस्मै श्रीगुरवे नमः॥",
+   "iast": "gurur brahmā gurur viṣṇur gurur devo maheśvaraḥ |\nguruḥ sākṣāt parabrahma tasmai śrī gurave namaḥ ||",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "faith"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "श्रद्धा"
+   ],
+   "order_no": 6540,
+   "primary_source_name": "Traditional guru-vandana verse",
+   "primary_source_ref": "Traditional guru-vandana verse",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The guest is God -- may the one who comes to your door be received as the divine itself.",
+   "text_hi": "अतिथि देवता है -- जो तुम्हारे द्वार पर आए, उसका स्वागत साक्षात् देव के समान करो।",
+   "sanskrit": "अतिथि देवो भव।",
+   "iast": "atithi devo bhava |",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "devotion"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "भक्ति"
+   ],
+   "order_no": 6550,
+   "primary_source_name": "Traditional Sanskrit saying, from the Taittiriya Upanishad's teaching to the graduate",
+   "primary_source_ref": "Traditional Sanskrit saying, from the Taittiriya Upanishad's teaching to the graduate",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "May there be peace in the heavens, peace in the sky, peace on the earth, peace in the waters -- peace, peace, peace.",
+   "text_hi": "द्युलोक में शांति हो, अंतरिक्ष में शांति हो, पृथ्वी पर शांति हो, जल में शांति हो -- शांति, शांति, शांति।",
+   "sanskrit": "ॐ द्यौः शान्तिरन्तरिक्षं शान्तिः पृथिवी शान्तिरापः शान्तिः।\nशान्तिः शान्तिः शान्तिः॥",
+   "iast": "oṃ dyauḥ śāntir antarikṣaṃ śāntiḥ pṛthivī śāntir āpaḥ śāntiḥ |\nśāntiḥ śāntiḥ śāntiḥ ||",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace"
+   ],
+   "themes_hi": [
+    "शांति"
+   ],
+   "order_no": 6560,
+   "primary_source_name": "Traditional Vedic shanti-mantra",
+   "primary_source_ref": "Traditional Vedic shanti-mantra",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Where there is righteousness, there victory follows -- this is the line the Mahabharata returns to again and again.",
+   "text_hi": "जहाँ धर्म है, वहीं विजय है -- महाभारत बार-बार इसी वाक्य पर लौटता है।",
+   "sanskrit": "यतो धर्मस्ततो जयः।",
+   "iast": "yato dharmas tato jayaḥ |",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "courage"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "साहस"
+   ],
+   "order_no": 6570,
+   "primary_source_name": "Traditional Sanskrit saying, recurring in the Mahabharata",
+   "primary_source_ref": "Traditional Sanskrit saying, recurring in the Mahabharata",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Speak the truth, and speak it pleasantly; do not speak a truth that wounds, nor a pleasant falsehood.",
+   "text_hi": "सत्य बोलो, और प्रिय बोलो; ऐसा सत्य मत बोलो जो चोट पहुँचाए, और न ही प्रिय असत्य।",
+   "sanskrit": "सत्यं ब्रूयात् प्रियं ब्रूयात् न ब्रूयात् सत्यमप्रियम्।\nप्रियं च नानृतं ब्रूयात् एष धर्मः सनातनः॥",
+   "iast": "satyaṃ brūyāt priyaṃ brūyāt na brūyāt satyam apriyam |\npriyaṃ ca nānṛtaṃ brūyāt eṣa dharmaḥ sanātanaḥ ||",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "peace"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "शांति"
+   ],
+   "order_no": 6580,
+   "primary_source_name": "Traditional Sanskrit subhashita",
+   "primary_source_ref": "Traditional Sanskrit subhashita",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Knowledge gives humility, humility gives worthiness, worthiness brings wealth, and from wealth rightly used comes happiness.",
+   "text_hi": "विद्या विनय देती है, विनय से पात्रता आती है, पात्रता से धन मिलता है, और सदुपयोग किए धन से सुख।",
+   "sanskrit": "विद्या ददाति विनयं विनयाद्याति पात्रताम्।\nपात्रत्वाद्धनमाप्नोति धनाद्धर्मं ततः सुखम्॥",
+   "iast": "vidyā dadāti vinayaṃ vinayād yāti pātratām |\npātratvād dhanam āpnoti dhanād dharmaṃ tataḥ sukham ||",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "peace"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "शांति"
+   ],
+   "order_no": 6590,
+   "primary_source_name": "Traditional Sanskrit subhashita (Hitopadesha tradition)",
+   "primary_source_ref": "Traditional Sanskrit subhashita (Hitopadesha tradition)",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Work is worship -- the hands that labour honestly are already at prayer.",
+   "text_hi": "कर्म ही पूजा है -- जो हाथ ईमानदारी से श्रम करते हैं, वे पहले से ही प्रार्थना में लगे हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "त्याग"
+   ],
+   "order_no": 6600,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Victory to Mother India -- bow to this land as you would to the mother who gave you birth.",
+   "text_hi": "भारत माता की जय -- इस धरती को उसी भाव से नमन करो जिस भाव से उस माता को, जिसने तुम्हें जन्म दिया।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "courage"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "साहस"
+   ],
+   "order_no": 6610,
+   "primary_source_name": "Traditional invocation",
+   "primary_source_ref": "Traditional invocation",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The one who conquers anger conquers everything; anger is the fire that burns first the vessel that holds it.",
+   "text_hi": "जो क्रोध को जीत लेता है, वह सब कुछ जीत लेता है; क्रोध वह अग्नि है जो सबसे पहले उसी पात्र को जलाती है जिसमें वह रहती है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "anger",
+    "peace"
+   ],
+   "themes_hi": [
+    "क्रोध",
+    "शांति"
+   ],
+   "order_no": 6620,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Forgiveness is the ornament of the strong; only the one who could strike and does not has truly forgiven.",
+   "text_hi": "क्षमा बलवान का आभूषण है; सच्ची क्षमा उसी की है जो प्रहार कर सकता था और नहीं किया।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "forgiveness",
+    "courage"
+   ],
+   "themes_hi": [
+    "क्षमा",
+    "साहस"
+   ],
+   "order_no": 6630,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Contentment is the greatest wealth; the one who wants nothing already owns the world.",
+   "text_hi": "संतोष ही सबसे बड़ा धन है; जिसे कुछ नहीं चाहिए, वह पहले से ही समस्त संसार का स्वामी है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "joy"
+   ],
+   "themes_hi": [
+    "शांति",
+    "आनंद"
+   ],
+   "order_no": 6640,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "As is the seed, so is the fruit; as is the deed, so is what returns to you.",
+   "text_hi": "जैसा बीज, वैसा फल; जैसा कर्म, वैसा ही लौटकर तुम्हारे पास आता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6650,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Fear knocks at the door; faith answers it, and finds no one standing there.",
+   "text_hi": "भय द्वार खटखटाता है; श्रद्धा उत्तर देने जाती है, और वहाँ कोई खड़ा नहीं मिलता।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "fear",
+    "faith"
+   ],
+   "themes_hi": [
+    "भय",
+    "श्रद्धा"
+   ],
+   "order_no": 6660,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Grief shared is grief halved; the sorrow you speak aloud to a friend has already begun to lift.",
+   "text_hi": "बाँटा हुआ शोक आधा हो जाता है; जो दुख तुम मित्र से कह देते हो, वह उसी क्षण से हल्का होने लगता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "love"
+   ],
+   "themes_hi": [
+    "शोक",
+    "प्रेम"
+   ],
+   "order_no": 6670,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "A lamp lights another lamp and loses nothing of itself -- so it is with knowledge given away.",
+   "text_hi": "एक दीपक दूसरे दीपक को जलाता है और स्वयं कुछ नहीं खोता -- दिया हुआ ज्ञान भी ऐसा ही है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "त्याग"
+   ],
+   "order_no": 6680,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Devotion needs no language; a tear shed before God says more than a thousand recited verses.",
+   "text_hi": "भक्ति को भाषा की आवश्यकता नहीं; ईश्वर के सामने बहाया एक आँसू हजार पढ़े हुए श्लोकों से अधिक कहता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "love"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "प्रेम"
+   ],
+   "order_no": 6690,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The river does not drink its own water, the tree does not eat its own fruit -- living for others is the way of nature itself.",
+   "text_hi": "नदी अपना जल नहीं पीती, वृक्ष अपना फल नहीं खाता -- दूसरों के लिए जीना स्वयं प्रकृति का स्वभाव है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "love"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "प्रेम"
+   ],
+   "order_no": 6700,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Joy is not in having much, but in needing little.",
+   "text_hi": "आनंद बहुत कुछ पा लेने में नहीं, बहुत कम की आवश्यकता रह जाने में है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "peace"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "शांति"
+   ],
+   "order_no": 6710,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The mind is a restless horse; the one who holds the reins gently rides the furthest.",
+   "text_hi": "मन एक चंचल घोड़ा है; जो लगाम को कोमलता से थामता है, वही सबसे दूर तक जाता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शांति",
+    "विवेक"
+   ],
+   "order_no": 6720,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Anger is a stone thrown at a wasps' nest -- it never ends with the throw.",
+   "text_hi": "क्रोध ततैयों के छत्ते पर फेंका गया पत्थर है -- वह कभी फेंकने भर से समाप्त नहीं होता।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "anger"
+   ],
+   "themes_hi": [
+    "क्रोध"
+   ],
+   "order_no": 6730,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Feel like Christ and you will be a Christ; feel like Buddha and you will be a Buddha. It is feeling that is the life, the strength, the vitality.",
+   "text_hi": "ईसा जैसा अनुभव करो और तुम ईसा हो जाओगे; बुद्ध जैसा अनुभव करो और तुम बुद्ध हो जाओगे। अनुभूति ही जीवन है, बल है, प्राणशक्ति है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "devotion"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "भक्ति"
+   ],
+   "order_no": 6740,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "This life is short, the vanities of the world are transient, but they alone live who live for others; the rest are more dead than alive.",
+   "text_hi": "यह जीवन छोटा है, संसार के वैभव क्षणभंगुर हैं, पर जीते वही हैं जो दूसरों के लिए जीते हैं; शेष तो जीवित से अधिक मृत हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "विवेक"
+   ],
+   "order_no": 6750,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Do not wait for anybody or anything. Do whatever you can. Build your hope on none.",
+   "text_hi": "किसी की या किसी बात की प्रतीक्षा मत करो। जो कर सकते हो, कर डालो। अपनी आशा किसी पर मत टिकाओ।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage"
+   ],
+   "themes_hi": [
+    "साहस"
+   ],
+   "order_no": 6760,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "All love is expansion, all selfishness is contraction. Love is therefore the only law of life.",
+   "text_hi": "सारा प्रेम विस्तार है, सारा स्वार्थ संकुचन। इसलिए प्रेम ही जीवन का एकमात्र नियम है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "त्याग"
+   ],
+   "order_no": 6770,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. II, 'Practical Vedanta'",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "He who wants to serve the father must serve the children first. He who wants to serve God must serve the poor.",
+   "text_hi": "जो पिता की सेवा करना चाहता है, उसे पहले संतानों की सेवा करनी होगी। जो ईश्वर की सेवा करना चाहता है, उसे दरिद्रों की सेवा करनी होगी।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "devotion"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "भक्ति"
+   ],
+   "order_no": 6780,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VI, Epistles",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "It is the patient building of character, the intense struggle to realise the truth, which alone will tell in the future of humanity.",
+   "text_hi": "चरित्र का धैर्यपूर्वक निर्माण, सत्य को पाने का प्रबल संघर्ष -- मानवता के भविष्य में यही काम आएगा।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "साहस",
+    "विवेक"
+   ],
+   "order_no": 6790,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Was there ever a more horrible blasphemy than the statement that all the knowledge of God is confined to this or that book?",
+   "text_hi": "क्या इससे बड़ी ईशनिंदा कभी हुई कि ईश्वर का समस्त ज्ञान इस या उस पुस्तक तक सीमित है?",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "विवेक"
+   ],
+   "order_no": 6800,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, 'Paper on Hinduism', Parliament of Religions, 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The Vedas teach that the soul is divine, only held in the bondage of matter; perfection will be reached when this bond shall burst.",
+   "text_hi": "वेद सिखाते हैं कि आत्मा दिव्य है, केवल जड़ के बंधन में बँधी है; जब यह बंधन टूटेगा, तभी पूर्णता प्राप्त होगी।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "विवेक"
+   ],
+   "order_no": 6810,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, 'Paper on Hinduism', Parliament of Religions, 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Every soul is destined to be perfect, and every being, in the end, will attain to that state.",
+   "text_hi": "हर आत्मा पूर्ण होने के लिए ही बनी है, और हर प्राणी अंततः उसी अवस्था को प्राप्त करेगा।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "joy"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "आनंद"
+   ],
+   "order_no": 6820,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. I, 'Paper on Hinduism', Parliament of Religions, 1893",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Let us be as progressive as any nation that ever existed, and at the same time as faithful and conservative towards our traditions.",
+   "text_hi": "हम उतने ही प्रगतिशील बनें जितना कोई भी राष्ट्र कभी रहा हो, और साथ ही अपनी परंपराओं के प्रति उतने ही निष्ठावान भी।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "faith"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "श्रद्धा"
+   ],
+   "order_no": 6830,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. III, Lectures from Colombo to Almora",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Be perfectly resigned, perfectly unconcerned; then alone can you do any true work.",
+   "text_hi": "पूर्ण रूप से समर्पित रहो, पूर्ण रूप से निर्लिप्त; तभी तुम कोई सच्चा कार्य कर सकोगे।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "शांति",
+    "त्याग"
+   ],
+   "order_no": 6840,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The will is not free -- it is a phenomenon bound by cause and effect -- but there is something behind the will which is free.",
+   "text_hi": "इच्छा स्वतंत्र नहीं है -- वह कार्य-कारण से बँधी एक घटना है -- पर इच्छा के पीछे कुछ ऐसा है जो स्वतंत्र है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6850,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Be a hero. Always say, 'I have no fear.' Tell this to everyone -- 'Have no fear.'",
+   "text_hi": "वीर बनो। सदा कहो, 'मुझे कोई भय नहीं।' यह सबसे कहो -- 'भय मत करो।'",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "fear"
+   ],
+   "themes_hi": [
+    "साहस",
+    "भय"
+   ],
+   "order_no": 6860,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VII, Inspired Talks",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Doing good to others is virtue; injuring others is sin. Strength and manhood are virtue; weakness and cowardice are sin.",
+   "text_hi": "दूसरों का भला करना पुण्य है; दूसरों को चोट पहुँचाना पाप। बल और पुरुषार्थ पुण्य हैं; निर्बलता और कायरता पाप।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "courage",
+    "love"
+   ],
+   "themes_hi": [
+    "साहस",
+    "प्रेम"
+   ],
+   "order_no": 6870,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. V, Sayings and Utterances",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Ninety per cent of thought force is wasted by the ordinary human being, and therefore he is constantly committing blunders.",
+   "text_hi": "साधारण मनुष्य अपनी विचार-शक्ति का नब्बे प्रतिशत व्यर्थ गँवा देता है, और इसीलिए वह निरंतर भूलें करता रहता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Swami Vivekananda",
+   "source_title_hi": "स्वामी विवेकानंद",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom"
+   ],
+   "themes_hi": [
+    "विवेक"
+   ],
+   "order_no": 6880,
+   "primary_source_name": "The Complete Works of Swami Vivekananda",
+   "primary_source_ref": "Vol. VI, Lectures and Discourses",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Clouds come floating into my life, no longer to carry rain or usher storm, but to add colour to my sunset sky.",
+   "text_hi": "बादल मेरे जीवन में तैरते हुए आते हैं, अब वर्षा लाने या तूफान बुलाने नहीं, बल्कि मेरे सांध्य-आकाश में रंग भरने।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "joy"
+   ],
+   "themes_hi": [
+    "शांति",
+    "आनंद"
+   ],
+   "order_no": 6890,
+   "primary_source_name": "Tagore's own English verse collections",
+   "primary_source_ref": "Stray Birds, 1916",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The butterfly counts not months but moments, and has time enough.",
+   "text_hi": "तितली महीने नहीं गिनती, क्षण गिनती है, और उसके पास पर्याप्त समय होता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "peace"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "शांति"
+   ],
+   "order_no": 6900,
+   "primary_source_name": "Tagore's own English verse collections",
+   "primary_source_ref": "Stray Birds, 1916",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Faith is the bird that feels the light and sings when the dawn is still dark.",
+   "text_hi": "श्रद्धा वह पक्षी है जो प्रकाश को अनुभव कर लेता है और तब गाता है जब भोर अभी अँधेरी है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Rabindranath Tagore",
+   "source_title_hi": "रवींद्रनाथ टैगोर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "faith",
+    "courage"
+   ],
+   "themes_hi": [
+    "श्रद्धा",
+    "साहस"
+   ],
+   "order_no": 6910,
+   "primary_source_name": "Tagore's own English verse collections",
+   "primary_source_ref": "Fireflies, 1928",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Kabir, the body is a cloth; guard it as it was given -- the Maker will ask for it back exactly as He gave it.",
+   "text_hi": "झीनी-झीनी बीनी चदरिया।\nदास कबीर जतन से ओढ़ी, ज्यों की त्यों धर दीन्ही चदरिया॥",
+   "sanskrit": "झीनी-झीनी बीनी चदरिया।\nदास कबीर जतन से ओढ़ी, ज्यों की त्यों धर दीन्ही चदरिया॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "devotion"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "भक्ति"
+   ],
+   "order_no": 6920,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "The drop merges into the ocean -- this everyone knows; that the ocean merges into the drop, few can understand.",
+   "text_hi": "बूँद समानी समुंद में, यह जाने सब कोय।\nसमुंद समाना बूँद में, बूझे बिरला कोय॥",
+   "sanskrit": "बूँद समानी समुंद में, यह जाने सब कोय।\nसमुंद समाना बूँद में, बूझे बिरला कोय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "devotion"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "भक्ति"
+   ],
+   "order_no": 6930,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Kabir says: I sought Him and lost myself; now the drop has become the sea, and there is no going back to being a drop.",
+   "text_hi": "हेरत-हेरत हे सखी, रह्या कबीर हेराय।\nबूँद समानी समुंद में, सो कत हेरी जाय॥",
+   "sanskrit": "हेरत-हेरत हे सखी, रह्या कबीर हेराय।\nबूँद समानी समुंद में, सो कत हेरी जाय॥",
+   "iast": null,
+   "source_title_en": "Kabir",
+   "source_title_hi": "कबीर",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "love"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "प्रेम"
+   ],
+   "order_no": 6940,
+   "primary_source_name": "Kabir ke Dohe (Bijak / Granthavali tradition)",
+   "primary_source_ref": "Kabir ke Dohe -- widely transmitted doha",
+   "verification_status": "verified",
+   "claim_type": "textual",
+   "source_quality": "primary"
+  },
+  {
+   "kind": "saying",
+   "text_en": "Of all things given, the gift of fearlessness is the greatest.",
+   "text_hi": "जितने भी दान हैं, उनमें अभय का दान सबसे बड़ा है। जिसे तुमने निर्भय कर दिया, उसे तुमने सब कुछ दे दिया।",
+   "sanskrit": "अभयदानं सर्वदानेभ्यः श्रेष्ठम्।",
+   "iast": "abhayadānaṃ sarvadānebhyaḥ śreṣṭham |",
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "fear",
+    "sacrifice"
+   ],
+   "themes_hi": [
+    "भय",
+    "त्याग"
+   ],
+   "order_no": 6950,
+   "primary_source_name": "Traditional Sanskrit saying",
+   "primary_source_ref": "Traditional Sanskrit saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Duty done without desire for its fruit is the purest offering a person can make.",
+   "text_hi": "फल की इच्छा के बिना किया गया कर्तव्य ही वह शुद्धतम अर्पण है जो मनुष्य कर सकता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "devotion"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "भक्ति"
+   ],
+   "order_no": 6960,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Patience is not the absence of storms; it is the steadiness of the lamp that keeps burning inside the house.",
+   "text_hi": "धैर्य तूफानों का न होना नहीं है; वह उस दीपक की स्थिरता है जो घर के भीतर जलता रहता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "peace",
+    "courage"
+   ],
+   "themes_hi": [
+    "शांति",
+    "साहस"
+   ],
+   "order_no": 6970,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The one who bows does not become small; the branch heavy with fruit is the one that bends lowest.",
+   "text_hi": "जो झुकता है वह छोटा नहीं होता; फलों से लदी डाल ही सबसे नीचे झुकती है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "devotion"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "भक्ति"
+   ],
+   "order_no": 6980,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Do not give sorrow a permanent room in the house of your heart; give it a night's lodging and send it on.",
+   "text_hi": "अपने हृदय के घर में शोक को स्थायी कमरा मत दो; उसे एक रात का आश्रय दो और आगे भेज दो।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "peace"
+   ],
+   "themes_hi": [
+    "शोक",
+    "शांति"
+   ],
+   "order_no": 6990,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Anger punishes the one who holds it far more surely than the one it is aimed at.",
+   "text_hi": "क्रोध जिस पर लक्षित है उससे कहीं अधिक निश्चित रूप से उसी को दंड देता है जो उसे थामे रखता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "anger",
+    "forgiveness"
+   ],
+   "themes_hi": [
+    "क्रोध",
+    "क्षमा"
+   ],
+   "order_no": 7000,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "To forgive is not to forget the wound; it is to stop handing the knife back to yourself.",
+   "text_hi": "क्षमा करना घाव को भूल जाना नहीं है; वह स्वयं को बार-बार वही छुरी लौटाना बंद कर देना है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "forgiveness",
+    "peace"
+   ],
+   "themes_hi": [
+    "क्षमा",
+    "शांति"
+   ],
+   "order_no": 7010,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Where the heart is pure, every place is a temple and every hour an auspicious one.",
+   "text_hi": "जहाँ हृदय निर्मल है, वहाँ हर स्थान मंदिर है और हर घड़ी शुभ मुहूर्त।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "peace"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "शांति"
+   ],
+   "order_no": 7020,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The lamp of knowledge, once lit, is not put out by the wind of other people's opinions.",
+   "text_hi": "ज्ञान का दीपक एक बार जल जाए तो दूसरों की राय की हवा से नहीं बुझता।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 7030,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Give without keeping accounts; the hand that measures its giving has already stopped giving.",
+   "text_hi": "बिना हिसाब रखे दो; जो हाथ अपने दान को नापने लगता है, वह देना पहले ही बंद कर चुका होता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "sacrifice",
+    "love"
+   ],
+   "themes_hi": [
+    "त्याग",
+    "प्रेम"
+   ],
+   "order_no": 7040,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Fear grows in the dark of the mind; bring it into the light of attention and it thins like mist.",
+   "text_hi": "भय मन के अँधेरे में बढ़ता है; उसे ध्यान के प्रकाश में ले आओ और वह कुहरे की तरह छँट जाता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "fear",
+    "peace"
+   ],
+   "themes_hi": [
+    "भय",
+    "शांति"
+   ],
+   "order_no": 7050,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "A house is built of walls and beams; a home is built of the patience people show one another.",
+   "text_hi": "घर दीवारों और शहतीरों से बनता है; पर आवास उस धैर्य से बनता है जो लोग एक-दूसरे पर दिखाते हैं।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "love",
+    "peace"
+   ],
+   "themes_hi": [
+    "प्रेम",
+    "शांति"
+   ],
+   "order_no": 7060,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Devotion is not loud; the deepest river makes the least noise as it moves.",
+   "text_hi": "भक्ति शोर नहीं करती; सबसे गहरी नदी बहते हुए सबसे कम आवाज़ करती है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "devotion",
+    "peace"
+   ],
+   "themes_hi": [
+    "भक्ति",
+    "शांति"
+   ],
+   "order_no": 7070,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "What you practise in secret becomes what you are in public.",
+   "text_hi": "जिसका अभ्यास तुम एकांत में करते हो, वही सबके सामने तुम्हारा स्वरूप बन जाता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "wisdom",
+    "courage"
+   ],
+   "themes_hi": [
+    "विवेक",
+    "साहस"
+   ],
+   "order_no": 7080,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "Joy that depends on nothing outside itself is the only joy that cannot be taken away.",
+   "text_hi": "जो आनंद अपने बाहर किसी वस्तु पर निर्भर नहीं, वही एकमात्र आनंद है जिसे कोई छीन नहीं सकता।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "joy",
+    "peace"
+   ],
+   "themes_hi": [
+    "आनंद",
+    "शांति"
+   ],
+   "order_no": 7090,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  },
+  {
+   "kind": "saying",
+   "text_en": "The wound that teaches is worth more than the comfort that keeps you asleep.",
+   "text_hi": "जो घाव सिखा जाता है, वह उस सुख से अधिक मूल्यवान है जो तुम्हें सोया हुआ रखता है।",
+   "sanskrit": null,
+   "iast": null,
+   "source_title_en": "Traditional",
+   "source_title_hi": "पारंपरिक",
+   "verse_ref": null,
+   "source_slug": null,
+   "scripture_verse_number": null,
+   "themes_en": [
+    "grief",
+    "wisdom"
+   ],
+   "themes_hi": [
+    "शोक",
+    "विवेक"
+   ],
+   "order_no": 7100,
+   "primary_source_name": "Traditional saying",
+   "primary_source_ref": "Traditional saying",
+   "verification_status": "unverified",
+   "claim_type": "traditional",
+   "source_quality": null
+  }
+ ]
+}

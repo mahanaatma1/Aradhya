@@ -233,6 +233,13 @@ def load_quotes() -> None:
         sys.exit(f"{problems} quote(s) failed -- nothing written")
 
     conn = sqlite3.connect(GYAN)
+    # Quotes have no natural key -- they come from several pools and a verse can
+    # legitimately appear once as a verse and once inside a teaching -- so the
+    # text itself is the identity. Without this, re-running the loader silently
+    # doubles the table.
+    conn.execute("DELETE FROM quotes WHERE text_en IN (%s)"
+                 % ",".join("?" * len(rows)),
+                 [r.get("text_en") for r in rows])
     sql = (f"INSERT INTO quotes ({','.join(QUOTE_COLS)}) "
            f"VALUES ({','.join('?' * len(QUOTE_COLS))})")
     payload = []
