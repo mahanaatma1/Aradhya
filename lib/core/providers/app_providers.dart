@@ -62,36 +62,24 @@ final ishtaDeityProvider = StateProvider<String>(
 
 /// Every verse available for the verse-of-the-day, loaded once and cached.
 ///
-/// Two tables, deliberately combined:
+/// One table now. The fixture split this in two — `daily_quotes` (3 rows, the
+/// only ones with Sanskrit) and `quotes` (1,000, without) — so the provider had
+/// to merge them and offset the ids to keep them from colliding. Reading either
+/// alone was wrong: one repeated the verse on a three-day cycle, the other
+/// dropped the Devanagari the Home card renders.
 ///
-///   * `daily_quotes` (3 rows) is the only one carrying `sanskrit` and
-///     `transliteration`, which the Home card renders in Devanagari.
-///   * `quotes` (1,000 rows) has the same EN/HI/source shape but no Sanskrit,
-///     and was previously never queried at all.
-///
-/// Reading only `daily_quotes` meant the verse of the day repeated on a
-/// **three-day cycle**. Swapping wholesale to `quotes` would have fixed the
-/// repetition but silently dropped the Sanskrit. Using both keeps the richer
-/// rows first and gives the rotation 1,003 verses to draw on.
+/// `gyan.quotes` is a single table of 1,000 where every row is bilingual and
+/// 672 carry the Sanskrit, so the merge and the id offset are both gone. The
+/// rows are a mixture — scripture verses, teachings drawn from our own stories,
+/// mantra meanings, and traditional sayings — which is why `source()` appends a
+/// verse reference only when there is one.
 final allDailyQuotesProvider = FutureProvider<List<DailyQuote>>((ref) async {
   final db = await ref.watch(contentDbProvider.future);
 
-  final rich = await db.query('daily_quotes', orderBy: 'id');
-  final plain = await db.query('quotes', orderBy: 'id');
-
-  return [
-    ...rich.map(DailyQuote.fromRow),
-    // Offset the ids so the two tables cannot collide — bookmarks and the
-    // share card identify a verse by id.
-    ...plain.map((r) => DailyQuote.fromRow({
-          ...r,
-          'id': (r['id'] as int) + _quotesIdOffset,
-        })),
-  ];
+  final rows = await db.raw.rawQuery(
+      'SELECT * FROM gyan.quotes ORDER BY order_no, id');
+  return rows.map(DailyQuote.fromRow).toList();
 });
-
-/// Keeps `quotes` ids disjoint from `daily_quotes` ids in the merged list.
-const _quotesIdOffset = 1000000;
 
 /// The index of the today's verse within [allDailyQuotesProvider], derived
 /// from the day-of-year so it is stable across a day and needs no network.
