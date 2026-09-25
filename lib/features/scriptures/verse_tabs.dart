@@ -15,9 +15,9 @@ import 'scripture_models.dart';
 /// Measured coverage across all 27,890 sections, which is what the empty states
 /// below are written against:
 ///
-///   Meaning       27,890 (100%)  — `body_en` / `body_hi`
-///   Explanation      701 (3%)    — `commentary_*`, **Bhagavad Gita only**
-///   Word meaning     531 (2%)    — `gyan.word_meanings`, Gita chapter 1 only
+///   Meaning       27,890 (100%)  — `body_*`, ours for Gita + Upanishads
+///   Explanation    7,755 (28%)   — `gyan.scripture_overrides`, Gita + Upanishads
+///   Word meaning   7,755 (28%)   — `gyan.word_meanings`, Gita + Upanishads
 ///   Context       always         — position; plus Ask pairs and story events
 ///
 /// Word meaning lives in `gyan.sqlite`, keyed on `scripture_section_id` the
@@ -25,12 +25,10 @@ import 'scripture_models.dart';
 /// fixture, read-only to the pipeline and due to be replaced before submission
 /// (RG-01/RG-02), so nothing is added to its `scripture_sections` table.
 ///
-/// So three of the four tabs are empty on every Ramayana and Upanishad verse,
-/// and Word meaning is empty everywhere outside Gita chapter 1 so far. That is
-/// the honest shape of the data, and the reason each tab states *why* it is
-/// empty rather than showing a spinner or a shrug: "Coming soon" on a verse of
-/// the Yuddha Kanda would be a promise nobody has undertaken, while "the Gita
-/// is the only text here with a commentary" is a fact the reader can act on.
+/// So Explanation and Word meaning are empty on every Ramayana verse. Each tab
+/// states *why* it is empty rather than showing a spinner or a shrug: "Coming
+/// soon" on a verse of the Yuddha Kanda would be a promise, while naming the
+/// texts that do carry commentary is a fact the reader can act on.
 
 /// Which facet the reader is looking at.
 enum ReaderTab {
@@ -134,8 +132,8 @@ final verseContextProvider =
 });
 
 /// The word-by-word gloss for one verse, in reading order. Empty wherever
-/// `gyan.word_meanings` has no rows for this `scriptureSectionId` -- everywhere
-/// but Gita chapter 1, for now.
+/// `gyan.word_meanings` has no rows for this `scriptureSectionId` -- the
+/// Ramayana, for now.
 final verseWordMeaningsProvider =
     FutureProvider.family<List<WordMeaning>, int>((ref, sectionId) async {
   final db = await ref.watch(contentDbProvider.future);
@@ -311,18 +309,18 @@ class VerseTabPanel extends ConsumerWidget {
             line: hindi
                 ? 'इस श्लोक पर कोई व्याख्या दर्ज नहीं है।'
                 : 'No commentary is recorded for this verse.',
-            // Naming the one text that does have commentary turns a dead end
-            // into a direction, and it is true: 701 of 27,890 sections carry
-            // one, all of them Gita.
+            // Naming the texts that do have commentary turns a dead end into a
+            // direction: every Gita and Upanishad verse carries one (RG-01).
             detail: hindi
-                ? 'इस संग्रह में व्याख्या केवल भगवद्गीता के साथ है।'
-                : 'In this collection, only the Bhagavad Gita is commented on.',
+                ? 'इस संग्रह में व्याख्या भगवद्गीता और उपनिषदों के साथ है।'
+                : 'In this collection, the Bhagavad Gita and the Upanishads '
+                    'are commented on.',
             scale: scale,
             hindi: hindi,
           ),
         ),
       // RD-02. Renders from gyan.word_meanings where a verse has rows
-      // (Gita chapter 1, so far); the empty state names the gap honestly
+      // (Gita and Upanishads); the empty state names the gap honestly
       // rather than implying a fetch is still in flight.
       ReaderTab.wordMeaning => _WordMeaningPanel(
           sectionId: section.id,
@@ -365,8 +363,8 @@ class _WordMeaningPanel extends ConsumerWidget {
             ? 'इस श्लोक का शब्द-दर-शब्द अर्थ अभी नहीं जोड़ा गया है।'
             : 'Word-by-word meaning has not been added for this verse yet.',
         detail: hindi
-            ? 'अभी यह केवल भगवद्गीता के पहले अध्याय के लिए उपलब्ध है।'
-            : 'So far this is only available for Bhagavad Gita chapter 1.',
+            ? 'अभी यह भगवद्गीता और उपनिषदों के लिए उपलब्ध है।'
+            : 'So far this is available for the Bhagavad Gita and the Upanishads.',
         scale: scale,
         hindi: hindi,
       );

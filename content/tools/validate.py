@@ -49,6 +49,7 @@ MODULES: dict[str, tuple[str, str]] = {
     "vidya":      ("vidya_topic",      "vidya_topics"),
     "festivals":  ("festival",         "festivals"),
     "ask":        ("qa_pair",          "qa_pairs"),
+    "word_meanings": ("word_meaning",  "word_meanings"),
     "journal":    ("journal_prompt",   "journal_prompts"),
     "paths":      ("learning_path",    "learning_paths"),
 }
@@ -514,6 +515,18 @@ def check_bilingual(rows: list[Row], rep: Report, strict: bool) -> None:
         if r.module == "relations":
             continue
         o = r.obj
+        # Word meanings have no top-level title/prompt/question -- their
+        # bilingual text is per-word, in words[].meaning -- so check there
+        # instead of the generic field this loop otherwise looks for.
+        if r.module == "word_meanings":
+            for w in o.get("words") or []:
+                m = w.get("meaning") or {}
+                if isinstance(m, dict) and not (m.get("hi") or "").strip():
+                    rep.add(sev, "missing-hindi-title",
+                            f"word '{w.get('sanskrit')}' has no Hindi meaning "
+                            f"-- the app is bilingual (§1.11)",
+                            file=r.rel, line=r.line, module=r.module)
+            continue
         title = o.get("title") or o.get("prompt") or o.get("question") or {}
         if isinstance(title, dict) and not (title.get("hi") or "").strip():
             rep.add(sev, "missing-hindi-title",
@@ -635,7 +648,7 @@ def check_quick_summary(rows: list[Row], rep: Report, strict: bool) -> None:
 # from a paragraph a human wrote.
 _AUTHORED_MODULES = {
     "narrative", "dharma", "vidya", "festivals", "ask", "journal", "paths",
-    "cosmology",
+    "cosmology", "word_meanings",
 }
 # Source slugs that mark a row as a CC0 structured-data import rather than
 # something read against a translation.

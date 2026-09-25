@@ -397,6 +397,16 @@ CREATE TABLE word_meanings (
 );
 CREATE INDEX ix_word_meanings_section ON word_meanings(scripture_section_id, order_no);
 
+-- RG-01 scripture rewrite: our own translation and commentary for a verse,
+-- keyed on main.scripture_sections.id. The app reads these first and falls
+-- back to the fixture only for verses not yet rewritten (the Ramayana today).
+-- Sanskrit and transliteration are public domain and stay in the fixture.
+CREATE TABLE scripture_overrides (
+  section_id    INTEGER PRIMARY KEY,  -- soft link into main.scripture_sections
+  body_en       TEXT NOT NULL, body_hi TEXT NOT NULL,
+  commentary_en TEXT,          commentary_hi TEXT
+);
+
 -- 4.17 Karma Journal -- the PROMPTS are content; the entries live in
 -- aradhya_user.db and never leave the device.
 CREATE TABLE journal_prompts (

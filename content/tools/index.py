@@ -298,9 +298,17 @@ class Indexer:
         if has("scripture_sections") and has("scripture_books"):
             books = {r[0]: (r[1], r[2]) for r in legacy.execute(
                 "select id, title_en, title_hi from scripture_books")}
+            # RG-01: index our rewritten translation, not the fixture's, for
+            # every verse that has one -- search must not surface the old text.
+            ours = {}
+            if self.db.execute("select 1 from sqlite_master where type='table' "
+                               "and name='scripture_overrides'").fetchone():
+                ours = dict(self.db.execute(
+                    "select section_id, body_en from scripture_overrides"))
             for (sid, book_id, number, ben, bhi, sans) in legacy.execute(
                     """select id, book_id, number, body_en, body_hi, sanskrit
                        from scripture_sections"""):
+                ben = ours.get(sid, ben)
                 btitle_en, btitle_hi = books.get(book_id, (None, None))
                 label_en = f"{btitle_en or 'Verse'} {number}".strip()
                 label_hi = f"{btitle_hi or ''} {number}".strip() or None

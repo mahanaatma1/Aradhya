@@ -33,12 +33,26 @@ class ScriptureRepository {
     return rows.isEmpty ? null : ScriptureBook.fromRow(rows.first);
   }
 
+  /// RG-01: a verse we have rewritten reads from `gyan.scripture_overrides`;
+  /// the fixture's translation and commentary show only where no rewrite
+  /// exists yet. Sanskrit and transliteration always come from the fixture.
+  String get _sectionSelect => db.gyanAttached
+      ? '''
+        SELECT s.id, s.book_id, s.number, s.sanskrit, s.transliteration,
+               COALESCE(o.body_en, s.body_en) AS body_en,
+               COALESCE(o.body_hi, s.body_hi) AS body_hi,
+               CASE WHEN o.section_id IS NULL THEN s.commentary_en
+                    ELSE o.commentary_en END AS commentary_en,
+               CASE WHEN o.section_id IS NULL THEN s.commentary_hi
+                    ELSE o.commentary_hi END AS commentary_hi
+        FROM scripture_sections s
+        LEFT JOIN gyan.scripture_overrides o ON o.section_id = s.id'''
+      : 'SELECT * FROM scripture_sections s';
+
   Future<List<ScriptureSection>> sections(int bookId) async {
-    final rows = await db.query(
-      'scripture_sections',
-      where: 'book_id = ?',
-      whereArgs: [bookId],
-      orderBy: 'order_no, id',
+    final rows = await db.raw.rawQuery(
+      '$_sectionSelect WHERE s.book_id = ? ORDER BY s.order_no, s.id',
+      [bookId],
     );
     return rows.map(ScriptureSection.fromRow).toList();
   }
@@ -59,13 +73,10 @@ class ScriptureRepository {
     required int limit,
     required int offset,
   }) async {
-    final rows = await db.raw.query(
-      'scripture_sections',
-      where: 'book_id = ?',
-      whereArgs: [bookId],
-      orderBy: 'order_no, id',
-      limit: limit,
-      offset: offset,
+    final rows = await db.raw.rawQuery(
+      '$_sectionSelect WHERE s.book_id = ? ORDER BY s.order_no, s.id '
+      'LIMIT ? OFFSET ?',
+      [bookId, limit, offset],
     );
     return rows.map(ScriptureSection.fromRow).toList();
   }

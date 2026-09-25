@@ -296,6 +296,12 @@ PROPER = {
     "दैत्य", "दैत्यों", "वैनतेय", "विनता", "राम", "मकर", "जाह्नवी", "गायत्री",
     "बृहत्साम", "मार्गशीर्ष", "वासुदेव", "व्यास", "उशना", "कन्दर्प", "कामधुक",
     "वृष्णियों", "देवल", "असित", "सामवेद", "साम", "सिद्धों", "इन्द्र",
+    # hare (vocative of hari, "O Hari") -- the maha-mantra's own repeated
+    # address, three Devanagari characters so it falls under the deva-fold
+    # stem-length floor in _is_subject and was scoring as chosen vocabulary.
+    # Same category as krishna/rama above, just short enough to need listing
+    # explicitly rather than being caught by the stem match.
+    "हरे", "hare",
 }
 
 STOPWORDS = STOP_EN | STOP_HI | FORCED_TERMS | PROPER

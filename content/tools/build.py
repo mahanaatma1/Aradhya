@@ -640,6 +640,63 @@ class Builder:
                  _status(o)))
             self._stamp("qa_pairs", cur.lastrowid, o)
 
+    def insert_word_meanings(self) -> None:
+        docs = list(self.rows("word_meanings"))
+        refs = {o["scripture_ref"] for o in docs}
+        section_ids = resolve_section_refs(refs)
+        unresolved = sum(1 for r in refs if r not in section_ids)
+        if unresolved:
+            print(f"  word_meanings: {unresolved} scripture_ref(s) did not "
+                  f"resolve to a unique verse -- those glosses are dropped")
+        count = 0
+        for o in docs:
+            section_id = section_ids.get(o["scripture_ref"])
+            if section_id is None:
+                continue
+            for w in o["words"]:
+                m = w["meaning"]
+                self.db.execute(
+                    """insert into word_meanings
+                       (scripture_section_id, order_no, sanskrit,
+                        meaning_en, meaning_hi)
+                       values (?,?,?,?,?)""",
+                    (section_id, w["order_no"], w["sanskrit"],
+                     m.get("en"), m.get("hi")))
+                count += 1
+        self.counts["word_meanings"] = count
+
+    def insert_scripture_overrides(self) -> None:
+        """RG-01: our rewritten verses, which the reader prefers over the fixture.
+
+        Distinctness is gated separately by `legal_own check`; here we only
+        refuse ids that do not exist in the fixture, so a stale file can never
+        attach text to the wrong verse.
+        """
+        own_dir = CONTENT_DIR / "legal" / "own" / "scripture_verses"
+        if not own_dir.exists() or not LEGACY_DB.exists():
+            return
+        legacy = sqlite3.connect(f"file:{LEGACY_DB}?mode=ro", uri=True)
+        try:
+            valid = {r[0] for r in legacy.execute("select id from scripture_sections")}
+        finally:
+            legacy.close()
+        count = 0
+        for path in sorted(own_dir.glob("*.json")):
+            doc = json.loads(path.read_text(encoding="utf-8"))
+            for row in doc["rows"]:
+                if row["id"] not in valid:
+                    raise SystemExit(f"{path.name}: id {row['id']} is not a "
+                                     f"scripture_sections id in the fixture")
+                self.db.execute(
+                    """insert into scripture_overrides
+                       (section_id, body_en, body_hi, commentary_en, commentary_hi)
+                       values (?,?,?,?,?)""",
+                    (row["id"], row["body_en"], row["body_hi"],
+                     row.get("commentary_en") or None,
+                     row.get("commentary_hi") or None))
+                count += 1
+        self.counts["scripture_overrides"] = count
+
     def insert_journal(self) -> None:
         for o in self.rows("journal"):
             p = o.get("prompt") or {}
@@ -741,6 +798,14 @@ def resolve_section_refs(refs: set[str]) -> dict[str, int]:
                    join scriptures sc on sc.id = b.scripture_id
                    where sc.slug = ? and s.number = ?""",
                 (slug.strip(), number.strip())).fetchall()
+            if not rows:
+                # Upanishad refs are scoped by book ('maha:5.43'): verse numbers
+                # repeat across the 106 books of one scripture.
+                rows = legacy.execute(
+                    """select s.id from scripture_sections s
+                       join scripture_books b on b.id = s.book_id
+                       where b.slug = ? and s.number = ?""",
+                    (slug.strip(), number.strip())).fetchall()
             if len(rows) == 1:
                 out[ref] = rows[0][0]
     finally:
@@ -919,6 +984,8 @@ def main(argv: list[str] | None = None) -> int:
         b.insert_vidya()
         b.insert_festivals()
         b.insert_qa()
+        b.insert_word_meanings()
+        b.insert_scripture_overrides()
         b.insert_journal()
         b.insert_paths()
         db.commit()
