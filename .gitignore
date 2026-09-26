@@ -74,3 +74,5 @@ assets/db/*.sqlite.gz
 .env
 .env.*
 android/.kotlin/
+
+assets/db/gyan.carry.sqlite

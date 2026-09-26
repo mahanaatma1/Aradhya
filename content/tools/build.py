@@ -813,6 +813,30 @@ def resolve_section_refs(refs: set[str]) -> dict[str, int]:
     return out
 
 
+LOADED_TABLES = ("scriptures", "scripture_books", "cities", "devotional_lyrics",
+                 "kathas", "mantras", "puja_vidhi", "quotes", "stories")
+
+
+def carry_loaded_tables(db: sqlite3.Connection, prev_path: Path) -> None:
+    db.execute("attach ? as prev", (str(prev_path),))
+    try:
+        have = {r[0] for r in db.execute(
+            "select name from prev.sqlite_master where type='table'")}
+        for t in LOADED_TABLES:
+            if t not in have:
+                continue
+            cols = [r[1] for r in db.execute(f"pragma main.table_info({t})")]
+            prev_cols = {r[1] for r in db.execute(f"pragma prev.table_info({t})")}
+            shared = ",".join(c for c in cols if c in prev_cols)
+            db.execute(f"insert into main.{t} ({shared}) select {shared} from prev.{t}")
+            n = db.execute(f"select count(*) from main.{t}").fetchone()[0]
+            print(f"  carried {t:<18} {n} rows from the previous build")
+        db.commit()
+    finally:
+        db.execute("detach prev")
+    prev_path.unlink()
+
+
 def write_gzip(db_path) -> None:
     """Write the gzipped twin of the built database.
 
@@ -964,7 +988,12 @@ def main(argv: list[str] | None = None) -> int:
             return 1
 
     ASSETS_DB_DIR.mkdir(parents=True, exist_ok=True)
+    # These tables are written by the load_* tools straight into gyan.sqlite,
+    # not from content/data, so a fresh file would ship them empty. Carry the
+    # previous build's rows over.
+    carried = GYAN_DB.with_name("gyan.carry.sqlite")
     if GYAN_DB.exists():
+        shutil.copyfile(GYAN_DB, carried)
         GYAN_DB.unlink()
 
     version = f"{SEMVER}+{datetime.now(timezone.utc):%Y%m%d}.{_git_sha()}"
@@ -974,6 +1003,8 @@ def main(argv: list[str] | None = None) -> int:
         db.execute("PRAGMA foreign_keys=ON")
         b = Builder(db, strict, modules)
         b.apply_schema()
+        if carried.exists():
+            carry_loaded_tables(db, carried)
         b.insert_sources()
         b.insert_entities()
         b.insert_relations()
