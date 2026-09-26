@@ -1,0 +1,1936 @@
+{
+ "slug": "sundara",
+ "title_en": "Sundara Kanda",
+ "title_hi": "सुन्दर काण्ड",
+ "book_id": 23,
+ "scripture": "valmiki-ramayana",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, written in plain, jargon-free language (RG-01). Replaces the corresponding scripture_sections rows of the Ishvarvaani fixture. Sanskrit and transliteration are carried over from the PD source at build time and are not restated here.",
+ "rows": [
+  {
+   "id": 12185,
+   "number": "1.1",
+   "body_en": "Then Hanuman, the tamer of enemies, made up his mind to search for the trail of Sita, whom Ravana had carried off, along the sky road that the celestial singers travel.",
+   "body_hi": "फिर दुश्मनों को कुचलने वाले हनुमान ने तय किया कि वे रावण की उठा ले जाई गई सीता का पता उस आसमानी रास्ते से खोजेंगे, जिस पर आकाश में गाने वाले चारण आते-जाते हैं।"
+  },
+  {
+   "id": 12186,
+   "number": "1.2",
+   "body_en": "Eager to do a deed that was hard to do and that no one else could match, the vanara lifted his head and neck high and looked like a proud bull, the lord of a herd.",
+   "body_hi": "एक ऐसा काम करने की चाह में जो बहुत मुश्किल था और जिसकी बराबरी कोई और नहीं कर सकता था, उस वानर ने अपना सिर और गर्दन ऊँची उठा ली, और वे झुंड के मालिक किसी शानदार साँड़ जैसे दिखने लगे।"
+  },
+  {
+   "id": 12187,
+   "number": "1.3",
+   "body_en": "Then the mighty and steady-minded Hanuman strolled about at ease over the grassy slopes, which were the colour of cat’s-eye gems and rippled like water.",
+   "body_hi": "फिर वे ताकतवर और धीरज वाले हनुमान घास से ढकी ढलानों पर आराम से घूमने लगे, जिनका रंग लहसुनिया रत्न जैसा था और जो पानी की तरह लहराती लगती थीं।"
+  },
+  {
+   "id": 12188,
+   "number": "1.4",
+   "body_en": "Wise as he was, he went about like a lion in its prime, startling the birds, knocking down trees with his chest and striking down many wild animals as he went.",
+   "body_hi": "समझदार होते हुए भी वे पूरे जोश में भरे शेर की तरह घूम रहे थे; पंछियों को डराते, अपनी छाती से पेड़ों को गिराते और रास्ते में बहुत से जंगली जानवरों को मारते चले जा रहे थे।"
+  },
+  {
+   "id": 12189,
+   "number": "1.5",
+   "body_en": "The mountain was richly decked with minerals of many natural colours, blue, red, deep crimson and leaf-green, white and black, forming bright patterns all over it.",
+   "body_hi": "वह पहाड़ तरह-तरह के कुदरती रंगों वाली धातुओं से खूब सजा हुआ था: नीली, लाल, गहरी मजीठ जैसी, पत्तों जैसी हरी, सफ़ेद और काली, जो उस पर रंग-बिरंगे नक्श बनाती थीं।"
+  },
+  {
+   "id": 12190,
+   "number": "1.6",
+   "body_en": "Yakshas, kinnaras and gandharvas, who can take any shape they like, came there again and again with their followers, and so did serpent beings who were almost like gods.",
+   "body_hi": "यक्ष, किन्नर और गंधर्व, जो जैसा चाहें वैसा रूप ले सकते हैं, अपने साथियों के साथ वहाँ बार-बार आते रहते थे, और देवताओं जैसे नाग भी वहाँ आते थे।"
+  },
+  {
+   "id": 12191,
+   "number": "1.7",
+   "body_en": "Standing there at the foot of that great mountain, where the best of elephants roamed in herds, the finest of the vanaras looked like an elephant standing in a lake.",
+   "body_hi": "उस बड़े पहाड़ की तलहटी में, जहाँ अच्छे-अच्छे हाथियों के झुंड घूमते थे, खड़े हुए वानरों में सबसे बढ़िया हनुमान किसी झील में खड़े हाथी जैसे लग रहे थे।"
+  },
+  {
+   "id": 12192,
+   "number": "1.8",
+   "body_en": "He joined his palms in respect to the Sun, to great Indra, to the Wind god, to Brahma the self-born, and to all living beings, and then set his mind on the journey.",
+   "body_hi": "उन्होंने हाथ जोड़कर सूरज, बड़े इंद्र, पवन देव, अपने-आप जन्मे ब्रह्मा और सभी जीवों को प्रणाम किया, और फिर जाने का पक्का इरादा कर लिया।"
+  },
+  {
+   "id": 12193,
+   "number": "1.9",
+   "body_en": "Facing east, he folded his hands to the Wind god, his own father. Then the capable Hanuman began to grow larger, ready to set off toward the south.",
+   "body_hi": "पूरब की ओर मुँह करके उन्होंने अपने पिता पवन देव को हाथ जोड़े। फिर होशियार हनुमान दक्षिण दिशा की ओर जाने के लिए अपना शरीर बढ़ाने लगे।"
+  },
+  {
+   "id": 12194,
+   "number": "1.10",
+   "body_en": "As the chief vanaras watched, he grew, firmly resolved on the leap, swelling for Rama’s good the way the ocean swells on the days of the full and new moon.",
+   "body_hi": "बड़े-बड़े वानर देखते रहे और वे, छलाँग लगाने का पक्का फ़ैसला करके, राम की भलाई के लिए ऐसे बढ़ने लगे जैसे पूनम और अमावस के दिनों में समुद्र उफनता है।"
+  },
+  {
+   "id": 12195,
+   "number": "1.11",
+   "body_en": "Now grown to a size no one could measure, and meaning to jump clear across the sea, he bore down with hands and feet on the peak beneath him.",
+   "body_hi": "उनका शरीर बेहिसाब बड़ा हो गया, और समुद्र को लाँघने की चाह में उन्होंने अपनी बाँहों और पैरों से पहाड़ को ज़ोर से दबाया।"
+  },
+  {
+   "id": 12196,
+   "number": "1.12",
+   "body_en": "Squeezed by the vanara, even that unmoving mountain shook for a moment, and all the flowers fell from the blossoming tops of its trees.",
+   "body_hi": "वानर के इस तरह दबाने से वह अटल पहाड़ भी पल भर के लिए हिल गया, और उसके पेड़ों की फूलों से लदी फुनगियों से सारे फूल झड़ गए।"
+  },
+  {
+   "id": 12197,
+   "number": "1.13",
+   "body_en": "Blossoms shaken loose from the branches lay everywhere in a sweet-smelling carpet, until the whole peak seemed to be built of nothing but petals.",
+   "body_hi": "पेड़ों से गिरे उन खुशबूदार फूलों के ढेर से चारों तरफ़ ढका हुआ वह पहाड़ ऐसा लगने लगा, मानो पूरा का पूरा फूलों से ही बना हो।"
+  },
+  {
+   "id": 12198,
+   "number": "1.14",
+   "body_en": "Pressed by that hero of supreme strength, the mountain began to pour out streams of water, like a maddened elephant streaming with the fluid of its rut.",
+   "body_hi": "उस बेहद ताकतवर वीर के दबाव से पहाड़ से पानी की धाराएँ बह निकलीं, जैसे मस्ती में आए हाथी की कनपटियों से मद बहने लगता है।"
+  },
+  {
+   "id": 12199,
+   "number": "1.15",
+   "body_en": "As the mighty Hanuman bore down on it, Mount Mahendra sent out streaks of gold, silver and dark collyrium-black ore running down its sides.",
+   "body_hi": "जब ताकतवर हनुमान ने उसे दबाया, तो महेंद्र पहाड़ की ढलानों पर सोने, चाँदी और काजल जैसी काली धातु की लकीरें बह निकलीं।"
+  },
+  {
+   "id": 12200,
+   "number": "1.16",
+   "body_en": "The mountain also threw off huge boulders streaked with red arsenic, and looked like a fire with a steady flame in the middle and lines of smoke rising from it.",
+   "body_hi": "पहाड़ ने मैनसिल की लाल धारियों वाली बड़ी-बड़ी चट्टानें भी गिरा दीं, और वह ऐसी आग जैसा दिखने लगा जिसके बीच में लौ जल रही हो और जिससे धुएँ की लकीरें उठ रही हों।"
+  },
+  {
+   "id": 12201,
+   "number": "1.17",
+   "body_en": "As the mountain was crushed, the creatures living in its caves were crushed on all sides too, and they cried out in strange, distorted voices.",
+   "body_hi": "जब पहाड़ दबा, तो उसकी गुफाओं में रहने वाले जीव भी हर तरफ़ से दब गए, और वे अजीब, बिगड़ी हुई आवाज़ों में चीखने लगे।"
+  },
+  {
+   "id": 12202,
+   "number": "1.18",
+   "body_en": "That great uproar of living creatures, set off by the crushing of the mountain, filled the whole earth, every direction and all the groves around.",
+   "body_hi": "पहाड़ के दबने से उठा जीवों का वह भारी शोर पूरी धरती में, सारी दिशाओं में और आस-पास के सारे बगीचों में भर गया।"
+  },
+  {
+   "id": 12203,
+   "number": "1.19",
+   "body_en": "Snakes with broad hoods marked clearly with the swastika sign spat out terrible fire and bit into the rocks with their fangs.",
+   "body_hi": "चौड़े फनों वाले साँप, जिन पर स्वस्तिक का निशान साफ़ दिखता था, भयानक आग उगलने लगे और अपने दाँतों से चट्टानों को डसने लगे।"
+  },
+  {
+   "id": 12204,
+   "number": "1.20",
+   "body_en": "The great rocks, bitten by those angry, venomous snakes, blazed up as if set alight by fire and split into a thousand pieces.",
+   "body_hi": "उन गुस्साए ज़हरीले साँपों के डसने से वे बड़ी चट्टानें ऐसे धधक उठीं जैसे उनमें आग लग गई हो, और हज़ारों टुकड़ों में फट गईं।"
+  },
+  {
+   "id": 12205,
+   "number": "1.21",
+   "body_en": "The many healing herbs that grew on that mountain, though they could cure poison, were unable to calm the venom of those serpents.",
+   "body_hi": "उस पहाड़ पर उगी बहुत सी जड़ी-बूटियाँ, जो ज़हर उतार सकती थीं, वे भी उन साँपों के ज़हर को शांत नहीं कर पाईं।"
+  },
+  {
+   "id": 12206,
+   "number": "1.22",
+   "body_en": "Thinking that some beings were breaking the mountain apart, the vidyadharas and the ascetics living there took fright and flew up from it with their women.",
+   "body_hi": "यह सोचकर कि कोई जीव इस पहाड़ को तोड़ रहे हैं, वहाँ रहने वाले विद्याधर और तपस्वी डर गए और अपनी औरतों के साथ वहाँ से उड़कर ऊपर चले गए।"
+  },
+  {
+   "id": 12207,
+   "number": "1.23",
+   "body_en": "They left behind in their drinking places golden wine cups, costly vessels and golden water jugs,",
+   "body_hi": "वे अपनी महफ़िल की जगहों पर सोने के शराब के प्याले, कीमती बर्तन और सोने की सुराहियाँ छोड़ गए,"
+  },
+  {
+   "id": 12208,
+   "number": "1.24",
+   "body_en": "sweet dishes to lick and all kinds of food, many sorts of meat, shields covered in bull hide and swords with golden hilts.",
+   "body_hi": "चाटकर खाने वाली मिठाइयाँ और हर तरह का खाना, कई तरह का मांस, बैल की खाल से ढकी ढालें और सोने की मूठ वाली तलवारें भी वहीं रह गईं।"
+  },
+  {
+   "id": 12209,
+   "number": "1.25",
+   "body_en": "Flushed with drink, garlands around their necks, wearing red flowers and red scented paste, their eyes reddened and wide as lotuses, they rose into the sky.",
+   "body_hi": "नशे में मस्त, गले में मालाएँ डाले, लाल फूल और लाल खुशबूदार लेप लगाए, कमल जैसी बड़ी और लाल-लाल आँखों वाले वे लोग आसमान में उड़ गए।"
+  },
+  {
+   "id": 12210,
+   "number": "1.26",
+   "body_en": "Their women, wearing necklaces, anklets, armlets and bracelets, stood in the sky beside their lovers, amazed and smiling at the sight.",
+   "body_hi": "उनकी औरतें, जो हार, पायल, बाजूबंद और कंगन पहने थीं, अपने प्रेमियों के साथ आसमान में खड़ी हो गईं; वे हैरान भी थीं और मुस्करा भी रही थीं।"
+  },
+  {
+   "id": 12211,
+   "number": "1.27",
+   "body_en": "The great sages among the vidyadharas, showing off their magical powers, stood together in the sky and gazed down at the mountain.",
+   "body_hi": "विद्याधरों के बड़े-बड़े ऋषि अपनी जादुई विद्या दिखाते हुए एक साथ आसमान में खड़े रहे और नीचे पहाड़ को देखते रहे।"
+  },
+  {
+   "id": 12212,
+   "number": "1.28",
+   "body_en": "At that moment, from high in the cloudless sky, came the voices of charanas, siddhas and holy sages whose minds were pure, and this is what they were saying:",
+   "body_hi": "उसी पल बादलों से खाली ऊँचे आसमान से चारणों, सिद्धों और साफ़ मन वाले पवित्र ऋषियों की आवाज़ें आईं, और वे यह कह रहे थे:"
+  },
+  {
+   "id": 12213,
+   "number": "1.29",
+   "body_en": "“This is Hanuman, the son of the Wind, huge as a mountain. With tremendous speed he means to cross the ocean, the home of sea monsters.",
+   "body_hi": "“यह पवन के बेटे हनुमान हैं, जो पहाड़ जितने बड़े हैं। ये ज़बरदस्त तेज़ी से उस समुद्र को पार करना चाहते हैं जिसमें मगरमच्छ और समुद्री दानव रहते हैं।"
+  },
+  {
+   "id": 12214,
+   "number": "1.30",
+   "body_en": "For Rama’s sake and for the vanaras’ sake he wants to do something very hard: to reach the far shore of the ocean, which is so difficult to get to.”",
+   "body_hi": "राम के लिए और वानरों के लिए ये एक बहुत मुश्किल काम करना चाहते हैं: समुद्र के उस पार पहुँचना, जहाँ पहुँचना बड़ा कठिन है।”"
+  },
+  {
+   "id": 12215,
+   "number": "1.31",
+   "body_en": "Hearing what those great ones said, the vidyadharas turned their eyes to the mountain and saw him there, the leader of the vanaras, so huge that no one could take his measure.",
+   "body_hi": "उन महान लोगों की बात सुनकर विद्याधरों ने पहाड़ की ओर नज़र घुमाई और वहाँ वानरों के उस सरदार को देखा, जो इतने बड़े थे कि कोई उनका नाप नहीं ले सकता था।"
+  },
+  {
+   "id": 12216,
+   "number": "1.32",
+   "body_en": "He shook out the hair on his body and quivered like a mountain, and he let out a mighty roar like a great thundercloud.",
+   "body_hi": "उन्होंने अपने शरीर के बाल झटके और पहाड़ की तरह थरथराए, और किसी बड़े गरजते बादल जैसी ज़ोरदार दहाड़ लगाई।"
+  },
+  {
+   "id": 12217,
+   "number": "1.33",
+   "body_en": "About to leap, he flung up his long tail, round and thick with hair and tapering towards the tip, the way Garuda, king of birds, tosses a snake.",
+   "body_hi": "छलाँग लगाने से ठीक पहले उन्होंने अपनी लंबी पूँछ ऊपर उछाली, जो गोल थी, बालों से भरी थी और सिरे की ओर पतली होती जाती थी, जैसे पंछियों का राजा गरुड़ किसी साँप को उछालता है।"
+  },
+  {
+   "id": 12218,
+   "number": "1.34",
+   "body_en": "As he gathered speed, his tail curled up behind him and looked like a great serpent being carried off by Garuda.",
+   "body_hi": "जैसे-जैसे उन्होंने ज़ोर पकड़ा, उनकी पूँछ पीछे की ओर मुड़ गई और ऐसी दिखने लगी जैसे गरुड़ किसी बड़े साँप को उठाकर ले जा रहे हों।"
+  },
+  {
+   "id": 12219,
+   "number": "1.35",
+   "body_en": "The vanara braced his arms, which were like huge iron bars, crouched down at the waist and drew in his feet.",
+   "body_hi": "वानर ने अपनी बाँहें कस लीं, जो लोहे की बड़ी छड़ों जैसी थीं, कमर से नीचे झुक गए और अपने पैर सिकोड़ लिए।"
+  },
+  {
+   "id": 12220,
+   "number": "1.36",
+   "body_en": "The splendid, powerful Hanuman pulled in his arms and his neck as well, and summoned up all his energy, courage and strength.",
+   "body_hi": "शानदार और ताकतवर हनुमान ने अपनी बाँहें और गर्दन भी सिकोड़ लीं, और अपना सारा तेज, हिम्मत और ताकत अपने अंदर समेट ली।"
+  },
+  {
+   "id": 12221,
+   "number": "1.37",
+   "body_en": "Gazing far off at the path ahead, his eyes fixed upward, he looked at the sky and held his breath deep in his chest.",
+   "body_hi": "आगे दूर तक रास्ते को देखते हुए, आँखें ऊपर टिकाए, उन्होंने आसमान की ओर देखा और साँस को सीने में रोक लिया।"
+  },
+  {
+   "id": 12222,
+   "number": "1.38",
+   "body_en": "Planting his feet firmly, the mighty Hanuman, an elephant among vanaras, flattened his ears, ready to spring up.",
+   "body_hi": "पैरों को मज़बूती से जमाकर, वानरों में हाथी जैसे ताकतवर हनुमान ने अपने कान पीछे की ओर दबा लिए और उछलने को तैयार हो गए।"
+  },
+  {
+   "id": 12223,
+   "number": "1.39",
+   "body_en": "Then the best of the vanaras said to the other vanaras: “Like an arrow shot by Rama, flying with the speed of the wind,",
+   "body_hi": "फिर वानरों में सबसे बढ़िया हनुमान ने बाकी वानरों से कहा: “जैसे राम का छोड़ा हुआ तीर हवा की रफ़्तार से उड़ता है,"
+  },
+  {
+   "id": 12224,
+   "number": "1.40",
+   "body_en": "so I will fly to Lanka, the city Ravana guards. And if I do not find Janaka’s daughter in Lanka,",
+   "body_hi": "वैसे ही मैं रावण के कब्ज़े वाली लंका जाऊँगा। और अगर लंका में मुझे जनक की बेटी नहीं मिली,"
+  },
+  {
+   "id": 12225,
+   "number": "1.41",
+   "body_en": "then with this same speed I will go on to heaven, the home of the gods. And if I do not find Sita even in heaven, I will not count it as effort wasted:",
+   "body_hi": "तो इसी रफ़्तार से मैं देवताओं के घर स्वर्ग तक चला जाऊँगा। और अगर स्वर्ग में भी सीता नहीं मिलीं, तो भी मैं अपनी मेहनत बेकार नहीं जाने दूँगा:"
+  },
+  {
+   "id": 12226,
+   "number": "1.42",
+   "body_en": "I will tie up Ravana, king of the rakshasas, and bring him back. One way or another I will come back with my task done, bringing Sita with me.",
+   "body_hi": "रावण को, जो राक्षसों का राजा है, मैं रस्सियों में जकड़कर यहाँ घसीट लाऊँगा। चाहे जो हो, सीता को साथ लिए और काम पूरा किए बिना मैं वापस नहीं आऊँगा।"
+  },
+  {
+   "id": 12227,
+   "number": "1.43",
+   "body_en": "Or else I will tear up Lanka, Ravana and all, and carry it back here.” Having said this to the vanaras, Hanuman, the finest of them all,",
+   "body_hi": "नहीं तो पूरी लंका को ही, रावण के साथ, जड़ से उखाड़कर यहाँ उठा लाऊँगा।” अपने साथियों से यह कहकर वानरों के सबसे बड़े वीर हनुमान"
+  },
+  {
+   "id": 12228,
+   "number": "1.44",
+   "body_en": "sprang up with great force, swift as he was, without a moment’s hesitation. That elephant among vanaras felt as if he himself were Garuda.",
+   "body_hi": "बिना कुछ सोचे-विचारे, पूरे ज़ोर से ऊपर उछल पड़े, क्योंकि वे बहुत तेज़ थे। वानरों में हाथी जैसे उस वीर को ऐसा लगा मानो वे खुद गरुड़ हों।"
+  },
+  {
+   "id": 12229,
+   "number": "1.45",
+   "body_en": "As he shot upward, the force of it tore the trees growing on the mountain loose, and they drew in all their branches and flew up after him from every side.",
+   "body_hi": "जब वे ऊपर उछले, तो उनके ज़ोर से पहाड़ पर उगे पेड़ उखड़ गए, और अपनी सारी डालियाँ समेटकर चारों तरफ़ से उनके पीछे-पीछे उड़ चले।"
+  },
+  {
+   "id": 12230,
+   "number": "1.46",
+   "body_en": "Carrying along with the rush of his thighs trees in full flower, alive with excited lapwings and cranes, he went up into the clear sky.",
+   "body_hi": "अपनी जाँघों के ज़ोर से वे फूलों से लदे ऐसे पेड़ों को साथ खींचते हुए साफ़ आसमान में चले, जिन पर मस्त टिटहरियाँ और बगुले बैठे थे।"
+  },
+  {
+   "id": 12231,
+   "number": "1.47",
+   "body_en": "Pulled up by the force of his thighs, the trees followed the vanara for a while, the way relatives walk a little way with a dear one setting out on a long journey.",
+   "body_hi": "उनकी जाँघों के ज़ोर से खिंचे पेड़ कुछ देर तक वानर के पीछे चलते रहे, जैसे लंबे सफ़र पर निकले किसी अपने को विदा करने रिश्तेदार थोड़ी दूर तक साथ जाते हैं।"
+  },
+  {
+   "id": 12232,
+   "number": "1.48",
+   "body_en": "The same rush uprooted sal trees and other mighty trees too, and they trailed along behind Hanuman like an army marching after its king.",
+   "body_hi": "उसी झोंके ने साल के पेड़ों और दूसरे बड़े पेड़ों को भी उखाड़ दिया, और वे हनुमान के पीछे ऐसे चलने लगे जैसे कोई सेना अपने राजा के पीछे कूच करती है।"
+  },
+  {
+   "id": 12233,
+   "number": "1.49",
+   "body_en": "Surrounded by so many trees with blossoming tops, the mountain-sized Hanuman was a wonderful sight.",
+   "body_hi": "फूलों से लदी फुनगियों वाले इतने सारे पेड़ों से घिरे हुए, पहाड़ जितने बड़े हनुमान देखने में कमाल के लग रहे थे।"
+  },
+  {
+   "id": 12234,
+   "number": "1.50",
+   "body_en": "Then the heavier trees sank down into the salt sea, just as the mountains once sank into Varuna’s ocean home out of fear of great Indra.",
+   "body_hi": "फिर जो भारी पेड़ थे, वे खारे समुद्र में डूब गए, ठीक वैसे ही जैसे कभी पहाड़ बड़े इंद्र के डर से वरुण के घर, यानी समुद्र में जा छिपे थे।"
+  },
+  {
+   "id": 12235,
+   "number": "1.51",
+   "body_en": "Sprinkled with flowers of every kind, with buds and fresh shoots, the vanara glowed like a dark cloud-coloured mountain twinkling with fireflies.",
+   "body_hi": "तरह-तरह के फूलों, कलियों और नई कोंपलों से ढके हुए वे वानर ऐसे चमक रहे थे, जैसे बादल के रंग का कोई पहाड़ जुगनुओं से जगमगा रहा हो।"
+  },
+  {
+   "id": 12236,
+   "number": "1.52",
+   "body_en": "Set free from his pull, the trees let go of their flowers and dropped back into the water, like friends who turn home after seeing someone off.",
+   "body_hi": "उनके खिंचाव से छूटकर पेड़ों ने अपने फूल छोड़ दिए और वापस पानी में गिर पड़े, जैसे किसी को विदा करके दोस्त घर लौट आते हैं।"
+  },
+  {
+   "id": 12237,
+   "number": "1.53",
+   "body_en": "Light as they were, the many-coloured flowers of all those trees, blown along by the wind of the vanara’s passing, drifted down onto the sea.",
+   "body_hi": "उन सब पेड़ों के रंग-बिरंगे फूल, जो बहुत हल्के थे, वानर के गुज़रने से उठी हवा में उड़ते हुए समुद्र पर आ गिरे।"
+  },
+  {
+   "id": 12238,
+   "number": "1.54",
+   "body_en": "The great ocean then looked like a sky scattered with stars. And the vanara, trailed by a stream of flowers in every colour, looked like a cloud in the sky lit up by flashes of lightning.",
+   "body_hi": "तब वह बड़ा समुद्र तारों से भरे आसमान जैसा दिखने लगा। और हर रंग के फूलों की लड़ी को पीछे खींचते हुए वानर आसमान में बिजलियों से सजे किसी बादल जैसे लग रहे थे।"
+  },
+  {
+   "id": 12239,
+   "number": "1.55",
+   "body_en": "With the flowers shaken loose by his speed floating on it, the water looked like the sky when lovely stars have just come out.",
+   "body_hi": "उनकी रफ़्तार से झड़े फूल जब पानी पर तैरने लगे, तो पानी ऐसा दिखा जैसे आसमान, जब उसमें अभी-अभी प्यारे तारे निकल आए हों।"
+  },
+  {
+   "id": 12240,
+   "number": "1.56",
+   "body_en": "Stretched out as he flew through the sky, his two arms looked like two five-hooded snakes sliding out from a mountaintop.",
+   "body_hi": "आसमान में उड़ते हुए उनकी फैली हुई दोनों बाँहें ऐसी लगती थीं, जैसे पहाड़ की चोटी से पाँच फनों वाले दो साँप बाहर निकल रहे हों।"
+  },
+  {
+   "id": 12241,
+   "number": "1.57",
+   "body_en": "The splendid great vanara seemed to be drinking up the ocean with its rows of waves, and he looked as though he were thirsting to swallow the sky itself.",
+   "body_hi": "वह शानदार बड़ा वानर ऐसा लग रहा था मानो लहरों की कतारों वाले समुद्र को पी रहा हो, और ऐसा भी लगता था जैसे वह आसमान को ही निगल जाना चाहता हो।"
+  },
+  {
+   "id": 12242,
+   "number": "1.58",
+   "body_en": "Racing along the road of the wind, he had eyes that flickered with a lightning glare, like a pair of fires blazing on some high peak.",
+   "body_hi": "हवा के रास्ते पर दौड़ते हुए उनकी आँखों में बिजली जैसी चमक कौंध रही थी, जैसे किसी ऊँची चोटी पर दो आगें धधक रही हों।"
+  },
+  {
+   "id": 12243,
+   "number": "1.59",
+   "body_en": "The eyes of that leader of the tawny-eyed vanaras, large, round and golden-brown, shone like the moon and the sun when they have just risen.",
+   "body_hi": "भूरी आँखों वाले वानरों के उस सरदार की बड़ी, गोल और सुनहरी-भूरी आँखें ऐसे चमक रही थीं जैसे अभी-अभी उगे चाँद और सूरज।"
+  },
+  {
+   "id": 12244,
+   "number": "1.60",
+   "body_en": "With his copper-red nose, his whole face glowed red, like the disc of the sun touched by the glow of dusk.",
+   "body_hi": "ताँबे जैसी लाल नाक के कारण उनका पूरा चेहरा लाल दमक रहा था, जैसे शाम की लाली से छुआ हुआ सूरज का गोला।"
+  },
+  {
+   "id": 12245,
+   "number": "1.61",
+   "body_en": "As the son of the Wind flew along, his tail, curled up in the air, stood out beautifully, raised high like Indra’s banner.",
+   "body_hi": "पवन के बेटे जब उड़ रहे थे, तो हवा में मुड़ी हुई उनकी पूँछ इंद्र के झंडे की तरह ऊँची उठी हुई बहुत सुंदर लग रही थी।"
+  },
+  {
+   "id": 12246,
+   "number": "1.62",
+   "body_en": "His tail curved round him in a ring and his teeth flashed white, so that the clever, mighty Wind-born hero looked like the sun ringed by a halo of light.",
+   "body_hi": "उनकी पूँछ उनके चारों ओर गोल घेरे में मुड़ी थी और दाँत सफ़ेद चमक रहे थे, इसलिए वे समझदार, ताकतवर पवन-पुत्र ऐसे लगते थे जैसे सूरज के चारों ओर रोशनी का घेरा बना हो।"
+  },
+  {
+   "id": 12247,
+   "number": "1.63",
+   "body_en": "The great vanara, reddish around his haunches, shone like a mountain split open to show a big vein of red ochre.",
+   "body_hi": "कूल्हों के पास लाल रंग वाले वे बड़े वानर ऐसे चमक रहे थे, जैसे कोई पहाड़ फटकर गेरू की बड़ी लाल धारी दिखा रहा हो।"
+  },
+  {
+   "id": 12248,
+   "number": "1.64",
+   "body_en": "As that lion among vanaras flew over the ocean, the wind rushing under his arms roared like a thundercloud.",
+   "body_hi": "वानरों में शेर जैसे हनुमान जब समुद्र के ऊपर उड़ रहे थे, तो उनकी बगलों के नीचे से गुज़रती हवा बादल की तरह गरज रही थी।"
+  },
+  {
+   "id": 12249,
+   "number": "1.65",
+   "body_en": "Just as a meteor shoots from the northern edge of the sky and is seen streaking across with a trail behind it, so that elephant among vanaras was seen.",
+   "body_hi": "जैसे कोई उल्का आसमान के उत्तरी छोर से निकलकर अपने पीछे लंबी लकीर छोड़ती हुई गिरती दिखती है, वैसे ही वानरों में हाथी जैसे हनुमान दिखाई दे रहे थे।"
+  },
+  {
+   "id": 12250,
+   "number": "1.66",
+   "body_en": "Stretched out full length, looking like the flying sun, the vanara was as grand as a huge elephant with its girth-belt being tied round it.",
+   "body_hi": "पूरे फैले हुए, उड़ते सूरज जैसे दिखते वानर इतने शानदार लग रहे थे, जैसे किसी बड़े हाथी की कमर पर पेटी कसी जा रही हो।"
+  },
+  {
+   "id": 12251,
+   "number": "1.67",
+   "body_en": "With his body above and his shadow sunk deep in the water below, the vanara looked like a ship on the sea driven along by the wind.",
+   "body_hi": "ऊपर उनका शरीर और नीचे पानी में गहरी पड़ती उनकी परछाईं, इन दोनों के साथ वानर ऐसे लगते थे जैसे हवा के धक्के से समुद्र पर दौड़ता कोई जहाज़।"
+  },
+  {
+   "id": 12252,
+   "number": "1.68",
+   "body_en": "Whatever stretch of the ocean the great vanara passed over seemed to be whipped into a frenzy by the rush of his thighs.",
+   "body_hi": "समुद्र के जिस-जिस हिस्से के ऊपर से वह बड़ा वानर गुज़रता, वह हिस्सा उसकी जाँघों के ज़ोर से मानो पागल-सा उछलने लगता।"
+  },
+  {
+   "id": 12253,
+   "number": "1.69",
+   "body_en": "With his chest, solid as a mountain, the great vanara went flying at tremendous speed, striking against the masses of ocean waves.",
+   "body_hi": "पहाड़ जैसी मज़बूत छाती से समुद्र की लहरों के ढेरों को टक्कर मारते हुए वह बड़ा वानर ज़बरदस्त रफ़्तार से उड़ता चला गया।"
+  },
+  {
+   "id": 12254,
+   "number": "1.70",
+   "body_en": "The strong wind made by the vanara and the wind blowing from the clouds together shook the ocean hard, and it roared terribly.",
+   "body_hi": "वानर के उड़ने से उठी तेज़ हवा और बादलों से निकलती हवा, दोनों ने मिलकर समुद्र को ज़ोर से हिला दिया, और वह भयानक आवाज़ में गरजने लगा।"
+  },
+  {
+   "id": 12255,
+   "number": "1.71",
+   "body_en": "Dragging the great masses of waves along in the salt sea, that tiger among vanaras flew on, as if he were scattering heaven and earth apart.",
+   "body_hi": "खारे समुद्र में लहरों के बड़े-बड़े ढेरों को अपने साथ खींचते हुए वानरों में बाघ जैसे हनुमान आगे उड़ते गए, मानो धरती और आसमान को अलग-अलग बिखेर रहे हों।"
+  },
+  {
+   "id": 12256,
+   "number": "1.72",
+   "body_en": "Racing on, he passed over the waves that rose up in the great sea as tall as Mount Meru and Mount Mandara, as if he were counting them one by one.",
+   "body_hi": "तेज़ी से आगे बढ़ते हुए वे बड़े समुद्र में उठी उन लहरों के ऊपर से गुज़रे, जो मेरु और मंदर पहाड़ जितनी ऊँची थीं, मानो उन्हें एक-एक करके गिन रहे हों।"
+  },
+  {
+   "id": 12257,
+   "number": "1.73",
+   "body_en": "The water thrown up by his speed rose into the sky with the clouds, and it spread out there glistening like the white clouds of autumn.",
+   "body_hi": "उनकी रफ़्तार से उछला पानी बादलों के साथ आसमान तक पहुँचा, और वहाँ शरद के सफ़ेद बादलों की तरह फैलकर चमकने लगा।"
+  },
+  {
+   "id": 12258,
+   "number": "1.74",
+   "body_en": "Whales, crocodiles, fish and turtles were left in full view, as bare as people’s bodies when their clothes are pulled off.",
+   "body_hi": "व्हेल, मगरमच्छ, मछलियाँ और कछुए खुलकर दिखने लगे, वैसे ही जैसे कपड़े खींच लेने पर इंसान का शरीर दिख जाता है।"
+  },
+  {
+   "id": 12259,
+   "number": "1.75",
+   "body_en": "Seeing that tiger among vanaras flying in the sky, the snakes that lived in the sea took him for Garuda.",
+   "body_hi": "आसमान में उड़ते उस बाघ जैसे वानर को देखकर समुद्र में रहने वाले साँपों ने उन्हें गरुड़ समझ लिया।"
+  },
+  {
+   "id": 12260,
+   "number": "1.76",
+   "body_en": "The shadow of that lion among vanaras, ten yojanas wide and thirty yojanas long, lay on the water and looked lovelier still.",
+   "body_hi": "पानी पर हनुमान की जो परछाईं पड़ी, वह दस योजन चौड़ी और तीस योजन लंबी थी, और उस शेर जैसे वानर की यह परछाईं देखने में और भी प्यारी लग रही थी।"
+  },
+  {
+   "id": 12261,
+   "number": "1.77",
+   "body_en": "Spread across the salt water and following the son of the Wind wherever he went, his shadow looked like a long bank of thick white clouds.",
+   "body_hi": "खारे पानी पर फैली हुई और पवन के बेटे के पीछे-पीछे चलती उनकी परछाईं घने सफ़ेद बादलों की लंबी कतार जैसी लग रही थी।"
+  },
+  {
+   "id": 12262,
+   "number": "1.78",
+   "body_en": "The great vanara, huge in body and blazing with energy, looked splendid on the unsupported road of the wind, like a mountain with wings.",
+   "body_hi": "बड़े शरीर वाले और तेज से दमकते वे बड़े वानर बिना किसी सहारे वाले हवा के रास्ते पर ऐसे शानदार लग रहे थे, जैसे पंखों वाला कोई पहाड़ हो।"
+  },
+  {
+   "id": 12263,
+   "number": "1.79",
+   "body_en": "Wherever the powerful elephant among vanaras sped along, the ocean beneath that path suddenly seemed to be scooped out into a trough.",
+   "body_hi": "वानरों में हाथी जैसे ताकतवर हनुमान जिस रास्ते से तेज़ी से गुज़रते, उसके नीचे का समुद्र अचानक ऐसा लगता जैसे कटोरे की तरह खोदकर गहरा कर दिया गया हो।"
+  },
+  {
+   "id": 12264,
+   "number": "1.80",
+   "body_en": "Swooping down among the flocks of birds, Hanuman looked like the king of birds himself, and he swept the masses of cloud along before him the way the wind does.",
+   "body_hi": "पंछियों के झुंडों के बीच झपटते हुए हनुमान खुद पंछियों के राजा जैसे लगते थे, और वे बादलों के ढेरों को हवा की तरह अपने आगे खींचते चले जाते थे।"
+  },
+  {
+   "id": 12265,
+   "number": "1.81",
+   "body_en": "Drawn along by the vanara, the great clouds, white and pink, dark blue and deep red, glowed brightly.",
+   "body_hi": "वानर के खींचने से वे बड़े-बड़े बादल, जो सफ़ेद और गुलाबी, गहरे नीले और गहरे लाल थे, खूब चमकने लगे।"
+  },
+  {
+   "id": 12266,
+   "number": "1.82",
+   "body_en": "Plunging into the banks of cloud and coming out of them again and again, now hidden and now in view, he looked like the moon.",
+   "body_hi": "वे बादलों की घटाओं के अंदर घुस जाते, फिर बाहर आ जाते, और ऐसा बार-बार होता; कभी ओझल, कभी सामने, इस तरह वे आसमान के चाँद जैसे नज़र आते थे।"
+  },
+  {
+   "id": 12267,
+   "number": "1.83",
+   "body_en": "Gods, gandharvas and danavas watched the vanara race past overhead, and they let fall showers of flowers over him.",
+   "body_hi": "देवता, गंधर्व और दानव ऊपर से तेज़ी से गुज़रते वानर को देखते रहे, और उन्होंने उन पर फूल बरसाए।"
+  },
+  {
+   "id": 12268,
+   "number": "1.84",
+   "body_en": "So that Rama’s work might be carried through, the sun held back its heat from the great vanara in flight, and the wind stayed at his side, blowing softly.",
+   "body_hi": "ताकि राम का काम पूरा हो सके, सूरज ने उड़ते हुए उस महान वानर पर अपनी गर्मी नहीं बरसाई, और हवा धीरे-धीरे बहती हुई उनके साथ बनी रही।"
+  },
+  {
+   "id": 12269,
+   "number": "1.85",
+   "body_en": "The sages sang his praises as he flew through the air, and the gods and gandharvas sang too, cheering on that hero of great might.",
+   "body_hi": "जब वे आसमान से उड़ रहे थे, तो ऋषियों ने उनकी तारीफ़ के गीत गाए, और देवता और गंधर्व भी उस महान ताकत वाले वीर का हौसला बढ़ाते हुए गाने लगे।"
+  },
+  {
+   "id": 12270,
+   "number": "1.86",
+   "body_en": "Nagas, yakshas, rakshasas, gods and birds all praised the finest of the vanaras when they saw him flying on, quite untouched by weariness.",
+   "body_hi": "नाग, यक्ष, राक्षस, देवता और पंछी, सबने उस सबसे बढ़िया वानर की तारीफ़ की, जब उन्होंने देखा कि वे बिना ज़रा भी थके उड़ते जा रहे हैं।"
+  },
+  {
+   "id": 12271,
+   "number": "1.87",
+   "body_en": "While Hanuman, that tiger among vanaras, was flying across, the Ocean, wishing to honour the family of Ikshvaku, thought to himself:",
+   "body_hi": "जब वानरों में बाघ जैसे हनुमान उड़कर पार जा रहे थे, तब इक्ष्वाकु के खानदान का मान रखने की इच्छा से समुद्र ने मन ही मन सोचा:"
+  },
+  {
+   "id": 12272,
+   "number": "1.88",
+   "body_en": "“If I do not help Hanuman, the lord of the vanaras, I will be blamed by everyone who has anything to say about it.",
+   "body_hi": "“अगर मैंने वानरों के सरदार हनुमान की मदद नहीं की, तो जो भी कुछ कहना चाहेगा, वह मुझे ही दोष देगा।"
+  },
+  {
+   "id": 12273,
+   "number": "1.89",
+   "body_en": "It was Sagara, a king of the Ikshvaku line, who made me grow great. This vanara is working for an Ikshvaku, so he must not be allowed to tire and fail.",
+   "body_hi": "इक्ष्वाकु वंश के राजा सगर ने ही मुझे इतना बड़ा बनाया था। यह वानर इक्ष्वाकु वंश के एक राजा के काम से जा रहा है, इसलिए इसे थककर हारना नहीं चाहिए।"
+  },
+  {
+   "id": 12274,
+   "number": "1.90",
+   "body_en": "So I ought to find a way to give the vanara a resting place. After a pause on me, he can fly the remaining stretch without strain.”",
+   "body_hi": "इसलिए मुझे कोई ऐसा रास्ता निकालना चाहिए जिससे इस वानर को ठहरने की जगह मिले। मुझ पर थोड़ा रुक लेने के बाद वह बाकी दूरी बिना थकान के उड़ लेगा।”"
+  },
+  {
+   "id": 12275,
+   "number": "1.91",
+   "body_en": "Having made this good decision, the Ocean spoke to Mainaka, the finest of mountains, whose core was made of gold and who lay hidden under the water.",
+   "body_hi": "यह अच्छा फ़ैसला करके समुद्र ने पहाड़ों में सबसे बढ़िया मैनाक से बात की, जिसका भीतरी हिस्सा सोने का था और जो पानी के नीचे छिपा हुआ था।"
+  },
+  {
+   "id": 12276,
+   "number": "1.92",
+   "body_en": "“Best of mountains, the king of the gods placed you here as a barrier against the hordes of asuras who live down in the underworld.",
+   "body_hi": "“पहाड़ों में सबसे बढ़िया मैनाक, देवताओं के राजा ने तुम्हें यहाँ पाताल में रहने वाले असुरों के झुंडों को रोकने के लिए एक दीवार की तरह रखा था।"
+  },
+  {
+   "id": 12277,
+   "number": "1.93",
+   "body_en": "These asuras are known for their strength and will try to rise up again, so you stand here blocking the gateway to the endless underworld.",
+   "body_hi": "ये असुर अपनी ताकत के लिए जाने जाते हैं और फिर से ऊपर आने की कोशिश करेंगे, इसलिए तुम बेहिसाब गहरे पाताल का दरवाज़ा रोककर खड़े हो।"
+  },
+  {
+   "id": 12278,
+   "number": "1.94",
+   "body_en": "Mountain, you have the power to grow sideways, upward and downward. That is why I am urging you now: rise up, best of mountains!",
+   "body_hi": "पहाड़, तुम्हारे पास दाएँ-बाएँ, ऊपर और नीचे, हर तरफ़ बढ़ने की ताकत है। इसीलिए मैं अब तुमसे कह रहा हूँ: उठो, पहाड़ों में सबसे बढ़िया!"
+  },
+  {
+   "id": 12279,
+   "number": "1.95",
+   "body_en": "That mighty tiger among vanaras, Hanuman, is passing over you. He has leapt into the sky on Rama’s mission, a deed of fearsome daring.",
+   "body_hi": "वानरों में बाघ जैसे वे ताकतवर हनुमान तुम्हारे ऊपर से गुज़र रहे हैं। राम के काम के लिए उन्होंने आसमान में छलाँग लगाई है, और यह बड़े ही गज़ब की हिम्मत का काम है।"
+  },
+  {
+   "id": 12280,
+   "number": "1.96",
+   "body_en": "I must help him, since he is serving the Ikshvaku family. The Ikshvakus deserve my respect, and they deserve yours even more.",
+   "body_hi": "मुझे उनकी मदद करनी चाहिए, क्योंकि वे इक्ष्वाकु परिवार की सेवा में हैं। इक्ष्वाकु मेरे लिए इज़्ज़त के लायक हैं, और तुम्हारे लिए तो और भी ज़्यादा।"
+  },
+  {
+   "id": 12281,
+   "number": "1.97",
+   "body_en": "Lend us your help, so that our duty is not neglected. A duty left undone when it should have been done stirs up the anger of good people.",
+   "body_hi": "हमारी मदद करो, ताकि हमारा फ़र्ज़ छूट न जाए। जो काम करना चाहिए था और नहीं किया गया, वह भले लोगों को नाराज़ कर देता है।"
+  },
+  {
+   "id": 12282,
+   "number": "1.98",
+   "body_en": "Rise up out of the water and let this vanara stop on you. He is our guest, the best of all who leap, and he deserves our honour.",
+   "body_hi": "पानी से ऊपर उठो और इस वानर को अपने ऊपर रुकने दो। वह हमारा मेहमान है, छलाँग लगाने वालों में सबसे बढ़िया है, और हमारे सम्मान का हकदार है।"
+  },
+  {
+   "id": 12283,
+   "number": "1.99",
+   "body_en": "You with the great golden core, served by gods and gandharvas, once Hanuman has rested on you, he will go on and finish the rest of the way.",
+   "body_hi": "सोने के बड़े भीतरी हिस्से वाले मैनाक, जिसकी देवता और गंधर्व सेवा करते हैं, हनुमान तुम पर आराम कर लेंगे तो बाकी रास्ता पूरा कर लेंगे।"
+  },
+  {
+   "id": 12284,
+   "number": "1.100",
+   "body_en": "Think of the kindness of Kakutstha, of Maithili driven from her home, and of how tired the vanara chief must be, and rise up.”",
+   "body_hi": "ककुत्स्थ वंश के राम की दया, घर से दूर कर दी गई मैथिली और वानरों के सरदार की थकान के बारे में सोचो, और ऊपर उठो।”"
+  },
+  {
+   "id": 12285,
+   "number": "1.101",
+   "body_en": "Hearing the salt Ocean’s words, Mainaka of the golden core shot up out of the water at once, covered with great trees and creepers.",
+   "body_hi": "खारे समुद्र की बात सुनकर सोने के भीतरी हिस्से वाला मैनाक, बड़े-बड़े पेड़ों और बेलों से ढका हुआ, फ़ौरन पानी से ऊपर उछल आया।"
+  },
+  {
+   "id": 12286,
+   "number": "1.102",
+   "body_en": "Breaking through the ocean water, he rose up the way the blazing sun breaks through a cloud.",
+   "body_hi": "समुद्र के पानी को चीरकर वह ऐसे ऊपर उठा, जैसे दमकता सूरज बादल को चीरकर निकल आता है।"
+  },
+  {
+   "id": 12287,
+   "number": "1.103",
+   "body_en": "In a moment that noble mountain, until then covered by water, did as the Ocean had asked and showed his peaks.",
+   "body_hi": "पल भर में वह महान पहाड़, जो अब तक पानी से ढका था, समुद्र के कहने पर अपनी चोटियाँ दिखाने लगा।"
+  },
+  {
+   "id": 12288,
+   "number": "1.104",
+   "body_en": "His peaks were made of gold, home to kinnaras and great serpents, bright as the rising sun, and they seemed to scrape the sky.",
+   "body_hi": "उसकी चोटियाँ सोने की बनी थीं, उन पर किन्नर और बड़े नाग रहते थे, वे उगते सूरज जैसी चमकीली थीं और मानो आसमान को खुरच रही थीं।"
+  },
+  {
+   "id": 12289,
+   "number": "1.105",
+   "body_en": "With the mountain’s peaks of glowing refined gold rising up, the sky, which had been the grey-blue of a sword blade, took on a golden shine.",
+   "body_hi": "जब पहाड़ की तपे हुए खरे सोने जैसी चोटियाँ ऊपर उठीं, तो आसमान, जो तलवार की धार जैसा नीला-सलेटी था, सुनहरी चमक से भर गया।"
+  },
+  {
+   "id": 12290,
+   "number": "1.106",
+   "body_en": "With his shining golden peaks, glowing with their own light, that finest of mountains looked as bright as a hundred suns.",
+   "body_hi": "अपनी सुनहरी, अपने आप दमकती चोटियों के साथ वह सबसे बढ़िया पहाड़ सौ सूरजों जितना चमकदार लगने लगा।"
+  },
+  {
+   "id": 12291,
+   "number": "1.107",
+   "body_en": "Seeing him suddenly risen and standing in front of him in the middle of the salt sea, Hanuman decided, “This is an obstacle.”",
+   "body_hi": "खारे समुद्र के बीच अचानक उठकर अपने सामने खड़े उस पहाड़ को देखकर हनुमान ने मन में तय किया, “यह तो कोई रुकावट है।”"
+  },
+  {
+   "id": 12292,
+   "number": "1.108",
+   "body_en": "Without slowing down, the great vanara rammed his chest into the tall peak and sent it tumbling, just as a gust of wind shoves a rain cloud out of its way.",
+   "body_hi": "रफ़्तार कम किए बिना उस बड़े वानर ने ऊँची चोटी से अपनी छाती भिड़ा दी और उसे लुढ़का दिया, ठीक वैसे ही जैसे हवा का झोंका बारिश वाले बादल को रास्ते से धकेल देता है।"
+  },
+  {
+   "id": 12293,
+   "number": "1.109",
+   "body_en": "Knocked down like this by the vanara, the fine mountain understood how great his speed was, and he was delighted and full of joy.",
+   "body_hi": "वानर के इस तरह गिराने पर उस बढ़िया पहाड़ को समझ आ गया कि उनकी रफ़्तार कितनी ज़बरदस्त है, और वह बहुत खुश हुआ और खिल उठा।"
+  },
+  {
+   "id": 12294,
+   "number": "1.110",
+   "body_en": "Taking up a place in the sky beside the hero who was flying there, the mountain, pleased and happy at heart, spoke to the vanara.",
+   "body_hi": "आसमान में उड़ते उस वीर के पास आकाश में ही जगह लेकर पहाड़ ने, खुश और प्रसन्न मन से, वानर से कहा।"
+  },
+  {
+   "id": 12295,
+   "number": "1.111",
+   "body_en": "Taking on a human form and standing on his own peak, he said: “Finest of vanaras, you have done something very hard to do.",
+   "body_hi": "इंसान का रूप लेकर और अपनी ही चोटी पर खड़े होकर उसने कहा: “वानरों में सबसे बढ़िया, तुमने बहुत मुश्किल काम कर दिखाया है।"
+  },
+  {
+   "id": 12296,
+   "number": "1.112",
+   "body_en": "Land here on my summits and take your ease for as long as you wish. Remember, it was the kings of Raghava’s line who first made the Ocean so vast.",
+   "body_hi": "यहाँ मेरी चोटियों पर उतरो और जितनी देर चाहो, आराम करो। याद रखो, राघव के खानदान के राजाओं ने ही सबसे पहले समुद्र को इतना बड़ा बनाया था।"
+  },
+  {
+   "id": 12297,
+   "number": "1.113",
+   "body_en": "So the Ocean wants to honour you in return, since you are working for Rama’s good. When someone has done you a kindness, you should repay it; this is the age-old rule of dharma.",
+   "body_hi": "इसलिए समुद्र तुम्हारा सम्मान करना चाहता है, क्योंकि तुम राम की भलाई में लगे हो। जब कोई तुम्हारे साथ भलाई करे, तो बदले में भलाई करनी चाहिए; यही धर्म का सदा से चला आ रहा नियम है।"
+  },
+  {
+   "id": 12298,
+   "number": "1.114",
+   "body_en": "Wanting to repay that debt, the Ocean deserves to be honoured by you in turn. It is for your sake that he, with great respect, urged me to rise.",
+   "body_hi": "उस एहसान को चुकाने की चाह रखने वाला समुद्र बदले में तुमसे सम्मान पाने का हकदार है। तुम्हारे लिए ही उसने बड़ी इज़्ज़त के साथ मुझे ऊपर उठने को कहा है।"
+  },
+  {
+   "id": 12299,
+   "number": "1.115",
+   "body_en": "‘Stop here, tiger among vanaras,’ he told me to say; ‘rest on me and then go on. This vanara has leapt out to cross a full hundred yojanas.",
+   "body_hi": "उसने मुझसे कहलवाया है, ‘वानरों में बाघ, यहाँ रुक जाओ; मुझ पर आराम करके फिर आगे जाना। यह वानर पूरे सौ योजन पार करने के लिए कूदा है।"
+  },
+  {
+   "id": 12300,
+   "number": "1.116",
+   "body_en": "Let him rest on your slopes and then go on with the rest of the journey.’ Here are plenty of sweet, fragrant roots, bulbs and fruits.",
+   "body_hi": "इसे अपनी ढलानों पर आराम करने दो, फिर यह बाकी सफ़र पूरा करे।’ यहाँ बहुत सी मीठी, खुशबूदार जड़ें, कंद और फल हैं।"
+  },
+  {
+   "id": 12301,
+   "number": "1.117",
+   "body_en": "Taste them, best of vanaras, and once you have rested you can go on. Besides, chief of the vanaras, there is a bond between you and me as well,",
+   "body_hi": "वानरों में सबसे बढ़िया, इन्हें चखो, और आराम करने के बाद आगे चले जाना। और वानरों के सरदार, तुम्हारे और मेरे बीच भी एक रिश्ता है,"
+  },
+  {
+   "id": 12302,
+   "number": "1.118",
+   "body_en": "one that is famous in all three worlds and full of great virtue. Son of the Wind, of all the vanaras who can leap and fly swiftly,",
+   "body_hi": "जो तीनों लोकों में मशहूर है और बड़े गुणों से भरा है। पवन के बेटे, जितने भी वानर तेज़ी से छलाँग लगा सकते और उड़ सकते हैं,"
+  },
+  {
+   "id": 12303,
+   "number": "1.119",
+   "body_en": "I believe you are the very foremost, elephant among vanaras. Anyone who understands dharma knows that even an ordinary guest deserves to be honoured,",
+   "body_hi": "उन सब में, वानरों के हाथी, मैं तुम्हें सबसे आगे मानता हूँ। जो धर्म को समझता है, वह जानता है कि एक आम मेहमान भी सम्मान का हकदार होता है,"
+  },
+  {
+   "id": 12304,
+   "number": "1.120",
+   "body_en": "if he truly wants to live by dharma; how much more so someone as great as you! For you are the son of the great-souled Wind, the best of the gods,",
+   "body_hi": "अगर वह सच में धर्म के रास्ते पर चलना चाहता है; फिर तुम्हारे जैसे महान मेहमान की तो बात ही क्या! क्योंकि तुम देवताओं में सबसे बढ़िया, महान पवन देव के बेटे हो,"
+  },
+  {
+   "id": 12305,
+   "number": "1.121",
+   "body_en": "and you are his equal in speed, elephant among vanaras. You who know dharma, when you are honoured, the Wind himself is honoured.",
+   "body_hi": "और वानरों के हाथी, रफ़्तार में तुम उन्हीं के बराबर हो। धर्म को जानने वाले, जब तुम्हारा सम्मान होता है, तो खुद पवन देव का सम्मान होता है।"
+  },
+  {
+   "id": 12306,
+   "number": "1.122",
+   "body_en": "That is why I owe you honour, and now hear the reason for it. Long ago, my friend, in the first age of the world, the mountains had wings.",
+   "body_hi": "इसीलिए तुम मेरे सम्मान के लायक हो, और अब इसकी वजह भी सुनो। बहुत पहले, मेरे भाई, दुनिया के पहले युग में पहाड़ों के पंख होते थे।"
+  },
+  {
+   "id": 12307,
+   "number": "1.123",
+   "body_en": "They flew about in every direction as fast as Garuda or the wind. And as they flew, the hosts of gods and the sages",
+   "body_hi": "वे गरुड़ या हवा जितनी तेज़ी से हर दिशा में उड़ते फिरते थे। और जब वे उड़ते, तो देवताओं के झुंड और ऋषि"
+  },
+  {
+   "id": 12308,
+   "number": "1.124",
+   "body_en": "and all living beings grew afraid that the mountains would fall on them. Then Indra, the thousand-eyed god of a hundred sacrifices, grew angry,",
+   "body_hi": "और सारे जीव डरने लगे कि कहीं ये पहाड़ उन पर गिर न पड़ें। तब हज़ार आँखों वाले, सौ यज्ञ करने वाले इंद्र को गुस्सा आया,"
+  },
+  {
+   "id": 12309,
+   "number": "1.125",
+   "body_en": "and with his thunderbolt he cut off the wings of the mountains, thousands of them, here, there and everywhere. The king of the gods came at me too, furious, his thunderbolt raised.",
+   "body_hi": "और उन्होंने अपने वज्र से जगह-जगह हज़ारों पहाड़ों के पंख काट डाले। देवताओं के राजा गुस्से में अपना वज्र उठाए मेरी ओर भी आए।"
+  },
+  {
+   "id": 12310,
+   "number": "1.126",
+   "body_en": "Then, all of a sudden, the great-souled Wind god swept me away, best of vanaras, and flung me into this salt sea.",
+   "body_hi": "तब, वानरों में सबसे बढ़िया, महान पवन देव ने अचानक मुझे उड़ाकर इस खारे समुद्र में फेंक दिया।"
+  },
+  {
+   "id": 12311,
+   "number": "1.127",
+   "body_en": "Guarded by your father, I kept my wings whole and safe. That is why I honour you, for the Wind god deserves my respect.",
+   "body_hi": "तुम्हारे पिता की रखवाली से मेरे पंख पूरे के पूरे बच गए। इसीलिए मैं तुम्हारा सम्मान करता हूँ, क्योंकि पवन देव मेरे लिए आदर के लायक हैं।"
+  },
+  {
+   "id": 12312,
+   "number": "1.128",
+   "body_en": "This is the bond between you and me, chief of the vanaras, and it is a very precious one. Now that things stand this way, great vanara,",
+   "body_hi": "वानरों के सरदार, तुम्हारे और मेरे बीच यही रिश्ता है, और यह बहुत कीमती है। अब जब बात यहाँ तक आ गई है, बड़े वानर,"
+  },
+  {
+   "id": 12313,
+   "number": "1.129",
+   "body_en": "you should gladly give joy to the Ocean and to me. Shake off your tiredness and accept our hospitality, finest of vanaras.",
+   "body_hi": "तुम्हें खुशी-खुशी समुद्र को और मुझे भी खुश करना चाहिए। अपनी थकान उतारो और हमारी मेहमाननवाज़ी कबूल करो, वानरों में सबसे बढ़िया।"
+  },
+  {
+   "id": 12314,
+   "number": "1.130",
+   "body_en": "Value my affection; I am delighted just to see you.” When the mountain spoke like this, the best of vanaras replied to that fine peak:",
+   "body_hi": "मेरे प्यार की कदर करो; तुम्हें देखकर ही मैं बहुत खुश हूँ।” पहाड़ के ऐसा कहने पर वानरों में सबसे बढ़िया हनुमान ने उस बढ़िया पहाड़ से कहा:"
+  },
+  {
+   "id": 12315,
+   "number": "1.131",
+   "body_en": "“I am pleased, and I take it that your hospitality has been given. Please do not feel hurt. The time for my task is pressing, and the day is slipping away.",
+   "body_hi": "“मैं खुश हूँ, और मान लो कि तुम्हारी मेहमाननवाज़ी मुझे मिल गई। बुरा मत मानना। मेरे काम का वक्त निकला जा रहा है, और दिन भी ढलता जा रहा है।"
+  },
+  {
+   "id": 12316,
+   "number": "1.132",
+   "body_en": "Besides, I have given my word that I will not stop anywhere along the way.” Having said this, the bull among vanaras touched the mountain with his hand,",
+   "body_hi": "और मैंने वचन दिया है कि बीच रास्ते में कहीं नहीं रुकूँगा।” यह कहकर वानरों में साँड़ जैसे ताकतवर हनुमान ने अपने हाथ से पहाड़ को छुआ,"
+  },
+  {
+   "id": 12317,
+   "number": "1.133",
+   "body_en": "and the mighty vanara rose into the sky and went on, as if laughing. The mountain and the Ocean watched him go with deep respect.",
+   "body_hi": "और वे ताकतवर वानर मानो हँसते हुए आसमान में उठकर आगे चल दिए। पहाड़ और समुद्र बड़े आदर के साथ उन्हें जाते हुए देखते रहे।"
+  },
+  {
+   "id": 12318,
+   "number": "1.134",
+   "body_en": "Honoured by them with fitting blessings, the son of the Wind then leapt high and far, leaving the mountain and the great ocean behind.",
+   "body_hi": "उन दोनों के सही आशीर्वादों से सम्मान पाकर पवन के बेटे ने फिर ऊँची और लंबी छलाँग लगाई, और पहाड़ और बड़े समुद्र को पीछे छोड़ दिया।"
+  },
+  {
+   "id": 12319,
+   "number": "1.135",
+   "body_en": "Taking his father’s road, he went on through the clear sky. Climbing higher still, he looked back at the mountain,",
+   "body_hi": "अपने पिता के रास्ते पर चलते हुए वे साफ़ आसमान में आगे बढ़ते गए। और ऊपर चढ़कर उन्होंने पीछे मुड़कर पहाड़ को देखा,"
+  },
+  {
+   "id": 12320,
+   "number": "1.136",
+   "body_en": "and the son of the Wind flew on through the clear, unsupported sky. Seeing this second deed of Hanuman’s, so very hard to do,",
+   "body_hi": "और पवन का बेटा बिना सहारे वाले साफ़ आसमान में उड़ता चला गया। हनुमान का यह दूसरा, बेहद मुश्किल काम देखकर"
+  },
+  {
+   "id": 12321,
+   "number": "1.137",
+   "body_en": "all the gods praised him, and so did the siddhas and the great sages. The deities who were there were delighted by what he had done.",
+   "body_hi": "सारे देवताओं ने उनकी तारीफ़ की, और सिद्धों और बड़े ऋषियों ने भी। वहाँ मौजूद देवता उनके इस काम से बहुत खुश हुए।"
+  },
+  {
+   "id": 12322,
+   "number": "1.138",
+   "body_en": "Then the wise, thousand-eyed Indra, husband of Shachi, spoke in person to Sunabha, the golden mountain, the finest of peaks, his voice choked with pleasure:",
+   "body_hi": "तब समझदार, हज़ार आँखों वाले इंद्र, जो शची के पति हैं, खुद उस सुनहरे पहाड़ सुनाभ से बोले, जो पहाड़ों में सबसे बढ़िया था; खुशी के मारे उनका गला भर आया था:"
+  },
+  {
+   "id": 12323,
+   "number": "1.139",
+   "body_en": "“Golden-cored lord of mountains, I am very pleased with you. I grant you freedom from fear. Stay where you are, gentle one, and be at ease.",
+   "body_hi": "“सोने के भीतरी हिस्से वाले पहाड़ों के राजा, मैं तुमसे बहुत खुश हूँ। मैं तुम्हें अभय देता हूँ, यानी अब तुम्हें कोई डर नहीं। भले पहाड़, जहाँ हो वहीं आराम से रहो।"
+  },
+  {
+   "id": 12324,
+   "number": "1.140",
+   "body_en": "You have given great help to the brave Hanuman as he crossed a hundred yojanas, fearless even when there was every reason to fear.",
+   "body_hi": "तुमने बहादुर हनुमान की बड़ी मदद की है, जो सौ योजन पार कर रहे थे और डर की पूरी वजह होते हुए भी निडर थे।"
+  },
+  {
+   "id": 12325,
+   "number": "1.141",
+   "body_en": "This vanara is going as a messenger of Rama, Dasharatha’s son. By showing him kindness, you have pleased me deeply.”",
+   "body_hi": "यह वानर दशरथ के बेटे राम का दूत बनकर जा रहा है। उसका आदर-सत्कार करके तुमने मुझे बहुत खुश किया है।”"
+  },
+  {
+   "id": 12326,
+   "number": "1.142",
+   "body_en": "The noble mountain was filled with joy when he saw how pleased Indra, the ruler of the gods, was with him.",
+   "body_hi": "जब उस महान पहाड़ ने देखा कि देवताओं के राजा इंद्र उससे कितने खुश हैं, तो वह खुशी से भर गया।"
+  },
+  {
+   "id": 12327,
+   "number": "1.143",
+   "body_en": "The mountain, granted that boon, stayed fixed in its place. Meanwhile Hanuman flashed across a great stretch of the sea within a moment.",
+   "body_hi": "वह वरदान पाकर पहाड़ अपनी जगह पर जमा रहा। इस बीच हनुमान पल भर में समुद्र का एक बड़ा हिस्सा पार कर गए।"
+  },
+  {
+   "id": 12328,
+   "number": "1.144",
+   "body_en": "Once that was settled, the heavenly beings wanted to test the traveller further. Gods and gandharvas, along with siddhas and the leading seers, approached Surasa, mother of the nagas, who glowed as brightly as the sun, and told her:",
+   "body_hi": "जब यह बात पूरी हो गई, तो स्वर्ग वाले उस मुसाफ़िर को और परखना चाहते थे। देवता और गंधर्व, सिद्धों और बड़े ऋषियों के साथ, नागों की माँ सुरसा के पास पहुँचे, जो सूरज जैसी चमकती थीं, और उनसे कहा:"
+  },
+  {
+   "id": 12329,
+   "number": "1.145",
+   "body_en": "“This splendid son of the Wind, named Hanuman, is flying over the ocean. Put an obstacle in his way for a little while.",
+   "body_hi": "“पवन का यह शानदार बेटा, जिसका नाम हनुमान है, समुद्र के ऊपर उड़ रहा है। थोड़ी देर के लिए उसके रास्ते में रुकावट डालो।"
+  },
+  {
+   "id": 12330,
+   "number": "1.146",
+   "body_en": "Take on the form of a rakshasa, dreadful and as big as a mountain, with fearsome fangs and yellow eyes, and open a mouth as wide as the sky.",
+   "body_hi": "एक राक्षसी का रूप लो, जो बहुत डरावना और पहाड़ जितना बड़ा हो, जिसके दाँत भयानक और आँखें पीली हों, और आसमान जितना बड़ा मुँह खोलो।"
+  },
+  {
+   "id": 12331,
+   "number": "1.147",
+   "body_en": "We want to know how strong he is, and to see his courage once more. Either he will get the better of you by some clever means, or he will lose heart.”",
+   "body_hi": "हम जानना चाहते हैं कि वह कितना ताकतवर है, और उसकी हिम्मत एक बार फिर देखना चाहते हैं। या तो वह किसी चतुराई से तुम्हें हरा देगा, या फिर हिम्मत हार जाएगा।”"
+  },
+  {
+   "id": 12332,
+   "number": "1.148",
+   "body_en": "Asked this way and honoured by the gods, the goddess Surasa took on the body of a rakshasa in the middle of the ocean,",
+   "body_hi": "देवताओं के ऐसा कहने और आदर देने पर देवी सुरसा ने समुद्र के बीच एक राक्षसी का शरीर ले लिया,"
+  },
+  {
+   "id": 12333,
+   "number": "1.149",
+   "body_en": "twisted, ugly and terrifying to everyone. Blocking Hanuman’s way as he flew, she said:",
+   "body_hi": "जो टेढ़ा-मेढ़ा, बदसूरत और सबको डराने वाला था। उड़ते हुए हनुमान का रास्ता रोककर उसने कहा:"
+  },
+  {
+   "id": 12334,
+   "number": "1.150",
+   "body_en": "“Bull among vanaras, the gods have given you to me as my food. I am going to eat you. Come, go into my mouth.”",
+   "body_hi": "“वानरों में साँड़ जैसे वीर, देवताओं ने तुम्हें मेरा खाना बनाकर भेजा है। मैं तुम्हें खा जाऊँगी। आओ, मेरे मुँह में घुस जाओ।”"
+  },
+  {
+   "id": 12335,
+   "number": "1.151",
+   "body_en": "When Surasa said this, the splendid bull among vanaras joined his palms, and with a cheerful face he answered:",
+   "body_hi": "सुरसा के ऐसा कहने पर वानरों में साँड़ जैसे उस शानदार वीर ने हाथ जोड़े, और खिले चेहरे के साथ जवाब दिया:"
+  },
+  {
+   "id": 12336,
+   "number": "1.152",
+   "body_en": "“Dasharatha had a son called Rama, who went to live in the forest of Dandaka, taking his brother Lakshmana and his wife Vaidehi along with him.",
+   "body_hi": "“दशरथ के एक बेटे हैं, जिनका नाम राम है। वे अपने भाई लक्ष्मण और पत्नी वैदेही को साथ लेकर दंडक के जंगल में रहने गए थे।"
+  },
+  {
+   "id": 12337,
+   "number": "1.153",
+   "body_en": "While he was busy with something else, and after he had made enemies of the rakshasas, his glorious wife Sita was carried off by Ravana.",
+   "body_hi": "जब वे किसी और काम में लगे थे, और उनकी राक्षसों से दुश्मनी हो चुकी थी, तब रावण उनकी यशस्वी पत्नी सीता को उठा ले गया।"
+  },
+  {
+   "id": 12338,
+   "number": "1.154",
+   "body_en": "On Rama’s orders I am going to her as his messenger. You live in Rama’s kingdom, so you ought to help him.",
+   "body_hi": "राम के हुक्म से मैं उनका दूत बनकर सीता के पास जा रहा हूँ। तुम राम के राज्य में ही रहती हो, इसलिए तुम्हें उनकी मदद करनी चाहिए।"
+  },
+  {
+   "id": 12339,
+   "number": "1.155",
+   "body_en": "Or else, once I have seen Maithili and Rama, who never tires in his work, I will come back into your mouth. I give you my true promise.”",
+   "body_hi": "या फिर, मैथिली को देखकर और कभी न थकने वाले राम से मिलकर, मैं लौटकर तुम्हारे मुँह में आ जाऊँगा। यह मैं तुमसे सच्चा वादा करता हूँ।”"
+  },
+  {
+   "id": 12340,
+   "number": "1.156",
+   "body_en": "When Hanuman said this, Surasa, who could take any shape she wished, replied, “No one may get past me. That is the boon I have been given.”",
+   "body_hi": "हनुमान के ऐसा कहने पर मनचाहा रूप ले सकने वाली सुरसा बोली, “कोई मुझे पार करके नहीं जा सकता। मुझे यही वरदान मिला है।”"
+  },
+  {
+   "id": 12341,
+   "number": "1.157",
+   "body_en": "Seeing him about to go on, Surasa, the mother of the nagas, who wanted to test Hanuman’s strength, spoke again:",
+   "body_hi": "उन्हें आगे बढ़ते देखकर हनुमान की ताकत परखने की चाह रखने वाली नागों की माँ सुरसा ने फिर कहा:"
+  },
+  {
+   "id": 12342,
+   "number": "1.158",
+   "body_en": "“Finest of vanaras, today you must enter my mouth before you can go on. This boon was given to me long ago by Brahma the creator.” Saying this in haste,",
+   "body_hi": "“वानरों में सबसे बढ़िया, आज तुम्हें आगे जाने से पहले मेरे मुँह में घुसना ही होगा। बनाने वाले ब्रह्मा ने बहुत पहले मुझे यही वरदान दिया था।” यह जल्दी से कहकर"
+  },
+  {
+   "id": 12343,
+   "number": "1.159",
+   "body_en": "she opened her mouth wide and stood in front of the son of the Wind. Hearing this from Surasa, the bull among vanaras grew angry",
+   "body_hi": "उसने अपना मुँह बड़ा करके खोला और पवन के बेटे के सामने खड़ी हो गई। सुरसा की यह बात सुनकर वानरों में साँड़ जैसे हनुमान को गुस्सा आ गया,"
+  },
+  {
+   "id": 12344,
+   "number": "1.160",
+   "body_en": "and said, “Then make your mouth big enough to hold me.” Having said this to Surasa in his anger, Hanuman stretched himself ten yojanas long",
+   "body_hi": "और वे बोले, “तो अपना मुँह इतना बड़ा करो कि मैं उसमें समा सकूँ।” गुस्से में सुरसा से यह कहकर हनुमान दस योजन लंबे"
+  },
+  {
+   "id": 12345,
+   "number": "1.161",
+   "body_en": "and just as broad across. When she saw him swollen like a storm cloud, a full ten yojanas from end to end,",
+   "body_hi": "और उतने ही चौड़े भी। जब सुरसा ने देखा कि वे आँधी वाले बादल की तरह फूलकर एक सिरे से दूसरे सिरे तक पूरे दस योजन के हो गए हैं,"
+  },
+  {
+   "id": 12346,
+   "number": "1.162",
+   "body_en": "Surasa made her mouth twenty yojanas wide. Seeing her mouth opened so wide, the clever son of the Wind,",
+   "body_hi": "सुरसा ने अपना मुँह बीस योजन चौड़ा कर लिया। उसका इतना बड़ा खुला मुँह देखकर पवन के समझदार बेटे"
+  },
+  {
+   "id": 12347,
+   "number": "1.163",
+   "body_en": "Hanuman flared up in anger and made his body thirty yojanas in size, and at that Surasa pushed the height of her jaws up to forty.",
+   "body_hi": "हनुमान गुस्से से भड़क उठे और अपने शरीर को तीस योजन का कर लिया, और यह देखकर सुरसा ने अपने जबड़ों को चालीस योजन तक ऊँचा कर दिया।"
+  },
+  {
+   "id": 12348,
+   "number": "1.164",
+   "body_en": "Not to be outdone, the brave vanara towered up to fifty yojanas, and she answered by opening her jaws until they gaped sixty yojanas wide.",
+   "body_hi": "पीछे न रहते हुए बहादुर वानर पचास योजन तक ऊँचे हो गए, और जवाब में उसने अपने जबड़े इतने खोल दिए कि वे साठ योजन तक फैल गए।"
+  },
+  {
+   "id": 12349,
+   "number": "1.165",
+   "body_en": "Again the brave vanara went higher, now seventy yojanas tall, and again she matched him, her jaws now spreading across eighty yojanas.",
+   "body_hi": "फिर बहादुर वानर और ऊँचे हुए, अब सत्तर योजन के, और फिर सुरसा ने बराबरी की; अब उसके जबड़े अस्सी योजन तक फैल गए।"
+  },
+  {
+   "id": 12350,
+   "number": "1.166",
+   "body_en": "Now Hanuman loomed up like a mountain, ninety yojanas high, and Surasa opened her mouth so far that it spanned a hundred yojanas.",
+   "body_hi": "इस बार हनुमान किसी पहाड़ जैसे बनकर नब्बे योजन तक तन गए, और जवाब में सुरसा ने अपने जबड़े फैलाते-फैलाते पूरे सौ योजन तक खोल डाले।"
+  },
+  {
+   "id": 12351,
+   "number": "1.167",
+   "body_en": "Seeing Surasa’s gaping mouth, with its long tongue, as dreadful as hell itself, the clever son of the Wind",
+   "body_hi": "सुरसा का वह खुला मुँह, जिसमें लंबी जीभ थी और जो नरक जैसा भयानक था, देखकर पवन के समझदार बेटे"
+  },
+  {
+   "id": 12352,
+   "number": "1.168",
+   "body_en": "shrank his body the way the wind shrinks a cloud, and in that very moment Hanuman became no bigger than a thumb.",
+   "body_hi": "ने अपना शरीर ऐसे सिकोड़ लिया जैसे हवा बादल को छोटा कर देती है, और उसी पल हनुमान अँगूठे जितने छोटे हो गए।"
+  },
+  {
+   "id": 12353,
+   "number": "1.169",
+   "body_en": "Moving at great speed, he darted into her mouth and straight out again. Then, standing in the sky, the splendid Hanuman said:",
+   "body_hi": "बहुत तेज़ी से वे उसके मुँह में घुसे और फ़ौरन बाहर निकल आए। फिर आसमान में खड़े होकर शानदार हनुमान बोले:"
+  },
+  {
+   "id": 12354,
+   "number": "1.170",
+   "body_en": "“I have gone into your mouth, daughter of Daksha. I bow to you. Now I will go where Vaidehi is, and your boon has come true.”",
+   "body_hi": "“दक्ष की बेटी, देखो, मैं तुम्हारे मुँह के अंदर होकर आ गया हूँ, इसलिए तुम्हारा वरदान भी झूठा नहीं हुआ। तुम्हें मेरा नमस्कार। अब मैं वैदेही के पास जा रहा हूँ।”"
+  },
+  {
+   "id": 12355,
+   "number": "1.171",
+   "body_en": "The goddess Surasa watched the vanara come free of her jaws, like the moon escaping from Rahu’s mouth after an eclipse. Changing back into her true form, she spoke to him:",
+   "body_hi": "देवी सुरसा ने देखा कि वानर उसके जबड़ों से ऐसे निकल आए, जैसे ग्रहण के बाद चाँद राहु के मुँह से छूट जाता है। अपने असली रूप में लौटकर उसने उनसे कहा:"
+  },
+  {
+   "id": 12356,
+   "number": "1.172",
+   "body_en": "“Best of vanaras, gentle one, go happily and succeed in your task. Bring Vaidehi together with the great-souled Raghava.”",
+   "body_hi": "“वानरों में सबसे बढ़िया, भले वीर, खुशी से जाओ और अपने काम में कामयाब हो। वैदेही को महान राघव से मिला दो।”"
+  },
+  {
+   "id": 12357,
+   "number": "1.173",
+   "body_en": "Seeing this third deed of Hanuman’s, so very hard to do, all creatures praised the vanara, crying, “Well done! Well done!”",
+   "body_hi": "हनुमान का यह तीसरा, बेहद मुश्किल काम देखकर सब जीवों ने उनकी तारीफ़ की और कहा, “शाबाश! शाबाश!”"
+  },
+  {
+   "id": 12358,
+   "number": "1.174",
+   "body_en": "He came up again over the unconquerable ocean, the home of Varuna, and rising into the sky he went on at speed like Garuda,",
+   "body_hi": "वे फिर वरुण के घर, उस अजेय समुद्र के ऊपर आए, और आसमान में उठकर गरुड़ की तरह तेज़ी से आगे बढ़े,"
+  },
+  {
+   "id": 12359,
+   "number": "1.175",
+   "body_en": "through the sky where streams of rain flow and birds fly, where the masters of music move about and Airavata, Indra’s elephant, roams,",
+   "body_hi": "उस आसमान में, जहाँ बारिश की धाराएँ बहती हैं और पंछी उड़ते हैं, जहाँ संगीत के बड़े उस्ताद घूमते हैं और इंद्र का हाथी ऐरावत विचरता है,"
+  },
+  {
+   "id": 12360,
+   "number": "1.176",
+   "body_en": "which is adorned with bright flying chariots drawn by lions, elephants, tigers, birds and snakes, soaring back and forth,",
+   "body_hi": "जो शेरों, हाथियों, बाघों, पंछियों और साँपों के खींचे चमकते उड़न-रथों से सजा है, जो इधर-उधर उड़ते रहते हैं,"
+  },
+  {
+   "id": 12361,
+   "number": "1.177",
+   "body_en": "which is lit up by fires striking like thunderbolts and lightning, and graced by fortunate beings who did good deeds and won their place in heaven,",
+   "body_hi": "जो वज्र और बिजली जैसी टकराती आगों से जगमगाता है, और उन भाग्यशाली लोगों से सजा है जिन्होंने अच्छे काम करके स्वर्ग जीता है,"
+  },
+  {
+   "id": 12362,
+   "number": "1.178",
+   "body_en": "where bright Agni, the fire god, is always carrying offerings to the gods, and which is decorated with planets, constellations, the moon, the sun and hosts of stars,",
+   "body_hi": "जहाँ चमकते अग्नि देव हमेशा देवताओं तक चढ़ावा पहुँचाते रहते हैं, और जो ग्रहों, नक्षत्रों, चाँद, सूरज और तारों के झुंडों से सजा है,"
+  },
+  {
+   "id": 12363,
+   "number": "1.179",
+   "body_en": "which is crowded with great sages, gandharvas, nagas and yakshas, wide open, spotless and all-embracing, where Vishvavasu the gandharva king lives,",
+   "body_hi": "जो बड़े ऋषियों, गंधर्वों, नागों और यक्षों से भरा है, खुला, बेदाग़ और सबको समेटे हुए है, और जहाँ गंधर्वों के राजा विश्वावसु रहते हैं,"
+  },
+  {
+   "id": 12364,
+   "number": "1.180",
+   "body_en": "where the elephant of the king of the gods treads, the blessed pathway of the moon and sun, the canopy spread over the world of the living, made by Brahma,",
+   "body_hi": "जहाँ देवराज का हाथी चलता है, जो चाँद और सूरज का शुभ रास्ता है, और जो ब्रह्मा का बनाया, जीवों की दुनिया के ऊपर तना हुआ चँदोवा है,"
+  },
+  {
+   "id": 12365,
+   "number": "1.181",
+   "body_en": "and which is often travelled by brave heroes and the finest bands of vidyadharas. Through that road of the wind the son of the Wind flew on like Garuda.",
+   "body_hi": "और जहाँ से अक्सर बहादुर वीर और विद्याधरों की सबसे बढ़िया टोलियाँ गुज़रती हैं। हवा के उसी रास्ते पर पवन का बेटा गरुड़ की तरह उड़ता चला गया।"
+  },
+  {
+   "id": 12366,
+   "number": "1.182",
+   "body_en": "Seen from every side, Hanuman, the son of the Wind, held to the unsupported sky like a king of mountains with broad, spreading wings.",
+   "body_hi": "हर तरफ़ से दिखाई देते हुए पवन के बेटे हनुमान बिना सहारे वाले आसमान में ऐसे टिके रहे, जैसे लंबे फैले पंखों वाला पहाड़ों का कोई राजा हो।"
+  },
+  {
+   "id": 12367,
+   "number": "1.183",
+   "body_en": "A rakshasa woman named Simhika, huge and able to take any shape she liked, saw him flying and thought to herself:",
+   "body_hi": "सिंहिका नाम की एक राक्षसी, जो बहुत बड़ी थी और मनचाहा रूप ले सकती थी, उन्हें उड़ते देखकर मन में सोचने लगी:"
+  },
+  {
+   "id": 12368,
+   "number": "1.184",
+   "body_en": "“Today, after a long time, I will have a proper meal. At long last this great creature has come within my power.”",
+   "body_hi": "“आज बहुत दिनों बाद मुझे भरपेट खाना मिलेगा। आखिरकार यह बड़ा जीव मेरे काबू में आ गया है।”"
+  },
+  {
+   "id": 12369,
+   "number": "1.185",
+   "body_en": "With this thought she seized his shadow. When his shadow was caught, the vanara thought:",
+   "body_hi": "यह सोचकर उसने उनकी परछाईं पकड़ ली। परछाईं पकड़ी जाते ही वानर ने सोचा:"
+  },
+  {
+   "id": 12370,
+   "number": "1.186",
+   "body_en": "“I have suddenly been dragged back, and my strength has been crippled, like a great ship on the sea held back by a wind blowing against it.”",
+   "body_hi": "“अचानक मुझे पीछे खींच लिया गया है, और मेरी ताकत जैसे लंगड़ी हो गई है, जैसे समुद्र में उलटी हवा से कोई बड़ा जहाज़ रुक जाता है।”"
+  },
+  {
+   "id": 12371,
+   "number": "1.187",
+   "body_en": "Then the vanara looked around him, sideways, above and below, and saw a huge creature rising up out of the salt water.",
+   "body_hi": "फिर वानर ने अपने चारों ओर, दाएँ-बाएँ, ऊपर और नीचे देखा, और खारे पानी से एक बहुत बड़े जीव को ऊपर उठते पाया।"
+  },
+  {
+   "id": 12372,
+   "number": "1.188",
+   "body_en": "Seeing that creature with its twisted face, the son of the Wind thought: “This is the strange-looking creature the vanara king told us about,",
+   "body_hi": "टेढ़े-मेढ़े चेहरे वाले उस जीव को देखकर पवन के बेटे ने सोचा: “यह वही अजीब दिखने वाला जीव है जिसके बारे में वानरों के राजा ने बताया था,"
+  },
+  {
+   "id": 12373,
+   "number": "1.189",
+   "body_en": "the mighty one that seizes shadows. There is no doubt about it.” Clever as he was, the vanara understood exactly who she was: Simhika.",
+   "body_hi": "छाया पकड़ने वाला वह ताकतवर जीव। इसमें कोई शक नहीं।” समझदार वानर ठीक-ठीक समझ गए कि यह कौन है: सिंहिका।"
+  },
+  {
+   "id": 12374,
+   "number": "1.190",
+   "body_en": "He swelled up to a huge size, like a rain cloud in the monsoon. Seeing the body of the great vanara growing larger,",
+   "body_hi": "वे बरसात के बादल की तरह फूलकर बहुत बड़े हो गए। उस बड़े वानर का शरीर बढ़ता देखकर"
+  },
+  {
+   "id": 12375,
+   "number": "1.191",
+   "body_en": "she opened her mouth as wide as the gap between the sky and the underworld, and roaring like a bank of thunderclouds she rushed at the vanara.",
+   "body_hi": "उसने अपना मुँह इतना खोल दिया जितना आसमान और पाताल के बीच का फ़ासला है, और घने गरजते बादलों की तरह दहाड़ती हुई वह वानर पर झपटी।"
+  },
+  {
+   "id": 12376,
+   "number": "1.192",
+   "body_en": "The wise great vanara saw her huge gaping mouth, took in the size of her body and spotted her weak points.",
+   "body_hi": "समझदार बड़े वानर ने उसका बहुत बड़ा खुला मुँह देखा, उसके शरीर का नाप समझा और उसकी नाज़ुक जगहें पहचान लीं।"
+  },
+  {
+   "id": 12377,
+   "number": "1.193",
+   "body_en": "Then the mighty vanara, whose body was as hard as a thunderbolt, made himself small in an instant and dropped right into her open mouth.",
+   "body_hi": "फिर वज्र जैसे कठोर शरीर वाले ताकतवर वानर ने पल भर में खुद को छोटा किया और सीधे उसके खुले मुँह में कूद पड़े।"
+  },
+  {
+   "id": 12378,
+   "number": "1.194",
+   "body_en": "The siddhas and charanas watched him disappear into her mouth, like the full moon being swallowed by Rahu on the night of an eclipse.",
+   "body_hi": "सिद्धों और चारणों ने उन्हें उसके मुँह में समाते देखा, जैसे ग्रहण की रात राहु पूरे चाँद को निगल लेता है।"
+  },
+  {
+   "id": 12379,
+   "number": "1.195",
+   "body_en": "Then, with his sharp nails, the vanara tore open her vital organs, and sprang out again at a speed as quick as thought.",
+   "body_hi": "फिर वानर ने अपने तेज़ नाखूनों से उसके अंदर के नाज़ुक अंग फाड़ डाले, और मन जितनी तेज़ी से उछलकर बाहर आ गए।"
+  },
+  {
+   "id": 12380,
+   "number": "1.196",
+   "body_en": "Having brought her down with his sharp eye, his steady nerve and his skill, the finest of vanaras, master of himself, quickly grew large again.",
+   "body_hi": "अपनी पैनी नज़र, पक्के हौसले और होशियारी से उसे गिराकर, खुद पर काबू रखने वाले उस सबसे बढ़िया वानर ने जल्दी से फिर अपना शरीर बड़ा कर लिया।"
+  },
+  {
+   "id": 12381,
+   "number": "1.197",
+   "body_en": "Her heart torn out by Hanuman, she fell lifeless into the water. It was as if Brahma himself had created Hanuman to bring about her fall.",
+   "body_hi": "हनुमान के हाथों दिल फट जाने से वह बेजान होकर पानी में गिर पड़ी। ऐसा लगा मानो खुद ब्रह्मा ने हनुमान को उसे गिराने के लिए ही बनाया हो।"
+  },
+  {
+   "id": 12382,
+   "number": "1.198",
+   "body_en": "Seeing Simhika killed by the vanara and fallen so quickly, the beings who move through the sky said to that finest of vanaras:",
+   "body_hi": "वानर के हाथों सिंहिका को मरते और इतनी जल्दी गिरते देखकर आसमान में घूमने वाले जीवों ने उस सबसे बढ़िया वानर से कहा:"
+  },
+  {
+   "id": 12383,
+   "number": "1.199",
+   "body_en": "“Today you have done a fearsome deed and killed a huge creature. Go and accomplish the task you set out for, safe from all harm, best of those who leap.",
+   "body_hi": "“आज तुमने बहुत बड़ा काम किया है और एक विशाल जीव को मार गिराया है। छलाँग लगाने वालों में सबसे बढ़िया, जाओ और बिना किसी नुकसान के अपना मनचाहा काम पूरा करो।"
+  },
+  {
+   "id": 12384,
+   "number": "1.200",
+   "body_en": "Lord of the vanaras, whoever has these four things as you do, steadiness, sharp sight, good sense and skill, never fails in any task.”",
+   "body_hi": "वानरों के सरदार, जिसके पास तुम्हारी तरह ये चार चीज़ें हों, यानी धीरज, पैनी नज़र, अच्छी समझ और होशियारी, वह किसी भी काम में नाकाम नहीं होता।”"
+  },
+  {
+   "id": 12385,
+   "number": "1.201",
+   "body_en": "Honoured and praised by them, the vanara, who knew his purpose well, rose into the sky and went on like Garuda, the eater of serpents.",
+   "body_hi": "उनसे सम्मान और तारीफ़ पाकर, अपने मकसद को अच्छी तरह जानने वाले वानर आसमान में उठे और साँपों को खाने वाले गरुड़ की तरह आगे चल दिए।"
+  },
+  {
+   "id": 12386,
+   "number": "1.202",
+   "body_en": "Having covered most of the distance, and looking about on every side, he saw a line of forest at the end of the hundred yojanas.",
+   "body_hi": "ज़्यादातर दूरी पार कर लेने के बाद, चारों तरफ़ नज़र घुमाते हुए उन्होंने सौ योजन के आख़िर में जंगलों की एक कतार देखी।"
+  },
+  {
+   "id": 12387,
+   "number": "1.203",
+   "body_en": "Even as he was coming down, the finest of the tree-dwelling vanaras saw an island adorned with all kinds of trees, and the groves of the Malaya hills,",
+   "body_hi": "नीचे उतरते-उतरते ही पेड़ों पर रहने वाले वानरों में सबसे बढ़िया हनुमान ने तरह-तरह के पेड़ों से सजा एक टापू देखा, और मलय पहाड़ के बगीचे भी देखे,"
+  },
+  {
+   "id": 12388,
+   "number": "1.204",
+   "body_en": "and he looked at the sea, the marshy land along the shore, the trees growing on that shore, and the mouths of the rivers, the ocean’s wives.",
+   "body_hi": "और उन्होंने समुद्र को, किनारे की दलदली ज़मीन को, उस किनारे पर उगे पेड़ों को, और नदियों के मुहानों को देखा, जिन्हें समुद्र की पत्नियाँ कहा जाता है।"
+  },
+  {
+   "id": 12389,
+   "number": "1.205",
+   "body_en": "Seeing that his own body was as vast as a great cloud and seemed to be blocking the whole sky, the wise and self-possessed vanara made a sensible decision.",
+   "body_hi": "यह देखकर कि उनका अपना शरीर किसी बड़े बादल जितना विशाल है और मानो पूरे आसमान को रोके हुए है, समझदार और खुद पर काबू रखने वाले वानर ने एक सही फ़ैसला किया।"
+  },
+  {
+   "id": 12390,
+   "number": "1.206",
+   "body_en": "The great vanara thought, “If the rakshasas see how huge my body is and how fast I am moving, they will become curious about me.”",
+   "body_hi": "बड़े वानर ने सोचा, “अगर राक्षसों ने देख लिया कि मेरा शरीर कितना बड़ा है और मैं कितनी तेज़ी से आ रहा हूँ, तो वे मेरे बारे में जानने को उत्सुक हो जाएँगे।”"
+  },
+  {
+   "id": 12391,
+   "number": "1.207",
+   "body_en": "So he shrank that mountain-sized body and returned to his natural form, like a self-possessed man whose confusion has cleared.",
+   "body_hi": "इसलिए उन्होंने पहाड़ जितने बड़े उस शरीर को सिकोड़ लिया और अपने असली रूप में लौट आए, जैसे कोई समझदार आदमी उलझन दूर होते ही अपने आप में लौट आता है।"
+  },
+  {
+   "id": 12392,
+   "number": "1.208",
+   "body_en": "Shrinking that great form right down, Hanuman stood in his natural shape, like Vishnu, who took away Bali’s power after striding across the worlds in three steps.",
+   "body_hi": "उस बड़े रूप को पूरी तरह छोटा करके हनुमान अपने असली आकार में खड़े हो गए, जैसे विष्णु, जिन्होंने तीन कदमों में सारे लोक नापकर बलि की ताकत छीन ली थी।"
+  },
+  {
+   "id": 12393,
+   "number": "1.209",
+   "body_en": "He could take many lovely forms. Now, having reached the far shore of the ocean, he had taken a shape no enemy could overpower, having thought carefully about himself and his task.",
+   "body_hi": "वे कई सुंदर रूप ले सकते थे। अब समुद्र के उस पार के किनारे पहुँचकर, अपने बारे में और अपने काम के बारे में अच्छी तरह सोच-समझकर, उन्होंने ऐसा रूप ले लिया जिसे कोई दुश्मन हरा न सके।"
+  },
+  {
+   "id": 12394,
+   "number": "1.210",
+   "body_en": "Then the great-souled vanara, himself like the peak of a mighty mountain, came down on a rich, many-coloured summit of Mount Lamba, where screw pines, uddalaka trees and coconut palms grew.",
+   "body_hi": "फिर पहाड़ की ऊँची चोटी जैसे दिखने वाले वे महान वानर लंब पहाड़ की एक भरी-पूरी, रंग-बिरंगी चोटी पर उतरे, जहाँ केवड़े, उद्दालक और नारियल के पेड़ उगे थे।"
+  },
+  {
+   "id": 12395,
+   "number": "1.211",
+   "body_en": "Having reached the shore of the sea and spotted Lanka on top of a fine mountain, the vanara let go of his huge form and landed on that mountain, startling the animals and birds.",
+   "body_hi": "समुद्र के किनारे पहुँचकर और एक बढ़िया पहाड़ की चोटी पर लंका को देखकर, वानर ने अपना बड़ा रूप छोड़ दिया और उस पहाड़ पर उतर आए, जिससे जानवर और पंछी घबरा गए।"
+  },
+  {
+   "id": 12396,
+   "number": "1.212",
+   "body_en": "By sheer strength he had crossed the ocean, full of danavas and serpents and garlanded with great waves. Landing on the shore of that vast sea, he saw Lanka, as splendid as Amaravati, the city of the gods.",
+   "body_hi": "अपनी ताकत के दम पर उन्होंने वह समुद्र पार कर लिया था, जो दानवों और साँपों से भरा था और बड़ी-बड़ी लहरों की मालाएँ पहने था। उस विशाल समुद्र के किनारे उतरकर उन्होंने लंका को देखा, जो देवताओं की नगरी अमरावती जैसी शानदार थी।"
+  },
+  {
+   "id": 12397,
+   "number": "2.1",
+   "body_en": "Having crossed the unconquerable ocean, the mighty Hanuman, calm and unhurried, looked at Lanka standing on the summit of Mount Trikuta.",
+   "body_hi": "उस अजेय समुद्र को पार करके ताकतवर हनुमान ने शांत और बेफ़िक्र होकर त्रिकूट पहाड़ की चोटी पर बसी लंका को देखा।"
+  },
+  {
+   "id": 12398,
+   "number": "2.2",
+   "body_en": "A shower of flowers dropped by the trees fell all over the mighty vanara as he stood there, and he looked as though he were made of flowers.",
+   "body_hi": "वहाँ खड़े ताकतवर वानर पर पेड़ों से गिरे फूलों की बारिश हुई, और वे ऐसे लगने लगे मानो फूलों से ही बने हों।"
+  },
+  {
+   "id": 12399,
+   "number": "2.3",
+   "body_en": "Even after crossing a hundred yojanas, the splendid vanara of supreme courage was not out of breath, nor did he feel the least bit tired.",
+   "body_hi": "सौ योजन पार करने के बाद भी वह शानदार और बेहद हिम्मती वानर न तो हाँफ रहा था, न ही उसे ज़रा भी थकान महसूस हो रही थी।"
+  },
+  {
+   "id": 12400,
+   "number": "2.4",
+   "body_en": "“I could cross many hundreds of yojanas,” he thought, “so what is a stretch of ocean that measures only a hundred?”",
+   "body_hi": "मन ही मन वे बोले, “सौ-सौ योजन तो मैं कई बार लगातार लाँघ लूँ; यह समुद्र तो गिनती में बस सौ योजन भर है, इसे पार करना कौन बड़ी बात है?”"
+  },
+  {
+   "id": 12401,
+   "number": "2.5",
+   "body_en": "That finest of the strong, the best of all who leap, having crossed the great ocean, went swiftly on toward Lanka.",
+   "body_hi": "ताकतवरों में सबसे आगे और छलाँग लगाने वालों में सबसे बढ़िया हनुमान बड़े समुद्र को पार करके तेज़ी से लंका की ओर बढ़े।"
+  },
+  {
+   "id": 12402,
+   "number": "2.6",
+   "body_en": "He made his way through dark green meadows and sweet-smelling woods, through places full of boulders and places thick with trees.",
+   "body_hi": "वे गहरी हरी घास के मैदानों और खुशबूदार जंगलों के बीच से, बड़ी-बड़ी चट्टानों वाली जगहों और घने पेड़ों वाली जगहों से होकर आगे बढ़े।"
+  },
+  {
+   "id": 12403,
+   "number": "2.7",
+   "body_en": "The radiant Hanuman, bull among vanaras, passed over hills covered with trees and through rows of flowering woodland.",
+   "body_hi": "चमकते तेज वाले, वानरों में साँड़ जैसे हनुमान पेड़ों से ढकी पहाड़ियों और फूलों से भरी जंगल की कतारों को पार करते गए।"
+  },
+  {
+   "id": 12404,
+   "number": "2.8",
+   "body_en": "From his perch on that peak the Wind’s son gazed over woods and pleasure gardens, and there, crowning the summit ahead, stood Lanka.",
+   "body_hi": "उस चोटी पर बैठे-बैठे पवन के बेटे ने जंगलों और बागों पर नज़र दौड़ाई, और सामने की चोटी पर ताज की तरह बसी लंका खड़ी थी।"
+  },
+  {
+   "id": 12405,
+   "number": "2.9",
+   "body_en": "He saw pine trees and karnikara trees, date palms in full bloom, priyala, muchulinda, kutaja and screw pine trees,",
+   "body_hi": "उन्होंने चीड़ और कर्णिकार के पेड़ देखे, फूलों से लदे खजूर, और प्रियाल, मुचुलिंद, कुटज और केवड़े के पेड़ भी देखे,"
+  },
+  {
+   "id": 12406,
+   "number": "2.10",
+   "body_en": "fragrant priyangu vines, kadamba trees and seven-leaved saptaparna trees, asana and kovidara trees, and oleanders in flower,",
+   "body_hi": "खुशबू से भरी प्रियंगु की बेलें, कदंब और सात पत्तों वाले सप्तपर्ण के पेड़, असन और कोविदार के पेड़, और फूलों वाले कनेर,"
+  },
+  {
+   "id": 12407,
+   "number": "2.11",
+   "body_en": "trees weighed down with blossom and others still in bud, trees crowded with birds, their tops swaying in the wind.",
+   "body_hi": "फूलों के बोझ से झुके पेड़ और कुछ ऐसे जिन पर अभी कलियाँ ही थीं; पंछियों से भरे पेड़, जिनकी फुनगियाँ हवा में झूम रही थीं।"
+  },
+  {
+   "id": 12408,
+   "number": "2.12",
+   "body_en": "He saw ponds full of swans and ducks and covered with lotuses and water lilies, lovely pleasure grounds of every kind and all sorts of pools.",
+   "body_hi": "उन्होंने हंसों और बत्तखों से भरे और कमलों और कुमुदों से ढके तालाब देखे, तरह-तरह के सुंदर सैर-सपाटे के बाग़ और हर तरह के जलाशय देखे।"
+  },
+  {
+   "id": 12409,
+   "number": "2.13",
+   "body_en": "That elephant among vanaras saw beautiful gardens filled with all kinds of trees that bore flowers and fruit in every season.",
+   "body_hi": "वानरों में हाथी जैसे हनुमान ने ऐसे सुंदर बगीचे देखे, जो हर मौसम में फूल और फल देने वाले तरह-तरह के पेड़ों से भरे थे।"
+  },
+  {
+   "id": 12410,
+   "number": "2.14",
+   "body_en": "The splendid vanara drew near to Lanka, the city Ravana ruled, which was adorned with moats full of lotuses and water lilies.",
+   "body_hi": "वह शानदार वानर रावण के राज वाली लंका के पास पहुँचा, जो कमलों और कुमुदों से भरी खाइयों से सजी थी।"
+  },
+  {
+   "id": 12411,
+   "number": "2.15",
+   "body_en": "Because he had carried off Sita, Ravana kept the city heavily guarded, with rakshasas bearing fearsome bows patrolling all around it.",
+   "body_hi": "सीता को उठा लाने की वजह से रावण ने नगर पर कड़ा पहरा बिठा रखा था, और भयानक धनुष लिए राक्षस चारों ओर गश्त लगाते रहते थे।"
+  },
+  {
+   "id": 12412,
+   "number": "2.16",
+   "body_en": "It was a lovely, vast city enclosed by a golden wall, with houses as bright as planets, as white as autumn clouds,",
+   "body_hi": "वह सोने की दीवार से घिरी एक सुंदर, विशाल नगरी थी, जिसके घर ग्रहों जैसे चमकीले और शरद के बादलों जैसे सफ़ेद थे,"
+  },
+  {
+   "id": 12413,
+   "number": "2.17",
+   "body_en": "surrounded by tall white streets, crowded with hundreds of watchtowers and hung with rows of flags and banners.",
+   "body_hi": "जो ऊँची सफ़ेद गलियों से घिरी थी, सैकड़ों पहरे की मीनारों से भरी थी, और जिस पर झंडों और पताकाओं की कतारें लहराती थीं।"
+  },
+  {
+   "id": 12414,
+   "number": "2.18",
+   "body_en": "With its splendid golden archways decorated with carvings of vines, Hanuman saw Lanka looking like a city of the gods in heaven.",
+   "body_hi": "बेलों की नक्काशी से सजे उसके शानदार सुनहरे दरवाज़ों के साथ, हनुमान को लंका स्वर्ग में बसे देवताओं के किसी नगर जैसी दिखी।"
+  },
+  {
+   "id": 12415,
+   "number": "2.19",
+   "body_en": "Set on the mountaintop, with its fine white mansions, Lanka looked to the best of the vanaras like a city floating in the air.",
+   "body_hi": "पहाड़ की चोटी पर बसी, सुंदर सफ़ेद महलों वाली लंका वानरों में सबसे बढ़िया हनुमान को हवा में तैरते किसी नगर जैसी लगी।"
+  },
+  {
+   "id": 12416,
+   "number": "2.20",
+   "body_en": "Hanuman saw the city, guarded by the lord of the rakshasas and built by Vishvakarma, the gods’ own architect, seeming to drift in the sky.",
+   "body_hi": "हनुमान ने वह नगरी देखी, जिसकी रखवाली राक्षसों का राजा करता था और जिसे देवताओं के कारीगर विश्वकर्मा ने बनाया था; वह मानो आसमान में तैर रही थी।"
+  },
+  {
+   "id": 12417,
+   "number": "2.21",
+   "body_en": "Lanka seemed like a woman: its ramparts and walls were her hips, the wide waters of the moat her new garment, its spears and cannon-like weapons her hair, and its watchtowers her earrings.",
+   "body_hi": "लंका किसी औरत जैसी लगती थी: उसके परकोटे और दीवारें उसके कूल्हे थे, खाई का फैला पानी उसका नया कपड़ा था, भाले और तोप जैसे हथियार उसके बाल थे, और पहरे की मीनारें उसके कानों के झुमके थे।"
+  },
+  {
+   "id": 12418,
+   "number": "2.22",
+   "body_en": "Built by Vishvakarma, Lanka looked as though it had been made by the power of thought alone. Coming to its northern gate, the vanara began to think.",
+   "body_hi": "विश्वकर्मा की बनाई लंका ऐसी लगती थी मानो सिर्फ़ मन के सोचने से बन गई हो। उसके उत्तरी दरवाज़े पर पहुँचकर वानर सोच में पड़ गए।"
+  },
+  {
+   "id": 12419,
+   "number": "2.23",
+   "body_en": "It was like a peak of Mount Kailasa, seeming to scrape the sky, and with its lofty mansions it looked as if it were about to fly off into the air.",
+   "body_hi": "वह कैलास पहाड़ की चोटी जैसी थी, मानो आसमान को खुरच रही हो, और अपने ऊँचे-ऊँचे शानदार महलों के कारण ऐसी लगती थी जैसे अभी उड़कर आसमान में चली जाएगी।"
+  },
+  {
+   "id": 12420,
+   "number": "2.24",
+   "body_en": "It was full of dreadful rakshasas, as Bhogavati, the serpent city, is full of nagas. It was beyond imagining, well built and clearly laid out, and in the past Kubera had lived there.",
+   "body_hi": "वह भयानक राक्षसों से भरी थी, जैसे नागों का नगर भोगवती नागों से भरा रहता है। वह सोच से भी परे थी, अच्छी तरह बनी थी और साफ़-सुथरे ढंग से बसी थी, और पहले कुबेर वहाँ रहते थे।"
+  },
+  {
+   "id": 12421,
+   "number": "2.25",
+   "body_en": "It was guarded by many brave and dreadful rakshasas with fangs, holding spears and swords, just as a cave is guarded by poisonous snakes.",
+   "body_hi": "उसकी रखवाली बहुत से बहादुर और डरावने, नुकीले दाँतों वाले राक्षस भाले और तलवारें लिए करते थे, जैसे किसी गुफा की रखवाली ज़हरीले साँप करते हैं।"
+  },
+  {
+   "id": 12422,
+   "number": "2.26",
+   "body_en": "Seeing how strongly the city was defended, with the ocean around it, and thinking of Ravana, that terrible enemy, the vanara began to reflect:",
+   "body_hi": "यह देखकर कि नगर की हिफ़ाज़त कितनी कड़ी है और चारों ओर समुद्र है, और भयानक दुश्मन रावण के बारे में सोचकर वानर मन ही मन विचार करने लगे:"
+  },
+  {
+   "id": 12423,
+   "number": "2.27",
+   "body_en": "“Even if the vanaras come here, it will do no good. Not even the gods could take Lanka by fighting.",
+   "body_hi": "“अगर वानर यहाँ आ भी जाएँ, तो कोई फ़ायदा नहीं होगा। लड़ाई से तो देवता भी लंका को नहीं जीत सकते।"
+  },
+  {
+   "id": 12424,
+   "number": "2.28",
+   "body_en": "Even if mighty-armed Raghava reaches this Lanka, guarded by Ravana, so hard to approach and so well fortified, what will he be able to do?",
+   "body_hi": "रावण की रखवाली वाली यह लंका, जहाँ पहुँचना इतना कठिन है और जो इतनी मज़बूत किलेबंदी वाली है, अगर लंबी बाँहों वाले राघव यहाँ पहुँच भी जाएँ, तो क्या कर पाएँगे?"
+  },
+  {
+   "id": 12425,
+   "number": "2.29",
+   "body_en": "With rakshasas there is no room for gentle persuasion. Neither gifts nor sowing division among them seem likely to work, and war does not look possible either.",
+   "body_hi": "राक्षसों के साथ मीठी बातों से समझाने की कोई गुंजाइश नहीं है। न तोहफ़ों से काम चलता दिखता है, न उनमें फूट डालने से, और लड़ाई भी मुमकिन नहीं लगती।"
+  },
+  {
+   "id": 12426,
+   "number": "2.30",
+   "body_en": "Only four of the great-souled vanaras can even get here: Vali’s son Angada, Nila, myself, and our wise king Sugriva.",
+   "body_hi": "महान वानरों में से सिर्फ़ चार ही यहाँ तक पहुँच सकते हैं: वाली के बेटे अंगद, नील, मैं, और हमारे समझदार राजा सुग्रीव।"
+  },
+  {
+   "id": 12427,
+   "number": "2.31",
+   "body_en": "But first let me find out whether Vaidehi is alive or not. Once I have seen Janaka’s daughter, I will work out what to do next.”",
+   "body_hi": "पर पहले मैं यह पता करूँ कि वैदेही ज़िंदा हैं या नहीं। जनक की बेटी को देख लेने के बाद ही मैं आगे की सोचूँगा।”"
+  },
+  {
+   "id": 12428,
+   "number": "2.32",
+   "body_en": "Then, standing on that mountain peak, the elephant among vanaras, devoted to Rama’s success, thought things over for a while.",
+   "body_hi": "फिर उस पहाड़ की चोटी पर खड़े होकर राम की कामयाबी में मन लगाए वानरों में हाथी जैसे हनुमान कुछ देर सोचते रहे।"
+  },
+  {
+   "id": 12429,
+   "number": "2.33",
+   "body_en": "“Looking the way I do now, I have no chance of slipping inside. This place belongs to the rakshasas, and harsh, hard-muscled guards keep watch over it.",
+   "body_hi": "“अभी जैसा मैं दिखता हूँ, उस हालत में मेरे अंदर घुस पाने का कोई मौका नहीं। यह जगह राक्षसों की है, और सख़्त, गठीले पहरेदार इस पर नज़र रखते हैं।"
+  },
+  {
+   "id": 12430,
+   "number": "2.34",
+   "body_en": "The rakshasas are fierce, very brave and strong. While I search for Janaki, I must slip past every one of them.",
+   "body_hi": "राक्षस बहुत खूँख़ार, बड़े बहादुर और ताकतवर हैं। जानकी को खोजते हुए मुझे उन सबको चकमा देना होगा।"
+  },
+  {
+   "id": 12431,
+   "number": "2.35",
+   "body_en": "Now is the right time for me to enter the city of Lanka at night, in a form that can barely be seen, to carry out this great task.",
+   "body_hi": "इस बड़े काम को पूरा करने के लिए अब सही वक्त है कि मैं रात में ऐसे रूप में लंका नगरी में घुसूँ, जो मुश्किल से ही दिखाई दे।"
+  },
+  {
+   "id": 12432,
+   "number": "2.36",
+   "body_en": "Seeing that such a city could not be conquered even by gods or asuras, Hanuman sighed again and again and thought:",
+   "body_hi": "यह देखकर कि ऐसी नगरी को देवता या असुर भी नहीं जीत सकते, हनुमान बार-बार लंबी साँस लेकर सोचने लगे:"
+  },
+  {
+   "id": 12433,
+   "number": "2.37",
+   "body_en": "“How can I see Maithili, Janaka’s daughter, without being seen by the wicked Ravana, lord of the rakshasas?",
+   "body_hi": "“मैं जनक की बेटी मैथिली को कैसे देखूँ, कि राक्षसों का राजा, दुष्ट रावण मुझे न देख पाए?"
+  },
+  {
+   "id": 12434,
+   "number": "2.38",
+   "body_en": "How can I keep from ruining the mission of Rama, who knows his own mind? How can I see Janaka’s daughter alone, in a quiet place, with no one else there?",
+   "body_hi": "अपने मन को जानने वाले राम का काम मैं बिगड़ने से कैसे बचाऊँ? जनक की बेटी से मैं अकेले में, किसी शांत जगह पर, कैसे मिलूँ, जहाँ और कोई न हो?"
+  },
+  {
+   "id": 12435,
+   "number": "2.39",
+   "body_en": "Even tasks that are nearly done come to nothing when they fall into the hands of a nervous messenger who ignores time and place, just as darkness vanishes at sunrise.",
+   "body_hi": "जो काम लगभग पूरे हो चुके हों, वे भी किसी घबराए हुए दूत के हाथ पड़कर, जो जगह और वक्त का ध्यान न रखे, ऐसे मिट जाते हैं जैसे सूरज निकलते ही अँधेरा।"
+  },
+  {
+   "id": 12436,
+   "number": "2.40",
+   "body_en": "Even when a plan has been settled, it falls apart if the mind wavers over what helps and what harms. Messengers who think themselves clever ruin the work they are sent to do.",
+   "body_hi": "कोई योजना तय हो जाने पर भी, अगर मन यह सोचकर डगमगाता रहे कि क्या फ़ायदे का है और क्या नुकसान का, तो वह बिखर जाती है। जो दूत खुद को बहुत होशियार समझते हैं, वे अपने सौंपे हुए काम को ही बिगाड़ देते हैं।"
+  },
+  {
+   "id": 12437,
+   "number": "2.41",
+   "body_en": "How can I make sure the mission is not ruined? How can I keep from losing my nerve? How can I make sure my leap across the ocean was not for nothing?",
+   "body_hi": "मैं कैसे पक्का करूँ कि काम न बिगड़े? मैं अपनी हिम्मत कैसे न खोऊँ? मैं कैसे पक्का करूँ कि समुद्र पार की मेरी छलाँग बेकार न जाए?"
+  },
+  {
+   "id": 12438,
+   "number": "2.42",
+   "body_en": "If the rakshasas spot me, then the mission of Rama, who knows his own mind and wants Ravana destroyed, will fail.",
+   "body_hi": "अगर राक्षसों ने मुझे देख लिया, तो अपने मन को जानने वाले राम का काम, जो रावण का नाश चाहते हैं, नाकाम हो जाएगा।"
+  },
+  {
+   "id": 12439,
+   "number": "2.43",
+   "body_en": "It is impossible to stay anywhere here without the rakshasas knowing, even in the form of a rakshasa, let alone in any other form.",
+   "body_hi": "यहाँ कहीं भी राक्षसों की जानकारी के बिना रुक पाना नामुमकिन है, राक्षस का रूप लेकर भी नहीं, फिर किसी और रूप की तो बात ही क्या।"
+  },
+  {
+   "id": 12440,
+   "number": "2.44",
+   "body_en": "I believe not even the wind could move about here unnoticed. Nothing escapes the knowledge of these powerful rakshasas.",
+   "body_hi": "मुझे लगता है कि यहाँ तो हवा भी बिना किसी की नज़र में आए नहीं चल सकती। इन ताकतवर राक्षसों से कुछ भी छिपा नहीं रहता।"
+  },
+  {
+   "id": 12441,
+   "number": "2.45",
+   "body_en": "If I stay here in my own form, I will be caught and killed, and my master’s cause will be lost.",
+   "body_hi": "अगर मैं यहाँ अपने असली रूप में रहा, तो पकड़ा जाकर मारा जाऊँगा, और मेरे मालिक का काम बिगड़ जाएगा।"
+  },
+  {
+   "id": 12442,
+   "number": "2.46",
+   "body_en": "That settles it. Keeping my own shape but shrinking it down small, I will creep into Lanka after dark and do what Raghava needs done.",
+   "body_hi": "बस, यही ठीक है। अपना ही आकार रखकर, पर उसे छोटा करके, मैं अँधेरा होने पर लंका में चुपके से घुसूँगा और राघव का ज़रूरी काम करूँगा।"
+  },
+  {
+   "id": 12443,
+   "number": "2.47",
+   "body_en": "Once inside Ravana’s capital under cover of night, however hard it is to reach, I will go through it house by house until I find the princess, Janaka’s child.”",
+   "body_hi": "रात के अँधेरे में रावण की राजधानी में घुसकर, चाहे वहाँ पहुँचना कितना ही मुश्किल हो, मैं एक-एक घर छानूँगा, जब तक जनक की लाड़ली राजकुमारी मिल न जाए।”"
+  },
+  {
+   "id": 12444,
+   "number": "2.48",
+   "body_en": "Having thought this through, the brave vanara Hanuman, eager to see Vaidehi, waited for the sun to set.",
+   "body_hi": "यह सब सोच-समझकर बहादुर वानर हनुमान, जो वैदेही को देखने के लिए बेचैन थे, सूरज डूबने का इंतज़ार करने लगे।"
+  },
+  {
+   "id": 12445,
+   "number": "2.49",
+   "body_en": "When the sun had set and night had come, the son of the Wind shrank his body until he was no bigger than a cat, a wonderful thing to see.",
+   "body_hi": "जब सूरज डूब गया और रात हो गई, तो पवन के बेटे ने अपना शरीर इतना सिकोड़ लिया कि वे बस एक बिल्ली जितने रह गए; यह देखने में बड़ी अनोखी बात थी।"
+  },
+  {
+   "id": 12446,
+   "number": "2.50",
+   "body_en": "In the early evening the mighty Hanuman quickly leapt up and entered the lovely city with its well-planned broad highways.",
+   "body_hi": "शाम ढलते ही ताकतवर हनुमान झट से उछले और उस सुंदर नगर में घुस गए, जिसकी चौड़ी सड़कें बड़े सलीके से बनी थीं।"
+  },
+  {
+   "id": 12447,
+   "number": "2.51",
+   "body_en": "Lined with rows of palaces, with pillars of gold and silver and lattices of pure gold, it was like a city of the gandharvas.",
+   "body_hi": "महलों की कतारों से भरा, सोने और चाँदी के खंभों और खरे सोने की जालियों वाला वह नगर गंधर्वों के किसी नगर जैसा था।"
+  },
+  {
+   "id": 12448,
+   "number": "2.52",
+   "body_en": "He saw the great city with its buildings of seven and eight storeys, with floors inlaid with crystal and decorated with gold.",
+   "body_hi": "उन्होंने उस बड़े नगर में सात और आठ मंज़िलों वाली इमारतें देखीं, जिनके फ़र्श बिल्लौर से जड़े और सोने से सजे थे।"
+  },
+  {
+   "id": 12449,
+   "number": "2.53",
+   "body_en": "Those mansions of the rakshasas were splendid, with floors patterned in cat’s-eye gems and hung with nets of pearls.",
+   "body_hi": "राक्षसों के वे महल बहुत शानदार थे; उनके फ़र्शों पर लहसुनिया रत्नों के नक्श बने थे और उन पर मोतियों की जालियाँ लटकी थीं।"
+  },
+  {
+   "id": 12450,
+   "number": "2.54",
+   "body_en": "The rakshasas’ golden, many-coloured archways lit up Lanka, which was beautifully decorated on every side.",
+   "body_hi": "राक्षसों के सुनहरे, रंग-बिरंगे दरवाज़े लंका को जगमगा रहे थे, जो हर तरफ़ से खूब सजी हुई थी।"
+  },
+  {
+   "id": 12451,
+   "number": "2.55",
+   "body_en": "Seeing Lanka, so beyond imagining and so wonderful in form, the great vanara felt both dismay and delight, eager as he was to see Vaidehi.",
+   "body_hi": "सोच से परे और अनोखे रूप वाली लंका को देखकर वह बड़ा वानर उदास भी हुआ और खुश भी, क्योंकि वह वैदेही को देखने के लिए बेचैन था।"
+  },
+  {
+   "id": 12452,
+   "number": "2.56",
+   "body_en": "He looked at that famous city, garlanded with rows of tall white mansions, with lattices and archways of costly gold, protected by Ravana’s arm and surrounded by night-roaming rakshasas of terrible strength.",
+   "body_hi": "उन्होंने उस मशहूर नगरी को देखा, जो ऊँचे सफ़ेद महलों की कतारों से सजी थी, जिसकी जालियाँ और दरवाज़े कीमती सोने के थे, जिसकी रखवाली रावण की बाँहें करती थीं, और जो भयानक ताकत वाले, रात में घूमने वाले राक्षसों से घिरी थी।"
+  },
+  {
+   "id": 12453,
+   "number": "2.57",
+   "body_en": "Then the moon, as if to lend him a helping hand, rose shining among the hosts of stars, spreading its thousands of rays over the world like a canopy of moonlight.",
+   "body_hi": "तब चाँद, मानो उनका साथ देने के लिए, तारों के झुंडों के बीच चमकता हुआ उग आया, और अपनी हज़ारों किरणों से चाँदनी का चँदोवा तानकर पूरी दुनिया पर फैला दिया।"
+  },
+  {
+   "id": 12454,
+   "number": "2.58",
+   "body_en": "The heroic vanara saw the moon rising and glowing, bright as a conch shell, white as milk or a lotus stalk, gliding along like a swan on a lake.",
+   "body_hi": "वीर वानर ने चाँद को उगते और चमकते देखा, जो शंख जैसा उजला और दूध या कमल की डंडी जैसा सफ़ेद था, और किसी झील में तैरते हंस की तरह आगे बढ़ रहा था।"
+  },
+  {
+   "id": 12455,
+   "number": "3.1",
+   "body_en": "On a high peak of Mount Lamba, which looked like a heavy, low-hanging cloud, the wise Hanuman, son of the Wind, gathered up his courage,",
+   "body_hi": "लंब पहाड़ की एक ऊँची चोटी पर, जो भारी और नीचे लटकते बादल जैसी दिखती थी, पवन के समझदार बेटे हनुमान ने अपनी हिम्मत बटोरी,"
+  },
+  {
+   "id": 12456,
+   "number": "3.2",
+   "body_en": "and that bold elephant among vanaras entered Lanka by night, the city guarded by Ravana, rich in lovely woods and waters.",
+   "body_hi": "और वानरों में हाथी जैसे उस निडर वीर ने रात के वक्त लंका में कदम रखा, जिसकी रखवाली रावण करता था और जो सुंदर जंगलों और पानी से भरी थी।"
+  },
+  {
+   "id": 12457,
+   "number": "3.3",
+   "body_en": "It was graced with mansions like autumn clouds, it roared like the sea, and the sea breeze blew through it.",
+   "body_hi": "वह शरद के बादलों जैसे महलों से सजी थी, उसमें समुद्र जैसा शोर गूँजता था, और समुद्री हवा उसमें बहती रहती थी।"
+  },
+  {
+   "id": 12458,
+   "number": "3.4",
+   "body_en": "It rang with the noise of its well-fed army, like Vitapavati, Kubera’s city. Its arches and turrets were lovely, and its gates and gateways were white.",
+   "body_hi": "वह अपनी खाई-पी हट्टी-कट्टी सेना के शोर से गूँजती थी, जैसे कुबेर की नगरी विटपावती। उसके दरवाज़ों की मेहराबें और बुर्ज सुंदर थे, और उसके फाटक सफ़ेद थे।"
+  },
+  {
+   "id": 12459,
+   "number": "3.5",
+   "body_en": "Like beautiful Bhogavati, it was well guarded and full of serpents. It was crowded with clouds and lightning, and the stars moved above it along their path.",
+   "body_hi": "सुंदर भोगवती की तरह उस पर कड़ा पहरा था और उसमें साँप घूमते थे। बिजली वाले बादल उस पर छाए थे, और ऊपर तारे अपने रास्ते पर चलते थे।"
+  },
+  {
+   "id": 12460,
+   "number": "3.6",
+   "body_en": "Soft breezes moved through it, as they do through Indra’s city Amaravati, and a great golden wall enclosed it all around.",
+   "body_hi": "उसमें हल्की हवाएँ बहती थीं, जैसे इंद्र की नगरी अमरावती में बहती हैं, और एक बड़ी सोने की दीवार उसे चारों ओर से घेरे थी।"
+  },
+  {
+   "id": 12461,
+   "number": "3.7",
+   "body_en": "It was decorated with banners ringing with strings of little bells. Reaching it, Hanuman was suddenly filled with joy and went up to the wall.",
+   "body_hi": "वह घुँघरुओं की लड़ियों से बजते झंडों से सजी थी। वहाँ पहुँचकर हनुमान अचानक खुशी से भर गए और दीवार के पास जा पहुँचे।"
+  },
+  {
+   "id": 12462,
+   "number": "3.8",
+   "body_en": "His heart full of wonder, he looked at the city on every side: its gates of gold with platforms of cat’s-eye gems,",
+   "body_hi": "मन में हैरानी भरकर उन्होंने नगर को हर तरफ़ से देखा: उसके सोने के दरवाज़े, जिनके चबूतरे लहसुनिया रत्नों के बने थे,"
+  },
+  {
+   "id": 12463,
+   "number": "3.9",
+   "body_en": "floors set with diamonds, crystal, pearls and other gems, turrets of glowing gold, and spotless white silver,",
+   "body_hi": "हीरों, बिल्लौर, मोतियों और दूसरे रत्नों से जड़े फ़र्श, दमकते सोने के बुर्ज, और बेदाग़ सफ़ेद चाँदी,"
+  },
+  {
+   "id": 12464,
+   "number": "3.10",
+   "body_en": "stairways of cat’s-eye gems, courtyards dusted with crystal, lovely halls and splendid buildings that seemed to leap into the sky,",
+   "body_hi": "लहसुनिया रत्नों की सीढ़ियाँ, बिल्लौर की धूल से भरे आँगन, सुंदर सभा-भवन और ऐसी शानदार इमारतें जो मानो उछलकर आसमान में जा रही थीं,"
+  },
+  {
+   "id": 12465,
+   "number": "3.11",
+   "body_en": "full of the cries of cranes and peacocks and visited by royal swans. The city echoed on every side with the sound of music and jingling ornaments.",
+   "body_hi": "जहाँ सारसों और मोरों की आवाज़ें गूँजती थीं और राजहंस आते-जाते थे। संगीत और बजते गहनों की आवाज़ से नगर हर तरफ़ गूँज रहा था।"
+  },
+  {
+   "id": 12466,
+   "number": "3.12",
+   "body_en": "Seeing that city, as rich as Kubera’s capital and seeming to rise into the sky, the vanara Hanuman was delighted.",
+   "body_hi": "कुबेर की राजधानी जितनी अमीर और मानो आसमान में उठती उस नगरी को देखकर वानर हनुमान बहुत खुश हुए।"
+  },
+  {
+   "id": 12467,
+   "number": "3.13",
+   "body_en": "Looking at the lovely, splendid city of the lord of the rakshasas, unmatched and full of riches, the mighty vanara thought:",
+   "body_hi": "राक्षसों के राजा की उस सुंदर, शानदार, बेजोड़ और धन-दौलत से भरी नगरी को देखकर ताकतवर वानर ने सोचा:"
+  },
+  {
+   "id": 12468,
+   "number": "3.14",
+   "body_en": "“No one else could take this city by force, guarded as it is by Ravana’s soldiers with their weapons raised.",
+   "body_hi": "“कोई और इस नगर को ताकत के ज़ोर से नहीं जीत सकता, क्योंकि हथियार उठाए रावण के सैनिक इसकी रखवाली करते हैं।"
+  },
+  {
+   "id": 12469,
+   "number": "3.15",
+   "body_en": "Maybe a few could make it across to this shore: Kumuda, Angada, the mighty vanara Sushena, and the pair Mainda and Dvivida too,",
+   "body_hi": "शायद कुछ ही वीर इस किनारे तक आ पाएँ: कुमुद, अंगद, बड़े वानर सुषेण, और मैंद और द्विविद की जोड़ी भी,"
+  },
+  {
+   "id": 12470,
+   "number": "3.16",
+   "body_en": "by Sugriva the son of the Sun, by the vanara Kushaparva, by the bear Ketumala, and by me.”",
+   "body_hi": "सूरज के बेटे सुग्रीव, वानर कुशपर्वा, भालू केतुमाल, और मैं।”"
+  },
+  {
+   "id": 12471,
+   "number": "3.17",
+   "body_en": "But then, thinking of the might of strong-armed Raghava and the courage of Lakshmana, the vanara felt cheered.",
+   "body_hi": "पर फिर लंबी बाँहों वाले राघव की ताकत और लक्ष्मण की बहादुरी के बारे में सोचकर वानर का मन खिल उठा।"
+  },
+  {
+   "id": 12472,
+   "number": "3.18",
+   "body_en": "Like a rich, well-adorned young woman, the city wore jewels as her clothing, cattle-sheds and storehouses as her earrings, and armouries as her breasts.",
+   "body_hi": "किसी अमीर और सजी-धजी जवान औरत की तरह वह नगरी रत्नों को अपने कपड़ों की तरह पहने थी, गौशालाएँ और भंडार उसके झुमके थे, और हथियार-घर मानो उसकी छाती थे।"
+  },
+  {
+   "id": 12473,
+   "number": "3.19",
+   "body_en": "The great vanara saw the city of the lord of the rakshasas, its darkness driven away by lamps and by brightly lit great houses.",
+   "body_hi": "उस बड़े वानर ने राक्षसों के राजा की वह नगरी देखी, जिसका अँधेरा दीयों और जगमगाते बड़े घरों ने दूर कर दिया था।"
+  },
+  {
+   "id": 12474,
+   "number": "3.20",
+   "body_en": "Then the city herself, in her own form, saw the mighty son of the Wind, that tiger among vanaras, coming in.",
+   "body_hi": "तब नगरी ने खुद, अपने असली रूप में, पवन के ताकतवर बेटे, वानरों में बाघ जैसे हनुमान को अंदर आते देखा।"
+  },
+  {
+   "id": 12475,
+   "number": "3.21",
+   "body_en": "Seeing that finest of vanaras, Lanka, guarded by Ravana, rose up there herself in a shape with a hideous face.",
+   "body_hi": "वानरों में सबसे बढ़िया उस वीर को देखकर रावण की रखवाली वाली लंका खुद वहाँ एक डरावने चेहरे वाले रूप में उठ खड़ी हुई।"
+  },
+  {
+   "id": 12476,
+   "number": "3.22",
+   "body_en": "She stood in front of the son of the Wind, the finest of vanaras, and letting out a loud roar, she spoke to him:",
+   "body_hi": "वह पवन के बेटे, वानरों में सबसे बढ़िया हनुमान के सामने खड़ी हो गई, और ज़ोर से दहाड़ते हुए उनसे बोली:"
+  },
+  {
+   "id": 12477,
+   "number": "3.23",
+   "body_en": "“Who are you, forest dweller, and what has brought you here? Tell me the truth now, while you are still alive.",
+   "body_hi": "“जंगल में रहने वाले, तुम कौन हो, और किस काम से यहाँ आए हो? जब तक तुम्हारी जान बची है, मुझे सच-सच बता दो।"
+  },
+  {
+   "id": 12478,
+   "number": "3.24",
+   "body_en": "You will never be able to get into this Lanka, vanara. It is guarded by Ravana’s forces and protected on every side.”",
+   "body_hi": "वानर, तुम इस लंका में कभी नहीं घुस सकते। रावण की सेनाएँ इसकी रखवाली करती हैं और इस पर हर तरफ़ से पहरा है।”"
+  },
+  {
+   "id": 12479,
+   "number": "3.25",
+   "body_en": "Brave Hanuman faced the figure blocking his way and answered, “You want to know the truth about me, and I will give you a straight answer.",
+   "body_hi": "बहादुर हनुमान ने रास्ता रोककर खड़ी उस आकृति का सामना किया और कहा, “तुम मेरे बारे में सच जानना चाहती हो, तो मैं तुम्हें सीधा जवाब दूँगा।"
+  },
+  {
+   "id": 12480,
+   "number": "3.26",
+   "body_en": "But who are you, with those ugly eyes, standing right at the city gate? And why do you block my way and threaten me so harshly?”",
+   "body_hi": "पर तुम कौन हो, इन डरावनी आँखों वाली, जो नगर के दरवाज़े पर ही खड़ी हो? और तुम मेरा रास्ता रोककर मुझे इतनी बेरहमी से धमका क्यों रही हो?”"
+  },
+  {
+   "id": 12481,
+   "number": "3.27",
+   "body_en": "Hearing Hanuman’s words, Lanka, who could take any shape she wished, grew angry and answered the son of the Wind harshly:",
+   "body_hi": "हनुमान की बात सुनकर मनचाहा रूप ले सकने वाली लंका गुस्से में आ गई और पवन के बेटे को कड़े शब्दों में जवाब दिया:"
+  },
+  {
+   "id": 12482,
+   "number": "3.28",
+   "body_en": "“I wait on the orders of great Ravana, king of the rakshasas. No one can overpower me, and I guard this city.",
+   "body_hi": "“मैं राक्षसों के राजा, महान रावण के हुक्म का इंतज़ार करती हूँ। मुझे कोई हरा नहीं सकता, और मैं इस नगर की रखवाली करती हूँ।"
+  },
+  {
+   "id": 12483,
+   "number": "3.29",
+   "body_en": "You cannot get into this city by brushing me aside. Today you will lie dead, struck down by me, your life gone.",
+   "body_hi": "मुझे अनदेखा करके तुम इस नगर में नहीं घुस सकते। आज तुम मेरे हाथों मारे जाकर बेजान पड़े रहोगे।"
+  },
+  {
+   "id": 12484,
+   "number": "3.30",
+   "body_en": "For I am the city of Lanka herself, vanara, and I protect it on every side. Now I have told you who I am.”",
+   "body_hi": "वानर, मैं खुद लंका नगरी हूँ, और मैं हर तरफ़ से इसकी रक्षा करती हूँ। अब मैंने तुम्हें बता दिया कि मैं कौन हूँ।”"
+  },
+  {
+   "id": 12485,
+   "number": "3.31",
+   "body_en": "Lanka’s threat did not move him. The Wind’s son, finest of all the vanaras, steadied himself and held his ground, as solid as another mountain planted there.",
+   "body_hi": "लंका की धमकी से वे ज़रा भी नहीं डिगे। पवन के बेटे, सारे वानरों में सबसे बढ़िया हनुमान ने खुद को सँभाला और अपनी जगह पर ऐसे डटे रहे, जैसे वहाँ एक और पहाड़ गड़ा हो।"
+  },
+  {
+   "id": 12486,
+   "number": "3.32",
+   "body_en": "Looking at her, a figure in a woman’s shape but hideous, the wise and brave bull among vanaras spoke:",
+   "body_hi": "औरत के रूप वाली पर डरावनी उस आकृति को देखकर वानरों में साँड़ जैसे समझदार और बहादुर हनुमान बोले:"
+  },
+  {
+   "id": 12487,
+   "number": "3.33",
+   "body_en": "“I have come here to see the city of Lanka with its towers, walls and arches. I am really very curious about it.",
+   "body_hi": "“मैं यहाँ लंका नगरी देखने आया हूँ, इसकी मीनारें, दीवारें और दरवाज़े देखने। सच में, मुझे इसे देखने का बड़ा शौक है।"
+  },
+  {
+   "id": 12488,
+   "number": "3.34",
+   "body_en": "I have come to look at Lanka’s woods and gardens and groves, and at the fine houses all around.”",
+   "body_hi": "मैं लंका के जंगल, बगीचे और बाग़ीचे, और चारों ओर के बढ़िया घर देखने आया हूँ।”"
+  },
+  {
+   "id": 12489,
+   "number": "3.35",
+   "body_en": "Hearing him say this, Lanka, who could take any shape she wished, spoke again in harsh words:",
+   "body_hi": "उनकी यह बात सुनकर मनचाहा रूप लेने वाली लंका फिर से कड़वे शब्दों में बोली:"
+  },
+  {
+   "id": 12490,
+   "number": "3.36",
+   "body_en": "“Foolish creature, lowest of forest vanaras, unless you defeat me first, you will not be able to see this city today, protected as it is by the lord of the rakshasas.”",
+   "body_hi": "“बेवकूफ़, जंगल के सबसे नीच वानर, जब तक तुम पहले मुझे हरा नहीं देते, तब तक आज तुम राक्षसों के राजा की रखवाली वाली इस नगरी को नहीं देख सकते।”"
+  },
+  {
+   "id": 12491,
+   "number": "3.37",
+   "body_en": "Then that tiger among vanaras said to the night-roaming woman, “Good lady, once I have seen this city, I will go back the way I came.”",
+   "body_hi": "तब वानरों में बाघ जैसे हनुमान ने रात में घूमने वाली उस औरत से कहा, “भली औरत, इस नगरी को देख लेने के बाद मैं जैसे आया था, वैसे ही लौट जाऊँगा।”"
+  },
+  {
+   "id": 12492,
+   "number": "3.38",
+   "body_en": "At that Lanka let out a great, frightening roar and quickly struck the best of the vanaras with the flat of her hand.",
+   "body_hi": "इस पर लंका ने एक बड़ी और डरावनी दहाड़ लगाई, और झट से वानरों में सबसे बढ़िया हनुमान को अपनी हथेली से ज़ोर का थप्पड़ मारा।"
+  },
+  {
+   "id": 12493,
+   "number": "3.39",
+   "body_en": "Struck hard by Lanka, that tiger among vanaras, the mighty son of the Wind, gave a tremendous roar.",
+   "body_hi": "लंका की ज़ोरदार मार खाकर वानरों में बाघ जैसे पवन के ताकतवर बेटे ने बहुत ज़ोर से गर्जना की।"
+  },
+  {
+   "id": 12494,
+   "number": "3.40",
+   "body_en": "Then Hanuman, overcome with anger, curled the fingers of his left hand into a fist and struck her with it.",
+   "body_hi": "फिर गुस्से से भरे हनुमान ने अपने बाएँ हाथ की उँगलियाँ मोड़कर मुट्ठी बनाई और उससे उसे मारा।"
+  },
+  {
+   "id": 12495,
+   "number": "3.41",
+   "body_en": "Since he thought of her as a woman, he held back his anger and did not strike too hard. Even so, the blow left the night-roaming woman shaken in every limb,",
+   "body_hi": "क्योंकि वे उसे औरत मानते थे, इसलिए उन्होंने अपने गुस्से पर लगाम रखी और बहुत ज़ोर से नहीं मारा। फिर भी उस वार से रात में घूमने वाली उस औरत का अंग-अंग काँप गया,"
+  },
+  {
+   "id": 12496,
+   "number": "3.42",
+   "body_en": "and down she crashed to the earth all at once, her features warped and fearsome. Seeing that he had knocked her flat, clever Hanuman",
+   "body_hi": "और वह एकदम से धड़ाम से धरती पर आ गिरी, उसकी शक्ल बिगड़ी हुई और डरावनी थी। यह देखकर कि उन्होंने उसे चित कर दिया है, होशियार हनुमान"
+  },
+  {
+   "id": 12497,
+   "number": "3.43",
+   "body_en": "felt pity for her, the noble hero, because he thought of her as a woman. Then Lanka, deeply shaken, spoke in a choking voice,",
+   "body_hi": "उस पर दया की, क्योंकि उस तेजस्वी वीर के मन में वह एक औरत थी। तब बुरी तरह घबराई हुई लंका भर्राई आवाज़ में,"
+  },
+  {
+   "id": 12498,
+   "number": "3.44",
+   "body_en": "and without any pride now, she said to the vanara Hanuman: “Be kind to me, mighty-armed one. Spare me, finest of vanaras.",
+   "body_hi": "अब बिना किसी घमंड के, वानर हनुमान से बोली: “लंबी बाँहों वाले वीर, मुझ पर दया करो। वानरों में सबसे बढ़िया, मुझे बचा लो।"
+  },
+  {
+   "id": 12499,
+   "number": "3.45",
+   "body_en": "Gentle one, the strong and truly brave keep to the rules of honour. I am Lanka, the city herself, vanara,",
+   "body_hi": "भले वीर, जो सच में ताकतवर और बहादुर होते हैं, वे मर्यादा के नियमों पर टिके रहते हैं। वानर, मैं खुद लंका नगरी हूँ,"
+  },
+  {
+   "id": 12500,
+   "number": "3.46",
+   "body_en": "and you have beaten me by your courage, mighty hero. Now listen, lord of the vanaras, to the truth I am about to tell you.",
+   "body_hi": "और ताकतवर वीर, तुमने अपनी बहादुरी से मुझे हरा दिया है। अब वानरों के सरदार, मैं तुम्हें जो सच बताने जा रही हूँ, उसे सुनो।"
+  },
+  {
+   "id": 12501,
+   "number": "3.47",
+   "body_en": "Long ago Brahma, the self-born, gave me this word as a boon: ‘When some vanara overpowers you by his strength,",
+   "body_hi": "बहुत पहले अपने-आप जन्मे ब्रह्मा ने मुझे वरदान के रूप में यह बात कही थी: ‘जब कोई वानर अपनी ताकत से तुम्हें काबू में कर ले,"
+  },
+  {
+   "id": 12502,
+   "number": "3.48",
+   "body_en": "then you must understand that terror has come upon the rakshasas.’ Gentle one, now that I have seen you, that moment has arrived.",
+   "body_hi": "तब समझ लेना कि राक्षसों पर डर की घड़ी आ गई है।’ भले वीर, तुम्हें देखकर मैं जान गई कि वह घड़ी अब आ पहुँची है।"
+  },
+  {
+   "id": 12503,
+   "number": "3.49",
+   "body_en": "Brahma’s word holds good and no one can get around it. And the cause is Sita: on her account, ruin now waits for that evil-hearted king Ravana",
+   "body_hi": "ब्रह्मा की बात खरी है और उससे कोई बच नहीं सकता। और इसकी वजह सीता हैं: उन्हीं के कारण अब बर्बादी उस बुरे मन वाले राजा रावण का"
+  },
+  {
+   "id": 12504,
+   "number": "3.50",
+   "body_en": "and for all the rakshasas, destruction has now drawn near. So go into the city ruled by Ravana, best of vanaras, and do everything here that you wish to do.",
+   "body_hi": "और सारे राक्षसों का विनाश अब पास आ गया है। इसलिए वानरों में सबसे बढ़िया, रावण के राज वाली नगरी में जाओ, और यहाँ जो-जो करना चाहते हो, वह सब करो।"
+  },
+  {
+   "id": 12505,
+   "number": "3.51",
+   "body_en": "Lord of the vanaras, enter this fine city ruled by the chief of the rakshasas, a city now struck by a curse, and go wherever you please, searching everywhere at your ease for Janaka’s faithful daughter.”",
+   "body_hi": "वानरों के सरदार, राक्षसों के मुखिया की इस सुंदर नगरी में, जिस पर अब एक श्राप की मार पड़ चुकी है, अंदर जाओ, और जहाँ मन करे, आराम से हर जगह जनक की पतिव्रता बेटी को खोजो।”"
+  }
+ ]
+}
