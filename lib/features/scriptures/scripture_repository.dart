@@ -35,18 +35,27 @@ class ScriptureRepository {
 
   /// RG-01: a verse we have rewritten reads from `gyan.scripture_overrides`;
   /// the fixture's translation and commentary show only where no rewrite
-  /// exists yet. Sanskrit and transliteration always come from the fixture.
+  /// exists yet. A verse with no commentary of its own (the Ramayana) shows its
+  /// sarga's retelling instead. Sanskrit and transliteration always come from
+  /// the fixture.
   String get _sectionSelect => db.gyanAttached
       ? '''
         SELECT s.id, s.book_id, s.number, s.sanskrit, s.transliteration,
                COALESCE(o.body_en, s.body_en) AS body_en,
                COALESCE(o.body_hi, s.body_hi) AS body_hi,
-               CASE WHEN o.section_id IS NULL THEN s.commentary_en
-                    ELSE o.commentary_en END AS commentary_en,
-               CASE WHEN o.section_id IS NULL THEN s.commentary_hi
-                    ELSE o.commentary_hi END AS commentary_hi
+               COALESCE(o.commentary_en,
+                        r.title_en || char(10) || char(10) || r.retelling_en,
+                        CASE WHEN o.section_id IS NULL THEN s.commentary_en END)
+                 AS commentary_en,
+               COALESCE(o.commentary_hi,
+                        r.title_hi || char(10) || char(10) || r.retelling_hi,
+                        CASE WHEN o.section_id IS NULL THEN s.commentary_hi END)
+                 AS commentary_hi
         FROM scripture_sections s
-        LEFT JOIN gyan.scripture_overrides o ON o.section_id = s.id'''
+        LEFT JOIN gyan.scripture_overrides o ON o.section_id = s.id
+        LEFT JOIN gyan.sarga_retellings r
+          ON r.book_id = s.book_id
+         AND r.sarga = substr(s.number, 1, instr(s.number, '.') - 1)'''
       : 'SELECT * FROM scripture_sections s';
 
   Future<List<ScriptureSection>> sections(int bookId) async {

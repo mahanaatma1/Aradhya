@@ -1,0 +1,610 @@
+{
+ "slug": "balakanda",
+ "title_en": "Bala Kanda",
+ "title_hi": "बाल काण्ड",
+ "book_id": 19,
+ "scripture": "valmiki-ramayana",
+ "note": "Our own English and Hindi rendering of the public-domain Sanskrit, written in plain, jargon-free language (RG-01). Replaces the corresponding scripture_sections rows of the Ishvarvaani fixture. Sanskrit and transliteration are carried over from the PD source at build time and are not restated here.",
+ "rows": [
+  {
+   "id": 702,
+   "number": "1.1",
+   "body_en": "Valmiki, the foremost of sages, put a question to Narada — a sage always absorbed in austerity and the study of the Vedas, and the finest of all who have mastered the art of speech.",
+   "body_hi": "ऋषियों में सबसे बड़े वाल्मीकि ने नारद जी से एक सवाल पूछा। नारद जी हमेशा तपस्या और वेदों की पढ़ाई में लगे रहते थे, और बात करने में उनका कोई जवाब नहीं था।"
+  },
+  {
+   "id": 703,
+   "number": "1.2",
+   "body_en": "“Tell me, is there anyone alive in the world today who is truly good and truly brave? Someone who knows what is right, who never forgets a kindness done to him, whose word always holds, and who never gives up on a promise?”",
+   "body_hi": "“मुझे बताइए, क्या आज दुनिया में कोई ऐसा आदमी है जो सच में अच्छा भी हो और बहादुर भी? जो सही-गलत समझता हो, किसी की भलाई कभी न भूले, हमेशा सच बोले और अपनी बात से कभी पीछे न हटे?”"
+  },
+  {
+   "id": 704,
+   "number": "1.3",
+   "body_en": "“Whose conduct is spotless, and who looks out for the good of every living creature? Who is wise, who is truly capable, and whose mere presence is a joy to everyone who sees him?”",
+   "body_hi": "“किसका चाल-चलन बिल्कुल साफ़ है, और कौन हर जीव का भला चाहता है? कौन समझदार है, कौन सच में काबिल है, और किसे देखते ही सबका मन खुश हो जाता है?”"
+  },
+  {
+   "id": 705,
+   "number": "1.4",
+   "body_en": "“Who has mastered himself and conquered anger? Who shines with an inner radiance and never resents another’s good fortune? And who is so formidable that even the gods tremble once his anger is roused in battle?”",
+   "body_hi": "“किसने अपने मन पर काबू पा लिया है और गुस्से को जीत लिया है? किसके चेहरे पर तेज है और जो दूसरों की तरक्की से कभी नहीं जलता? और लड़ाई में जिसे गुस्सा आ जाए तो देवता भी डर जाएँ, वह कौन है?”"
+  },
+  {
+   "id": 706,
+   "number": "1.5",
+   "body_en": "“I long to hear about such a person — my curiosity is burning. Great sage, if a man like this exists anywhere, you are the one who would know.”",
+   "body_hi": "“ऐसे इंसान के बारे में सुनने का मेरा बहुत मन है, मुझे बड़ी उत्सुकता है। हे महर्षि, अगर ऐसा कोई है, तो आप ही बता सकते हैं।”"
+  },
+  {
+   "id": 707,
+   "number": "1.6",
+   "body_en": "Narada, who knew all three worlds, was delighted to hear Valmiki’s words. “Then listen,” he said, and he began to answer.",
+   "body_hi": "तीनों लोकों की खबर रखने वाले नारद जी वाल्मीकि की बात सुनकर बहुत खुश हुए। “तो सुनिए,” कहकर उन्होंने जवाब देना शुरू किया।"
+  },
+  {
+   "id": 708,
+   "number": "1.7",
+   "body_en": "“Sage, the qualities you have listed are many, and it is rare to find them all together. Let me think it through, and then I will tell you about the one man who has every one of them.”",
+   "body_hi": "“हे मुनि, आपने जो गुण गिनाए हैं वे बहुत सारे हैं, और ये सब एक साथ किसी में मिलना बहुत मुश्किल है। मैं सोचकर आपको उस एक आदमी के बारे में बताता हूँ जिसमें ये सारे गुण हैं।”"
+  },
+  {
+   "id": 709,
+   "number": "1.8",
+   "body_en": "“He was born in the royal line of Ikshvaku, and people know him by the name of Rama. He is self-controlled and immensely strong, radiant and steady, and master of his own senses.”",
+   "body_hi": "“वे इक्ष्वाकु के राजघराने में पैदा हुए हैं और लोग उन्हें राम के नाम से जानते हैं। उनका मन उनके काबू में है, वे बहुत ताकतवर हैं, उनके चेहरे पर तेज है, वे धीरज वाले हैं और अपनी इच्छाओं पर उनका पूरा बस है।”"
+  },
+  {
+   "id": 710,
+   "number": "1.9",
+   "body_en": "“He is intelligent and knows how to act wisely, a gifted speaker, blessed with good fortune, and the destroyer of his enemies. His shoulders are broad, his arms long and powerful, his neck curved like a conch shell, his jaw strong.”",
+   "body_hi": "“वे समझदार हैं, सही फ़ैसले लेना जानते हैं, बहुत अच्छा बोलते हैं, किस्मत वाले हैं और दुश्मनों को खत्म कर देते हैं। उनके कंधे चौड़े हैं, बाँहें लंबी और मज़बूत हैं, गर्दन शंख जैसी सुंदर है और ठोड़ी मज़बूत है।”"
+  },
+  {
+   "id": 711,
+   "number": "1.10",
+   "body_en": "“His chest is broad and he draws a mighty bow. His collarbones sit deep under firm muscle, and no foe can stand against him. His arms reach down to his knees; his head is finely shaped, his forehead handsome, and his stride full of power.”",
+   "body_hi": "“उनकी छाती चौड़ी है और वे बड़ा धनुष चलाते हैं। कंधों के पास की हड्डियाँ मज़बूत मांस में छिपी हैं, और कोई दुश्मन उनके सामने टिक नहीं पाता। उनकी बाँहें घुटनों तक लंबी हैं, सिर सुंदर है, माथा चौड़ा है और चाल में दम है।”"
+  },
+  {
+   "id": 712,
+   "number": "1.11",
+   "body_en": "“He is well proportioned, every limb in balance with the rest. His skin has a gentle glow and his presence commands respect. His chest is full, his eyes are wide, and every mark on his body speaks of good fortune.”",
+   "body_hi": "“उनका शरीर एकदम सधा हुआ है, हर अंग ठीक अनुपात में है। रंग में हल्की चमक है और उन्हें देखकर ही इज़्ज़त करने का मन करता है। सीना भरा हुआ है, आँखें बड़ी-बड़ी हैं और शरीर पर सारे निशान शुभ हैं।”"
+  },
+  {
+   "id": 713,
+   "number": "1.12",
+   "body_en": "“He knows what is right and holds fast to the truth. He is devoted to the welfare of his people — famous, full of knowledge, pure, humble before his elders, and able to keep his mind perfectly focused.”",
+   "body_hi": "“वे जानते हैं कि क्या सही है और सच पर टिके रहते हैं। लोगों की भलाई में लगे रहते हैं। मशहूर हैं, पढ़े-लिखे और ज्ञानी हैं, मन के साफ़ हैं, बड़ों की बात मानते हैं और अपना ध्यान पूरी तरह एक जगह टिका सकते हैं।”"
+  },
+  {
+   "id": 714,
+   "number": "1.13",
+   "body_en": "“Like the Creator himself, he is glorious and holds everything together. He crushes his enemies, shelters every living being, and guards dharma on every side.”",
+   "body_hi": "“जैसे भगवान ब्रह्मा सबको सँभालते हैं, वैसे ही वे भी सबको सँभालते हैं। वे दुश्मनों को मिटा देते हैं, हर जीव को सहारा देते हैं और धर्म की हर तरफ़ से रक्षा करते हैं।”"
+  },
+  {
+   "id": 715,
+   "number": "1.14",
+   "body_en": "“He keeps faith with his own duty and looks after his own people. He understands the true meaning of the Vedas and the sciences that support them, and he is thoroughly grounded in the art of archery.”",
+   "body_hi": "“वे अपना फ़र्ज़ निभाते हैं और अपने लोगों का ख्याल रखते हैं। वेद और उनसे जुड़े सारे शास्त्रों का असली मतलब समझते हैं, और तीर-कमान चलाने में पूरी तरह माहिर हैं।”"
+  },
+  {
+   "id": 716,
+   "number": "1.15",
+   "body_en": "“He grasps the real point of every branch of learning, never forgets what he has learned, and always has a quick answer ready. Everyone loves him. He is good at heart, never downcast, and sees every matter clearly.”",
+   "body_hi": "“वे हर तरह की पढ़ाई का असली मतलब पकड़ लेते हैं, जो पढ़ते हैं कभी नहीं भूलते, और हर बात का जवाब उनके पास तुरंत होता है। सब उन्हें प्यार करते हैं। वे दिल के अच्छे हैं, कभी हिम्मत नहीं हारते और हर बात साफ़-साफ़ समझते हैं।”"
+  },
+  {
+   "id": 717,
+   "number": "1.16",
+   "body_en": "“Good people are always drawn to him, the way rivers always find their way to the ocean. He is noble, treats everyone alike, and is always a pleasure to behold.”",
+   "body_hi": "“अच्छे लोग हमेशा उनके पास खिंचे चले आते हैं, जैसे नदियाँ अपने-आप समुद्र तक पहुँच जाती हैं। वे बड़े दिल वाले हैं, सबसे एक जैसा बर्ताव करते हैं और उन्हें देखना हमेशा अच्छा लगता है।”"
+  },
+  {
+   "id": 718,
+   "number": "1.17",
+   "body_en": "“Gifted with every virtue, he is the joy of his mother Kausalya. In depth of character he is like the ocean, and in steadiness like the Himalaya.”",
+   "body_hi": "“हर अच्छे गुण वाले राम अपनी माँ कौसल्या की खुशी बढ़ाते हैं। उनका स्वभाव समुद्र जितना गहरा है और धीरज हिमालय जितना पक्का।”"
+  },
+  {
+   "id": 719,
+   "number": "1.18",
+   "body_en": "“In might he is the equal of Vishnu, and as pleasing to look at as the moon. When angered he is like the fire that burns at the end of time, yet in patience he is like the earth itself.”",
+   "body_hi": "“ताकत में वे भगवान विष्णु जैसे हैं और देखने में चाँद जैसे प्यारे। गुस्सा आए तो दुनिया खत्म करने वाली आग जैसे हो जाते हैं, पर सहने में धरती जैसे हैं।”"
+  },
+  {
+   "id": 720,
+   "number": "1.19",
+   "body_en": "“In generosity he matches Kubera, the lord of wealth, and in truthfulness he is like Dharma in person. This was Rama — rich in every such quality, his courage always rooted in truth —”",
+   "body_hi": "“देने में वे धन के देवता कुबेर जैसे हैं, और सच्चाई में जैसे खुद धर्म हों। ऐसे थे राम, इन सारे गुणों से भरे, और जिनकी बहादुरी हमेशा सच पर टिकी रहती थी।”"
+  },
+  {
+   "id": 721,
+   "number": "1.20",
+   "body_en": "“the eldest son of Dasharatha and the dearest to him, endowed with the finest qualities and always working for the good of the people. Wanting to please his subjects,”",
+   "body_hi": "“वे दशरथ के सबसे बड़े और सबसे लाडले बेटे थे, सबसे अच्छे गुणों वाले, और हमेशा लोगों के भले में लगे रहने वाले। लोगों को खुश करने के लिए,”"
+  },
+  {
+   "id": 722,
+   "number": "1.21",
+   "body_en": "“the king lovingly resolved to make him crown prince. But when his wife Kaikeyi saw the preparations being made for the ceremony,”",
+   "body_hi": "“राजा ने बड़े प्यार से उन्हें युवराज बनाने का फ़ैसला किया। पर जब उनकी पत्नी कैकेयी ने इसकी तैयारियाँ होती देखीं,”"
+  },
+  {
+   "id": 723,
+   "number": "1.22",
+   "body_en": "“the queen — who had long ago been promised two wishes by the king — now claimed them: that Rama be sent away into exile, and that Bharata be crowned in his place.”",
+   "body_hi": "“तो रानी ने, जिन्हें राजा ने बहुत पहले दो वरदान देने का वादा किया था, अब वे दोनों माँग लिए: कि राम को जंगल भेज दिया जाए, और उनकी जगह भरत को राजा बनाया जाए।”"
+  },
+  {
+   "id": 724,
+   "number": "1.23",
+   "body_en": "“Dasharatha had given his word, and dharma held him to it like a tether. He could not go back on what he had said, and so the king had to order his own dear son Rama to leave the kingdom and live in the wilderness.”",
+   "body_hi": "“राजा दशरथ अपने वादे से बँधे थे, जैसे धर्म ने उन्हें रस्सी से बाँध दिया हो। वचन तोड़ नहीं सकते थे, इसलिए उन्हें अपने प्यारे बेटे राम को जंगल भेजना पड़ा।”"
+  },
+  {
+   "id": 725,
+   "number": "1.24",
+   "body_en": "“And the hero went to the forest, keeping his father’s promise for him — obeying his father’s instruction, and so that Kaikeyi might have what she wanted.”",
+   "body_hi": "“और वीर राम पिता का वादा निभाने के लिए जंगल चले गए, पिता की बात मानकर, और इसलिए कि कैकेयी की इच्छा पूरी हो जाए।”"
+  },
+  {
+   "id": 726,
+   "number": "1.25",
+   "body_en": "“As he left, his loving brother Lakshmana went after him — Lakshmana, the joy of his mother Sumitra, full of affection and gentle manners.”",
+   "body_hi": "“जब वे निकले, तो उनके प्यारे भाई लक्ष्मण भी उनके पीछे चल पड़े। माँ सुमित्रा के दुलारे लक्ष्मण प्यार और अच्छे व्यवहार से भरे थे।”"
+  },
+  {
+   "id": 727,
+   "number": "1.26",
+   "body_en": "“He did it to show what true brotherhood means, for he was dear to his brother. And Rama’s beloved wife, as precious to him as his own life and always devoted to his good,”",
+   "body_hi": "“उन्होंने दिखा दिया कि सच्चा भाई क्या होता है, क्योंकि भाई उन्हें बहुत प्यारे थे। और राम की प्यारी पत्नी, जो उन्हें अपनी जान जितनी प्यारी थीं और हमेशा उनका भला चाहती थीं,”"
+  },
+  {
+   "id": 728,
+   "number": "1.27",
+   "body_en": "“born into the family of King Janaka, so lovely it was as if the gods had shaped her by their own magic, blessed with every good quality, the finest of women and a perfect bride —”",
+   "body_hi": "“राजा जनक की बेटी, इतनी सुंदर जैसे देवताओं ने अपने हाथों से बनाई हो, हर अच्छे गुण वाली, औरतों में सबसे अच्छी और एक आदर्श बहू,”"
+  },
+  {
+   "id": 729,
+   "number": "1.28",
+   "body_en": "“Sita too followed Rama, just as the star Rohini follows the moon. The people of the city walked a long way behind him, and so did his father Dasharatha.”",
+   "body_hi": "“वह सीता भी राम के पीछे चलीं, जैसे रोहिणी तारा चाँद के पीछे चलता है। शहर के लोग बहुत दूर तक उनके पीछे गए, और उनके पिता दशरथ भी।”"
+  },
+  {
+   "id": 730,
+   "number": "1.29",
+   "body_en": "“At Shringaverapura, on the bank of the Ganga, Rama sent his charioteer home. There the righteous prince met Guha, the chief of the Nishadas and his dear friend.”",
+   "body_hi": "“गंगा किनारे बसे शृंगवेरपुर पहुँचकर राम ने अपने सारथी को घर वापस भेज दिया। वहीं धर्म पर चलने वाले राम अपने पुराने दोस्त, निषादों के मुखिया गुह से मिले।”"
+  },
+  {
+   "id": 731,
+   "number": "1.30",
+   "body_en": "“Guha went with them, and so did Lakshmana and Sita. On they went, wood after wood, wading and ferrying over streams that ran full and deep,”",
+   "body_hi": "“गुह, लक्ष्मण और सीता को साथ लेकर राम आगे चले। एक जंगल से दूसरे जंगल, पानी से भरी गहरी नदियाँ पार करते हुए,”"
+  },
+  {
+   "id": 732,
+   "number": "1.31",
+   "body_en": "“until they came to the hill of Chitrakuta, which Bharadvaja had pointed them towards. The three made themselves a comfortable home of leaves and timber there, and passed their days in the woods with light hearts.”",
+   "body_hi": "“ऋषि भरद्वाज के बताए रास्ते पर वे चित्रकूट पहुँचे। वहाँ तीनों ने एक अच्छी सी झोपड़ी बनाई और जंगल में मज़े से रहने लगे।”"
+  },
+  {
+   "id": 733,
+   "number": "1.32",
+   "body_en": "“They lived there in contentment, like gods or celestial musicians. But after Rama had gone to Chitrakuta, grief for his son overwhelmed the king,”",
+   "body_hi": "“वे वहाँ देवताओं और गंधर्वों की तरह सुख से रहे। पर राम के चित्रकूट चले जाने के बाद बेटे से बिछड़ने का दुख राजा से सहा नहीं गया,”"
+  },
+  {
+   "id": 734,
+   "number": "1.33",
+   "body_en": "“and King Dasharatha died, still crying out for his son, and went to heaven. After his death, the brahmins led by Vasishtha pressed Bharata”",
+   "body_hi": "“और राजा दशरथ बेटे के लिए रोते-रोते चल बसे। उनके जाने के बाद वसिष्ठ जैसे बड़े पंडितों ने भरत से कहा”"
+  },
+  {
+   "id": 735,
+   "number": "1.34",
+   "body_en": "“to take the throne, but the mighty Bharata did not want the kingdom. Instead the hero set off for the forest, to win Rama’s favour and bow at his feet.”",
+   "body_hi": "“कि वे राजगद्दी संभालें, पर ताकतवर भरत ने राज लेने से मना कर दिया। इसके बजाय वे राम को मनाने और उनके पैरों में सिर झुकाने के लिए जंगल की ओर चल पड़े।”"
+  },
+  {
+   "id": 736,
+   "number": "1.35",
+   "body_en": "“Reaching the great-souled Rama, whose courage never strayed from the truth, Bharata, full of reverence for his elder brother, begged him to come back.”",
+   "body_hi": "“सच्चे और बहादुर राम के पास पहुँचकर, बड़े भाई की दिल से इज़्ज़त करने वाले भरत ने उनसे घर लौटने की बहुत विनती की।”"
+  },
+  {
+   "id": 737,
+   "number": "1.36",
+   "body_en": "“‘You alone are the king — you who know what is right,’ he told Rama. But Rama, generous beyond measure, gracious and greatly renowned,”",
+   "body_hi": "“उन्होंने राम से कहा, ‘राजा तो आप ही हैं, क्योंकि आप जानते हैं कि क्या सही है।’ पर बहुत बड़े दिल वाले, हँसमुख और मशहूर राम ने,”"
+  },
+  {
+   "id": 738,
+   "number": "1.37",
+   "body_en": "“strong as he was, would not accept the kingdom, because of his father’s command. He handed Bharata his sandals to hold the kingdom in trust, pressing them on him again and again,”",
+   "body_hi": "“ताकतवर होते हुए भी, पिता की बात की वजह से राज लेने से मना कर दिया। उन्होंने राज की अमानत के तौर पर अपनी खड़ाऊँ भरत को दीं, बार-बार ज़ोर देकर,”"
+  },
+  {
+   "id": 739,
+   "number": "1.38",
+   "body_en": "“and so Rama, the elder, sent Bharata back. Bharata, unable to get what he had hoped for, touched Rama’s feet”",
+   "body_hi": "“और इस तरह बड़े भाई राम ने भरत को वापस भेज दिया। भरत, जो चाहते थे वह नहीं मिला, तो राम के पैर छूकर”"
+  },
+  {
+   "id": 740,
+   "number": "1.39",
+   "body_en": "“and governed the kingdom from Nandigrama, longing for the day Rama would return. Once Bharata had gone, the glorious Rama, true to his word and master of his senses,”",
+   "body_hi": "“नंदिग्राम से राज चलाने लगे, इस इंतज़ार में कि राम कब लौटेंगे। भरत के चले जाने के बाद, वचन के पक्के और मन पर काबू रखने वाले राम ने”"
+  },
+  {
+   "id": 741,
+   "number": "1.40",
+   "body_en": "“foresaw that the townspeople would keep coming to find him there. So, with his mind set firmly on his purpose, he went deep into the Dandaka forest.”",
+   "body_hi": "“सोचा कि शहर के लोग यहाँ बार-बार उन्हें ढूँढते आते रहेंगे। इसलिए अपने काम पर ध्यान रखते हुए वे दंडक वन के अंदर चले गए।”"
+  },
+  {
+   "id": 742,
+   "number": "1.41",
+   "body_en": "“Once inside that great wilderness, Rama, whose eyes were shaped like lotus petals, slew a rakshasa named Viradha, and after that he paid a visit to the hermit Sharabhanga.”",
+   "body_hi": "“उस बड़े जंगल में जाकर, कमल जैसी आँखों वाले राम ने विराध नाम के राक्षस को मारा, और फिर ऋषि शरभंग से मिलने गए।”"
+  },
+  {
+   "id": 743,
+   "number": "1.42",
+   "body_en": "“He also met Sutikshna, and Agastya, and Agastya’s brother. At Agastya’s bidding he accepted the bow that had once belonged to Indra,”",
+   "body_hi": "“वे सुतीक्ष्ण से मिले, अगस्त्य से मिले और अगस्त्य के भाई से भी। अगस्त्य के कहने पर उन्होंने वह धनुष ले लिया जो कभी इंद्र का था,”"
+  },
+  {
+   "id": 744,
+   "number": "1.43",
+   "body_en": "“along with a sword and two quivers whose arrows never run out, and these gifts pleased him greatly. While Rama was living in the forest among its wild dwellers,”",
+   "body_hi": "“साथ में एक तलवार और दो ऐसे तरकश जिनके तीर कभी खत्म नहीं होते। ये तोहफ़े पाकर वे बहुत खुश हुए। जब राम जंगल में वहाँ रहने वालों के बीच रह रहे थे,”"
+  },
+  {
+   "id": 745,
+   "number": "1.44",
+   "body_en": "“all the sages came to him, asking him to rid them of the demons who were tormenting them. And there in the forest he gave them his word about the rakshasas.”",
+   "body_hi": "“तब सारे ऋषि उनके पास आए और कहा कि उन्हें परेशान करने वाले राक्षसों से बचाइए। और वहीं जंगल में राम ने राक्षसों के बारे में उनसे वादा किया।”"
+  },
+  {
+   "id": 746,
+   "number": "1.45",
+   "body_en": "“Rama pledged to the sages of the Dandaka forest, who blazed like fire with the power of their austerity, that he would kill the rakshasas in battle.”",
+   "body_hi": "“दंडक वन में रहने वाले उन ऋषियों से, जो अपनी तपस्या से आग जैसे चमकते थे, राम ने वादा किया कि वे लड़ाई में राक्षसों को मार डालेंगे।”"
+  },
+  {
+   "id": 747,
+   "number": "1.46",
+   "body_en": "“While he was living there, Shurpanakha — a rakshasi of Janasthana who could take any shape she pleased — was disfigured.”",
+   "body_hi": "“जब वे वहाँ रह रहे थे, तब जनस्थान में रहने वाली शूर्पणखा नाम की राक्षसी को, जो जैसा चाहे वैसा रूप बना लेती थी, कुरूप कर दिया गया।”"
+  },
+  {
+   "id": 748,
+   "number": "1.47",
+   "body_en": "“Then, roused by Shurpanakha’s words, all the rakshasas came out ready to fight — Khara, Trishiras, and the demon Dushana as well.”",
+   "body_hi": "“फिर शूर्पणखा के भड़काने पर सारे राक्षस लड़ने निकल पड़े: खर, त्रिशिरा और दूषण भी।”"
+  },
+  {
+   "id": 749,
+   "number": "1.48",
+   "body_en": "“Rama cut them down in the forest, together with everyone who followed them. Of the rakshasas who lived in Janasthana, in that same forest,”",
+   "body_hi": "“राम ने उन्हें और उनके साथ आए सबको जंगल में मार गिराया। उसी जंगल में जनस्थान के राक्षसों में से”"
+  },
+  {
+   "id": 750,
+   "number": "1.49",
+   "body_en": "“fourteen thousand lay dead. When Ravana heard that his kinsmen had been slaughtered, he was beside himself with rage.”",
+   "body_hi": "“चौदह हज़ार मारे गए। जब रावण ने सुना कि उसके रिश्तेदार मारे गए हैं, तो वह गुस्से से पागल हो गया।”"
+  },
+  {
+   "id": 751,
+   "number": "1.50",
+   "body_en": "“He chose a rakshasa named Maricha to help him. Maricha tried again and again to hold Ravana back:”",
+   "body_hi": "“उसने इस काम में मदद के लिए मारीच नाम के राक्षस को चुना। मारीच ने कई तरह से समझाकर रावण को यह करने से रोकना चाहा:”"
+  },
+  {
+   "id": 752,
+   "number": "1.51",
+   "body_en": "“‘Ravana, it will do you no good to make an enemy of someone so strong.’ But Ravana, pushed on by his own approaching doom, brushed the warning aside”",
+   "body_hi": "“‘रावण, इतने ताकतवर आदमी से दुश्मनी लेना तुम्हारे लिए ठीक नहीं।’ पर रावण की मौत पास आ चुकी थी, इसलिए उसने यह बात अनसुनी कर दी”"
+  },
+  {
+   "id": 753,
+   "number": "1.52",
+   "body_en": "“So he travelled with Maricha to the place where Rama lived. Maricha, who could conjure false shapes, drew both sons of the king off into the distance,”",
+   "body_hi": "“और मारीच को लेकर राम की कुटिया पर पहुँचा। उस जादू जानने वाले की मदद से उसने दोनों राजकुमारों को दूर भटका दिया,”"
+  },
+  {
+   "id": 754,
+   "number": "1.53",
+   "body_en": "“and carried off Rama’s wife, killing the vulture Jatayu who tried to stop him. When Rama found the vulture dying and heard that Sita, the princess of Mithila, had been taken,”",
+   "body_hi": "“और राम की पत्नी को उठा ले गया, रोकने आए गिद्ध जटायु को मारकर। जब राम ने जटायु को मरते देखा और सुना कि सीता को उठा लिया गया है,”"
+  },
+  {
+   "id": 755,
+   "number": "1.54",
+   "body_en": "“he was consumed by grief and wept, his senses in turmoil. Still in the grip of that sorrow, he gave Jatayu a funeral and cremated him.”",
+   "body_hi": "“तो वे दुख से टूट गए और रोने लगे, उनका मन बेचैन हो गया। उसी दुख में उन्होंने जटायु का अंतिम संस्कार किया।”"
+  },
+  {
+   "id": 756,
+   "number": "1.55",
+   "body_en": "“Searching the forest for Sita, he came upon a rakshasa named Kabandha, twisted in form and terrible to look at.”",
+   "body_hi": "“जंगल में सीता को ढूँढते हुए उन्हें कबंध नाम का एक राक्षस मिला, जिसका शरीर बेढंगा था और शक्ल डरावनी।”"
+  },
+  {
+   "id": 757,
+   "number": "1.56",
+   "body_en": "“The mighty-armed Rama killed him and burned his body, and Kabandha rose up to heaven. Before he went, he told Rama about Shabari, a woman who lived by dharma:”",
+   "body_hi": "“बलवान राम ने उसे मारकर जला दिया, और कबंध स्वर्ग चला गया। जाने से पहले उसने राम को शबरी के बारे में बताया, जो धर्म के रास्ते पर चलती थी:”"
+  },
+  {
+   "id": 758,
+   "number": "1.57",
+   "body_en": "“‘Go to the ascetic woman Shabari, Raghava — she is wise in the ways of dharma.’ And so the radiant Rama, destroyer of enemies, went to find Shabari.”",
+   "body_hi": "“‘हे राम, उस तपस्विनी शबरी के पास जाइए, जो धर्म की बातें अच्छी तरह जानती है।’ तब दुश्मनों को हराने वाले राम शबरी को ढूँढने निकल पड़े।”"
+  },
+  {
+   "id": 759,
+   "number": "1.58",
+   "body_en": "“Shabari received the son of Dasharatha with every mark of respect. After that, beside the lake called Pampa, Rama came face to face with Hanuman, one of the vanaras.”",
+   "body_hi": "“शबरी ने दशरथ के बेटे राम का पूरे आदर से स्वागत किया। फिर पंपा झील के किनारे उनकी मुलाकात वानर हनुमान से हुई।”"
+  },
+  {
+   "id": 760,
+   "number": "1.59",
+   "body_en": "“On Hanuman’s advice he went to meet Sugriva, and the mighty Rama told Sugriva everything”",
+   "body_hi": "“हनुमान के कहने पर वे सुग्रीव से मिले, और बलवान राम ने सुग्रीव को सब कुछ बताया”"
+  },
+  {
+   "id": 761,
+   "number": "1.60",
+   "body_en": "“that had happened from the very beginning, and above all what had happened to Sita. The vanara Sugriva, having heard Rama’s whole story,”",
+   "body_hi": "“जो शुरू से हुआ था, और खास तौर पर सीता के साथ क्या हुआ था। वानर सुग्रीव ने राम की पूरी बात सुनी,”"
+  },
+  {
+   "id": 762,
+   "number": "1.61",
+   "body_en": "“gladly made a pact of friendship with Rama, with fire as their witness. Then the king of the vanaras, pained by his troubles and trusting in the new friendship,”",
+   "body_hi": "“और खुशी-खुशी आग को गवाह मानकर राम से दोस्ती कर ली। फिर अपने दुख से परेशान वानरों के राजा ने, नई दोस्ती पर भरोसा करके,”"
+  },
+  {
+   "id": 763,
+   "number": "1.62",
+   "body_en": "“told Rama the whole story of his feud. And Rama promised then and there that he would kill Vali.”",
+   "body_hi": "“राम को अपनी दुश्मनी की पूरी कहानी सुनाई। और राम ने उसी वक्त वादा किया कि वे वाली को मारेंगे।”"
+  },
+  {
+   "id": 764,
+   "number": "1.63",
+   "body_en": "“Sugriva described how strong Vali was, because he still had his doubts about whether Raghava was strong enough.”",
+   "body_hi": "“सुग्रीव ने बताया कि वाली कितना ताकतवर है, क्योंकि उसे अब भी शक था कि राम उतने ताकतवर हैं या नहीं।”"
+  },
+  {
+   "id": 765,
+   "number": "1.64",
+   "body_en": "“To put his mind at rest, Sugriva showed Raghava the huge corpse of the demon Dundubhi, as big as a mountain.”",
+   "body_hi": "“अपना शक दूर करने के लिए सुग्रीव ने राम को दुंदुभि नाम के राक्षस की बड़ी सी लाश दिखाई, जो पहाड़ जितनी बड़ी थी।”"
+  },
+  {
+   "id": 766,
+   "number": "1.65",
+   "body_en": "“The mighty-armed Rama smiled, looked at the skeleton, and flicked it with his big toe a full ten yojanas away.”",
+   "body_hi": "“बलवान राम ने हड्डियों के उस ढेर को देखा, हल्का सा मुस्कुराए, और बस पैर के अँगूठे की ठोकर से उसे दस योजन दूर फेंक दिया।”"
+  },
+  {
+   "id": 767,
+   "number": "1.66",
+   "body_en": "“Next he loosed one mighty shaft that tore through a row of seven sal trunks, split a hill behind them, and kept going deep into the earth below. After that, Sugriva had no doubts left.”",
+   "body_hi": "“फिर एक ही बड़े तीर से उन्होंने सात साल के पेड़ों को छेद दिया, और वह तीर पहाड़ को फाड़ता हुआ धरती के नीचे तक चला गया। अब सुग्रीव को कोई शक नहीं रहा।”"
+  },
+  {
+   "id": 768,
+   "number": "1.67",
+   "body_en": "“Delighted, and now trusting him completely, the great vanara went with Rama to the cave-city of Kishkindha.”",
+   "body_hi": "“खुश होकर, और अब पूरा भरोसा करके, वह बड़ा वानर राम के साथ किष्किंधा की गुफा वाली नगरी गया।”"
+  },
+  {
+   "id": 769,
+   "number": "1.68",
+   "body_en": "“There Sugriva, the best of vanaras, golden-brown in colour, let out a roar of challenge, and at that tremendous roar the lord of the vanaras came out.”",
+   "body_hi": "“वहाँ सुनहरे-भूरे रंग वाले सुग्रीव ने ज़ोर से ललकारा, और उस तेज़ दहाड़ को सुनकर वानरों का राजा वाली बाहर निकल आया।”"
+  },
+  {
+   "id": 770,
+   "number": "1.69",
+   "body_en": "“Vali first calmed his wife Tara, then went out to face Sugriva — and there Raghava struck him down with a single arrow.”",
+   "body_hi": "“वाली ने पहले अपनी पत्नी तारा को समझाया, फिर सुग्रीव से लड़ने निकला, और वहाँ राम ने एक ही तीर से उसे मार गिराया।”"
+  },
+  {
+   "id": 771,
+   "number": "1.70",
+   "body_en": "“So, at Sugriva’s request, Raghava killed Vali in battle and placed Sugriva on his throne.”",
+   "body_hi": "“इस तरह सुग्रीव के कहने पर राम ने लड़ाई में वाली को मारा और सुग्रीव को राजगद्दी पर बिठा दिया।”"
+  },
+  {
+   "id": 772,
+   "number": "1.71",
+   "body_en": "“Sugriva, now leader of the vanaras, called every one of his people together and dispatched them to the four quarters to search for Janaka’s daughter.”",
+   "body_hi": "“वानरों के राजा सुग्रीव ने सारे वानरों को इकट्ठा किया और जनक की बेटी को ढूँढने के लिए उन्हें हर दिशा में भेज दिया।”"
+  },
+  {
+   "id": 773,
+   "number": "1.72",
+   "body_en": "“Then, guided by the news the bird Sampati gave, powerful Hanuman jumped clean over the sea, a stretch of briny water a hundred yojanas wide.”",
+   "body_hi": "“फिर गिद्ध संपाति के बताने पर ताकतवर हनुमान ने सौ योजन चौड़ा खारा समुद्र एक छलांग में पार कर लिया।”"
+  },
+  {
+   "id": 774,
+   "number": "1.73",
+   "body_en": "“He landed in Lanka, the capital under Ravana’s rule, and there, in the garden of Ashoka trees, he discovered Sita, her thoughts fixed on Rama.”",
+   "body_hi": "“रावण की नगरी लंका पहुँचकर उन्होंने अशोक के पेड़ों वाले बगीचे में सीता को देखा, जो राम को याद कर रही थीं।”"
+  },
+  {
+   "id": 775,
+   "number": "1.74",
+   "body_en": "“He gave her the token that proved who had sent him, told her all the news, and comforted her. Then he smashed the gateway of the grove.”",
+   "body_hi": "“उन्होंने सीता को वह निशानी दी जिससे पता चलता था कि उन्हें किसने भेजा है, सारी खबर सुनाई और उन्हें हिम्मत बँधाई। फिर उन्होंने बगीचे का दरवाज़ा तोड़ डाला।”"
+  },
+  {
+   "id": 776,
+   "number": "1.75",
+   "body_en": "“He killed five generals and seven sons of ministers, crushed the brave prince Aksha, and then allowed himself to be taken captive.”",
+   "body_hi": "“उन्होंने पाँच सेनापतियों और मंत्रियों के सात बेटों को मारा, वीर राजकुमार अक्ष को कुचल दिया, और फिर खुद को पकड़ा जाने दिया।”"
+  },
+  {
+   "id": 777,
+   "number": "1.76",
+   "body_en": "“He knew that, by a blessing from Brahma, the weapon that bound him could not hold him. Yet the hero put up with the rakshasas tying him, choosing to let it happen.”",
+   "body_hi": "“वे जानते थे कि ब्रह्मा जी के वरदान की वजह से उन्हें बाँधने वाला अस्त्र उन्हें रोक नहीं सकता। फिर भी उन्होंने अपनी मर्ज़ी से राक्षसों को खुद को बाँधने दिया।”"
+  },
+  {
+   "id": 778,
+   "number": "1.77",
+   "body_en": "“Then he set the city of Lanka ablaze — leaving only Sita, the princess of Mithila, unharmed — and the great vanara came back to bring Rama the good news.”",
+   "body_hi": "“फिर उन्होंने लंका नगरी में आग लगा दी, बस सीता को कुछ नहीं होने दिया, और वह बड़ा वानर राम को अच्छी खबर देने लौट आया।”"
+  },
+  {
+   "id": 779,
+   "number": "1.78",
+   "body_en": "“Coming before the great-souled Rama, he walked around him in reverence, and Hanuman, whose wisdom had no limit, told him plainly: ‘I have seen Sita.’”",
+   "body_hi": "“राम के सामने आकर उन्होंने आदर से उनकी परिक्रमा की, और बहुत समझदार हनुमान ने साफ़-साफ़ कहा: ‘मैंने सीता को देखा है।’”"
+  },
+  {
+   "id": 780,
+   "number": "1.79",
+   "body_en": "“Then Rama and Sugriva went to the shore of the great ocean, and Rama stirred its waters into turmoil with arrows that blazed like the sun.”",
+   "body_hi": "“फिर राम और सुग्रीव महासागर के किनारे गए, और राम ने सूरज जैसे चमकते तीरों से समुद्र में हलचल मचा दी।”"
+  },
+  {
+   "id": 781,
+   "number": "1.80",
+   "body_en": "“The Ocean, lord of all rivers, appeared before him in person, and on his advice Rama had Nala build a bridge.”",
+   "body_hi": "“नदियों के मालिक समुद्र खुद सामने आए, और उनके कहने पर राम ने नल से पुल बनवाया।”"
+  },
+  {
+   "id": 782,
+   "number": "1.81",
+   "body_en": "“Crossing by it to the city of Lanka, Rama killed Ravana in battle. But when he had Sita back again, he was overcome by a deep unease.”",
+   "body_hi": "“उस पुल से लंका पहुँचकर राम ने लड़ाई में रावण को मार डाला। पर सीता को वापस पाकर उनका मन बहुत उलझन में पड़ गया।”"
+  },
+  {
+   "id": 783,
+   "number": "1.82",
+   "body_en": "“So Rama spoke harsh words to her in front of the gathered people. Sita, faithful to him and unable to bear those words, walked into the fire.”",
+   "body_hi": "“तब राम ने सबके सामने सीता से कड़वी बातें कहीं। अपने पति के प्रति पूरी तरह वफ़ादार सीता यह अपमान सह नहीं पाईं और जलती आग में उतर गईं।”"
+  },
+  {
+   "id": 784,
+   "number": "1.83",
+   "body_en": "“Then, on the word of Agni, the god of fire, Rama knew that Sita was free of any fault. He shone with joy, honoured by all the gods.”",
+   "body_hi": "“तब अग्नि देवता के कहने पर राम समझ गए कि सीता में कोई दोष नहीं है। सारे देवताओं ने उनका सम्मान किया और वे खुशी से खिल उठे।”"
+  },
+  {
+   "id": 785,
+   "number": "1.84",
+   "body_en": "“That great deed of the noble Raghava filled all three worlds with joy — everything that moves and everything that stands still, along with the gods and the sages.”",
+   "body_hi": "“राम के इस बड़े काम से तीनों लोक खुशी से भर गए। चलने वाले और एक जगह टिके रहने वाले सारे जीव, देवता और ऋषि, सब खुश हो गए।”"
+  },
+  {
+   "id": 786,
+   "number": "1.85",
+   "body_en": "“Rama crowned Vibhishana king of the rakshasas in Lanka. His task accomplished, and free at last of anxiety, he rejoiced.”",
+   "body_hi": "“राम ने लंका में विभीषण को राक्षसों का राजा बनाया। अपना काम पूरा करके, और आखिरकार चिंता से छूटकर, वे बहुत खुश हुए।”"
+  },
+  {
+   "id": 787,
+   "number": "1.86",
+   "body_en": "“He received boons from the gods and brought the fallen vanaras back to life. Then, surrounded by his friends, he set out for Ayodhya in the flying chariot Pushpaka.”",
+   "body_hi": "“उन्हें देवताओं से वरदान मिले और लड़ाई में मरे वानर फिर से ज़िंदा हो गए। फिर अपने दोस्तों के साथ वे पुष्पक विमान में बैठकर अयोध्या के लिए निकल पड़े।”"
+  },
+  {
+   "id": 788,
+   "number": "1.87",
+   "body_en": "“Rama, whose courage was always true, stopped at Bharadvaja’s hermitage, and from there he sent Hanuman ahead to Bharata.”",
+   "body_hi": "“रास्ते में राम भरद्वाज के आश्रम में रुके, और वहाँ से उन्होंने हनुमान को भरत के पास पहले भेज दिया।”"
+  },
+  {
+   "id": 789,
+   "number": "1.88",
+   "body_en": "“Then, talking over everything that had happened with Sugriva, he boarded Pushpaka again and flew on to Nandigrama.”",
+   "body_hi": "“फिर सुग्रीव के साथ बीती बातें करते हुए वे फिर पुष्पक पर बैठे और नंदिग्राम पहुँच गए।”"
+  },
+  {
+   "id": 790,
+   "number": "1.89",
+   "body_en": "“At Nandigrama the blameless Rama and his brothers cut off their matted hair. Together with Sita again, he took back his kingdom.”",
+   "body_hi": "“नंदिग्राम में राम और उनके भाइयों ने अपनी जटाएँ कटवाईं। सीता के साथ फिर से मिलकर राम ने अपना राज वापस संभाल लिया।”"
+  },
+  {
+   "id": 791,
+   "number": "1.90",
+   "body_en": "“Everyone in the land is glad and cheerful, satisfied and well nourished, and devoted to doing what is right. Illness has no hold on them, and no one worries about a failed harvest.”",
+   "body_hi": "“लोग खुश हैं और बेफ़िक्र हैं, सबका पेट भरा है और सब सही रास्ते पर चलते हैं। कोई बीमार नहीं है, और किसी को अकाल का डर नहीं है।”"
+  },
+  {
+   "id": 792,
+   "number": "1.91",
+   "body_en": "“In his reign no one anywhere will have to watch a son die. No woman will be widowed, and wives will live always devoted to their husbands.”",
+   "body_hi": "“उनके राज में किसी को अपने बेटे की मौत नहीं देखनी पड़ेगी। कोई औरत विधवा नहीं होगी, और पत्नियाँ हमेशा अपने पतियों के साथ वफ़ादार रहेंगी।”"
+  },
+  {
+   "id": 793,
+   "number": "1.92",
+   "body_en": "“There will be no danger from fire, and no creature will drown in the waters. No one will fear the storm winds, and no one will fear fever.”",
+   "body_hi": "“आग का कोई खतरा नहीं होगा, और कोई भी पानी में नहीं डूबेगा। न आँधी-तूफ़ान का डर होगा, न बुखार का।”"
+  },
+  {
+   "id": 794,
+   "number": "1.93",
+   "body_en": "“There will be no fear of hunger, and no fear of thieves either. The cities and the countryside alike will overflow with wealth and grain,”",
+   "body_hi": "“न भूख का डर होगा, न चोरों का। शहर और गाँव, दोनों धन और अनाज से भरे रहेंगे,”"
+  },
+  {
+   "id": 795,
+   "number": "1.94",
+   "body_en": "“and everyone will be happy all the time, just as in the golden age of Krita. Having performed a hundred horse sacrifices, and many other rites rich in gifts of gold,”",
+   "body_hi": "“और सब लोग हमेशा खुश रहेंगे, बिल्कुल सतयुग की तरह। सौ अश्वमेध यज्ञ और सोने के दान वाले बहुत सारे दूसरे यज्ञ करके,”"
+  },
+  {
+   "id": 796,
+   "number": "1.95",
+   "body_en": "“and having given away cows by the hundreds of millions, he will go to the world of Brahma. And the glorious one, having given boundless wealth to the brahmins,”",
+   "body_hi": "“और करोड़ों गायें दान करके वे ब्रह्मलोक जाएँगे। और ब्राह्मणों को अनगिनत धन देकर, वे मशहूर राम”"
+  },
+  {
+   "id": 797,
+   "number": "1.96",
+   "body_en": "“Raghava will found royal lines a hundred times over, and he will keep each of the four orders of society in this world to its own duty.”",
+   "body_hi": "“सौ गुना ज़्यादा राजवंश बसाएँगे, और इस दुनिया में चारों वर्णों को अपने-अपने काम में लगाए रखेंगे।”"
+  },
+  {
+   "id": 798,
+   "number": "1.97",
+   "body_en": "“For eleven thousand years Rama will rule over the kingdom, and when that time is over he will pass on to the world of Brahma.”",
+   "body_hi": "“ग्यारह हज़ार साल तक राज करने के बाद राम ब्रह्मलोक चले जाएँगे।”"
+  },
+  {
+   "id": 799,
+   "number": "1.98",
+   "body_en": "This story of Rama is sacred and cleansing. It wipes away wrongdoing, brings merit, and stands as high as the Vedas. Whoever reads it is set free from every sin.",
+   "body_hi": "राम की यह कहानी पवित्र है और मन को साफ़ करती है। यह पाप मिटाती है, पुण्य देती है और वेदों के बराबर मानी जाती है। जो इसे पढ़ता है, उसके सारे पाप छूट जाते हैं।"
+  },
+  {
+   "id": 800,
+   "number": "1.99",
+   "body_en": "Whoever reads this Ramayana, a story that lengthens life, will be honoured in heaven after death, together with their children, grandchildren and all their household.",
+   "body_hi": "जो इंसान उम्र बढ़ाने वाली इस रामायण को पढ़ता है, वह मरने के बाद अपने बच्चों, पोते-पोतियों और पूरे परिवार के साथ स्वर्ग में इज़्ज़त पाता है।"
+  },
+  {
+   "id": 801,
+   "number": "1.100",
+   "body_en": "A brahmin who reads it will become a master of speech; a kshatriya will become a ruler of the land; a merchant will reap the rewards of his trade; and even a shudra will rise to greatness.",
+   "body_hi": "इसे पढ़ने वाला ब्राह्मण बोलने में सबसे आगे निकल जाता है, क्षत्रिय ज़मीन का मालिक बनता है, व्यापारी को अपने धंधे का पूरा फ़ायदा मिलता है, और शूद्र भी बड़ा आदमी बन जाता है।"
+  }
+ ]
+}

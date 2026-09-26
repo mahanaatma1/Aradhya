@@ -711,6 +711,61 @@ def cmd_selftest() -> int:
     return 0
 
 
+RETELL_DIR = ROOT / "content" / "legal" / "own" / "sarga_retellings"
+# A retelling shares the sarga's events and names with the fixture's verse
+# translations by necessity, so a similarity ratio says nothing. Copying shows
+# up instead as a phrase lifted whole: a long run of expressive words, in order.
+RETELL_MAX_RUN = 6
+
+
+def cmd_check_retelling(slug: str) -> int:
+    """Each sarga retelling against the fixture's translations of that sarga."""
+    conn = _db()
+    book_id, title = _book(conn, slug)
+    by_sarga: dict[str, list[dict]] = {}
+    for r in _source_rows(conn, book_id):
+        by_sarga.setdefault(r["number"].split(".")[0], []).append(r)
+    path = RETELL_DIR / f"{slug}.json"
+    if not path.exists():
+        print(f"{slug}: no retellings yet ({len(by_sarga)} sargas pending)")
+        return 1
+    ours = {s["sarga"]: s for s in json.loads(path.read_text(encoding="utf-8"))["sargas"]}
+    problems: list[str] = []
+    missing = [s for s in by_sarga if s not in ours]
+    if missing:
+        problems.append(f"{len(missing)} sargas missing (first: {missing[:5]})")
+    worst = []
+    for sarga, rows in by_sarga.items():
+        if sarga not in ours:
+            continue
+        deva, latin = _subject_tokens(
+            " ".join(r["sanskrit"] or "" for r in rows),
+            " ".join(r["transliteration"] or "" for r in rows))
+        for lang in ("en", "hi"):
+            mine = ours[sarga].get(f"retelling_{lang}") or ""
+            if len(mine.strip()) < 400:
+                problems.append(f"sarga {sarga}: retelling_{lang} missing or too short")
+                continue
+            theirs = " ".join(r[f"body_{lang}"] or "" for r in rows)
+            run = _longest_run(_expressive(mine, deva, latin),
+                               _expressive(theirs, deva, latin))
+            worst.append((run, f"sarga {sarga} retelling_{lang}"))
+            if run > RETELL_MAX_RUN:
+                problems.append(f"sarga {sarga}: retelling_{lang} repeats a "
+                                f"{run}-word phrase from the fixture")
+    worst.sort(reverse=True)
+    print(f"{slug} ({title}): {len(ours)}/{len(by_sarga)} sarga retellings")
+    for run, label in worst[:5]:
+        print(f"    longest shared phrase {run:<3} {label}")
+    if problems:
+        print(f"  FAIL -- {len(problems)} problem(s):")
+        for p in problems[:25]:
+            print(f"    - {p}")
+        return 1
+    print("  OK -- complete, and no retelling repeats a fixture phrase")
+    return 0
+
+
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
         print(__doc__)
@@ -723,6 +778,8 @@ def main(argv: list[str]) -> int:
         return cmd_check(argv[2])
     if cmd == "collisions" and len(argv) in (3, 4):
         return cmd_collisions(argv[2], float(argv[3]) if len(argv) == 4 else None)
+    if cmd == "check-retelling" and len(argv) == 3:
+        return cmd_check_retelling(argv[2])
     if cmd == "status":
         return cmd_status()
     if cmd == "selftest":

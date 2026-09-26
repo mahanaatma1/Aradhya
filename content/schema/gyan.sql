@@ -407,6 +407,16 @@ CREATE TABLE scripture_overrides (
   commentary_en TEXT,          commentary_hi TEXT
 );
 
+-- RG-01 Ramayana: one prose retelling per sarga. The reader shows it in the
+-- Explanation tab of every verse of that sarga that has no commentary of its own.
+CREATE TABLE sarga_retellings (
+  book_id      INTEGER NOT NULL,     -- soft link into main.scripture_books
+  sarga        TEXT NOT NULL,        -- the part of scripture_sections.number before the dot
+  title_en     TEXT NOT NULL, title_hi TEXT NOT NULL,
+  retelling_en TEXT NOT NULL, retelling_hi TEXT NOT NULL,
+  PRIMARY KEY (book_id, sarga)
+);
+
 -- 4.17 Karma Journal -- the PROMPTS are content; the entries live in
 -- aradhya_user.db and never leave the device.
 CREATE TABLE journal_prompts (

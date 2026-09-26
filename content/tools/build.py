@@ -697,6 +697,24 @@ class Builder:
                 count += 1
         self.counts["scripture_overrides"] = count
 
+    def insert_sarga_retellings(self) -> None:
+        """RG-01 Ramayana: per-sarga prose retellings for the Explanation tab."""
+        own_dir = CONTENT_DIR / "legal" / "own" / "sarga_retellings"
+        if not own_dir.exists():
+            return
+        count = 0
+        for path in sorted(own_dir.glob("*.json")):
+            doc = json.loads(path.read_text(encoding="utf-8"))
+            for s in doc["sargas"]:
+                self.db.execute(
+                    """insert into sarga_retellings
+                       (book_id, sarga, title_en, title_hi, retelling_en, retelling_hi)
+                       values (?,?,?,?,?,?)""",
+                    (doc["book_id"], s["sarga"], s["title_en"], s["title_hi"],
+                     s["retelling_en"], s["retelling_hi"]))
+                count += 1
+        self.counts["sarga_retellings"] = count
+
     def insert_journal(self) -> None:
         for o in self.rows("journal"):
             p = o.get("prompt") or {}
@@ -1017,6 +1035,7 @@ def main(argv: list[str] | None = None) -> int:
         b.insert_qa()
         b.insert_word_meanings()
         b.insert_scripture_overrides()
+        b.insert_sarga_retellings()
         b.insert_journal()
         b.insert_paths()
         db.commit()
