@@ -76,3 +76,4 @@ assets/db/*.sqlite.gz
 android/.kotlin/
 
 assets/db/gyan.carry.sqlite
+assets/db/gyan.sqlite
